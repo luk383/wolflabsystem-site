@@ -8,7 +8,8 @@
 
   <title>Wolf Lab System — Performance & Security Engineering</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <!-- SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="logo-wls-shield.svg">
 
   <style>
     :root{
@@ -16,118 +17,101 @@
       --text:#f5f5f5;
       --muted:#b7b7b7;
       --line:#1f1f1f;
-      --accent:#ffffff;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 980px;
+      --radius:18px;
+      --max:980px;
     }
+
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       background: var(--bg);
       color:var(--text);
-      line-height:1.5;
+      line-height:1.6;
     }
+
     a{color:var(--text); text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 56px}
+    a:hover{opacity:.85}
+
+    .wrap{max-width:var(--max); margin:0 auto; padding:40px 20px}
 
     header{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:10px 0 26px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:60px;
     }
 
     .brand{
-      display:flex; align-items:center; gap:10px;
-      letter-spacing:.12em;
       font-weight:700;
-      text-transform:uppercase;
+      letter-spacing:.15em;
       font-size:12px;
+      text-transform:uppercase;
     }
 
-    nav{display:flex; gap:14px}
     nav a{
+      margin-left:20px;
       font-size:13px;
       color:var(--muted);
-      padding:8px 10px;
-      border-radius:999px;
-    }
-    nav a:hover{
-      color:var(--text);
-      background: rgba(255,255,255,.05);
     }
 
+    nav a:hover{color:var(--text)}
+
     .hero{
-      padding:40px 0 30px;
       text-align:center;
+      padding:60px 0;
     }
 
     .hero-logo{
-      display:block;
-      margin:0 auto 36px;
-      width:260px;
-      max-width:85%;
-    }
-
-    .kicker{
-      font-size:12px;
-      color:var(--muted);
-      margin-bottom:16px;
+      width:160px;
+      margin-bottom:30px;
+      filter: drop-shadow(0 0 20px rgba(255,255,255,0.08));
     }
 
     h1{
-      margin:0 0 14px;
-      font-size:42px;
-      letter-spacing:-0.02em;
+      font-size:48px;
+      margin:0 0 20px;
+      letter-spacing:-0.03em;
     }
 
     .subtitle{
       max-width:680px;
-      margin:0 auto 24px;
+      margin:0 auto 30px;
       color:var(--muted);
-      font-size:16px;
     }
 
     .cta{
       display:flex;
-      gap:12px;
       justify-content:center;
+      gap:15px;
       flex-wrap:wrap;
-      margin-bottom:30px;
     }
 
     .btn{
-      padding:12px 18px;
+      padding:12px 22px;
       border-radius:999px;
       font-size:14px;
       border:1px solid var(--line);
-      background: rgba(255,255,255,.06);
+      background:rgba(255,255,255,0.05);
     }
 
     .btn.primary{
-      background: rgba(255,255,255,.15);
-    }
-
-    .card{
-      background: rgba(255,255,255,.04);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:20px;
-      margin-top:20px;
-    }
-
-    .card h2{
-      margin:0 0 10px;
-      font-size:18px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.08));
+      border: 1px solid rgba(255,255,255,0.25);
     }
 
     footer{
-      margin-top:40px;
-      padding-top:20px;
+      margin-top:100px;
+      padding-top:30px;
       border-top:1px solid var(--line);
       text-align:center;
       font-size:12px;
       color:var(--muted);
+    }
+
+    @media(max-width:768px){
+      h1{font-size:36px}
+      header{flex-direction:column; gap:20px}
     }
   </style>
 </head>
@@ -144,56 +128,30 @@
       </nav>
     </header>
 
-    <main>
-      <div class="hero">
+    <section class="hero">
+      <img src="logo-wls-shield.svg" alt="Wolf Lab System Logo" class="hero-logo" />
 
-        <img src="logo-wls-shield.png" alt="Wolf Lab System Logo" class="hero-logo" />
+      <h1>Performance & Security Engineering</h1>
 
-        <div class="kicker">
-          Continuous Development • Measured Progress • Real Labs
-        </div>
+      <p class="subtitle">
+        A structured lab where discipline meets engineering: Linux security, networking,
+        and cloud security (AWS). Everything is documented, reproducible, and improved weekly.
+      </p>
 
-        <h1>Performance & Security Engineering</h1>
-
-        <p class="subtitle">
-          A structured lab where discipline meets engineering: Linux security,
-          networking, and cloud security (AWS). Everything is documented,
-          reproducible, and improved weekly.
-        </p>
-
-        <div class="cta">
-          <a class="btn primary" href="https://github.com/luk383/cloud-security-journey" target="_blank">View GitHub Projects</a>
-          <a class="btn" href="#roadmap">See Roadmap</a>
-        </div>
-
+      <div class="cta">
+        <a class="btn primary" href="https://github.com/luk383" target="_blank">View GitHub</a>
+        <a class="btn" href="#roadmap">See Roadmap</a>
       </div>
-
-      <section class="card" id="focus">
-        <h2>Current Focus</h2>
-        <p>CompTIA Security+ • Linux Hardening • Networking • AWS (next)</p>
-      </section>
-
-      <section class="card" id="roadmap">
-        <h2>Roadmap</h2>
-        <p>Security+ → AWS Solutions Architect → AWS Security Specialty</p>
-      </section>
-
-      <section class="card" id="contact">
-        <h2>Contact</h2>
-        <p>Email: luca@wolflabsystem.com</p>
-        <p>GitHub: github.com/luk383</p>
-      </section>
-
-    </main>
+    </section>
 
     <footer>
-      © <span id="year"></span> Wolf Lab System — Built on Cloudflare Pages
+      © <span id="y"></span> Wolf Lab System • Continuous Development
     </footer>
 
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
