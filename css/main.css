@@ -109,6 +109,16 @@ h1{
   margin-bottom:18px;
 }
 
+.card a{
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,.18);
+  text-underline-offset: 4px;
+}
+.card a:hover{
+  text-decoration-color: rgba(255,255,255,.35);
+}
+
 footer{
   margin-top:60px;
   padding-top:18px;
