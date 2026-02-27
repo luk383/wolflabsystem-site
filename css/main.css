@@ -1,1 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>System — Wolf Lab System</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
 
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><a href="/">WOLF LAB SYSTEM</a></div>
+      <nav>
+        <a href="/system/">System</a>
+        <a href="/builds/">Builds</a>
+        <a href="/roadmap/">Roadmap</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <img src="/logo-wls-shield.svg" class="hero-logo" alt="Wolf Lab System Logo">
+      <div class="divider"></div>
+      <h1>The System</h1>
+      <p class="subtitle">
+        A structured engineering environment focused on security, architecture, and continuous development.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>Foundation</h3>
+        <p>Security principles, hardened environments, and documented processes.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>Architecture</h3>
+        <p>Clear structure before expansion. Systems built to scale without fragility.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>Evolution</h3>
+        <p>Weekly refinement. Measured outputs. Continuous structural improvement.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Wolf Lab System</div>
+      <div>Secure by design</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
