@@ -1,139 +1,260 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Wolf Lab System</title>
+  <title>Wolf Lab System — Engineering disciplined digital systems</title>
+  <meta name="description" content="Wolf Lab System builds mobile apps, SaaS platforms and cloud systems with Flutter and a security-first mindset." />
 
-<link rel="stylesheet" href="./site-v2.css">
+  <!-- Your v2 CSS (root) -->
+  <link rel="stylesheet" href="./site-v2.css" />
 
+  <style>
+    /* Small improvements without touching your CSS file */
+    .nav-links a { opacity: .92; }
+    .nav-links a:hover { opacity: 1; text-decoration: none; }
+    .brand b { font-weight: 900; }
+    .brand span { color: var(--muted); font-weight: 700; letter-spacing: .12em; font-size: 11px; text-transform: uppercase; }
+    .project-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top: 14px; }
+    code { background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); }
+  </style>
 </head>
 
 <body>
 
-<header style="padding:20px;border-bottom:1px solid #222;background:#0b0b0f;">
-<div style="max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;">
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="./" aria-label="Wolf Lab System home">
+        <img src="./logo-wls-shield.svg" alt="Wolf Lab System logo" width="36" height="36" />
+        <div style="display:flex; flex-direction:column; line-height:1.1;">
+          <b>Wolf Lab System</b>
+          <span>Performance × Engineering</span>
+        </div>
+      </a>
 
-<div style="display:flex;align-items:center;gap:10px;">
-<img src="./logo-wls-shield.svg" width="28">
-<b>Wolf Lab System</b>
-</div>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./system/">System</a>
+        <a href="./builds/">Builds</a>
+        <a href="./roadmap/">Roadmap</a>
+        <a class="btn btn-ghost" href="./contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<nav style="display:flex;gap:20px;">
-<a href="./system/">System</a>
-<a href="./builds/">Builds</a>
-<a href="./roadmap/">Roadmap</a>
-<a href="./contact/">Contact</a>
-</nav>
+  <main>
 
-</div>
-</header>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <p class="kicker">Software Studio</p>
 
+        <h1>Engineering disciplined digital systems.</h1>
 
-<section style="padding:80px 20px;background:#0b0b0f;color:white;">
-<div style="max-width:1100px;margin:auto;">
+        <p class="subhead">
+          Mobile apps, SaaS platforms, and cloud systems built with Flutter and a security-first mindset.
+        </p>
 
-<p style="color:#888;">Software Studio</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="./builds/">Explore builds</a>
+          <a class="btn btn-ghost" href="./contact/">Work with me</a>
+        </div>
 
-<h1 style="font-size:48px;margin-top:10px;">
-Engineering disciplined digital systems
-</h1>
+        <div class="badges" aria-label="Core competencies">
+          <span class="badge">Flutter</span>
+          <span class="badge">Mobile & Web</span>
+          <span class="badge">SaaS</span>
+          <span class="badge">Cloud</span>
+          <span class="badge">Security-first</span>
+        </div>
+      </div>
+    </section>
 
-<p style="max-width:600px;color:#aaa;margin-top:20px;">
-Mobile apps, SaaS platforms and cloud systems built with Flutter and a security-first mindset.
-</p>
+    <!-- WHAT WE BUILD -->
+    <section class="section" id="build">
+      <div class="container">
+        <h2>What we build</h2>
+        <p class="lead">
+          Reliable systems that are easy to maintain, secure by design, and ready to scale.
+        </p>
 
-<div style="margin-top:30px;display:flex;gap:15px;">
-<a href="./builds/" style="padding:12px 18px;background:white;color:black;border-radius:30px;">Explore builds</a>
-<a href="./contact/" style="padding:12px 18px;border:1px solid #444;border-radius:30px;">Work with me</a>
-</div>
+        <div class="grid">
+          <article class="card">
+            <h3>Mobile Applications</h3>
+            <p>Cross-platform apps built with Flutter: fast delivery, clean UX, long-term maintainability.</p>
+            <ul>
+              <li>iOS + Android</li>
+              <li>Offline-first when needed</li>
+              <li>Performance-oriented</li>
+            </ul>
+          </article>
 
-</div>
-</section>
+          <article class="card">
+            <h3>SaaS Platforms</h3>
+            <p>From MVP to production: dashboards, admin tools, and scalable foundations.</p>
+            <ul>
+              <li>Product thinking</li>
+              <li>Scalable architecture</li>
+              <li>Clear roadmaps</li>
+            </ul>
+          </article>
 
+          <article class="card">
+            <h3>Cloud Systems</h3>
+            <p>Modern infrastructure designed for reliability, observability, and secure deployments.</p>
+            <ul>
+              <li>CI/CD foundations</li>
+              <li>Monitoring basics</li>
+              <li>Security-aware setups</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section style="padding:70px 20px;background:#0b0b0f;color:white;">
-<div style="max-width:1100px;margin:auto;">
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="split-head">
+          <div>
+            <h2>Projects</h2>
+            <p class="lead">Real builds. Real iterations. Build in public.</p>
+          </div>
+          <a class="btn btn-ghost" href="./contact/">Request a build</a>
+        </div>
 
-<h2>What we build</h2>
+        <article class="project">
+          <div class="project-media">
+            <!-- OPTION A (recommended): add /assets/stockly.png and replace this div with an <img> -->
+            <div class="placeholder">
+              <strong>Stockly screenshot goes here</strong>
+              <div class="muted">Add file: <code>/assets/stockly.png</code> then replace placeholder with:</div>
+              <div class="muted"><code>&lt;img src="./assets/stockly.png" alt="Stockly app screenshot" /&gt;</code></div>
+            </div>
+          </div>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:30px;">
+          <div>
+            <h3>Stockly</h3>
+            <p class="muted">Inventory management — inventory without friction.</p>
+            <p>
+              A simple inventory app designed for speed and clarity:
+              scan products, track stock, and manage restocking with minimal overhead.
+            </p>
 
-<div style="padding:25px;border:1px solid #222;border-radius:15px;">
-<h3>Mobile Applications</h3>
-<p style="color:#aaa;">
-Cross-platform apps built with Flutter for speed and reliability.
-</p>
-</div>
+            <div class="project-actions">
+              <!-- Replace # with real Play Store link when ready -->
+              <a class="btn btn-primary" href="#" target="_blank" rel="noreferrer">Google Play</a>
+              <a class="btn btn-ghost" href="./builds/">Build notes</a>
+            </div>
 
-<div style="padding:25px;border:1px solid #222;border-radius:15px;">
-<h3>SaaS Platforms</h3>
-<p style="color:#aaa;">
-Scalable software platforms designed for startups and modern teams.
-</p>
-</div>
+            <div class="chips">
+              <span class="chip">Flutter</span>
+              <span class="chip">Mobile</span>
+              <span class="chip">System design</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<div style="padding:25px;border:1px solid #222;border-radius:15px;">
-<h3>Cloud Systems</h3>
-<p style="color:#aaa;">
-Reliable infrastructure designed for performance and security.
-</p>
-</div>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2>About the lab</h2>
+        <p class="lead">
+          Wolf Lab System is an independent developer lab founded by Luca.
+          Building products, studying cloud & security, and shipping disciplined systems.
+        </p>
 
-</div>
+        <div class="grid">
+          <article class="card">
+            <h3>What you get</h3>
+            <ul>
+              <li>Clear scope and delivery plan</li>
+              <li>Production-ready codebase</li>
+              <li>Documentation for future maintenance</li>
+              <li>Security-aware fundamentals</li>
+            </ul>
+          </article>
 
-</div>
-</section>
+          <article class="card">
+            <h3>Best fit</h3>
+            <ul>
+              <li>Startups building MVP → V1</li>
+              <li>SMBs needing a reliable app</li>
+              <li>Founders who want speed + quality</li>
+            </ul>
+          </article>
 
+          <article class="card">
+            <h3>Explore</h3>
+            <p class="muted">Core pages:</p>
+            <ul>
+              <li><a href="./system/">System</a></li>
+              <li><a href="./builds/">Builds</a></li>
+              <li><a href="./roadmap/">Roadmap</a></li>
+              <li><a href="./contact/">Contact</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section style="padding:70px 20px;background:#0b0b0f;color:white;">
-<div style="max-width:1100px;margin:auto;">
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="lead">
+          Tell me what you’re building. I’ll reply with next steps and a simple plan.
+        </p>
 
-<h2>Projects</h2>
+        <div class="contact">
+          <div class="row">
+            <div class="label">Email</div>
+            <div><a href="mailto:hello@wolflabsystem.com">hello@wolflabsystem.com</a></div>
+          </div>
 
-<div style="margin-top:30px;padding:25px;border:1px solid #222;border-radius:15px;">
+          <div class="row">
+            <div class="label">Pages</div>
+            <div>
+              <a href="./contact/">Contact page</a> •
+              <a href="./builds/">Builds</a> •
+              <a href="./system/">System</a>
+            </div>
+          </div>
 
-<h3>Stockly</h3>
+          <div class="row">
+            <div class="label">Social</div>
+            <div class="muted">
+              Add links when ready:
+              <span style="display:inline-block; margin-left:8px;">
+                <a href="#" target="_blank" rel="noreferrer">GitHub</a> ·
+                <a href="#" target="_blank" rel="noreferrer">LinkedIn</a> ·
+                <a href="#" target="_blank" rel="noreferrer">Instagram</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<p style="color:#aaa;">
-Inventory management app designed for speed and clarity.
-</p>
+  </main>
 
-<p style="color:#aaa;">
-Scan products. Track stock. Manage restocking.
-</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div style="font-weight:900; letter-spacing:.3px;">Wolf Lab System</div>
+        <div class="muted">Engineering disciplined digital systems.</div>
+      </div>
+      <div class="muted">© <span id="year"></span> Wolf Lab System</div>
+    </div>
+  </footer>
 
-<a href="./builds/" style="margin-top:15px;display:inline-block;">View builds →</a>
-
-</div>
-
-</div>
-</section>
-
-
-<section style="padding:70px 20px;background:#0b0b0f;color:white;">
-<div style="max-width:1100px;margin:auto;">
-
-<h2>About the lab</h2>
-
-<p style="color:#aaa;max-width:700px;">
-Wolf Lab System is an independent developer lab focused on building disciplined digital systems.
-</p>
-
-<p style="color:#aaa;">
-Apps • SaaS • Cloud infrastructure
-</p>
-
-</div>
-</section>
-
-
-<footer style="padding:40px 20px;border-top:1px solid #222;background:#0b0b0f;color:#aaa;">
-<div style="max-width:1100px;margin:auto;">
-Wolf Lab System — Engineering disciplined digital systems
-</div>
-</footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
