@@ -250,12 +250,12 @@
         "en": "$230"
       },
       "status": {
-        "it": "Sorteggio 2027 chiuso (risultati il 18 settembre 2026); accettazione intorno al 10%",
-        "en": "2027 lottery closed (results 18 September 2026); acceptance around 10%"
+        "it": "Sorteggio 2027 chiuso (risultati il 18 settembre 2026)",
+        "en": "2027 lottery closed (results 18 September 2026)"
       },
       "start": {
-        "it": "Una delle Abbott World Marathon Majors; circa 300.000 richieste per 30.000 posti",
-        "en": "One of the Abbott World Marathon Majors; about 300,000 applications for 30,000 places"
+        "it": "Una delle Abbott World Marathon Majors",
+        "en": "One of the Abbott World Marathon Majors"
       },
       "limit": {
         "it": "Vedi regolamento ufficiale",
@@ -849,8 +849,8 @@
         "en": "Berlin Brandenburg airport (BER), linked to the centre by regional trains and S-Bahn."
       },
       "tips": {
-        "it": "Probabilità di estrazione nel sorteggio generale intorno al 20%: valuta anche i pacchetti dei tour operator ufficiali.",
-        "en": "General lottery odds around 20%: also consider official tour operator packages."
+        "it": "Il sorteggio non è l'unica via: valuta anche Good for Age, charity e i pacchetti dei tour operator ufficiali. Le probabilità di estrazione non sono pubblicate in modo verificabile.",
+        "en": "The lottery is not the only route: also consider Good for Age, charity and official tour operator packages. Draw odds are not published in a verifiable way."
       },
       "source": "https://www.generali-berlin-marathon.com/en/registration/run",
       "feeShort": {
