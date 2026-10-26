@@ -129,10 +129,4 @@
     updateCarb();
   }
 
-  // Conto alla rovescia per Berlino: 26 settembre 2027, partenza alle 09:15 di Berlino (CEST, UTC+2)
-  var race = Date.UTC(2027, 8, 26, 7, 15);
-  document.querySelectorAll("[data-countdown]").forEach(function (el) {
-    var days = Math.max(0, Math.ceil((race - Date.now()) / 86400000));
-    el.textContent = days;
-  });
 })();

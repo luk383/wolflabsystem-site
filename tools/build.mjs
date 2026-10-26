@@ -14,7 +14,6 @@ const ROUTES = {
   home: { it: "/", en: "/en/" },
   articles: { it: "/articoli/", en: "/en/articles/" },
   tools: { it: "/strumenti/", en: "/en/tools/" },
-  berlin: { it: "/berlino-2027/", en: "/en/berlin-2027/" },
   method: { it: "/metodo/", en: "/en/method/" },
   contact: { it: "/contatti/", en: "/en/contact/" },
 };
@@ -23,7 +22,7 @@ const articlePath = (lang, slug) => (lang === "it" ? `/articoli/${slug}/` : `/en
 const T = {
   it: {
     tagline: "Allenamento endurance, con le fonti",
-    nav: { articles: "Articoli", tools: "Strumenti", berlin: "Berlino 2027", method: "Metodo" },
+    nav: { articles: "Articoli", tools: "Strumenti", method: "Metodo" },
     switchTo: "English", switchLang: "en",
     skip: "Vai al contenuto",
     evidence: ["", "Prove limitate", "Prove moderate", "Prove forti"],
@@ -38,7 +37,7 @@ const T = {
   },
   en: {
     tagline: "Endurance training, with sources",
-    nav: { articles: "Articles", tools: "Tools", berlin: "Berlin 2027", method: "Method" },
+    nav: { articles: "Articles", tools: "Tools", method: "Method" },
     switchTo: "Italiano", switchLang: "it",
     skip: "Skip to content",
     evidence: ["", "Limited evidence", "Moderate evidence", "Strong evidence"],
@@ -82,7 +81,7 @@ function loadArticles() {
 // ---------- Impaginazione ----------
 function layout({ lang, title, description, current, alt, body, pathname }) {
   const t = T[lang];
-  const navItems = ["articles", "tools", "berlin", "method"]
+  const navItems = ["articles", "tools", "method"]
     .map((k) => `<a href="${ROUTES[k][lang]}"${current === k ? ' aria-current="page"' : ""}>${t.nav[k]}</a>`)
     .join("");
   const fullTitle = current === "home" ? `Wolf Lab — ${t.tagline}` : `${title} — Wolf Lab`;
@@ -170,8 +169,8 @@ const PAGES = {
   <div class="wrap">
     <h1>${it ? "Allenati con le fonti, non con i sentito dire." : "Train on evidence, not on hearsay."}</h1>
     <p class="lede">${it
-      ? "Corsa, bici, nutrizione e forza per amatori che lavorano, spiegati partendo dalla ricerca. Ogni consiglio dice quanto è solido."
-      : "Running, cycling, nutrition and strength for amateurs with a day job, explained from the research. Every piece of advice says how solid it is."}</p>
+      ? "Corsa, bici, nutrizione e forza per amatori, spiegati partendo dalla ricerca. Ogni consiglio dice quanto è solido."
+      : "Running, cycling, nutrition and strength for amateurs, explained from the research. Every piece of advice says how solid it is."}</p>
     ${paceBand(lang, "home-target")}
   </div>
 </section>
@@ -193,9 +192,9 @@ const PAGES = {
 </section>
 <section>
   <div class="wrap">
-    <div class="countdown">
-      <div><span class="days" data-countdown>—</span> <span>${it ? "giorni alla Maratona di Berlino" : "days to the Berlin Marathon"}</span></div>
-      <p>${it ? "Il diario di una preparazione amatoriale, tra turni di lavoro, corsa e bici, fino al 26 settembre 2027." : "The diary of an amateur build-up, between work shifts, running and riding, until 26 September 2027."} <a href="${ROUTES.berlin[lang]}">${it ? "Segui la preparazione" : "Follow the build-up"}</a></p>
+    <div class="callout">
+      <div><span class="figure">${it ? "42,195" : "42.195"}</span> <span>km</span></div>
+      <p>${it ? "Passaggi, ritmi di allenamento e carboidrati per la tua maratona, calcolati con i numeri delle linee guida." : "Splits, training paces and carbohydrate for your marathon, worked out with guideline numbers."} <a href="${ROUTES.tools[lang]}">${it ? "Apri gli strumenti" : "Open the tools"}</a></p>
     </div>
   </div>
 </section>`,
@@ -260,49 +259,6 @@ const PAGES = {
     };
   },
 
-  berlin(lang) {
-    const it = lang === "it";
-    const phases = it
-      ? [
-          ["Ott 2026 – feb 2027", "Base", "Tanto volume facile tra corsa e bici, due sedute di forza a settimana, costruzione graduale dei chilometri."],
-          ["Mar – mag 2027", "Costruzione", "Lungo che cresce, primi lavori a ritmo maratona e soglia. La bici passa a uscite di recupero."],
-          ["Giu – metà set 2027", "Specifico", "Le 12–16 settimane che contano: lavori a ritmo gara, lunghi specifici, prove di rifornimento."],
-          ["Ultime 2–3 settimane", "Scarico", "Meno volume, intensità mantenuta, carico di carboidrati negli ultimi due giorni."],
-        ]
-      : [
-          ["Oct 2026 – Feb 2027", "Base", "Lots of easy volume across running and cycling, two strength sessions a week, a gradual build in mileage."],
-          ["Mar – May 2027", "Build", "Growing long run, first marathon-pace and threshold work. Cycling shifts to recovery rides."],
-          ["Jun – mid Sep 2027", "Specific", "The 12–16 weeks that count: race-pace sessions, specific long runs, fuelling rehearsals."],
-          ["Last 2–3 weeks", "Taper", "Less volume, intensity maintained, carb loading in the final two days."],
-        ];
-    return {
-      title: it ? "Berlino 2027" : "Berlin 2027",
-      description: it ? "Il diario di una preparazione amatoriale alla Maratona di Berlino del 26 settembre 2027, tra corsa, bici e turni di lavoro." : "The diary of an amateur build-up to the Berlin Marathon on 26 September 2027, combining running, cycling and shift work.",
-      body: `<div class="page"><div class="wrap">
-  <h1>${it ? "Verso Berlino 2027" : "Road to Berlin 2027"}</h1>
-  <p class="lede">${it
-    ? "Una maratona preparata da amatore, con orari di lavoro a turni, metà dell'allenamento aerobico in bici e ogni scelta spiegata con le fonti."
-    : "A marathon prepared as an amateur, with shift-work hours, part of the aerobic training on the bike and every choice explained with sources."}</p>
-  <section>
-    <div class="countdown">
-      <div><span class="days" data-countdown>—</span> <span>${it ? "giorni alla partenza" : "days to the start"}</span></div>
-      <p>${it ? "Domenica 26 settembre 2027, Berlino. Il percorso è segnato da una linea blu dipinta sull'asfalto: è quella che vedi in tutto il sito." : "Sunday 26 September 2027, Berlin. The course is marked by a blue line painted on the road: it's the one you see across this site."}</p>
-    </div>
-  </section>
-  <h2>${it ? "Le fasi" : "The phases"}</h2>
-  <ol class="phases">
-${phases.map((p) => `    <li><span class="when">${p[0]}</span><span><strong>${p[1]}.</strong> ${p[2]}</span></li>`).join("\n")}
-  </ol>
-  <section class="prose">
-    <h2>${it ? "Il diario" : "The diary"}</h2>
-    <p>${it
-      ? "Qui arriveranno gli aggiornamenti settimanali: cosa è andato bene, cosa no, e cosa cambio. Per riceverli segui il feed RSS o scrivi a"
-      : "Weekly updates will appear here: what went well, what didn't, and what I change. To get them, follow the RSS feed or write to"} <a href="mailto:${EMAIL}">${EMAIL}</a>.</p>
-  </section>
-</div></div>`,
-    };
-  },
-
   method(lang) {
     const it = lang === "it";
     return {
@@ -310,7 +266,7 @@ ${phases.map((p) => `    <li><span class="when">${p[0]}</span><span><strong>${p[
       description: it ? "Come scegliamo le fonti, come assegniamo il livello di prova e come usiamo l'intelligenza artificiale." : "How we choose sources, how we assign evidence levels and how we use AI.",
       body: `<div class="page"><div class="wrap prose">
   <h1>${it ? "Metodo" : "Method"}</h1>
-  <p class="lede">${it ? "Wolf Lab è un laboratorio personale sull'allenamento di endurance: corsa, bici, nutrizione e forza per chi si allena da amatore." : "Wolf Lab is a personal lab on endurance training: running, cycling, nutrition and strength for people who train as amateurs."}</p>
+  <p class="lede">${it ? "Wolf Lab è un laboratorio sull'allenamento di endurance: corsa, bici, nutrizione e forza per chi si allena da amatore." : "Wolf Lab is a lab on endurance training: running, cycling, nutrition and strength for people who train as amateurs."}</p>
   <h2>${it ? "Da dove partiamo" : "Where we start"}</h2>
   <p>${it
     ? "Prima le revisioni sistematiche e le linee guida delle società scientifiche, poi i singoli studi, poi l'esperienza di allenatori e scienziati che spiegano il loro ragionamento. Forum e social servono per capire le domande, non per dare le risposte."
@@ -323,8 +279,8 @@ ${phases.map((p) => `    <li><span class="when">${p[0]}</span><span><strong>${p[
   <p>${it ? "Il sito non ha pubblicità, sponsor né link di affiliazione. Quando citiamo un prodotto è perché serve all'esempio, non perché qualcuno paga." : "The site has no ads, sponsors or affiliate links. When we mention a product it's because the example needs it, not because someone pays."}</p>
   <h2>${it ? "Intelligenza artificiale" : "Artificial intelligence"}</h2>
   <p>${it
-    ? "Usiamo l'intelligenza artificiale come assistente: per cercare studi, riassumerli e preparare una prima bozza. Ogni articolo viene poi rivisto, i dati principali controllati sulle fonti originali e le parti personali scritte a mano."
-    : "We use AI as an assistant: to find studies, summarise them and prepare a first draft. Every article is then reviewed, the key figures checked against the original sources and the personal parts written by hand."}</p>
+    ? "Usiamo l'intelligenza artificiale come assistente: per cercare studi, riassumerli e preparare una prima bozza. Ogni articolo viene poi rivisto e i dati principali vengono controllati sulle fonti originali."
+    : "We use AI as an assistant: to find studies, summarise them and prepare a first draft. Every article is then reviewed and the key figures are checked against the original sources."}</p>
   <h2>${it ? "Non è un parere medico" : "Not medical advice"}</h2>
   <p>${it ? "Le informazioni sono generali. Per dolori, infortuni, malattie o diete specifiche rivolgiti a un medico o a un nutrizionista." : "The information is general. For pain, injuries, medical conditions or specific diets, talk to a doctor or registered dietitian."}</p>
 </div></div>`,
@@ -406,7 +362,7 @@ function main() {
   }));
 
   // Vecchi indirizzi del sito precedente
-  const redirects = { "/system/": "/metodo/", "/builds/": "/", "/roadmap/": "/berlino-2027/", "/contact/": "/contatti/" };
+  const redirects = { "/system/": "/metodo/", "/builds/": "/", "/roadmap/": "/", "/contact/": "/contatti/" };
   for (const [from, to] of Object.entries(redirects)) {
     write(from, `<!doctype html><html lang="it"><head><meta charset="utf-8"><title>Wolf Lab</title><link rel="canonical" href="${SITE}${to}"><meta http-equiv="refresh" content="0; url=${to}"><meta name="robots" content="noindex"></head><body><p><a href="${to}">Wolf Lab</a></p></body></html>\n`);
   }

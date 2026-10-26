@@ -1,5 +1,5 @@
 /* Wolf Lab — endurance basata sulle prove
-   Palette: asfalto, inchiostro navy, linea blu di Berlino, giallo pettorale */
+   Palette: asfalto, inchiostro navy, linea blu, giallo pettorale */
 :root {
   --asphalt: #e8ebef;
   --paper: #ffffff;
@@ -131,11 +131,6 @@ section { padding: 48px 0; }
 .principles p { font-size: 1rem; color: var(--muted); }
 @media (max-width: 860px) { .principles { grid-template-columns: 1fr; gap: 8px; } }
 
-/* Conto alla rovescia */
-.countdown { background: var(--ink); color: var(--asphalt); border-radius: 14px; padding: 32px; display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: center; justify-content: space-between; }
-.countdown .days { font-family: var(--display); font-size: clamp(3rem, 9vw, 6rem); font-weight: 900; font-stretch: 120%; line-height: 1; font-variant-numeric: tabular-nums; }
-.countdown p { margin: 0; max-width: 36ch; }
-.countdown a { color: inherit; }
 
 /* Pagine di testo e articoli */
 .page { padding: 56px 0 72px; }
@@ -177,11 +172,6 @@ section { padding: 48px 0; }
 .range { width: 100%; accent-color: var(--line); }
 .error { color: #c0392b; font-family: var(--display); font-size: 0.95rem; }
 
-/* Fasi Berlino */
-.phases { list-style: none; padding: 0; margin: 0; counter-reset: ph; }
-.phases li { display: grid; grid-template-columns: 11rem 1fr; gap: 6px 24px; padding: 18px 0; border-bottom: 1px solid var(--rule); }
-.phases .when { font-family: var(--display); font-weight: 700; }
-@media (max-width: 700px) { .phases li { grid-template-columns: 1fr; } }
 
 /* Piede */
 .site-foot { border-top: 1px solid var(--rule); padding: 32px 0 48px; font-size: 0.95rem; color: var(--muted); }
@@ -203,3 +193,9 @@ section { padding: 48px 0; }
   .nav { order: 3; width: 100%; margin-left: 0; gap: 4px 18px; }
 }
 .prose h1 { font-size: clamp(2.1rem, 5vw, 3.2rem); font-stretch: 112%; }
+
+/* Riquadro scuro di invito agli strumenti */
+.callout { background: var(--ink); color: var(--asphalt); border-radius: 14px; padding: 32px; display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: center; justify-content: space-between; }
+.callout .figure { font-family: var(--display); font-size: clamp(3rem, 9vw, 6rem); font-weight: 900; font-stretch: 120%; line-height: 1; font-variant-numeric: tabular-nums; }
+.callout p { margin: 0; max-width: 36ch; }
+.callout a { color: inherit; }
