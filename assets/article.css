@@ -29,3 +29,14 @@
 .art-related li{padding-bottom:9px;border-bottom:1px solid var(--rule)}
 @media(max-width:960px){.art-grid{grid-template-columns:minmax(0,1fr);gap:0}.art-side{position:static;margin-top:28px;padding-top:0}.art-toc{display:none}.art-toc-m{display:block}}
 @media(max-width:760px){.art-hero .wrap{padding:32px 0 30px}.art-hero h1{font-size:38px;letter-spacing:-1.8px}.art-grid{padding:28px 0 32px}.art-body h2{font-size:23px}}
+
+/* Pagine interne (gare, viaggi, strumenti, indici, contatti) */
+.inner-body{padding:36px 0 56px}
+.art-hero .lede{color:#fff3e4;font-size:18px;line-height:1.5;max-width:60ch;margin:0}
+.art-hero .crumb{margin:0 0 14px;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase}
+.art-hero .crumb a{color:#fff3e4}
+.art-hero h1+.lede{margin-top:2px}
+@media(max-width:760px){.inner-body{padding:28px 0 32px}.art-hero .lede{font-size:16px}}
+.art-hero .major{color:#fff;border-color:#FF8A24}
+.inner-body.prose{max-width:var(--wrap)}
+.inner-body.prose>*{max-width:720px}
