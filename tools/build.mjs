@@ -105,7 +105,7 @@ function layout({ lang, title, description, current, alt, body, pathname, extraC
   const navItems = ["articles", "races", "trips", "tools"]
     .map((k) => `<a href="${ROUTES[k][lang]}"${current === k ? ' aria-current="page"' : ""}>${t.nav[k]}</a>`)
     .join("");
-  const fullTitle = current === "home" ? `Wolf Lab — ${t.tagline}` : `${title} — Wolf Lab`;
+  const fullTitle = current === "home" ? "Wolf Lab - Run. Ride. One engine." : `${title} — Wolf Lab`;
   return `<!doctype html>
 <html lang="${lang}">
 <head>
