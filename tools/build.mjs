@@ -16,11 +16,10 @@ const ASSET_V = { css: ver("assets/site.css"), js: ver("assets/site.js") };
 // Percorsi delle pagine in ciascuna lingua
 const ROUTES = {
   races: { it: "/gare/", en: "/en/races/" },
-  trips: { it: "/trip/", en: "/en/trips/" },
+  trips: { it: "/viaggi/", en: "/en/trips/" },
   home: { it: "/", en: "/en/" },
   articles: { it: "/articoli/", en: "/en/articles/" },
   tools: { it: "/strumenti/", en: "/en/tools/" },
-  method: { it: "/metodo/", en: "/en/method/" },
   contact: { it: "/contatti/", en: "/en/contact/" },
 };
 const articlePath = (lang, slug) => (lang === "it" ? `/articoli/${slug}/` : `/en/articles/${slug}/`);
@@ -28,13 +27,13 @@ const articlePath = (lang, slug) => (lang === "it" ? `/articoli/${slug}/` : `/en
 const T = {
   it: {
     tagline: "Allenamento endurance, con le fonti",
-    nav: { articles: "Articoli", races: "Gare", trips: "Trip", tools: "Strumenti", method: "Metodo" },
+    nav: { articles: "Articoli", races: "Gare", trips: "Viaggi", tools: "Strumenti" },
     switchTo: "English", switchLang: "en",
     skip: "Vai al contenuto",
     evidence: ["", "Prove limitate", "Prove moderate", "Prove forti"],
     evidenceLabel: "Livello di prova",
     read: "min di lettura",
-    foot: "Corsa, bici, nutrizione e allenamento per amatori, basati sulle prove. Le informazioni non sostituiscono il parere di un medico.",
+    foot: "Corsa, bici, nutrizione e allenamento per amatori. Le informazioni non sostituiscono il parere di un medico.",
     contact: "Contatti",
     updated: "Pubblicato il",
     months: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
@@ -43,13 +42,13 @@ const T = {
   },
   en: {
     tagline: "Endurance training, with sources",
-    nav: { articles: "Articles", races: "Races", trips: "Trips", tools: "Tools", method: "Method" },
+    nav: { articles: "Articles", races: "Races", trips: "Trips", tools: "Tools" },
     switchTo: "Italiano", switchLang: "it",
     skip: "Skip to content",
     evidence: ["", "Limited evidence", "Moderate evidence", "Strong evidence"],
     evidenceLabel: "Evidence level",
     read: "min read",
-    foot: "Running, cycling, nutrition and training for amateurs, grounded in evidence. This information doesn't replace advice from a doctor.",
+    foot: "Running, cycling, nutrition and training for amateurs. This information doesn't replace advice from a doctor.",
     contact: "Contact",
     updated: "Published",
     months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -87,7 +86,7 @@ function loadArticles() {
 // ---------- Impaginazione ----------
 function layout({ lang, title, description, current, alt, body, pathname }) {
   const t = T[lang];
-  const navItems = ["articles", "races", "trips", "tools", "method"]
+  const navItems = ["articles", "races", "trips", "tools"]
     .map((k) => `<a href="${ROUTES[k][lang]}"${current === k ? ' aria-current="page"' : ""}>${t.nav[k]}</a>`)
     .join("");
   const fullTitle = current === "home" ? `Wolf Lab — ${t.tagline}` : `${title} — Wolf Lab`;
@@ -129,7 +128,7 @@ ${body}
 <footer class="site-foot">
   <div class="wrap">
     <p>${t.foot}</p>
-    <nav class="foot-links" aria-label="${lang === "it" ? "Piè di pagina" : "Footer"}"><a href="${ROUTES.contact[lang]}">${t.contact}</a> <a href="${ROUTES.method[lang]}">${t.nav.method}</a> <a href="${lang === "it" ? "/feed.xml" : "/en/feed.xml"}">RSS</a></nav>
+    <nav class="foot-links" aria-label="${lang === "it" ? "Piè di pagina" : "Footer"}"><a href="${ROUTES.contact[lang]}">${t.contact}</a> <a href="${lang === "it" ? "/feed.xml" : "/en/feed.xml"}">RSS</a></nav>
   </div>
 </footer>
 </body>
@@ -144,7 +143,6 @@ ${list
     (a) => `  <li><a href="${articlePath(lang, a.slug)}">
     <span class="topic">${esc(a.topic)}</span>
     <span><h3>${esc(a.title)}</h3><p>${esc(a.description)}</p></span>
-    ${evidenceBadge(a.evidence, lang)}
   </a></li>`
   )
   .join("\n")}
@@ -186,7 +184,7 @@ const RACES = JSON.parse(fs.readFileSync(path.join(ROOT, "content/races.json"), 
 const TRIPS = JSON.parse(fs.readFileSync(path.join(ROOT, "content/trips.json"), "utf8"));
 RACES.races.sort((a, b) => a.date.localeCompare(b.date));
 const racePath = (lang, r) => (lang === "it" ? `/gare/${r.slug.it}/` : `/en/races/${r.slug.en}/`);
-const tripPath = (lang, t) => (lang === "it" ? `/trip/${t.slug.it}/` : `/en/trips/${t.slug.en}/`);
+const tripPath = (lang, t) => (lang === "it" ? `/viaggi/${t.slug.it}/` : `/en/trips/${t.slug.en}/`);
 const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } };
 const SPORT = { run: { it: "Corsa", en: "Running" }, bike: { it: "Bici", en: "Cycling" } };
 function raceDate(iso, lang, short) {
@@ -211,8 +209,8 @@ const PAGES = {
     return {
       title: it ? "Home" : "Home",
       description: it
-        ? "Articoli e calcolatori su corsa, bici, nutrizione e forza per amatori di endurance, ogni consiglio con il suo livello di prova e le fonti."
-        : "Articles and calculators on running, cycling, nutrition and strength for amateur endurance athletes, each piece of advice with its evidence level and sources.",
+        ? "Articoli e calcolatori su corsa, bici, nutrizione e forza per amatori di endurance, ognuno con le sue fonti."
+        : "Articles and calculators on running, cycling, nutrition and strength for amateur endurance athletes, each with its sources.",
       body: `<section class="hero hero-min">
   <div class="wrap">
     <h1 class="headline"${it ? ' lang="en"' : ""}><span>Two feet.${GLYPH.run}</span><span>Two wheels.${GLYPH.bike}</span><span>One engine.${GLYPH.heart}</span></h1>
@@ -238,10 +236,10 @@ ${articles.slice(0, 4).map((a) => `      <li><a href="${articlePath(lang, a.slug
     const it = lang === "it";
     return {
       title: it ? "Articoli" : "Articles",
-      description: it ? "Tutti gli articoli su corsa, bici, nutrizione e forza, con livello di prova e fonti." : "All articles on running, cycling, nutrition and strength, with evidence level and sources.",
+      description: it ? "Tutti gli articoli su corsa, bici, nutrizione e forza, con le fonti." : "All articles on running, cycling, nutrition and strength, with sources.",
       body: `<div class="page"><div class="wrap">
   <h1>${it ? "Articoli" : "Articles"}</h1>
-  <p class="lede">${it ? "Un tema per volta: cosa dice la ricerca, cosa fare in pratica, quanto è solido." : "One topic at a time: what the research says, what to do in practice, how solid it is."}</p>
+  <p class="lede">${it ? "Un tema per volta: cosa dice la ricerca e cosa fare in pratica." : "One topic at a time: what the research says and what to do in practice."}</p>
   ${topicNav(articles)}
   ${topicsOf(articles).map((t) => `<section class="topic-section" id="${slugify(t)}"><h2>${esc(t)}</h2>${articleRows(articles.filter((x) => x.topic === t), lang)}</section>`).join("\n")}
 </div></div>`,
@@ -296,9 +294,9 @@ ${articles.slice(0, 4).map((a) => `      <li><a href="${articlePath(lang, a.slug
 
   races(lang) {
     const it = lang === "it";
-    const rows = RACES.races.map((r) => `<li data-sport="${r.sport}"><a href="${racePath(lang, r)}">
+    const rows = RACES.races.map((r) => `<li data-sport="${r.sport}" data-major="${r.major ? "1" : "0"}"><a href="${racePath(lang, r)}">
       <time datetime="${r.date}">${raceDate(r.date, lang, true)}</time>
-      <span class="r-name">${esc(r.name)}<small>${esc(r.city[lang])}</small></span>
+      <span class="r-name">${esc(r.name)}${r.major ? ` <span class="major">Major</span>` : ""}<small>${esc(r.city[lang])}</small></span>
       <span class="r-dist">${esc(raceDistance(r, lang))}</span>
       <span class="r-fee">${esc(r.feeShort[lang])}</span>
     </a></li>`).join("\n");
@@ -312,6 +310,7 @@ ${articles.slice(0, 4).map((a) => `      <li><a href="${articlePath(lang, a.slug
     <button type="button" data-filter="all" aria-pressed="true">${it ? "Tutte" : "All"}</button>
     <button type="button" data-filter="run" aria-pressed="false">${SPORT.run[lang]}</button>
     <button type="button" data-filter="bike" aria-pressed="false">${SPORT.bike[lang]}</button>
+    <button type="button" data-filter="major" aria-pressed="false">World Marathon Majors</button>
   </div>
   <div class="race-head" aria-hidden="true"><span>${it ? "Data" : "Date"}</span><span>${it ? "Gara" : "Race"}</span><span>${it ? "Distanza" : "Distance"}</span><span>${it ? "Quota" : "Fee"}</span></div>
   <ul class="race-list" data-filter-list>
@@ -325,42 +324,14 @@ ${rows}
   trips(lang) {
     const it = lang === "it";
     return {
-      title: it ? "Trip" : "Trips",
+      title: it ? "Viaggi" : "Trips",
       description: it ? "Mete per training camp e viaggi di corsa e bici: quando andare, cosa allenare, costi indicativi e logistica." : "Training camp and travel destinations for running and cycling: when to go, what to train, indicative costs and logistics.",
       body: `<div class="page"><div class="wrap">
-  <h1>Trip</h1>
+  <h1>${it ? "Viaggi" : "Trips"}</h1>
   <p class="lede">${it ? "Training camp e viaggi per correre e pedalare: dove, quando e quanto costa." : "Training camps and trips to run and ride: where, when and what it costs."}</p>
   <ul class="trip-list">
 ${TRIPS.trips.map((t) => `    <li><a href="${tripPath(lang, t)}"><span class="t-name">${esc(it ? t.name : t.nameEn)}</span><span class="t-kind">${esc(t.kind[lang])}</span><span class="t-season">${esc(t.season[lang].split(";")[0])}</span></a></li>`).join("\n")}
   </ul>
-</div></div>`,
-    };
-  },
-
-  method(lang) {
-    const it = lang === "it";
-    return {
-      title: it ? "Metodo" : "Method",
-      description: it ? "Come scegliamo le fonti, come assegniamo il livello di prova e come usiamo l'intelligenza artificiale." : "How we choose sources, how we assign evidence levels and how we use AI.",
-      body: `<div class="page"><div class="wrap prose">
-  <h1>${it ? "Metodo" : "Method"}</h1>
-  <p class="lede">${it ? "Wolf Lab è un laboratorio sull'allenamento di endurance: corsa, bici, nutrizione e forza per chi si allena da amatore." : "Wolf Lab is a lab on endurance training: running, cycling, nutrition and strength for people who train as amateurs."}</p>
-  <h2>${it ? "Da dove partiamo" : "Where we start"}</h2>
-  <p>${it
-    ? "Prima le revisioni sistematiche e le linee guida delle società scientifiche, poi i singoli studi, poi l'esperienza di allenatori e scienziati che spiegano il loro ragionamento. Forum e social servono per capire le domande, non per dare le risposte."
-    : "First systematic reviews and guidelines from scientific bodies, then single studies, then the experience of coaches and scientists who explain their reasoning. Forums and social media help us understand the questions, not provide the answers."}</p>
-  <h2>${it ? "Il livello di prova" : "The evidence level"}</h2>
-  <p>${evidenceBadge(3, lang)} ${it ? "Più revisioni o linee guida concordano." : "Several reviews or guidelines agree."}</p>
-  <p>${evidenceBadge(2, lang)} ${it ? "Alcuni studi di buona qualità, oppure prove solide sul principio ma non sull'applicazione pratica." : "Some good-quality studies, or solid evidence for the principle but not for the practical application."}</p>
-  <p>${evidenceBadge(1, lang)} ${it ? "Pochi studi, studi piccoli o soprattutto esperienza degli allenatori." : "Few or small studies, or mainly coaching experience."}</p>
-  <h2>${it ? "Niente da venderti" : "Nothing to sell you"}</h2>
-  <p>${it ? "Il sito non ha pubblicità, sponsor né link di affiliazione. Quando citiamo un prodotto è perché serve all'esempio, non perché qualcuno paga." : "The site has no ads, sponsors or affiliate links. When we mention a product it's because the example needs it, not because someone pays."}</p>
-  <h2>${it ? "Intelligenza artificiale" : "Artificial intelligence"}</h2>
-  <p>${it
-    ? "Usiamo l'intelligenza artificiale come assistente: per cercare studi, riassumerli e preparare una prima bozza. Ogni articolo viene poi rivisto e i dati principali vengono controllati sulle fonti originali."
-    : "We use AI as an assistant: to find studies, summarise them and prepare a first draft. Every article is then reviewed and the key figures are checked against the original sources."}</p>
-  <h2>${it ? "Non è un parere medico" : "Not medical advice"}</h2>
-  <p>${it ? "Le informazioni sono generali. Per dolori, infortuni, malattie o diete specifiche rivolgiti a un medico o a un nutrizionista." : "The information is general. For pain, injuries, medical conditions or specific diets, talk to a doctor or registered dietitian."}</p>
 </div></div>`,
     };
   },
@@ -422,7 +393,7 @@ function main() {
       const pathname = articlePath(lang, a.slug);
       const body = `<article class="page"><div class="wrap prose">
   <h1>${esc(a.title)}</h1>
-  <div class="article-meta"><span>${esc(a.topic)}</span>${evidenceBadge(a.evidence, lang)}<span>${a.minutes} ${T[lang].read}</span><time datetime="${a.date}">${T[lang].updated} ${fmtDate(a.date, lang)}</time></div>
+  <div class="article-meta"><span>${esc(a.topic)}</span><span>${a.minutes} ${T[lang].read}</span><time datetime="${a.date}">${T[lang].updated} ${fmtDate(a.date, lang)}</time></div>
   ${a.body.trim()}
   <p class="note">${T[lang].note}</p>
   <p><a href="${ROUTES.articles[lang]}">${T[lang].allArticles}</a></p>
@@ -438,7 +409,7 @@ function main() {
       const body = `<article class="page"><div class="wrap prose">
   <p class="crumb"><a href="${ROUTES.races[lang]}">${it ? "Gare" : "Races"}</a></p>
   <h1>${esc(r.name)}</h1>
-  <div class="article-meta"><span>${SPORT[r.sport][lang]}</span><time datetime="${r.date}">${raceDate(r.date, lang)}</time><span>${esc(r.city[lang])}</span></div>
+  <div class="article-meta"><span>${SPORT[r.sport][lang]}</span>${r.major ? `<span class="major">Abbott World Marathon Major</span>` : ""}<time datetime="${r.date}">${raceDate(r.date, lang)}</time><span>${esc(r.city[lang])}</span></div>
   ${factTable([
     [it ? "Distanza" : "Distance", esc(raceDistance(r, lang))],
     [it ? "Quota" : "Fee", esc(r.fee[lang])],
@@ -460,7 +431,7 @@ function main() {
       const it = lang === "it";
       const name = it ? t.name : t.nameEn;
       const body = `<article class="page"><div class="wrap prose">
-  <p class="crumb"><a href="${ROUTES.trips[lang]}">Trip</a></p>
+  <p class="crumb"><a href="${ROUTES.trips[lang]}">${it ? "Viaggi" : "Trips"}</a></p>
   <h1>${esc(name)}</h1>
   <div class="article-meta"><span>${esc(t.kind[lang])}</span><span>${esc(t.place[lang])}</span></div>
   ${factTable([
@@ -492,7 +463,8 @@ function main() {
   }));
 
   // Vecchi indirizzi del sito precedente
-  const redirects = { "/system/": "/metodo/", "/builds/": "/", "/roadmap/": "/", "/contact/": "/contatti/" };
+  const redirects = { "/system/": "/", "/builds/": "/", "/roadmap/": "/", "/contact/": "/contatti/", "/metodo/": "/", "/en/method/": "/en/", "/trip/": "/viaggi/" };
+  for (const t of TRIPS.trips) redirects[`/trip/${t.slug.it}/`] = tripPath("it", t);
   for (const [from, to] of Object.entries(redirects)) {
     write(from, `<!doctype html><html lang="it"><head><meta charset="utf-8"><title>Wolf Lab</title><link rel="canonical" href="${SITE}${to}"><meta http-equiv="refresh" content="0; url=${to}"><meta name="robots" content="noindex"></head><body><p><a href="${to}">Wolf Lab</a></p></body></html>\n`);
   }

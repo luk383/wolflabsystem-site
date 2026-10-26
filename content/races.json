@@ -43,7 +43,8 @@
       "feeShort": {
         "it": "€69–109",
         "en": "€69–109"
-      }
+      },
+      "major": false
     },
     {
       "id": "valencia",
@@ -87,7 +88,8 @@
       "feeShort": {
         "it": "€80–180",
         "en": "€80–180"
-      }
+      },
+      "major": false
     },
     {
       "id": "napoli-half",
@@ -131,7 +133,8 @@
       "feeShort": {
         "it": "da €38",
         "en": "from €38"
-      }
+      },
+      "major": false
     },
     {
       "id": "sevilla",
@@ -175,7 +178,98 @@
       "feeShort": {
         "it": "da €82,10",
         "en": "from €82.10"
-      }
+      },
+      "major": false
+    },
+    {
+      "id": "romaostia",
+      "slug": {
+        "it": "roma-ostia-half-marathon",
+        "en": "roma-ostia-half-marathon"
+      },
+      "name": "RomaOstia Half Marathon",
+      "sport": "run",
+      "distance": "21,097 km",
+      "date": "2027-02-28",
+      "city": {
+        "it": "Roma, Italia",
+        "en": "Rome, Italy"
+      },
+      "fee": {
+        "it": "Vedi sito ufficiale",
+        "en": "See official site"
+      },
+      "feeShort": {
+        "it": "—",
+        "en": "—"
+      },
+      "status": {
+        "it": "52ª edizione",
+        "en": "52nd edition"
+      },
+      "start": {
+        "it": "Partenza all'EUR, arrivo sul lungomare di Ostia lungo la via Cristoforo Colombo",
+        "en": "Start in the EUR district, finish on the Ostia seafront along Via Cristoforo Colombo"
+      },
+      "limit": {
+        "it": "3 ore 30 minuti",
+        "en": "3 hours 30 minutes"
+      },
+      "travel": {
+        "it": "Aeroporti di Fiumicino (FCO) e Ciampino (CIA); l'EUR è servito dalla metro B, Ostia dal treno Roma–Lido.",
+        "en": "Fiumicino (FCO) and Ciampino (CIA) airports; EUR is on metro line B, Ostia on the Roma–Lido train."
+      },
+      "tips": {
+        "it": "Percorso veloce con una sola salita, quella del Camping, e finale in discesa verso il mare.",
+        "en": "Fast course with a single climb, the 'salita del Camping', and a downhill finish towards the sea."
+      },
+      "source": "https://running.life/en/event/romaostia-half-marathon",
+      "major": false
+    },
+    {
+      "id": "tokyo",
+      "slug": {
+        "it": "maratona-di-tokyo",
+        "en": "tokyo-marathon"
+      },
+      "name": "Tokyo Marathon",
+      "sport": "run",
+      "major": true,
+      "distance": "42,195 km",
+      "date": "2027-03-07",
+      "city": {
+        "it": "Tokyo, Giappone",
+        "en": "Tokyo, Japan"
+      },
+      "fee": {
+        "it": "$230 per chi corre dall'estero (19.800 yen per i residenti)",
+        "en": "$230 for overseas runners (¥19,800 for residents)"
+      },
+      "feeShort": {
+        "it": "$230",
+        "en": "$230"
+      },
+      "status": {
+        "it": "Sorteggio 2027 chiuso (risultati il 18 settembre 2026); accettazione intorno al 10%",
+        "en": "2027 lottery closed (results 18 September 2026); acceptance around 10%"
+      },
+      "start": {
+        "it": "Una delle Abbott World Marathon Majors; circa 300.000 richieste per 30.000 posti",
+        "en": "One of the Abbott World Marathon Majors; about 300,000 applications for 30,000 places"
+      },
+      "limit": {
+        "it": "Vedi regolamento ufficiale",
+        "en": "See official rules"
+      },
+      "travel": {
+        "it": "Aeroporti di Haneda (HND) e Narita (NRT); Haneda è il più vicino al centro.",
+        "en": "Haneda (HND) and Narita (NRT) airports; Haneda is closer to the centre."
+      },
+      "tips": {
+        "it": "Il sorteggio per il 2028 si apre di solito in estate. In alternativa ci sono i pacchetti dei tour operator ufficiali e le iscrizioni con donazione.",
+        "en": "The lottery for 2028 usually opens in summer. Alternatives are official tour operator packages and charity entries."
+      },
+      "source": "https://marathonhandbook.com/tokyo-marathon-2027-general-entry/"
     },
     {
       "id": "roma",
@@ -219,7 +313,53 @@
       "feeShort": {
         "it": "da €99",
         "en": "from €99"
-      }
+      },
+      "major": false
+    },
+    {
+      "id": "barcelona",
+      "slug": {
+        "it": "maratona-di-barcellona",
+        "en": "barcelona-marathon"
+      },
+      "name": "Zurich Marató de Barcelona",
+      "sport": "run",
+      "distance": "42,195 km",
+      "date": "2027-03-14",
+      "city": {
+        "it": "Barcellona, Spagna",
+        "en": "Barcelona, Spain"
+      },
+      "fee": {
+        "it": "€100 nello scaglione attuale (€80 e €90 esauriti); pacchetti da €167,85; commissioni escluse",
+        "en": "€100 in the current tier (€80 and €90 sold out); packages from €167.85; fees excluded"
+      },
+      "feeShort": {
+        "it": "€100",
+        "en": "€100"
+      },
+      "status": {
+        "it": "Iscrizioni aperte fino al 7 marzo 2027 o all'esaurimento dei 37.000 pettorali",
+        "en": "Entries open until 7 March 2027 or until the 37,000 bibs sell out"
+      },
+      "start": {
+        "it": "Partenza e arrivo su Passeig de Gràcia, ore 8:30",
+        "en": "Start and finish on Passeig de Gràcia, 8:30 am"
+      },
+      "limit": {
+        "it": "6 ore",
+        "en": "6 hours"
+      },
+      "travel": {
+        "it": "Aeroporto di Barcellona El Prat (BCN), collegato al centro da treno, metro e bus.",
+        "en": "Barcelona El Prat airport (BCN), linked to the centre by train, metro and bus."
+      },
+      "tips": {
+        "it": "Nel 2026 è andata esaurita: conviene iscriversi presto.",
+        "en": "It sold out in 2026: enter early."
+      },
+      "source": "https://barcelonaurbana.com/blog/maraton-barcelona-2027-inscripcion-precio-recorrido",
+      "major": false
     },
     {
       "id": "milano",
@@ -263,7 +403,8 @@
       "feeShort": {
         "it": "variabile",
         "en": "variable"
-      }
+      },
+      "major": false
     },
     {
       "id": "paris",
@@ -307,7 +448,143 @@
       "feeShort": {
         "it": "€169",
         "en": "€169"
-      }
+      },
+      "major": false
+    },
+    {
+      "id": "rotterdam",
+      "slug": {
+        "it": "maratona-di-rotterdam",
+        "en": "rotterdam-marathon"
+      },
+      "name": "NN Marathon Rotterdam",
+      "sport": "run",
+      "distance": "42,195 km",
+      "date": "2027-04-11",
+      "city": {
+        "it": "Rotterdam, Paesi Bassi",
+        "en": "Rotterdam, Netherlands"
+      },
+      "fee": {
+        "it": "Circa €155 (riferimento 2026: €5 di preiscrizione più circa €150); quota 2027 da confermare",
+        "en": "About €155 (2026 reference: €5 pre-registration plus about €150); 2027 fee to be confirmed"
+      },
+      "feeShort": {
+        "it": "circa €155",
+        "en": "about €155"
+      },
+      "status": {
+        "it": "Preiscrizione e assegnazione: vedi sito ufficiale",
+        "en": "Pre-registration and allocation: see official site"
+      },
+      "start": {
+        "it": "Partenza ai piedi dell'Erasmusbrug, arrivo sul Coolsingel",
+        "en": "Start at the foot of the Erasmus Bridge, finish on the Coolsingel"
+      },
+      "limit": {
+        "it": "6 ore",
+        "en": "6 hours"
+      },
+      "travel": {
+        "it": "Aeroporto di Rotterdam L'Aia (RTM), a circa 20 minuti dal centro; oppure Amsterdam Schiphol (AMS), a 35–40 minuti di treno.",
+        "en": "Rotterdam The Hague airport (RTM), about 20 minutes from the centre; or Amsterdam Schiphol (AMS), 35–40 minutes by train."
+      },
+      "tips": {
+        "it": "Percorso piatto, tra i più veloci d'Europa in primavera.",
+        "en": "Flat course, among Europe's fastest in spring."
+      },
+      "source": "https://fatmarathoner.com/nn-marathon-rotterdam-guide/",
+      "major": false
+    },
+    {
+      "id": "boston",
+      "slug": {
+        "it": "maratona-di-boston",
+        "en": "boston-marathon"
+      },
+      "name": "Boston Marathon",
+      "sport": "run",
+      "major": true,
+      "distance": "42,195 km",
+      "date": "2027-04-19",
+      "city": {
+        "it": "Boston, Stati Uniti",
+        "en": "Boston, United States"
+      },
+      "fee": {
+        "it": "$270",
+        "en": "$270"
+      },
+      "feeShort": {
+        "it": "$270",
+        "en": "$270"
+      },
+      "status": {
+        "it": "Solo con tempo di qualificazione: iscrizioni chiuse il 18 settembre 2026; 1.000 posti estratti tra chi non ha passato il taglio",
+        "en": "Qualifying time only: entries closed 18 September 2026; 1,000 places drawn among those who missed the cut-off"
+      },
+      "start": {
+        "it": "Una delle Abbott World Marathon Majors; si corre il lunedì del Patriots' Day. Tempi minimi per fascia d'età, per esempio 2:55 per gli uomini e 3:25 per le donne tra 18 e 34 anni",
+        "en": "One of the Abbott World Marathon Majors; run on Patriots' Day Monday. Age-group standards, for example 2:55 for men and 3:25 for women aged 18–34"
+      },
+      "limit": {
+        "it": "Vedi regolamento ufficiale",
+        "en": "See official rules"
+      },
+      "travel": {
+        "it": "Aeroporto Logan (BOS); la partenza è a Hopkinton, con navette organizzate dal centro.",
+        "en": "Logan airport (BOS); the start is in Hopkinton, with organised shuttles from the city."
+      },
+      "tips": {
+        "it": "Il tempo di qualificazione non garantisce il posto: conta quanto sei sotto lo standard. In alternativa ci sono le iscrizioni con donazione.",
+        "en": "A qualifying time doesn't guarantee entry: what counts is how far under the standard you are. Charity entries are the alternative."
+      },
+      "source": "https://www.marathons.com/en/boston-marathon/boston-marathon-2027-registration-is-open_739j"
+    },
+    {
+      "id": "london",
+      "slug": {
+        "it": "maratona-di-londra",
+        "en": "london-marathon"
+      },
+      "name": "TCS London Marathon",
+      "sport": "run",
+      "major": true,
+      "distance": "42,195 km",
+      "date": "2027-04-25",
+      "city": {
+        "it": "Londra, Regno Unito",
+        "en": "London, United Kingdom"
+      },
+      "fee": {
+        "it": "£225 per chi corre dall'estero (£79,99 nel Regno Unito)",
+        "en": "£225 for international runners (£79.99 in the UK)"
+      },
+      "feeShort": {
+        "it": "£225",
+        "en": "£225"
+      },
+      "status": {
+        "it": "Sorteggio 2027 chiuso (risultati a luglio 2026); restano charity, tour operator e Good for Age",
+        "en": "2027 ballot closed (results July 2026); charity, tour operators and Good for Age remain"
+      },
+      "start": {
+        "it": "Una delle Abbott World Marathon Majors; si valuta un'edizione su due giorni",
+        "en": "One of the Abbott World Marathon Majors; a two-day event is being considered"
+      },
+      "limit": {
+        "it": "Vedi regolamento ufficiale",
+        "en": "See official rules"
+      },
+      "travel": {
+        "it": "Aeroporti di Heathrow, Gatwick, Stansted e City; la partenza è a Greenwich.",
+        "en": "Heathrow, Gatwick, Stansted and City airports; the start is in Greenwich."
+      },
+      "tips": {
+        "it": "Le charity chiedono di solito una raccolta minima intorno a £2.500. Il sorteggio per il 2028 si apre in genere ad aprile, durante la gara.",
+        "en": "Charities usually ask for a minimum of around £2,500. The 2028 ballot usually opens in April, around race weekend."
+      },
+      "source": "https://therunningchannel.com/london-marathon-2027-ballot/"
     },
     {
       "id": "novecolli",
@@ -352,7 +629,53 @@
       "feeShort": {
         "it": "€110–150",
         "en": "€110–150"
-      }
+      },
+      "major": false
+    },
+    {
+      "id": "capetown",
+      "slug": {
+        "it": "maratona-di-citta-del-capo",
+        "en": "cape-town-marathon"
+      },
+      "name": "Sanlam Cape Town Marathon",
+      "sport": "run",
+      "major": true,
+      "distance": "42,195 km",
+      "date": "2027-05-23",
+      "city": {
+        "it": "Città del Capo, Sudafrica",
+        "en": "Cape Town, South Africa"
+      },
+      "fee": {
+        "it": "Non pubblicata per il sorteggio; pacchetti viaggio con pettorale disponibili",
+        "en": "Not published for the ballot; travel packages with bib available"
+      },
+      "feeShort": {
+        "it": "—",
+        "en": "—"
+      },
+      "status": {
+        "it": "Sorteggio chiuso (10–24 giugno 2026); restano charity e tour operator",
+        "en": "Ballot closed (10–24 June 2026); charity and tour operators remain"
+      },
+      "start": {
+        "it": "Dal 2027 è l'ottava Abbott World Marathon Major, la prima in Africa. Partenza alle 7:00",
+        "en": "From 2027 it's the eighth Abbott World Marathon Major, the first in Africa. Start at 7:00 am"
+      },
+      "limit": {
+        "it": "6 ore 30 minuti",
+        "en": "6 hours 30 minutes"
+      },
+      "travel": {
+        "it": "Aeroporto di Città del Capo (CPT), di solito con scalo dall'Italia.",
+        "en": "Cape Town airport (CPT), usually with a connection from Europe."
+      },
+      "tips": {
+        "it": "È la Major più giovane: il sorteggio di solito riceve meno richieste rispetto alle altre.",
+        "en": "It's the newest Major: its ballot usually gets fewer applications than the others."
+      },
+      "source": "https://therunningchannel.com/cape-town-marathon-major-2027/"
     },
     {
       "id": "dolomites",
@@ -396,7 +719,8 @@
       "feeShort": {
         "it": "€185",
         "en": "€185"
-      }
+      },
+      "major": false
     },
     {
       "id": "etape",
@@ -441,7 +765,53 @@
       "feeShort": {
         "it": "£185",
         "en": "£185"
-      }
+      },
+      "major": false
+    },
+    {
+      "id": "sydney",
+      "slug": {
+        "it": "maratona-di-sydney",
+        "en": "sydney-marathon"
+      },
+      "name": "TCS Sydney Marathon",
+      "sport": "run",
+      "major": true,
+      "distance": "42,195 km",
+      "date": "2027-08-29",
+      "city": {
+        "it": "Sydney, Australia",
+        "en": "Sydney, Australia"
+      },
+      "fee": {
+        "it": "AUD 330 per chi corre dall'estero (solo se estratti)",
+        "en": "AUD 330 for international runners (only if selected)"
+      },
+      "feeShort": {
+        "it": "AUD 330",
+        "en": "AUD 330"
+      },
+      "status": {
+        "it": "Sorteggio chiuso il 19 ottobre 2026; risultati il 3 novembre 2026. Restano charity e pacchetti viaggio",
+        "en": "Ballot closed 19 October 2026; results 3 November 2026. Charity and travel packages remain"
+      },
+      "start": {
+        "it": "Una delle Abbott World Marathon Majors dal 2025",
+        "en": "One of the Abbott World Marathon Majors since 2025"
+      },
+      "limit": {
+        "it": "Vedi regolamento ufficiale",
+        "en": "See official rules"
+      },
+      "travel": {
+        "it": "Aeroporto di Sydney (SYD), collegato al centro dal treno.",
+        "en": "Sydney airport (SYD), linked to the centre by train."
+      },
+      "tips": {
+        "it": "I pacchetti dei partner ufficiali con pettorale e hotel costano circa 1.300–7.500 dollari a persona, voli esclusi.",
+        "en": "Official partner packages with bib and hotel cost about $1,300–7,500 per person, excluding flights."
+      },
+      "source": "https://fatmarathoner.com/sydney-marathon-2027-entry/"
     },
     {
       "id": "berlin",
@@ -466,8 +836,8 @@
         "en": "Lottery open until early November 2026; results end of November. Also Good for Age, charity and tour operators"
       },
       "start": {
-        "it": "Una delle sei Major; percorso piatto e veloce",
-        "en": "One of the six Majors; flat, fast course"
+        "it": "Una delle Abbott World Marathon Majors; percorso piatto e veloce",
+        "en": "One of the Abbott World Marathon Majors; flat, fast course"
       },
       "limit": {
         "it": "Vedi regolamento ufficiale",
@@ -485,7 +855,98 @@
       "feeShort": {
         "it": "€205",
         "en": "€205"
-      }
+      },
+      "major": true
+    },
+    {
+      "id": "chicago",
+      "slug": {
+        "it": "maratona-di-chicago",
+        "en": "chicago-marathon"
+      },
+      "name": "Bank of America Chicago Marathon",
+      "sport": "run",
+      "major": true,
+      "distance": "42,195 km",
+      "date": "2027-10-10",
+      "city": {
+        "it": "Chicago, Stati Uniti",
+        "en": "Chicago, United States"
+      },
+      "fee": {
+        "it": "$260 per chi risiede fuori dagli Stati Uniti ($250 per i residenti), più commissioni",
+        "en": "$260 for non-US residents ($250 for US residents), plus processing fee"
+      },
+      "feeShort": {
+        "it": "$260",
+        "en": "$260"
+      },
+      "status": {
+        "it": "Sorteggio aperto fino al 29 ottobre 2026; risultati l'8 dicembre 2026",
+        "en": "Lottery open until 29 October 2026; results 8 December 2026"
+      },
+      "start": {
+        "it": "Una delle Abbott World Marathon Majors; partenza e arrivo a Grant Park",
+        "en": "One of the Abbott World Marathon Majors; start and finish in Grant Park"
+      },
+      "limit": {
+        "it": "6 ore 30 minuti",
+        "en": "6 hours 30 minutes"
+      },
+      "travel": {
+        "it": "Aeroporto O'Hare (ORD), tra i più collegati al mondo, poi la linea blu della metro fino al centro.",
+        "en": "O'Hare airport (ORD), one of the world's best-connected, then the Blue Line to downtown."
+      },
+      "tips": {
+        "it": "Percorso piatto e veloce. Con le charity la quota sale a $335 e serve una raccolta minima di $2.500.",
+        "en": "Flat, fast course. Charity entries cost $335 and require raising at least $2,500."
+      },
+      "source": "https://www.marathonballot.com/news/chicago-2027-ballot-dates-announced"
+    },
+    {
+      "id": "nyc",
+      "slug": {
+        "it": "maratona-di-new-york",
+        "en": "new-york-city-marathon"
+      },
+      "name": "TCS New York City Marathon",
+      "sport": "run",
+      "major": true,
+      "distance": "42,195 km",
+      "date": "2027-11-07",
+      "city": {
+        "it": "New York, Stati Uniti",
+        "en": "New York, United States"
+      },
+      "fee": {
+        "it": "Circa $350 per chi corre dall'estero (quota 2025, come riferimento)",
+        "en": "About $350 for international runners (2025 fee, as a guide)"
+      },
+      "feeShort": {
+        "it": "circa $350",
+        "en": "about $350"
+      },
+      "status": {
+        "it": "Sorteggio di solito a febbraio; per il 2026 è stato dal 4 al 25 febbraio",
+        "en": "Drawing usually in February; for 2026 it ran 4–25 February"
+      },
+      "start": {
+        "it": "Una delle Abbott World Marathon Majors; attraversa i cinque distretti della città",
+        "en": "One of the Abbott World Marathon Majors; runs through all five boroughs"
+      },
+      "limit": {
+        "it": "Vedi regolamento ufficiale",
+        "en": "See official rules"
+      },
+      "travel": {
+        "it": "Aeroporti JFK, Newark (EWR) e LaGuardia; la partenza è a Staten Island, con traghetti e bus organizzati.",
+        "en": "JFK, Newark (EWR) and LaGuardia airports; the start is on Staten Island, with organised ferries and buses."
+      },
+      "tips": {
+        "it": "È la maratona più grande del mondo: prenota l'hotel appena hai il pettorale.",
+        "en": "It's the world's largest marathon: book your hotel as soon as you have a bib."
+      },
+      "source": "https://marathonhandbook.com/heres-how-to-enter-the-2026-new-york-city-marathon/"
     }
   ]
 }

@@ -142,6 +142,6 @@
     if (!btn) return;
     var f = btn.dataset.filter;
     group.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
-    list.querySelectorAll("li").forEach(function (li) { li.hidden = f !== "all" && li.dataset.sport !== f; });
+    list.querySelectorAll("li").forEach(function (li) { li.hidden = f === "major" ? li.dataset.major !== "1" : f !== "all" && li.dataset.sport !== f; });
   });
 })();

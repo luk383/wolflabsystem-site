@@ -13,9 +13,15 @@ node tools/build.mjs
 
 ## Struttura
 
-- `content/articles/<nome>.it.html` e `<nome>.en.html` — un articolo per lingua. In cima c'è un blocco `<!--meta {...} -->` con `id` (uguale nelle due lingue), `slug`, `title`, `description`, `topic`, `evidence` (1–3), `minutes`, `date`.
+- `content/articles/<nome>.it.html` e `<nome>.en.html` — un articolo per lingua. In cima c'è un blocco `<!--meta {...} -->` con `id` (uguale nelle due lingue), `slug`, `title`, `description`, `topic`, `minutes`, `date`.
 - `tools/build.mjs` — modello delle pagine, testi fissi in IT/EN, generazione di indici, feed RSS, sitemap e reindirizzamenti dai vecchi indirizzi.
 - `assets/` — stile, script dei calcolatori, logo.
+
+## Gare e viaggi
+
+- `content/races.json` — gare con data, quota, iscrizioni, logistica e fonte; `major: true` per le Abbott World Marathon Majors.
+- `content/trips.json` — mete per training camp e viaggi.
+- Aggiorna `verified` con la data dell'ultimo controllo sulle fonti.
 
 ## Aggiungere un articolo
 
@@ -23,4 +29,3 @@ node tools/build.mjs
 2. Struttura del corpo: riquadro "In breve", cosa dice la ricerca, cosa fare in pratica, fonti numerate.
 3. `node tools/build.mjs`, controlla, committa.
 
-Livello di prova: 3 = più revisioni o linee guida concordano; 2 = alcuni studi buoni o prove solide sul principio; 1 = pochi studi o esperienza degli allenatori.

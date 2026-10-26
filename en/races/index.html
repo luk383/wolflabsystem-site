@@ -18,15 +18,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=b717efc172">
-<script defer src="/assets/site.js?v=b33b3db35d"></script>
+<link rel="stylesheet" href="/assets/site.css?v=4476872117">
+<script defer src="/assets/site.js?v=c3cc872762"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="/en/"><span class="brand-mark" aria-hidden="true"></span>Wolf Lab</a>
-    <nav class="nav" aria-label="Main"><a href="/en/articles/">Articles</a><a href="/en/races/" aria-current="page">Races</a><a href="/en/trips/">Trips</a><a href="/en/tools/">Tools</a><a href="/en/method/">Method</a></nav>
+    <nav class="nav" aria-label="Main"><a href="/en/articles/">Articles</a><a href="/en/races/" aria-current="page">Races</a><a href="/en/trips/">Trips</a><a href="/en/tools/">Tools</a></nav>
     <a class="lang" href="/gare/" hreflang="it" lang="it">Italiano</a>
   </div>
 </header>
@@ -38,74 +38,135 @@
     <button type="button" data-filter="all" aria-pressed="true">All</button>
     <button type="button" data-filter="run" aria-pressed="false">Running</button>
     <button type="button" data-filter="bike" aria-pressed="false">Cycling</button>
+    <button type="button" data-filter="major" aria-pressed="false">World Marathon Majors</button>
   </div>
   <div class="race-head" aria-hidden="true"><span>Date</span><span>Race</span><span>Distance</span><span>Fee</span></div>
   <ul class="race-list" data-filter-list>
-<li data-sport="run"><a href="/en/races/florence-marathon/">
+<li data-sport="run" data-major="0"><a href="/en/races/florence-marathon/">
       <time datetime="2026-11-29">Nov 29, 2026</time>
       <span class="r-name">Firenze Marathon<small>Florence, Italy</small></span>
       <span class="r-dist">42.195 km</span>
       <span class="r-fee">€69–109</span>
     </a></li>
-<li data-sport="run"><a href="/en/races/valencia-marathon/">
+<li data-sport="run" data-major="0"><a href="/en/races/valencia-marathon/">
       <time datetime="2026-12-06">Dec 6, 2026</time>
       <span class="r-name">Maratón Valencia<small>Valencia, Spain</small></span>
       <span class="r-dist">42.195 km</span>
       <span class="r-fee">€80–180</span>
     </a></li>
-<li data-sport="run"><a href="/en/races/naples-half-marathon/">
+<li data-sport="run" data-major="0"><a href="/en/races/naples-half-marathon/">
       <time datetime="2027-02-21">Feb 21, 2027</time>
       <span class="r-name">Napoli City Half Marathon<small>Naples, Italy</small></span>
       <span class="r-dist">21.097 km</span>
       <span class="r-fee">from €38</span>
     </a></li>
-<li data-sport="run"><a href="/en/races/seville-marathon/">
+<li data-sport="run" data-major="0"><a href="/en/races/seville-marathon/">
       <time datetime="2027-02-21">Feb 21, 2027</time>
       <span class="r-name">Zurich Maratón de Sevilla<small>Seville, Spain</small></span>
       <span class="r-dist">42.195 km</span>
       <span class="r-fee">from €82.10</span>
     </a></li>
-<li data-sport="run"><a href="/en/races/rome-marathon/">
+<li data-sport="run" data-major="0"><a href="/en/races/roma-ostia-half-marathon/">
+      <time datetime="2027-02-28">Feb 28, 2027</time>
+      <span class="r-name">RomaOstia Half Marathon<small>Rome, Italy</small></span>
+      <span class="r-dist">21.097 km</span>
+      <span class="r-fee">—</span>
+    </a></li>
+<li data-sport="run" data-major="1"><a href="/en/races/tokyo-marathon/">
+      <time datetime="2027-03-07">Mar 7, 2027</time>
+      <span class="r-name">Tokyo Marathon <span class="major">Major</span><small>Tokyo, Japan</small></span>
+      <span class="r-dist">42.195 km</span>
+      <span class="r-fee">$230</span>
+    </a></li>
+<li data-sport="run" data-major="0"><a href="/en/races/rome-marathon/">
       <time datetime="2027-03-14">Mar 14, 2027</time>
       <span class="r-name">Run Rome The Marathon<small>Rome, Italy</small></span>
       <span class="r-dist">42.195 km</span>
       <span class="r-fee">from €99</span>
     </a></li>
-<li data-sport="run"><a href="/en/races/milan-marathon/">
+<li data-sport="run" data-major="0"><a href="/en/races/barcelona-marathon/">
+      <time datetime="2027-03-14">Mar 14, 2027</time>
+      <span class="r-name">Zurich Marató de Barcelona<small>Barcelona, Spain</small></span>
+      <span class="r-dist">42.195 km</span>
+      <span class="r-fee">€100</span>
+    </a></li>
+<li data-sport="run" data-major="0"><a href="/en/races/milan-marathon/">
       <time datetime="2027-04-04">Apr 4, 2027</time>
       <span class="r-name">Milano Marathon<small>Milan, Italy</small></span>
       <span class="r-dist">42.195 km</span>
       <span class="r-fee">variable</span>
     </a></li>
-<li data-sport="run"><a href="/en/races/paris-marathon/">
+<li data-sport="run" data-major="0"><a href="/en/races/paris-marathon/">
       <time datetime="2027-04-04">Apr 4, 2027</time>
       <span class="r-name">Marathon de Paris<small>Paris, France</small></span>
       <span class="r-dist">42.195 km</span>
       <span class="r-fee">€169</span>
     </a></li>
-<li data-sport="bike"><a href="/en/races/nove-colli/">
+<li data-sport="run" data-major="0"><a href="/en/races/rotterdam-marathon/">
+      <time datetime="2027-04-11">Apr 11, 2027</time>
+      <span class="r-name">NN Marathon Rotterdam<small>Rotterdam, Netherlands</small></span>
+      <span class="r-dist">42.195 km</span>
+      <span class="r-fee">about €155</span>
+    </a></li>
+<li data-sport="run" data-major="1"><a href="/en/races/boston-marathon/">
+      <time datetime="2027-04-19">Apr 19, 2027</time>
+      <span class="r-name">Boston Marathon <span class="major">Major</span><small>Boston, United States</small></span>
+      <span class="r-dist">42.195 km</span>
+      <span class="r-fee">$270</span>
+    </a></li>
+<li data-sport="run" data-major="1"><a href="/en/races/london-marathon/">
+      <time datetime="2027-04-25">Apr 25, 2027</time>
+      <span class="r-name">TCS London Marathon <span class="major">Major</span><small>London, United Kingdom</small></span>
+      <span class="r-dist">42.195 km</span>
+      <span class="r-fee">£225</span>
+    </a></li>
+<li data-sport="bike" data-major="0"><a href="/en/races/nove-colli/">
       <time datetime="2027-05-23">May 23, 2027</time>
       <span class="r-name">Granfondo Nove Colli<small>Cesenatico, Italy</small></span>
       <span class="r-dist">2 road routes + gravel</span>
       <span class="r-fee">€110–150</span>
     </a></li>
-<li data-sport="bike"><a href="/en/races/maratona-dles-dolomites/">
+<li data-sport="run" data-major="1"><a href="/en/races/cape-town-marathon/">
+      <time datetime="2027-05-23">May 23, 2027</time>
+      <span class="r-name">Sanlam Cape Town Marathon <span class="major">Major</span><small>Cape Town, South Africa</small></span>
+      <span class="r-dist">42.195 km</span>
+      <span class="r-fee">—</span>
+    </a></li>
+<li data-sport="bike" data-major="0"><a href="/en/races/maratona-dles-dolomites/">
       <time datetime="2027-07-04">Jul 4, 2027</time>
       <span class="r-name">Maratona dles Dolomites<small>Alta Badia, Italy</small></span>
       <span class="r-dist">138 / 106 / 55 km</span>
       <span class="r-fee">€185</span>
     </a></li>
-<li data-sport="bike"><a href="/en/races/etape-du-tour/">
+<li data-sport="bike" data-major="0"><a href="/en/races/etape-du-tour/">
       <time datetime="2027-07-11">Jul 11, 2027</time>
       <span class="r-name">L'Étape du Tour<small>Cluses → Les Saisies, France</small></span>
       <span class="r-dist">154 km · 4,850 m</span>
       <span class="r-fee">£185</span>
     </a></li>
-<li data-sport="run"><a href="/en/races/berlin-marathon/">
+<li data-sport="run" data-major="1"><a href="/en/races/sydney-marathon/">
+      <time datetime="2027-08-29">Aug 29, 2027</time>
+      <span class="r-name">TCS Sydney Marathon <span class="major">Major</span><small>Sydney, Australia</small></span>
+      <span class="r-dist">42.195 km</span>
+      <span class="r-fee">AUD 330</span>
+    </a></li>
+<li data-sport="run" data-major="1"><a href="/en/races/berlin-marathon/">
       <time datetime="2027-09-26">Sep 26, 2027</time>
-      <span class="r-name">BMW Berlin Marathon<small>Berlin, Germany</small></span>
+      <span class="r-name">BMW Berlin Marathon <span class="major">Major</span><small>Berlin, Germany</small></span>
       <span class="r-dist">42.195 km</span>
       <span class="r-fee">€205</span>
+    </a></li>
+<li data-sport="run" data-major="1"><a href="/en/races/chicago-marathon/">
+      <time datetime="2027-10-10">Oct 10, 2027</time>
+      <span class="r-name">Bank of America Chicago Marathon <span class="major">Major</span><small>Chicago, United States</small></span>
+      <span class="r-dist">42.195 km</span>
+      <span class="r-fee">$260</span>
+    </a></li>
+<li data-sport="run" data-major="1"><a href="/en/races/new-york-city-marathon/">
+      <time datetime="2027-11-07">Nov 7, 2027</time>
+      <span class="r-name">TCS New York City Marathon <span class="major">Major</span><small>New York, United States</small></span>
+      <span class="r-dist">42.195 km</span>
+      <span class="r-fee">about $350</span>
     </a></li>
   </ul>
   <p class="note">Details checked on October 26, 2026 against the sources listed. Fees and dates can change: always check the official site before entering or booking.</p>
@@ -113,8 +174,8 @@
 </main>
 <footer class="site-foot">
   <div class="wrap">
-    <p>Running, cycling, nutrition and training for amateurs, grounded in evidence. This information doesn't replace advice from a doctor.</p>
-    <nav class="foot-links" aria-label="Footer"><a href="/en/contact/">Contact</a> <a href="/en/method/">Method</a> <a href="/en/feed.xml">RSS</a></nav>
+    <p>Running, cycling, nutrition and training for amateurs. This information doesn't replace advice from a doctor.</p>
+    <nav class="foot-links" aria-label="Footer"><a href="/en/contact/">Contact</a> <a href="/en/feed.xml">RSS</a></nav>
   </div>
 </footer>
 </body>
