@@ -11,7 +11,7 @@ const SITE = "https://wolflabsystem.com";
 const EMAIL = "luca@wolflabsystem.com";
 // Versione dei file statici: cambia quando cambia il contenuto, così la cache non serve file vecchi
 const ver = (f) => crypto.createHash("sha256").update(fs.readFileSync(path.join(ROOT, f))).digest("hex").slice(0, 10);
-const ASSET_V = { css: ver("assets/site.css"), js: ver("assets/site.js") };
+const ASSET_V = { css: ver("assets/site.css"), js: ver("assets/site.js"), art: ver("assets/article.css") };
 
 // Percorsi delle pagine in ciascuna lingua
 const ROUTES = {
@@ -39,6 +39,8 @@ const T = {
     months: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
     note: "Questo articolo è stato preparato con l'aiuto dell'intelligenza artificiale per la ricerca e la prima stesura, poi rivisto e verificato sulle fonti. Non sostituisce il parere di un medico o di un nutrizionista.",
     allArticles: "Tutti gli articoli",
+    toc: "In questa pagina",
+    related: "Da leggere dopo",
   },
   en: {
     tagline: "Endurance training, with sources",
@@ -54,6 +56,8 @@ const T = {
     months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     note: "This article was prepared with the help of AI for research and a first draft, then reviewed and checked against the sources. It doesn't replace advice from a doctor or dietitian.",
     allArticles: "All articles",
+    toc: "On this page",
+    related: "Read next",
   },
 };
 
@@ -84,7 +88,7 @@ function loadArticles() {
 }
 
 // ---------- Impaginazione ----------
-function layout({ lang, title, description, current, alt, body, pathname }) {
+function layout({ lang, title, description, current, alt, body, pathname, extraCss = "" }) {
   const t = T[lang];
   const navItems = ["articles", "races", "trips", "tools"]
     .map((k) => `<a href="${ROUTES[k][lang]}"${current === k ? ' aria-current="page"' : ""}>${t.nav[k]}</a>`)
@@ -110,7 +114,7 @@ function layout({ lang, title, description, current, alt, body, pathname }) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=${ASSET_V.css}">
+<link rel="stylesheet" href="/assets/site.css?v=${ASSET_V.css}">${extraCss}
 <script defer src="/assets/site.js?v=${ASSET_V.js}"></script>
 </head>
 <body>
@@ -389,14 +393,32 @@ function main() {
     for (const a of articles[lang]) {
       const twin = byId[other][a.id];
       const pathname = articlePath(lang, a.slug);
-      const body = `<article class="page"><div class="wrap prose">
+      const toc = [];
+      const bodyHtml = a.body.trim().replace(/<h2>([\s\S]*?)<\/h2>/g, (m, t) => {
+        const label = t.replace(/<[^>]+>/g, "");
+        if (toc.length === 0 && /^(In breve|In brief|Summary|At a glance)$/i.test(label)) { toc.push(null); return m; }
+        const id = "s" + (toc.length + 1);
+        toc.push({ id, label });
+        return `<h2 id="${id}">${t}</h2>`;
+      });
+      const tocItems = toc.filter(Boolean);
+      const rel = articles[lang].filter((x) => x.id !== a.id);
+      const related = [...rel.filter((x) => x.topic === a.topic), ...rel.filter((x) => x.topic !== a.topic)].slice(0, 3);
+      const side = `<aside class="art-side">${tocItems.length ? `<nav class="art-toc" aria-label="${T[lang].toc}"><h2>${T[lang].toc}</h2><ol>${tocItems.map((i) => `<li><a href="#${i.id}">${i.label}</a></li>`).join("")}</ol></nav>` : ""}<nav class="art-related" aria-label="${T[lang].related}"><h2>${T[lang].related}</h2><ul>${related.map((x) => `<li><a href="${articlePath(lang, x.slug)}"><span>${esc(x.topic)}</span>${esc(x.title)}</a></li>`).join("")}</ul></nav></aside>`;
+      const body = `<article class="page art">
+<header class="art-hero"><div class="wrap">
   <h1>${esc(a.title)}</h1>
   <div class="article-meta"><span>${esc(a.topic)}</span><span>${a.minutes} ${T[lang].read}</span><time datetime="${a.date}">${T[lang].updated} ${fmtDate(a.date, lang)}</time></div>
-  ${a.body.trim()}
+</div></header>
+<div class="wrap art-grid">
+<div class="prose art-body">
+  ${bodyHtml}
   <p class="note">${T[lang].note}</p>
   <p><a href="${ROUTES.articles[lang]}">${T[lang].allArticles}</a></p>
+</div>
+${side}
 </div></article>`;
-      write(pathname, layout({ lang, title: a.title, description: a.description, current: "articles", alt: twin ? articlePath(other, twin.slug) : ROUTES.articles[other], pathname, body }));
+      write(pathname, layout({ lang, title: a.title, description: a.description, current: "articles", alt: twin ? articlePath(other, twin.slug) : ROUTES.articles[other], pathname, body, extraCss: `<link rel="stylesheet" href="/assets/article.css?v=${ASSET_V.art}">` }));
       urls.push(pathname);
     }
 
