@@ -412,6 +412,7 @@ function main() {
 </div></header>
 <div class="wrap art-grid">
 <div class="prose art-body">
+  ${tocItems.length ? `<details class="art-toc-m"><summary>${T[lang].toc}</summary><ol>${tocItems.map((i) => `<li><a href="#${i.id}">${i.label}</a></li>`).join("")}</ol></details>` : ""}
   ${bodyHtml}
   <p class="note">${T[lang].note}</p>
   <p><a href="${ROUTES.articles[lang]}">${T[lang].allArticles}</a></p>
