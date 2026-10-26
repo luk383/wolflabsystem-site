@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tools — Wolf Lab</title>
+<meta name="description" content="Free calculators: marathon splits and training paces, race-day carbohydrate and carb loading.">
+<link rel="canonical" href="https://wolflabsystem.com/en/tools/">
+<link rel="alternate" hreflang="en" href="https://wolflabsystem.com/en/tools/">
+<link rel="alternate" hreflang="it" href="https://wolflabsystem.com/strumenti/">
+<link rel="alternate" type="application/rss+xml" title="Wolf Lab" href="/en/feed.xml">
+<meta property="og:title" content="Tools — Wolf Lab">
+<meta property="og:description" content="Free calculators: marathon splits and training paces, race-day carbohydrate and carb loading.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wolflabsystem.com/en/tools/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="/assets/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/en/"><span class="brand-mark" aria-hidden="true"></span>Wolf Lab</a>
+    <nav class="nav" aria-label="Main"><a href="/en/articles/">Articles</a><a href="/en/tools/" aria-current="page">Tools</a><a href="/en/berlin-2027/">Berlin 2027</a><a href="/en/method/">Method</a></nav>
+    <a class="lang" href="/strumenti/" hreflang="it" lang="it">Italiano</a>
+  </div>
+</header>
+<main id="main">
+<div class="page"><div class="wrap">
+  <h1>Tools</h1>
+  <p class="lede">Simple calculators using guideline numbers. Everything stays on your device.</p>
+
+  <div class="tool" id="splits">
+    <h2>Marathon splits</h2>
+    <p class="small">Even-pace split times, to print or copy onto a wrist band.</p>
+    <div class="blue-line" data-paceband>
+  <div class="band-head">
+    <label for="tool-band">Your marathon goal time</label>
+    <input class="time-input" id="tool-band" value="3:30" inputmode="numeric" autocomplete="off" aria-describedby="tool-band-foot">
+  </div>
+  <div class="band" data-compact="1" aria-live="polite"></div>
+  <p class="band-foot small" id="tool-band-foot"></p>
+</div>
+  </div>
+
+  <div class="tool" id="pace-tool">
+    <h2>Training paces</h2>
+    <p class="small">Paces as a percentage of marathon speed, the approach used by many coaches of the Italian school and by John Davis. They are a starting point: adjust to how you feel.</p>
+    <div class="fields">
+      <div class="field"><label for="target">Goal time (h:mm)</label><input id="target" value="3:30" inputmode="numeric" autocomplete="off"></div>
+    </div>
+    <div class="results" id="pace-out" aria-live="polite"></div>
+  </div>
+
+  <div class="tool" id="carbs">
+    <div id="carb-tool">
+    <h2>Race-day carbohydrate</h2>
+    <p class="small">Based on American College of Sports Medicine guidelines and Asker Jeukendrup's research. <a href="/en/articles/marathon-carbohydrates/">Read the article</a></p>
+    <div class="fields">
+      <div class="field"><label for="race-time">Race time (h:mm)</label><input id="race-time" value="3:30" inputmode="numeric" autocomplete="off"></div>
+      <div class="field"><label for="weight">Weight (kg)</label><input id="weight" type="number" value="70" min="30" max="200" inputmode="decimal"></div>
+      <div class="field"><label for="gel">Grams per gel</label><input id="gel" type="number" value="25" min="5" max="100"><p class="hint">Check the label</p></div>
+      <div class="field"><label for="rate">Carbs per hour: <span id="rate-val"></span></label><input class="range" id="rate" type="range" min="30" max="90" step="5" value="60"></div>
+    </div>
+    <div class="results" id="carb-out" aria-live="polite"></div>
+    </div>
+  </div>
+</div></div>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Running, cycling, nutrition and training for amateurs, grounded in evidence. This information doesn't replace advice from a doctor.</p>
+    <p><a href="/en/contact/">Contact</a> · <a href="/en/method/">Method</a> · <a href="/en/feed.xml">RSS</a></p>
+  </div>
+</footer>
+</body>
+</html>
