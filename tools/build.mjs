@@ -173,7 +173,7 @@ const PAGES = {
   ${ROUTE_SVG}
   <div class="wrap hero-grid">
     <div>
-      <h1${it ? ' lang="en"' : ""}>Run long.<br>Ride far.<br>Know why.</h1>
+      <h1${it ? ' lang="en"' : ""}>Two feet.<br>Two wheels.<br>One engine.</h1>
       <p class="lede">${it
         ? "Corsa, bici, nutrizione e forza spiegate partendo dalla ricerca. Ogni consiglio con le sue fonti e quanto è solido."
         : "Running, cycling, nutrition and strength explained from the research. Every piece of advice with its sources and how solid it is."}</p>
