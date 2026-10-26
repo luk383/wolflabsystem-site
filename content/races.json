@@ -551,7 +551,8 @@
       "sport": "run",
       "major": true,
       "distance": "42,195 km",
-      "date": "2027-04-25",
+      "date": "2027-04-24",
+      "endDate": "2027-04-25",
       "city": {
         "it": "Londra, Regno Unito",
         "en": "London, United Kingdom"

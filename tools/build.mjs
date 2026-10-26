@@ -194,6 +194,13 @@ function raceDate(iso, lang, short) {
   const mon = short ? months[m - 1].slice(0, 3) : months[m - 1];
   return lang === "it" ? `${d} ${mon} ${y}` : `${mon} ${d}, ${y}`;
 }
+// Keep both dates visible for races held across multiple days.
+const raceDateLabel = (r, lang, short) => r.endDate
+  ? `${raceDate(r.date, lang, short)} / ${raceDate(r.endDate, lang, short)}`
+  : raceDate(r.date, lang, short);
+const raceTime = (r, lang, short) => r.endDate
+  ? `<span class="race-dates"><time datetime="${r.date}">${raceDate(r.date, lang, short)}</time> / <time datetime="${r.endDate}">${raceDate(r.endDate, lang, short)}</time></span>`
+  : `<time datetime="${r.date}">${raceDate(r.date, lang, short)}</time>`;
 const raceDistance = (r, lang) => (lang === "en" && r.distanceEn ? r.distanceEn : lang === "en" ? r.distance.replace(",", ".") : r.distance);
 const verifiedNote = (lang, iso) => (lang === "it"
   ? `Dati verificati il ${fmtDate(iso, "it")} sulle fonti indicate. Quote e date possono cambiare: controlla sempre il sito ufficiale prima di iscriverti o prenotare.`
@@ -295,7 +302,7 @@ ${articles.slice(0, 4).map((a) => `      <li><a href="${articlePath(lang, a.slug
   races(lang) {
     const it = lang === "it";
     const rows = RACES.races.map((r) => `<li data-sport="${kindOf(r)}" data-major="${r.major ? "1" : "0"}"><a href="${racePath(lang, r)}">
-      <time datetime="${r.date}">${raceDate(r.date, lang, true)}</time>
+      ${raceTime(r, lang, true)}
       <span class="r-name">${esc(r.name)}${r.major ? ` <span class="major">Major</span>` : ""}<small>${esc(r.city[lang])}</small></span>
       <span class="r-dist">${esc(raceDistance(r, lang))}</span>
       <span class="r-fee">${esc(r.feeShort[lang])}</span>
@@ -410,7 +417,7 @@ function main() {
       const body = `<article class="page"><div class="wrap prose">
   <p class="crumb"><a href="${ROUTES.races[lang]}">${it ? "Gare" : "Races"}</a></p>
   <h1>${esc(r.name)}</h1>
-  <div class="article-meta"><span>${SPORT[r.sport][lang]}</span>${r.major ? `<span class="major">Abbott World Marathon Major</span>` : ""}<time datetime="${r.date}">${raceDate(r.date, lang)}</time><span>${esc(r.city[lang])}</span></div>
+  <div class="article-meta"><span>${SPORT[r.sport][lang]}</span>${r.major ? `<span class="major">Abbott World Marathon Major</span>` : ""}${raceTime(r, lang)}<span>${esc(r.city[lang])}</span></div>
   ${factTable([
     [it ? "Distanza" : "Distance", esc(raceDistance(r, lang))],
     [it ? "Quota" : "Fee", esc(r.fee[lang])],
@@ -424,7 +431,7 @@ function main() {
   <p>${esc(r.tips[lang])}</p>` : ""}
   <p class="note">${verifiedNote(lang, RACES.verified)} ${it ? "Fonte" : "Source"}: <a href="${r.source}">${host(r.source)}</a></p>
 </div></article>`;
-      write(pathname, layout({ lang, title: r.name, description: `${r.name}: ${raceDate(r.date, lang)}, ${r.city[lang]}. ${r.fee[lang]}.`, current: "races", alt: racePath(other, r), pathname, body }));
+      write(pathname, layout({ lang, title: r.name, description: `${r.name}: ${raceDateLabel(r, lang)}, ${r.city[lang]}. ${r.fee[lang]}.`, current: "races", alt: racePath(other, r), pathname, body }));
       urls.push(pathname);
     }
     for (const t of TRIPS.trips) {
