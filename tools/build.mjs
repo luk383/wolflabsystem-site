@@ -4,10 +4,14 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import crypto from "node:crypto";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://wolflabsystem.com";
 const EMAIL = "luca@wolflabsystem.com";
+// Versione dei file statici: cambia quando cambia il contenuto, così la cache non serve file vecchi
+const ver = (f) => crypto.createHash("sha256").update(fs.readFileSync(path.join(ROOT, f))).digest("hex").slice(0, 10);
+const ASSET_V = { css: ver("assets/site.css"), js: ver("assets/site.js") };
 
 // Percorsi delle pagine in ciascuna lingua
 const ROUTES = {
@@ -105,8 +109,8 @@ function layout({ lang, title, description, current, alt, body, pathname }) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap">
-<link rel="stylesheet" href="/assets/site.css">
-<script defer src="/assets/site.js"></script>
+<link rel="stylesheet" href="/assets/site.css?v=${ASSET_V.css}">
+<script defer src="/assets/site.js?v=${ASSET_V.js}"></script>
 </head>
 <body>
 <a class="skip" href="#main">${t.skip}</a>
