@@ -235,3 +235,44 @@ section { padding: 64px 0; }
   .headline span:nth-child(3) .glyph * { animation-delay: 0.5s; }
 }
 .hero-min { padding-bottom: clamp(72px, 10vw, 120px); }
+
+/* Gare */
+.filter { display: flex; gap: 8px; margin: 8px 0 28px; flex-wrap: wrap; }
+.filter button { font: inherit; font-size: 0.9rem; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--rule-strong); background: transparent; color: var(--muted); cursor: pointer; }
+.filter button:hover { color: var(--text); }
+.filter button[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+.race-head, .race-list a { display: grid; grid-template-columns: 8rem 1fr 9rem 13rem; gap: 6px 24px; align-items: baseline; }
+.race-head { font-size: 0.8rem; color: var(--faint); padding: 0 0 8px; border-bottom: 1px solid var(--rule); }
+.race-list { list-style: none; margin: 0; padding: 0; }
+.race-list li { border-bottom: 1px solid var(--rule); }
+.race-list li[hidden] { display: none; }
+.race-list a { padding: 18px 0; text-decoration: none; }
+.race-list time { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
+.r-name { font-size: 1.1rem; font-weight: 500; letter-spacing: -0.015em; }
+.r-name small { display: block; font-size: 0.85rem; font-weight: 400; color: var(--faint); letter-spacing: 0; }
+.r-dist, .r-fee { font-size: 0.9rem; color: var(--muted); }
+.r-fee { font-family: var(--mono); font-size: 0.85rem; }
+.race-list a:hover .r-name { color: #fff; }
+@media (max-width: 760px) {
+  .race-head { display: none; }
+  .race-list a { grid-template-columns: 1fr; gap: 2px; }
+}
+
+/* Trip */
+.trip-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.trip-list li { border-bottom: 1px solid var(--rule); }
+.trip-list a { display: grid; grid-template-columns: 1fr 14rem 16rem; gap: 4px 24px; padding: 22px 0; text-decoration: none; align-items: baseline; }
+.t-name { font-size: 1.35rem; font-weight: 500; letter-spacing: -0.02em; }
+.t-kind, .t-season { font-size: 0.9rem; color: var(--muted); }
+.trip-list a:hover .t-name { color: #fff; }
+@media (max-width: 760px) { .trip-list a { grid-template-columns: 1fr; } }
+
+/* Schede */
+.crumb { font-size: 0.875rem; margin-bottom: 12px; }
+.crumb a { color: var(--muted); text-decoration: none; }
+.crumb a:hover { color: var(--text); }
+.facts { margin: 0 0 32px; border-top: 1px solid var(--rule); }
+.facts div { display: grid; grid-template-columns: 9rem 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.facts dt { color: var(--faint); font-size: 0.9rem; }
+.facts dd { margin: 0; color: var(--text); }
+@media (max-width: 560px) { .facts div { grid-template-columns: 1fr; gap: 2px; } }

@@ -1,0 +1,491 @@
+{
+  "verified": "2026-10-26",
+  "races": [
+    {
+      "id": "firenze",
+      "slug": {
+        "it": "maratona-di-firenze",
+        "en": "florence-marathon"
+      },
+      "name": "Firenze Marathon",
+      "sport": "run",
+      "distance": "42,195 km",
+      "date": "2026-11-29",
+      "city": {
+        "it": "Firenze, Italia",
+        "en": "Florence, Italy"
+      },
+      "fee": {
+        "it": "€69–109 a scaglioni (2026)",
+        "en": "€69–109 in tiers (2026)"
+      },
+      "status": {
+        "it": "Esaurita: iscrizioni e lista d'attesa chiuse",
+        "en": "Sold out: entries and waiting list closed"
+      },
+      "start": {
+        "it": "Partenza e arrivo in Piazza del Duomo, ore 8:30",
+        "en": "Start and finish in Piazza del Duomo, 8:30 am"
+      },
+      "limit": {
+        "it": "6 ore (cancelli: 3h al km 21,1 e 4h15 al km 30)",
+        "en": "6 hours (cut-offs: 3h at km 21.1 and 4h15 at km 30)"
+      },
+      "travel": {
+        "it": "Aeroporto di Firenze Peretola (circa 20 minuti dal centro); in alternativa Pisa (circa 1 ora) o Bologna (circa 40 minuti in Frecciarossa). Stazione Santa Maria Novella a pochi minuti dall'Expo.",
+        "en": "Florence Peretola airport (about 20 minutes from the centre); alternatively Pisa (about 1 hour) or Bologna (about 40 minutes by high-speed train). Santa Maria Novella station is a few minutes from the Expo."
+      },
+      "tips": {
+        "it": "La mattina della gara il centro è chiuso alle auto: meglio dormire a distanza a piedi o vicino alla linea T1 della tramvia.",
+        "en": "On race morning the centre is closed to cars: stay within walking distance or near tram line T1."
+      },
+      "source": "https://fatmarathoner.com/estra-firenze-marathon/",
+      "feeShort": {
+        "it": "€69–109",
+        "en": "€69–109"
+      }
+    },
+    {
+      "id": "valencia",
+      "slug": {
+        "it": "maratona-di-valencia",
+        "en": "valencia-marathon"
+      },
+      "name": "Maratón Valencia",
+      "sport": "run",
+      "distance": "42,195 km",
+      "date": "2026-12-06",
+      "city": {
+        "it": "Valencia, Spagna",
+        "en": "Valencia, Spain"
+      },
+      "fee": {
+        "it": "€80 (primi 10.000 pettorali), poi €180; lista d'attesa €200",
+        "en": "€80 (first 10,000 bibs), then €180; waiting list €200"
+      },
+      "status": {
+        "it": "Assegnata con priorità e sorteggio a dicembre 2025; per il 2027 si riapre a dicembre",
+        "en": "Allocated by priority and lottery in December 2025; for 2027 it reopens in December"
+      },
+      "start": {
+        "it": "Arrivo nella Città delle Arti e delle Scienze",
+        "en": "Finish at the City of Arts and Sciences"
+      },
+      "limit": {
+        "it": "5 ore 30 minuti",
+        "en": "5 hours 30 minutes"
+      },
+      "travel": {
+        "it": "Aeroporto di Valencia (VLC), collegato al centro dalla metropolitana.",
+        "en": "Valencia airport (VLC), linked to the centre by metro."
+      },
+      "tips": {
+        "it": "Percorso piatto, a livello del mare, con temperature medie di 9–15 °C: una delle maratone più veloci d'Europa. Molti pacchetti viaggio includono pettorale e hotel.",
+        "en": "Flat, sea-level course with average temperatures of 9–15 °C: one of Europe's fastest marathons. Many travel packages include bib and hotel."
+      },
+      "source": "https://www.marathons.com/en/save-the-date/how-to-register-for-the-valencia-marathon_9mpx",
+      "feeShort": {
+        "it": "€80–180",
+        "en": "€80–180"
+      }
+    },
+    {
+      "id": "napoli-half",
+      "slug": {
+        "it": "napoli-city-half-marathon",
+        "en": "naples-half-marathon"
+      },
+      "name": "Napoli City Half Marathon",
+      "sport": "run",
+      "distance": "21,097 km",
+      "date": "2027-02-21",
+      "city": {
+        "it": "Napoli, Italia",
+        "en": "Naples, Italy"
+      },
+      "fee": {
+        "it": "€38 (primi 2.000), €45 (fino a 4.000), €52 fino alla chiusura; €60 il giorno prima all'Expo",
+        "en": "€38 (first 2,000), €45 (up to 4,000), €52 until closing; €60 at the Expo"
+      },
+      "status": {
+        "it": "Iscrizioni aperte a scaglioni",
+        "en": "Entries open in tiers"
+      },
+      "start": {
+        "it": "Partenza a Fuorigrotta (Viale Kennedy, Mostra d'Oltremare), arrivo in Piazza Tecchio, ore 9:00",
+        "en": "Start in Fuorigrotta (Viale Kennedy, Mostra d'Oltremare), finish in Piazza Tecchio, 9:00 am"
+      },
+      "limit": {
+        "it": "3 ore 30 minuti (cancello al km 9,5 entro le 10:40)",
+        "en": "3 hours 30 minutes (cut-off at km 9.5 by 10:40 am)"
+      },
+      "travel": {
+        "it": "Aeroporto di Napoli Capodichino (NAP); stazione Napoli Centrale per l'alta velocità. Fuorigrotta è servita da metropolitana e Cumana.",
+        "en": "Naples Capodichino airport (NAP); Napoli Centrale station for high-speed trains. Fuorigrotta is served by metro and the Cumana line."
+      },
+      "tips": {
+        "it": "Circa 17 km sul lungomare con il Vesuvio sullo sfondo. C'è anche la staffetta a coppie (9,5 + 11,6 km).",
+        "en": "About 17 km along the seafront with Vesuvius in the background. There is also a two-person relay (9.5 + 11.6 km)."
+      },
+      "source": "https://www.finishers.com/en/event/naples-half-marathon",
+      "feeShort": {
+        "it": "da €38",
+        "en": "from €38"
+      }
+    },
+    {
+      "id": "sevilla",
+      "slug": {
+        "it": "maratona-di-siviglia",
+        "en": "seville-marathon"
+      },
+      "name": "Zurich Maratón de Sevilla",
+      "sport": "run",
+      "distance": "42,195 km",
+      "date": "2027-02-21",
+      "city": {
+        "it": "Siviglia, Spagna",
+        "en": "Seville, Spain"
+      },
+      "fee": {
+        "it": "Da €82,10 nel primo scaglione",
+        "en": "From €82.10 in the first tier"
+      },
+      "status": {
+        "it": "Iscrizioni aperte",
+        "en": "Entries open"
+      },
+      "start": {
+        "it": "Partenza su Paseo de las Delicias, ore 8:30; ritiro pettorali a FIBES Sevilla",
+        "en": "Start on Paseo de las Delicias, 8:30 am; bib collection at FIBES Sevilla"
+      },
+      "limit": {
+        "it": "6 ore; l'area arrivo chiude alle 14:30",
+        "en": "6 hours; finish area closes at 2:30 pm"
+      },
+      "travel": {
+        "it": "Aeroporto di Siviglia (SVQ); in alternativa Malaga con il treno ad alta velocità.",
+        "en": "Seville airport (SVQ); alternatively Malaga with the high-speed train."
+      },
+      "tips": {
+        "it": "Considerata una delle maratone più piatte d'Europa, con clima mite a febbraio.",
+        "en": "Considered one of Europe's flattest marathons, with mild February weather."
+      },
+      "source": "https://runresell.com/en/blog/seville-marathon-2027-race-date-registration-entry-fees-and-complete-runners-guide/",
+      "feeShort": {
+        "it": "da €82,10",
+        "en": "from €82.10"
+      }
+    },
+    {
+      "id": "roma",
+      "slug": {
+        "it": "maratona-di-roma",
+        "en": "rome-marathon"
+      },
+      "name": "Run Rome The Marathon",
+      "sport": "run",
+      "distance": "42,195 km",
+      "date": "2027-03-14",
+      "city": {
+        "it": "Roma, Italia",
+        "en": "Rome, Italy"
+      },
+      "fee": {
+        "it": "€99 fino al 30/05/2026; la quota attuale è sul sito ufficiale (costo del servizio escluso)",
+        "en": "€99 until 30/05/2026; the current fee is on the official site (service fee excluded)"
+      },
+      "status": {
+        "it": "Iscrizioni aperte; nel 2026 esaurita quattro mesi prima",
+        "en": "Entries open; in 2026 it sold out four months early"
+      },
+      "start": {
+        "it": "Partenza alle 8:30 circa",
+        "en": "Start at about 8:30 am"
+      },
+      "limit": {
+        "it": "7 ore",
+        "en": "7 hours"
+      },
+      "travel": {
+        "it": "Aeroporti di Fiumicino (FCO) e Ciampino (CIA); stazione Roma Termini per l'alta velocità.",
+        "en": "Fiumicino (FCO) and Ciampino (CIA) airports; Roma Termini station for high-speed trains."
+      },
+      "tips": {
+        "it": "La quota comprende maglia tecnica, medaglia e deposito borse. Il centro è chiuso al traffico: muoversi in metro.",
+        "en": "The fee includes a technical shirt, medal and bag drop. The centre is closed to traffic: use the metro."
+      },
+      "source": "https://www.runromethemarathon.com/wp-content/uploads/2026/04/RRTM27-regolamento-italiano-23-4-2026.pdf",
+      "feeShort": {
+        "it": "da €99",
+        "en": "from €99"
+      }
+    },
+    {
+      "id": "milano",
+      "slug": {
+        "it": "maratona-di-milano",
+        "en": "milan-marathon"
+      },
+      "name": "Milano Marathon",
+      "sport": "run",
+      "distance": "42,195 km",
+      "date": "2027-04-04",
+      "city": {
+        "it": "Milano, Italia",
+        "en": "Milan, Italy"
+      },
+      "fee": {
+        "it": "Variabile, più bassa per chi si iscrive prima; +€5 di servizio",
+        "en": "Variable, lower for early entries; plus €5 service fee"
+      },
+      "status": {
+        "it": "Iscrizioni aperte fino al 31 marzo 2027",
+        "en": "Entries open until 31 March 2027"
+      },
+      "start": {
+        "it": "Partenza alle 8:15",
+        "en": "Start at 8:15 am"
+      },
+      "limit": {
+        "it": "6 ore 30 minuti (cancelli al km 21,1 e al km 27,8)",
+        "en": "6 hours 30 minutes (cut-offs at km 21.1 and km 27.8)"
+      },
+      "travel": {
+        "it": "Aeroporti di Linate (LIN), Malpensa (MXP) e Bergamo (BGY); stazione Milano Centrale.",
+        "en": "Linate (LIN), Malpensa (MXP) and Bergamo (BGY) airports; Milano Centrale station."
+      },
+      "tips": {
+        "it": "La quota comprende maglia tecnica, medaglia e trasporto all'arrivo per chi si ritira.",
+        "en": "The fee includes a technical shirt, medal and transport to the finish for those who drop out."
+      },
+      "source": "https://www.milanomarathon.it/wp-content/uploads/2026/04/Rules-Wizz-Air-Milano-Marathon-2027_EN.pdf",
+      "feeShort": {
+        "it": "variabile",
+        "en": "variable"
+      }
+    },
+    {
+      "id": "paris",
+      "slug": {
+        "it": "maratona-di-parigi",
+        "en": "paris-marathon"
+      },
+      "name": "Marathon de Paris",
+      "sport": "run",
+      "distance": "42,195 km",
+      "date": "2027-04-04",
+      "city": {
+        "it": "Parigi, Francia",
+        "en": "Paris, France"
+      },
+      "fee": {
+        "it": "€169 (prezzo unico)",
+        "en": "€169 (single price)"
+      },
+      "status": {
+        "it": "Sorteggio chiuso; rivendita ufficiale dal 1° dicembre 2026, pettorali solidali e pacchetti viaggio",
+        "en": "Lottery closed; official resale from 1 December 2026, charity bibs and travel packages"
+      },
+      "start": {
+        "it": "50ª edizione, circa 166.000 richieste per il sorteggio",
+        "en": "50th edition, about 166,000 lottery applications"
+      },
+      "limit": {
+        "it": "Vedi regolamento ufficiale",
+        "en": "See official rules"
+      },
+      "travel": {
+        "it": "Aeroporti Charles de Gaulle (CDG) e Orly (ORY), collegati al centro da RER e metro.",
+        "en": "Charles de Gaulle (CDG) and Orly (ORY) airports, linked to the centre by RER and metro."
+      },
+      "tips": {
+        "it": "Il 7 marzo 2027 c'è anche la mezza maratona di Parigi (€79).",
+        "en": "The Paris Half Marathon is on 7 March 2027 (€79)."
+      },
+      "source": "https://www.sortiraparis.com/en/news/in-paris/articles/351885-paris-marathon-2027-and-the-half-marathon-what-will-be-the-registration-fees-this-year",
+      "feeShort": {
+        "it": "€169",
+        "en": "€169"
+      }
+    },
+    {
+      "id": "novecolli",
+      "slug": {
+        "it": "nove-colli",
+        "en": "nove-colli"
+      },
+      "name": "Granfondo Nove Colli",
+      "sport": "bike",
+      "distance": "2 percorsi su strada + gravel",
+      "distanceEn": "2 road routes + gravel",
+      "date": "2027-05-23",
+      "city": {
+        "it": "Cesenatico, Italia",
+        "en": "Cesenatico, Italy"
+      },
+      "fee": {
+        "it": "€110 (fino al 15/01), €120 (fino al 15/04), €130 (fino al 3/05), €150 sul posto; gravel €50",
+        "en": "€110 (to 15/01), €120 (to 15/04), €130 (to 3/05), €150 on site; gravel €50"
+      },
+      "status": {
+        "it": "Iscrizioni dal 5 dicembre 2026, ore 12:00",
+        "en": "Entries open 5 December 2026 at noon"
+      },
+      "start": {
+        "it": "Villaggio Nove Colli a Cesenatico",
+        "en": "Nove Colli Village in Cesenatico"
+      },
+      "limit": {
+        "it": "Vedi regolamento ufficiale",
+        "en": "See official rules"
+      },
+      "travel": {
+        "it": "Aeroporti di Bologna (BLQ) e Rimini (RMI); stazione di Cesenatico sulla linea Ravenna–Rimini.",
+        "en": "Bologna (BLQ) and Rimini (RMI) airports; Cesenatico station on the Ravenna–Rimini line."
+      },
+      "tips": {
+        "it": "Il primo scaglione è il più economico: conviene iscriversi a dicembre. Gli hotel della Riviera hanno spesso pacchetti per ciclisti.",
+        "en": "The first tier is cheapest: enter in December. Riviera hotels often have cyclist packages."
+      },
+      "source": "https://www.tuttobiciweb.it/article/1788338739?lang=en",
+      "feeShort": {
+        "it": "€110–150",
+        "en": "€110–150"
+      }
+    },
+    {
+      "id": "dolomites",
+      "slug": {
+        "it": "maratona-dles-dolomites",
+        "en": "maratona-dles-dolomites"
+      },
+      "name": "Maratona dles Dolomites",
+      "sport": "bike",
+      "distance": "138 / 106 / 55 km",
+      "date": "2027-07-04",
+      "city": {
+        "it": "Alta Badia, Italia",
+        "en": "Alta Badia, Italy"
+      },
+      "fee": {
+        "it": "€185 dopo il sorteggio (€165 + €10 chip + €10 tessera giornaliera); preiscrizione €3",
+        "en": "€185 after the draw (€165 + €10 chip + €10 day licence); pre-registration €3"
+      },
+      "status": {
+        "it": "Preiscrizione al sorteggio fino al 10 novembre 2026; pettorali solidali il 25/11/2026 e il 18/03/2027; pacchetti con hotel",
+        "en": "Lottery pre-registration until 10 November 2026; charity places on 25/11/2026 and 18/03/2027; hotel packages"
+      },
+      "start": {
+        "it": "40ª edizione. Lungo: 138 km e 4.230 m di dislivello; medio: 106 km e 3.130 m; Sellaronda: 55 km e 1.780 m",
+        "en": "40th edition. Long: 138 km and 4,230 m climbing; medium: 106 km and 3,130 m; Sellaronda: 55 km and 1,780 m"
+      },
+      "limit": {
+        "it": "Vedi regolamento ufficiale",
+        "en": "See official rules"
+      },
+      "travel": {
+        "it": "Aeroporti più vicini: Bolzano, Innsbruck, Verona e Venezia; poi auto o navette fino in Val Badia.",
+        "en": "Nearest airports: Bolzano, Innsbruck, Verona and Venice; then car or shuttle to Val Badia."
+      },
+      "tips": {
+        "it": "Solo 4.000 posti vanno al sorteggio, metà a italiani e metà a stranieri. Gli hotel della valle si esauriscono presto.",
+        "en": "Only 4,000 places go to the draw, half Italian and half international. Valley hotels fill up early."
+      },
+      "source": "https://www.maratona.it/en/how-to-register-2027",
+      "feeShort": {
+        "it": "€185",
+        "en": "€185"
+      }
+    },
+    {
+      "id": "etape",
+      "slug": {
+        "it": "etape-du-tour",
+        "en": "etape-du-tour"
+      },
+      "name": "L'Étape du Tour",
+      "sport": "bike",
+      "distance": "154 km · 4.850 m",
+      "distanceEn": "154 km · 4,850 m",
+      "date": "2027-07-11",
+      "city": {
+        "it": "Cluses → Les Saisies, Francia",
+        "en": "Cluses → Les Saisies, France"
+      },
+      "fee": {
+        "it": "£185",
+        "en": "£185"
+      },
+      "status": {
+        "it": "Iscrizioni generali dal 2 novembre 2026, ore 14:00",
+        "en": "General entries open 2 November 2026 at 2 pm CET"
+      },
+      "start": {
+        "it": "Partenza a Cluses (Alta Savoia), arrivo alla stazione sciistica di Les Saisies",
+        "en": "Start in Cluses (Haute-Savoie), finish at Les Saisies ski resort"
+      },
+      "limit": {
+        "it": "Vedi regolamento ufficiale",
+        "en": "See official rules"
+      },
+      "travel": {
+        "it": "Aeroporto di Ginevra (GVA), a circa un'ora da Cluses.",
+        "en": "Geneva airport (GVA), about an hour from Cluses."
+      },
+      "tips": {
+        "it": "Si corre su una tappa del Tour de France a strade chiuse. I posti finiscono in fretta il giorno dell'apertura.",
+        "en": "You ride a Tour de France stage on closed roads. Places go fast on opening day."
+      },
+      "source": "https://sportive.com/event/etape-du-tour-2027/",
+      "feeShort": {
+        "it": "£185",
+        "en": "£185"
+      }
+    },
+    {
+      "id": "berlin",
+      "slug": {
+        "it": "maratona-di-berlino",
+        "en": "berlin-marathon"
+      },
+      "name": "BMW Berlin Marathon",
+      "sport": "run",
+      "distance": "42,195 km",
+      "date": "2027-09-26",
+      "city": {
+        "it": "Berlino, Germania",
+        "en": "Berlin, Germany"
+      },
+      "fee": {
+        "it": "€205 (si paga solo se estratti)",
+        "en": "€205 (charged only if selected)"
+      },
+      "status": {
+        "it": "Sorteggio aperto fino a inizio novembre 2026; risultati a fine novembre. Anche Good for Age, charity e tour operator",
+        "en": "Lottery open until early November 2026; results end of November. Also Good for Age, charity and tour operators"
+      },
+      "start": {
+        "it": "Una delle sei Major; percorso piatto e veloce",
+        "en": "One of the six Majors; flat, fast course"
+      },
+      "limit": {
+        "it": "Vedi regolamento ufficiale",
+        "en": "See official rules"
+      },
+      "travel": {
+        "it": "Aeroporto di Berlino Brandeburgo (BER), collegato al centro da treni regionali e S-Bahn.",
+        "en": "Berlin Brandenburg airport (BER), linked to the centre by regional trains and S-Bahn."
+      },
+      "tips": {
+        "it": "Probabilità di estrazione nel sorteggio generale intorno al 20%: valuta anche i pacchetti dei tour operator ufficiali.",
+        "en": "General lottery odds around 20%: also consider official tour operator packages."
+      },
+      "source": "https://fatmarathoner.com/berlin-marathon-2027-entry/",
+      "feeShort": {
+        "it": "€205",
+        "en": "€205"
+      }
+    }
+  ]
+}

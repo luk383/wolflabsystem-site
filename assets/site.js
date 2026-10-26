@@ -130,3 +130,18 @@
   }
 
 })();
+
+// Filtro delle gare per sport
+(function () {
+  "use strict";
+  var group = document.querySelector(".filter");
+  var list = document.querySelector("[data-filter-list]");
+  if (!group || !list) return;
+  group.addEventListener("click", function (e) {
+    var btn = e.target.closest("button[data-filter]");
+    if (!btn) return;
+    var f = btn.dataset.filter;
+    group.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
+    list.querySelectorAll("li").forEach(function (li) { li.hidden = f !== "all" && li.dataset.sport !== f; });
+  });
+})();

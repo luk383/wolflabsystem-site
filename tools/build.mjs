@@ -15,6 +15,8 @@ const ASSET_V = { css: ver("assets/site.css"), js: ver("assets/site.js") };
 
 // Percorsi delle pagine in ciascuna lingua
 const ROUTES = {
+  races: { it: "/gare/", en: "/en/races/" },
+  trips: { it: "/trip/", en: "/en/trips/" },
   home: { it: "/", en: "/en/" },
   articles: { it: "/articoli/", en: "/en/articles/" },
   tools: { it: "/strumenti/", en: "/en/tools/" },
@@ -26,7 +28,7 @@ const articlePath = (lang, slug) => (lang === "it" ? `/articoli/${slug}/` : `/en
 const T = {
   it: {
     tagline: "Allenamento endurance, con le fonti",
-    nav: { articles: "Articoli", tools: "Strumenti", method: "Metodo" },
+    nav: { articles: "Articoli", races: "Gare", trips: "Trip", tools: "Strumenti", method: "Metodo" },
     switchTo: "English", switchLang: "en",
     skip: "Vai al contenuto",
     evidence: ["", "Prove limitate", "Prove moderate", "Prove forti"],
@@ -41,7 +43,7 @@ const T = {
   },
   en: {
     tagline: "Endurance training, with sources",
-    nav: { articles: "Articles", tools: "Tools", method: "Method" },
+    nav: { articles: "Articles", races: "Races", trips: "Trips", tools: "Tools", method: "Method" },
     switchTo: "Italiano", switchLang: "it",
     skip: "Skip to content",
     evidence: ["", "Limited evidence", "Moderate evidence", "Strong evidence"],
@@ -85,7 +87,7 @@ function loadArticles() {
 // ---------- Impaginazione ----------
 function layout({ lang, title, description, current, alt, body, pathname }) {
   const t = T[lang];
-  const navItems = ["articles", "tools", "method"]
+  const navItems = ["articles", "races", "trips", "tools", "method"]
     .map((k) => `<a href="${ROUTES[k][lang]}"${current === k ? ' aria-current="page"' : ""}>${t.nav[k]}</a>`)
     .join("");
   const fullTitle = current === "home" ? `Wolf Lab — ${t.tagline}` : `${title} — Wolf Lab`;
@@ -178,6 +180,30 @@ const GLYPH = {
   heart: svgGlyph("heart", `<path d="M32 55 C 12 42, 6 28, 13 19 C 19 11, 28 13, 32 20 C 36 13, 45 11, 51 19 C 58 28, 52 42, 32 55 Z"/><path class="pulse" d="M4 34 L19 34 L23 27 L29 43 L35 21 L40 34 L60 34"/>`),
 };
 
+
+// ---------- Gare e trip ----------
+const RACES = JSON.parse(fs.readFileSync(path.join(ROOT, "content/races.json"), "utf8"));
+const TRIPS = JSON.parse(fs.readFileSync(path.join(ROOT, "content/trips.json"), "utf8"));
+RACES.races.sort((a, b) => a.date.localeCompare(b.date));
+const racePath = (lang, r) => (lang === "it" ? `/gare/${r.slug.it}/` : `/en/races/${r.slug.en}/`);
+const tripPath = (lang, t) => (lang === "it" ? `/trip/${t.slug.it}/` : `/en/trips/${t.slug.en}/`);
+const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } };
+const SPORT = { run: { it: "Corsa", en: "Running" }, bike: { it: "Bici", en: "Cycling" } };
+function raceDate(iso, lang, short) {
+  const [y, m, d] = iso.split("-").map(Number);
+  const months = T[lang].months;
+  const mon = short ? months[m - 1].slice(0, 3) : months[m - 1];
+  return lang === "it" ? `${d} ${mon} ${y}` : `${mon} ${d}, ${y}`;
+}
+const raceDistance = (r, lang) => (lang === "en" && r.distanceEn ? r.distanceEn : lang === "en" ? r.distance.replace(",", ".") : r.distance);
+const verifiedNote = (lang, iso) => (lang === "it"
+  ? `Dati verificati il ${fmtDate(iso, "it")} sulle fonti indicate. Quote e date possono cambiare: controlla sempre il sito ufficiale prima di iscriverti o prenotare.`
+  : `Details checked on ${fmtDate(iso, "en")} against the sources listed. Fees and dates can change: always check the official site before entering or booking.`);
+
+function factTable(rows) {
+  return `<dl class="facts">${rows.filter((r) => r[1]).map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
+}
+
 // ---------- Pagine ----------
 const PAGES = {
   home(lang, articles) {
@@ -263,6 +289,50 @@ ${articles.slice(0, 4).map((a) => `      <li><a href="${articlePath(lang, a.slug
     <div class="results" id="carb-out" aria-live="polite"></div>
     </div>
   </div>
+</div></div>`,
+    };
+  },
+
+
+  races(lang) {
+    const it = lang === "it";
+    const rows = RACES.races.map((r) => `<li data-sport="${r.sport}"><a href="${racePath(lang, r)}">
+      <time datetime="${r.date}">${raceDate(r.date, lang, true)}</time>
+      <span class="r-name">${esc(r.name)}<small>${esc(r.city[lang])}</small></span>
+      <span class="r-dist">${esc(raceDistance(r, lang))}</span>
+      <span class="r-fee">${esc(r.feeShort[lang])}</span>
+    </a></li>`).join("\n");
+    return {
+      title: it ? "Gare" : "Races",
+      description: it ? "Calendario di maratone, mezze e granfondo in Italia ed Europa con date, distanze, quote di iscrizione e logistica." : "Calendar of marathons, half marathons and gran fondos in Italy and Europe with dates, distances, entry fees and logistics.",
+      body: `<div class="page"><div class="wrap">
+  <h1>${it ? "Gare" : "Races"}</h1>
+  <p class="lede">${it ? "Le gare della stagione con date, quote e come arrivarci." : "This season's races with dates, fees and how to get there."}</p>
+  <div class="filter" role="group" aria-label="${it ? "Filtra per sport" : "Filter by sport"}">
+    <button type="button" data-filter="all" aria-pressed="true">${it ? "Tutte" : "All"}</button>
+    <button type="button" data-filter="run" aria-pressed="false">${SPORT.run[lang]}</button>
+    <button type="button" data-filter="bike" aria-pressed="false">${SPORT.bike[lang]}</button>
+  </div>
+  <div class="race-head" aria-hidden="true"><span>${it ? "Data" : "Date"}</span><span>${it ? "Gara" : "Race"}</span><span>${it ? "Distanza" : "Distance"}</span><span>${it ? "Quota" : "Fee"}</span></div>
+  <ul class="race-list" data-filter-list>
+${rows}
+  </ul>
+  <p class="note">${verifiedNote(lang, RACES.verified)}</p>
+</div></div>`,
+    };
+  },
+
+  trips(lang) {
+    const it = lang === "it";
+    return {
+      title: it ? "Trip" : "Trips",
+      description: it ? "Mete per training camp e viaggi di corsa e bici: quando andare, cosa allenare, costi indicativi e logistica." : "Training camp and travel destinations for running and cycling: when to go, what to train, indicative costs and logistics.",
+      body: `<div class="page"><div class="wrap">
+  <h1>Trip</h1>
+  <p class="lede">${it ? "Training camp e viaggi per correre e pedalare: dove, quando e quanto costa." : "Training camps and trips to run and ride: where, when and what it costs."}</p>
+  <ul class="trip-list">
+${TRIPS.trips.map((t) => `    <li><a href="${tripPath(lang, t)}"><span class="t-name">${esc(it ? t.name : t.nameEn)}</span><span class="t-kind">${esc(t.kind[lang])}</span><span class="t-season">${esc(t.season[lang].split(";")[0])}</span></a></li>`).join("\n")}
+  </ul>
 </div></div>`,
     };
   },
@@ -358,6 +428,58 @@ function main() {
   <p><a href="${ROUTES.articles[lang]}">${T[lang].allArticles}</a></p>
 </div></article>`;
       write(pathname, layout({ lang, title: a.title, description: a.description, current: "articles", alt: twin ? articlePath(other, twin.slug) : ROUTES.articles[other], pathname, body }));
+      urls.push(pathname);
+    }
+
+    // Schede delle gare e dei trip
+    for (const r of RACES.races) {
+      const pathname = racePath(lang, r);
+      const it = lang === "it";
+      const body = `<article class="page"><div class="wrap prose">
+  <p class="crumb"><a href="${ROUTES.races[lang]}">${it ? "Gare" : "Races"}</a></p>
+  <h1>${esc(r.name)}</h1>
+  <div class="article-meta"><span>${SPORT[r.sport][lang]}</span><time datetime="${r.date}">${raceDate(r.date, lang)}</time><span>${esc(r.city[lang])}</span></div>
+  ${factTable([
+    [it ? "Distanza" : "Distance", esc(raceDistance(r, lang))],
+    [it ? "Quota" : "Fee", esc(r.fee[lang])],
+    [it ? "Iscrizioni" : "Entry", esc(r.status[lang])],
+    [it ? "Dettagli" : "Details", esc(r.start[lang])],
+    [it ? "Tempo massimo" : "Time limit", esc(r.limit[lang])],
+  ])}
+  <h2>${it ? "Come arrivare" : "Getting there"}</h2>
+  <p>${esc(r.travel[lang])}</p>
+  <h2>${it ? "Da sapere" : "Good to know"}</h2>
+  <p>${esc(r.tips[lang])}</p>
+  <p class="note">${verifiedNote(lang, RACES.verified)} ${it ? "Fonte" : "Source"}: <a href="${r.source}">${host(r.source)}</a></p>
+</div></article>`;
+      write(pathname, layout({ lang, title: r.name, description: `${r.name}: ${raceDate(r.date, lang)}, ${r.city[lang]}. ${r.fee[lang]}.`, current: "races", alt: racePath(other, r), pathname, body }));
+      urls.push(pathname);
+    }
+    for (const t of TRIPS.trips) {
+      const pathname = tripPath(lang, t);
+      const it = lang === "it";
+      const name = it ? t.name : t.nameEn;
+      const body = `<article class="page"><div class="wrap prose">
+  <p class="crumb"><a href="${ROUTES.trips[lang]}">Trip</a></p>
+  <h1>${esc(name)}</h1>
+  <div class="article-meta"><span>${esc(t.kind[lang])}</span><span>${esc(t.place[lang])}</span></div>
+  ${factTable([
+    [it ? "Quando" : "When", esc(t.season[lang])],
+    [it ? "Quota" : "Altitude", esc(t.altitude[lang])],
+  ])}
+  <h2>${it ? "Perché andarci" : "Why go"}</h2>
+  <p>${esc(t.why[lang])}</p>
+  <h2>${it ? "Cosa allenare" : "What to train"}</h2>
+  <p>${esc(t.train[lang])}</p>
+  <h2>${it ? "Costi" : "Costs"}</h2>
+  <p>${esc(t.costs[lang])}</p>
+  <h2>${it ? "Come arrivare" : "Getting there"}</h2>
+  <p>${esc(t.travel[lang])}</p>
+  <h2>${it ? "Da sapere" : "Good to know"}</h2>
+  <p>${esc(t.tips[lang])}</p>
+  <p class="note">${verifiedNote(lang, TRIPS.verified)}${t.sources.length ? ` ${it ? "Fonti" : "Sources"}: ${t.sources.map((u) => `<a href="${u}">${host(u)}</a>`).join(", ")}` : ""}</p>
+</div></article>`;
+      write(pathname, layout({ lang, title: name, description: `${name}: ${t.kind[lang]}. ${t.season[lang]}.`, current: "trips", alt: tripPath(other, t), pathname, body }));
       urls.push(pathname);
     }
     write(lang === "it" ? "/feed.xml" : "/en/feed.xml", rss(lang, articles[lang]));
