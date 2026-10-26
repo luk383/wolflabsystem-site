@@ -470,8 +470,8 @@
         "en": "About €155 (2026 reference: €5 pre-registration plus about €150); 2027 fee to be confirmed"
       },
       "feeShort": {
-        "it": "circa €155",
-        "en": "about €155"
+        "it": "€155 (2026)",
+        "en": "€155 (2026)"
       },
       "status": {
         "it": "Preiscrizione gratuita dal 20 ottobre al 3 novembre 2026 (ore 10); iscrizione dal 4 novembre 2026 alle 14, in ordine di arrivo, senza sorteggio",
@@ -923,8 +923,8 @@
         "en": "About $350 for international runners (2025 fee, as a guide)"
       },
       "feeShort": {
-        "it": "circa $350",
-        "en": "about $350"
+        "it": "$350 (2025)",
+        "en": "$350 (2025)"
       },
       "status": {
         "it": "Sorteggio di solito a febbraio; per il 2026 è stato dal 4 al 25 febbraio",
@@ -947,6 +947,196 @@
         "en": "It's the world's largest marathon: book your hotel as soon as you have a bib."
       },
       "source": "https://marathonhandbook.com/heres-how-to-enter-the-2026-new-york-city-marathon/"
+    },
+    {
+      "id": "amsterdam",
+      "slug": {
+        "it": "maratona-di-amsterdam",
+        "en": "amsterdam-marathon"
+      },
+      "name": "TCS Amsterdam Marathon",
+      "sport": "run",
+      "distance": "42,195 km",
+      "date": "2027-10-31",
+      "city": {
+        "it": "Amsterdam, Paesi Bassi",
+        "en": "Amsterdam, Netherlands"
+      },
+      "fee": {
+        "it": "Quota 2027 non ancora pubblicata (2026: €145)",
+        "en": "2027 fee not yet published (2026: €145)"
+      },
+      "status": {
+        "it": "Iscrizioni dal 19 dicembre 2026. Nel 2026 i pettorali sono finiti (32.000)",
+        "en": "Registration opens 19 December 2026. In 2026 all 32,000 places sold out"
+      },
+      "source": "https://www.tcsamsterdammarathon.eu/registration",
+      "feeShort": {
+        "it": "€145 (2026)",
+        "en": "€145 (2026)"
+      },
+      "major": false,
+      "start": {
+        "it": "Il weekend di gara è sabato 30 e domenica 31 ottobre 2027",
+        "en": "Race weekend is Saturday 30 and Sunday 31 October 2027"
+      }
+    },
+    {
+      "id": "warsaw",
+      "slug": {
+        "it": "maratona-di-varsavia",
+        "en": "warsaw-marathon"
+      },
+      "name": "Maraton Warszawski",
+      "sport": "run",
+      "distance": "42,195 km",
+      "date": "2027-09-26",
+      "city": {
+        "it": "Varsavia, Polonia",
+        "en": "Warsaw, Poland"
+      },
+      "fee": {
+        "it": "Da 250 PLN",
+        "en": "From 250 PLN"
+      },
+      "status": {
+        "it": "Iscrizioni aperte fino al 25 settembre 2027 o fino a esaurimento dei 14.000 posti standard",
+        "en": "Registration open until 25 September 2027 or until the 14,000 standard places sell out"
+      },
+      "source": "https://rejestracja.maratonwarszawski.com/en/",
+      "feeShort": {
+        "it": "da 250 PLN",
+        "en": "from 250 PLN"
+      },
+      "major": false,
+      "start": {
+        "it": "Partenza alle 9:00",
+        "en": "Start at 9:00 am"
+      }
+    },
+    {
+      "id": "budapest",
+      "slug": {
+        "it": "maratona-di-budapest",
+        "en": "budapest-marathon"
+      },
+      "name": "SPAR Budapest Maraton",
+      "sport": "run",
+      "distance": "42,195 km",
+      "date": "2027-10-10",
+      "city": {
+        "it": "Budapest, Ungheria",
+        "en": "Budapest, Hungary"
+      },
+      "fee": {
+        "it": "Tariffa early bird di 24.000 HUF per chi ha già corso un evento BSI, valida fino al 9 novembre 2026; tariffa base da confermare",
+        "en": "Early bird of 24,000 HUF for runners who have already done a BSI event, valid until 9 November 2026; standard fee to be confirmed"
+      },
+      "status": {
+        "it": "Iscrizioni aperte dal 14 ottobre 2026",
+        "en": "Registration open since 14 October 2026"
+      },
+      "source": "https://www.sparbudapestmaraton.hu/",
+      "feeShort": {
+        "it": "da confermare",
+        "en": "to be confirmed"
+      },
+      "major": false
+    },
+    {
+      "id": "lisbon-half",
+      "slug": {
+        "it": "mezza-maratona-di-lisbona",
+        "en": "lisbon-half-marathon"
+      },
+      "name": "EDP Lisbon Half Marathon",
+      "sport": "run",
+      "distance": "21,097 km",
+      "date": "2027-03-07",
+      "city": {
+        "it": "Lisbona, Portogallo",
+        "en": "Lisbon, Portugal"
+      },
+      "fee": {
+        "it": "Quota da confermare sul sito ufficiale",
+        "en": "Fee to be confirmed on the official site"
+      },
+      "status": {
+        "it": "Iscrizioni aperte, fino a 20.000 partecipanti",
+        "en": "Registration open, up to 20,000 participants"
+      },
+      "source": "https://maratonaclubedeportugal.com/en/corrida-marco/edp-lisbon-half-marathon/",
+      "feeShort": {
+        "it": "da confermare",
+        "en": "to be confirmed"
+      },
+      "major": false,
+      "limit": {
+        "it": "3 ore",
+        "en": "3 hours"
+      }
+    },
+    {
+      "id": "berlin-half",
+      "slug": {
+        "it": "mezza-maratona-di-berlino",
+        "en": "berlin-half-marathon"
+      },
+      "name": "GENERALI Berlin Half Marathon",
+      "sport": "run",
+      "distance": "21,097 km",
+      "date": "2027-04-04",
+      "city": {
+        "it": "Berlino, Germania",
+        "en": "Berlin, Germany"
+      },
+      "fee": {
+        "it": "Quota da confermare sul sito ufficiale",
+        "en": "Fee to be confirmed on the official site"
+      },
+      "status": {
+        "it": "Solo con sorteggio. Per i runner il sorteggio si è chiuso il 28 maggio 2026",
+        "en": "By lottery only. The runners' lottery closed on 28 May 2026"
+      },
+      "source": "https://www.generali-berliner-halbmarathon.de/en/registration/registration-information",
+      "feeShort": {
+        "it": "da confermare",
+        "en": "to be confirmed"
+      },
+      "major": false
+    },
+    {
+      "id": "cph-half",
+      "slug": {
+        "it": "mezza-maratona-di-copenaghen",
+        "en": "copenhagen-half-marathon"
+      },
+      "name": "CPH Half",
+      "sport": "run",
+      "distance": "21,097 km",
+      "date": "2027-09-19",
+      "city": {
+        "it": "Copenaghen, Danimarca",
+        "en": "Copenhagen, Denmark"
+      },
+      "fee": {
+        "it": "Quota da confermare sul sito ufficiale",
+        "en": "Fee to be confirmed on the official site"
+      },
+      "status": {
+        "it": "Sorteggio chiuso (16-30 settembre 2026). I sorteggiati ricevono un'email, dal 5 ottobre",
+        "en": "Lottery closed (16-30 September 2026). Drawn runners are emailed from 5 October"
+      },
+      "source": "https://cphhalf.dk/en/lottery/",
+      "feeShort": {
+        "it": "da confermare",
+        "en": "to be confirmed"
+      },
+      "major": false,
+      "start": {
+        "it": "Partenza alle 9:30 a Østerbro, 45.000 posti",
+        "en": "Start at 9:30 am in Østerbro, 45,000 places"
+      }
     }
   ]
 }
