@@ -224,3 +224,14 @@ section { padding: 64px 0; }
 .topic-section .article-list .topic { display: none; }
 .topic-section .article-list a { grid-template-columns: 1fr auto; }
 @media (max-width: 760px) { .topic-section .article-list a { grid-template-columns: 1fr; } }
+
+/* Titolo con icone stilizzate */
+.headline span { display: flex; align-items: center; gap: 0.18em; }
+.glyph { width: 0.78em; height: 0.78em; flex: none; fill: none; stroke: var(--line); stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; margin-top: 0.06em; }
+.glyph .pulse { stroke: var(--text); stroke-width: 2.8; }
+@media (prefers-reduced-motion: no-preference) {
+  .glyph * { stroke-dasharray: 220; stroke-dashoffset: 220; animation: draw 1.4s cubic-bezier(.6, 0, .2, 1) forwards; }
+  .headline span:nth-child(2) .glyph * { animation-delay: 0.25s; }
+  .headline span:nth-child(3) .glyph * { animation-delay: 0.5s; }
+}
+.hero-min { padding-bottom: clamp(72px, 10vw, 120px); }

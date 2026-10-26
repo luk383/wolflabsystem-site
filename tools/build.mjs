@@ -170,6 +170,14 @@ const slugify = (t) => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]
 const topicsOf = (list) => [...new Set(list.map((a) => a.topic))].sort((x, y) => (TOPIC_ORDER.indexOf(x) + 1 || 99) - (TOPIC_ORDER.indexOf(y) + 1 || 99));
 const topicNav = (list) => `<nav class="topic-nav">${topicsOf(list).map((t) => `<a href="#${slugify(t)}">${esc(t)} <span class="count">${list.filter((a) => a.topic === t).length}</span></a>`).join("")}</nav>`;
 
+// Icone stilizzate del titolo: corsa, bici, cuore-motore (disegnate a mano, tratto unico)
+const svgGlyph = (name, body) => `<svg class="glyph glyph-${name}" viewBox="0 0 64 64" aria-hidden="true" focusable="false">${body}</svg>`;
+const GLYPH = {
+  run: svgGlyph("run", `<circle cx="41" cy="9" r="5"/><path d="M38 17 L31 34"/><path d="M37 21 L45 27 L52 23"/><path d="M37 21 L28 23 L22 30"/><path d="M31 34 L40 43 L37 56"/><path d="M31 34 L23 44 L12 45"/>`),
+  bike: svgGlyph("bike", `<circle cx="13" cy="47" r="10"/><circle cx="51" cy="47" r="10"/><path d="M13 47 L26 47 L40 32 L21 32"/><path d="M26 47 L20 28"/><path d="M40 32 L51 47"/><circle cx="45" cy="11" r="4"/><path d="M20 27 L38 19 L41 31"/><path d="M20 27 L31 37 L26 47"/>`),
+  heart: svgGlyph("heart", `<path d="M32 55 C 12 42, 6 28, 13 19 C 19 11, 28 13, 32 20 C 36 13, 45 11, 51 19 C 58 28, 52 42, 32 55 Z"/><path class="pulse" d="M4 34 L19 34 L23 27 L29 43 L35 21 L40 34 L60 34"/>`),
+};
+
 // ---------- Pagine ----------
 const PAGES = {
   home(lang, articles) {
@@ -180,10 +188,9 @@ const PAGES = {
         ? "Articoli e calcolatori su corsa, bici, nutrizione e forza per amatori di endurance, ogni consiglio con il suo livello di prova e le fonti."
         : "Articles and calculators on running, cycling, nutrition and strength for amateur endurance athletes, each piece of advice with its evidence level and sources.",
       body: `<section class="hero hero-min">
-  ${ROUTE_SVG}
   <div class="wrap">
-    <h1${it ? ' lang="en"' : ""}>Two feet.<br>Two wheels.<br>One engine.</h1>
-    <p class="lede">${it ? "Corsa, bici, nutrizione e forza. Spiegate con le fonti." : "Running, cycling, nutrition and strength. Explained with sources."}</p>
+    <h1 class="headline"${it ? ' lang="en"' : ""}><span>Two feet.${GLYPH.run}</span><span>Two wheels.${GLYPH.bike}</span><span>One engine.${GLYPH.heart}</span></h1>
+    <p class="lede">${it ? "Corsa, bici, nutrizione e forza." : "Running, cycling, nutrition and strength."}</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="${ROUTES.articles[lang]}">${it ? "Leggi gli articoli" : "Read the articles"}</a>
       <a class="btn" href="${ROUTES.tools[lang]}">${it ? "Calcola i tuoi ritmi" : "Work out your paces"}</a>
