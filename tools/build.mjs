@@ -165,7 +165,7 @@ function paceBand(lang, id) {
 const ROUTE_SVG = `<svg class="route" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true"><path class="glow" d="M-20 170 C 160 150, 240 90, 420 110 S 700 200, 880 150 S 1140 40, 1300 80 S 1440 120, 1470 100"/><path d="M-20 170 C 160 150, 240 90, 420 110 S 700 200, 880 150 S 1140 40, 1300 80 S 1440 120, 1470 100"/></svg>`;
 
 // Sezioni degli articoli, nell'ordine in cui compaiono
-const TOPIC_ORDER = ["Allenamento", "Training", "Corsa", "Running", "Bici", "Cycling", "Nutrizione", "Nutrition", "Forza e recupero", "Strength and recovery"];
+const TOPIC_ORDER = ["Allenamento", "Training", "Corsa", "Running", "Bici", "Cycling", "Nutrizione", "Nutrition", "Forza e recupero", "Strength and recovery", "Materiali", "Gear"];
 const slugify = (t) => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const topicsOf = (list) => [...new Set(list.map((a) => a.topic))].sort((x, y) => (TOPIC_ORDER.indexOf(x) + 1 || 99) - (TOPIC_ORDER.indexOf(y) + 1 || 99));
 const topicNav = (list) => `<nav class="topic-nav">${topicsOf(list).map((t) => `<a href="#${slugify(t)}">${esc(t)} <span class="count">${list.filter((a) => a.topic === t).length}</span></a>`).join("")}</nav>`;
