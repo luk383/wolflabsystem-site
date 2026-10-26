@@ -214,7 +214,6 @@ const PAGES = {
       body: `<section class="hero hero-min">
   <div class="wrap">
     <h1 class="headline"${it ? ' lang="en"' : ""}><span>Two feet.${GLYPH.run}</span><span>Two wheels.${GLYPH.bike}</span><span>One engine.${GLYPH.heart}</span></h1>
-    <p class="lede">${it ? "Corsa, bici, nutrizione e forza." : "Running, cycling, nutrition and strength."}</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="${ROUTES.articles[lang]}">${it ? "Leggi gli articoli" : "Read the articles"}</a>
       <a class="btn" href="${ROUTES.tools[lang]}">${it ? "Calcola i tuoi ritmi" : "Work out your paces"}</a>

@@ -286,12 +286,12 @@
         "en": "Rome, Italy"
       },
       "fee": {
-        "it": "€99 fino al 30/05/2026; la quota attuale è sul sito ufficiale (costo del servizio escluso)",
-        "en": "€99 until 30/05/2026; the current fee is on the official site (service fee excluded)"
+        "it": "€129 dal 16/09/2026 fino alla chiusura (€99 fino al 31/05, €109 fino al 31/07, €119 fino al 15/09; costo del servizio online escluso)",
+        "en": "€129 from 16/09/2026 until close (€99 until 31/05, €109 until 31/07, €119 until 15/09; online service fee excluded)"
       },
       "status": {
-        "it": "Iscrizioni aperte; nel 2026 esaurita quattro mesi prima",
-        "en": "Entries open; in 2026 it sold out four months early"
+        "it": "Iscrizioni aperte fino al 7 marzo 2027 (salvo esaurimento); nel 2026 esaurita quattro mesi prima",
+        "en": "Entries open until 7 March 2027 (unless sold out); in 2026 it sold out four months early"
       },
       "start": {
         "it": "Partenza alle 8:30 circa",
@@ -309,10 +309,10 @@
         "it": "La quota comprende maglia tecnica, medaglia e deposito borse. Il centro è chiuso al traffico: muoversi in metro.",
         "en": "The fee includes a technical shirt, medal and bag drop. The centre is closed to traffic: use the metro."
       },
-      "source": "https://www.runromethemarathon.com/wp-content/uploads/2026/04/RRTM27-regolamento-italiano-23-4-2026.pdf",
+      "source": "https://www.runromethemarathon.com/wp-content/uploads/2026/09/RRTM27-regolamento-ITA.pdf",
       "feeShort": {
-        "it": "da €99",
-        "en": "from €99"
+        "it": "€129",
+        "en": "€129"
       },
       "major": false
     },
@@ -474,8 +474,8 @@
         "en": "about €155"
       },
       "status": {
-        "it": "Preiscrizione e assegnazione: vedi sito ufficiale",
-        "en": "Pre-registration and allocation: see official site"
+        "it": "Preiscrizione gratuita dal 20 ottobre al 3 novembre 2026 (ore 10); iscrizione dal 4 novembre 2026 alle 14, in ordine di arrivo, senza sorteggio",
+        "en": "Free pre-registration 20 October to 3 November 2026 (10:00); registration opens 4 November 2026 at 14:00, first come first served, no lottery"
       },
       "start": {
         "it": "Partenza ai piedi dell'Erasmusbrug, arrivo sul Coolsingel",
@@ -493,7 +493,7 @@
         "it": "Percorso piatto, tra i più veloci d'Europa in primavera.",
         "en": "Flat course, among Europe's fastest in spring."
       },
-      "source": "https://fatmarathoner.com/nn-marathon-rotterdam-guide/",
+      "source": "https://nnmarathonrotterdam.nl/en/register/nn-marathon-rotterdam-2/",
       "major": false
     },
     {
@@ -569,8 +569,8 @@
         "en": "2027 ballot closed (results July 2026); charity, tour operators and Good for Age remain"
       },
       "start": {
-        "it": "Una delle Abbott World Marathon Majors; si valuta un'edizione su due giorni",
-        "en": "One of the Abbott World Marathon Majors; a two-day event is being considered"
+        "it": "Edizione su due giorni: sabato 24 e domenica 25 aprile 2027 (il giorno dipende dall'assegnazione). Una delle Abbott World Marathon Majors",
+        "en": "Two-day event: Saturday 24 and Sunday 25 April 2027 (your day depends on your allocation). One of the Abbott World Marathon Majors"
       },
       "limit": {
         "it": "Vedi regolamento ufficiale",
@@ -584,7 +584,7 @@
         "it": "Le charity chiedono di solito una raccolta minima intorno a £2.500. Il sorteggio per il 2028 si apre in genere ad aprile, durante la gara.",
         "en": "Charities usually ask for a minimum of around £2,500. The 2028 ballot usually opens in April, around race weekend."
       },
-      "source": "https://therunningchannel.com/london-marathon-2027-ballot/"
+      "source": "https://www.londonmarathonevents.co.uk/london-marathon"
     },
     {
       "id": "novecolli",
@@ -819,7 +819,7 @@
         "it": "maratona-di-berlino",
         "en": "berlin-marathon"
       },
-      "name": "BMW Berlin Marathon",
+      "name": "GENERALI BERLIN-MARATHON",
       "sport": "run",
       "distance": "42,195 km",
       "date": "2027-09-26",
@@ -828,20 +828,20 @@
         "en": "Berlin, Germany"
       },
       "fee": {
-        "it": "€205 (si paga solo se estratti)",
-        "en": "€205 (charged only if selected)"
+        "it": "€215 (si paga solo se estratti)",
+        "en": "€215 (charged only if selected)"
       },
       "status": {
-        "it": "Sorteggio aperto fino a inizio novembre 2026; risultati a fine novembre. Anche Good for Age, charity e tour operator",
-        "en": "Lottery open until early November 2026; results end of November. Also Good for Age, charity and tour operators"
+        "it": "Sorteggio aperto dal 1 ottobre al 12 novembre 2026; risultati il 3 dicembre 2026. Anche Good for Age, charity e tour operator",
+        "en": "Lottery open 1 October to 12 November 2026; results on 3 December 2026. Also Good for Age, charity and tour operators"
       },
       "start": {
         "it": "Una delle Abbott World Marathon Majors; percorso piatto e veloce",
         "en": "One of the Abbott World Marathon Majors; flat, fast course"
       },
       "limit": {
-        "it": "Vedi regolamento ufficiale",
-        "en": "See official rules"
+        "it": "6 ore e 15 minuti",
+        "en": "6 hours 15 minutes"
       },
       "travel": {
         "it": "Aeroporto di Berlino Brandeburgo (BER), collegato al centro da treni regionali e S-Bahn.",
@@ -851,10 +851,10 @@
         "it": "Probabilità di estrazione nel sorteggio generale intorno al 20%: valuta anche i pacchetti dei tour operator ufficiali.",
         "en": "General lottery odds around 20%: also consider official tour operator packages."
       },
-      "source": "https://fatmarathoner.com/berlin-marathon-2027-entry/",
+      "source": "https://www.generali-berlin-marathon.com/en/registration/run",
       "feeShort": {
-        "it": "€205",
-        "en": "€205"
+        "it": "€215",
+        "en": "€215"
       },
       "major": true
     },

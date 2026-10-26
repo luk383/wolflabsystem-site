@@ -23,7 +23,7 @@
 
   // Banda dei passaggi (home e strumenti)
   function renderBand(el, total) {
-    var marks = [5, 10, 15, 20, 25, 30, 35, 40, MARATHON];
+    var marks = [5, 10, 15, 20, HALF, 25, 30, 35, 40, MARATHON];
     el.classList.add("updating");
     el.innerHTML = marks.map(function (km) {
       var label = km === MARATHON ? "42,2 km" : km === HALF ? (EN ? "Half" : "Mezza") : km + " km";
@@ -49,6 +49,8 @@
     function update() {
       var total = parseTime(input.value);
       if (!validTarget(total)) {
+        band.innerHTML = "";
+        if (pace) pace.textContent = "";
         foot.textContent = EN ? "Enter a time between 2:00 and 7:00, for example 3:30." : "Scrivi un tempo tra 2:00 e 7:00, per esempio 3:30.";
         return;
       }
@@ -93,7 +95,7 @@
     function guidance(hours) {
       if (hours < 1) return EN ? "Under an hour, carbohydrate during the race is not needed; a mouth rinse or a few sips are enough." : "Sotto l'ora non servono carboidrati in gara: bastano un risciacquo o qualche sorso.";
       if (hours <= 2.5) return EN ? "For 1 to 2.5 hours, guidelines suggest 30 to 60 g per hour." : "Tra 1 e 2,5 ore le linee guida indicano 30–60 g all'ora.";
-      return EN ? "Beyond 2.5 hours, up to 90 g per hour, using glucose and fructose mixes and only if trained in long runs." : "Oltre 2,5 ore si sale fino a 90 g all'ora, con miscele di glucosio e fruttosio e solo se provato nei lunghi.";
+      return EN ? "Beyond 2.5 hours, about 60 g per hour is the usual range. Up to 90 g per hour is for much longer efforts, with glucose and fructose mixes, and only if trained in long runs." : "Oltre 2,5 ore il riferimento abituale è circa 60 g all'ora. Fino a 90 g all'ora è per sforzi molto più lunghi, con miscele di glucosio e fruttosio e solo se provato nei lunghi.";
     }
     function updateCarb() {
       var total = parseTime(c("race-time").value);
@@ -106,6 +108,10 @@
         return;
       }
       var hours = total / 3600;
+      if (hours < 1) {
+        out.innerHTML = "<p>" + guidance(hours) + "</p>";
+        return;
+      }
       // si inizia dopo circa 20 minuti
       var fuelHours = Math.max(0, hours - 1 / 3);
       var grams = Math.round(g * fuelHours);
@@ -120,7 +126,7 @@
         "<div><strong>" + (every ? L("ogni ", "every ") + every + " min" : "—") + "</strong><span>" + L("dopo i primi 20 minuti", "after the first 20 minutes") + "</span></div>" +
         "</div>" +
         "<table><tbody>" +
-        "<tr><th>" + L("Carico nei 36–48 h prima", "Loading, 36–48 h before") + "</th><td>" + Math.round(kg * 10) + "–" + Math.round(kg * 12) + L(" g al giorno (10–12 g/kg)", " g per day (10–12 g/kg)") + "</td></tr>" +
+        (hours > 1.5 ? "<tr><th>" + L("Carico nei 36–48 h prima", "Loading, 36–48 h before") + "</th><td>" + Math.round(kg * 10) + "–" + Math.round(kg * 12) + L(" g al giorno (10–12 g/kg), solo oltre 90 minuti di gara", " g per day (10–12 g/kg), only for events over 90 minutes") + "</td></tr>" : "") +
         "<tr><th>" + L("Pasto pre-gara, 1–4 h prima", "Pre-race meal, 1–4 h before") + "</th><td>" + Math.round(kg * 1) + "–" + Math.round(kg * 4) + L(" g (1–4 g/kg, meno se manca poco al via)", " g (1–4 g/kg, less the closer to the start)") + "</td></tr>" +
         "</tbody></table>" +
         '<p class="small">' + L("Parte dei grammi può arrivare dalla bevanda ai ristori: in quel caso riduci i gel. Prova tutto nei lunghi prima della gara.", "Some of the grams can come from sports drink at aid stations; if so, use fewer gels. Rehearse everything in long runs first.") + "</p>";
