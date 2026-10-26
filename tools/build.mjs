@@ -90,6 +90,7 @@ function layout({ lang, title, description, current, alt, body, pathname }) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0e17">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${SITE}${pathname}">
@@ -103,7 +104,7 @@ function layout({ lang, title, description, current, alt, body, pathname }) {
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 <script defer src="/assets/site.js"></script>
 </head>
@@ -122,7 +123,7 @@ ${body}
 <footer class="site-foot">
   <div class="wrap">
     <p>${t.foot}</p>
-    <p><a href="${ROUTES.contact[lang]}">${t.contact}</a> · <a href="${ROUTES.method[lang]}">${t.nav.method}</a> · <a href="${lang === "it" ? "/feed.xml" : "/en/feed.xml"}">RSS</a></p>
+    <nav class="foot-links" aria-label="${lang === "it" ? "Piè di pagina" : "Footer"}"><a href="${ROUTES.contact[lang]}">${t.contact}</a> <a href="${ROUTES.method[lang]}">${t.nav.method}</a> <a href="${lang === "it" ? "/feed.xml" : "/en/feed.xml"}">RSS</a></nav>
   </div>
 </footer>
 </body>
@@ -146,15 +147,18 @@ ${list
 
 function paceBand(lang, id) {
   const it = lang === "it";
-  return `<div class="blue-line" data-paceband>
-  <div class="band-head">
-    <label for="${id}">${it ? "Il tuo tempo obiettivo in maratona" : "Your marathon goal time"}</label>
+  return `<div class="pace-card" data-paceband>
+  <div class="pace-top">
+    <label for="${id}">${it ? "Obiettivo in maratona" : "Marathon goal"}</label>
     <input class="time-input" id="${id}" value="3:30" inputmode="numeric" autocomplete="off" aria-describedby="${id}-foot">
   </div>
-  <div class="band" data-compact="1" aria-live="polite"></div>
-  <p class="band-foot small" id="${id}-foot"></p>
+  <p class="pace-big" aria-live="polite"><span data-pace>4:59</span><small>/km</small></p>
+  <div class="band" aria-label="${it ? "Passaggi a ritmo costante" : "Even-pace splits"}"></div>
+  <p class="band-foot" id="${id}-foot"></p>
 </div>`;
 }
+
+const ROUTE_SVG = `<svg class="route" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true"><path class="glow" d="M-20 170 C 160 150, 240 90, 420 110 S 700 200, 880 150 S 1140 40, 1300 80 S 1440 120, 1470 100"/><path d="M-20 170 C 160 150, 240 90, 420 110 S 700 200, 880 150 S 1140 40, 1300 80 S 1440 120, 1470 100"/></svg>`;
 
 // ---------- Pagine ----------
 const PAGES = {
@@ -166,11 +170,18 @@ const PAGES = {
         ? "Articoli e calcolatori su corsa, bici, nutrizione e forza per amatori di endurance, ogni consiglio con il suo livello di prova e le fonti."
         : "Articles and calculators on running, cycling, nutrition and strength for amateur endurance athletes, each piece of advice with its evidence level and sources.",
       body: `<section class="hero">
-  <div class="wrap">
-    <h1>${it ? "Allenati con le fonti, non con i sentito dire." : "Train on evidence, not on hearsay."}</h1>
-    <p class="lede">${it
-      ? "Corsa, bici, nutrizione e forza per amatori, spiegati partendo dalla ricerca. Ogni consiglio dice quanto è solido."
-      : "Running, cycling, nutrition and strength for amateurs, explained from the research. Every piece of advice says how solid it is."}</p>
+  ${ROUTE_SVG}
+  <div class="wrap hero-grid">
+    <div>
+      <h1>${it ? "Endurance, senza miti." : "Endurance, minus the myths."}</h1>
+      <p class="lede">${it
+        ? "Corsa, bici, nutrizione e forza spiegate partendo dalla ricerca. Ogni consiglio con le sue fonti e quanto è solido."
+        : "Running, cycling, nutrition and strength explained from the research. Every piece of advice with its sources and how solid it is."}</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="${ROUTES.articles[lang]}">${it ? "Leggi gli articoli" : "Read the articles"}</a>
+        <a class="btn" href="${ROUTES.tools[lang]}">${it ? "Prova gli strumenti" : "Try the tools"}</a>
+      </div>
+    </div>
     ${paceBand(lang, "home-target")}
   </div>
 </section>
@@ -193,8 +204,11 @@ const PAGES = {
 <section>
   <div class="wrap">
     <div class="callout">
-      <div><span class="figure">${it ? "42,195" : "42.195"}</span> <span>km</span></div>
-      <p>${it ? "Passaggi, ritmi di allenamento e carboidrati per la tua maratona, calcolati con i numeri delle linee guida." : "Splits, training paces and carbohydrate for your marathon, worked out with guideline numbers."} <a href="${ROUTES.tools[lang]}">${it ? "Apri gli strumenti" : "Open the tools"}</a></p>
+      <div class="figure">${it ? "42,195" : "42.195"}<span>km</span></div>
+      <div>
+        <p>${it ? "Passaggi, ritmi di allenamento e carboidrati per la tua maratona, calcolati con i numeri delle linee guida." : "Splits, training paces and carbohydrate for your marathon, worked out with guideline numbers."}</p>
+        <a class="btn" href="${ROUTES.tools[lang]}">${it ? "Apri gli strumenti" : "Open the tools"}</a>
+      </div>
     </div>
   </div>
 </section>`,

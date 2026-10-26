@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0e17">
 <title>Wolf Lab — Allenamento endurance, con le fonti</title>
 <meta name="description" content="Articoli e calcolatori su corsa, bici, nutrizione e forza per amatori di endurance, ogni consiglio con il suo livello di prova e le fonti.">
 <link rel="canonical" href="https://wolflabsystem.com/">
@@ -16,7 +17,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 <script defer src="/assets/site.js"></script>
 </head>
@@ -31,16 +32,24 @@
 </header>
 <main id="main">
 <section class="hero">
-  <div class="wrap">
-    <h1>Allenati con le fonti, non con i sentito dire.</h1>
-    <p class="lede">Corsa, bici, nutrizione e forza per amatori, spiegati partendo dalla ricerca. Ogni consiglio dice quanto è solido.</p>
-    <div class="blue-line" data-paceband>
-  <div class="band-head">
-    <label for="home-target">Il tuo tempo obiettivo in maratona</label>
+  <svg class="route" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true"><path class="glow" d="M-20 170 C 160 150, 240 90, 420 110 S 700 200, 880 150 S 1140 40, 1300 80 S 1440 120, 1470 100"/><path d="M-20 170 C 160 150, 240 90, 420 110 S 700 200, 880 150 S 1140 40, 1300 80 S 1440 120, 1470 100"/></svg>
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Endurance, senza miti.</h1>
+      <p class="lede">Corsa, bici, nutrizione e forza spiegate partendo dalla ricerca. Ogni consiglio con le sue fonti e quanto è solido.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/articoli/">Leggi gli articoli</a>
+        <a class="btn" href="/strumenti/">Prova gli strumenti</a>
+      </div>
+    </div>
+    <div class="pace-card" data-paceband>
+  <div class="pace-top">
+    <label for="home-target">Obiettivo in maratona</label>
     <input class="time-input" id="home-target" value="3:30" inputmode="numeric" autocomplete="off" aria-describedby="home-target-foot">
   </div>
-  <div class="band" data-compact="1" aria-live="polite"></div>
-  <p class="band-foot small" id="home-target-foot"></p>
+  <p class="pace-big" aria-live="polite"><span data-pace>4:59</span><small>/km</small></p>
+  <div class="band" aria-label="Passaggi a ritmo costante"></div>
+  <p class="band-foot" id="home-target-foot"></p>
 </div>
   </div>
 </section>
@@ -79,8 +88,11 @@
 <section>
   <div class="wrap">
     <div class="callout">
-      <div><span class="figure">42,195</span> <span>km</span></div>
-      <p>Passaggi, ritmi di allenamento e carboidrati per la tua maratona, calcolati con i numeri delle linee guida. <a href="/strumenti/">Apri gli strumenti</a></p>
+      <div class="figure">42,195<span>km</span></div>
+      <div>
+        <p>Passaggi, ritmi di allenamento e carboidrati per la tua maratona, calcolati con i numeri delle linee guida.</p>
+        <a class="btn" href="/strumenti/">Apri gli strumenti</a>
+      </div>
     </div>
   </div>
 </section>
@@ -88,7 +100,7 @@
 <footer class="site-foot">
   <div class="wrap">
     <p>Corsa, bici, nutrizione e allenamento per amatori, basati sulle prove. Le informazioni non sostituiscono il parere di un medico.</p>
-    <p><a href="/contatti/">Contatti</a> · <a href="/metodo/">Metodo</a> · <a href="/feed.xml">RSS</a></p>
+    <nav class="foot-links" aria-label="Piè di pagina"><a href="/contatti/">Contatti</a> <a href="/metodo/">Metodo</a> <a href="/feed.xml">RSS</a></nav>
   </div>
 </footer>
 </body>

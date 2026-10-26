@@ -1,4 +1,4 @@
-// Wolf Lab — calcolatori e conto alla rovescia. Nessuna dipendenza.
+// Wolf Lab — calcolatori. Nessuna dipendenza.
 (function () {
   "use strict";
   var EN = document.documentElement.lang === "en";
@@ -23,9 +23,7 @@
 
   // Banda dei passaggi (home e strumenti)
   function renderBand(el, total) {
-    var marks = [5, 10, 15, 20, HALF, 25, 30, 35, 40, MARATHON];
-    // nove celle: in home togliamo la mezza per tenere la banda su una riga
-    if (el.dataset.compact) marks = [5, 10, 15, 20, 25, 30, 35, 40, MARATHON];
+    var marks = [5, 10, 15, 20, 25, 30, 35, 40, MARATHON];
     el.classList.add("updating");
     el.innerHTML = marks.map(function (km) {
       var label = km === MARATHON ? "42,2 km" : km === HALF ? (EN ? "Half" : "Mezza") : km + " km";
@@ -39,14 +37,15 @@
     var perKm = total / MARATHON;
     var perMi = perKm * 1.609344;
     return EN
-      ? "Even pace: " + fmt(perKm) + " per km · " + fmt(perMi) + " per mile"
-      : "Ritmo costante: " + fmt(perKm) + " al km · " + fmt(perMi) + " al miglio";
+      ? "Even-pace splits. " + fmt(perMi) + " per mile."
+      : "Passaggi a ritmo costante. " + fmt(perMi) + " al miglio.";
   }
 
   document.querySelectorAll("[data-paceband]").forEach(function (root) {
     var input = root.querySelector("input");
     var band = root.querySelector(".band");
     var foot = root.querySelector(".band-foot");
+    var pace = root.querySelector("[data-pace]");
     function update() {
       var total = parseTime(input.value);
       if (!validTarget(total)) {
@@ -54,6 +53,7 @@
         return;
       }
       renderBand(band, total);
+      if (pace) pace.textContent = fmt(total / MARATHON);
       foot.textContent = paceText(total);
     }
     input.addEventListener("input", update);

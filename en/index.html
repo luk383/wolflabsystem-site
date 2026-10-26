@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0e17">
 <title>Wolf Lab — Endurance training, with sources</title>
 <meta name="description" content="Articles and calculators on running, cycling, nutrition and strength for amateur endurance athletes, each piece of advice with its evidence level and sources.">
 <link rel="canonical" href="https://wolflabsystem.com/en/">
@@ -16,7 +17,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 <script defer src="/assets/site.js"></script>
 </head>
@@ -31,16 +32,24 @@
 </header>
 <main id="main">
 <section class="hero">
-  <div class="wrap">
-    <h1>Train on evidence, not on hearsay.</h1>
-    <p class="lede">Running, cycling, nutrition and strength for amateurs, explained from the research. Every piece of advice says how solid it is.</p>
-    <div class="blue-line" data-paceband>
-  <div class="band-head">
-    <label for="home-target">Your marathon goal time</label>
+  <svg class="route" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true"><path class="glow" d="M-20 170 C 160 150, 240 90, 420 110 S 700 200, 880 150 S 1140 40, 1300 80 S 1440 120, 1470 100"/><path d="M-20 170 C 160 150, 240 90, 420 110 S 700 200, 880 150 S 1140 40, 1300 80 S 1440 120, 1470 100"/></svg>
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Endurance, minus the myths.</h1>
+      <p class="lede">Running, cycling, nutrition and strength explained from the research. Every piece of advice with its sources and how solid it is.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/en/articles/">Read the articles</a>
+        <a class="btn" href="/en/tools/">Try the tools</a>
+      </div>
+    </div>
+    <div class="pace-card" data-paceband>
+  <div class="pace-top">
+    <label for="home-target">Marathon goal</label>
     <input class="time-input" id="home-target" value="3:30" inputmode="numeric" autocomplete="off" aria-describedby="home-target-foot">
   </div>
-  <div class="band" data-compact="1" aria-live="polite"></div>
-  <p class="band-foot small" id="home-target-foot"></p>
+  <p class="pace-big" aria-live="polite"><span data-pace>4:59</span><small>/km</small></p>
+  <div class="band" aria-label="Even-pace splits"></div>
+  <p class="band-foot" id="home-target-foot"></p>
 </div>
   </div>
 </section>
@@ -79,8 +88,11 @@
 <section>
   <div class="wrap">
     <div class="callout">
-      <div><span class="figure">42.195</span> <span>km</span></div>
-      <p>Splits, training paces and carbohydrate for your marathon, worked out with guideline numbers. <a href="/en/tools/">Open the tools</a></p>
+      <div class="figure">42.195<span>km</span></div>
+      <div>
+        <p>Splits, training paces and carbohydrate for your marathon, worked out with guideline numbers.</p>
+        <a class="btn" href="/en/tools/">Open the tools</a>
+      </div>
     </div>
   </div>
 </section>
@@ -88,7 +100,7 @@
 <footer class="site-foot">
   <div class="wrap">
     <p>Running, cycling, nutrition and training for amateurs, grounded in evidence. This information doesn't replace advice from a doctor.</p>
-    <p><a href="/en/contact/">Contact</a> · <a href="/en/method/">Method</a> · <a href="/en/feed.xml">RSS</a></p>
+    <nav class="foot-links" aria-label="Footer"><a href="/en/contact/">Contact</a> <a href="/en/method/">Method</a> <a href="/en/feed.xml">RSS</a></nav>
   </div>
 </footer>
 </body>

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0e17">
 <title>Tools — Wolf Lab</title>
 <meta name="description" content="Free calculators: marathon splits and training paces, race-day carbohydrate and carb loading.">
 <link rel="canonical" href="https://wolflabsystem.com/en/tools/">
@@ -16,7 +17,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 <script defer src="/assets/site.js"></script>
 </head>
@@ -37,13 +38,14 @@
   <div class="tool" id="splits">
     <h2>Marathon splits</h2>
     <p class="small">Even-pace split times, to print or copy onto a wrist band.</p>
-    <div class="blue-line" data-paceband>
-  <div class="band-head">
-    <label for="tool-band">Your marathon goal time</label>
+    <div class="pace-card" data-paceband>
+  <div class="pace-top">
+    <label for="tool-band">Marathon goal</label>
     <input class="time-input" id="tool-band" value="3:30" inputmode="numeric" autocomplete="off" aria-describedby="tool-band-foot">
   </div>
-  <div class="band" data-compact="1" aria-live="polite"></div>
-  <p class="band-foot small" id="tool-band-foot"></p>
+  <p class="pace-big" aria-live="polite"><span data-pace>4:59</span><small>/km</small></p>
+  <div class="band" aria-label="Even-pace splits"></div>
+  <p class="band-foot" id="tool-band-foot"></p>
 </div>
   </div>
 
@@ -74,7 +76,7 @@
 <footer class="site-foot">
   <div class="wrap">
     <p>Running, cycling, nutrition and training for amateurs, grounded in evidence. This information doesn't replace advice from a doctor.</p>
-    <p><a href="/en/contact/">Contact</a> · <a href="/en/method/">Method</a> · <a href="/en/feed.xml">RSS</a></p>
+    <nav class="foot-links" aria-label="Footer"><a href="/en/contact/">Contact</a> <a href="/en/method/">Method</a> <a href="/en/feed.xml">RSS</a></nav>
   </div>
 </footer>
 </body>
