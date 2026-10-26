@@ -232,9 +232,7 @@ const PAGES = {
     const it = lang === "it";
     return {
       title: it ? "Home" : "Home",
-      description: it
-        ? "Articoli e calcolatori su corsa, bici, nutrizione e forza per amatori di endurance, ognuno con le sue fonti."
-        : "Articles and calculators on running, cycling, nutrition and strength for amateur endurance athletes, each with its sources.",
+      description: "Wolf Lab - Run. Ride. One engine.",
       body: `<section class="sport-home"><div class="wrap">
 <div class="sport-hero"><div class="sport-copy"><h1 lang="en">Run.<br>Ride.<br><span>One engine.</span></h1></div><div class="sport-photo" role="img" aria-label="${it ? "Concept generato: runner su strada sterrata, ispirato agli altopiani del Kenya" : "Generated concept: runners on a dirt road inspired by the Kenyan highlands"}"><small>${it ? "CONCEPT KENYA / IMMAGINE GENERATA" : "KENYA CONCEPT / GENERATED IMAGE"}</small></div></div>
 <div class="sport-latest" id="read-next"><div class="section-title"><h2>${it ? "Da leggere, poi da provare." : "Read it. Then try it."}</h2><a href="${ROUTES.articles[lang]}">${T[lang].allArticles} ↗</a></div>
