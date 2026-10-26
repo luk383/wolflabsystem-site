@@ -229,6 +229,9 @@ section { padding: 64px 0; }
 .headline span { display: flex; align-items: center; gap: 0.18em; }
 .glyph { width: 0.78em; height: 0.78em; flex: none; fill: none; stroke: var(--line); stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; margin-top: 0.06em; }
 .glyph .pulse { stroke: var(--text); stroke-width: 2.8; }
+.glyph-run { stroke: #ff8a3d; }
+.glyph-bike { stroke: #3ecf8e; }
+.glyph-heart { stroke: #ff4d5e; }
 @media (prefers-reduced-motion: no-preference) {
   .glyph * { stroke-dasharray: 220; stroke-dashoffset: 220; animation: draw 1.4s cubic-bezier(.6, 0, .2, 1) forwards; }
   .headline span:nth-child(2) .glyph * { animation-delay: 0.25s; }
