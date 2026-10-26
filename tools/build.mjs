@@ -186,6 +186,7 @@ RACES.races.sort((a, b) => a.date.localeCompare(b.date));
 const racePath = (lang, r) => (lang === "it" ? `/gare/${r.slug.it}/` : `/en/races/${r.slug.en}/`);
 const tripPath = (lang, t) => (lang === "it" ? `/viaggi/${t.slug.it}/` : `/en/trips/${t.slug.en}/`);
 const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } };
+const kindOf = (r) => (r.sport === "bike" ? "bike" : r.distance.startsWith("21") ? "half" : "marathon");
 const SPORT = { run: { it: "Corsa", en: "Running" }, bike: { it: "Bici", en: "Cycling" } };
 function raceDate(iso, lang, short) {
   const [y, m, d] = iso.split("-").map(Number);
@@ -293,7 +294,7 @@ ${articles.slice(0, 4).map((a) => `      <li><a href="${articlePath(lang, a.slug
 
   races(lang) {
     const it = lang === "it";
-    const rows = RACES.races.map((r) => `<li data-sport="${r.sport}" data-major="${r.major ? "1" : "0"}"><a href="${racePath(lang, r)}">
+    const rows = RACES.races.map((r) => `<li data-sport="${kindOf(r)}" data-major="${r.major ? "1" : "0"}"><a href="${racePath(lang, r)}">
       <time datetime="${r.date}">${raceDate(r.date, lang, true)}</time>
       <span class="r-name">${esc(r.name)}${r.major ? ` <span class="major">Major</span>` : ""}<small>${esc(r.city[lang])}</small></span>
       <span class="r-dist">${esc(raceDistance(r, lang))}</span>
@@ -307,7 +308,8 @@ ${articles.slice(0, 4).map((a) => `      <li><a href="${articlePath(lang, a.slug
   <p class="lede">${it ? "Le gare della stagione con date, quote e come arrivarci." : "This season's races with dates, fees and how to get there."}</p>
   <div class="filter" role="group" aria-label="${it ? "Filtra per sport" : "Filter by sport"}">
     <button type="button" data-filter="all" aria-pressed="true">${it ? "Tutte" : "All"}</button>
-    <button type="button" data-filter="run" aria-pressed="false">${SPORT.run[lang]}</button>
+    <button type="button" data-filter="marathon" aria-pressed="false">${it ? "Maratone" : "Marathons"}</button>
+    <button type="button" data-filter="half" aria-pressed="false">${it ? "Mezze maratone" : "Half marathons"}</button>
     <button type="button" data-filter="bike" aria-pressed="false">${SPORT.bike[lang]}</button>
     <button type="button" data-filter="major" aria-pressed="false">World Marathon Majors</button>
   </div>
@@ -413,13 +415,13 @@ function main() {
     [it ? "Distanza" : "Distance", esc(raceDistance(r, lang))],
     [it ? "Quota" : "Fee", esc(r.fee[lang])],
     [it ? "Iscrizioni" : "Entry", esc(r.status[lang])],
-    [it ? "Dettagli" : "Details", esc(r.start[lang])],
-    [it ? "Tempo massimo" : "Time limit", esc(r.limit[lang])],
+    [it ? "Dettagli" : "Details", r.start ? esc(r.start[lang]) : ""],
+    [it ? "Tempo massimo" : "Time limit", r.limit ? esc(r.limit[lang]) : ""],
   ])}
-  <h2>${it ? "Come arrivare" : "Getting there"}</h2>
-  <p>${esc(r.travel[lang])}</p>
-  <h2>${it ? "Da sapere" : "Good to know"}</h2>
-  <p>${esc(r.tips[lang])}</p>
+  ${r.travel ? `<h2>${it ? "Come arrivare" : "Getting there"}</h2>
+  <p>${esc(r.travel[lang])}</p>` : ""}
+  ${r.tips ? `<h2>${it ? "Da sapere" : "Good to know"}</h2>
+  <p>${esc(r.tips[lang])}</p>` : ""}
   <p class="note">${verifiedNote(lang, RACES.verified)} ${it ? "Fonte" : "Source"}: <a href="${r.source}">${host(r.source)}</a></p>
 </div></article>`;
       write(pathname, layout({ lang, title: r.name, description: `${r.name}: ${raceDate(r.date, lang)}, ${r.city[lang]}. ${r.fee[lang]}.`, current: "races", alt: racePath(other, r), pathname, body }));
