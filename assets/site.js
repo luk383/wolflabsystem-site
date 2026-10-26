@@ -151,3 +151,5 @@
     list.querySelectorAll("li").forEach(function (li) { li.hidden = f === "major" ? li.dataset.major !== "1" : f !== "all" && li.dataset.sport !== f; });
   });
 })();
+
+(function(){var b=document.querySelector(".brand");if(b){b.innerHTML='WOLF<span class="brand-word">LAB<span class="brand-dot">.</span></span><span class="brand-icons" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="runner-head" cx="15" cy="4" r="2"/><path d="m11 8 4 2 3 4h3M15 10l-3 5 4 3 1 4M12 15l-5 1-4 5M11 8l-3 4H4"/></svg><svg viewBox="0 0 24 24"><circle cx="5.5" cy="17" r="4"/><circle cx="18.5" cy="17" r="4"/><path d="M5.5 17 10 8l5.5 9h-10L13 8h4M9 5h4m3-1h3l3 13"/></svg><svg viewBox="0 0 24 24"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 22l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/><path d="M3 12h4l2-4 4 8 2-4h6"/></svg></span>';b.setAttribute("aria-label","Wolf Lab");}})();

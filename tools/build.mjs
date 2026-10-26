@@ -95,7 +95,7 @@ function layout({ lang, title, description, current, alt, body, pathname }) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0a0e17">
+<meta name="theme-color" content="#BF251B">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${SITE}${pathname}">
@@ -219,23 +219,14 @@ const PAGES = {
       description: it
         ? "Articoli e calcolatori su corsa, bici, nutrizione e forza per amatori di endurance, ognuno con le sue fonti."
         : "Articles and calculators on running, cycling, nutrition and strength for amateur endurance athletes, each with its sources.",
-      body: `<section class="hero hero-min">
-  <div class="wrap">
-    <h1 class="headline"${it ? ' lang="en"' : ""}><span>Two feet.${GLYPH.run}</span><span>Two wheels.${GLYPH.bike}</span><span>One engine.${GLYPH.heart}</span></h1>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="${ROUTES.articles[lang]}">${it ? "Leggi gli articoli" : "Read the articles"}</a>
-      <a class="btn" href="${ROUTES.tools[lang]}">${it ? "Calcola i tuoi ritmi" : "Work out your paces"}</a>
-    </div>
-  </div>
-</section>
-<section class="latest">
-  <div class="wrap">
-    <div class="section-title"><h2>${it ? "Da leggere" : "Read next"}</h2><a href="${ROUTES.articles[lang]}">${T[lang].allArticles}</a></div>
-    <ul class="title-list">
-${articles.slice(0, 4).map((a) => `      <li><a href="${articlePath(lang, a.slug)}"><span class="topic">${esc(a.topic)}</span><span class="t">${esc(a.title)}</span></a></li>`).join("\n")}
-    </ul>
-  </div>
-</section>`,
+      body: `<section class="sport-home"><div class="wrap">
+<div class="sport-hero"><div class="sport-copy"><span class="sport-eyebrow">${it ? "CORSA + BICI. STESSA PASSIONE." : "RUN + RIDE. ONE PASSION."}</span><h1 lang="en">Two feet.<br>Two wheels.<br><span>One engine.</span></h1><a class="btn btn-primary" href="#read-next">${it ? "Entra nel ritmo" : "Find your rhythm"} <span>↗</span></a></div><div class="sport-photo" role="img" aria-label="${it ? "Concept generato: runner su strada sterrata, ispirato agli altopiani del Kenya" : "Generated concept: runners on a dirt road inspired by the Kenyan highlands"}"><small>${it ? "CONCEPT KENYA / IMMAGINE GENERATA" : "KENYA CONCEPT / GENERATED IMAGE"}</small></div></div>
+<div class="sport-strip"><span>${it ? "ALLENATI CON METODO." : "TRAIN WITH PURPOSE."}</span><span>${it ? "LEGGI CON CURIOSITÀ." : "READ WITH CURIOSITY."}</span><span>${it ? "PARTI CON LE IDEE CHIARE." : "START WITH CLARITY."}</span></div>
+<div class="sport-latest" id="read-next"><div class="section-title"><h2>${it ? "Da leggere, poi da provare." : "Read it. Then try it."}</h2><a href="${ROUTES.articles[lang]}">${T[lang].allArticles} ↗</a></div>
+<div class="sport-stories">${articles.slice(0,1).map(a=>`<a href="${articlePath(lang,a.slug)}"><div class="sport-symbol">↗<span>RUN<br>× RIDE</span></div><span class="sport-topic">${esc(a.topic)} / ${a.minutes} ${it ? "MIN" : "MIN"}</span><h3>${esc(a.title)}</h3><span class="sport-read">${it ? "Leggi l'articolo" : "Read the article"} ↗</span></a>`).join("")}<div class="sport-support">${articles.slice(1,3).map(a=>`<a href="${articlePath(lang,a.slug)}"><span class="sport-topic">${esc(a.topic)}</span><h3>${esc(a.title)}</h3><span class="sport-read">${it ? "Leggi" : "Read"} ↗</span></a>`).join("")}</div></div>
+${articles.slice(3,4).map(a=>`<a class="sport-more" href="${articlePath(lang,a.slug)}">${esc(a.title)} ↗</a>`).join("")}</div>
+<div class="sport-utility"><div><span class="sport-eyebrow">${it ? "DAL SAPERE AL FARE" : "FROM KNOWING TO DOING"}</span><h2>${it ? "La prossima sfida<br>comincia qui." : "Your next challenge<br>starts here."}</h2></div><a href="${ROUTES.races[lang]}"><b>01 / ${T[lang].nav.races}</b><span>${it ? "Maratone, mezze e bici" : "Marathons, halves and cycling"} ↗</span></a><a href="${ROUTES.tools[lang]}"><b>02 / ${T[lang].nav.tools}</b><span>${it ? "Calcola i tuoi ritmi" : "Work out your paces"} ↗</span></a></div>
+</div></section>`,
     };
   },
 
