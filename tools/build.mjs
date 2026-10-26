@@ -88,7 +88,19 @@ function loadArticles() {
 }
 
 // ---------- Impaginazione ----------
+// Pagine interne: titolo (e sottotitolo o dati) in fascia rossa, come gli articoli
+function heroize(body) {
+  const m = body.match(/^<(article|div) class="page"><div class="wrap( prose)?">\s*(<p class="crumb">[\s\S]*?<\/p>\s*)?(<h1>[\s\S]*?<\/h1>)\s*(<p class="lede">[\s\S]*?<\/p>|<div class="article-meta">[\s\S]*?<\/div>)?/);
+  if (!m) return body;
+  const rest = body.slice(m[0].length);
+  return `<${m[1]} class="page art"><header class="art-hero"><div class="wrap">${m[3] || ""}${m[4]}${m[5] || ""}</div></header><div class="wrap inner-body${m[2] ? " prose" : ""}">${rest}`;
+}
+
 function layout({ lang, title, description, current, alt, body, pathname, extraCss = "" }) {
+  if (current !== "home") {
+    const hb = heroize(body);
+    if (hb !== body) { body = hb; extraCss = `<link rel="stylesheet" href="/assets/article.css?v=${ASSET_V.art}">`; }
+  }
   const t = T[lang];
   const navItems = ["articles", "races", "trips", "tools"]
     .map((k) => `<a href="${ROUTES[k][lang]}"${current === k ? ' aria-current="page"' : ""}>${t.nav[k]}</a>`)
