@@ -164,6 +164,12 @@ function paceBand(lang, id) {
 
 const ROUTE_SVG = `<svg class="route" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true"><path class="glow" d="M-20 170 C 160 150, 240 90, 420 110 S 700 200, 880 150 S 1140 40, 1300 80 S 1440 120, 1470 100"/><path d="M-20 170 C 160 150, 240 90, 420 110 S 700 200, 880 150 S 1140 40, 1300 80 S 1440 120, 1470 100"/></svg>`;
 
+// Sezioni degli articoli, nell'ordine in cui compaiono
+const TOPIC_ORDER = ["Allenamento", "Training", "Corsa", "Running", "Bici", "Cycling", "Nutrizione", "Nutrition", "Forza e recupero", "Strength and recovery"];
+const slugify = (t) => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const topicsOf = (list) => [...new Set(list.map((a) => a.topic))].sort((x, y) => (TOPIC_ORDER.indexOf(x) + 1 || 99) - (TOPIC_ORDER.indexOf(y) + 1 || 99));
+const topicNav = (list) => `<nav class="topic-nav">${topicsOf(list).map((t) => `<a href="#${slugify(t)}">${esc(t)} <span class="count">${list.filter((a) => a.topic === t).length}</span></a>`).join("")}</nav>`;
+
 // ---------- Pagine ----------
 const PAGES = {
   home(lang, articles) {
@@ -173,47 +179,23 @@ const PAGES = {
       description: it
         ? "Articoli e calcolatori su corsa, bici, nutrizione e forza per amatori di endurance, ogni consiglio con il suo livello di prova e le fonti."
         : "Articles and calculators on running, cycling, nutrition and strength for amateur endurance athletes, each piece of advice with its evidence level and sources.",
-      body: `<section class="hero">
+      body: `<section class="hero hero-min">
   ${ROUTE_SVG}
-  <div class="wrap hero-grid">
-    <div>
-      <h1${it ? ' lang="en"' : ""}>Two feet.<br>Two wheels.<br>One engine.</h1>
-      <p class="lede">${it
-        ? "Corsa, bici, nutrizione e forza spiegate partendo dalla ricerca. Ogni consiglio con le sue fonti e quanto è solido."
-        : "Running, cycling, nutrition and strength explained from the research. Every piece of advice with its sources and how solid it is."}</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="${ROUTES.articles[lang]}">${it ? "Leggi gli articoli" : "Read the articles"}</a>
-        <a class="btn" href="${ROUTES.tools[lang]}">${it ? "Prova gli strumenti" : "Try the tools"}</a>
-      </div>
-    </div>
-    ${paceBand(lang, "home-target")}
-  </div>
-</section>
-<section>
   <div class="wrap">
-    <div class="section-title"><h2>${it ? "Ultimi articoli" : "Latest articles"}</h2><a href="${ROUTES.articles[lang]}">${T[lang].allArticles}</a></div>
-    ${articleRows(articles.slice(0, 5), lang)}
-  </div>
-</section>
-<section>
-  <div class="wrap">
-    <h2>${it ? "Come lavoriamo" : "How we work"}</h2>
-    <div class="principles">
-      <div><h3>${it ? "Fonti in chiaro" : "Sources in the open"}</h3><p>${it ? "Ogni articolo cita gli studi e le linee guida da cui parte, con il link per controllarli." : "Every article cites the studies and guidelines it starts from, with a link to check them."}</p></div>
-      <div><h3>${it ? "Livello di prova" : "Evidence level"}</h3><p>${it ? "Tre tacche dicono se un consiglio poggia su revisioni solide, su pochi studi o sull'esperienza degli allenatori." : "Three bars show whether advice rests on solid reviews, a handful of studies or coaching experience."}</p></div>
-      <div><h3>${it ? "Niente da venderti" : "Nothing to sell you"}</h3><p>${it ? "Nessuna pubblicità e nessun link di affiliazione a integratori o scarpe." : "No ads and no affiliate links to supplements or shoes."}</p></div>
+    <h1${it ? ' lang="en"' : ""}>Two feet.<br>Two wheels.<br>One engine.</h1>
+    <p class="lede">${it ? "Corsa, bici, nutrizione e forza. Spiegate con le fonti." : "Running, cycling, nutrition and strength. Explained with sources."}</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="${ROUTES.articles[lang]}">${it ? "Leggi gli articoli" : "Read the articles"}</a>
+      <a class="btn" href="${ROUTES.tools[lang]}">${it ? "Calcola i tuoi ritmi" : "Work out your paces"}</a>
     </div>
   </div>
 </section>
-<section>
+<section class="latest">
   <div class="wrap">
-    <div class="callout">
-      <div class="figure">${it ? "42,195" : "42.195"}<span>km</span></div>
-      <div>
-        <p>${it ? "Passaggi, ritmi di allenamento e carboidrati per la tua maratona, calcolati con i numeri delle linee guida." : "Splits, training paces and carbohydrate for your marathon, worked out with guideline numbers."}</p>
-        <a class="btn" href="${ROUTES.tools[lang]}">${it ? "Apri gli strumenti" : "Open the tools"}</a>
-      </div>
-    </div>
+    <div class="section-title"><h2>${it ? "Da leggere" : "Read next"}</h2><a href="${ROUTES.articles[lang]}">${T[lang].allArticles}</a></div>
+    <ul class="title-list">
+${articles.slice(0, 4).map((a) => `      <li><a href="${articlePath(lang, a.slug)}"><span class="topic">${esc(a.topic)}</span><span class="t">${esc(a.title)}</span></a></li>`).join("\n")}
+    </ul>
   </div>
 </section>`,
     };
@@ -227,7 +209,8 @@ const PAGES = {
       body: `<div class="page"><div class="wrap">
   <h1>${it ? "Articoli" : "Articles"}</h1>
   <p class="lede">${it ? "Un tema per volta: cosa dice la ricerca, cosa fare in pratica, quanto è solido." : "One topic at a time: what the research says, what to do in practice, how solid it is."}</p>
-  ${articleRows(articles, lang)}
+  ${topicNav(articles)}
+  ${topicsOf(articles).map((t) => `<section class="topic-section" id="${slugify(t)}"><h2>${esc(t)}</h2>${articleRows(articles.filter((x) => x.topic === t), lang)}</section>`).join("\n")}
 </div></div>`,
     };
   },
