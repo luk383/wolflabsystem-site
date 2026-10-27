@@ -2,7 +2,6 @@
   "it": {
     "title": "Biblioteca",
     "intro": "Allenamento, nutrizione e integratori. Da capire, confrontare e consultare.",
-    "note": "Primo nucleo verificato, non tutte le metodiche. Corsa, ciclismo e pesi si possono consultare separatamente. Le schede spiegano le prove e i limiti, non sostituiscono un piano individuale.",
     "sections": [
       {
         "id": "allenamento",
@@ -306,7 +305,6 @@
   "en": {
     "title": "Library",
     "intro": "Training, nutrition and supplements. Understand, compare and revisit.",
-    "note": "A checked starting collection, not every method. Running, cycling and strength can be explored separately. These summaries explain evidence and limits, not individual prescriptions.",
     "sections": [
       {
         "id": "training",
