@@ -35,7 +35,6 @@ const T = {
     evidence: ["", "Prove limitate", "Prove moderate", "Prove forti"],
     evidenceLabel: "Livello di prova",
     read: "min di lettura",
-    foot: "Corsa, bici, nutrizione e allenamento per amatori. Le informazioni non sostituiscono il parere di un medico.",
     contact: "Contatti",
     updated: "Pubblicato il",
     months: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
@@ -52,7 +51,6 @@ const T = {
     evidence: ["", "Limited evidence", "Moderate evidence", "Strong evidence"],
     evidenceLabel: "Evidence level",
     read: "min read",
-    foot: "Running, cycling, nutrition and training for amateurs. This information doesn't replace advice from a doctor.",
     contact: "Contact",
     updated: "Published",
     months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -145,7 +143,6 @@ ${body}
 </main>
 <footer class="site-foot">
   <div class="wrap">
-    <p>${t.foot}</p>
     <nav class="foot-links" aria-label="${lang === "it" ? "Piè di pagina" : "Footer"}"><a href="${ROUTES.contact[lang]}">${t.contact}</a> <a href="${lang === "it" ? "/feed.xml" : "/en/feed.xml"}">RSS</a></nav>
   </div>
 </footer>
@@ -237,7 +234,7 @@ const PAGES = {
       description: "Wolf Lab - Run. Ride. One engine.",
       body: `<section class="sport-home"><div class="wrap">
 <div class="sport-hero"><div class="sport-copy"><h1 lang="en">Run.<br>Ride.<br><span>One engine.</span></h1></div><div class="sport-photo" role="img" aria-label="${it ? "Concept generato: runner su strada sterrata, ispirato agli altopiani del Kenya" : "Generated concept: runners on a dirt road inspired by the Kenyan highlands"}"><small>${it ? "CONCEPT KENYA / IMMAGINE GENERATA" : "KENYA CONCEPT / GENERATED IMAGE"}</small></div></div>
-<div class="sport-latest" id="read-next"><div class="section-title"><h2>${it ? "Da leggere, poi da provare." : "Read it. Then try it."}</h2><a href="${ROUTES.articles[lang]}">${T[lang].allArticles} ↗</a></div>
+<div class="sport-latest" id="read-next"><div class="section-title"><a href="${ROUTES.articles[lang]}">${T[lang].allArticles} ↗</a></div>
 <div class="sport-stories">${articles.slice(0,1).map(a=>`<a href="${articlePath(lang,a.slug)}"><div class="sport-symbol">↗<span>RUN<br>× RIDE</span></div><span class="sport-topic">${esc(a.topic)} / ${a.minutes} ${it ? "MIN" : "MIN"}</span><h3>${esc(a.title)}</h3><span class="sport-read">${it ? "Leggi l'articolo" : "Read the article"} ↗</span></a>`).join("")}<div class="sport-support">${articles.slice(1,3).map(a=>`<a href="${articlePath(lang,a.slug)}"><span class="sport-topic">${esc(a.topic)}</span><h3>${esc(a.title)}</h3><span class="sport-read">${it ? "Leggi" : "Read"} ↗</span></a>`).join("")}</div></div>
 ${articles.slice(3,4).map(a=>`<a class="sport-more" href="${articlePath(lang,a.slug)}">${esc(a.title)} ↗</a>`).join("")}</div>
 <div class="sport-utility"><div><span class="sport-eyebrow">${it ? "DAL SAPERE AL FARE" : "FROM KNOWING TO DOING"}</span><h2>${it ? "La prossima sfida<br>comincia qui." : "Your next challenge<br>starts here."}</h2></div><a href="${ROUTES.races[lang]}"><b>01 / ${T[lang].nav.races}</b><span>${it ? "Maratone, mezze e bici" : "Marathons, halves and cycling"} ↗</span></a><a href="${ROUTES.tools[lang]}"><b>02 / ${T[lang].nav.tools}</b><span>${it ? "Calcola i tuoi ritmi" : "Work out your paces"} ↗</span></a></div>
