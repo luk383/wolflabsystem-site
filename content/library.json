@@ -1,0 +1,609 @@
+{
+  "it": {
+    "title": "Biblioteca",
+    "intro": "Allenamento, nutrizione e integratori. Da capire, confrontare e consultare.",
+    "note": "Primo nucleo verificato, non tutte le metodiche. Corsa, ciclismo e pesi si possono consultare separatamente. Le schede spiegano le prove e i limiti, non sostituiscono un piano individuale.",
+    "sections": [
+      {
+        "id": "allenamento",
+        "title": "Allenamento",
+        "intro": "Tre sport, più livelli: distribuzione dell’intensità, modelli e singole sedute non sono etichette equivalenti.",
+        "items": [
+          {
+            "title": "Piramidale e polarizzato",
+            "kind": "Corsa · ciclismo / distribuzione intensità",
+            "paragraphs": [
+              "Nel modello fisiologico a tre zone, entrambi assegnano la quota maggiore al lavoro facile, sotto la prima soglia. Nel piramidale la quota intermedia supera quella alta; nel polarizzato la quota alta supera quella intermedia. Non esiste una percentuale unica obbligatoria.",
+              "La zona intermedia è tra prima e seconda soglia, quella alta sopra la seconda. Questi numeri non sono automaticamente le zone del tuo dispositivo. Per confrontare studi o settimane bisogna dichiarare come si misurano intensità e distribuzione: tempo nelle zone e obiettivo della seduta possono dare letture diverse.",
+              "A chi serve: a chi vuole capire come organizzare il carico, non a scegliere un vincitore per nome. La meta-analisi 2025 non trova una superiorità complessiva tra piramidale e polarizzato per VO₂max o cronometro; segnala possibili differenze secondo livello atletico. Non è una regola individuale.",
+              "Applicazione: descrivere prima il lavoro attuale con un sistema coerente. Una distribuzione non prescrive da sola ore, frequenza o progressione. Evitare di aggiungere sedute intense solo per raggiungere una percentuale."
+            ],
+            "links": [
+              [
+                "Definizioni e limiti del conteggio: Treff et al.,2019",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC6582670/"
+              ],
+              [
+                "Revisione e meta-analisi 2025",
+                "https://link.springer.com/article/10.1007/s40279-024-02149-3"
+              ],
+              [
+                "Guida Wolf Lab già disponibile",
+                "/articoli/quanta-intensita-serve/"
+              ]
+            ]
+          },
+          {
+            "title": "Modello norvegese",
+            "kind": "Corsa / modello con soglia guidata dal lattato",
+            "paragraphs": [
+              "Qui il termine indica il modello descritto da Casado e colleghi 2023: intervalli a soglia guidati da misurazioni del lattato, dentro un alto volume di lavoro facile. La doppia soglia è una pratica di alcuni élite descritti, non una definizione universale di allenamento norvegese.",
+              "Il lavoro espone osservazioni e possibili spiegazioni fisiologiche in corridori di livello mondiale. Dichiarava assenti prove controllate sul modello descritto e incerta la trasferibilità ad altre gare, come la maratona. Non dimostra superiorità per un amatore; questa scheda non è una revisione sistematica di tutta la ricerca successiva.",
+              "Applicazione prudente: comprendere controllo dell’intensità e gestione del carico. Non copiare volumi o doppie sedute, né ricavare la propria soglia da un valore di lattato universale. Non è una raccomandazione a cambiare il proprio piano."
+            ],
+            "links": [
+              [
+                "Casado, Foster, Bakken e Tjelta 2023: testo e limiti",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC10000870/"
+              ]
+            ]
+          },
+          {
+            "title": "Ciclismo: FTP, zone e sedute",
+            "kind": "Ciclismo / test e organizzazione",
+            "paragraphs": [
+              "FTP e test servono a stimare e monitorare, non identificano da soli un modello di distribuzione dell’intensità. La guida esistente spiega limiti e ripetibilità del test.",
+              "Per studiare un programma separare la misura (potenza, percezione, soglie), la distribuzione del lavoro e la singola seduta. Un lavoro continuo o intervallato può comparire in programmi diversi; il solo nome non dice se il carico è adatto.",
+              "Per approfondire l’organizzazione della stagione: il manuale di Friel qui sotto è un riferimento tecnico, non una prova sperimentale di ogni scelta."
+            ],
+            "links": [
+              [
+                "FTP e limiti dei test",
+                "/articoli/ftp-e-zone-di-potenza/"
+              ],
+              [
+                "Distribuzione intensità e confronti",
+                "https://link.springer.com/article/10.1007/s40279-024-02149-3"
+              ],
+              [
+                "Friel: scheda del libro",
+                "https://joefrieltraining.com/book/the-cyclists-training-bible-5th-ed/"
+              ]
+            ]
+          },
+          {
+            "title": "Pesi: forza, ipertrofia e potenza",
+            "kind": "Pesi / obiettivi e variabili",
+            "paragraphs": [
+              "Forza massima, dimensione muscolare e potenza non sono lo stesso risultato. Prima di una metodica vanno definiti obiettivo, esperienza, esercizi e progressione. Il position stand ACSM 2026 sintetizza 137 revisioni su adulti sani: non è una guida per riabilitazione o dolore.",
+              "Nel complesso il lavoro contro resistenza migliora funzione e dimensione muscolare. La sintesi associa carichi più alti a maggiori guadagni di forza, volume più alto a ipertrofia e intento veloce a potenza. Non significa che un unico protocollo serva a tutti.",
+              "Applicazione: annotare serie, ripetizioni, carico, recupero, tecnica e fatica. Confrontare programmi a parità di obiettivo, non soltanto dal loro nome. Non servono cedimento o tecniche complesse per rendere valido ogni allenamento: la sintesi non mostra vantaggi costanti di molte di queste variabili.",
+              "Nei pesi “piramidale” può riferirsi alla sequenza di carichi e ripetizioni, non alle zone endurance: non trasferire automaticamente le definizioni."
+            ],
+            "links": [
+              [
+                "ACSM 2026: sintesi e popolazione studiata",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC12965823/"
+              ],
+              [
+                "Principi e metodi: scheda editore del manuale",
+                "https://us.humankinetics.com/products/science-and-practice-of-strength-training-3rd-edition"
+              ]
+            ]
+          },
+          {
+            "title": "Combinare forza e endurance",
+            "kind": "Corsa · ciclismo · pesi / integrazione",
+            "paragraphs": [
+              "La revisione Schumann e colleghi 2022 non trova nel complesso una compromissione di forza massima o ipertrofia rispetto alla sola forza. I guadagni di forza esplosiva possono invece essere attenuati, soprattutto quando le attività sono nella stessa seduta.",
+              "Questo non rende qualsiasi combinazione equivalente o sicura. Volume, obiettivo, recupero e popolazione vanno considerati; la scheda non prescrive una settimana tipo. Non attribuire ogni stanchezza a una generica “interferenza”."
+            ],
+            "links": [
+              [
+                "Revisione e meta-analisi: abstract",
+                "https://pubmed.ncbi.nlm.nih.gov/34757594/"
+              ],
+              [
+                "Guida bici e maratona: trasferimento e limiti",
+                "/articoli/bici-per-la-maratona/"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "nutrizione",
+        "title": "Nutrizione",
+        "intro": "Alimenti per ruolo pratico, senza nascondere quelli misti. Una guida iniziale, non un database alimentare completo.",
+        "items": [
+          {
+            "title": "Fonti di carboidrati",
+            "kind": "Alimenti / guida alla scelta",
+            "paragraphs": [
+              "Parti da cereali e derivati, pane, pasta, riso e patate; anche la frutta contribuisce ai carboidrati. Il gruppo è un indice pratico, non significa che ogni alimento contenga un solo nutriente. Controlla l’alimento preciso nella banca dati CREA.",
+              "Indica sempre crudo o cotto, parte edibile e unità. Per 100 g non significa per porzione: l’acqua assorbita in cottura cambia le concentrazioni. La fonte presenta valori medi, non numeri esatti per ogni piatto.",
+              "Esempio CREA per 100 g di parte edibile: Pasta di semola, cruda. Carboidrati disponibili 72.7 g, proteine 13.5 g, grassi 1.2 g. Non è una porzione consigliata."
+            ],
+            "links": [
+              [
+                "CREA: Pasta di semola, cruda",
+                "https://alimentinutrizione.it/tabelle-nutrizionali/000800"
+              ],
+              [
+                "CREA: food search",
+                "https://www.alimentinutrizione.it/tabelle-nutrizionali/ricerca-per-alimento"
+              ],
+              [
+                "CREA: data methods and variation",
+                "https://alimentinutrizione.it/presentazione-dati"
+              ]
+            ]
+          },
+          {
+            "title": "Fonti di proteine",
+            "kind": "Alimenti / guida alla scelta",
+            "paragraphs": [
+              "Consulta pesce, carne, uova, latte e yogurt, e legumi come categorie pratiche di fonti proteiche. Grassi e altri nutrienti cambiano secondo l’alimento. I legumi contribuiscono anche ai carboidrati: vanno raggiunti da entrambe le viste.",
+              "La tabella alimentare non prescrive quante proteine assumere. Porzioni e dieta completa richiedono contesto: qui non viene generato un piano pasti.",
+              "Esempio CREA per 100 g di parte edibile: Petto di pollo, crudo. Carboidrati disponibili 0 g, proteine 23.3 g, grassi 0.8 g. Non è una porzione consigliata."
+            ],
+            "links": [
+              [
+                "CREA: Petto di pollo, crudo",
+                "https://www.alimentinutrizione.it/tabelle-nutrizionali/106500"
+              ],
+              [
+                "CREA: search the exact food",
+                "https://www.alimentinutrizione.it/tabelle-nutrizionali/ricerca-per-alimento"
+              ],
+              [
+                "CREA: interpreting the data",
+                "https://alimentinutrizione.it/presentazione-dati"
+              ]
+            ]
+          },
+          {
+            "title": "Fonti di grassi e alimenti misti",
+            "kind": "Alimenti / guida alla scelta",
+            "paragraphs": [
+              "Oli, frutta a guscio e semi oleaginosi sono accessi pratici alle fonti di grassi. Frutta a guscio, latticini, uova, legumi e ricette possono contribuire a più macronutrienti: la classificazione aiuta a navigare, non è un’etichetta di purezza.",
+              "Per i prodotti confezionati usa l’etichetta del prodotto reale, non sostituirla con la media di un alimento generico. Nessun prodotto specifico è stato testato per questa raccolta.",
+              "Esempio CREA per 100 g di parte edibile: Olio extravergine d’oliva. Carboidrati disponibili 0 g, proteine 0 g, grassi 99.9 g. Non è una porzione consigliata."
+            ],
+            "links": [
+              [
+                "CREA: Olio extravergine d’oliva",
+                "https://alimentinutrizione.it/tabelle-nutrizionali/009210"
+              ],
+              [
+                "CREA: categories, averages and preparation",
+                "https://alimentinutrizione.it/presentazione-dati"
+              ],
+              [
+                "CREA: food search",
+                "https://www.alimentinutrizione.it/tabelle-nutrizionali/ricerca-per-alimento"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "integratori",
+        "title": "Integratori",
+        "intro": "Tre domande separate: funziona per questo obiettivo, è sicuro per questa persona, il prodotto è consentito e controllato?",
+        "items": [
+          {
+            "title": "Come leggere le evidenze",
+            "kind": "Efficacia / sicurezza / contaminazione",
+            "paragraphs": [
+              "Il quadro AIS considera sicurezza, liceità nello sport ed efficacia separatamente. Un ingrediente utile non garantisce ogni marca o lotto. Il quadro è pensato per alto livello: per un amatore serve comunque contesto.",
+              "L’assunzione involontaria di sostanze proibite è un rischio noto. Questo sito non certifica prodotti o lotti. Verifica regole antidoping correnti e controlli documentati sul lotto con supporto qualificato: il marketing non è verifica."
+            ],
+            "links": [
+              [
+                "AIS framework and IOC consensus summary",
+                "https://www.ais.gov.au/nutrition/supplements"
+              ]
+            ]
+          },
+          {
+            "title": "Caffeina, creatina, nitrati e tamponi",
+            "kind": "Evidenze sull’ingrediente, non lista acquisti",
+            "paragraphs": [
+              "Il consenso IOC riassunto da AIS riconosce prove di beneficio per alcuni ingredienti, tra cui caffeina, creatina, specifici agenti tampone e nitrati. Il beneficio dipende dalla gara e dallo scenario: non sono aiuti intercambiabili.",
+              "AIS include caffeina, beta-alanina, nitrati, bicarbonato e creatina nelle risorse del GruppoA. Non significa che servano a tutti. Dose, forma, effetti indesiderati, interazioni e obiettivo vanno verificati prima dell’uso. Questo indice non prescrive combinazioni o dosi individuali."
+            ],
+            "links": [
+              [
+                "AIS: GroupA ingredient resources",
+                "https://www.ais.gov.au/nutrition/supplements/group_a"
+              ],
+              [
+                "IOC consensus summary and safety",
+                "https://www.ais.gov.au/nutrition/supplements"
+              ],
+              [
+                "Guida Wolf Lab sulla caffeina",
+                "/articoli/caffeina-e-prestazione/"
+              ]
+            ]
+          },
+          {
+            "title": "Alimenti sportivi e integrazione per carenze",
+            "kind": "Scopi diversi",
+            "paragraphs": [
+              "Bevande, gel e prodotti proteici possono offrire praticità quando il cibo normale è scomodo. Non migliorano automaticamente una dieta già adeguata. Gli integratori per una sospetta carenza richiedono valutazione, non autodiagnosi.",
+              "Parti da alimentazione, valutazione nutrizionale e carico di allenamento. Nessun integratore corregge un carico inadatto o sostituisce le cure."
+            ],
+            "links": [
+              [
+                "AIS: roles, risks and nutritional assessment",
+                "https://www.ais.gov.au/nutrition/supplements"
+              ],
+              [
+                "AIS: medical supplements resources",
+                "https://www.ais.gov.au/nutrition/supplements/group_a"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "libri",
+        "title": "Libri e metodo",
+        "intro": "I manuali tecnici restano separati dalle prove scientifiche. Autore, edizione e ruolo sono espliciti.",
+        "items": [
+          {
+            "title": "Daniels’ Running Formula · Jack Daniels",
+            "kind": "Corsa / 4ª edizione",
+            "paragraphs": [
+              "La scheda Human Kinetics verifica titolo, autore e quarta edizione. Tratta il sistema VDOT e l’allenamento per diverse distanze. È un modello tecnico, non una revisione sistematica. Il libro completo non è stato consultato per questa sintesi: non si citano pagine o passaggi interni."
+            ],
+            "links": [
+              [
+                "Publisher",
+                "https://us.humankinetics.com/products/daniels-running-formula-4th-edition"
+              ]
+            ]
+          },
+          {
+            "title": "The Cyclist’s Training Bible · Joe Friel",
+            "kind": "Ciclismo / 5ª edizione,2018",
+            "paragraphs": [
+              "La pagina dell’autore verifica questa quinta edizione, VeloPress,2018. Manuale per organizzazione della stagione e individualizzazione. Verifica una edizione, non garantisce che sia l’ultima. Testo integrale non consultato; nessuna citazione di pagina."
+            ],
+            "links": [
+              [
+                "Author",
+                "https://joefrieltraining.com/book/the-cyclists-training-bible-5th-ed/"
+              ]
+            ]
+          },
+          {
+            "title": "Science and Practice of Strength Training",
+            "kind": "Pesi / Zatsiorsky, Kraemer, Fry",
+            "paragraphs": [
+              "Terza edizione, Human Kinetics,2021. Autori ed edizione verificati dall’editore. Principi e metodi tecnici, da affiancare alla ricerca corrente. Testo completo non consultato per questa raccolta; nessuna citazione interna o pagina inventata."
+            ],
+            "links": [
+              [
+                "Publisher",
+                "https://us.humankinetics.com/products/science-and-practice-of-strength-training-3rd-edition"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "calcIntro": "Intervalli educativi, non dieta personale. Macro quotidiani, carico pre-gara e carboidrati secondo il lavoro sono modalità distinte. I dati restano nella pagina.",
+    "calcNotes": [
+      "Intervalli carboidrati quotidiani:3–5,5–7,6–10 e 8–12 g/kg/giorno secondo il carico. Proteine di riferimento 1,2–2,0 g/kg/giorno. Intervalli ampi da linee guida per atleti, non fabbisogni esatti ricavati dal solo peso.",
+      "Carico carboidrati:10–12 g/kg ogni 24 ore nelle 36–48 ore prima di prove prolungate oltre 90 minuti. Non aggiungerlo al target quotidiano e non confonderlo con grammi all’ora durante la gara. Tolleranza ed energia complessiva richiedono pianificazione professionale.",
+      "Qui carb cycling significa adeguare l’intervallo al carico. Non è una dieta rigida a giorni alti/bassi né deplezione deliberata del glicogeno. La meta-analisi 2021 sulla restrizione periodizzata non trova un vantaggio complessivo di prestazione negli atleti allenati; non smentisce ogni strategia alimentare individualizzata.",
+      "Il calcolo facoltativo dei grassi usa 4 kcal/g per carboidrati e proteine,9 kcal/g per grassi. È un’approssimazione convenzionale, non una banca dati alimentare. Nessuna formula di metabolismo basale o fabbisogno calorico. Energia mancante o incompatibile non attiva restrizioni automatiche."
+    ]
+  },
+  "en": {
+    "title": "Library",
+    "intro": "Training, nutrition and supplements. Understand, compare and revisit.",
+    "note": "A checked starting collection, not every method. Running, cycling and strength can be explored separately. These summaries explain evidence and limits, not individual prescriptions.",
+    "sections": [
+      {
+        "id": "training",
+        "title": "Training",
+        "intro": "Three sports, different levels: intensity distribution, training models and individual sessions are not equivalent labels.",
+        "items": [
+          {
+            "title": "Pyramidal and polarized",
+            "kind": "Running · cycling / intensity distribution",
+            "paragraphs": [
+              "In the physiological three-zone model, both allocate the largest share to low intensity, below the first threshold. In pyramidal training the middle share exceeds the high share; in polarized training the high share exceeds the middle share. There is no single mandatory percentage.",
+              "The middle zone lies between the first and second thresholds; the high zone is above the second. These numbers do not automatically match your device zones. State the measurement method: time in zone and session goals can describe the same training differently.",
+              "The 2025 meta-analysis found no overall superiority of pyramidal versus polarized training for VO₂max or time trials, while identifying possible differences by athlete level. A distribution alone does not prescribe weekly hours, frequency or progression. Do not add hard sessions simply to match a percentage."
+            ],
+            "links": [
+              [
+                "Definitions and counting limits: Treff et al.,2019",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC6582670/"
+              ],
+              [
+                "Systematic review and meta-analysis 2025",
+                "https://link.springer.com/article/10.1007/s40279-024-02149-3"
+              ],
+              [
+                "Existing Wolf Lab guide",
+                "/en/articles/how-much-intensity/"
+              ]
+            ]
+          },
+          {
+            "title": "The Norwegian model",
+            "kind": "Running / lactate-guided threshold model",
+            "paragraphs": [
+              "Here the name refers to the model described by Casado et al.2023: lactate-guided threshold intervals within a high volume of easy running. Double threshold is one practice reported in some elite runners, not a universal definition of Norwegian training.",
+              "The paper describes observations and potential mechanisms in world-class runners. It reported no controlled tests of the model and uncertain transfer to events such as the marathon. It does not establish superiority for recreational runners; this page is not a systematic review of all later research.",
+              "Understand intensity control and load management rather than copying elite volumes or double sessions. Do not infer individual thresholds from one universal lactate value. This is not a recommendation to change your plan."
+            ],
+            "links": [
+              [
+                "Casado, Foster, Bakken and Tjelta 2023: full paper",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC10000870/"
+              ]
+            ]
+          },
+          {
+            "title": "Cycling: FTP, zones and sessions",
+            "kind": "Cycling / tests and organization",
+            "paragraphs": [
+              "FTP tests support estimation and monitoring; they do not define a training intensity distribution. The existing guide explains the limitations and repeatability of the test.",
+              "Separate the measure (power, perceived effort, thresholds), the overall distribution and the individual session. Continuous or interval work can appear in different programs. A session name alone does not establish a suitable load.",
+              "Friel’s manual below offers a coaching framework for season planning, not experimental proof of every choice."
+            ],
+            "links": [
+              [
+                "FTP guide",
+                "/en/articles/ftp-and-power-zones/"
+              ],
+              [
+                "Comparative research",
+                "https://link.springer.com/article/10.1007/s40279-024-02149-3"
+              ],
+              [
+                "Friel: book details",
+                "https://joefrieltraining.com/book/the-cyclists-training-bible-5th-ed/"
+              ]
+            ]
+          },
+          {
+            "title": "Strength: strength, size and power",
+            "kind": "Weights / goals and variables",
+            "paragraphs": [
+              "Maximal strength, hypertrophy and power are different outcomes. Define the goal, experience, exercise selection and progression before choosing a method. The 2026 ACSM position stand synthesizes 137 reviews in healthy adults, not rehabilitation or pain management.",
+              "Resistance training improves muscle function and size. The synthesis associates heavier loads with strength, higher volume with hypertrophy and fast movement intent with power. This does not establish one program for everyone.",
+              "Record sets, repetitions, load, rest, technique and fatigue. Compare programs by goal, not name. Training to failure or complex techniques are not mandatory: many such variables did not consistently alter outcomes in the synthesis.",
+              "In weight training, pyramidal may describe a sequence of loads and repetitions, not endurance zones. Do not transfer the definition automatically."
+            ],
+            "links": [
+              [
+                "ACSM 2026 position stand",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC12965823/"
+              ],
+              [
+                "Strength principles: publisher book page",
+                "https://us.humankinetics.com/products/science-and-practice-of-strength-training-3rd-edition"
+              ]
+            ]
+          },
+          {
+            "title": "Combining strength and endurance",
+            "kind": "Running · cycling · weights / integration",
+            "paragraphs": [
+              "The 2022 Schumann et al. review found no overall compromise of maximal strength or hypertrophy compared with strength alone. Explosive strength gains may be attenuated, particularly when both modes are trained in the same session.",
+              "This does not make every combination equivalent or safe. Consider volume, goals, recovery and the population studied. This page does not prescribe a weekly schedule."
+            ],
+            "links": [
+              [
+                "Systematic review and meta-analysis: abstract",
+                "https://pubmed.ncbi.nlm.nih.gov/34757594/"
+              ],
+              [
+                "Cycling and marathon guide",
+                "/en/articles/cycling-for-the-marathon/"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "nutrition",
+        "title": "Nutrition",
+        "intro": "Foods grouped by their practical role, with mixed foods kept visible. A starting guide, not a complete food database.",
+        "items": [
+          {
+            "title": "Carbohydrate sources",
+            "kind": "Foods / reading guide",
+            "paragraphs": [
+              "Start from cereals and derivatives, bread, pasta, rice and potatoes; fruit also contributes carbohydrate. Food groups are a practical index, not a claim that each food contains only one nutrient. Check the exact food in the CREA database.",
+              "Always identify raw or cooked state, edible portion and the unit. Per 100 g is not per serving; water gain during cooking changes concentration. The source gives reference averages, not exact values for every plate.",
+              "CREA example per 100 g edible portion: Semolina pasta, uncooked. Available carbohydrate 72.7 g, protein 13.5 g, fat 1.2 g. This is not a serving recommendation."
+            ],
+            "links": [
+              [
+                "CREA: Semolina pasta, uncooked",
+                "https://alimentinutrizione.it/tabelle-nutrizionali/000800"
+              ],
+              [
+                "CREA: food search",
+                "https://www.alimentinutrizione.it/tabelle-nutrizionali/ricerca-per-alimento"
+              ],
+              [
+                "CREA: data methods and variation",
+                "https://alimentinutrizione.it/presentazione-dati"
+              ]
+            ]
+          },
+          {
+            "title": "Protein sources",
+            "kind": "Foods / reading guide",
+            "paragraphs": [
+              "Explore fish, meat, eggs, milk and yogurt, and legumes as practical protein-source categories. Fat content and other nutrients vary with the specific food. Legumes also contribute carbohydrate: they should appear in both relevant views.",
+              "A food table is not a protein prescription. Portion choices and total diet need context; no automatic meal plan is generated here.",
+              "CREA example per 100 g edible portion: Chicken breast, raw. Available carbohydrate 0 g, protein 23.3 g, fat 0.8 g. This is not a serving recommendation."
+            ],
+            "links": [
+              [
+                "CREA: Chicken breast, raw",
+                "https://www.alimentinutrizione.it/tabelle-nutrizionali/106500"
+              ],
+              [
+                "CREA: search the exact food",
+                "https://www.alimentinutrizione.it/tabelle-nutrizionali/ricerca-per-alimento"
+              ],
+              [
+                "CREA: interpreting the data",
+                "https://alimentinutrizione.it/presentazione-dati"
+              ]
+            ]
+          },
+          {
+            "title": "Fat sources and mixed foods",
+            "kind": "Foods / reading guide",
+            "paragraphs": [
+              "Oils, nuts and oilseeds are practical entries for fat sources. Nuts, dairy, eggs, legumes and recipes can contribute several macronutrients. Classification is a navigation aid, not a purity label.",
+              "For packaged products, use the actual label rather than replacing it with a generic food average. No specific product has been tested for this collection.",
+              "CREA example per 100 g edible portion: Extra virgin olive oil. Available carbohydrate 0 g, protein 0 g, fat 99.9 g. This is not a serving recommendation."
+            ],
+            "links": [
+              [
+                "CREA: Extra virgin olive oil",
+                "https://alimentinutrizione.it/tabelle-nutrizionali/009210"
+              ],
+              [
+                "CREA: categories, averages and preparation",
+                "https://alimentinutrizione.it/presentazione-dati"
+              ],
+              [
+                "CREA: food search",
+                "https://www.alimentinutrizione.it/tabelle-nutrizionali/ricerca-per-alimento"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "supplements",
+        "title": "Supplements",
+        "intro": "Three separate questions: does it work for this goal, is it safe for this person, and is the product permitted and checked?",
+        "items": [
+          {
+            "title": "How to read evidence",
+            "kind": "Evidence / safety / contamination",
+            "paragraphs": [
+              "The AIS framework considers safety, permission in sport and effectiveness separately. A useful ingredient is not a guarantee for every brand or batch. The framework is designed for high-performance sport; application to an amateur still needs context.",
+              "Unintentional ingestion of prohibited substances is a known risk. No product or batch is certified by this site. Check current anti-doping rules and documented batch testing with qualified support; marketing claims are not verification."
+            ],
+            "links": [
+              [
+                "AIS framework and IOC consensus summary",
+                "https://www.ais.gov.au/nutrition/supplements"
+              ]
+            ]
+          },
+          {
+            "title": "Caffeine, creatine, nitrate and buffering agents",
+            "kind": "Ingredient-level evidence, not a shopping list",
+            "paragraphs": [
+              "The IOC consensus summarized by AIS identifies evidence of benefit for some ingredients, including caffeine, creatine, specific buffering agents and nitrate. Benefit depends on the event and use scenario; these are not interchangeable aids.",
+              "AIS lists caffeine, beta-alanine, nitrate, bicarbonate and creatine in its GroupA resources. This does not mean everyone needs them. Dose, formulation, side effects, interactions and the specific goal must be checked before use. This index does not provide a stack or individual dose."
+            ],
+            "links": [
+              [
+                "AIS: GroupA ingredient resources",
+                "https://www.ais.gov.au/nutrition/supplements/group_a"
+              ],
+              [
+                "IOC consensus summary and safety",
+                "https://www.ais.gov.au/nutrition/supplements"
+              ],
+              [
+                "Wolf Lab caffeine guide",
+                "/en/articles/caffeine-and-performance/"
+              ]
+            ]
+          },
+          {
+            "title": "Sports foods and medical supplements",
+            "kind": "Different purposes",
+            "paragraphs": [
+              "Drinks, gels and protein products can offer convenience when ordinary foods are impractical. They do not automatically improve an already adequate diet. Medical supplements for a suspected deficiency need assessment rather than self-diagnosis.",
+              "Begin with food, nutritional assessment and the training demand. No supplement corrects an unsuitable workload or substitutes medical care."
+            ],
+            "links": [
+              [
+                "AIS: roles, risks and nutritional assessment",
+                "https://www.ais.gov.au/nutrition/supplements"
+              ],
+              [
+                "AIS: medical supplements resources",
+                "https://www.ais.gov.au/nutrition/supplements/group_a"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "books",
+        "title": "Books and method",
+        "intro": "Coaching manuals are separate from research evidence. Author, edition and purpose are explicit.",
+        "items": [
+          {
+            "title": "Daniels’ Running Formula · Jack Daniels",
+            "kind": "Running / 4 th edition",
+            "paragraphs": [
+              "Human Kinetics publisher page verifies title, author and fourth edition. Covers the VDOT system and event-specific training. A coaching framework, not a systematic review. The full book was not consulted for this summary; no page quotations are claimed."
+            ],
+            "links": [
+              [
+                "Publisher",
+                "https://us.humankinetics.com/products/daniels-running-formula-4th-edition"
+              ]
+            ]
+          },
+          {
+            "title": "The Cyclist’s Training Bible · Joe Friel",
+            "kind": "Cycling / 5 th edition,2018",
+            "paragraphs": [
+              "The author’s page verifies this fifth edition, VeloPress,2018. A manual for season planning and individualized training. This verifies one edition, not a claim that it is the latest. Full text not consulted; no page quotations."
+            ],
+            "links": [
+              [
+                "Author",
+                "https://joefrieltraining.com/book/the-cyclists-training-bible-5th-ed/"
+              ]
+            ]
+          },
+          {
+            "title": "Science and Practice of Strength Training",
+            "kind": "Weights / Zatsiorsky, Kraemer, Fry",
+            "paragraphs": [
+              "Third edition, Human Kinetics,2021. Publisher-verified authors and edition. Technical principles and methods, to read alongside current research. Full text not consulted for this collection; no internal quotations or page references."
+            ],
+            "links": [
+              [
+                "Publisher",
+                "https://us.humankinetics.com/products/science-and-practice-of-strength-training-3rd-edition"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "calcIntro": "Educational ranges, not a personal diet. Daily macros, loading and matching carbohydrate intake to training are distinct modes. No data leaves this page.",
+    "calcNotes": [
+      "Daily carbohydrate ranges:3–5,5–7,6–10 and 8–12 g/kg/day according to training demand. Protein reference 1.2–2.0 g/kg/day. These are broad guideline ranges for athletes, not exact requirements inferred from body mass alone.",
+      "Carbohydrate loading:10–12 g/kg per 24 hours during the 36–48 hours before sustained events longer than 90 minutes. Do not add this on top of the daily target or confuse it with grams per hour during racing. Tolerance and total energy need professional planning.",
+      "Carb cycling here means adjusting the daily range to training demand. It is not a fixed high/low-day diet or deliberate glycogen-depletion protocol. The 2021 meta-analysis on periodized carbohydrate restriction found no overall endurance-performance advantage in well-trained athletes; it does not disprove every individualized fueling strategy.",
+      "Optional fat arithmetic uses 4 kcal/g for carbohydrate and protein,9 kcal/g for fat. It is a conventional approximation, not a food-composition database. No resting-metabolic-rate or calorie-needs formula is used. A missing or incompatible energy target does not trigger automatic food restriction."
+    ]
+  }
+}
