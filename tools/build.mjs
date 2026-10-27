@@ -510,3 +510,6 @@ ${urls.map((u) => `<url><loc>${SITE}${u}</loc></url>`).join("\n")}
 }
 
 main();
+
+// Rebuild the checked reference library after the base pages.
+await import("./build-library.mjs");
