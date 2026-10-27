@@ -156,3 +156,16 @@
 
 // One training entry across older generated pages as well as the new hub.
 (function(){var en=document.documentElement.lang==='en',nav=document.querySelector('.site-head .nav');if(!nav)return;var training=en?'/en/training/':'/allenamento/';nav.innerHTML='<a href="'+training+'">'+(en?'Training':'Allenamento')+'</a><a href="'+(en?'/en/races/':'/gare/')+'">'+(en?'Races':'Gare')+'</a><a href="'+(en?'/en/trips/':'/viaggi/')+'">'+(en?'Trips':'Viaggi')+'</a><a href="'+(en?'/en/news/':'/novita/')+'">'+(en?'News':'Novità')+'</a>';var current=nav.querySelector('a[href="'+location.pathname+'"]');if(current)current.setAttribute('aria-current','page');if(location.hash){var el=document.getElementById(location.hash.slice(1));if(el){if(el.tagName==='DETAILS')el.open=true;var d=el.closest('details')||el.querySelector('details');if(d)d.open=true;el.scrollIntoView();}}document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var el=document.getElementById(a.hash.slice(1));if(el){if(el.tagName==='DETAILS')el.open=true;var d=el.closest('details')||el.querySelector('details');if(d)d.open=true;}});})();
+// Remove the three text blocks requested for deletion, including their direct English counterparts.
+(function(){
+  "use strict";
+  var exact=new Set([
+    "Da leggere, poi da provare.",
+    "Read it. Then try it.",
+    "Corsa, bici, nutrizione e allenamento per amatori. Le informazioni non sostituiscono il parere di un medico.",
+    "Running, cycling, nutrition and training for amateurs. This information doesn't replace advice from a doctor.",
+    "Primo nucleo verificato, non tutte le metodiche. Corsa, ciclismo e pesi si possono consultare separatamente. Le schede spiegano le prove e i limiti, non sostituiscono un piano individuale.",
+    "A checked starting collection, not every method. Running, cycling and strength can be explored separately. These summaries explain evidence and limits, not individual prescriptions."
+  ]);
+  document.querySelectorAll("h2, p").forEach(function(el){if(exact.has(el.textContent.trim()))el.remove();});
+})();
