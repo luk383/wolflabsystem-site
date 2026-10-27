@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://wolflabsystem.com/</loc></url>
 <url><loc>https://wolflabsystem.com/articoli/</loc></url>
-<url><loc>https://wolflabsystem.com/strumenti/</loc></url>
+
 <url><loc>https://wolflabsystem.com/gare/</loc></url>
 <url><loc>https://wolflabsystem.com/viaggi/</loc></url>
 <url><loc>https://wolflabsystem.com/contatti/</loc></url>
@@ -50,7 +50,7 @@
 <url><loc>https://wolflabsystem.com/viaggi/sierra-nevada/</loc></url>
 <url><loc>https://wolflabsystem.com/en/</loc></url>
 <url><loc>https://wolflabsystem.com/en/articles/</loc></url>
-<url><loc>https://wolflabsystem.com/en/tools/</loc></url>
+
 <url><loc>https://wolflabsystem.com/en/races/</loc></url>
 <url><loc>https://wolflabsystem.com/en/trips/</loc></url>
 <url><loc>https://wolflabsystem.com/en/contact/</loc></url>
@@ -96,6 +96,6 @@
 <url><loc>https://wolflabsystem.com/en/trips/livigno-altitude/</loc></url>
 <url><loc>https://wolflabsystem.com/en/trips/iten-kenya/</loc></url>
 <url><loc>https://wolflabsystem.com/en/trips/sierra-nevada/</loc></url>
-<url><loc>https://www.wolflabsystem.com/biblioteca/</loc></url>
-<url><loc>https://www.wolflabsystem.com/en/library/</loc></url>
+<url><loc>https://www.wolflabsystem.com/allenamento/</loc></url>
+<url><loc>https://www.wolflabsystem.com/en/training/</loc></url>
 </urlset>
