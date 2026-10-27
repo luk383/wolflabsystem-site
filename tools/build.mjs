@@ -19,6 +19,7 @@ const ROUTES = {
   trips: { it: "/viaggi/", en: "/en/trips/" },
   home: { it: "/", en: "/en/" },
   articles: { it: "/articoli/", en: "/en/articles/" },
+  training: { it: "/allenamento/", en: "/en/training/" },
   tools: { it: "/strumenti/", en: "/en/tools/" },
   contact: { it: "/contatti/", en: "/en/contact/" },
 };
@@ -27,7 +28,7 @@ const articlePath = (lang, slug) => (lang === "it" ? `/articoli/${slug}/` : `/en
 const T = {
   it: {
     tagline: "Allenamento endurance, con le fonti",
-    nav: { articles: "Articoli", races: "Gare", trips: "Viaggi", tools: "Strumenti" },
+    nav: { articles: "Articoli", races: "Gare", trips: "Viaggi", training: "Allenamento" },
     switchTo: "English", switchLang: "en",
     skip: "Vai al contenuto",
     evidence: ["", "Prove limitate", "Prove moderate", "Prove forti"],
@@ -44,7 +45,7 @@ const T = {
   },
   en: {
     tagline: "Endurance training, with sources",
-    nav: { articles: "Articles", races: "Races", trips: "Trips", tools: "Tools" },
+    nav: { articles: "Articles", races: "Races", trips: "Trips", training: "Training" },
     switchTo: "Italiano", switchLang: "it",
     skip: "Skip to content",
     evidence: ["", "Limited evidence", "Moderate evidence", "Strong evidence"],
@@ -102,7 +103,7 @@ function layout({ lang, title, description, current, alt, body, pathname, extraC
     if (hb !== body) { body = hb; extraCss = `<link rel="stylesheet" href="/assets/article.css?v=${ASSET_V.art}">`; }
   }
   const t = T[lang];
-  const navItems = ["articles", "races", "trips", "tools"]
+  const navItems = ["training", "races", "trips"]
     .map((k) => `<a href="${ROUTES[k][lang]}"${current === k ? ' aria-current="page"' : ""}>${t.nav[k]}</a>`)
     .join("");
   const fullTitle = current === "home" ? "Wolf Lab - Run. Ride. One engine." : `${title} — Wolf Lab`;
