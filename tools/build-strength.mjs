@@ -18,7 +18,7 @@ let h = head0.replace(/<title>[^<]*<\/title>/, `<title>${title} - Wolf Lab</titl
   .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${SITE}${rel}">`)
   .replace(/<meta property="og:image"[^>]*data-seo="1">.*?(?=<\/head>)/s, '')
   .replace('</head>', `<link rel="stylesheet" href="/assets/strength/main.css?v=${v('main.css')}">\n</head>`);
-const main = `<main id="main"><header class="w-page-hero"><div class="wrap"><p class="w-kicker">TRAIN · FORZA</p><h1>Wolf Strength Lab</h1><p class="w-lede">Schede di forza che costruisci tu. Etichette e metodi sono riferimenti organizzativi: nessuna prescrizione automatica.</p></div></header><div class="wrap w-body"><div id="strength-root"><noscript>Serve JavaScript per usare il builder.</noscript></div></div></main><script defer src="/assets/strength/main.js?v=${v('main.js')}"></script>`;
+const main = `<main id="main"><header class="w-page-hero"><div class="wrap"><p class="w-kicker">TRAIN · FORZA</p><h1>Wolf Strength Lab</h1></div></header><div class="wrap w-body"><div id="strength-root"><noscript>Serve JavaScript per usare il builder.</noscript></div></div></main><script defer src="/assets/strength/main.js?v=${v('main.js')}"></script>`;
 const out = path.join(root, rel.slice(1), 'index.html');
 fs.mkdirSync(path.dirname(out), { recursive: true });
 fs.writeFileSync(out, h + main + foot);
