@@ -14,6 +14,9 @@ const U = { hub: '/en/picks/', guide: '/en/picks/training-shoes/', cmp: '/en/pic
 const IT = { hub: '/picks/', guide: '/picks/scarpe-allenamento/', cmp: '/picks/confronto-evo-sl-novablast-6-ghost-18/', fuel: '/picks/gel-carboidrati/', partner: '/partner/' };
 const pu = (p) => '/en/picks/' + p.slug + '/';
 const LAB = 'RTINGS lab measurements on one pair (men\'s size): manufacturer figures can differ. Checked on 28/10/2026.';
+const LPR = { 'adidas-adizero-evo-sl': ['€150', 'adidas.it'], 'asics-novablast-6': ['€160', 'asics.com/it'], 'brooks-ghost-18': ['€150', 'brooksrunning.com, Italy store'] };
+const LPN = "List price: price shown by the brand on its own site (Italian store), men's version, checked on 28/10/2026. These are not retailer offers and can change by variant and market.";
+const CYP = { 'garmin-edge-1060': '€799.99', 'wahoo-elemnt-roam-3': '€449.99' };
 const DISC = '<p class="pk-note">Transparency: no commercial links on this page. When affiliate links appear they will be marked next to the link and do not change the assessment.</p>';
 const srcs = (p) => '<ol>' + p.sources.map((s) => `<li><a href="${s.url}" rel="noopener">${esc(s.label)}</a></li>`).join('') + '</ol>';
 const EN = {
@@ -52,7 +55,7 @@ for (const p of P) {
   const s = p.specs, t = EN[p.id];
   const rows = [['Weight', f(s.weightG.value) + ' g'], ['Heel stack', f(s.heelStackMm.value) + ' mm'], ['Drop', f(s.dropMm.value) + ' mm'], ['Energy return, forefoot', f(s.forefootEnergyReturnPct.value) + '%'], ['Energy return, heel', f(s.heelEnergyReturnPct.value) + '%']];
   page(pu(p), itOf(p), nm(p), t.summary, hero('WOLF PICKS · RUNNING · TRAINING SHOES', esc(nm(p)), esc(t.summary)) +
-    `<div class="pk-box"><h3>Measured data</h3><table class="pk-tbl"><tbody>${rows.map((r) => `<tr><th>${r[0]}</th><td>${r[1]}</td></tr>`).join('')}<tr><th>Price</th><td>Varies by market and variant: check the current price at the retailer.</td></tr></tbody></table><p class="pk-note">${LAB}</p></div>` +
+    `<div class="pk-box"><h3>Measured data</h3><table class="pk-tbl"><tbody>${rows.map((r) => `<tr><th>${r[0]}</th><td>${r[1]}</td></tr>`).join('')}<tr><th>List price</th><td>${LPR[p.id][0]} <small>(${LPR[p.id][1]}, checked 28/10/2026)</small></td></tr></tbody></table><p class="pk-note">${LAB} ${LPN}</p></div>` +
     `<div class="pk-two"><div class="pk-box"><h3>Good for</h3>${ul(t.fits)}</div><div class="pk-box"><h3>Less suited to</h3>${ul(t.less)}</div></div>` +
     `<div class="pk-box"><h3>Comparison</h3><p><a href="${U.cmp}">Evo SL, Novablast 6 and Ghost 18 side by side →</a></p></div><div class="pk-box"><h3>Sources</h3><ol>${p.sources.map((x, i) => `<li><a href="${x.url}" rel="noopener">${esc(t.src[i])}</a></li>`).join('')}</ol><p class="pk-note">Last checked: 28 October 2026.</p></div>` + DISC + END);
 }
@@ -63,8 +66,8 @@ page(U.cmp, IT.cmp, 'Adizero Evo SL, Novablast 6, Ghost 18: which to choose', 'T
   `<div class="pk-scroll"><table class="pk-tbl"><thead><tr><th></th>${P.map((p) => `<th>${esc(nm(p))}</th>`).join('')}</tr></thead><tbody>` +
   row('Weight', (p) => f(p.specs.weightG.value) + ' g') + row('Heel stack', (p) => f(p.specs.heelStackMm.value) + ' mm') + row('Drop', (p) => f(p.specs.dropMm.value) + ' mm') +
   row('Forefoot energy return', (p) => f(p.specs.forefootEnergyReturnPct.value) + '%') + row('Heel energy return', (p) => f(p.specs.heelEnergyReturnPct.value) + '%') +
-  row('Cushioning (RTINGS)', (p) => qual[p.id][0]) + row('Stability (RTINGS)', (p) => qual[p.id][1]) + row('Price', () => 'See current price') + '</tbody></table></div>' +
-  `<p class="pk-note">${LAB}</p><div class="pk-box"><h3>Which to choose? (reasoned from the data, not a verdict)</h3><ul>` +
+  row('Cushioning (RTINGS)', (p) => qual[p.id][0]) + row('Stability (RTINGS)', (p) => qual[p.id][1]) + row('List price', (p) => LPR[p.id][0]) + '</tbody></table></div>' +
+  `<p class="pk-note">${LAB} ${LPN}</p><div class="pk-box"><h3>Which to choose? (reasoned from the data, not a verdict)</h3><ul>` +
   '<li><b>Mixed paces, the odd race:</b> Adizero Evo SL. The lightest of the three (220 g) with the highest energy return.</li>' +
   '<li><b>Maximum protection and everyday comfort:</b> Novablast 6. Taller stack and very high cushioning; the forefoot is livelier than the heel.</li>' +
   '<li><b>Stability and easy miles, heel landing:</b> Ghost 18. The heaviest and least responsive, but the most stable according to RTINGS.</li></ul></div>' +
@@ -86,7 +89,7 @@ page(U.fuel, IT.fuel, 'Carb gels: what the labels say', 'Maurten Gel 100, SiS BE
   hero('WOLF PICKS · FUEL · GELS', 'Carb gels: what the labels say.', 'Three gels compared on manufacturer-declared data. This is not a test: we have not tried the products.') +
   `<div class="pk-scroll"><table class="pk-tbl"><thead><tr><th></th>${FU.map((p) => `<th>${esc(nm(p))}</th>`).join('')}</tr></thead><tbody>` +
   frow('Carbs per serving', 'carbsPerServingG') + frow('Ratio', 'ratio') + frow('Sachet weight', 'servingWeightG') + frow('Energy', 'kcal') + frow('Texture', 'texture') + frow('Caffeine version', 'caffeineVersion') +
-  '<tr><th>Price</th>' + FU.map(() => '<td>See current price</td>').join('') + '</tbody></table></div>' +
+  '<tr><th>List price</th>' + FU.map(() => '<td>not verified</td>').join('') + '</tbody></table></div>' +
   '<p class="pk-note">Manufacturer data, read on their pages on 28/10/2026. "Not stated": the page we read does not report it.</p>' +
   '<div class="pk-box"><h3>How to read them</h3><ul><li><b>Carbs per serving:</b> grams matter, not the number of gels. Reaching the same hourly intake takes more sachets with a 25 g gel than with a 40 g one.</li><li><b>Glucose and fructose ratio:</b> the two gels that declare it use 1:0.8. The ratio is about how carbohydrates are absorbed; the article below summarises a study on amounts.</li><li><b>Tolerance:</b> train with it before race day, same brand and same amount.</li></ul><p><a href="/en/articles/marathon-carbohydrates/">Carbohydrates in the marathon: what the studies say →</a></p></div>' +
   `<div class="pk-box"><h3>Sources</h3><ol>${FU.map((p) => `<li><a href="${p.sources[0].url}" rel="noopener">${esc(nm(p))}: ${esc(FEN[p.id].src)}</a></li>`).join('')}</ol><p class="pk-note">Last checked: 28 October 2026.</p></div>` + DISC + END);
@@ -100,8 +103,8 @@ page(U.cyc, IT.cyc, 'GPS bike computers: how to choose', 'What to look at in a G
   '<div class="pk-box"><h3>What to look at</h3><ul><li><b>Navigation:</b> loaded route, turn-by-turn prompts, maps on the device or on the phone.</li><li><b>Battery:</b> each brand states hours under different conditions. Check the condition (screen, navigation, sensors) and leave margin for your longest ride.</li><li><b>Screen:</b> size, sunlight readability, use in rain or with gloves.</li><li><b>Compatibility:</b> sensors, electronic shifting, e-bikes, the apps you already use.</li><li><b>Memory and maps:</b> room for maps and smoothness.</li></ul></div>' +
   `<div class="pk-scroll"><table class="pk-tbl"><thead><tr><th></th>${CY.models.map((m) => `<th>${esc(m.name)}</th>`).join('')}</tr></thead><tbody>` +
   crow('Declared battery', 'battery') + crow('Screen', 'screen') + crow('Memory', 'memory') + crow('Water resistance', 'water') + crow('Weight', 'weight') +
-  '<tr><th>Price</th>' + CY.models.map(() => '<td>See current price</td>').join('') + '</tbody></table></div>' +
-  '<p class="pk-note">Data declared by manufacturers or reported by the reviews listed, read on 28/10/2026. "Not verified": we have not read the figure on a source. Battery hours from different brands are not comparable: conditions and tests differ.</p>' +
+  '<tr><th>List price</th>' + CY.models.map((m) => '<td>' + (CYP[m.id] || 'not verified') + '</td>').join('') + '</tbody></table></div>' +
+  '<p class="pk-note">Data declared by manufacturers or reported by the reviews listed, read on 28/10/2026. "Not verified": we have not read the figure on a source. Battery hours from different brands are not comparable: conditions and tests differ. List price: price shown by the brand on its own site (garmin.com/it-IT, wahoofitness.com IT store), checked 28/10/2026, not retailer offers; "not verified" if not read on an official page.</p>' +
   '<div class="pk-box"><h3>Good to know</h3><ul><li>Edge 1060 came out on 20/10/2026: full reviews with battery tests may not exist yet.</li><li>No winner: choose on the ecosystem, shifting and screen you prefer.</li></ul></div>' +
   `<div class="pk-box"><h3>Sources</h3><ol>${CY.sources.map((x, i) => `<li><a href="${x.url}" rel="noopener">${esc(['Garmin, Edge 1060 specifications', 'Garmin Malaysia, Edge 1060 page', 'Wahoo, ELEMNT ROAM 3 product information', 'Hammerhead, Karoo specifications', 'Cyclist, Karoo 3 review', 'DC Rainmaker, Edge 1060 hands-on (20/10/2026)', 'Cycling Weekly, ELEMNT ROAM 3 review'][i])}</a></li>`).join('')}</ol><p class="pk-note">Last checked: 28 October 2026.</p></div>` + DISC + END);
 page(U.hub, IT.hub, 'WOLF PICKS', 'Selections with sources, level of evidence and check date. Starting with training shoes and carb gels.',
