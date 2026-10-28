@@ -18,8 +18,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&family=Instrument+Serif:ital@0;1&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=9d322d1ebe">
-<script defer src="/assets/site.js?v=eb8cf4ac23"></script><script defer src="/assets/engine.js?v=85ba5fa93d"></script><script defer src="/assets/engine-ui.js?v=a61fe2bc74"></script>
+<link rel="stylesheet" href="/assets/site.css?v=22aab69bfa">
+<script defer src="/assets/site.js?v=eb8cf4ac23"></script><script defer src="/assets/engine.js?v=85ba5fa93d"></script><script defer src="/assets/engine-ui.js?v=1798174072"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -31,7 +31,7 @@
   </div>
 </header>
 <main id="main">
-<header class="w-page-hero"><div class="wrap"><p class="w-kicker">WOLF ENGINE</p><h1>Enter your data.<br>Get your profile.</h1><p class="w-lede">Calculations from published models. Everything stays in your browser: nothing is sent or saved.</p></div></header>
+<header class="w-page-hero"><div class="wrap"><p class="w-kicker">WOLF ENGINE</p><h1>Enter your data.<br>Get your profile.</h1><p class="w-lede">Calculations from published models. Everything stays in your browser: nothing is sent. Something is saved only if you press Save, and only on this device.</p></div></header>
 <div class="wrap w-engine">
 <form id="engine-form" class="eng-form" novalidate>
   <fieldset><legend>Athlete</legend><div class="fields"><div class="field"><label for="f-age">Age</label><input id="f-age" name="age" inputmode="decimal" placeholder="40" autocomplete="off"></div><div class="field"><label for="f-weight">Weight (kg)</label><input id="f-weight" name="weight" inputmode="decimal" placeholder="70" autocomplete="off"></div></div></fieldset>
@@ -42,6 +42,12 @@
     <div class="field"><label for="f-target">Goal time (optional)</label><input id="f-target" name="target" inputmode="numeric" placeholder="3:15:00" autocomplete="off"></div><div class="field"><label for="f-duration">Duration for fuel (optional)</label><input id="f-duration" name="duration" inputmode="numeric" placeholder="3:15:00" autocomplete="off"></div><div class="field"><label for="f-sweat">Sweat rate, L/h (optional)</label><input id="f-sweat" name="sweat" inputmode="decimal" placeholder="1.0" autocomplete="off"></div></div>
     <div class="eng-checks" role="group" aria-label="Sports"><label><input type="checkbox" name="sport-run" checked> Run</label><label><input type="checkbox" name="sport-bike" checked> Ride</label><label><input type="checkbox" name="sport-strength" checked> Strength</label></div></fieldset>
 </form>
+<div class="eng-my" id="my-wolf" role="group" aria-label="My Wolf">
+  <p class="eng-my-t">MY WOLF</p>
+  <p class="dim">Save these values only on this device, in your browser. They are not sent to Wolf Lab or synced to other devices. You can delete them any time.</p>
+  <div class="eng-my-b"><button type="button" id="my-save">Save on this device</button><button type="button" id="my-del">Delete saved data</button></div>
+  <p class="dim" id="my-status" role="status"></p>
+</div>
 <div id="engine-out" class="eng-out" aria-live="polite"></div>
 <p class="w-foot dim">Sex and height are not asked: none of the formulas used here needs them. Equivalent times are not race predictions. Not medical advice. Values are model estimates: no result is a lab measurement. How they work and where they come from: <a href="/en/methodology">Methodology</a>.</p>
 </div>

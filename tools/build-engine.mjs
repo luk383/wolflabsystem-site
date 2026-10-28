@@ -230,7 +230,7 @@ function engine(lang) {
   const f = (name, label, ph, extra = "") => `<div class="field"><label for="f-${name}">${label}</label><input id="f-${name}" name="${name}" ${extra} placeholder="${ph}" autocomplete="off"></div>`;
   const num = (n, l, ph) => f(n, l, ph, 'inputmode="decimal"');
   const tm = (n, l, ph) => f(n, l, ph, 'inputmode="numeric"');
-  const body = `${hero("WOLF ENGINE", T("Inserisci i tuoi dati.<br>Ricevi il tuo profilo.", "Enter your data.<br>Get your profile."), T("Calcoli da modelli pubblicati. Tutto resta nel tuo browser: nessun dato viene inviato o salvato.", "Calculations from published models. Everything stays in your browser: nothing is sent or saved."))}
+  const body = `${hero("WOLF ENGINE", T("Inserisci i tuoi dati.<br>Ricevi il tuo profilo.", "Enter your data.<br>Get your profile."), T("Calcoli da modelli pubblicati. Tutto resta nel tuo browser: nessun dato viene inviato. Si salva qualcosa solo se premi Salva, e solo su questo dispositivo.", "Calculations from published models. Everything stays in your browser: nothing is sent. Something is saved only if you press Save, and only on this device."))}
 <div class="wrap w-engine">
 <form id="engine-form" class="eng-form" novalidate>
   <fieldset><legend>${T("Atleta", "Athlete")}</legend><div class="fields">${num("age", T("Età", "Age"), "40")}${num("weight", T("Peso (kg)", "Weight (kg)"), "70")}</div></fieldset>
@@ -241,6 +241,12 @@ function engine(lang) {
     ${tm("target", T("Tempo obiettivo (opzionale)", "Goal time (optional)"), "3:15:00")}${tm("duration", T("Durata per il fuel (opzionale)", "Duration for fuel (optional)"), "3:15:00")}${num("sweat", T("Sudorazione, L/h (opzionale)", "Sweat rate, L/h (optional)"), "1.0")}</div>
     <div class="eng-checks" role="group" aria-label="${T("Sport praticati", "Sports")}"><label><input type="checkbox" name="sport-run" checked> ${T("Corsa", "Run")}</label><label><input type="checkbox" name="sport-bike" checked> ${T("Bici", "Ride")}</label><label><input type="checkbox" name="sport-strength" checked> ${T("Forza", "Strength")}</label></div></fieldset>
 </form>
+<div class="eng-my" id="my-wolf" role="group" aria-label="My Wolf">
+  <p class="eng-my-t">MY WOLF</p>
+  <p class="dim">${T("Salva questi dati solo su questo dispositivo, nel browser. Non vengono inviati a Wolf Lab né sincronizzati con altri dispositivi. Puoi cancellarli quando vuoi.", "Save these values only on this device, in your browser. They are not sent to Wolf Lab or synced to other devices. You can delete them any time.")}</p>
+  <div class="eng-my-b"><button type="button" id="my-save">${T("Salva su questo dispositivo", "Save on this device")}</button><button type="button" id="my-del">${T("Cancella dati salvati", "Delete saved data")}</button></div>
+  <p class="dim" id="my-status" role="status"></p>
+</div>
 <div id="engine-out" class="eng-out" aria-live="polite"></div>
 <p class="w-foot dim">${T("Sesso e altezza non sono richiesti: nessuna formula usata qui ne ha bisogno. I tempi equivalenti non sono previsioni di gara. Non è un consiglio medico. I valori sono stime da modelli: nessun risultato è una misura di laboratorio. Come funzionano e da dove vengono: ", "Sex and height are not asked: none of the formulas used here needs them. Equivalent times are not race predictions. Not medical advice. Values are model estimates: no result is a lab measurement. How they work and where they come from: ")}<a href="${R.method[lang]}">${T("Metodologia", "Methodology")}</a>.</p>
 </div>`;

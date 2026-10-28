@@ -134,5 +134,28 @@
   form.addEventListener("input", render);
   form.addEventListener("change", render);
   form.addEventListener("submit", function (e) { e.preventDefault(); render(); });
+  // My Wolf: salvataggio solo locale, solo su azione esplicita.
+  var KEY = "wolf-my-v1", st = document.getElementById("my-status");
+  var say = function (t) { if (st) st.textContent = t; };
+  function snapshot() {
+    var d = {};
+    Array.prototype.forEach.call(form.elements, function (e) { if (!e.name) return; d[e.name] = e.type === "checkbox" ? e.checked : e.value; });
+    return d;
+  }
+  function restore(d) {
+    Object.keys(d).forEach(function (k) { var e = form.elements[k]; if (!e) return; if (e.type === "checkbox") e.checked = !!d[k]; else e.value = d[k]; });
+  }
+  try {
+    var saved = localStorage.getItem(KEY);
+    if (saved) { var o = JSON.parse(saved); restore(o.v || {}); say(L("Dati caricati da questo dispositivo (salvati il ", "Loaded from this device (saved on ") + new Date(o.t).toLocaleDateString(EN ? "en-GB" : "it-IT") + ").");}
+  } catch (e) {}
+  var sv = document.getElementById("my-save"), dl = document.getElementById("my-del");
+  if (sv) sv.addEventListener("click", function () {
+    try { localStorage.setItem(KEY, JSON.stringify({ t: Date.now(), v: snapshot() })); say(L("Salvato solo su questo dispositivo.", "Saved on this device only.")); }
+    catch (e) { say(L("Il browser non permette il salvataggio.", "Your browser does not allow saving.")); }
+  });
+  if (dl) dl.addEventListener("click", function () {
+    try { localStorage.removeItem(KEY); say(L("Dati salvati cancellati.", "Saved data deleted.")); } catch (e) { say(L("Impossibile cancellare.", "Could not delete.")); }
+  });
   render();
 })();

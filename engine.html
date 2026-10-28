@@ -18,8 +18,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&family=Instrument+Serif:ital@0;1&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=9d322d1ebe">
-<script defer src="/assets/site.js?v=eb8cf4ac23"></script><script defer src="/assets/engine.js?v=85ba5fa93d"></script><script defer src="/assets/engine-ui.js?v=a61fe2bc74"></script>
+<link rel="stylesheet" href="/assets/site.css?v=22aab69bfa">
+<script defer src="/assets/site.js?v=eb8cf4ac23"></script><script defer src="/assets/engine.js?v=85ba5fa93d"></script><script defer src="/assets/engine-ui.js?v=1798174072"></script>
 </head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
@@ -31,7 +31,7 @@
   </div>
 </header>
 <main id="main">
-<header class="w-page-hero"><div class="wrap"><p class="w-kicker">WOLF ENGINE</p><h1>Inserisci i tuoi dati.<br>Ricevi il tuo profilo.</h1><p class="w-lede">Calcoli da modelli pubblicati. Tutto resta nel tuo browser: nessun dato viene inviato o salvato.</p></div></header>
+<header class="w-page-hero"><div class="wrap"><p class="w-kicker">WOLF ENGINE</p><h1>Inserisci i tuoi dati.<br>Ricevi il tuo profilo.</h1><p class="w-lede">Calcoli da modelli pubblicati. Tutto resta nel tuo browser: nessun dato viene inviato. Si salva qualcosa solo se premi Salva, e solo su questo dispositivo.</p></div></header>
 <div class="wrap w-engine">
 <form id="engine-form" class="eng-form" novalidate>
   <fieldset><legend>Atleta</legend><div class="fields"><div class="field"><label for="f-age">Età</label><input id="f-age" name="age" inputmode="decimal" placeholder="40" autocomplete="off"></div><div class="field"><label for="f-weight">Peso (kg)</label><input id="f-weight" name="weight" inputmode="decimal" placeholder="70" autocomplete="off"></div></div></fieldset>
@@ -42,6 +42,12 @@
     <div class="field"><label for="f-target">Tempo obiettivo (opzionale)</label><input id="f-target" name="target" inputmode="numeric" placeholder="3:15:00" autocomplete="off"></div><div class="field"><label for="f-duration">Durata per il fuel (opzionale)</label><input id="f-duration" name="duration" inputmode="numeric" placeholder="3:15:00" autocomplete="off"></div><div class="field"><label for="f-sweat">Sudorazione, L/h (opzionale)</label><input id="f-sweat" name="sweat" inputmode="decimal" placeholder="1.0" autocomplete="off"></div></div>
     <div class="eng-checks" role="group" aria-label="Sport praticati"><label><input type="checkbox" name="sport-run" checked> Corsa</label><label><input type="checkbox" name="sport-bike" checked> Bici</label><label><input type="checkbox" name="sport-strength" checked> Forza</label></div></fieldset>
 </form>
+<div class="eng-my" id="my-wolf" role="group" aria-label="My Wolf">
+  <p class="eng-my-t">MY WOLF</p>
+  <p class="dim">Salva questi dati solo su questo dispositivo, nel browser. Non vengono inviati a Wolf Lab né sincronizzati con altri dispositivi. Puoi cancellarli quando vuoi.</p>
+  <div class="eng-my-b"><button type="button" id="my-save">Salva su questo dispositivo</button><button type="button" id="my-del">Cancella dati salvati</button></div>
+  <p class="dim" id="my-status" role="status"></p>
+</div>
 <div id="engine-out" class="eng-out" aria-live="polite"></div>
 <p class="w-foot dim">Sesso e altezza non sono richiesti: nessuna formula usata qui ne ha bisogno. I tempi equivalenti non sono previsioni di gara. Non è un consiglio medico. I valori sono stime da modelli: nessun risultato è una misura di laboratorio. Come funzionano e da dove vengono: <a href="/metodologia">Metodologia</a>.</p>
 </div>
