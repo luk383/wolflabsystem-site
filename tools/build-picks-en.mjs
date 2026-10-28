@@ -48,7 +48,7 @@ function page(rel, itRel, title, desc, main) {
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, h + main + foot);
 }
-const hero = (kick, h1, lede) => `<main id="main"><header class="w-page-hero"><div class="wrap"><p class="w-kicker">${kick}</p><h1>${h1}</h1><p class="w-lede">${lede}</p></div></header><div class="wrap w-body">`;
+const hero = (kick, h1, lede) => `<main id="main"><header class="w-page-hero"><div class="wrap"><p class="w-kicker">${kick}</p><h1>${h1}</h1>${lede ? `<p class="w-lede">${lede}</p>` : ''}</div></header><div class="wrap w-body">`;
 const END = '</div></main>';
 const itOf = (p) => '/picks/' + p.slug + '/';
 for (const p of P) {
@@ -108,7 +108,7 @@ page(U.cyc, IT.cyc, 'GPS bike computers: how to choose', 'What to look at in a G
   '<div class="pk-box"><h3>Good to know</h3><ul><li>Edge 1060 came out on 20/10/2026: full reviews with battery tests may not exist yet.</li><li>No winner: choose on the ecosystem, shifting and screen you prefer.</li></ul></div>' +
   `<div class="pk-box"><h3>Sources</h3><ol>${CY.sources.map((x, i) => `<li><a href="${x.url}" rel="noopener">${esc(['Garmin, Edge 1060 specifications', 'Garmin Malaysia, Edge 1060 page', 'Wahoo, ELEMNT ROAM 3 product information', 'Hammerhead, Karoo specifications', 'Cyclist, Karoo 3 review', 'DC Rainmaker, Edge 1060 hands-on (20/10/2026)', 'Cycling Weekly, ELEMNT ROAM 3 review'][i])}</a></li>`).join('')}</ol><p class="pk-note">Last checked: 28 October 2026.</p></div>` + DISC + END);
 page(U.hub, IT.hub, 'WOLF PICKS', 'Selections with sources, level of evidence and check date. Starting with training shoes and carb gels.',
-  hero('WOLF PICKS', 'What to choose, and why.', 'Selections with sources, level of evidence and check date. Starting with training shoes, carb gels and bike computers.') +
+  hero('WOLF PICKS', 'What to choose, and why.', '') +
   `<div class="pk-grid"><div class="pk-card"><h3>Guide</h3><ul><li><a href="${U.guide}">Training shoes: how to choose</a><small>Buying guide</small></li></ul></div><div class="pk-card"><h3>Comparison</h3><ul><li><a href="${U.cmp}">Evo SL, Novablast 6, Ghost 18</a><small>Independent lab measurements</small></li><li><a href="${U.fuel}">Carb gels</a><small>Manufacturer-declared data</small></li><li><a href="${U.cyc}">GPS bike computers</a><small>Declared specs, no ranking</small></li></ul></div><div class="pk-card"><h3>Shoe pages</h3><ul>${P.map((p) => `<li><a href="${pu(p)}">${esc(nm(p))}</a><small>SELECTED · checked 28/10/2026</small></li>`).join('')}</ul></div></div>` + DISC +
   '<p class="w-foot"><a class="w-cta" href="/en/methodology">How we evaluate <span aria-hidden="true">→</span></a></p>' + END);
 const PI = [['Audience', 'Endurance, running, cycling, swimming, triathlon and strength athletes. No audience figures until they are measured.'], ['Research', 'Source-based analysis: studies, rules, official product pages.'], ['Testing', 'Field tests planned: results appear only when they exist.'], ['Content', 'Articles, comparisons and buying guides.'], ['Performance', 'Tools and calculators in Wolf Engine.'], ['Commerce', 'Declared affiliate links.']];

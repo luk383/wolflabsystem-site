@@ -90,7 +90,7 @@ function articles(lang) {
 const HUBS = {
   run: {
     kicker: ["RUN", "RUN"], title: ["Correre meglio, con i numeri giusti.", "Run better, with the right numbers."],
-    lede: ["Ritmi, soglia, gare e scarpe. Parti dai tuoi tempi: il Wolf Engine li trasforma in ritmi di allenamento.", "Paces, threshold, races and shoes. Start from your times: Wolf Engine turns them into training paces."],
+    noLede: true, lede: ["Ritmi, soglia, gare e scarpe. Parti dai tuoi tempi: il Wolf Engine li trasforma in ritmi di allenamento.", "Paces, threshold, races and shoes. Start from your times: Wolf Engine turns them into training paces."],
     groups: [
       [["Ritmi e VDOT", "Dai tuoi tempi di gara ai ritmi di allenamento.", "engine#run"], ["Passaggi di gara", "Ritmo costante o negative split, ogni 5 km.", "engine#race"], ["Metodi di allenamento", "Piramidale, polarizzato, modello norvegese.", "training#allenamento"], ["Come scegliere: piramidale o polarizzato", "Cosa dicono gli studi e cosa fare.", "decide"]],
       [["Scarpe con piastra in carbonio", "Cosa dicono gli studi.", ["/articoli/scarpe-con-piastra-carbonio/", "/en/articles/carbon-plate-running-shoes/"]], ["Scarico pre-gara", "Come ridurre il carico prima della gara.", ["/articoli/scarico-pre-gara/", "/en/articles/race-taper/"]], ["Maratone e mezze", "Date, quote e logistica.", "races"]],
@@ -98,7 +98,7 @@ const HUBS = {
   },
   ride: {
     kicker: ["RIDE", "RIDE"], title: ["Pedalare con la potenza come linguaggio.", "Ride with power as the language."],
-    lede: ["FTP, zone e granfondo. Inserisci la FTP nel Wolf Engine e ottieni zone e potenza endurance.", "FTP, zones and gran fondos. Enter your FTP in Wolf Engine for zones and endurance power."],
+    noLede: true, lede: ["FTP, zone e granfondo. Inserisci la FTP nel Wolf Engine e ottieni zone e potenza endurance.", "FTP, zones and gran fondos. Enter your FTP in Wolf Engine for zones and endurance power."],
     groups: [
       [["FTP e zone di potenza", "Zone di Coggan calcolate dalla tua FTP.", "engine#ride"], ["FTP: come si misura", "Test, limiti e uso pratico.", ["/articoli/ftp-e-zone-di-potenza/", "/en/articles/ftp-and-power-zones/"]], ["Quanta intensità serve", "Distribuzione dell'intensità in pratica.", ["/articoli/quanta-intensita-serve/", "/en/articles/how-much-intensity/"]]],
       [["Granfondo", "Nove Colli, Maratona dles Dolomites, Étape du Tour.", "races"], ["Ciclocomputer e bici", "Novità e annunci datati.", "news"], ["Mete per la bici", "Maiorca, Calpe, Tenerife.", "trips"]],
@@ -106,7 +106,6 @@ const HUBS = {
   },
   swim: {
     kicker: ["SWIM", "SWIM"], title: ["Nuoto: metodi, tecnica, piscina, acque libere e gare.", "Swimming: methods, technique, pool, open water and races."],
-    keepLede: true,
     lede: ["Guide con fonti e limiti dichiarati, più un calcolatore di velocità critica con controlli sui dati. Zone di nuoto non ancora disponibili.", "Guides with sources and declared limits, plus a critical swim speed calculator with data checks. Swim zones are not available yet."],
     groups: [],
     sections: [
@@ -150,7 +149,7 @@ const HUBS = {
   },
   train: {
     kicker: ["TRAIN", "TRAIN"], title: ["Forza, ibrido, prestazione e recupero.", "Strength, hybrid, performance and recovery."],
-    lede: ["Dove corsa e bici si incontrano con la forza. Qui trovi anche i concetti di prestazione e di recupero.", "Where running and cycling meet strength. Performance and recovery concepts live here too."],
+    noLede: true, lede: ["Dove corsa e bici si incontrano con la forza. Qui trovi anche i concetti di prestazione e di recupero.", "Where running and cycling meet strength. Performance and recovery concepts live here too."],
     groups: [
       [["Wolf Strength Lab", "Costruisci schede di forza, cerca esercizi, registra gli allenamenti. Dati solo nel tuo browser ", ["/train/strength/", "/en/train/strength/"]], ["Libreria dei metodi", "Corsa, ciclismo e pesi: cosa dicono le prove.", "training#allenamento"], ["Forza per l'endurance", "Quanta, quando, con quali limiti.", ["/articoli/forza-per-endurance/", "/en/articles/strength-for-endurance/"]], ["Bici per la maratona", "Cosa trasferisce e cosa no.", ["/articoli/bici-per-la-maratona/", "/en/articles/cycling-for-the-marathon/"]], ["Settimana ibrida", "Ore, giorni duri e facili dal Wolf Engine.", "engine#hybrid"], ["Mobilità", "", null]],
     ],
@@ -172,7 +171,7 @@ const HUBS = {
   },
   fuel: {
     kicker: ["FUEL", "FUEL"], title: ["Carboidrati, fluidi e strategia di gara.", "Carbohydrate, fluids and race strategy."],
-    lede: ["Dal pasto pre-gara ai grammi all'ora. I numeri vengono da linee guida citate, non da mode.", "From the pre-race meal to grams per hour. Numbers come from cited guidelines, not fads."],
+    noLede: true, lede: ["Dal pasto pre-gara ai grammi all'ora. I numeri vengono da linee guida citate, non da mode.", "From the pre-race meal to grams per hour. Numbers come from cited guidelines, not fads."],
     groups: [
       [["Carboidrati all'ora", "Il Wolf Engine li calcola dalla durata.", "engine#fuel"], ["Calcolatore carboidrati in gara", "Gel, grammi e tempi di assunzione.", "training#carboidrati"], ["Carboidrati in maratona", "Linee guida e limiti.", ["/articoli/carboidrati-maratona/", "/en/articles/marathon-carbohydrates/"]], ["Caffeina", "Dosi, tempi e quando evitarla.", ["/articoli/caffeina-e-prestazione/", "/en/articles/caffeine-and-performance/"]]],
       [["Nutrizione", "Fonti di carboidrati, proteine e grassi.", "training#nutrizione"], ["Integratori", "Come leggere le evidenze.", "training#integratori"], ["Idratazione ed elettroliti", "Punto di partenza e sudore personale.", "engine#fuel"]],
@@ -187,7 +186,6 @@ const HUBS = {
   },
   gear: {
     kicker: ["GEAR", "GEAR"], title: ["Dal comunicato alla decisione.", "From press release to decision."],
-    keepLede: true,
     lede: ["Quattro livelli, dichiarati: NEWS, ANALYSIS, TEST, VERDICT. Oggi pubblichiamo solo NEWS: nessun test fatto da noi.", "Four declared levels: NEWS, ANALYSIS, TEST, VERDICT. Today we publish NEWS only: no tests run by us."],
     groups: [
       [["Novità", "Orologi, ciclocomputer, scarpe, bici: annunci datati con fonti.", "news"], ["Scarpe con piastra in carbonio", "Cosa dicono gli studi.", ["/articoli/scarpe-con-piastra-carbonio/", "/en/articles/carbon-plate-running-shoes/"]], ["Come valutiamo", "Livelli di prova e regole del Wolf Score.", "method"]],
@@ -214,7 +212,7 @@ function itemHtml(lang, [t, line, tgt], i) {
 
 function hub(lang, key) {
   const h = HUBS[key], it = !lang;
-  let body = hero(h.kicker[0], h.title[lang], h.keepLede ? h.lede[lang] : "");
+  let body = hero(h.kicker[0], h.title[lang], h.noLede ? "" : h.lede[lang]);
   body += `<div class="wrap w-body">`;
   if (h.levels) {
     const lv = [["NEWS", it ? "Cosa è appena uscito" : "What just came out", 5], ["ANALYSIS", it ? "Cosa dicono davvero i dati" : "What the data really say", 0], ["TEST", it ? "Lo abbiamo provato" : "We tried it", 0], ["VERDICT", it ? "Lo comprerei?" : "Would I buy it?", 0]];

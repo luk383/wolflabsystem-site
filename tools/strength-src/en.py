@@ -173,7 +173,7 @@ EN = {
 "Ispirata Starr, ricostruzione Ward 2015":"Inspired by Starr, Ward 2015 reconstruction",
 "Sostituire la bozza aperta?":"Replace the open draft?",
 "Eliminare questa scheda? Lo storico resta.":"Delete this routine? Your history stays.",
-"Dati locali a questo browser/account. Non sincronizzati con Android o altri dispositivi.":"Data is local to this browser/account. Not synced with Android or other devices.",
+"Dati locali a questo browser e a questa versione linguistica (IT o EN). Non sincronizzati con altri dispositivi.":"Data is local to this browser and to this language version (IT or EN). Not synced with other devices.",
 "Prova senza salvataggio: ricaricando potresti perdere tutto.":"No saving: reloading may lose everything.",
 "Da definire":"To be defined",
 "Forza massimale":"Maximal strength",

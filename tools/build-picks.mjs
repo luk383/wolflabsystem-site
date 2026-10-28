@@ -31,7 +31,7 @@ function page(rel, title, desc, main) {
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, h + main + foot);
 }
-const hero = (kick, h1, lede) => `<main id="main"><header class="w-page-hero"><div class="wrap"><p class="w-kicker">${kick}</p><h1>${h1}</h1><p class="w-lede">${lede}</p></div></header><div class="wrap w-body">`;
+const hero = (kick, h1, lede) => `<main id="main"><header class="w-page-hero"><div class="wrap"><p class="w-kicker">${kick}</p><h1>${h1}</h1>${lede ? `<p class="w-lede">${lede}</p>` : ''}</div></header><div class="wrap w-body">`;
 const END = '</div></main>';
 // schede
 for (const p of P) {
@@ -95,7 +95,7 @@ page(CURL, 'Ciclocomputer GPS: come scegliere', 'Cosa guardare in un ciclocomput
   `<div class="pk-box"><h3>Fonti</h3><ol>${CY.sources.map((x) => `<li><a href="${x.url}" rel="noopener">${esc(x.label)}</a></li>`).join('')}</ol><p class="pk-note">Ultima verifica: 28 ottobre 2026.</p></div>` + DISC + END);
 // hub
 page(URL.hub, 'WOLF PICKS', 'Selezioni con fonti, livello di prova e data di verifica. Si parte dalle scarpe da allenamento.',
-  hero('WOLF PICKS', 'Cosa scegliere, e perché.', 'Selezioni con fonti, livello di prova e data di verifica. Si parte da scarpe da allenamento, gel di carboidrati e ciclocomputer.') +
+  hero('WOLF PICKS', 'Cosa scegliere, e perché.', '') +
   `<div class="pk-grid"><div class="pk-card"><h3>Guida</h3><ul><li><a href="${URL.guide}">Scarpe da allenamento: come scegliere</a><small>Guida all'acquisto</small></li></ul></div><div class="pk-card"><h3>Confronto</h3><ul><li><a href="${URL.cmp}">Evo SL, Novablast 6, Ghost 18</a><small>Misure di laboratorio indipendenti</small></li><li><a href="${FURL}">Gel di carboidrati</a><small>Dati dichiarati dai produttori</small></li><li><a href="${CURL}">Ciclocomputer GPS</a><small>Specifiche dichiarate, senza classifica</small></li></ul></div><div class="pk-card"><h3>Schede</h3><ul>${P.map((p) => `<li><a href="${pu(p)}">${esc(p.brand)} ${esc(p.model)}</a><small>SELECTED · verificato il 28/10/2026</small></li>`).join('')}</ul></div></div>` + DISC +
   '<p class="w-foot"><a class="w-cta" href="/metodologia">Come valutiamo <span aria-hidden="true">→</span></a></p>' + END);
 // partner
