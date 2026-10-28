@@ -213,8 +213,8 @@
   ],
   "stars": 2,
   "how": [
-   "Revisione documentale: 3 revisioni sistematiche o meta-analisi e uno studio incrociato, in gran parte letti solo negli abstract.",
-   "Document review: 3 systematic reviews or meta-analyses and one crossover study, mostly read as abstracts only."
+   "Revisione documentale: 3 revisioni sistematiche o meta-analisi e due studi sperimentali, in gran parte letti solo negli abstract.",
+   "Document review: 3 systematic reviews or meta-analyses and two experimental studies, mostly read as abstracts only."
   ],
   "lim": [
    "Nuotatori agonisti, spesso giovani; studi osservazionali o brevi; testo completo non letto per la maggior parte. Non vale per amatori e triatleti.",
@@ -346,25 +346,48 @@
  },
  "nuoto-piscina-acque-libere|swim-pool-vs-open-water": {
   "lv": [
-   "1 studio, abstract e parti del testo",
-   "1 study, abstract and parts of the text"
+   "2 studi, abstract e parti del testo",
+   "2 studies, abstract and parts of the text"
   ],
   "stars": 2,
   "how": [
-   "Revisione documentale di un singolo studio sperimentale su 14 triatleti élite.",
-   "Document review of a single experimental study of 14 elite triathletes."
+   "Revisione documentale di due studi sperimentali (14 triatleti élite; 15 nuotatori master).",
+   "Document review of two experimental studies (14 elite triathletes; 15 master swimmers)."
   ],
   "lim": [
-   "14 atleti élite, una prova da 1500 m, nessun amatore; nessun obiettivo o ritmo applicabile.",
-   "14 elite athletes, one 1500 m test, no amateurs; no applicable target or pace."
+   "Atleti élite e master maschi allenati, una prova ciascuno; risultati sul carico non coincidenti; nessun obiettivo o ritmo applicabile.",
+   "Elite athletes and trained male masters, one test each; load results not matching; no applicable target or pace."
   ],
   "why": [
-   "Un solo studio su un gruppo diverso dal tuo: Molto limitata.",
-   "A single study on a different group: Very limited."
+   "Due studi piccoli su gruppi diversi dal tuo: Molto limitata.",
+   "Two small studies on groups different from yours: Very limited."
   ],
   "scope": [
    "differenze tra piscina e acque libere in triatleti élite",
    "pool vs open-water differences in elite triathletes"
+  ]
+ },
+ "nuoto-orientamento-sighting|swim-open-water-sighting": {
+  "lv": [
+   "indicazioni di federazione e 1 studio, abstract",
+   "governing-body guidance and 1 study, abstract"
+  ],
+  "stars": 1,
+  "how": [
+   "Revisione documentale di tre pagine di Swim England e di uno studio sulla resistenza passiva.",
+   "Document review of three Swim England pages and one passive-drag study."
+  ],
+  "lim": [
+   "Indicazioni non sperimentali; lo studio è su scivolamento passivo in piscina, 10 nuotatori; nessuno studio su amatori o su tempi di gara.",
+   "Non-experimental guidance; the study covers passive gliding in the pool, 10 swimmers; no study on amateurs or race times."
+  ],
+  "why": [
+   "Indicazioni di federazione e un test indiretto: Molto limitata.",
+   "Governing-body guidance and an indirect test: Very limited."
+  ],
+  "scope": [
+   "esercizi di orientamento e posizione della testa, indicazioni generali",
+   "sighting drills and head position, general guidance"
   ]
  }
 }

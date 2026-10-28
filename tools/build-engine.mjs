@@ -124,6 +124,7 @@ const HUBS = {
       ], ["Pool", "Pool"]],
       ["acque-libere", ["Acque libere", "Open water"], [
         ["Sicurezza e acqua fredda", "Raccomandazioni RNLI, shock da acqua fredda, attrezzatura.", ["/articoli/nuoto-acque-libere-sicurezza/#s2", "/en/articles/open-water-swimming-safety/#s2"]],
+        ["Orientamento (sighting)", "Come guardare avanti in acque libere: indicazioni Swim England e uno studio sulla resistenza.", ["/articoli/nuoto-orientamento-sighting/", "/en/articles/swim-open-water-sighting/"]],
         ["Muta", "Cosa riporta una revisione sistematica e dove vale il regolamento dell'evento.", ["/articoli/nuoto-acque-libere-sicurezza/#s5", "/en/articles/open-water-swimming-safety/#s5"]],
       ], ["Open water", "Open water"]],
       ["gare", ["Gare e formati", "Races and formats"], [
