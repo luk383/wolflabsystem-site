@@ -232,7 +232,7 @@ function home(lang) {
     <p class="w-strip">Training · Data · Nutrition · Recovery · Equipment · Racing</p>
     <a class="w-btn" href="${R.engine[lang]}">${it ? "COSTRUISCI IL TUO PROFILO" : "BUILD YOUR ATHLETE PROFILE"} <span aria-hidden="true">→</span></a>
   </div>
-  <div class="sport-photo w-hero-img" role="img" aria-label="${it ? "Immagine generata: nuotatore, ciclista e runner al tramonto in una scena scura" : "Generated image: swimmer, cyclist and runner at sunset in a dark scene"}"><img class="w-hero-logo" src="/assets/brand/logo-on-dark.svg" alt="" width="300" height="71" decoding="async"><small class="w-hero-cap">${it ? "Immagine generata" : "Generated image"}</small></div>
+  <div class="sport-photo w-hero-img" role="img" aria-label="${it ? "Nuotatore, ciclista e runner al tramonto in una scena scura" : "Swimmer, cyclist and runner at sunset in a dark scene"}"><img class="w-hero-logo" src="/assets/brand/logo-on-dark.svg" alt="" width="300" height="71" decoding="async"></div>
 </div></section>
 <section class="w-band"><div class="wrap">
   <p class="w-kicker">THE WOLF ENGINE</p>
@@ -337,7 +337,7 @@ function method(lang) {
 <h2>Wolf Engine</h2>
 <p>${T("Il Wolf Engine usa formule pubblicate (VDOT di Daniels e Gilbert, zone di Coggan, zone cardio di Friel, linee guida ACSM). Il calcolo è dentro il browser. Le regole per la settimana ibrida sono nostre, dichiarate come regole pratiche e non come risultati di studi.", "Wolf Engine uses published formulas (Daniels and Gilbert VDOT, Coggan zones, Friel heart-rate zones, ACSM guidelines). Calculation runs inside your browser. The hybrid-week rules are ours, declared as rules of thumb, not study results.")}</p>
 <h2>${T("Uso dell'intelligenza artificiale", "Use of artificial intelligence")}</h2>
-<p>${T("Testi e ricerca sono preparati con aiuto dell'intelligenza artificiale e poi verificati sulle fonti. L'immagine di apertura della home è fornita dal responsabile del sito: luogo, autore e licenza non sono indicati. Nessuna foto o test è presentato come reale se non lo è.", "Text and research are prepared with AI assistance and then checked against sources. The opening image on the home page is supplied by the site owner: place, author and licence are not stated. No photo or test is presented as real unless it is.")}</p>
+<p>${T("Testi e ricerca sono preparati con aiuto dell'intelligenza artificiale e poi verificati sulle fonti. Nessun test è presentato come reale se non lo è.", "Text and research are prepared with AI assistance and then checked against sources. No test is presented as real unless it is.")}</p>
 <h2>${T("Fonti dei modelli", "Model sources")}</h2>
 <ul class="w-src">${src.map(([t, u]) => `<li><a href="${u}" rel="noopener">${t}</a></li>`).join("")}</ul>
 </div>`;
