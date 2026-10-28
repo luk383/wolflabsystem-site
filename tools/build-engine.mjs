@@ -185,7 +185,7 @@ function hub(lang, key) {
 function home(lang) {
   const it = !lang, A = articles(lang);
   const feat = A.find((a) => a.id === "bici-per-la-maratona") || A[0], rest = A.filter((a) => a !== feat).slice(0, 2);
-  const nR = RACES.races.length, nT = TRIPS.trips.length, nA = A.length;
+  const nR = RACES.races.length, nT = TRIPS.trips.length, nA = Object.keys(JSON.parse(fs.readFileSync(path.join(ROOT, "content/article-review.json"), "utf8"))).length;
   const link = (a) => art(lang, a.slug, a.slug);
   const tiles = [["RUN", it ? "Ritmi · Scienza · Scarpe" : "Paces · Science · Shoes", "run"], ["RIDE", it ? "Potenza · Zone · Granfondo" : "Power · Zones · Gran fondo", "ride"], ["TRAIN", it ? "Forza · Ibrido · Recupero" : "Strength · Hybrid · Recovery", "train"], ["FUEL", it ? "Carboidrati · Fluidi · Gara" : "Carbs · Fluids · Race day", "fuel"], ["RACE", it ? "Gare · Training camp" : "Races · Training camps", "race"], ["GEAR", it ? "Novità · Scarpe · Tech" : "News · Shoes · Tech", "gear"]];
   const body = `<section class="w-hero"><div class="wrap w-hero-grid">
@@ -200,7 +200,7 @@ function home(lang) {
 <section class="w-band"><div class="wrap">
   <p class="w-kicker">THE WOLF ENGINE</p>
   <h2 class="w-big">Calculate. Understand. Perform.</h2>
-  <ul class="w-chips"><li><a href="${R.engine[lang]}#run">PACE</a></li><li><a href="${R.engine[lang]}#ride">FTP</a></li><li><a href="${R.engine[lang]}#fuel">FUEL</a></li><li><a href="${R.engine[lang]}#race">RACE</a></li><li><a href="${R.engine[lang]}#ride">ZONES</a></li></ul>
+  <ul class="w-tools">${[["PACE","run",["Ritmi di allenamento dai tuoi tempi recenti.","Training paces from your recent times."]],["FTP","ride",["Zone di potenza dalla tua FTP.","Power zones from your FTP."]],["FUEL","fuel",["Carboidrati e liquidi per la gara.","Carbohydrate and fluids for race day."]],["RACE","race",["Passaggi di gara dal tempo obiettivo.","Race splits from your target time."]],["ZONES","ride",["Zone di potenza e cardio.","Power and heart-rate zones."]]].map(([n,k,d])=>`<li><a href="${R.engine[lang]}#${k}"><b>${n}</b><span>${d[lang]}</span><em>${it?"FUNZIONANTE":"WORKING"}</em></a></li>`).join("")}<li class="dev"><a href="${R.method[lang]}"><b>WOLF SCORE</b><span>${it?"Criteri pubblici. Nessun punteggio finché mancano dati e test.":"Public criteria. No score until data and tests exist."}</span><em>${it?"IN SVILUPPO":"IN DEVELOPMENT"}</em></a></li></ul>
 </div></section>
 <section class="w-latest"><div class="wrap">
   <p class="w-kicker">LATEST FROM WOLF</p>
@@ -212,7 +212,7 @@ function home(lang) {
 <section class="w-numbers"><div class="wrap">
   <div><strong data-count="${nR}">${nR}</strong><span>${it ? "gare con fonte e data di verifica" : "races with source and check date"}</span></div>
   <div><strong data-count="${nT}">${nT}</strong><span>${it ? "mete per training camp" : "training camp destinations"}</span></div>
-  <div><strong data-count="${nA}">${nA}</strong><span>${it ? "guide con livello di prova" : "guides with an evidence level"}</span></div>
+  <div><strong data-count="${nA}">${nA}</strong><span>${it ? "guide con livello di prova e Wolf Confidence" : "guides with evidence level and Wolf Confidence"}</span></div>
 </div></section>
 <section class="w-score-home"><div class="wrap">
   <p class="w-kicker">WOLF SCORE</p>
@@ -220,7 +220,14 @@ function home(lang) {
   <p class="w-lede dim">${it ? "Un Wolf Score compare solo quando i criteri, le fonti e, per i prodotti, un nostro test sono pubblici. Oggi non ne esiste nessuno." : "A Wolf Score appears only when criteria, sources and, for products, our own test are public. Today there are none."}</p>
   <a class="w-cta" href="${R.method[lang]}">${it ? "Come valutiamo" : "How we evaluate"} <span aria-hidden="true">→</span></a>
 </div></section>
-<section class="w-tiles"><div class="wrap"><ul>${tiles.map(([n, s, k], i) => `<li><a href="${R[k][lang]}"><span class="w-num">0${i + 1}</span><b>${n}</b><small>${s}</small><span class="w-go" aria-hidden="true">→</span></a></li>`).join("")}</ul></div></section>`;
+<section class="w-start"><div class="wrap">
+  <p class="w-kicker">START HERE</p>
+  <ol>
+    <li><a href="${R.engine[lang]}"><span class="w-num">01</span><b>${it?"Calcola":"Calculate"}</b><small>${it?"Inserisci i tuoi tempi nel Wolf Engine.":"Enter your times in the Wolf Engine."}</small></a></li>
+    <li><a href="${art(lang, "scarico-pre-gara", "race-taper")}"><span class="w-num">02</span><b>${it?"Capisci":"Understand"}</b><small>${it?"Leggi una guida con fonti e livello di prova.":"Read a guide with sources and evidence level."}</small></a></li>
+    <li><a href="${R.race[lang]}"><span class="w-num">03</span><b>${it?"Scegli la gara":"Pick a race"}</b><small>${it?"Gare e training camp con fonte e data.":"Races and training camps with source and date."}</small></a></li>
+  </ol>
+</div></section>`;
   return layout({ lang, key: "home", title: "Home", desc: "Wolf Lab - Run. Ride. One engine. The science of endurance performance.", body });
 }
 
