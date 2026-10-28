@@ -28,8 +28,8 @@ export function v2ToUi(v:any){
   r.exercises=r.exercises.map((e:any)=>({...e,sets:e.sets.map((s:any)=>({...s,kg:s.kg==null?'':String(s.kg),reps:s.repsMin==null?'':String(s.repsMin),repsMax:s.repsMax!=null&&s.repsMax!==s.repsMin?String(s.repsMax):'',rest:s.restSeconds==null?'':String(s.restSeconds),rir:s.rir==null?'':String(s.rir),rpe:s.rpe==null?'':String(s.rpe),side:s.side||'',tempo:s.tempo||'',kind:kindIn(s.kind),done:false}))}));
   return r;
 }
-export const toStore=(ui:any)=>({schemaVersion:2,routines:ui.routines.map(uiToV2),history:ui.history});
-export const fromStore=(d:any)=>({routines:d.routines.map(v2ToUi),history:d.history});
+export const toStore=(ui:any)=>({schemaVersion:2,routines:ui.routines.map(uiToV2),history:ui.history,...(ui.programs&&ui.programs.length?{programs:ui.programs}:{})});
+export const fromStore=(d:any)=>({routines:d.routines.map(v2ToUi),history:d.history,programs:Array.isArray(d.programs)?d.programs:[]});
 export function groupsOk(r:any){
   const seen:Record<string,number>={};let last='';
   for(let i=0;i<r.exercises.length;i++){const g=r.exercises[i].groupId||'';if(g&&g!==last&&seen[g]!==undefined)return false;if(g)seen[g]=i;last=g;}
@@ -46,7 +46,7 @@ export function buildWorkout(session:any){
     w=recordSet(w,id,{kg:kg!=null&&kg>=0?kg:null,reps:Number.isInteger(reps)&&reps>=0?reps:null,done:!!ok,rir:effort(s.pRir,0,10),rpe:effort(s.pRpe,1,10),technique:(session.technique||{})[e.id]||'unknown',pain:!!(session.pain||{})[e.id]});
   }));
   const f=finishWorkout(w,new Date().toISOString());
-  return {...f,name:session.name};
+  return {...f,name:session.name,...(session.programRef?{programRef:session.programRef}:{})};
 }
 const FIELD:any={kg:'kg',repsMin:'ripetizioni',repsMax:'ripetizioni',restSeconds:'recupero',kind:'tipo serie',groupId:'circuito',name:'nome'};
 export function readableDiff(source:any,current:any){
@@ -76,4 +76,15 @@ export const saveMsg=(r:string)=>r==='saved'?'File salvato.':r==='cancelled'?'Sa
 export async function pickText():Promise<string|null|undefined|'cancelled'>{
   const N=(window as any).WolfNative;if(!(N&&typeof N.importText==='function'))return undefined;
   try{const r=await N.importText();if(!r||typeof r.text!=='string')return null;return r.text;}catch(e:any){return e&&(e.code==='CANCELLED'||e.message==='CANCELLED')?'cancelled':null;}
+}
+
+// Seduta di programma -> scheda operativa con tutti i campi. Nessuna progressione automatica.
+export function routineFromProgramSession(program:any,week:any,session:any,baseUi:any){
+  const kindL:any={work:KIND.work,warmup:KIND.warm,ramp:KIND.ramp};
+  const r:any={...clone(baseUi||{method:'Libera',notes:''}),id:'prog-'+program.id+'-w'+week.weekIndex+'-'+session.id,name:(program.routineName||'Scheda')+' · sett. '+week.weekIndex+' · '+session.name,revision:1};
+  delete r.source;delete r.goal;delete r.split;
+  r.exercises=session.exercises.map((e:any)=>{const o:any={id:e.exerciseId,name:e.name,muscle:'',equipment:'',notes:''};const orig=(baseUi&&baseUi.exercises||[]).find((x:any)=>x.id===e.exerciseId);if(orig){o.muscle=orig.muscle||'';o.equipment=orig.equipment||'';o.notes=orig.notes||'';}if(e.groupId)o.groupId=e.groupId;
+    o.sets=e.sets.map((t:any)=>({id:t.id,kind:kindL[t.kind]||KIND.work,kg:t.kg==null?'':String(t.kg),reps:t.repsMin==null?'':String(t.repsMin),repsMax:t.repsMax!=null&&t.repsMax!==t.repsMin?String(t.repsMax):'',rest:t.restSeconds==null?'':String(t.restSeconds),rir:t.rir==null?'':String(t.rir),rpe:t.rpe==null?'':String(t.rpe),side:t.side||'',tempo:t.tempo||'',done:false}));return o;});
+  r.programRef={programId:program.id,week:week.weekIndex,sessionId:session.id};
+  return r;
 }

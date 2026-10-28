@@ -153,4 +153,9 @@ EN = {
 " Gambe impegnative":" Demanding legs"," Intensa":" Hard","Serie crescenti":"Ramp sets",
 "Indica tu la percentuale del carico del giorno per ogni serie crescente. WOLFLAB non inventa una rampa.":"Enter the percentage of the day's load for each ramp set. WOLFLAB does not invent a ramp.",
 " · serie crescente ":" · ramp set ","Ogni serie crescente richiede la tua percentuale del carico del giorno.":"Every ramp set needs your percentage of the day's load.",
+"Nome del programma":"Program name","Nome programma":"Program name","Salva programma":"Save program","Programma salvato.":"Program saved.","Programma non salvato: nessuna modifica.":"Program not saved: no changes made.",
+"Dai un nome al programma prima di salvarlo.":"Name the program before saving it.","Programmi salvati":"Saved programs",
+"Eliminare il programma? Gli allenamenti già registrati restano nello storico.":"Delete the program? Workouts already logged stay in your history.",
+"Avvia questa seduta":"Start this session","Apri":"Open","Chiudi":"Close","Elimina programma ":"Delete program "," settimane · da ":" weeks · from ",
+" programmi":" programs",
 }

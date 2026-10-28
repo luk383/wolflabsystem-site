@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {createProgram,enduranceConflicts} from './core/core.mjs';
-import {uiToV2,saveText,saveMsg} from './lab';
+import {uiToV2,saveText,saveMsg,routineFromProgramSession} from './lab';
 const PRESETS:any={
  custom:{label:'Configurazione digitale WOLFLAB (fattori scelti da te)',note:'Regole digitali WOLFLAB scelte da te. Non sono attribuite a una fonte storica.',days:[{name:'Giorno 1',f:'100'}]},
  a:{label:'HLM, variante 80 / 90',note:'Pesante 100%, Media 90%, Leggera 80% del carico di riferimento. Preset non verificato su una fonte storica originale.',days:[{name:'Pesante',f:'100'},{name:'Leggera',f:'80'},{name:'Media',f:'90'}]},
@@ -8,8 +8,8 @@ const PRESETS:any={
 };
 const own=(m:string)=>Object.assign(new Error(m),{own:true});
 const cell=(x:any)=>{const v=String(x??'');return '"'+(/^[=+@\-\t\r]/.test(v)?"'":'')+v.replaceAll('"','""')+'"';};
-export function ProgramBox({routine,onClose}:any){
-  const [ver,setVer]=useState('custom'),[days,setDays]=useState<any[]>(PRESETS.custom.days),[refs,setRefs]=useState<any>({}),[weeks,setWeeks]=useState('4'),[start,setStart]=useState(''),[round,setRound]=useState('2.5'),[prog,setProg]=useState<any>(null),[ramp,setRamp]=useState<any>({}),[err,setErr]=useState(''),[msg,setMsg]=useState('');
+export function ProgramBox({routine,onClose,data,update,setPending,startSession}:any){
+  const [name,setName]=useState(''),[open,setOpen]=useState<string>(''),[ver,setVer]=useState('custom'),[days,setDays]=useState<any[]>(PRESETS.custom.days),[refs,setRefs]=useState<any>({}),[weeks,setWeeks]=useState('4'),[start,setStart]=useState(''),[round,setRound]=useState('2.5'),[prog,setProg]=useState<any>(null),[ramp,setRamp]=useState<any>({}),[err,setErr]=useState(''),[msg,setMsg]=useState('');
   const P=PRESETS[ver],pick=(v:string)=>{setVer(v);setDays(PRESETS[v].days.map((d:any)=>({...d})));setProg(null);setErr('');};
   const setDay=(i:number,k:string,v:string)=>{const n=days.map((d:any)=>({...d}));n[i][k]=v;setDays(n);setProg(null);};
   const gen=()=>{setMsg('');try{
@@ -26,6 +26,7 @@ export function ProgramBox({routine,onClose}:any){
     setProg(createProgram({id:'p'+Date.now(),template,referenceLoads:rl,weeks:w,startDate:start,roundingKg:r}));setErr('');
   }catch(x:any){setProg(null);setErr(x&&x.own?x.message:'Programma non valido: controlla i campi.');}};
   const rows=()=>{const out=[['week','session','exercise','set','kg','repsMin','repsMax','status','version']];for(const w of prog.weeks)for(const s of w.sessions)for(const e of s.exercises)e.sets.forEach((t:any,j:number)=>out.push([w.weekIndex,s.name,e.name,j+1,t.kg,t.repsMin,t.repsMax,w.loadStatus,s.versionId]));return out;};
+  const saveProg=()=>{const nm=name.trim();if(!nm){setErr('Dai un nome al programma prima di salvarlo.');return;}const saved={...prog,name:nm,routineId:routine.id,routineName:routine.name||'Scheda',routineSnapshot:JSON.parse(JSON.stringify(routine))};if(update({...data,programs:[...(data.programs||[]),saved]})){setErr('');setMsg('Programma salvato.');}else setMsg('Programma non salvato: nessuna modifica.');};
   const exp=async()=>{const t='\uFEFF'+rows().map(r=>r.map(cell).join(',')).join('\r\n');setMsg(saveMsg(await saveText(t,'wolflab-programma.csv','text/csv;charset=utf-8')));};
   return <div className="program"><div className="heading"><div><small>PROGRAMMA</small><h2>{routine.name||'Scheda'}</h2></div><div className="actions"><button onClick={onClose}>← Schede</button></div></div>
    <label>Configurazione<select aria-label="Configurazione programma" value={ver} onChange={v=>pick(v.target.value)}>{Object.keys(PRESETS).map(k=><option key={k} value={k}>{k==='custom'?'Digitale WOLFLAB':k==='a'?'HLM 80 / 90':'HLM 70–75 / 80–85'}</option>)}</select></label>
@@ -37,9 +38,10 @@ export function ProgramBox({routine,onClose}:any){
    <div className="fields"><label>Settimane<input type="number" min="1" max="12" value={weeks} aria-label="Settimane" onChange={v=>{setWeeks(v.target.value);setProg(null);}}/></label><label>Inizio<input type="date" value={start} aria-label="Data di inizio" onChange={v=>{setStart(v.target.value);setProg(null);}}/></label><label>Passo dei dischi · kg<input type="number" min="0" step="0.5" value={round} aria-label="Passo dischi programma" onChange={v=>{setRound(v.target.value);setProg(null);}}/></label></div>
    <div className="actions"><button className="primary" onClick={gen}>Genera anteprima</button></div>
    {err&&<p role="alert">{err}</p>}{msg&&<p role="status">{msg}</p>}
+   {(data.programs||[]).length>0&&<div><h3>Programmi salvati</h3>{(data.programs||[]).map((g:any)=><div key={g.id} className="set"><div className="set-top"><b>{g.name}</b><button aria-label={'Elimina programma '+g.name} onClick={()=>setPending({label:'Eliminare il programma? Gli allenamenti già registrati restano nello storico.',run:()=>update({...data,programs:data.programs.filter((x:any)=>x.id!==g.id)})})}>×</button></div><p className="hint">{g.routineName} · {g.weeks.length} settimane · da {g.startDate}</p><div className="actions"><button onClick={()=>setOpen(open===g.id?'':g.id)}>{open===g.id?'Chiudi':'Apri'}</button></div>{open===g.id&&g.weeks.map((w:any)=><details key={w.weekIndex}><summary>Settimana {w.weekIndex}</summary>{w.sessions.map((s:any)=><article key={s.id}><b>{s.name}</b><ul className="pe">{s.exercises.map((e:any)=><li key={e.exerciseId}>{e.name} · {e.sets.map((t:any)=>t.kg+' kg × '+(t.repsMin===t.repsMax||t.repsMax==null?t.repsMin:t.repsMin+'–'+t.repsMax)).join(' / ')}</li>)}</ul><div className="actions"><button onClick={()=>startSession(routineFromProgramSession(g,w,s,g.routineSnapshot))}>Avvia questa seduta</button></div></article>)}</details>)}</div>)}</div>}
    {prog&&<div><p className="hint">Anteprima non salvata: esporta se vuoi conservarla. I carichi delle settimane successive restano fissi sul riferimento finché non registri allenamenti e accetti una proposta. Carichi arrotondati per difetto al passo scelto.</p>
     {prog.weeks.map((w:any)=><details key={w.weekIndex} open={w.weekIndex===1}><summary>Settimana {w.weekIndex} · {w.loadStatus==='current'?'in corso':'provvisoria'}</summary>{w.sessions.map((s:any)=><article key={s.id}><b>{s.name}</b><ul className="pe">{s.exercises.map((e:any)=><li key={e.exerciseId}>{e.name} · {e.sets.map((t:any)=>t.kg+' kg × '+(t.repsMin===t.repsMax||t.repsMax==null?t.repsMin:t.repsMin+'–'+t.repsMax)).join(' / ')}</li>)}</ul></article>)}</details>)}
-    <div className="actions"><button onClick={exp}>Esporta CSV del programma</button><button onClick={()=>window.print()}>Stampa o salva PDF</button></div></div>}
+    <label>Nome del programma<input value={name} aria-label="Nome programma" onChange={v=>setName(v.target.value)}/></label><div className="actions"><button className="primary" onClick={saveProg}>Salva programma</button><button onClick={exp}>Esporta CSV del programma</button><button onClick={()=>window.print()}>Stampa o salva PDF</button></div></div>}
   </div>;
 }
 
