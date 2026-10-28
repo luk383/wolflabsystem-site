@@ -419,4 +419,5 @@ EN = {
 'Configura il programma':'Set up the program',
 'Programma settimanale':'Weekly program',
 'Settimana':'Week',
+'Le mie schede e storico':'My routines and history',
 }
