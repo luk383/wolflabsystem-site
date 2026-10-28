@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080a08">
+<meta name="description" content="WOLFLAB: la scienza dell'endurance. Strumenti, dati e metodo per correre, pedalare e allenarti meglio.">
+<meta property="og:title" content="WOLFLAB — RUN. RIDE. ONE ENGINE.">
+<meta property="og:description" content="Un unico sistema per capire i tuoi dati, allenarti con metodo e migliorare la performance endurance.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.wolflabsystem.com/condividi/">
+<meta property="og:image" content="https://www.wolflabsystem.com/assets/og-wolflab.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<title>WOLFLAB — RUN. RIDE. ONE ENGINE.</title>
+<style>
+@font-face{font-family:Geist;src:url(/assets/fonts/geist.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--bg:#080a08;--panel:#111511;--text:#f4f6f1;--muted:#a6aea4;--lime:#d6ff35;--line:#293027;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Geist,Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}.topbar{display:flex;align-items:center;justify-content:space-between;padding:22px 0}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.08em;font-size:1.15rem}.wolf{width:auto;height:38px;color:var(--lime)}.eyebrow{color:var(--lime);font-size:.76rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}.top-link{font-size:.88rem;color:var(--muted)}.top-link:hover{color:var(--lime)}
+.hero{position:relative;overflow:hidden;padding:66px 0 76px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 78% 15%,rgba(214,255,53,.12),transparent 34%),linear-gradient(135deg,#0b0f0b,#080a08 62%)}.hero:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent)}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}.hero h1{font-size:clamp(2.8rem,6.4vw,5.8rem);line-height:.96;letter-spacing:-.065em;margin:18px 0 22px;max-width:760px}.hero h1 span{color:var(--lime)}.lead{max-width:570px;color:#c0c7bd;font-size:1.12rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:8px;padding:14px 19px;font-weight:850;font-size:.95rem;transition:transform .18s,background .18s;border:1px solid transparent;cursor:pointer}.btn:hover{transform:translateY(-2px)}.primary{background:var(--lime);color:#10140a}.primary:hover{background:#e2ff70}.secondary{border-color:#444d40;background:rgba(255,255,255,.025)}.secondary:hover{border-color:var(--lime)}.micro{color:#9aa397;font-size:.78rem;margin-top:15px}.visual{min-height:360px;position:relative;display:grid;place-items:center}.orb{position:absolute;width:min(340px,85%);aspect-ratio:1;border:1px solid rgba(214,255,53,.3);border-radius:50%;box-shadow:0 0 90px rgba(214,255,53,.08),inset 0 0 70px rgba(214,255,53,.04)}.orb:before,.orb:after{content:"";position:absolute;border:1px solid rgba(214,255,53,.18);border-radius:50%;inset:24px}.orb:after{inset:54px}.mark{width:200px;height:auto;max-width:70%;color:var(--lime);filter:drop-shadow(0 0 28px rgba(214,255,53,.16));z-index:1}.float-card{position:absolute;z-index:2;background:rgba(17,21,17,.92);border:1px solid #343d31;border-radius:12px;padding:13px 16px;box-shadow:0 18px 60px #0008}.float-card small{display:block;color:var(--muted);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}.float-card strong{font-size:1.02rem}.fc1{top:14%;left:0}.fc2{right:0;bottom:14%}.fc2 strong{color:var(--lime)}
+.section{padding:66px 0}.section-head{max-width:700px;margin-bottom:28px}.section h2{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.045em;line-height:1.05;margin:10px 0 12px}.section-head p{color:var(--muted);margin:0}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{border:1px solid var(--line);background:linear-gradient(150deg,#111511,#0c0f0c);border-radius:14px;padding:22px;min-height:190px}.feature .num{color:var(--lime);font-size:.75rem;letter-spacing:.16em;font-weight:850}.feature h3{font-size:1.2rem;margin:18px 0 8px}.feature p{color:var(--muted);font-size:.93rem;margin:0}.share{border:1px solid #343d31;background:linear-gradient(135deg,#131a11,#0c100c);border-radius:18px;padding:clamp(24px,5vw,48px);display:grid;grid-template-columns:1fr .8fr;gap:30px;align-items:center}.share p{color:var(--muted);max-width:560px}.share-actions{display:grid;gap:10px}.share-actions .btn{width:100%}.note{font-size:.78rem;color:#9aa397;margin-top:9px}.footer{border-top:1px solid var(--line);padding:24px 0 32px;color:#98a195;font-size:.8rem}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer strong{color:var(--text);letter-spacing:.12em}.pill{display:inline-block;border:1px solid #384230;border-radius:999px;padding:5px 10px;color:#b8c3b0;font-size:.72rem;margin-top:12px}
+@media(max-width:760px){.wrap{width:min(var(--max),calc(100% - 28px))}.topbar{padding:17px 0}.hero{padding:45px 0 48px}.hero-grid{grid-template-columns:1fr;gap:10px}.hero h1{font-size:clamp(2.7rem,13vw,4.6rem)}.lead{font-size:1rem}.visual{min-height:270px;margin-top:6px}.mark{width:155px}.orb{width:245px}.fc1{left:2%;top:7%}.fc2{right:2%;bottom:7%}.section{padding:48px 0}.features{grid-template-columns:1fr}.feature{min-height:unset}.share{grid-template-columns:1fr}.actions .btn{flex:1 1 100%}.top-link{font-size:.78rem}}
+</style>
+</head>
+<body>
+<header class="wrap topbar">
+  <a class="brand" href="https://www.wolflabsystem.com/" aria-label="WOLFLAB home">
+    <svg class="wolf" viewBox="0 0 94.9 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M16.5 0.0 18.0 0.3 41.9 17.2 44.5 17.9 52.6 17.4 76.9 0.3 78.6 0.1 85.7 35.0 94.9 49.4 94.5 51.1 82.4 61.1 80.2 69.5 66.5 81.8 63.2 87.5 48.1 100.0 46.4 99.7 31.7 87.5 28.5 81.8 14.6 69.3 12.5 61.0 0.0 50.4 9.3 35.0ZM20.9 10.5 15.2 37.4 8.4 48.5 16.4 55.3 17.2 54.9 18.8 51.1 19.7 51.2 36.0 83.3 46.7 92.1 48.1 92.2 59.0 83.3 75.3 51.2 76.2 51.1 77.8 54.9 78.6 55.3 86.6 48.5 79.8 37.4 74.7 11.4 74.1 10.5 72.9 10.7 53.5 24.3 43.6 24.5 41.0 24.1ZM25.4 35.0 27.3 35.3 40.0 42.3 42.1 66.9 43.0 69.8 44.3 70.4 50.9 70.3 52.1 69.5 55.3 41.9 68.7 35.0 74.7 38.3 69.4 45.7 60.3 50.6 55.7 77.6 48.1 83.2 46.7 83.1 39.3 77.6 34.7 50.6 25.8 45.8 20.3 39.0 20.4 38.1Z"/></svg>
+    <span>WOLFLAB</span>
+  </a>
+  <a class="top-link" href="https://www.wolflabsystem.com/">Visita il sito <span aria-hidden="true">↗</span></a>
+</header>
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">The science of endurance performance</div>
+      <h1>RUN.<br>RIDE.<br><span>ONE ENGINE.</span></h1>
+      <p class="lead">La performance non è un caso. È un sistema. Scopri WOLFLAB: strumenti, dati e metodo per dare una direzione ai tuoi allenamenti di endurance.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://www.wolflabsystem.com/">ESPLORA WOLFLAB <span aria-hidden="true">↗</span></a>
+        <a class="btn secondary" href="#condividi">Condividi con un atleta <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="micro">Per chi corre. Per chi pedala. Per chi vuole migliorare con metodo.</div>
+      <div class="pill">ENDURANCE · DATA · SCIENCE · COMMUNITY</div>
+    </div>
+    <div class="visual" aria-label="Simbolo grafico del lupo WOLFLAB">
+      <div class="orb"></div>
+      <svg class="mark" viewBox="0 0 94.9 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M16.5 0.0 18.0 0.3 41.9 17.2 44.5 17.9 52.6 17.4 76.9 0.3 78.6 0.1 85.7 35.0 94.9 49.4 94.5 51.1 82.4 61.1 80.2 69.5 66.5 81.8 63.2 87.5 48.1 100.0 46.4 99.7 31.7 87.5 28.5 81.8 14.6 69.3 12.5 61.0 0.0 50.4 9.3 35.0ZM20.9 10.5 15.2 37.4 8.4 48.5 16.4 55.3 17.2 54.9 18.8 51.1 19.7 51.2 36.0 83.3 46.7 92.1 48.1 92.2 59.0 83.3 75.3 51.2 76.2 51.1 77.8 54.9 78.6 55.3 86.6 48.5 79.8 37.4 74.7 11.4 74.1 10.5 72.9 10.7 53.5 24.3 43.6 24.5 41.0 24.1ZM25.4 35.0 27.3 35.3 40.0 42.3 42.1 66.9 43.0 69.8 44.3 70.4 50.9 70.3 52.1 69.5 55.3 41.9 68.7 35.0 74.7 38.3 69.4 45.7 60.3 50.6 55.7 77.6 48.1 83.2 46.7 83.1 39.3 77.6 34.7 50.6 25.8 45.8 20.3 39.0 20.4 38.1Z"/></svg>
+      <div class="float-card fc1"><small>Il tuo approccio</small><strong>Train with purpose.</strong></div>
+      <div class="float-card fc2"><small>Il tuo obiettivo</small><strong>Better every session.</strong></div>
+    </div>
+  </div>
+</section>
+<section class="section wrap">
+  <div class="section-head"><div class="eyebrow">Un solo ecosistema</div><h2>Meno confusione.<br>Più direzione.</h2><p>WOLFLAB mette in relazione le variabili che contano per l'endurance, con un approccio chiaro, pratico e orientato alla performance.</p></div>
+  <div class="features">
+    <article class="feature"><div class="num">01 / UNDERSTAND</div><h3>Leggi i tuoi dati</h3><p>Trasforma numeri e metriche in informazioni utili per capire il tuo punto di partenza.</p></article>
+    <article class="feature"><div class="num">02 / PLAN</div><h3>Allenati con metodo</h3><p>Collega ritmo, potenza, zone e alimentazione a obiettivi concreti e misurabili.</p></article>
+    <article class="feature"><div class="num">03 / PROGRESS</div><h3>Costruisci continuità</h3><p>Un percorso endurance sostenibile nasce da scelte coerenti, non da una singola sessione perfetta.</p></article>
+  </div>
+</section>
+<section class="section wrap" id="condividi">
+  <div class="share">
+    <div><div class="eyebrow">Passaparola endurance</div><h2>Hai un compagno di allenamento?</h2><p>Condividi WOLFLAB con chi ama correre, pedalare e migliorare. Un progetto cresce quando arriva alle persone giuste.</p><div class="micro">RUN. RIDE. ONE ENGINE.</div></div>
+    <div class="share-actions">
+      <a class="btn primary" id="whatsapp" href="https://wa.me/?text=Scopri%20WOLFLAB%20%E2%80%94%20RUN.%20RIDE.%20ONE%20ENGINE.%20Strumenti%2C%20dati%20e%20metodo%20per%20la%20performance%20endurance%3A%20https%3A%2F%2Fwww.wolflabsystem.com%2F" target="_blank" rel="noopener">Condividi su WhatsApp <span aria-hidden="true">↗</span></a>
+      <button class="btn secondary" id="copyCaption" type="button">Copia testo per Instagram <span aria-hidden="true">⧉</span></button>
+      <a class="btn secondary" href="https://www.instagram.com/" target="_blank" rel="noopener">Apri Instagram <span aria-hidden="true">↗</span></a>
+      <div class="note" id="feedback" aria-live="polite">Su Instagram puoi incollare il testo in una storia, un post o un messaggio.</div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><div><strong>WOLFLAB</strong> &nbsp; RUN. RIDE. ONE ENGINE.</div><div><a href="https://www.wolflabsystem.com/">www.wolflabsystem.com</a> · Endurance / Data / Science</div></div></footer>
+<script>
+const caption = 'RUN. RIDE. ONE ENGINE. 🐺\n\nLa performance non è un caso: è un sistema. Scopri WOLFLAB, strumenti, dati e metodo per la performance endurance.\n\nhttps://www.wolflabsystem.com/\n\n#WOLFLAB #Endurance #Running #Cycling #TrainWithPurpose';
+document.getElementById('copyCaption').addEventListener('click', async () => {
+  const feedback = document.getElementById('feedback');
+  try {
+    await navigator.clipboard.writeText(caption);
+    feedback.textContent = 'Testo copiato! Apri Instagram e incollalo nella tua storia, nel post o nel messaggio.';
+  } catch (e) {
+    const area = document.createElement('textarea'); area.value = caption; area.style.position='fixed'; area.style.opacity='0'; document.body.appendChild(area); area.select();
+    const ok = document.execCommand('copy'); area.remove();
+    feedback.textContent = ok ? 'Testo copiato! Apri Instagram e incollalo.' : caption;
+  }
+});
+</script>
+</body>
+</html>

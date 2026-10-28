@@ -7,6 +7,7 @@ const img = '<img class="brand-img brand-on-dark" src="/assets/brand/logo-on-dar
 let n = 0;
 for (const f of walk(root)) {
   const h = fs.readFileSync(f, 'utf8');
+  if (!h.includes('/assets/site.css')) continue;
   const o = h.replace(/<a class="brand" href="([^"]*)"[^>]*>(?:(?!<\/a>)[\s\S])*<\/a>/g, (m, href) => m.includes('brand-img') ? m : `<a class="brand" href="${href}" aria-label="WOLFLAB">${img}</a>`);
   if (o !== h) { fs.writeFileSync(f, o); n++; }
 }

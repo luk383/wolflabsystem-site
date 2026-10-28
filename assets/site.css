@@ -455,3 +455,4 @@ html:not([data-theme="dark"]) .w-numbers .w-num,html:not([data-theme="dark"]) .w
 html:not([data-theme="dark"]) .brand-on-light{display:block!important}html:not([data-theme="dark"]) .brand-on-dark{display:none!important}
 @media(max-width:900px){.brand .brand-img{height:36px}}
 @media(max-width:380px){.brand .brand-img{height:30px}}
+html:not([data-theme="dark"]) .w-feature-sym{color:#5A7300}
