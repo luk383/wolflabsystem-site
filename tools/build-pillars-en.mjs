@@ -48,15 +48,15 @@ const DISC = {
     ['FUEL & RECOVERY', [['Marathon carbohydrates', 'How many per hour, by duration.', '/en/articles/marathon-carbohydrates/'], ['Carb calculator', 'Gels, grams and timing.', '/en/training/#carbs'], ['Carb gels', 'Comparison on declared data.', '/en/picks/carb-gels/'], sleep, ['Caffeine and performance', 'Doses, timing and when to avoid it.', '/en/articles/caffeine-and-performance/']]],
     ['GEAR', [['Training shoes', 'Guide and criteria.', '/en/picks/training-shoes/'], ['Compare Evo SL, Novablast 6, Ghost 18', 'Sourced data, no scores.', '/en/picks/compare-evo-sl-novablast-6-ghost-18/'], ['Carbon-plate running shoes', 'What the studies say.', '/en/articles/carbon-plate-running-shoes/']]]] },
   RIDE: { url: '/en/ride', it: '/ride', desc: 'Power, FTP, races and gear for cycling.', lead: 'Power, races and gear.', blocks: [
-    ['TRAINING', [['FTP and power zones', 'What they measure and how far to trust them.', '/en/articles/ftp-and-power-zones/'], ['Training methods', 'Polarised, pyramidal.', '/en/training/']]],
+    ['TRAINING', [['FTP and power zones', 'What they measure and how far to trust them.', '/en/articles/ftp-and-power-zones/'], ['Polarised or pyramidal', 'What the studies say.', '/en/pyramidal-or-polarized'], ['Training methods', 'Library of methods, Cycling filter.', '/en/training/']]],
     ['PERFORMANCE', [['Wolf Engine', 'Power zones from your FTP.', '/en/engine']]],
     ['RACE', [['Cycling races', `${BIKE_RACES} gran fondos on the calendar.`, '/en/races/?f=bike']]],
-    ['FUEL & RECOVERY', [['Carb calculator', 'Gels, grams and timing.', '/en/training/#carbs'], sleep]],
+    ['FUEL & RECOVERY', [sleep]],
     ['GEAR', [['Bike computers', 'Guide.', '/en/picks/bike-computers/']]]] },
   SWIM: { url: '/en/swim', it: '/swim', desc: 'Critical speed, methods, open water and swim races.', lead: 'Critical speed, methods and open water.', blocks: [
-    ['TRAINING', [['Critical swim speed (CSS)', 'What it is and where it stops being valid.', '/en/articles/swim-critical-speed/'], ['Training methods', 'How intensity is distributed.', '/en/articles/swim-training-methods/'], ['Stroke technique', 'Stroke rate and stroke length.', '/en/articles/swim-stroke-technique/']]],
-    ['PERFORMANCE', [['Wolf Engine', 'CSS from your 200 and 400 m tests. Swim zones not available yet.', '/en/engine']]],
-    ['RACE', [['Races and formats', 'Open water, triathlon, IRONMAN.', '/en/articles/swim-race-formats/'], ['FIN Masters rules', 'Open water in Italy.', '/en/articles/swim-open-water-italy-fin-masters/'], ['Open water safety', 'Cold water and wetsuits.', '/en/articles/open-water-swimming-safety/']]],
+    ['TRAINING', [['Critical swim speed (CSS)', 'What it is and where it stops being valid.', '/en/articles/swim-critical-speed/'], ['Training methods', 'How intensity is distributed.', '/en/articles/swim-training-methods/'], ['Stroke technique', 'Stroke rate and stroke length.', '/en/articles/swim-stroke-technique/'], ['Sessions and drills', 'Structure, drills and the move to triathlon.', '/en/articles/swim-sessions-drills-transition/'], ['Pool and open water', 'What changes between the two.', '/en/articles/swim-pool-vs-open-water/']]],
+    ['PERFORMANCE', [['Wolf Engine', 'CSS from your 200 and 400 m tests. Swim zones not available yet.', '/en/engine'], ['Race pacing in triathlon', 'Managing the swim leg.', '/en/articles/swim-pacing-triathlon/']]],
+    ['RACE', [['Races and formats', 'Open water, triathlon, IRONMAN.', '/en/articles/swim-race-formats/'], ['FIN Masters rules', 'Open water in Italy.', '/en/articles/swim-open-water-italy-fin-masters/'], ['Open water safety', 'Cold water and wetsuits.', '/en/articles/open-water-swimming-safety/'], ['Open water sighting', 'Sighting and pool drills.', '/en/articles/swim-open-water-sighting/']]],
     ['FUEL & RECOVERY', [sleep]],
     ['GEAR', []]] },
   STRENGTH: { url: '/en/strength/', it: '/strength/', desc: 'Strength for the endurance athlete: programs, exercises, methods.', lead: '', blocks: [
