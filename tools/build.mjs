@@ -233,7 +233,7 @@ const PAGES = {
       title: it ? "Home" : "Home",
       description: "Wolf Lab - Run. Ride. One engine.",
       body: `<section class="sport-home"><div class="wrap">
-<div class="sport-hero"><div class="sport-copy"><h1 lang="en">Run.<br>Ride.<br><span>One engine.</span></h1></div><div class="sport-photo" role="img" aria-label="${it ? "Concept generato: runner su strada sterrata, ispirato agli altopiani del Kenya" : "Generated concept: runners on a dirt road inspired by the Kenyan highlands"}"><small>${it ? "CONCEPT KENYA / IMMAGINE GENERATA" : "KENYA CONCEPT / GENERATED IMAGE"}</small></div></div>
+<div class="sport-hero"><div class="sport-copy"><h1 lang="en">Run.<br>Ride.<br><span>One engine.</span></h1></div><div class="sport-photo" role="img" aria-label="${it ? "Runner su un sentiero di montagna al tramonto" : "Runner on a mountain trail at sunset"}"></div></div>
 <div class="sport-latest" id="read-next"><div class="section-title"><a href="${ROUTES.articles[lang]}">${T[lang].allArticles} ↗</a></div>
 <div class="sport-stories">${articles.slice(0,1).map(a=>`<a href="${articlePath(lang,a.slug)}"><div class="sport-symbol">↗<span>RUN<br>× RIDE</span></div><span class="sport-topic">${esc(a.topic)} / ${a.minutes} ${it ? "MIN" : "MIN"}</span><h3>${esc(a.title)}</h3><span class="sport-read">${it ? "Leggi l'articolo" : "Read the article"} ↗</span></a>`).join("")}<div class="sport-support">${articles.slice(1,3).map(a=>`<a href="${articlePath(lang,a.slug)}"><span class="sport-topic">${esc(a.topic)}</span><h3>${esc(a.title)}</h3><span class="sport-read">${it ? "Leggi" : "Read"} ↗</span></a>`).join("")}</div></div>
 ${articles.slice(3,4).map(a=>`<a class="sport-more" href="${articlePath(lang,a.slug)}">${esc(a.title)} ↗</a>`).join("")}</div>

@@ -29,3 +29,5 @@ tools/build.mjs runs: base, engine, library, news, normalize-legacy, ask. Review
 - Header logo: wolf outline + WOLFLAB + payoff, dark and light variants (assets/brand/). Favicon is the lime icon.
 - The wolf symbol is traced from the approved board image (symmetrised). The kit SVG from Luca was NOT used: its wolf is a different, simpler shield shape and its tagline overflows its canvas. Wordmark is Montserrat ExtraBold converted to paths (OFL).
 - Not final: not trademark-cleared, no registered mark claimed. Board mockups (merch, billboards) are concept images, not used on the site.
+- Hero photo replaced (28 Oct) with the scene Luca supplied (two files, same image; PNG used as source, optimised to 1600 and 900 px JPEG, in colour). Place, author and licence are not stated anywhere on the site; methodology page says so. Old Kenya hero removed. WOLFLAB logo sits on the photo.
+- /condividi/: float cards no longer overlap the wolf (stacked below the emblem).
