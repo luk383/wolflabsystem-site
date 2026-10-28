@@ -1,0 +1,162 @@
+{
+  "schema": "wolflab-catalog-fuel/1",
+  "note": "Dati dichiarati dai produttori, con fonte e data per campo. Nessun prezzo, voto o verdetto. Non e' un test.",
+  "products": [
+    {
+      "id": "maurten-gel-100",
+      "brand": "Maurten",
+      "model": "Gel 100",
+      "category": "fuel/gel",
+      "lastVerified": "2026-10-28",
+      "specs": {
+        "carbsPerServingG": {
+          "value": 25,
+          "source": "https://www.maurten.com/products/gel-100-box-us",
+          "method": "dato dichiarato dal produttore",
+          "checked": "2026-10-28"
+        },
+        "ratio": {
+          "value": "glucosio:fruttosio 1:0,8",
+          "source": "https://www.maurten.com/products/gel-100-box-us",
+          "method": "dato dichiarato dal produttore",
+          "checked": "2026-10-28"
+        },
+        "servingWeightG": {
+          "value": 40,
+          "source": "https://www.maurten.com/products/gel-100-box-us",
+          "method": "dato dichiarato dal produttore",
+          "checked": "2026-10-28"
+        },
+        "kcal": {
+          "value": "circa 100 kcal",
+          "source": "https://www.maurten.com/products/gel-100-box-us",
+          "method": "dato dichiarato dal produttore",
+          "checked": "2026-10-28"
+        },
+        "texture": {
+          "value": "idrogel (alginato), da assumere senza acqua",
+          "source": "https://www.maurten.com/products/gel-100-box-us",
+          "method": "dato dichiarato dal produttore",
+          "checked": "2026-10-28"
+        },
+        "caffeineVersion": {
+          "value": "Gel 100 Caf 100 con caffeina",
+          "source": "https://www.maurten.com/products/gel-100-box-us",
+          "method": "dato dichiarato dal produttore",
+          "checked": "2026-10-28"
+        }
+      },
+      "summary": "Gel a base di idrogel con 6 ingredienti, 25 g di carboidrati per bustina.",
+      "sources": [
+        {
+          "label": "Maurten, pagina prodotto Gel 100",
+          "url": "https://www.maurten.com/products/gel-100-box-us"
+        }
+      ]
+    },
+    {
+      "id": "sis-beta-fuel-gel",
+      "brand": "Science in Sport (SiS)",
+      "model": "BETA Fuel Gel",
+      "category": "fuel/gel",
+      "lastVerified": "2026-10-28",
+      "specs": {
+        "carbsPerServingG": {
+          "value": 40,
+          "source": "https://www.scienceinsport.com/beta-fuel-gel-pack",
+          "method": "dato dichiarato dal produttore",
+          "checked": "2026-10-28"
+        },
+        "ratio": {
+          "value": "maltodestrina:fruttosio 1:0,8",
+          "source": "https://www.scienceinsport.com/beta-fuel-gel-pack",
+          "method": "dato dichiarato dal produttore",
+          "checked": "2026-10-28"
+        },
+        "servingWeightG": {
+          "value": "non indicato",
+          "source": "https://www.scienceinsport.com/beta-fuel-gel-pack",
+          "method": "non indicato nel testo letto",
+          "checked": "2026-10-28"
+        },
+        "kcal": {
+          "value": "non indicato",
+          "source": "https://www.scienceinsport.com/beta-fuel-gel-pack",
+          "method": "non indicato nel testo letto",
+          "checked": "2026-10-28"
+        },
+        "texture": {
+          "value": "gel liquido",
+          "source": "https://www.scienceinsport.com/beta-fuel-gel-pack",
+          "method": "descrizione del produttore",
+          "checked": "2026-10-28"
+        },
+        "caffeineVersion": {
+          "value": "non indicato",
+          "source": "https://www.scienceinsport.com/beta-fuel-gel-pack",
+          "method": "non indicato nel testo letto",
+          "checked": "2026-10-28"
+        }
+      },
+      "summary": "Gel dual-source con 40 g di carboidrati per dose; il produttore lo indica per sforzi oltre le 2 ore.",
+      "sources": [
+        {
+          "label": "SiS, pagina prodotto BETA Fuel Gel",
+          "url": "https://www.scienceinsport.com/beta-fuel-gel-pack"
+        }
+      ]
+    },
+    {
+      "id": "pf-30-gel",
+      "brand": "Precision Fuel & Hydration",
+      "model": "PF 30 Gel",
+      "category": "fuel/gel",
+      "lastVerified": "2026-10-28",
+      "specs": {
+        "carbsPerServingG": {
+          "value": 30,
+          "source": "https://www.precisionhydration.com/us/en/products/pf-30-gel/",
+          "method": "dato dichiarato dal produttore",
+          "checked": "2026-10-28"
+        },
+        "ratio": {
+          "value": "non indicato",
+          "source": "https://www.precisionhydration.com/us/en/products/pf-30-gel/",
+          "method": "non indicato nel testo letto",
+          "checked": "2026-10-28"
+        },
+        "servingWeightG": {
+          "value": "non indicato",
+          "source": "https://www.precisionhydration.com/us/en/products/pf-30-gel/",
+          "method": "non indicato nel testo letto",
+          "checked": "2026-10-28"
+        },
+        "kcal": {
+          "value": "non indicato",
+          "source": "https://www.precisionhydration.com/us/en/products/pf-30-gel/",
+          "method": "non indicato nel testo letto",
+          "checked": "2026-10-28"
+        },
+        "texture": {
+          "value": "progettato per essere poco appiccicoso, sapore neutro Original",
+          "source": "https://www.precisionhydration.com/us/en/products/pf-30-gel/",
+          "method": "descrizione del produttore",
+          "checked": "2026-10-28"
+        },
+        "caffeineVersion": {
+          "value": "non indicato",
+          "source": "https://www.precisionhydration.com/us/en/products/pf-30-gel/",
+          "method": "non indicato dal produttore nel testo letto",
+          "checked": "2026-10-28"
+        }
+      },
+      "summary": "Gel da 30 g di carboidrati con sapore neutro e consistenza poco appiccicosa.",
+      "sources": [
+        {
+          "label": "Precision Fuel & Hydration, pagina PF 30 Gel",
+          "url": "https://www.precisionhydration.com/us/en/products/pf-30-gel/"
+        }
+      ]
+    }
+  ]
+}

@@ -61,10 +61,24 @@ page(URL.guide, 'Scarpe da corsa da allenamento: come scegliere', "Cosa guardare
   '<div class="pk-box"><h3>Cosa guardare</h3><ul><li><b>Peso:</b> una scarpa più leggera aiuta nei ritmi vivaci; una più pesante di solito offre più struttura.</li><li><b>Altezza e morbidezza:</b> più stack e schiuma morbida proteggono dagli impatti, ma possono dare meno stabilità.</li><li><b>Dove atterri:</b> tallone o mesopiede/avampiede cambiano quale scarpa funziona meglio, come mostrano le misure sul ritorno di energia.</li><li><b>Uso:</b> chilometri facili, lavori più veloci, lunghi.</li></ul></div>' +
   `<div class="pk-box"><h3>Tre punti di partenza</h3><ul>${P.map((p) => `<li><b><a href="${pu(p)}">${esc(p.brand)} ${esc(p.model)}</a></b>: ${esc(p.summary)}</li>`).join('')}</ul><p><a href="${URL.cmp}">Vai al confronto →</a></p></div>` +
   '<div class="pk-box"><h3>Fonti</h3><p>Misure di laboratorio e recensioni indipendenti elencate nelle schede e nel confronto. Ultima verifica: 28 ottobre 2026.</p></div>' + DISC + END);
+
+// fuel
+const FU = JSON.parse(fs.readFileSync(path.join(root, 'content/catalog/fuel.json'), 'utf8')).products;
+const FURL = '/picks/gel-carboidrati/';
+const fv = (p, k) => { const x = p.specs[k].value; return typeof x === 'number' ? f(x) : esc(x); };
+const frow = (l, k, u) => `<tr><th>${l}</th>${FU.map((p) => `<td>${fv(p, k)}${typeof p.specs[k].value === 'number' ? u : ''}</td>`).join('')}</tr>`;
+page(FURL, 'Gel di carboidrati: confronto dei dati dichiarati', 'Maurten Gel 100, SiS BETA Fuel e PF 30 a confronto sui dati dichiarati dai produttori. Ultima verifica 28/10/2026.',
+  hero('WOLF PICKS · FUEL · GEL', 'Gel di carboidrati: cosa dicono le etichette.', 'Tre gel confrontati sui dati dichiarati dai produttori. Non è un test: non abbiamo provato i prodotti.') +
+  `<div class="pk-scroll"><table class="pk-tbl"><thead><tr><th></th>${FU.map((p) => `<th>${esc(p.brand)} ${esc(p.model)}</th>`).join('')}</tr></thead><tbody>` +
+  frow('Carboidrati per dose', 'carbsPerServingG', ' g') + frow('Rapporto', 'ratio', '') + frow('Peso della bustina', 'servingWeightG', ' g') + frow('Energia', 'kcal', '') + frow('Consistenza', 'texture', '') + frow('Versione con caffeina', 'caffeineVersion', '') +
+  '<tr><th>Prezzo</th>' + FU.map(() => '<td>Vedi prezzo corrente</td>').join('') + '</tbody></table></div>' +
+  '<p class="pk-note">Dati dei produttori, letti sulle loro pagine il 28/10/2026. "Non indicato": la pagina letta non lo riporta.</p>' +
+  '<div class="pk-box"><h3>Come leggerli</h3><ul><li><b>Carboidrati per dose:</b> contano i grammi, non il numero di gel. Per arrivare allo stesso apporto orario con un gel da 25 g servono più bustine che con uno da 40 g.</li><li><b>Rapporto glucosio e fruttosio:</b> i due gel che lo dichiarano usano 1:0,8. Il rapporto riguarda come si assorbono i carboidrati; l\'articolo sotto riassume uno studio sulle quantità.</li><li><b>Tolleranza:</b> si allena prima della gara, con la stessa marca e la stessa quantità.</li></ul><p><a href="/articoli/carboidrati-maratona/">Carboidrati in maratona: cosa dicono gli studi →</a></p></div>' +
+  `<div class="pk-box"><h3>Fonti</h3><ol>${FU.map((p) => `<li><a href="${p.sources[0].url}" rel="noopener">${esc(p.brand)} ${esc(p.model)}: ${esc(p.sources[0].label)}</a></li>`).join('')}</ol><p class="pk-note">Ultima verifica: 28 ottobre 2026.</p></div>` + DISC + END);
 // hub
 page(URL.hub, 'WOLF PICKS', 'Selezioni con fonti, livello di prova e data di verifica. Si parte dalle scarpe da allenamento.',
-  hero('WOLF PICKS', 'Cosa scegliere, e perché.', 'Selezioni con fonti, livello di prova e data di verifica. Si parte dalle scarpe da allenamento; Cycling e Fuel seguono.') +
-  `<div class="pk-grid"><div class="pk-card"><h3>Guida</h3><ul><li><a href="${URL.guide}">Scarpe da allenamento: come scegliere</a><small>Guida all'acquisto</small></li></ul></div><div class="pk-card"><h3>Confronto</h3><ul><li><a href="${URL.cmp}">Evo SL, Novablast 6, Ghost 18</a><small>Misure di laboratorio indipendenti</small></li></ul></div><div class="pk-card"><h3>Schede</h3><ul>${P.map((p) => `<li><a href="${pu(p)}">${esc(p.brand)} ${esc(p.model)}</a><small>SELECTED · verificato il 28/10/2026</small></li>`).join('')}</ul></div></div>` + DISC +
+  hero('WOLF PICKS', 'Cosa scegliere, e perché.', 'Selezioni con fonti, livello di prova e data di verifica. Si parte da scarpe da allenamento e gel di carboidrati; Cycling segue.') +
+  `<div class="pk-grid"><div class="pk-card"><h3>Guida</h3><ul><li><a href="${URL.guide}">Scarpe da allenamento: come scegliere</a><small>Guida all'acquisto</small></li></ul></div><div class="pk-card"><h3>Confronto</h3><ul><li><a href="${URL.cmp}">Evo SL, Novablast 6, Ghost 18</a><small>Misure di laboratorio indipendenti</small></li><li><a href="${FURL}">Gel di carboidrati</a><small>Dati dichiarati dai produttori</small></li></ul></div><div class="pk-card"><h3>Schede</h3><ul>${P.map((p) => `<li><a href="${pu(p)}">${esc(p.brand)} ${esc(p.model)}</a><small>SELECTED · verificato il 28/10/2026</small></li>`).join('')}</ul></div></div>` + DISC +
   '<p class="w-foot"><a class="w-cta" href="/metodologia">Come valutiamo <span aria-hidden="true">→</span></a></p>' + END);
 // partner
 const PI=[['Audience','Atleti di running, ciclismo, nuoto, triathlon e forza. Nessun dato di pubblico finché non è misurato.'],['Research','Analisi basata su fonti: studi, regolamenti, schede ufficiali.'],['Testing','Test sul campo pianificati: i risultati compaiono solo quando esistono.'],['Content','Articoli, confronti e guide all\'acquisto.'],['Performance','Strumenti e calcolatori nel Wolf Engine.'],['Commerce','Link affiliati dichiarati.']];
@@ -87,6 +101,6 @@ let c = fs.readFileSync(path.join(root, 'assets/site.css'), 'utf8').replace(/\n?
 fs.writeFileSync(path.join(root, 'assets/site.css'), c.trimEnd() + '\n' + css + '\n');
 // sitemap
 const sp = path.join(root, 'sitemap.xml'); let sm = fs.readFileSync(sp, 'utf8');
-for (const u of [URL.hub, URL.guide, URL.cmp, '/partner/', ...P.map(pu)]) if (!sm.includes(SITE + u + '</loc>')) sm = sm.replace('</urlset>', `<url><loc>${SITE}${u}</loc></url>\n</urlset>`);
+for (const u of [FURL, URL.hub, URL.guide, URL.cmp, '/partner/', ...P.map(pu)]) if (!sm.includes(SITE + u + '</loc>')) sm = sm.replace('</urlset>', `<url><loc>${SITE}${u}</loc></url>\n</urlset>`);
 fs.writeFileSync(sp, sm);
 console.log('picks:', P.length + 5, 'pagine');
