@@ -140,7 +140,7 @@ const HUBS = {
       ["mancano", ["Non ancora disponibile", "Not available yet"], [
         ["Zone di nuoto", "Richiedono un test tuo e una fonte valida per il tuo gruppo.", null],
         ["Piani e sedute", "Nessun piano finché le fonti non lo reggono.", null],
-        ["Esercizi tecnici e orientamento", "Non trattati: mancano fonti verificate.", null],
+        ["Esercizi tecnici in piscina", "Non ancora trattati, a parte gli esercizi di orientamento.", null],
         ["Calendari delle gare", "Nessun calendario verificato: usa i siti ufficiali.", null],
       ], ["Missing", "Missing"]],
     ],
