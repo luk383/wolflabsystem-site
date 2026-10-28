@@ -16,7 +16,7 @@ const LAB = 'Misure di laboratorio RTINGS su un paio (taglia uomo): le cifre dei
 const LV = '';
 const LPR = { 'adidas-adizero-evo-sl': ['150 €', 'adidas.it'], 'asics-novablast-6': ['160 €', 'asics.com/it'], 'brooks-ghost-18': ['150 €', 'brooksrunning.com, negozio Italia'] };
 const LPN = 'Listino ufficiale: prezzo mostrato dal marchio sul proprio sito, versione uomo, letto il 28/10/2026. Non sono offerte dei negozi e può cambiare per variante e mercato.';
-const DISC = '<p class="pk-note">Trasparenza: nessun link commerciale su questa pagina. Quando ci saranno link affiliati saranno indicati accanto al link e non cambiano la valutazione.</p>';
+const DISC = '<p class="pk-note">Trasparenza: nessun link affiliato su questa pagina; i link esterni sono fonti tecniche e pagine ufficiali dei prodotti. Quando ci saranno link affiliati saranno indicati accanto al link e non cambiano la valutazione.</p>';
 const srcs = (p) => '<ol>' + p.sources.map((s) => `<li><a href="${s.url}" rel="noopener">${esc(s.label)}</a></li>`).join('') + '</ol>';
 function page(rel, title, desc, main) {
   let h = head0.replace(/<title>[^<]*<\/title>/, `<title>${esc(title)} - Wolf Lab</title>`)

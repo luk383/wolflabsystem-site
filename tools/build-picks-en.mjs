@@ -17,7 +17,7 @@ const LAB = 'RTINGS lab measurements on one pair (men\'s size): manufacturer fig
 const LPR = { 'adidas-adizero-evo-sl': ['€150', 'adidas.it'], 'asics-novablast-6': ['€160', 'asics.com/it'], 'brooks-ghost-18': ['€150', 'brooksrunning.com, Italy store'] };
 const LPN = "List price: price shown by the brand on its own site (Italian store), men's version, checked on 28/10/2026. These are not retailer offers and can change by variant and market.";
 const CYP = { 'garmin-edge-1060': '€799.99', 'wahoo-elemnt-roam-3': '€449.99' };
-const DISC = '<p class="pk-note">Transparency: no commercial links on this page. When affiliate links appear they will be marked next to the link and do not change the assessment.</p>';
+const DISC = '<p class="pk-note">Transparency: no affiliate links on this page; external links are technical sources and official product pages. When affiliate links appear they will be marked next to the link and do not change the assessment.</p>';
 const srcs = (p) => '<ol>' + p.sources.map((s) => `<li><a href="${s.url}" rel="noopener">${esc(s.label)}</a></li>`).join('') + '</ol>';
 const EN = {
   'adidas-adizero-evo-sl': { summary: 'Lightstrike Pro midsole with no carbon plate, light. In RTINGS tests, cushioning and energy return are high for the weight.',
