@@ -1,0 +1,158 @@
+{
+ "Ritmi e VDOT": [
+  "Paces and VDOT",
+  "From your race times to training paces."
+ ],
+ "Passaggi di gara": [
+  "Race splits",
+  "Even pace or negative split, every 5 km."
+ ],
+ "Metodi di allenamento": [
+  "Training methods",
+  "Pyramidal, polarized, Norwegian model."
+ ],
+ "Come scegliere: piramidale o polarizzato": [
+  "Choosing: pyramidal or polarized",
+  "What studies say and what to do."
+ ],
+ "Scarpe con piastra in carbonio": [
+  "Carbon-plate shoes",
+  "What the studies say."
+ ],
+ "Scarico pre-gara": [
+  "Race taper",
+  "How to reduce load before race day."
+ ],
+ "Maratone e mezze": [
+  "Marathons and halves",
+  "Dates, fees and logistics."
+ ],
+ "FTP e zone di potenza": [
+  "FTP and power zones",
+  "Coggan zones computed from your FTP."
+ ],
+ "FTP: come si misura": [
+  "FTP: how it is measured",
+  "Tests, limits and practical use."
+ ],
+ "Quanta intensità serve": [
+  "How much intensity",
+  "Intensity distribution in practice."
+ ],
+ "Granfondo": [
+  "Gran fondos",
+  "Nove Colli, Maratona dles Dolomites, Étape du Tour."
+ ],
+ "Ciclocomputer e bici": [
+  "Bike computers and bikes",
+  "News and dated announcements."
+ ],
+ "Mete per la bici": [
+  "Cycling destinations",
+  "Mallorca, Calpe, Tenerife."
+ ],
+ "Libreria dei metodi": [
+  "Methods library",
+  "Running, cycling and strength: what the evidence says."
+ ],
+ "Forza per l'endurance": [
+  "Strength for endurance",
+  "How much, when, with which limits."
+ ],
+ "Bici per la maratona": [
+  "Cycling for the marathon",
+  "What transfers and what does not."
+ ],
+ "Settimana ibrida": [
+  "Hybrid week",
+  "Hours, hard and easy days from Wolf Engine."
+ ],
+ "Mobilità": [
+  "Mobility",
+  ""
+ ],
+ "VDOT": [
+  "VDOT",
+  "Daniels and Gilbert index that converts a race into a value comparable with VO₂max; used for paces and equivalent performances."
+ ],
+ "FTP": [
+  "FTP",
+  "Highest power sustainable in steady conditions for about an hour; estimated from a test (20 minutes × 0.95)."
+ ],
+ "Soglia": [
+  "Threshold",
+  "The two thresholds split intensity into three zones; values change with the measurement method."
+ ],
+ "VO₂max": [
+  "VO₂max",
+  "Maximal oxygen uptake, measured in a lab: it says how big the engine is, not how you use it."
+ ],
+ "Durability": [
+  "Durability",
+  "How late and how much physiological parameters deteriorate during prolonged exercise (Maunder et al., 2021)."
+ ],
+ "Fatica e carico": [
+  "Fatigue and load",
+  "How much intensity you really need and how to distribute it."
+ ],
+ "Sonno": [
+  "Sleep",
+  "What studies say on sleep and performance."
+ ],
+ "Scarico": [
+  "Taper",
+  "Reduce load before the race without losing fitness."
+ ],
+ "HRV": [
+  "HRV",
+  ""
+ ],
+ "FC a riposo": [
+  "Resting HR",
+  ""
+ ],
+ "Carboidrati all'ora": [
+  "Carbohydrate per hour",
+  "Wolf Engine computes it from duration."
+ ],
+ "Calcolatore carboidrati in gara": [
+  "Race carbohydrate calculator",
+  "Gels, grams and intake times."
+ ],
+ "Carboidrati in maratona": [
+  "Carbohydrate in the marathon",
+  "Guidelines and limits."
+ ],
+ "Caffeina": [
+  "Caffeine",
+  "Doses, timing and when to avoid it."
+ ],
+ "Nutrizione": [
+  "Nutrition",
+  "Carbohydrate, protein and fat sources."
+ ],
+ "Integratori": [
+  "Supplements",
+  "How to read the evidence."
+ ],
+ "Idratazione ed elettroliti": [
+  "Hydration and electrolytes",
+  "Starting point and your own sweat."
+ ],
+ "Gare": [
+  "Races",
+  "Marathons, halves and gran fondos with dates, fees and entry."
+ ],
+ "Training camp e viaggi": [
+  "Training camps and trips",
+  "Altitude, bike and run: where, when, how much."
+ ],
+ "Novità": [
+  "News",
+  "Watches, bike computers, shoes, bikes: dated announcements with sources."
+ ],
+ "Come valutiamo": [
+  "How we evaluate",
+  "Evidence levels and Wolf Score rules."
+ ]
+}

@@ -155,7 +155,7 @@
 (function(){var b=document.querySelector(".brand");if(b){b.innerHTML='WOLF<span class="brand-word">LAB<span class="brand-dot">.</span></span><span class="brand-icons" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="runner-head" cx="15" cy="4" r="2"/><path d="m11 8 4 2 3 4h3M15 10l-3 5 4 3 1 4M12 15l-5 1-4 5M11 8l-3 4H4"/></svg><svg viewBox="0 0 24 24"><circle cx="5.5" cy="17" r="4"/><circle cx="18.5" cy="17" r="4"/><path d="M5.5 17 10 8l5.5 9h-10L13 8h4M9 5h4m3-1h3l3 13"/></svg><svg viewBox="0 0 24 24"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 22l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/><path d="M3 12h4l2-4 4 8 2-4h6"/></svg></span>';b.setAttribute("aria-label","Wolf Lab");}})();
 
 // One training entry across older generated pages as well as the new hub.
-(function(){var en=document.documentElement.lang==='en',nav=document.querySelector('.site-head .nav');if(!nav)return;var training=en?'/en/training/':'/allenamento/';nav.innerHTML='<a href="'+training+'">'+(en?'Training':'Allenamento')+'</a><a href="'+(en?'/en/races/':'/gare/')+'">'+(en?'Races':'Gare')+'</a><a href="'+(en?'/en/trips/':'/viaggi/')+'">'+(en?'Trips':'Viaggi')+'</a><a href="'+(en?'/en/news/':'/novita/')+'">'+(en?'News':'Novità')+'</a>';var current=nav.querySelector('a[href="'+location.pathname+'"]');if(current)current.setAttribute('aria-current','page');if(location.hash){var el=document.getElementById(location.hash.slice(1));if(el){if(el.tagName==='DETAILS')el.open=true;var d=el.closest('details')||el.querySelector('details');if(d)d.open=true;el.scrollIntoView();}}document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var el=document.getElementById(a.hash.slice(1));if(el){if(el.tagName==='DETAILS')el.open=true;var d=el.closest('details')||el.querySelector('details');if(d)d.open=true;}});})();
+(function(){var en=document.documentElement.lang==='en',nav=document.querySelector('.site-head .nav');if(!nav)return;var P=en?'/en':'';var items=[['RUN','/run'],['RIDE','/ride'],['TRAIN','/train'],['FUEL','/fuel'],['RACE','/race'],['GEAR','/gear']];var path=location.pathname.replace(/\/$/,'')||'/';var map=[[/^\/(en\/)?(gare|viaggi|races|trips|race)(\/|$)/,'/race'],[/^\/(en\/)?(allenamento|training|articoli|articles|train)(\/|$)/,'/train'],[/^\/(en\/)?(novita|news|gear)(\/|$)/,'/gear'],[/^\/(en\/)?(run|ride|fuel)(\/|$)/,null]];var act=null;map.forEach(function(m){if(m[0].test(path))act=m[1]||path.replace(/^\/en/,'');});nav.innerHTML=items.map(function(i){return '<a href="'+P+i[1]+'"'+(act===i[1]?' aria-current="page"':'')+'>'+i[0]+'</a>';}).join('')+'<a class="nav-engine" href="'+P+'/engine"'+(/\/engine$/.test(path)?' aria-current="page"':'')+'>WOLF ENGINE</a>';if(location.hash){var el=document.getElementById(location.hash.slice(1));if(el){if(el.tagName==='DETAILS')el.open=true;var d=el.closest('details')||el.querySelector('details');if(d)d.open=true;el.scrollIntoView();}}document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var el=document.getElementById(a.hash.slice(1));if(el){if(el.tagName==='DETAILS')el.open=true;var d=el.closest('details')||el.querySelector('details');if(d)d.open=true;}});})();
 // Remove the three text blocks requested for deletion, including their direct English counterparts.
 (function(){
   "use strict";
@@ -168,4 +168,49 @@
     "A checked starting collection, not every method. Running, cycling and strength can be explored separately. These summaries explain evidence and limits, not individual prescriptions."
   ]);
   document.querySelectorAll("h2, p").forEach(function(el){if(exact.has(el.textContent.trim()))el.remove();});
+})();
+
+// Wolf v3: tema chiaro/scuro (solo pagine nuove), contatori, filtri esplora, barra Wolf negli articoli.
+(function(){
+  "use strict";
+  var en=document.documentElement.lang==='en',root=document.documentElement;
+  if(root.classList.contains('wolf2')){
+    var head=document.querySelector('.site-head .wrap'),lang=document.querySelector('.site-head .lang');
+    if(head){var b=document.createElement('button');b.type='button';b.className='theme-toggle';b.setAttribute('aria-label',en?'Toggle dark mode':'Attiva/disattiva modalità scura');
+      var set=function(){b.textContent=root.getAttribute('data-theme')==='dark'?(en?'Light':'Chiaro'):(en?'Dark':'Scuro');};set();
+      b.addEventListener('click',function(){var d=root.getAttribute('data-theme')==='dark';if(d)root.removeAttribute('data-theme');else root.setAttribute('data-theme','dark');try{localStorage.setItem('wolf-theme',d?'light':'dark');}catch(e){}set();});
+      head.appendChild(b);}
+    // numeri che salgono, una volta, senza animazione se l'utente la riduce
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('[data-count]').forEach(function(el){var n=+el.dataset.count;if(reduce||!('IntersectionObserver' in window))return;el.textContent='0';
+      new IntersectionObserver(function(es,o){es.forEach(function(e){if(!e.isIntersecting)return;o.disconnect();var t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/900);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f);})(t0);});}).observe(el);});
+  }
+  // Filtri per gare e training camp, dai dati con fonte in /assets/explore-data.json
+  var raceList=document.querySelector('.race-list'),tripList=document.querySelector('.trip-list');
+  if(raceList||tripList){fetch('/assets/explore-data.json').then(function(r){return r.json();}).then(function(D){
+    var list=raceList||tripList,meta=raceList?D.races:D.trips,items=[].slice.call(list.querySelectorAll('li'));
+    items.forEach(function(li){var a=li.querySelector('a');var m=a&&meta[new URL(a.href).pathname];li._m=m;});
+    var box=document.createElement('div');box.className='explore';var cnt=document.createElement('p');cnt.className='explore-count';cnt.setAttribute('role','status');
+    function sel(id,label,opts){var l=document.createElement('label');l.textContent=label;var s=document.createElement('select');s.id=id;opts.forEach(function(o){var op=document.createElement('option');op.value=o[0];op.textContent=o[1];s.appendChild(op);});l.appendChild(s);return l;}
+    var row=document.createElement('div');row.className='row';var apply;
+    if(raceList){
+      var C={};items.forEach(function(li){if(li._m)C[li._m.country]=1;});
+      var mn=en?['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']:['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
+      row.appendChild(sel('x-country',en?'Country':'Paese',[['',en?'All':'Tutti']].concat(Object.keys(C).sort().map(function(c){return [c,c];}))));
+      row.appendChild(sel('x-month',en?'Month':'Mese',[['',en?'All':'Tutti']].concat(mn.map(function(m,i){return [String(i+1),m];}))));
+      row.appendChild(sel('x-entry',en?'Entry':'Iscrizione',[['',en?'All':'Tutte'],['lottery',en?'Lottery / ballot':'Lotteria / sorteggio'],['qualifying',en?'Qualifying time':'Tempo di qualifica'],['open',en?'Open / standard':'Standard'],['soldout',en?'Sold out':'Esaurita']]));
+      apply=function(){var c=x('x-country'),m=x('x-month'),e=x('x-entry'),n=0;items.forEach(function(li){var d=li._m,ok=!d||((!c||d.country===c)&&(!m||String(d.month)===m)&&(!e||d.entry===e));li.dataset.xhide=ok?'':'1';n+=ok?1:0;});sync();cnt.textContent=n+(en?' races':' gare');};
+    }else{
+      row.appendChild(sel('x-sport',en?'Focus':'Focus',[['',en?'All':'Tutti'],['bike',en?'Cycling':'Bici'],['run',en?'Running':'Corsa'],['altitude',en?'Altitude':'Altura']]));
+      apply=function(){var s=x('x-sport'),n=0;items.forEach(function(li){var d=li._m,ok=!d||!s||d.sports.indexOf(s)>=0;li.dataset.xhide=ok?'':'1';n+=ok?1:0;});sync();cnt.textContent=n+(en?' destinations':' mete');};
+    }
+    function x(id){return document.getElementById(id).value;}
+    function sync(){items.forEach(function(li){li.hidden=li.dataset.xhide==='1'||li.dataset.fhide==='1';});}
+    box.appendChild(row);box.appendChild(cnt);list.parentNode.insertBefore(box,list);box.addEventListener('change',apply);apply();
+    var f=document.querySelector('.filter');if(f)f.addEventListener('click',function(){setTimeout(function(){items.forEach(function(li){li.dataset.fhide=li.hidden&&li.dataset.xhide!=='1'?'1':'';});sync();},0);});
+  }).catch(function(){});}
+  // Barra Wolf negli articoli: livello di prova, aggiornamento, lettura (dati già presenti nella pagina)
+  var side=document.querySelector('.art-side'),badge=document.querySelector('.art-hero .evidence, .art-body .evidence, .evidence'),tm=document.querySelector('.art-hero time');
+  if(side&&tm){var lv=badge?badge.textContent.trim():null,mins=(document.querySelector('.art-hero .article-meta')||{textContent:''}).textContent.match(/(\d+)\s*(min)/);
+    var w=document.createElement('div');w.className='wolf-side';w.innerHTML='<h2>WOLF LAB</h2><dl>'+(lv?'<div><dt>'+(en?'Evidence':'Prove')+'</dt><dd>'+lv+'</dd></div>':'')+'<div><dt>'+(en?'Published':'Pubblicato')+'</dt><dd>'+tm.textContent.replace(/^(Published|Pubblicato il)\s*/i,'')+'</dd></div>'+(mins?'<div><dt>'+(en?'Read':'Lettura')+'</dt><dd>'+mins[1]+' min</dd></div>':'')+'</dl>';side.insertBefore(w,side.firstChild);}
 })();

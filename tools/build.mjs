@@ -513,3 +513,4 @@ main();
 // Rebuild the checked reference library after the base pages.
 await import("./build-library.mjs");
 await import("./build-news.mjs");
+await import("./build-engine.mjs");

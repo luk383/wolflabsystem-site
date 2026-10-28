@@ -1,30 +1,30 @@
 /* Pagine articolo: titolo su rosso, sezioni nette, colonna laterale (indice + letture) */
 .art{padding:0}
-.art-hero{background:#BF251B;color:#fff}
+.art-hero{background:#0A0A0A;color:#F5F4EF}
 .art-hero .wrap{padding:44px 0 40px}
 .art-hero h1{font-size:clamp(36px,5vw,60px);font-weight:900;letter-spacing:-2.5px;line-height:1;margin:0 0 22px;max-width:18ch;color:#fff;text-wrap:balance;overflow-wrap:break-word}
-.art-hero h1:after{content:"";display:block;width:70px;height:7px;background:#FF8A24;margin-top:20px}
+.art-hero h1:after{content:"";display:block;width:70px;height:7px;background:#E65A2E;margin-top:20px}
 .art-hero .article-meta{margin:0;color:#fff3e4;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;gap:8px 22px}
 .art-grid{display:grid;grid-template-columns:minmax(0,720px) 280px;gap:0 72px;padding:36px 0 56px;align-items:start}
 .art-body{max-width:720px}
-.art-body h2{font-size:26px;letter-spacing:-.8px;line-height:1.1;margin:44px 0 14px;padding-top:14px;border-top:3px solid #BF251B;scroll-margin-top:16px}
+.art-body h2{font-size:26px;letter-spacing:-.8px;line-height:1.1;margin:44px 0 14px;padding-top:14px;border-top:3px solid #E65A2E;scroll-margin-top:16px}
 .art-body .brief{margin:0 0 8px}
-.art-body .brief h2{border:0;padding:0;margin:0 0 8px;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#BF251B}
+.art-body .brief h2{border:0;padding:0;margin:0 0 8px;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#E65A2E}
 .art-body table{width:100%;border-collapse:collapse;font-size:15px}
-.art-body thead th{background:#15201C;color:#FAFAF5;text-align:left;padding:10px 12px;font-size:12px;letter-spacing:.6px;text-transform:uppercase}
+.art-body thead th{background:#0A0A0A;color:#F5F4EF;text-align:left;padding:10px 12px;font-size:12px;letter-spacing:.6px;text-transform:uppercase}
 .art-body td{padding:10px 12px;border-bottom:1px solid var(--rule)}
-.art-body tbody tr:nth-child(even){background:#fff8f0}
-.art-body a{color:#BF251B;text-underline-offset:3px}
-.art-toc-m{display:none;margin:0 0 22px;border-top:3px solid #BF251B;border-bottom:1px solid var(--rule)}
-.art-toc-m summary{cursor:pointer;padding:12px 0;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#BF251B;list-style:none}
+.art-body tbody tr:nth-child(even){background:#F5F4EF}
+.art-body a{color:#E65A2E;text-underline-offset:3px}
+.art-toc-m{display:none;margin:0 0 22px;border-top:3px solid #E65A2E;border-bottom:1px solid var(--rule)}
+.art-toc-m summary{cursor:pointer;padding:12px 0;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#E65A2E;list-style:none}
 .art-toc-m summary::after{content:" +"}.art-toc-m[open] summary::after{content:" −"}
-.art-toc-m ol{list-style:none;margin:0;padding:0 0 12px}.art-toc-m li{margin:0 0 10px;font-size:15px}.art-toc-m a{color:#15201C;text-decoration:none}
+.art-toc-m ol{list-style:none;margin:0;padding:0 0 12px}.art-toc-m li{margin:0 0 10px;font-size:15px}.art-toc-m a{color:#0A0A0A;text-decoration:none}
 .art-side{position:sticky;top:20px;font-size:14px;padding-top:6px}
-.art-side h2{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#BF251B;margin:0 0 10px;padding-top:12px;border-top:3px solid #BF251B}
+.art-side h2{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#E65A2E;margin:0 0 10px;padding-top:12px;border-top:3px solid #E65A2E}
 .art-side ol,.art-side ul{list-style:none;margin:0 0 30px;padding:0}
 .art-side li{margin:0 0 9px;line-height:1.3}
-.art-side a{color:#15201C;text-decoration:none}
-.art-side a:hover{color:#BF251B}
+.art-side a{color:#0A0A0A;text-decoration:none}
+.art-side a:hover{color:#E65A2E}
 .art-related a span{display:block;font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#7a7a72;margin-bottom:2px}
 .art-related li{padding-bottom:9px;border-bottom:1px solid var(--rule)}
 @media(max-width:960px){.art-grid{grid-template-columns:minmax(0,1fr);gap:0}.art-side{position:static;margin-top:28px;padding-top:0}.art-toc{display:none}.art-toc-m{display:block}}
@@ -37,6 +37,6 @@
 .art-hero .crumb a{color:#fff3e4}
 .art-hero h1+.lede{margin-top:2px}
 @media(max-width:760px){.inner-body{padding:28px 0 32px}.art-hero .lede{font-size:16px}}
-.art-hero .major{color:#fff;border-color:#FF8A24}
+.art-hero .major{color:#fff;border-color:#E65A2E}
 .inner-body.prose{max-width:var(--wrap)}
 .inner-body.prose>*{max-width:720px}

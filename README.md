@@ -29,3 +29,6 @@ node tools/build.mjs
 2. Struttura del corpo: riquadro "In breve", cosa dice la ricerca, cosa fare in pratica, fonti numerate.
 3. `node tools/build.mjs`, controlla, committa.
 
+
+## Wolf Engine
+`node tools/build-engine.mjs` generates the hub pages (run, ride, train, fuel, race, gear), the engine page, methodology, the new home and `assets/explore-data.json`. The calculation model is in `assets/engine.js`, the UI in `assets/engine-ui.js`.
