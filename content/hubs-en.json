@@ -215,13 +215,9 @@
   "HYROX",
   "Separate discipline: running and strength stations, no swimming."
  ],
- "Calendari delle gare di nuoto": [
-  "Swim race calendars",
-  "Not published: no verified calendar."
- ],
  "Nuoto, triathlon, IRONMAN e HYROX": [
   "Swimming, triathlon, IRONMAN and HYROX",
-  "Distances and formats from the official bodies. No calendar."
+  "Distances and formats from the official bodies, with links to their calendars."
  ],
  "Distribuzione dell'intensità": [
   "Intensity distribution",
@@ -238,18 +234,6 @@
  "Scarico prima della gara": [
   "Taper before a race",
   "Meta-analysis of athletes across sports: 2 weeks, volume cut by 41-60%."
- ],
- "Piani e sedute": [
-  "Plans and sessions",
-  "No plan until sources support it."
- ],
- "Esercizi tecnici e orientamento": [
-  "Technique drills and sighting",
-  "Not covered: no verified sources."
- ],
- "Calendari delle gare": [
-  "Race calendars",
-  "No verified calendar: use the official sites."
  ],
  "Ritmo di gara e nuoto nel triathlon": [
   "Race pacing and the swim in triathlon",
@@ -271,8 +255,24 @@
   "FIN rules (Masters)",
   "Race types, buoy, water temperature and time limit in FIN Masters open-water races, 2025-2026."
  ],
- "Esercizi tecnici in piscina": [
-  "Technique drills in the pool",
-  "Not covered yet, apart from the sighting drills."
+ "Piani personalizzati": [
+  "Personalised plans",
+  "No tailored plan and no sessions in numbers: valid sources and someone who sees you swim are needed."
+ ],
+ "Altri esercizi tecnici": [
+  "Other technique drills",
+  "Not covered yet, beyond breathing, pull buoy and sighting."
+ ],
+ "Sedute di nuoto": [
+  "Swim sessions",
+  "Session structure, three breathing drills, pull buoy: Swim England and U.S. Masters Swimming."
+ ],
+ "Muta e prima transizione": [
+  "Wetsuit and first transition",
+  "Wetsuit table and T1 rules from the World Triathlon rulebook."
+ ],
+ "Calendari ufficiali": [
+  "Official calendars",
+  "Links to FIN, IRONMAN and HYROX: no copy of the calendars."
  ]
 }

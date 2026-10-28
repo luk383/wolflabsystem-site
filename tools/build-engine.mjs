@@ -119,6 +119,7 @@ const HUBS = {
         ["Frequenza e lunghezza di bracciata", "Cosa si misura, come cambia con la fatica, perché non diamo valori obiettivo.", ["/articoli/nuoto-tecnica-bracciata/", "/en/articles/swim-stroke-technique/"]],
       ], ["Technique", "Technique"]],
       ["piscina", ["Piscina e velocità critica", "Pool and critical speed"], [
+        ["Sedute di nuoto", "Struttura di una seduta, tre esercizi di respirazione, pull buoy: Swim England e U.S. Masters Swimming.", ["/articoli/nuoto-sedute-esercizi-transizione/", "/en/articles/swim-sessions-drills-transition/"]],
         ["Calcolatore CSS", "Due prove, controlli di coerenza, nessuna zona. Funziona nel browser.", ["/articoli/nuoto-css-velocita-critica/#s5", "/en/articles/swim-critical-speed/#s5"]],
         ["Velocità critica (CSS)", "Come si calcola, 16 protocolli in 41 studi, limiti del metodo.", ["/articoli/nuoto-css-velocita-critica/", "/en/articles/swim-critical-speed/"]],
       ], ["Pool", "Pool"]],
@@ -131,6 +132,8 @@ const HUBS = {
       ["gare", ["Gare e formati", "Races and formats"], [
         ["Nuoto in acque libere", "Programma olimpico dal regolamento World Aquatics.", ["/articoli/nuoto-gare-e-formati/#s2", "/en/articles/swim-race-formats/#s2"]],
         ["Triathlon", "Formati Standard e Sprint secondo World Triathlon: il nuoto è la prima frazione.", ["/articoli/nuoto-gare-e-formati/#s3", "/en/articles/swim-race-formats/#s3"]],
+        ["Muta e prima transizione", "Tabella sulla muta e regole di T1 dal regolamento World Triathlon.", ["/articoli/nuoto-sedute-esercizi-transizione/#s6", "/en/articles/swim-sessions-drills-transition/#s6"]],
+        ["Calendari ufficiali", "Collegamenti a FIN, IRONMAN e HYROX: nessuna copia dei calendari.", ["/articoli/nuoto-gare-e-formati/#s6", "/en/articles/swim-race-formats/#s6"]],
         ["Ritmo di gara e nuoto nel triathlon", "Pacing per distanza in piscina e intensità del nuoto nel triathlon: cosa dicono due revisioni.", ["/articoli/nuoto-ritmo-gara-triathlon/", "/en/articles/swim-pacing-triathlon/"]],
         ["Piscina e acque libere", "Cosa cambia nella bracciata tra piscina e acque libere in triatleti élite: uno studio.", ["/articoli/nuoto-piscina-acque-libere/", "/en/articles/swim-pool-vs-open-water/"]],
         ["HYROX e mezzo IRONMAN: studi", "Due piccoli studi su atleti amatoriali: cosa hanno misurato e i limiti.", ["/articoli/hyrox-triathlon-lungo-studi/", "/en/articles/hyrox-long-triathlon-studies/"]],
@@ -139,9 +142,8 @@ const HUBS = {
       ], ["Races", "Races"]],
       ["mancano", ["Non ancora disponibile", "Not available yet"], [
         ["Zone di nuoto", "Richiedono un test tuo e una fonte valida per il tuo gruppo.", null],
-        ["Piani e sedute", "Nessun piano finché le fonti non lo reggono.", null],
-        ["Esercizi tecnici in piscina", "Non ancora trattati, a parte gli esercizi di orientamento.", null],
-        ["Calendari delle gare", "Nessun calendario verificato: usa i siti ufficiali.", null],
+        ["Piani personalizzati", "Nessun piano su misura né sedute in numeri: servono fonti valide e qualcuno che ti veda nuotare.", null],
+        ["Altri esercizi tecnici", "Non ancora trattati, oltre a respirazione, pull buoy e orientamento.", null],
       ], ["Missing", "Missing"]],
     ],
   },
@@ -179,7 +181,7 @@ const HUBS = {
     kicker: ["RACE", "RACE"], title: ["Scegliere la gara. Preparare il viaggio.", "Pick the race. Plan the trip."],
     lede: ["Gare e training camp con fonti e data di verifica. Filtri per sport, paese, mese e tipo di iscrizione.", "Races and training camps with sources and check dates. Filters by sport, country, month and entry type."],
     groups: [
-      [["Gare", "Maratone, mezze e granfondo con date, quote e iscrizioni.", "races"], ["Nuoto, triathlon, IRONMAN e HYROX", "Distanze e formati dagli enti ufficiali. Nessun calendario.", ["/articoli/nuoto-gare-e-formati/", "/en/articles/swim-race-formats/"]], ["Training camp e viaggi", "Altura, bici e corsa: dove, quando, quanto.", "trips"], ["Passaggi di gara", "Calcolali dal tuo obiettivo.", "engine#race"], ["Scarico pre-gara", "Le ultime due settimane.", ["/articoli/scarico-pre-gara/", "/en/articles/race-taper/"]]],
+      [["Gare", "Maratone, mezze e granfondo con date, quote e iscrizioni.", "races"], ["Nuoto, triathlon, IRONMAN e HYROX", "Distanze e formati dagli enti ufficiali, con i collegamenti ai loro calendari.", ["/articoli/nuoto-gare-e-formati/", "/en/articles/swim-race-formats/"]], ["Training camp e viaggi", "Altura, bici e corsa: dove, quando, quanto.", "trips"], ["Passaggi di gara", "Calcolali dal tuo obiettivo.", "engine#race"], ["Scarico pre-gara", "Le ultime due settimane.", ["/articoli/scarico-pre-gara/", "/en/articles/race-taper/"]]],
     ],
   },
   gear: {

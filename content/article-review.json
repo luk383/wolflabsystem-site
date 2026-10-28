@@ -435,5 +435,28 @@
    "gare acque libere Master FIN, stagione 2025-2026",
    "FIN Masters open-water races, 2025-2026 season"
   ]
+ },
+ "nuoto-sedute-esercizi-transizione|swim-sessions-drills-transition": {
+  "lv": [
+   "indicazioni di federazione e regolamento ufficiale, nessuno studio",
+   "governing-body guidance and official rulebook, no study"
+  ],
+  "stars": 1,
+  "how": [
+   "Lettura di sei pagine di Swim England e U.S. Masters Swimming e delle sezioni 4.2 e 7.1 del regolamento World Triathlon.",
+   "Reading of six Swim England and U.S. Masters Swimming pages and of sections 4.2 and 7.1 of the World Triathlon rulebook."
+  ],
+  "lim": [
+   "Indicazioni non sperimentali, non studi su amatori; sedute 2-20 di Swim England riservate ai soci; il regolamento riguarda le gare World Triathlon, altri eventi possono differire.",
+   "Non-experimental guidance, not studies on amateurs; Swim England sessions 2-20 are members-only; the rulebook covers World Triathlon races, other events can differ."
+  ],
+  "why": [
+   "Indicazioni di federazione e regolamento: Molto limitata.",
+   "Governing-body guidance and a rulebook: Very limited."
+  ],
+  "scope": [
+   "struttura delle sedute, esercizi di respirazione, regole di muta e prima transizione nelle gare World Triathlon; non piani né prescrizioni",
+   "session structure, breathing drills, wetsuit and first-transition rules in World Triathlon races; not plans or prescriptions"
+  ]
  }
 }
