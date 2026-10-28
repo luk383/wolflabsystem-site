@@ -132,6 +132,7 @@ const HUBS = {
         ["Triathlon", "Formati Standard e Sprint secondo World Triathlon: il nuoto è la prima frazione.", ["/articoli/nuoto-gare-e-formati/#s3", "/en/articles/swim-race-formats/#s3"]],
         ["Ritmo di gara e nuoto nel triathlon", "Pacing per distanza in piscina e intensità del nuoto nel triathlon: cosa dicono due revisioni.", ["/articoli/nuoto-ritmo-gara-triathlon/", "/en/articles/swim-pacing-triathlon/"]],
         ["Piscina e acque libere", "Cosa cambia nella bracciata tra piscina e acque libere in triatleti élite: uno studio.", ["/articoli/nuoto-piscina-acque-libere/", "/en/articles/swim-pool-vs-open-water/"]],
+        ["HYROX e mezzo IRONMAN: studi", "Due piccoli studi su atleti amatoriali: cosa hanno misurato e i limiti.", ["/articoli/hyrox-triathlon-lungo-studi/", "/en/articles/hyrox-long-triathlon-studies/"]],
         ["IRONMAN e 70.3", "Contesto multisport: distanze dichiarate dall'organizzatore.", ["/articoli/nuoto-gare-e-formati/#s4", "/en/articles/swim-race-formats/#s4"]],
         ["HYROX", "Disciplina separata: corsa e stazioni di forza, senza nuoto.", ["/articoli/nuoto-gare-e-formati/#s5", "/en/articles/swim-race-formats/#s5"]],
       ], ["Races", "Races"]],
