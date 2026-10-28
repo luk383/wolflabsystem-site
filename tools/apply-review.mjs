@@ -15,9 +15,9 @@ for (const [k, d] of Object.entries(R)) {
     let h = fs.readFileSync(f, 'utf8'); if (h.includes('id="s-review"')) continue;
     const o = h;
     h = h.replace(/<div><dt>(Livello di prova|Evidence level)<\/dt><dd class="missing">[^<]*<\/dd><\/div>/, `<div><dt>${l ? 'Evidence level' : 'Livello di prova'}</dt><dd>${d.lv[l]}</dd></div>`);
-    h = h.replace(/<div><dt>Wolf Confidence<\/dt><dd class="missing">[^<]*<\/dd><\/div>/, `<div><dt>Wolf Confidence</dt><dd>${stars(d.stars)} ${names[d.stars][l]}</dd></div>`);
+    h = h.replace(/<div><dt>Wolf Confidence<\/dt><dd class="missing">[^<]*<\/dd><\/div>/, `<div><dt>Wolf Confidence</dt><dd>${stars(d.stars)} ${names[d.stars][l]}<br><small>${l ? 'Applies to' : 'Vale per'}: ${d.scope[l]}</small></dd></div>`);
     const tl = TOOL[it] ? `<p>${l ? 'Related tool' : 'Strumento correlato'}: <a href="${l ? '/en/engine' : '/engine'}#${TOOL[it][0]}">Wolf Engine, ${TOOL[it][l + 1]}</a>.</p>` : '';
-    const sec = `<h2 id="s-review">${l ? 'How we reviewed it' : 'Come l\'abbiamo valutato'}</h2><p>${d.how[l]}</p><p><strong>${l ? 'Limits.' : 'Limiti.'}</strong> ${d.lim[l]}</p><p><strong>Wolf Confidence ${stars(d.stars)}.</strong> ${d.why[l]} ${l ? 'This is a documentary review (ANALYSIS). Wolf Lab has not tested this ourselves (no TEST, no VERDICT). Reviewed 28 October 2026.' : 'È una revisione documentale (ANALYSIS). Wolf Lab non l\'ha provato di persona (nessun TEST, nessun VERDICT). Rivisto il 28 ottobre 2026.'}</p>${tl}`;
+    const sec = `<h2 id="s-review">${l ? 'How we reviewed it' : 'Come l\'abbiamo valutato'}</h2><p>${d.how[l]}</p><p><strong>${l ? 'Limits.' : 'Limiti.'}</strong> ${d.lim[l]}</p><p><strong>Wolf Confidence ${stars(d.stars)} (${l ? 'applies to' : 'vale per'}: ${d.scope[l]}).</strong> ${d.why[l]} ${l ? 'This is a documentary review (ANALYSIS). Wolf Lab has not tested this ourselves (no TEST, no VERDICT). Reviewed 28 October 2026.' : 'È una revisione documentale (ANALYSIS). Wolf Lab non l\'ha provato di persona (nessun TEST, nessun VERDICT). Rivisto il 28 ottobre 2026.'}</p>${tl}`;
     const fm = h.match(/<h2 id="(s\d+)">(Fonti|Sources)</); if (!fm) continue;
     h = h.replace(`<h2 id="${fm[1]}">`, sec + `<h2 id="${fm[1]}">`);
     h = h.replace(new RegExp(`(<li><a href="#${fm[1]}">)`), `<li><a href="#s-review">${l ? 'How we reviewed it' : 'Come l\'abbiamo valutato'}</a></li>$1`);

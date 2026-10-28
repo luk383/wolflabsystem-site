@@ -16,6 +16,10 @@
   "why": [
    "Prove poche e in parte contrastanti: Limitata.",
    "Few and partly conflicting studies: Limited."
+  ],
+  "scope": [
+   "durata del sonno e prestazione",
+   "sleep duration and performance"
   ]
  },
  "scarico-pre-gara|race-taper": {
@@ -35,6 +39,10 @@
   "why": [
    "Prove buone, con limite di popolazione: Moderata.",
    "Good evidence with a population limit: Moderate."
+  ],
+  "scope": [
+   "durata e riduzione di volume dello scarico",
+   "taper length and volume reduction"
   ]
  },
  "caffeina-e-prestazione|caffeine-and-performance": {
@@ -54,6 +62,10 @@
   "why": [
    "Prove consistenti ma da una sola sintesi di esperti: Moderata.",
    "Consistent evidence but from one expert synthesis: Moderate."
+  ],
+  "scope": [
+   "dose e prestazione di endurance",
+   "dose and endurance performance"
   ]
  },
  "carboidrati-maratona|marathon-carbohydrates": {
@@ -73,6 +85,10 @@
   "why": [
    "Linee guida solide, limiti sugli amatori: Moderata.",
    "Solid guidelines, limits for recreational runners: Moderate."
+  ],
+  "scope": [
+   "grammi all'ora per durata di gara e carico pre-gara",
+   "grams per hour by race duration and pre-race loading"
   ]
  },
  "forza-per-endurance|strength-for-endurance": {
@@ -92,6 +108,10 @@
   "why": [
    "Prove buone ma di qualità mista e non sulla maratona: Moderata.",
    "Good evidence of mixed quality, not on the marathon: Moderate."
+  ],
+  "scope": [
+   "effetto sul VO₂max; economia di corsa con prove più deboli",
+   "effect on VO₂max; running economy with weaker evidence"
   ]
  },
  "ftp-e-zone-di-potenza|ftp-and-power-zones": {
@@ -111,6 +131,10 @@
   "why": [
    "Poche prove su campioni piccoli: Limitata.",
    "Few studies on small samples: Limited."
+  ],
+  "scope": [
+   "test da 20 minuti come stima della soglia",
+   "20-minute test as a threshold estimate"
   ]
  },
  "quanta-intensita-serve|how-much-intensity": {
@@ -130,6 +154,10 @@
   "why": [
    "Prove osservazionali e un solo intervento: Limitata.",
    "Observational evidence and a single intervention: Limited."
+  ],
+  "scope": [
+   "distribuzione dell'intensità negli atleti allenati",
+   "intensity distribution in trained athletes"
   ]
  },
  "bici-per-la-maratona|cycling-for-the-marathon": {
@@ -149,6 +177,10 @@
   "why": [
    "Prove datate e in parte pareri: Molto limitata.",
    "Dated evidence and partly opinion: Very limited."
+  ],
+  "scope": [
+   "trasferimento del VO₂max da bici a corsa",
+   "VO₂max transfer from bike to run"
   ]
  },
  "scarpe-con-piastra-carbonio|carbon-plate-running-shoes": {
@@ -168,6 +200,10 @@
   "why": [
    "La stella vale per l'effetto sul costo energetico (prove di livello 1, certezza moderata). Per durata e infortuni la fiducia è Molto limitata, e la pagina lo dice separatamente. Voto: Moderata.",
    "The rating applies to the energy-cost effect (level 1 evidence, moderate certainty). For durability and injuries confidence is Very limited, and the page says so separately. Rating: Moderate."
+  ],
+  "scope": [
+   "solo il costo energetico. Durata e infortuni: Molto limitata",
+   "energy cost only. Durability and injuries: Very limited"
   ]
  }
 }

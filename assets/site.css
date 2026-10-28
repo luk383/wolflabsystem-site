@@ -449,3 +449,4 @@ html:not([data-theme="dark"]) :is(.w-tools .dev span,.w-tools .dev em,.w-meta,.a
 html:not([data-theme="dark"]) .w-feature .w-go,html:not([data-theme="dark"]) .w-side .w-go{color:#A8380D}
 html:not([data-theme="dark"]) .w-num{color:#A8380D}
 html:not([data-theme="dark"]) .w-numbers .w-num,html:not([data-theme="dark"]) .wolf-side .w-num{color:inherit}
+.wolf-side dd small{font-weight:400;font-size:12px;color:#c9c8c0;line-height:1.35;display:block;margin-top:2px}
