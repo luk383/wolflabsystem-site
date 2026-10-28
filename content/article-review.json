@@ -320,5 +320,28 @@
    "distanze e formati di gara dichiarati",
    "distances and formats as stated"
   ]
+ },
+ "nuoto-ritmo-gara-triathlon|swim-pacing-triathlon": {
+  "lv": [
+   "2 revisioni, solo abstract",
+   "2 reviews, abstracts only"
+  ],
+  "stars": 2,
+  "how": [
+   "Revisione documentale di due revisioni (una sistematica di 23 studi), lette solo nell'abstract.",
+   "Document review of two reviews (one systematic, 23 studies), read as abstracts only."
+  ],
+  "lim": [
+   "Nuotatori e triatleti agonisti; formati Sprint e Olimpico; nessun numero applicabile; testo completo non letto.",
+   "Competitive swimmers and triathletes; Sprint and Olympic formats; no applicable numbers; full text not read."
+  ],
+  "why": [
+   "Solo abstract e gruppo diverso dal tuo: Molto limitata.",
+   "Abstracts only and a different group: Very limited."
+  ],
+  "scope": [
+   "gestione del ritmo e intensità del nuoto in atleti agonisti",
+   "pacing and swim intensity in competitive athletes"
+  ]
  }
 }
