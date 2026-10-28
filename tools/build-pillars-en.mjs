@@ -62,7 +62,7 @@ const DISC = {
   STRENGTH: { url: '/en/strength/', it: '/strength/', desc: 'Strength for the endurance athlete: programs, exercises, methods.', lead: '', blocks: [
     ['PROGRAMS', [['Bill Starr 5×5', 'Origin, structure and variants, with sources.', '/en/train/strength/starr-5x5/']]],
     ['EXERCISES', [['Exercise catalogue', '53 exercises by muscle, equipment and pattern.', '/en/train/strength/exercises/']]],
-    ['METHODS', [['Strength, size and power', 'Three different outcomes, not one.', '/en/training/#training-3'], ['Strength and endurance together', 'What the reviews say.', '/en/training/#training-4'], ['Method versions', 'Each version kept separate, with source and status.', '/en/train/strength/#methods']]],
+    ['METHODS', [['Strength, size and power', 'Three different outcomes, not one.', '/en/training/#training-3'], ['Strength and endurance together', 'What the reviews say.', '/en/training/#training-4']]],
     ['ENDURANCE STRENGTH', [['Strength for runners and cyclists', 'Interference or advantage?', '/en/articles/strength-for-endurance/'], sleep]],
     ['GEAR', []]] },
 };
