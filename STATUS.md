@@ -23,3 +23,9 @@
 
 ## Build
 tools/build.mjs runs: base, engine, library, news, normalize-legacy, ask. Review the diff before committing a full build.
+
+## Identity (28 Oct, from Luca's board and kit)
+- Accent is now lime #D6FF35 (replaces orange). On light backgrounds text uses #5A7300 (4.9:1). Orange fills carried dark text, lime fills do too.
+- Header logo: wolf outline + WOLFLAB + payoff, dark and light variants (assets/brand/). Favicon is the lime icon.
+- The wolf symbol is traced from the approved board image (symmetrised). The kit SVG from Luca was NOT used: its wolf is a different, simpler shield shape and its tagline overflows its canvas. Wordmark is Montserrat ExtraBold converted to paths (OFL).
+- Not final: not trademark-cleared, no registered mark claimed. Board mockups (merch, billboards) are concept images, not used on the site.

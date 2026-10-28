@@ -133,7 +133,7 @@ function layout({ lang, title, description, current, alt, body, pathname, extraC
 <a class="skip" href="#main">${t.skip}</a>
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="${ROUTES.home[lang]}"><span class="brand-mark" aria-hidden="true"></span>Wolf Lab</a>
+    <a class="brand" href="${ROUTES.home[lang]}" aria-label="WOLFLAB"><img class="brand-img brand-on-dark" src="/assets/brand/logo-on-dark.svg" alt="WOLFLAB" width="190" height="44"><img class="brand-img brand-on-light" src="/assets/brand/logo-on-light.svg" alt="" width="190" height="44"></a>
     <nav class="nav" aria-label="${lang === "it" ? "Principale" : "Main"}">${navItems}</nav>
     <a class="lang" href="${alt}" hreflang="${t.switchLang}" lang="${t.switchLang}">${t.switchTo}</a>
   </div>
@@ -519,4 +519,5 @@ await import("./build-news.mjs");
 await import("./normalize-legacy.mjs");
 await import("./apply-review.mjs");
 await import("./build-ask.mjs");
+await import("./apply-brand.mjs");
 await import("./seo.mjs");
