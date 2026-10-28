@@ -125,6 +125,7 @@ const HUBS = {
       ["acque-libere", ["Acque libere", "Open water"], [
         ["Sicurezza e acqua fredda", "Raccomandazioni RNLI, shock da acqua fredda, attrezzatura.", ["/articoli/nuoto-acque-libere-sicurezza/#s2", "/en/articles/open-water-swimming-safety/#s2"]],
         ["Orientamento (sighting)", "Come guardare avanti in acque libere: indicazioni Swim England e uno studio sulla resistenza.", ["/articoli/nuoto-orientamento-sighting/", "/en/articles/swim-open-water-sighting/"]],
+        ["Regole FIN (Master)", "Tipologie, boa, temperatura e tempo massimo nelle gare Master FIN 2025-2026.", ["/articoli/nuoto-acque-libere-regole-fin-master/", "/en/articles/swim-open-water-italy-fin-masters/"]],
         ["Muta", "Cosa riporta una revisione sistematica e dove vale il regolamento dell'evento.", ["/articoli/nuoto-acque-libere-sicurezza/#s5", "/en/articles/open-water-swimming-safety/#s5"]],
       ], ["Open water", "Open water"]],
       ["gare", ["Gare e formati", "Races and formats"], [

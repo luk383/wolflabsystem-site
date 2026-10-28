@@ -309,8 +309,8 @@
    "Official sites and rulebooks of the cited bodies and organisers."
   ],
   "lim": [
-   "Distanze dichiarate dagli organizzatori; nessun calendario o regolamento completo verificato.",
-   "Distances as stated by organisers; no calendar or full rulebook verified."
+   "Distanze, categorie e pesi come dichiarati da enti e organizzatori; letti i testi di HYROX Singles 26/27 e IRONMAN 2026, World Aquatics solo giugno 2025; nessun calendario.",
+   "Distances, categories and weights as stated by bodies and organisers; texts of HYROX Singles 26/27 and IRONMAN 2026 read, World Aquatics June 2025 only; no calendar."
   ],
   "why": [
    "Dati ufficiali dell'organizzatore, non una prova scientifica: Limitata.",
@@ -411,6 +411,29 @@
   "scope": [
    "atleti amatoriali in HYROX simulata e triatleti amatori verso un mezzo IRONMAN",
    "amateur athletes in a simulated HYROX and amateur triathletes toward a half IRONMAN"
+  ]
+ },
+ "nuoto-acque-libere-regole-fin-master|swim-open-water-italy-fin-masters": {
+  "lv": [
+   "regolamento ufficiale FIN",
+   "Official FIN regulations"
+  ],
+  "stars": 3,
+  "how": [
+   "Lettura della sezione I del regolamento acque libere Master 2025-2026.",
+   "Reading of section I of the 2025-2026 open-water Masters regulations."
+  ],
+  "lim": [
+   "Solo sezione I, stagione 2025-2026, settore Master; non il regolamento per intero né altri eventi.",
+   "Section I only, 2025-2026 season, Masters sector; not the full regulation or other events."
+  ],
+  "why": [
+   "Regolamento ufficiale, non una prova scientifica: Limitata.",
+   "Official regulation, not scientific evidence: Limited."
+  ],
+  "scope": [
+   "gare acque libere Master FIN, stagione 2025-2026",
+   "FIN Masters open-water races, 2025-2026 season"
   ]
  }
 }
