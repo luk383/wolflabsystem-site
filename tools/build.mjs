@@ -143,7 +143,7 @@ ${body}
 </main>
 <footer class="site-foot">
   <div class="wrap">
-    <nav class="foot-links" aria-label="${lang === "it" ? "Piè di pagina" : "Footer"}"><a href="${ROUTES.contact[lang]}">${t.contact}</a> <a href="${lang === "it" ? "/feed.xml" : "/en/feed.xml"}">RSS</a></nav>
+    <nav class="foot-links" aria-label="${lang === "it" ? "Piè di pagina" : "Footer"}"><a href="${ROUTES.contact[lang]}">${t.contact}</a> <a href="${lang === "it" ? "/feed.xml" : "/en/feed.xml"}">RSS</a> <a href="https://www.instagram.com/wolflabsystem/" rel="noopener me" target="_blank">Instagram</a></nav>
   </div>
 </footer>
 </body>

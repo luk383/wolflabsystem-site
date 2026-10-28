@@ -63,7 +63,7 @@ ${body}
 </main>
 <footer class="site-foot">
   <div class="wrap">
-    <nav class="foot-links" aria-label="${it ? "Piè di pagina" : "Footer"}"><a href="${R.method[lang]}">${it ? "Metodologia" : "Methodology"}</a> <a href="${L.articles[lang]}">${it ? "Articoli" : "Articles"}</a> <a href="${L.training[lang]}">${it ? "Libreria" : "Library"}</a> <a href="${L.news[lang]}">${it ? "Novità" : "News"}</a> <a href="${L.contact[lang]}">${it ? "Contatti" : "Contact"}</a> <a href="${lang ? "/en/feed.xml" : "/feed.xml"}">RSS</a></nav>
+    <nav class="foot-links" aria-label="${it ? "Piè di pagina" : "Footer"}"><a href="${R.method[lang]}">${it ? "Metodologia" : "Methodology"}</a> <a href="${L.articles[lang]}">${it ? "Articoli" : "Articles"}</a> <a href="${L.training[lang]}">${it ? "Libreria" : "Library"}</a> <a href="${L.news[lang]}">${it ? "Novità" : "News"}</a> <a href="${L.contact[lang]}">${it ? "Contatti" : "Contact"}</a> <a href="${lang ? "/en/feed.xml" : "/feed.xml"}">RSS</a> <a href="https://www.instagram.com/wolflabsystem/" rel="noopener me" target="_blank">Instagram</a></nav>
   </div>
 </footer>
 </body>
