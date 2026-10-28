@@ -74,7 +74,7 @@ page(U.cmp, IT.cmp, 'Adizero Evo SL, Novablast 6, Ghost 18: which to choose', 'T
   `<div class="pk-box"><h3>Shoe pages</h3><p>${P.map((p) => `<a href="${pu(p)}">${esc(nm(p))}</a>`).join(' · ')}</p></div>` +
   `<div class="pk-box"><h3>Sources</h3><ol>${P.map((p) => `<li><a href="${p.sources[0].url}" rel="noopener">${esc(nm(p))}: ${esc(EN[p.id].src[0])}</a></li>`).join('')}</ol><p class="pk-note">Last checked: 28 October 2026.</p></div>` + DISC + END);
 page(U.guide, IT.guide, 'Running training shoes: how to choose', 'What to look at in a neutral training shoe and three models to start from. Sources and check date.',
-  hero('WOLF PICKS · BUYING GUIDE', 'Running training shoes: how to choose.', 'What to look at in a neutral training shoe, and three models to start from.') +
+  hero('WOLF PICKS · BUYING GUIDE', 'Running training shoes: how to choose.') +
   '<div class="pk-box"><h3>What to look at</h3><ul><li><b>Weight:</b> a lighter shoe helps at lively paces; a heavier one usually offers more structure.</li><li><b>Stack and softness:</b> more stack and softer foam protect against impact, but can feel less stable.</li><li><b>Where you land:</b> heel or midfoot/forefoot changes which shoe works best, as the energy-return measurements show.</li><li><b>Use:</b> easy miles, faster sessions, long runs.</li></ul></div>' +
   `<div class="pk-box"><h3>Three starting points</h3><ul>${P.map((p) => `<li><b><a href="${pu(p)}">${esc(nm(p))}</a></b>: ${esc(EN[p.id].summary)}</li>`).join('')}</ul><p><a href="${U.cmp}">Go to the comparison →</a></p></div>` +
   '<div class="pk-box"><h3>Sources</h3><p>Lab measurements and independent reviews are listed on the shoe pages and the comparison. Last checked: 28 October 2026.</p></div>' + DISC + END);
