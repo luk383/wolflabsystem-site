@@ -1,7 +1,7 @@
 # Traduzione EN dei testi della scheda metodo Starr e dei messaggi residui. Stesse cautele sulle fonti del testo italiano.
 EN = {
 "Valori non validi: kg non negativi; reps intere maggiori di 0; recuperi interi non negativi. Puoi lasciare campi vuoti da compilare in allenamento.":"Invalid values: kg must not be negative; reps must be whole numbers above 0; rest must be a non-negative whole number. You can leave fields empty to fill in during the workout.",
-"Per segnare la serie inserisci kg (anche 0 per corpo libero) e ripetizioni eseguite.":"To tick the set, enter kg (0 for bodyweight) and the reps you performed.",
+"Per segnare la serie inserisci kg (anche 0 per corpo libero) e ripetizioni eseguite (0 se la serie è fallita).":"To tick the set, enter kg (0 for bodyweight) and the reps you performed (0 if the set failed).",
 "Nessuna serie completata: spunta almeno una serie oppure abbandona la prova.":"No sets completed: tick at least one set or discard the workout.",
 ". 5×5 dalla ricostruzione, non programma completo. Carichi, recuperi, RIR/RPE, progressione, fallimenti e scarichi da definire. Nessun calcolo automatico. Modifiche = scheda personalizzata ispirata a questa versione.":". 5×5 from the reconstruction, not a complete program. Loads, rest, RIR/RPE, progression, failures and deloads to be defined. No automatic calculation. Changes = a custom routine inspired by this version.",
 "Carico e recupero da definire. Struttura illustrativa, richiede competenza tecnica.":"Load and rest to be defined. Illustrative structure, requires technical skill.",

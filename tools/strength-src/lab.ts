@@ -7,8 +7,8 @@ const uid=()=>Math.random().toString(36).slice(2,10);
 export const clone=(x:any)=>JSON.parse(JSON.stringify(x));
 const num=(x:any)=>x===''||x==null||!Number.isFinite(Number(x))?null:Number(x);
 export function normalize(r:any){
-  const n=clone(r),eIds=new Set<string>();
-  n.exercises=(n.exercises||[]).map((e:any)=>{let id=e.id&&!eIds.has(e.id)?e.id:'x'+uid();eIds.add(id);const sIds=new Set<string>();
+  const n=clone(r),eIds=new Set<string>(),sIds=new Set<string>();
+  n.exercises=(n.exercises||[]).map((e:any)=>{let id=e.id&&!eIds.has(e.id)?e.id:'x'+uid();eIds.add(id);
     return {...e,id,sets:(e.sets||[]).map((s:any)=>{let sid=s.id&&!sIds.has(s.id)?s.id:'s'+uid();sIds.add(sid);return {...s,id:sid};})};});
   return n;
 }
@@ -19,12 +19,12 @@ export function uiToV2(r:any){
   const out:any={id:n.id,name:n.name,method:n.method,notes:n.notes||'',revision:n.revision||1};
   if(n.goal)out.goal=n.goal;if(n.split)out.split=n.split;if(n.source)out.source=clone(n.source);
   out.exercises=n.exercises.map((e:any)=>{const x:any={id:e.id,name:e.name,muscle:e.muscle,equipment:e.equipment,notes:e.notes||''};if(e.groupId)x.groupId=e.groupId;
-    x.sets=e.sets.map((s:any)=>{const reps=num(s.reps);return {id:s.id,kind:kindOut(s.kind),kg:num(s.kg),repsMin:reps,repsMax:reps,restSeconds:num(s.rest)};});return x;});
+    x.sets=e.sets.map((s:any)=>{const reps=num(s.reps),mx=num(s.repsMax);return {id:s.id,kind:kindOut(s.kind),kg:num(s.kg),repsMin:reps,repsMax:reps!=null&&mx!=null?mx:reps,restSeconds:num(s.rest)};});return x;});
   return out;
 }
 export function v2ToUi(v:any){
   const r=clone(v);
-  r.exercises=r.exercises.map((e:any)=>({...e,sets:e.sets.map((s:any)=>({...s,kg:s.kg==null?'':String(s.kg),reps:s.repsMin==null?'':String(s.repsMin),rest:s.restSeconds==null?'':String(s.restSeconds),kind:kindIn(s.kind),done:false}))}));
+  r.exercises=r.exercises.map((e:any)=>({...e,sets:e.sets.map((s:any)=>({...s,kg:s.kg==null?'':String(s.kg),reps:s.repsMin==null?'':String(s.repsMin),repsMax:s.repsMax!=null&&s.repsMax!==s.repsMin?String(s.repsMax):'',rest:s.restSeconds==null?'':String(s.restSeconds),kind:kindIn(s.kind),done:false}))}));
   return r;
 }
 export const toStore=(ui:any)=>({schemaVersion:2,routines:ui.routines.map(uiToV2),history:ui.history});
