@@ -29,5 +29,5 @@ export function mergeImport(existing,incoming,mode='append') {
  if(!['append','replace'].includes(mode))throw Error('import_mode_invalid');
  if(mode==='replace')return copy(incoming);
  const merge=(a,b)=>{const result=copy(a);for(const x of b){const prior=result.find(y=>y.id===x.id);if(!prior)result.push(copy(x));else if(JSON.stringify(prior)!==JSON.stringify(x))throw Error('import_id_conflict');}return result;};
- return {...copy(existing),routines:merge(existing.routines,incoming.routines),history:merge(existing.history,incoming.history)};
+ return {...copy(existing),routines:merge(existing.routines,incoming.routines),history:merge(existing.history,incoming.history),programs:merge(existing.programs||[],incoming.programs||[])};
 }

@@ -18,7 +18,7 @@ const kindIn=(k:string)=>k==='warmup'?KIND.warm:k==='ramp'?KIND.ramp:KIND.work;
 export function uiToV2(r:any){
   const n=normalize(r);routineFromLegacy(n);
   const out:any={id:n.id,name:n.name,method:n.method,notes:n.notes||'',revision:n.revision||1};
-  if(n.goal)out.goal=n.goal;if(n.split)out.split=n.split;if(n.source)out.source=clone(n.source);
+  if(n.goal)out.goal=n.goal;if(n.programRef&&typeof n.programRef.programId==='string')out.programRef=clone(n.programRef);if(n.split)out.split=n.split;if(n.source)out.source=clone(n.source);
   out.exercises=n.exercises.map((e:any)=>{const x:any={id:e.id,name:e.name,muscle:e.muscle,equipment:e.equipment,notes:e.notes||''};if(e.groupId)x.groupId=e.groupId;
     x.sets=e.sets.map((s:any)=>{const reps=num(s.reps),mx=num(s.repsMax);const o:any={id:s.id,kind:kindOut(s.kind),kg:num(s.kg),repsMin:reps,repsMax:reps!=null&&mx!=null?mx:reps,restSeconds:num(s.rest)};const ri=num(s.rir),rp=num(s.rpe);if(ri!=null)o.rir=ri;if(rp!=null)o.rpe=rp;if(['left','right','each'].includes(s.side))o.side=s.side;if(typeof s.tempo==='string'&&s.tempo.trim())o.tempo=s.tempo.trim().slice(0,20);return o;});return x;});
   return out;
@@ -87,4 +87,11 @@ export function routineFromProgramSession(program:any,week:any,session:any,baseU
     o.sets=e.sets.map((t:any)=>({id:t.id,kind:kindL[t.kind]||KIND.work,kg:t.kg==null?'':String(t.kg),reps:t.repsMin==null?'':String(t.repsMin),repsMax:t.repsMax!=null&&t.repsMax!==t.repsMin?String(t.repsMax):'',rest:t.restSeconds==null?'':String(t.restSeconds),rir:t.rir==null?'':String(t.rir),rpe:t.rpe==null?'':String(t.rpe),side:t.side||'',tempo:t.tempo||'',done:false}));return o;});
   r.programRef={programId:program.id,week:week.weekIndex,sessionId:session.id};
   return r;
+}
+
+export function validProgram(g:any){
+  try{
+    if(!g||typeof g.id!=='string'||!g.id||typeof g.name!=='string'||!Array.isArray(g.weeks)||!g.weeks.length)return false;
+    return g.weeks.every((w:any)=>Number.isInteger(w.weekIndex)&&Array.isArray(w.sessions)&&w.sessions.every((s:any)=>typeof s.id==='string'&&typeof s.name==='string'&&Array.isArray(s.exercises)&&s.exercises.every((e:any)=>typeof e.exerciseId==='string'&&typeof e.name==='string'&&Array.isArray(e.sets)&&e.sets.every((t:any)=>typeof t.id==='string'&&(t.kg==null||typeof t.kg==='number')))));
+  }catch(e){return false;}
 }

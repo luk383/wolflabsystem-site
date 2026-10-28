@@ -154,10 +154,24 @@ export function acceptReferenceUpdate(program,{effectiveWeek,loads,sourceWorkout
  return p;
 }
 export function routineFromLegacy(routine) {return migrateLegacy({routines:[routine],history:[]}).routines[0];}
+export function validateProgram(p) {
+ if(!p?.id||!p.templateSnapshot?.versionId||!positive(p.roundingKg)||!Array.isArray(p.weeks)||!p.weeks.length||p.weeks.length>52||!Array.isArray(p.referenceHistory)||!p.referenceHistory.length)throw Error('Invalid program');
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(p.startDate)||!Number.isFinite(Date.parse(p.startDate+'T12:00:00Z'))||new Date(p.startDate+'T12:00:00Z').toISOString().slice(0,10)!==p.startDate)throw Error('Invalid program date');
+ if(!Array.isArray(p.templateSnapshot.sessions)||!p.templateSnapshot.sessions.length)throw Error('Invalid program template');
+ const initialRefs=p.referenceHistory[0]?.loads;
+ if(!initialRefs)throw Error('Missing reference loads');
+ generateLinkedWeek(p.templateSnapshot,initialRefs,1,p.roundingKg);
+ const weekIds=new Set();
+ for(const w of p.weeks){if(!integer(w.weekIndex,1)||weekIds.has(w.weekIndex)||!Array.isArray(w.sessions)||!w.sessions.length)throw Error('Invalid program week');weekIds.add(w.weekIndex);const sessions=new Set();for(const se of w.sessions){if(!se.id||sessions.has(se.id)||!Array.isArray(se.exercises)||!se.exercises.length)throw Error('Invalid program session');sessions.add(se.id);validateRoutine({id:se.id,name:se.name||se.id,exercises:se.exercises.map(e=>({...e,id:e.exerciseId,sets:e.sets}))});for(const e of se.exercises)for(const st of e.sets)if(!positive(st.referenceFactor)||!number(st.kg))throw Error('Invalid program load rule');}}
+ for(const h of p.referenceHistory)if(!integer(h.effectiveWeek,1)||!h.loads||Object.values(h.loads).some(v=>!number(v)))throw Error('Invalid reference history');
+ return true;
+}
 export function validateImport(value) {
  if(!value||value.schemaVersion!==2||!Array.isArray(value.routines)||!Array.isArray(value.history))throw Error('Unsupported backup');
+ if(value.programs!=null&&!Array.isArray(value.programs))throw Error('Invalid program list');
+ const programIds=new Set();for(const p of value.programs||[]){validateProgram(p);if(programIds.has(p.id))throw Error('Duplicate program identity');programIds.add(p.id);}
  if(JSON.stringify(value).length>5000000)throw Error('Backup too large');
  const ids=new Set();for(const r of value.routines){validateRoutine(r);if(ids.has(r.id))throw Error('Duplicate routine identity');ids.add(r.id);}
- for(const h of value.history){if(h.legacy&&h.prescriptionUnavailable)continue;if(h.status!=='finished'||!h.prescription||!h.results)throw Error('Invalid workout history');validateRoutine(h.prescription);for(const e of h.prescription.exercises)for(const s of e.sets){const a=h.results[s.id];if(!a)throw Error('Missing set result');recordSet({...h,status:'active'},s.id,a);}}
+ for(const h of value.history){if(h.programRef&&(!h.programRef.programId||!integer(h.programRef.week,1)||!h.programRef.sessionId))throw Error('Invalid program reference');if(h.legacy&&h.prescriptionUnavailable)continue;if(h.status!=='finished'||!h.prescription||!h.results)throw Error('Invalid workout history');validateRoutine(h.prescription);for(const e of h.prescription.exercises)for(const s of e.sets){const a=h.results[s.id];if(!a)throw Error('Missing set result');recordSet({...h,status:'active'},s.id,a);}}
  return copy(value);
 }
