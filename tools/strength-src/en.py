@@ -38,7 +38,7 @@ EN = {
 "Scegli gli esercizi":"Choose exercises",
 "Gruppo muscolare":"Muscle group",
 "Attrezzo":"Equipment",
-"Catalogo dimostrativo di 24 esercizi, senza video o istruzioni tecniche. Tocca un esercizio per creare una scheda. Etichette organizzative non esclusive.":"Demo catalog of 24 exercises, with no videos or technique instructions. Tap an exercise to build a routine. Labels are organizational and not exclusive.",
+"Catalogo dimostrativo di 53 esercizi, senza video o istruzioni tecniche. Tocca un esercizio per creare una scheda. Etichette organizzative non esclusive.":"Demo catalog of 53 exercises, with no videos or technique instructions. Tap an exercise to build a routine. Labels are organizational and not exclusive.",
 "Nessun risultato. Cambia i filtri o aggiungi il tuo esercizio.":"No results. Change the filters or add your own exercise.",
 "Non c’è? Aggiungi un esercizio personale":"Not there? Add your own exercise",
 "Crea e aggiungi":"Create and add",
