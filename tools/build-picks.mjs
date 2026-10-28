@@ -13,7 +13,7 @@ const ul = (l) => '<ul>' + l.map((x) => '<li>' + esc(x) + '</li>').join('') + '<
 const URL = { hub: '/picks/', guide: '/picks/scarpe-allenamento/', cmp: '/picks/confronto-evo-sl-novablast-6-ghost-18/' };
 const pu = (p) => '/picks/' + p.slug + '/';
 const LAB = 'Misure di laboratorio RTINGS su un paio (taglia uomo): le cifre dei produttori possono differire. Consultato il 28/10/2026.';
-const LV = '<p class="pk-note"><b>SELECTED</b>: scelta su dati pubblici e recensioni indipendenti. Nessun nostro test, nessun Wolf Score, nessun verdetto.</p>';
+const LV = '';
 const DISC = '<p class="pk-note">Trasparenza: nessun link commerciale su questa pagina. Quando ci saranno link affiliati saranno indicati accanto al link e non cambiano la valutazione.</p>';
 const srcs = (p) => '<ol>' + p.sources.map((s) => `<li><a href="${s.url}" rel="noopener">${esc(s.label)}</a></li>`).join('') + '</ol>';
 function page(rel, title, desc, main) {
@@ -64,7 +64,6 @@ page(URL.guide, 'Scarpe da corsa da allenamento: come scegliere', "Cosa guardare
 // hub
 page(URL.hub, 'WOLF PICKS', 'Selezioni con fonti, livello di prova e data di verifica. Si parte dalle scarpe da allenamento.',
   hero('WOLF PICKS', 'Cosa scegliere, e perché.', 'Selezioni con fonti, livello di prova e data di verifica. Si parte dalle scarpe da allenamento; Cycling e Fuel seguono.') +
-  '<div class="pk-chips"><span><b>SELECTED</b> scelto su dati pubblici e recensioni indipendenti</span><span><b>TESTED</b> provato da noi (nessun prodotto ancora)</span><span><b>VERDICT</b> non assegnato</span></div>' +
   `<div class="pk-grid"><div class="pk-card"><h3>Guida</h3><ul><li><a href="${URL.guide}">Scarpe da allenamento: come scegliere</a><small>Guida all'acquisto</small></li></ul></div><div class="pk-card"><h3>Confronto</h3><ul><li><a href="${URL.cmp}">Evo SL, Novablast 6, Ghost 18</a><small>Misure di laboratorio indipendenti</small></li></ul></div><div class="pk-card"><h3>Schede</h3><ul>${P.map((p) => `<li><a href="${pu(p)}">${esc(p.brand)} ${esc(p.model)}</a><small>SELECTED · verificato il 28/10/2026</small></li>`).join('')}</ul></div></div>` + DISC +
   '<p class="w-foot"><a class="w-cta" href="/metodologia">Come valutiamo <span aria-hidden="true">→</span></a></p>' + END);
 // partner

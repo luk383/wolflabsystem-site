@@ -1,5 +1,5 @@
 {
-  "verified": "2026-10-27",
+  "verified": "2026-10-28",
   "items": [
     {
       "id": "topo-ultraventure-5-gtx",
@@ -38,6 +38,42 @@
       ]
     },
     {
+      "id": "garmin-edge-explore-3",
+      "category": "computers",
+      "date": "2026-10-20",
+      "name": "Garmin Edge Explore 3 e Explore 3 Plus",
+      "change": {
+        "it": "Due ciclocomputer con touchscreen, mappe e navigazione curva per curva. Solo il modello Plus ha il controllo vocale.",
+        "en": "Two touchscreen cycling computers with maps and turn-by-turn navigation. Only the Plus model has voice control."
+      },
+      "fit": {
+        "it": "Chi vuole un navigatore semplice con mappe e dati essenziali; il Plus per chi vuole comandi vocali.",
+        "en": "Riders who want a simple navigator with maps and essential data; the Plus for those who want voice commands."
+      },
+      "limit": {
+        "it": "Autonomia dichiarata: fino a 16 ore (Explore 3) e 14 ore (Plus) nell'uso più intenso, 48 ore in risparmio energetico. Dati del produttore, nessuna prova diretta.",
+        "en": "Claimed battery life: up to 16 hours (Explore 3) and 14 hours (Plus) in the most demanding use, 48 hours in battery saver. Manufacturer figures, no hands-on test."
+      },
+      "price": {
+        "it": "399,99 USD (Explore 3) e 499,99 USD (Plus), listino USA (Garmin). Per l'Italia 399,99 e 499,99 EUR riportati da Cyclinside, non da Garmin Italia.",
+        "en": "USD 399.99 (Explore 3) and USD 499.99 (Plus), US suggested retail (Garmin). For Italy EUR 399.99 and 499.99 as reported by Cyclinside, not by Garmin Italy."
+      },
+      "availability": {
+        "it": "Disponibili secondo il comunicato USA del 20 ottobre. Cyclinside indica la stessa data per l'Italia: non confermata da Garmin Italia.",
+        "en": "Available according to the October 20 US release. Cyclinside gives the same date for Italy: not confirmed by Garmin Italy."
+      },
+      "sources": [
+        [
+          "Garmin Newsroom",
+          "https://www.garmin.com/en-US/newsroom/press-release/sports-fitness/ride-with-more-confidence-with-edge-explore-3-cycling-computers-from-garmin/"
+        ],
+        [
+          "Prezzi Italia, fonte secondaria / Italian prices, secondary source",
+          "https://cyclinside.it/garmin-edge-1060-ed-explore-3-la-voce-arriva-sui-ciclocomputer/"
+        ]
+      ]
+    },
+    {
       "id": "garmin-edge-1060",
       "category": "computers",
       "date": "2026-10-20",
@@ -55,8 +91,8 @@
         "en": "Garmin Messenger voice messages require a connected smartphone. Check supported languages and features before buying. No hands-on test."
       },
       "price": {
-        "it": "799,99 USD, listino USA. Prezzo Italia non verificato.",
-        "en": "USD 799.99, US suggested retail price. Italian price not verified."
+        "it": "799,99 USD, listino USA (Garmin). Per l'Italia 799,99 EUR riportato da Cyclinside, non da Garmin Italia.",
+        "en": "USD 799.99, US suggested retail price (Garmin). For Italy EUR 799.99 as reported by Cyclinside, not by Garmin Italy."
       },
       "availability": {
         "it": "Disponibile secondo il comunicato USA del 20 ottobre. Non equivale a disponibilità immediata in Italia.",
@@ -66,6 +102,10 @@
         [
           "Garmin Newsroom",
           "https://www.garmin.com/en-US/newsroom/press-release/sports-fitness/new-garmin-edge-1060-cycling-computer-gives-cyclists-hands-free-voice-control/"
+        ],
+        [
+          "Prezzi Italia, fonte secondaria / Italian prices, secondary source",
+          "https://cyclinside.it/garmin-edge-1060-ed-explore-3-la-voce-arriva-sui-ciclocomputer/"
         ]
       ]
     },
