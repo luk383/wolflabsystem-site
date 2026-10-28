@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="it" class="wolf2" data-theme-default="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0A0A0A">
+<script>try{var t=localStorage.getItem("wolf-theme");var d=document.documentElement;if(t==="dark"||(!t&&d.hasAttribute("data-theme-default")))d.setAttribute("data-theme","dark")}catch(e){}</script>
+<title>Wolf Engine - Wolf Lab</title>
+<meta name="description" content="Wolf Engine: ritmi, zone di potenza, fuel e passaggi di gara dai tuoi dati. Nessun dato lascia il browser.">
+<link rel="canonical" href="https://wolflabsystem.com/engine">
+<link rel="alternate" hreflang="it" href="https://wolflabsystem.com/engine">
+<link rel="alternate" hreflang="en" href="https://wolflabsystem.com/en/engine">
+<meta property="og:title" content="Wolf Engine - Wolf Lab">
+<meta property="og:description" content="Wolf Engine: ritmi, zone di potenza, fuel e passaggi di gara dai tuoi dati. Nessun dato lascia il browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wolflabsystem.com/engine">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=9d322d1ebe">
+<script defer src="/assets/site.js?v=eb8cf4ac23"></script><script defer src="/assets/engine.js?v=85ba5fa93d"></script><script defer src="/assets/engine-ui.js?v=a61fe2bc74"></script>
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/">WOLF<span class="brand-word">LAB<span class="brand-dot">.</span></span></a>
+    <nav class="nav" aria-label="Principale"><a href="/run">RUN</a><a href="/ride">RIDE</a><a href="/train">TRAIN</a><a href="/fuel">FUEL</a><a href="/race">RACE</a><a href="/gear">GEAR</a><a class="nav-engine" href="/engine" aria-current="page">WOLF ENGINE</a></nav>
+    <a class="lang" href="/en/engine" hreflang="en" lang="en">English</a>
+  </div>
+</header>
+<main id="main">
+<header class="w-page-hero"><div class="wrap"><p class="w-kicker">WOLF ENGINE</p><h1>Inserisci i tuoi dati.<br>Ricevi il tuo profilo.</h1><p class="w-lede">Calcoli da modelli pubblicati. Tutto resta nel tuo browser: nessun dato viene inviato o salvato.</p></div></header>
+<div class="wrap w-engine">
+<form id="engine-form" class="eng-form" novalidate>
+  <fieldset><legend>Atleta</legend><div class="fields"><div class="field"><label for="f-age">Età</label><input id="f-age" name="age" inputmode="decimal" placeholder="40" autocomplete="off"></div><div class="field"><label for="f-weight">Peso (kg)</label><input id="f-weight" name="weight" inputmode="decimal" placeholder="70" autocomplete="off"></div></div></fieldset>
+  <fieldset><legend>Gare recenti (h:mm:ss)</legend><div class="fields"><div class="field"><label for="f-t5k">5K</label><input id="f-t5k" name="t5k" inputmode="numeric" placeholder="20:00" autocomplete="off"></div><div class="field"><label for="f-t10k">10K</label><input id="f-t10k" name="t10k" inputmode="numeric" placeholder="41:30" autocomplete="off"></div><div class="field"><label for="f-thm">Mezza</label><input id="f-thm" name="thm" inputmode="numeric" placeholder="1:32:00" autocomplete="off"></div><div class="field"><label for="f-tm">Maratona</label><input id="f-tm" name="tm" inputmode="numeric" placeholder="3:15:00" autocomplete="off"></div></div></fieldset>
+  <fieldset><legend>Ciclismo e cuore</legend><div class="fields"><div class="field"><label for="f-ftp">FTP (W)</label><input id="f-ftp" name="ftp" inputmode="decimal" placeholder="250" autocomplete="off"></div><div class="field"><label for="f-hrmax">FC max (bpm)</label><input id="f-hrmax" name="hrmax" inputmode="decimal" placeholder="185" autocomplete="off"></div><div class="field"><label for="f-lthr">FC di soglia, LTHR (bpm)</label><input id="f-lthr" name="lthr" inputmode="decimal" placeholder="165" autocomplete="off"></div></div></fieldset>
+  <fieldset><legend>Disponibilità e obiettivo</legend><div class="fields"><div class="field"><label for="f-hours">Ore a settimana</label><input id="f-hours" name="hours" inputmode="decimal" placeholder="8" autocomplete="off"></div><div class="field"><label for="f-days">Giorni a settimana</label><input id="f-days" name="days" inputmode="decimal" placeholder="5" autocomplete="off"></div>
+    <div class="field"><label for="f-goal">Obiettivo</label><select id="f-goal" name="goal"><option value="m">Maratona</option><option value="hm">Mezza maratona</option><option value="10k">10K</option><option value="bike">Ciclismo</option><option value="hybrid">Ibrido corsa + bici</option></select></div>
+    <div class="field"><label for="f-target">Tempo obiettivo (opzionale)</label><input id="f-target" name="target" inputmode="numeric" placeholder="3:15:00" autocomplete="off"></div><div class="field"><label for="f-duration">Durata per il fuel (opzionale)</label><input id="f-duration" name="duration" inputmode="numeric" placeholder="3:15:00" autocomplete="off"></div><div class="field"><label for="f-sweat">Sudorazione, L/h (opzionale)</label><input id="f-sweat" name="sweat" inputmode="decimal" placeholder="1.0" autocomplete="off"></div></div>
+    <div class="eng-checks" role="group" aria-label="Sport praticati"><label><input type="checkbox" name="sport-run" checked> Corsa</label><label><input type="checkbox" name="sport-bike" checked> Bici</label><label><input type="checkbox" name="sport-strength" checked> Forza</label></div></fieldset>
+</form>
+<div id="engine-out" class="eng-out" aria-live="polite"></div>
+<p class="w-foot dim">Sesso e altezza non sono richiesti: nessuna formula usata qui ne ha bisogno. I tempi equivalenti non sono previsioni di gara. Non è un consiglio medico. I valori sono stime da modelli: nessun risultato è una misura di laboratorio. Come funzionano e da dove vengono: <a href="/metodologia">Metodologia</a>.</p>
+</div>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <nav class="foot-links" aria-label="Piè di pagina"><a href="/metodologia">Metodologia</a> <a href="/articoli/">Articoli</a> <a href="/allenamento/">Libreria</a> <a href="/novita/">Novità</a> <a href="/contatti/">Contatti</a> <a href="/feed.xml">RSS</a></nav>
+  </div>
+</footer>
+</body>
+</html>
