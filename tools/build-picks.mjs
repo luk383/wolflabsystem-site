@@ -80,7 +80,8 @@ const css = `/*picks-start*/
 .pk-quick{border-bottom:1px solid var(--rule-strong)}.pk-quick .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;padding:16px 0}.pk-quick a{font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--text);text-decoration:none}.pk-quick a:hover{text-decoration:underline}
 .w-btns{display:flex;gap:12px;flex-wrap:wrap;margin:0}.w-btn-ghost{background:transparent!important;color:#F5F4EF!important;border:1px solid #F5F4EF}.w-btn-ghost:hover{background:#F5F4EF!important;color:#0A0A0A!important}
 @media(min-width:801px){.w-hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,.92fr)!important}.w-hero h1{font-size:clamp(48px,6.3vw,100px)!important}.w-hero-img:before{background-position:50% 30%!important}}
-@media(max-width:560px){.site-head .nav{gap:0 12px!important}.site-head .nav a{font-size:11px!important;letter-spacing:.04em!important}}
+@media(max-width:900px){.site-head .nav a.nav-engine{flex:0 0 auto!important;margin:0!important;padding:4px 10px!important}}
+@media(max-width:560px){.site-head .nav{gap:6px 12px!important}.site-head .nav a{font-size:11px!important;letter-spacing:.04em!important}.site-head .nav a.nav-engine{padding:3px 8px!important}}
 /*picks-end*/`;
 let c = fs.readFileSync(path.join(root, 'assets/site.css'), 'utf8').replace(/\n?\/\*picks-start\*\/[\s\S]*?\/\*picks-end\*\//, '');
 fs.writeFileSync(path.join(root, 'assets/site.css'), c.trimEnd() + '\n' + css + '\n');
