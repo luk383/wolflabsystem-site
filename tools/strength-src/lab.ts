@@ -6,10 +6,11 @@ export const KIND={work:'Lavoro',warm:'Riscaldamento',ramp:'Crescente'};
 const uid=()=>Math.random().toString(36).slice(2,10);
 export const clone=(x:any)=>JSON.parse(JSON.stringify(x));
 const num=(x:any)=>x===''||x==null||!Number.isFinite(Number(x))?null:Number(x);
+const free=(set:Set<string>,want:string,base:string)=>{let id=want&&!set.has(want)?want:'',k=set.size+1;while(!id||set.has(id)){id=base+k;k++;}set.add(id);return id;};
 export function normalize(r:any){
   const n=clone(r),eIds=new Set<string>(),sIds=new Set<string>();
-  n.exercises=(n.exercises||[]).map((e:any)=>{let id=e.id&&!eIds.has(e.id)?e.id:'x'+uid();eIds.add(id);
-    return {...e,id,sets:(e.sets||[]).map((s:any)=>{let sid=s.id&&!sIds.has(s.id)?s.id:'s'+uid();sIds.add(sid);return {...s,id:sid};})};});
+  n.exercises=(n.exercises||[]).map((e:any)=>{const id=free(eIds,e.id,'x');
+    return {...e,id,sets:(e.sets||[]).map((s:any)=>({...s,id:free(sIds,s.id,'s')}))};});
   return n;
 }
 const kindOut=(l:string)=>l===KIND.warm?'warmup':l===KIND.ramp?'ramp':'work';
@@ -63,4 +64,15 @@ export function readableDiff(source:any,current:any){
     if(t&&!seen.has(t)){seen.add(t);rows.push(t);}
   }
   return rows;
+}
+
+export async function saveText(text:string,filename:string,mime:string):Promise<'saved'|'cancelled'|'error'|'download'>{
+  const N=(window as any).WolfNative;
+  if(N&&typeof N.exportText==='function'){try{const r=await N.exportText({text,filename,mime:mime.split(';')[0]});return r&&r.saved===true?'saved':'error';}catch(e:any){return e&&(e.code==='CANCELLED'||e.message==='CANCELLED')?'cancelled':'error';}}
+  try{const b=new Blob([text],{type:mime}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=filename;a.click();URL.revokeObjectURL(u);return 'download';}catch(e){return 'error';}
+}
+export const saveMsg=(r:string)=>r==='saved'?'File salvato.':r==='cancelled'?'Salvataggio annullato: nessun file creato.':r==='error'?'Salvataggio non riuscito: nessun file creato.':'';
+export async function pickText():Promise<string|null|undefined|'cancelled'>{
+  const N=(window as any).WolfNative;if(!(N&&typeof N.importText==='function'))return undefined;
+  try{const r=await N.importText();if(!r||typeof r.text!=='string')return null;return r.text;}catch(e:any){return e&&(e.code==='CANCELLED'||e.message==='CANCELLED')?'cancelled':null;}
 }

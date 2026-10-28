@@ -118,4 +118,8 @@ EN = {
 ">Doppia<":">Double<",
 "Lineare: valuta il limite basso delle ripetizioni.":"Linear: judged on the lower rep limit.",
 "Doppia: valuta il limite alto delle ripetizioni.":"Double: judged on the upper rep limit.",
+"File salvato.":"File saved.",
+"Salvataggio annullato: nessun file creato.":"Save cancelled: no file created.",
+"Salvataggio non riuscito: nessun file creato.":"Save failed: no file created.",
+"Nessun file letto: nessuna modifica.":"No file read: no changes made.",
 }

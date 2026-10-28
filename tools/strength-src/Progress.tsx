@@ -2,7 +2,7 @@
 import React,{useState} from 'react';
 import {proposeProgression,applyProposal,executionOrder,csvHistory,validateImport} from './core/core.mjs';
 import {mergeImport} from './core/storage.mjs';
-import {uiToV2,v2ToUi,clone,readableDiff,toStore,fromStore} from './lab';
+import {uiToV2,v2ToUi,clone,readableDiff,toStore,fromStore,saveText,saveMsg,pickText} from './lab';
 const REASON:any={
  all_required_sets_completed:'Tutte le serie richieste sono state completate al carico prescritto o oltre, con tecnica indicata come pulita.',
  no_work_sets:'Nessuna serie di lavoro da valutare.',
@@ -67,7 +67,7 @@ function LegacyItem({w,data,update,setPending,edit,k}:any){
 }
 export function History({data,update,setPending,edit,setNotice}:any){
   const v2=data.history.filter((w:any)=>w.schemaVersion===2&&w.prescription);
-  const csv=()=>{const blob=new Blob([csvHistory(v2)],{type:'text/csv;charset=utf-8'}),u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='wolflab-allenamenti.csv';a.click();URL.revokeObjectURL(u);setNotice(v2.length<data.history.length?'CSV con '+v2.length+' registrazioni. Quelle precedenti, senza prescritto salvato, non sono incluse.':'');};
+  const csv=async()=>{const r=await saveText(csvHistory(v2),'wolflab-allenamenti.csv','text/csv;charset=utf-8');const extra=v2.length<data.history.length?'CSV con '+v2.length+' registrazioni. Quelle precedenti, senza prescritto salvato, non sono incluse.':'';setNotice([saveMsg(r),extra].filter(Boolean).join(' '));};
   const apply=(nr:any)=>update({...data,routines:data.routines.map((r:any)=>r.id===nr.id?nr:r)});
   return <><h2>Quello che hai fatto</h2><p>Per ogni serie vedi il carico prescritto e quello eseguito. Le proposte di carico sono solo proposte: si applicano se le accetti.</p>{!data.history.length&&<p>Nessun allenamento registrato. Avvia una scheda, completa una serie e termina.</p>}
    {data.history.map((w:any,k:number)=>w.schemaVersion===2&&w.prescription?<V2Item key={w.id||k} w={w} k={k} routines={data.routines} update={update} data={data} setPending={setPending} edit={edit} onApply={apply}/>:<LegacyItem key={k} w={w} k={k} data={data} update={update} setPending={setPending} edit={edit}/>)}
@@ -76,8 +76,11 @@ export function History({data,update,setPending,edit,setNotice}:any){
 
 export function ImportBox({data,update,setPending}:any){
   const [inc,setInc]=useState<any>(null),[msg,setMsg]=useState('');
-  const read=(f:File|undefined)=>{if(!f)return;setInc(null);setMsg('');const fr=new FileReader();fr.onload=()=>{try{let v=JSON.parse(String(fr.result));if(v&&v.format==='wolf-strength-backup')v=v.state&&v.state.data;const ok=validateImport(v);setInc(ok);setMsg('Backup valido: '+ok.routines.length+' schede, '+ok.history.length+' registrazioni. Nulla è stato ancora cambiato.');}catch(x:any){setMsg('File non valido o non compatibile: nessuna modifica.');}};fr.onerror=()=>setMsg('Lettura del file non riuscita.');fr.readAsText(f);};
+  const parse=(t:string)=>{try{let v=JSON.parse(t);if(v&&v.format==='wolf-strength-backup')v=v.state&&v.state.data;const ok=validateImport(v);setInc(v);setMsg('Backup valido: '+ok.routines.length+' schede, '+ok.history.length+' registrazioni. Nulla è stato ancora cambiato.');}catch(x:any){setMsg('File non valido o non compatibile: nessuna modifica.');}};
+  const read=(f:File|undefined)=>{if(!f)return;setInc(null);setMsg('');const fr=new FileReader();fr.onload=()=>parse(String(fr.result));fr.onerror=()=>setMsg('Lettura del file non riuscita.');fr.readAsText(f);};
+  const native=async()=>{setInc(null);setMsg('');const t=await pickText();if(t==null||t==='cancelled')setMsg('Nessun file letto: nessuna modifica.');else parse(t);};
+  const hasNative=typeof (window as any).WolfNative?.importText==='function';
   const merge=()=>{try{const m=mergeImport(toStore(data),inc,'append');if(update(fromStore(m))){setInc(null);setMsg('Importazione completata: schede e registrazioni aggiunte.');}}catch(x:any){setMsg(x&&x.message==='import_id_conflict'?'Conflitto: stesso identificativo con contenuto diverso. Esporta prima i dati attuali, poi scegli Sostituisci se vuoi il backup al posto.':'Importazione non riuscita: nessuna modifica.');}};
   const replace=()=>setPending({label:'Sostituire tutte le schede e i registri attuali con il backup? Esporta prima il JSON se vuoi conservarli.',run:()=>{if(update(fromStore(inc))){setInc(null);setMsg('Dati sostituiti con il backup.');}}});
-  return <div><label>Importa backup JSON<input type="file" accept="application/json,.json" aria-label="Importa backup" onChange={e=>read(e.target.files&&e.target.files[0])}/></label>{msg&&<p role="status">{msg}</p>}{inc&&<div className="actions"><button onClick={merge}>Aggiungi ai dati attuali</button><button onClick={replace}>Sostituisci tutto</button></div>}</div>;
+  return <div>{hasNative?<button onClick={native}>Importa backup JSON</button>:<label>Importa backup JSON<input type="file" accept="application/json,.json" aria-label="Importa backup" onChange={e=>read(e.target.files&&e.target.files[0])}/></label>}{msg&&<p role="status">{msg}</p>}{inc&&<div className="actions"><button onClick={merge}>Aggiungi ai dati attuali</button><button onClick={replace}>Sostituisci tutto</button></div>}</div>;
 }

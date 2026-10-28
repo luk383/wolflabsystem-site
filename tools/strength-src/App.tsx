@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import {MethodCard} from './MethodCard';
 import {FileCard,Header,Closing,Group,Callout,useStrengthState,TextLink} from './shim';
-import {normalize,uiToV2,groupsOk,buildWorkout} from './lab';
+import {normalize,uiToV2,groupsOk,buildWorkout,saveText,saveMsg} from './lab';
 import {CircuitOrder,TechniqueBox,DiffBox,History,ImportBox} from './Progress';
 import './style.css';
 const patterns=['Accosciata','Accosciata','Spinta gambe','Affondo','Estensione ginocchio','Flessione ginocchio','Hip hinge','Estensione anca','Flessione plantare','Spinta orizzontale','Spinta inclinata','Spinta orizzontale','Tirata verticale','Tirata orizzontale','Tirata verticale','Tirata orizzontale','Spinta verticale','Abduzione spalla','Tirata / rotazione','Flessione gomito','Estensione gomito','Flessione tronco','Flessione tronco','Sollevamento balistico'];
@@ -18,6 +18,7 @@ export function App(){
  storage.extra.current={activeSession:session,timerDeadline:deadline};
  useEffect(()=>{if(saveOn&&boot&&storage.ready)setStored(data);},[session,deadline]);
  useEffect(()=>{const t=setInterval(()=>setNow(Date.now()),500);return()=>clearInterval(t);},[]);
+ useEffect(()=>{const u=!!session&&!saveOn;(window as any).WolfHasUnsavedWorkout=u;const h=(e:any)=>{if(u){e.preventDefault();e.returnValue='';}};window.addEventListener('beforeunload',h);return()=>window.removeEventListener('beforeunload',h);},[session,saveOn]);useEffect(()=>()=>{(window as any).WolfHasUnsavedWorkout=false;},[]);
  const update=(next:any)=>{if(!storage.ready){setNotice('Attendi la preparazione dati.');return false;}if(saveOn&&setStored(next)===false){setNotice('Salvataggio non riuscito: la modifica non è stata applicata.');return false;}setMemory(next);return true;};
  const switchTab=(t:string)=>{setTab(t);setNotice('');try{const h=({home:'',schede:'#builder',editor:'#builder',catalogo:'#library',metodi:'#methods','method-detail':'#method-starr',storico:'#progress',allenamento:'#builder'} as any)[t];history.replaceState(null,'',window.location.pathname+(h||''));}catch(e){}requestAnimationFrame(()=>document.querySelector('.wolf')?.scrollIntoView({block:'start'}));};
  const withSource=(r:any,day:string)=>{const n=normalize(r);n.source={id:'starr-ward-2015',label:'Starr / Ward 2015 · '+day,snapshot:uiToV2(n)};return n;};
@@ -28,7 +29,7 @@ export function App(){
  const start=(r:any)=>{if(!storage.ready)return;if(session){setNotice('Hai già un allenamento aperto. Riprendilo dalla scheda Allenamento.');return;}const b=normalize(r);setSession({...clone(b),base:clone(b),technique:{},pain:{},started:Date.now(),exercises:b.exercises.map((e:any)=>({...clone(e),sets:e.sets.map((s:any)=>({...s,done:false}))}))});switchTab('allenamento');};
  const complete=(i:number,j:number)=>{const r=clone(session),s=r.exercises[i].sets[j];if(!s.done&&(s.reps===''||s.kg===''||!Number.isFinite(Number(s.kg))||Number(s.kg)<0||!Number.isInteger(Number(s.reps))||Number(s.reps)<0)){setNotice('Per segnare la serie inserisci kg (anche 0 per corpo libero) e ripetizioni eseguite (0 se la serie è fallita).');return;}s.done=!s.done;setSession(r);setNotice('');if(s.done&&Number(s.rest)>0)setDeadline(Date.now()+Number(s.rest)*1000);};
  const finish=()=>{const done=session.exercises.flatMap((e:any)=>e.sets).filter((s:any)=>s.done).length;if(!done){setNotice('Nessuna serie completata: spunta almeno una serie oppure abbandona la prova.');return;}let wk:any;try{wk=buildWorkout(session);}catch(x:any){setNotice('Registrazione non riuscita: controlla i valori inseriti.');return;}if(!update({...data,history:[wk,...data.history]}))return;setSession(null);setDeadline(0);switchTab('storico');setNotice('Allenamento registrato. La scheda di partenza non è stata cambiata.');};
- const exportData=()=>{const blob=new Blob([storage.backup(data)],{type:'application/json'}),u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='wolflab-schede-builder.json';a.click();URL.revokeObjectURL(u);};
+ const exportData=async()=>{const r=await saveText(storage.backup(data),'wolflab-schede-builder.json','application/json');setNotice(saveMsg(r));};
  const list=library.map((e,i)=>({e,i})).filter(({e,i})=>(muscle==='Tutti'||e[1]===muscle)&&(equipment==='Tutti'||e[2]===equipment)&&(pattern==='Tutti'||patterns[i]===pattern)&&e[0].toLowerCase().includes(query.toLowerCase()));
  const seconds=Math.max(0,Math.ceil((deadline-now)/1000));
  return <FileCard><div className="wolf" aria-busy={!storage.ready}><div className="top"><strong>WOLF <span>STRENGTH LAB</span></strong></div>{!storage.ready&&<p role="status">Preparazione dati di prova…</p>}<nav aria-label="Navigazione">{tab!=='home'&&<button onClick={()=>switchTab('home')}>← Dashboard</button>}{session&&tab!=='allenamento'&&<button className="on" onClick={()=>switchTab('allenamento')}>Allenamento in corso ●</button>}</nav>
