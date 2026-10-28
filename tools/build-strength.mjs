@@ -7,9 +7,9 @@ const SITE = 'https://wolflabsystem.com';
 const v = (f) => crypto.createHash('md5').update(fs.readFileSync(path.join(root, 'assets/strength', f))).digest('hex').slice(0, 8);
 const esc = (s) => s.replace(/"/g, '&quot;');
 const L = {
-  it: { rel: '/train/strength/', alt: '/en/train/strength/', shell: 'gear.html', dir: '', title: 'Wolf Strength Lab', kick: 'TRAIN · FORZA',
+  it: { rel: '/train/strength/', alt: '/en/train/strength/', shell: 'gear.html', dir: '', title: 'Wolf Strength Engine', kick: 'TRAIN · FORZA',
     desc: 'Costruisci una scheda di forza, cerca esercizi e registra gli allenamenti. Nessun account: i dati restano nel tuo browser, solo se scegli di conservarli.', ns: 'Serve JavaScript per usare il builder.' },
-  en: { rel: '/en/train/strength/', alt: '/train/strength/', shell: 'en/gear.html', dir: 'en/', title: 'Wolf Strength Lab', kick: 'TRAIN · STRENGTH',
+  en: { rel: '/en/train/strength/', alt: '/train/strength/', shell: 'en/gear.html', dir: 'en/', title: 'Wolf Strength Engine', kick: 'TRAIN · STRENGTH',
     desc: 'Build a strength routine, browse exercises and log your workouts. No account: your data stays in your browser, and only if you choose to keep it.', ns: 'JavaScript is required to use the builder.' },
 };
 const sp = path.join(root, 'sitemap.xml'); let sm = fs.readFileSync(sp, 'utf8');
