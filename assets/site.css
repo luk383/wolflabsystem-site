@@ -418,3 +418,4 @@ html[data-theme="dark"] .w-prose a{color:var(--accent)}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @media(max-width:900px){.site-head .nav{flex-wrap:wrap;overflow:visible;gap:10px 18px}.site-head .nav a.nav-engine{flex:1 0 100%;text-align:center;margin:2px 0 0}}
 .eng-my{margin:32px 0 8px;padding:20px;border:1px solid var(--rule-strong);max-width:640px}.eng-my-t{font:700 11px/1 var(--mono,monospace);letter-spacing:.12em;color:var(--accent);margin:0 0 10px}.eng-my-b{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}.eng-my-b button{font:inherit;font-weight:700;font-size:13px;letter-spacing:.04em;padding:12px 16px;background:var(--accent);color:#0A0A0A;border:0;cursor:pointer}.eng-my-b button#my-del{background:transparent;color:var(--text);border:1px solid var(--rule-strong)}
+.foot-links{flex-wrap:wrap;row-gap:8px}
