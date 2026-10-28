@@ -15,13 +15,19 @@
         ]
       },
       "screen": {
-        "it": "touchscreen a colori con tasti fisici (dimensione non verificata)",
-        "en": "colour touchscreen with buttons (size not verified)",
+        "it": "3,5 pollici, 480 x 800 pixel, touchscreen LCD",
+        "en": "3.5 in, 480 x 800 pixels, LCD touchscreen",
         "src": [
-          "https://www.garmin.com.my/products/intosports/edge-1060/"
+          "https://www.garmin.com/en-US/p/1967830/"
         ]
       },
-      "memory": null,
+      "memory": {
+        "it": "64 GB di memoria interna (nessuna espansione)",
+        "en": "64 GB internal memory only",
+        "src": [
+          "https://www.garmin.com/en-US/p/1967830/"
+        ]
+      },
       "water": {
         "it": "IPX7",
         "en": "IPX7",
@@ -29,7 +35,13 @@
           "https://www8.garmin.com/manuals/webhelp/GUID-D3621248-CC5B-4F04-B004-6F6FD9FDFEB0/EN-US/GUID-BC19C141-0A22-4A56-83CE-BEB07D0602AF.html"
         ]
       },
-      "weight": null
+      "weight": {
+        "it": "142 g",
+        "en": "142 g",
+        "src": [
+          "https://www.garmin.com/en-US/p/1967830/"
+        ]
+      }
     },
     {
       "id": "wahoo-elemnt-roam-3",
@@ -81,21 +93,34 @@
         ]
       },
       "screen": {
-        "it": "3,2 pollici, touchscreen a colori (Cyclist)",
-        "en": "3.2 in colour touchscreen (Cyclist)",
+        "it": "3,2 pollici, 800 x 480 pixel, touchscreen",
+        "en": "3.2 in, 800 x 480 pixels, touchscreen",
         "src": [
-          "https://www.cyclist.co.uk/reviews/hammerhead-karoo-3-gps-bike-computer-review"
+          "https://support.hammerhead.io/hc/en-us/articles/25687624385691-Karoo-Hardware-Specifications",
+          "https://support.hammerhead.io/hc/en-us/articles/25696850944795-Karoo-Display"
         ]
       },
       "memory": {
-        "it": "64 GB di memoria, 4 GB di RAM (Hammerhead)",
-        "en": "64 GB memory, 4 GB RAM (Hammerhead)",
+        "it": "64 GB di memoria, 4 GB di RAM",
+        "en": "64 GB memory, 4 GB RAM",
         "src": [
-          "https://www.eu.hammerhead.io/pages/product-specification-list"
+          "https://support.hammerhead.io/hc/en-us/articles/25687624385691-Karoo-Hardware-Specifications"
         ]
       },
-      "water": null,
-      "weight": null
+      "water": {
+        "it": "IP67",
+        "en": "IP67",
+        "src": [
+          "https://support.hammerhead.io/hc/en-us/articles/25687624385691-Karoo-Hardware-Specifications"
+        ]
+      },
+      "weight": {
+        "it": "118,1 g (supporto manubrio 39 g a parte)",
+        "en": "118.1 g (handlebar mount 39 g separate)",
+        "src": [
+          "https://support.hammerhead.io/hc/en-us/articles/25687624385691-Karoo-Hardware-Specifications"
+        ]
+      }
     }
   ],
   "sources": [
@@ -126,6 +151,14 @@
     {
       "label": "Cycling Weekly, recensione ELEMNT ROAM 3",
       "url": "https://www.cyclingweekly.com/reviews/computers-and-heart-rate-monitors/wahoo-elemnt-roam-3-review-way-more-than-a-touch-better"
+    },
+    {
+      "label": "Garmin, pagina Edge 1060 (US)",
+      "url": "https://www.garmin.com/en-US/p/1967830/"
+    },
+    {
+      "label": "Hammerhead, specifiche hardware Karoo",
+      "url": "https://support.hammerhead.io/hc/en-us/articles/25687624385691-Karoo-Hardware-Specifications"
     }
   ]
 }
