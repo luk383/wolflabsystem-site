@@ -158,4 +158,11 @@ EN = {
 "Eliminare il programma? Gli allenamenti già registrati restano nello storico.":"Delete the program? Workouts already logged stay in your history.",
 "Avvia questa seduta":"Start this session","Apri":"Open","Chiudi":"Close","Elimina programma ":"Delete program "," settimane · da ":" weeks · from ",
 " programmi":" programs",
+"Carico di riferimento non valido.":"Invalid reference load.","Scegli l’allenamento da cui parte l’aggiornamento.":"Pick the workout the update starts from.",
+"Inserisci almeno un nuovo carico di riferimento.":"Enter at least one new reference load.","Settimana effettiva: ":"Effective week: ",
+"Aggiornare il riferimento dalla settimana ":"Update the reference from week ","? Le settimane già completate e lo storico non cambiano.":"? Completed weeks and your history do not change.",
+"Riferimento aggiornato dalla settimana ":"Reference updated from week ","Aggiornamento non valido: nessuna modifica.":"Invalid update: no changes made.",
+"Aggiorna il riferimento":"Update the reference","Solo su tua accettazione. Il programma cambia dalla settimana scelta; gli allenamenti già registrati non cambiano.":"Only when you accept. The program changes from the chosen week; workouts already logged do not change.",
+"Registra prima un allenamento da una seduta di questo programma.":"First log a workout from a session of this program.","Allenamento di partenza":"Starting workout",
+" · kg (ora ":" · kg (now ","Nuovo riferimento":"New reference"," nuovo riferimento":" new reference","Dalla settimana":"From week","Settimana effettiva":"Effective week","Aggiorna riferimento":"Update reference"," · sett. ":" · wk ",
 }
