@@ -122,4 +122,6 @@ EN = {
 "Salvataggio annullato: nessun file creato.":"Save cancelled: no file created.",
 "Salvataggio non riuscito: nessun file creato.":"Save failed: no file created.",
 "Nessun file letto: nessuna modifica.":"No file read: no changes made.",
+"Salvataggio non riuscito. Verifica il file nella destinazione scelta.":"Save failed. Check the file in the chosen destination.",
+"Salvataggio non riuscito: la seduta in corso resta solo in memoria.":"Save failed: the workout in progress is kept in memory only.",
 }

@@ -71,7 +71,7 @@ export async function saveText(text:string,filename:string,mime:string):Promise<
   if(N&&typeof N.exportText==='function'){try{const r=await N.exportText({text,filename,mime:mime.split(';')[0]});return r&&r.saved===true?'saved':'error';}catch(e:any){return e&&(e.code==='CANCELLED'||e.message==='CANCELLED')?'cancelled':'error';}}
   try{const b=new Blob([text],{type:mime}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=filename;a.click();URL.revokeObjectURL(u);return 'download';}catch(e){return 'error';}
 }
-export const saveMsg=(r:string)=>r==='saved'?'File salvato.':r==='cancelled'?'Salvataggio annullato: nessun file creato.':r==='error'?'Salvataggio non riuscito: nessun file creato.':'';
+export const saveMsg=(r:string)=>r==='saved'?'File salvato.':r==='cancelled'?'Salvataggio annullato: nessun file creato.':r==='error'?'Salvataggio non riuscito. Verifica il file nella destinazione scelta.':'';
 export async function pickText():Promise<string|null|undefined|'cancelled'>{
   const N=(window as any).WolfNative;if(!(N&&typeof N.importText==='function'))return undefined;
   try{const r=await N.importText();if(!r||typeof r.text!=='string')return null;return r.text;}catch(e:any){return e&&(e.code==='CANCELLED'||e.message==='CANCELLED')?'cancelled':null;}
