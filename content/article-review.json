@@ -343,5 +343,28 @@
    "gestione del ritmo e intensità del nuoto in atleti agonisti",
    "pacing and swim intensity in competitive athletes"
   ]
+ },
+ "nuoto-piscina-acque-libere|swim-pool-vs-open-water": {
+  "lv": [
+   "1 studio, abstract e parti del testo",
+   "1 study, abstract and parts of the text"
+  ],
+  "stars": 2,
+  "how": [
+   "Revisione documentale di un singolo studio sperimentale su 14 triatleti élite.",
+   "Document review of a single experimental study of 14 elite triathletes."
+  ],
+  "lim": [
+   "14 atleti élite, una prova da 1500 m, nessun amatore; nessun obiettivo o ritmo applicabile.",
+   "14 elite athletes, one 1500 m test, no amateurs; no applicable target or pace."
+  ],
+  "why": [
+   "Un solo studio su un gruppo diverso dal tuo: Molto limitata.",
+   "A single study on a different group: Very limited."
+  ],
+  "scope": [
+   "differenze tra piscina e acque libere in triatleti élite",
+   "pool vs open-water differences in elite triathletes"
+  ]
  }
 }
