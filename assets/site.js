@@ -174,6 +174,7 @@
 (function(){
   "use strict";
   var en=document.documentElement.lang==='en',root=document.documentElement;
+  if(!root.classList.contains('wolf2')){root.classList.add('wolf2');try{if(localStorage.getItem('wolf-theme')==='dark')root.setAttribute('data-theme','dark');}catch(e){}}
   if(root.classList.contains('wolf2')){
     var head=document.querySelector('.site-head .wrap'),lang=document.querySelector('.site-head .lang');
     if(head){var b=document.createElement('button');b.type='button';b.className='theme-toggle';b.setAttribute('aria-label',en?'Toggle dark mode':'Attiva/disattiva modalità scura');

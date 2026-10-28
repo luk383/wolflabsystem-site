@@ -40,3 +40,11 @@
 .art-hero .major{color:#fff;border-color:#E65A2E}
 .inner-body.prose{max-width:var(--wrap)}
 .inner-body.prose>*{max-width:720px}
+html[data-theme="dark"] .prose,html[data-theme="dark"] .prose p,html[data-theme="dark"] .prose li,html[data-theme="dark"] .art-body,html[data-theme="dark"] .art-body p,html[data-theme="dark"] .art-body li,html[data-theme="dark"] .art-body td,html[data-theme="dark"] .art-body th{color:#E6E5DF}
+html[data-theme="dark"] .art-body h2,html[data-theme="dark"] .art-body h3,html[data-theme="dark"] .art-body strong{color:#F5F4EF}
+html[data-theme="dark"] .art-body .brief,html[data-theme="dark"] .art-body .note,html[data-theme="dark"] .art-body .sources{background:#1B1B1B;color:#F5F4EF}
+html[data-theme="dark"] .art-body .brief li,html[data-theme="dark"] .art-body .brief p,html[data-theme="dark"] .art-body .note p,html[data-theme="dark"] .art-body .sources li{color:#E6E5DF}
+html[data-theme="dark"] .art-body tbody tr:nth-child(even){background:#141414}
+html[data-theme="dark"] .art-body td,html[data-theme="dark"] .art-body table{border-color:rgba(245,244,239,.2)}
+html[data-theme="dark"] .art-toc-m a,html[data-theme="dark"] .art-side a{color:#F5F4EF}
+html[data-theme="dark"] .art-side a:hover{color:#E65A2E}
