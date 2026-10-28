@@ -75,10 +75,25 @@ page(FURL, 'Gel di carboidrati: confronto dei dati dichiarati', 'Maurten Gel 100
   '<p class="pk-note">Dati dei produttori, letti sulle loro pagine il 28/10/2026. "Non indicato": la pagina letta non lo riporta.</p>' +
   '<div class="pk-box"><h3>Come leggerli</h3><ul><li><b>Carboidrati per dose:</b> contano i grammi, non il numero di gel. Per arrivare allo stesso apporto orario con un gel da 25 g servono più bustine che con uno da 40 g.</li><li><b>Rapporto glucosio e fruttosio:</b> i due gel che lo dichiarano usano 1:0,8. Il rapporto riguarda come si assorbono i carboidrati; l\'articolo sotto riassume uno studio sulle quantità.</li><li><b>Tolleranza:</b> si allena prima della gara, con la stessa marca e la stessa quantità.</li></ul><p><a href="/articoli/carboidrati-maratona/">Carboidrati in maratona: cosa dicono gli studi →</a></p></div>' +
   `<div class="pk-box"><h3>Fonti</h3><ol>${FU.map((p) => `<li><a href="${p.sources[0].url}" rel="noopener">${esc(p.brand)} ${esc(p.model)}: ${esc(p.sources[0].label)}</a></li>`).join('')}</ol><p class="pk-note">Ultima verifica: 28 ottobre 2026.</p></div>` + DISC + END);
+
+// cycling
+const CY = JSON.parse(fs.readFileSync(path.join(root, 'content/catalog/cycling.json'), 'utf8'));
+const CURL = '/picks/ciclocomputer/';
+const cv = (m, k) => (m[k] ? esc(m[k].it) : 'non verificato');
+const crow = (l, k) => `<tr><th>${l}</th>${CY.models.map((m) => `<td>${cv(m, k)}</td>`).join('')}</tr>`;
+page(CURL, 'Ciclocomputer GPS: come scegliere', 'Cosa guardare in un ciclocomputer GPS e tre modelli con specifiche dichiarate, condizioni incluse. Ultima verifica 28/10/2026.',
+  hero('WOLF PICKS · CYCLING · CICLOCOMPUTER', 'Ciclocomputer GPS: come scegliere.', 'Cosa guardare, e tre modelli con le specifiche dichiarate. Non è un test e non c\'è una classifica.') +
+  '<div class="pk-box"><h3>Cosa guardare</h3><ul><li><b>Navigazione:</b> percorso caricato, indicazioni curva per curva, mappe sul dispositivo o sul telefono.</li><li><b>Batteria:</b> ogni marca dichiara le ore in condizioni diverse. Guarda la condizione (schermo, navigazione, sensori) e lascia margine per la tua uscita più lunga.</li><li><b>Schermo:</b> dimensione, leggibilità al sole, uso con pioggia o guanti.</li><li><b>Compatibilità:</b> sensori, cambio elettronico, eBike, app che usi già.</li><li><b>Memoria e mappe:</b> spazio per le mappe e fluidità.</li></ul></div>' +
+  `<div class="pk-scroll"><table class="pk-tbl"><thead><tr><th></th>${CY.models.map((m) => `<th>${esc(m.name)}</th>`).join('')}</tr></thead><tbody>` +
+  crow('Batteria dichiarata', 'battery') + crow('Schermo', 'screen') + crow('Memoria', 'memory') + crow('Resistenza all\'acqua', 'water') + crow('Peso', 'weight') +
+  '<tr><th>Prezzo</th>' + CY.models.map(() => '<td>Vedi prezzo corrente</td>').join('') + '</tbody></table></div>' +
+  '<p class="pk-note">Dati dichiarati dai produttori o riportati dalle recensioni indicate, letti il 28/10/2026. "Non verificato": non abbiamo letto il dato su una fonte. Le ore di batteria di marche diverse non sono confrontabili: condizioni e prove non sono le stesse.</p>' +
+  '<div class="pk-box"><h3>Da sapere</h3><ul><li>Edge 1060 è uscito il 20/10/2026: le recensioni complete con test di batteria potrebbero non esserci ancora.</li><li>Nessun vincitore: scegli in base a ecosistema, cambio e schermo che preferisci.</li></ul></div>' +
+  `<div class="pk-box"><h3>Fonti</h3><ol>${CY.sources.map((x) => `<li><a href="${x.url}" rel="noopener">${esc(x.label)}</a></li>`).join('')}</ol><p class="pk-note">Ultima verifica: 28 ottobre 2026.</p></div>` + DISC + END);
 // hub
 page(URL.hub, 'WOLF PICKS', 'Selezioni con fonti, livello di prova e data di verifica. Si parte dalle scarpe da allenamento.',
-  hero('WOLF PICKS', 'Cosa scegliere, e perché.', 'Selezioni con fonti, livello di prova e data di verifica. Si parte da scarpe da allenamento e gel di carboidrati; Cycling segue.') +
-  `<div class="pk-grid"><div class="pk-card"><h3>Guida</h3><ul><li><a href="${URL.guide}">Scarpe da allenamento: come scegliere</a><small>Guida all'acquisto</small></li></ul></div><div class="pk-card"><h3>Confronto</h3><ul><li><a href="${URL.cmp}">Evo SL, Novablast 6, Ghost 18</a><small>Misure di laboratorio indipendenti</small></li><li><a href="${FURL}">Gel di carboidrati</a><small>Dati dichiarati dai produttori</small></li></ul></div><div class="pk-card"><h3>Schede</h3><ul>${P.map((p) => `<li><a href="${pu(p)}">${esc(p.brand)} ${esc(p.model)}</a><small>SELECTED · verificato il 28/10/2026</small></li>`).join('')}</ul></div></div>` + DISC +
+  hero('WOLF PICKS', 'Cosa scegliere, e perché.', 'Selezioni con fonti, livello di prova e data di verifica. Si parte da scarpe da allenamento, gel di carboidrati e ciclocomputer.') +
+  `<div class="pk-grid"><div class="pk-card"><h3>Guida</h3><ul><li><a href="${URL.guide}">Scarpe da allenamento: come scegliere</a><small>Guida all'acquisto</small></li></ul></div><div class="pk-card"><h3>Confronto</h3><ul><li><a href="${URL.cmp}">Evo SL, Novablast 6, Ghost 18</a><small>Misure di laboratorio indipendenti</small></li><li><a href="${FURL}">Gel di carboidrati</a><small>Dati dichiarati dai produttori</small></li><li><a href="${CURL}">Ciclocomputer GPS</a><small>Specifiche dichiarate, senza classifica</small></li></ul></div><div class="pk-card"><h3>Schede</h3><ul>${P.map((p) => `<li><a href="${pu(p)}">${esc(p.brand)} ${esc(p.model)}</a><small>SELECTED · verificato il 28/10/2026</small></li>`).join('')}</ul></div></div>` + DISC +
   '<p class="w-foot"><a class="w-cta" href="/metodologia">Come valutiamo <span aria-hidden="true">→</span></a></p>' + END);
 // partner
 const PI=[['Audience','Atleti di running, ciclismo, nuoto, triathlon e forza. Nessun dato di pubblico finché non è misurato.'],['Research','Analisi basata su fonti: studi, regolamenti, schede ufficiali.'],['Testing','Test sul campo pianificati: i risultati compaiono solo quando esistono.'],['Content','Articoli, confronti e guide all\'acquisto.'],['Performance','Strumenti e calcolatori nel Wolf Engine.'],['Commerce','Link affiliati dichiarati.']];
@@ -101,6 +116,6 @@ let c = fs.readFileSync(path.join(root, 'assets/site.css'), 'utf8').replace(/\n?
 fs.writeFileSync(path.join(root, 'assets/site.css'), c.trimEnd() + '\n' + css + '\n');
 // sitemap
 const sp = path.join(root, 'sitemap.xml'); let sm = fs.readFileSync(sp, 'utf8');
-for (const u of [FURL, URL.hub, URL.guide, URL.cmp, '/partner/', ...P.map(pu)]) if (!sm.includes(SITE + u + '</loc>')) sm = sm.replace('</urlset>', `<url><loc>${SITE}${u}</loc></url>\n</urlset>`);
+for (const u of [FURL, CURL, URL.hub, URL.guide, URL.cmp, '/partner/', ...P.map(pu)]) if (!sm.includes(SITE + u + '</loc>')) sm = sm.replace('</urlset>', `<url><loc>${SITE}${u}</loc></url>\n</urlset>`);
 fs.writeFileSync(sp, sm);
 console.log('picks:', P.length + 5, 'pagine');

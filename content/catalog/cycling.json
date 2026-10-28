@@ -1,0 +1,131 @@
+{
+  "schema": "wolflab-catalog-cycling/1",
+  "note": "Specifiche dichiarate con condizione e fonte; nessun voto o vincitore. Non e' un test.",
+  "checked": "2026-10-28",
+  "models": [
+    {
+      "id": "garmin-edge-1060",
+      "name": "Garmin Edge 1060",
+      "battery": {
+        "it": "fino a 20 ore in uso intenso, fino a 60 ore in risparmio batteria",
+        "en": "up to 20 hours in demanding use, up to 60 hours in battery saver mode",
+        "src": [
+          "https://www8.garmin.com/manuals/webhelp/GUID-D3621248-CC5B-4F04-B004-6F6FD9FDFEB0/EN-US/GUID-BC19C141-0A22-4A56-83CE-BEB07D0602AF.html",
+          "https://www.garmin.com.my/products/intosports/edge-1060/"
+        ]
+      },
+      "screen": {
+        "it": "touchscreen a colori con tasti fisici (dimensione non verificata)",
+        "en": "colour touchscreen with buttons (size not verified)",
+        "src": [
+          "https://www.garmin.com.my/products/intosports/edge-1060/"
+        ]
+      },
+      "memory": null,
+      "water": {
+        "it": "IPX7",
+        "en": "IPX7",
+        "src": [
+          "https://www8.garmin.com/manuals/webhelp/GUID-D3621248-CC5B-4F04-B004-6F6FD9FDFEB0/EN-US/GUID-BC19C141-0A22-4A56-83CE-BEB07D0602AF.html"
+        ]
+      },
+      "weight": null
+    },
+    {
+      "id": "wahoo-elemnt-roam-3",
+      "name": "Wahoo ELEMNT ROAM 3",
+      "battery": {
+        "it": "fino a 25 ore (condizioni non indicate nella scheda letta)",
+        "en": "up to 25 hours (conditions not stated on the page read)",
+        "src": [
+          "https://support.wahoofitness.com/hc/en-us/articles/26243291046034-ELEMNT-ROAM-3-2025-Product-Information"
+        ]
+      },
+      "screen": {
+        "it": "2,8 pollici, touchscreen TFT a colori",
+        "en": "2.8 in colour TFT touchscreen",
+        "src": [
+          "https://support.wahoofitness.com/hc/en-us/articles/26243291046034-ELEMNT-ROAM-3-2025-Product-Information"
+        ]
+      },
+      "memory": {
+        "it": "64 GB di archiviazione, 2 GB di RAM",
+        "en": "64 GB storage, 2 GB RAM",
+        "src": [
+          "https://support.wahoofitness.com/hc/en-us/articles/26243291046034-ELEMNT-ROAM-3-2025-Product-Information"
+        ]
+      },
+      "water": {
+        "it": "IPX7",
+        "en": "IPX7",
+        "src": [
+          "https://support.wahoofitness.com/hc/en-us/articles/26243291046034-ELEMNT-ROAM-3-2025-Product-Information"
+        ]
+      },
+      "weight": {
+        "it": "109 g",
+        "en": "109 g",
+        "src": [
+          "https://support.wahoofitness.com/hc/en-us/articles/26243291046034-ELEMNT-ROAM-3-2025-Product-Information"
+        ]
+      }
+    },
+    {
+      "id": "hammerhead-karoo-3",
+      "name": "Hammerhead Karoo 3",
+      "battery": {
+        "it": "15 ore dichiarate in uso ad alta potenza (riportate dalla recensione di Cyclist)",
+        "en": "15 hours claimed in high-power use (as reported by Cyclist)",
+        "src": [
+          "https://www.cyclist.co.uk/reviews/hammerhead-karoo-3-gps-bike-computer-review"
+        ]
+      },
+      "screen": {
+        "it": "3,2 pollici, touchscreen a colori (Cyclist)",
+        "en": "3.2 in colour touchscreen (Cyclist)",
+        "src": [
+          "https://www.cyclist.co.uk/reviews/hammerhead-karoo-3-gps-bike-computer-review"
+        ]
+      },
+      "memory": {
+        "it": "64 GB di memoria, 4 GB di RAM (Hammerhead)",
+        "en": "64 GB memory, 4 GB RAM (Hammerhead)",
+        "src": [
+          "https://www.eu.hammerhead.io/pages/product-specification-list"
+        ]
+      },
+      "water": null,
+      "weight": null
+    }
+  ],
+  "sources": [
+    {
+      "label": "Garmin, specifiche Edge 1060",
+      "url": "https://www8.garmin.com/manuals/webhelp/GUID-D3621248-CC5B-4F04-B004-6F6FD9FDFEB0/EN-US/GUID-BC19C141-0A22-4A56-83CE-BEB07D0602AF.html"
+    },
+    {
+      "label": "Garmin Malaysia, pagina Edge 1060",
+      "url": "https://www.garmin.com.my/products/intosports/edge-1060/"
+    },
+    {
+      "label": "Wahoo, scheda ELEMNT ROAM 3",
+      "url": "https://support.wahoofitness.com/hc/en-us/articles/26243291046034-ELEMNT-ROAM-3-2025-Product-Information"
+    },
+    {
+      "label": "Hammerhead, specifiche Karoo",
+      "url": "https://www.eu.hammerhead.io/pages/product-specification-list"
+    },
+    {
+      "label": "Cyclist, recensione Karoo 3",
+      "url": "https://www.cyclist.co.uk/reviews/hammerhead-karoo-3-gps-bike-computer-review"
+    },
+    {
+      "label": "DC Rainmaker, Edge 1060 hands-on (20/10/2026)",
+      "url": "https://www.dcrainmaker.com/2026/10/garmin-edge-1060-cycling-gps-full-hands-on-details.html"
+    },
+    {
+      "label": "Cycling Weekly, recensione ELEMNT ROAM 3",
+      "url": "https://www.cyclingweekly.com/reviews/computers-and-heart-rate-monitors/wahoo-elemnt-roam-3-review-way-more-than-a-touch-better"
+    }
+  ]
+}
