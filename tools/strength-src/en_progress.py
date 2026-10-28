@@ -114,4 +114,8 @@ EN = {
 "Aggiungi ai dati attuali":"Add to current data",
 "Sostituisci tutto":"Replace all",
 "Nessun invio a WOLFLAB, nessun account aggiuntivo.":"Nothing is sent to WOLFLAB and no account is needed.",
+">Lineare<":">Linear<",
+">Doppia<":">Double<",
+"Lineare: valuta il limite basso delle ripetizioni.":"Linear: judged on the lower rep limit.",
+"Doppia: valuta il limite alto delle ripetizioni.":"Double: judged on the upper rep limit.",
 }
