@@ -446,6 +446,7 @@ ${side}
     [it ? "Iscrizioni" : "Entry", esc(r.status[lang])],
     [it ? "Dettagli" : "Details", r.start ? esc(r.start[lang]) : ""],
     [it ? "Tempo massimo" : "Time limit", r.limit ? esc(r.limit[lang]) : ""],
+    [it ? "Percorso" : "Course", r.course ? `${esc(r.course[lang])} <a href="${r.courseSource}" rel="noopener">${it ? "Fonte ufficiale" : "Official source"}</a>` : (it ? "Dato non ancora verificato: dislivello, difficoltà e temperatura non sono ancora pubblicati qui." : "Not yet verified: elevation, difficulty and temperature are not published here yet.")],
   ])}
   ${r.travel ? `<h2>${it ? "Come arrivare" : "Getting there"}</h2>
   <p>${esc(r.travel[lang])}</p>` : ""}
@@ -510,9 +511,10 @@ ${urls.map((u) => `<url><loc>${SITE}${u}</loc></url>`).join("\n")}
 
 main();
 
-// Rebuild the checked reference library after the base pages.
+// Order matters: the Wolf v3 pages (engine) first, because library/news reuse their shell,
+// then older pages are normalized to that shell, then Ask Wolf and footer links.
+await import("./build-engine.mjs");
 await import("./build-library.mjs");
 await import("./build-news.mjs");
-await import("./build-engine.mjs");
 await import("./normalize-legacy.mjs");
 await import("./build-ask.mjs");

@@ -89,7 +89,12 @@
         "it": "€80–180",
         "en": "€80–180"
       },
-      "major": false
+      "major": false,
+      "course": {
+        "it": "Percorso piatto (descrizione ufficiale: \"flat course\"). Dislivello in metri non pubblicato nella pagina ufficiale consultata.",
+        "en": "Flat course (official description). Elevation gain in metres not given on the official page consulted."
+      },
+      "courseSource": "https://www.valenciaciudaddelrunning.com/en/marathon/official-route-marathon/"
     },
     {
       "id": "napoli-half",
@@ -857,7 +862,12 @@
         "it": "€215",
         "en": "€215"
       },
-      "major": true
+      "major": true,
+      "course": {
+        "it": "Il percorso più piatto delle Abbott World Marathon Majors, con pochissimo dislivello (descrizione ufficiale). Valore in metri non pubblicato (\"Elevation tba\").",
+        "en": "Described by the organiser as the flattest of the Abbott World Marathon Majors, with very little elevation gain. Figure in metres not published (\"Elevation tba\")."
+      },
+      "courseSource": "https://www.generali-berlin-marathon.com/en/race-weekend/course"
     },
     {
       "id": "chicago",
