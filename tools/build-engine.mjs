@@ -297,7 +297,6 @@ function engine(lang) {
 </form>
 <div class="eng-my" id="my-wolf" role="group" aria-label="My Wolf">
   <p class="eng-my-t">MY WOLF</p>
-  <p class="dim">${T("Salva questi dati solo su questo dispositivo, nel browser. Non vengono inviati a Wolf Lab né sincronizzati con altri dispositivi. Puoi cancellarli quando vuoi.", "Save these values only on this device, in your browser. They are not sent to Wolf Lab or synced to other devices. You can delete them any time.")}</p>
   <div class="eng-my-b"><button type="button" id="my-save">${T("Salva su questo dispositivo", "Save on this device")}</button><button type="button" id="my-del">${T("Cancella dati salvati", "Delete saved data")}</button></div>
   <p class="dim" id="my-status" role="status"></p>
 </div>
