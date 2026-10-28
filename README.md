@@ -32,3 +32,5 @@ node tools/build.mjs
 
 ## Wolf Engine
 `node tools/build-engine.mjs` generates the hub pages (run, ride, train, fuel, race, gear), the engine page, methodology, the new home and `assets/explore-data.json`. The calculation model is in `assets/engine.js`, the UI in `assets/engine-ui.js`.
+
+Build order (tools/build.mjs): base pages, library, news, Wolf Engine, then tools/normalize-legacy.mjs, which brings every older generated page (articles, races, trips, contact) to the Wolf v3 shell. Do not run the full build without reviewing the diff.
