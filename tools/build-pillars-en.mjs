@@ -16,7 +16,7 @@ const TAGS = { // id articolo -> [disciplina, tipo] (stessi tag della versione I
   'ftp-e-zone-di-potenza': ['RIDE', 'GUIDE'], 'hyrox-triathlon-lungo-studi': ['HYBRID', 'ANALYSIS'], 'quanta-intensita-serve': ['HYBRID', 'ANALYSIS'], 'nuoto-acque-libere-regole-fin-master': ['SWIM', 'GUIDE'],
   'nuoto-acque-libere-sicurezza': ['SWIM', 'GUIDE'], 'nuoto-css-velocita-critica': ['SWIM', 'GUIDE'], 'nuoto-gare-e-formati': ['SWIM', 'GUIDE'], 'nuoto-metodi-di-allenamento': ['SWIM', 'METHOD'],
   'nuoto-orientamento-sighting': ['SWIM', 'GUIDE'], 'nuoto-piscina-acque-libere': ['SWIM', 'ANALYSIS'], 'nuoto-ritmo-gara-triathlon': ['SWIM', 'GUIDE'], 'nuoto-sedute-esercizi-transizione': ['SWIM', 'METHOD'],
-  'nuoto-tecnica-bracciata': ['SWIM', 'ANALYSIS'], 'scarpe-con-piastra-carbonio': ['RUN', 'ANALYSIS'], 'sonno-e-recupero': ['CROSS', 'GUIDE'], 'scarico-pre-gara': ['RUN', 'GUIDE'] };
+  'nuoto-tecnica-bracciata': ['SWIM', 'ANALYSIS'], 'scarpe-con-piastra-carbonio': ['RUN', 'ANALYSIS'], 'sonno-e-recupero': ['CROSS', 'GUIDE'], 'metodo-norvegese-doppia-soglia': ['RUN', 'METHOD'], 'forza-corsa-metodi': ['STRENGTH', 'METHOD'], 'forza-bici-metodi': ['STRENGTH', 'METHOD'], 'scarico-pre-gara': ['RUN', 'GUIDE'] };
 const meta0 = (f) => JSON.parse(fs.readFileSync(path.join(root, 'content/articles', f), 'utf8').match(/<!--meta([\s\S]*?)-->/)[1]);
 const en = {}; for (const f of fs.readdirSync(path.join(root, 'content/articles'))) if (f.endsWith('.en.html')) { const m = meta0(f); en[m.id] = m; }
 const arts = fs.readdirSync(path.join(root, 'content/articles')).filter((f) => f.endsWith('.it.html')).map((f) => {
@@ -42,13 +42,13 @@ const A = (id) => { const a = arts.find((x) => x.slug === id); if (!a) bad.push(
 const sleep = ['Sleep and recovery', 'The cheapest performance gain.', '/en/articles/sleep-and-recovery/'];
 const DISC = {
   RUN: { url: '/en/run', it: '/run', desc: 'Training, performance, races, fuel and gear for running.', lead: 'Training, performance, races, fuel and gear.', blocks: [
-    ['TRAINING', [['Polarised or pyramidal', 'What the studies say.', '/en/pyramidal-or-polarized'], ['Race taper', 'How much and how to cut back.', '/en/articles/race-taper/'], ['Cycling to train for a marathon', 'What transfers and what doesn\'t.', '/en/articles/cycling-for-the-marathon/'], ['Training methods', 'Library of methods, Running filter.', '/en/training/']]],
+    ['TRAINING', [['Polarised or pyramidal', 'What the studies say.', '/en/pyramidal-or-polarized'], ['Race taper', 'How much and how to cut back.', '/en/articles/race-taper/'], ['Cycling to train for a marathon', 'What transfers and what doesn\'t.', '/en/articles/cycling-for-the-marathon/'], ['Norwegian method', 'Lactate-guided threshold: versions, evidence, limits.', '/en/articles/norwegian-method-double-threshold/'], ['Strength for running', 'Studied methods and protocols.', '/en/articles/strength-for-running-methods/'], ['Training methods', 'Library of methods, Running filter.', '/en/training/?s=run#training']]],
     ['PERFORMANCE', [['Wolf Engine', 'Paces, VDOT and zones from your times.', '/en/engine'], ['Marathon splits', 'Even-pace split times.', '/en/training/#splits']]],
     ['RACE', [['Running races', `${RUN_RACES} races on the calendar, marathons and halves.`, '/en/races/?f=run']]],
     ['FUEL & RECOVERY', [['Marathon carbohydrates', 'How many per hour, by duration.', '/en/articles/marathon-carbohydrates/'], ['Carb calculator', 'Gels, grams and timing.', '/en/training/#carbs'], ['Carb gels', 'Comparison on declared data.', '/en/picks/carb-gels/'], sleep, ['Caffeine and performance', 'Doses, timing and when to avoid it.', '/en/articles/caffeine-and-performance/']]],
     ['GEAR', [['Training shoes', 'Guide and criteria.', '/en/picks/training-shoes/'], ['Compare Evo SL, Novablast 6, Ghost 18', 'Sourced data, no scores.', '/en/picks/compare-evo-sl-novablast-6-ghost-18/'], ['Carbon-plate running shoes', 'What the studies say.', '/en/articles/carbon-plate-running-shoes/']]]] },
   RIDE: { url: '/en/ride', it: '/ride', desc: 'Power, FTP, races and gear for cycling.', lead: 'Power, races and gear.', blocks: [
-    ['TRAINING', [['FTP and power zones', 'What they measure and how far to trust them.', '/en/articles/ftp-and-power-zones/'], ['Polarised or pyramidal', 'What the studies say.', '/en/pyramidal-or-polarized'], ['Training methods', 'Library of methods, Cycling filter.', '/en/training/']]],
+    ['TRAINING', [['FTP and power zones', 'What they measure and how far to trust them.', '/en/articles/ftp-and-power-zones/'], ['Polarised or pyramidal', 'What the studies say.', '/en/pyramidal-or-polarized'], ['Strength for cycling', 'Heavy loads and a studied protocol.', '/en/articles/strength-for-cycling-methods/'], ['Training methods', 'Library of methods, Cycling filter.', '/en/training/?s=ride#training']]],
     ['PERFORMANCE', [['Wolf Engine', 'Power zones from your FTP.', '/en/engine']]],
     ['RACE', [['Cycling races', `${BIKE_RACES} gran fondos on the calendar.`, '/en/races/?f=bike']]],
     ['FUEL & RECOVERY', [sleep]],
@@ -60,9 +60,9 @@ const DISC = {
     ['FUEL & RECOVERY', [sleep]],
     ['GEAR', []]] },
   STRENGTH: { url: '/en/strength/', it: '/strength/', desc: 'Strength for the endurance athlete: programs, exercises, methods.', lead: '', blocks: [
-    ['PROGRAMS', [['Bill Starr 5×5', 'Origin, structure and variants, with sources.', '/en/train/strength/starr-5x5/']]],
+    ['PROGRAMS', [['Bill Starr 5×5', 'Origin, structure and variants, with sources.', '/en/train/strength/starr-5x5/'], ['Studied protocols: running', 'Sets, reps and loads in the studies.', '/en/articles/strength-for-running-methods/#protocolli'], ['Studied protocols: cycling', 'The tested 12-week protocol.', '/en/articles/strength-for-cycling-methods/#protocolli']]],
     ['EXERCISES', [['Exercise catalogue', '53 exercises by muscle, equipment and pattern.', '/en/train/strength/exercises/']]],
-    ['METHODS', [['Strength, size and power', 'Three different outcomes, not one.', '/en/training/#training-3'], ['Strength and endurance together', 'What the reviews say.', '/en/training/#training-4']]],
+    ['METHODS', [['Strength for running', 'High loads, plyometrics and other methods.', '/en/articles/strength-for-running-methods/'], ['Strength for cycling', 'What studies show in cyclists.', '/en/articles/strength-for-cycling-methods/'], ['Strength, size and power', 'Three different outcomes, not one.', '/en/training/#training-3'], ['Strength and endurance together', 'What the reviews say.', '/en/training/#training-4']]],
     ['ENDURANCE STRENGTH', [['Strength for runners and cyclists', 'Interference or advantage?', '/en/articles/strength-for-endurance/'], sleep]],
     ['GEAR', []]] },
 };

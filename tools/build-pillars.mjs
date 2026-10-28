@@ -21,7 +21,7 @@ const TAGS = {
   'nuoto-css-velocita-critica': ['SWIM', 'GUIDA'], 'nuoto-gare-e-formati': ['SWIM', 'GUIDA'], 'nuoto-metodi-di-allenamento': ['SWIM', 'METODO'],
   'nuoto-orientamento-sighting': ['SWIM', 'GUIDA'], 'nuoto-piscina-acque-libere': ['SWIM', 'ANALISI'], 'nuoto-ritmo-gara-triathlon': ['SWIM', 'GUIDA'],
   'nuoto-sedute-esercizi-transizione': ['SWIM', 'METODO'], 'nuoto-tecnica-bracciata': ['SWIM', 'ANALISI'], 'scarpe-con-piastra-carbonio': ['RUN', 'ANALISI'],
-  'sonno-e-recupero': ['TRASVERSALE', 'GUIDA'], 'scarico-pre-gara': ['RUN', 'GUIDA'],
+  'sonno-e-recupero': ['TRASVERSALE', 'GUIDA'], 'metodo-norvegese-doppia-soglia': ['RUN', 'METODO'], 'forza-corsa-metodi': ['STRENGTH', 'METODO'], 'forza-bici-metodi': ['STRENGTH', 'METODO'], 'scarico-pre-gara': ['RUN', 'GUIDA'],
 };
 const arts = fs.readdirSync(path.join(root, 'content/articles')).filter((f) => f.endsWith('.it.html')).map((f) => {
   const m = JSON.parse(fs.readFileSync(path.join(root, 'content/articles', f), 'utf8').match(/<!--meta([\s\S]*?)-->/)[1]);
@@ -50,13 +50,13 @@ const tag = (d, k) => `<span class="pl-tag">${d} · ${k}</span>`;
 // ---- discipline: 4 blocchi, solo link a pagine esistenti
 const DISC = {
   RUN: { url: '/run', en: '/en/run', desc: 'Allenamento, prestazione, gare e materiali per la corsa.', lead: 'Allenamento, prestazione, gare e materiali.', blocks: [
-    ['TRAINING', [['Piramidale o polarizzato', 'Cosa dicono gli studi.', '/piramidale-o-polarizzato'], ['Scarico pre-gara', 'Quanto e come ridurre.', '/articoli/scarico-pre-gara/'], ['La bici per preparare la maratona', 'Cosa trasferisce e cosa no.', '/articoli/bici-per-la-maratona/'], ['Metodi di allenamento', 'Libreria dei metodi, filtro Corsa.', '/allenamento/#allenamento']]],
+    ['TRAINING', [['Piramidale o polarizzato', 'Cosa dicono gli studi.', '/piramidale-o-polarizzato'], ['Scarico pre-gara', 'Quanto e come ridurre.', '/articoli/scarico-pre-gara/'], ['La bici per preparare la maratona', 'Cosa trasferisce e cosa no.', '/articoli/bici-per-la-maratona/'], ['Metodo norvegese', 'Soglia guidata dal lattato: versioni, prove, limiti.', '/articoli/metodo-norvegese-doppia-soglia/'], ['Forza per la corsa', 'Metodi studiati e protocolli.', '/articoli/forza-corsa-metodi/'], ['Metodi di allenamento', 'Libreria dei metodi, filtro Corsa.', '/allenamento/?s=run#allenamento']]],
     ['PERFORMANCE', [['Wolf Engine', 'Ritmi, VDOT e zone dai tuoi tempi.', '/engine'], ['Passaggi in maratona', 'Tempi di passaggio a ritmo costante.', '/allenamento/#passaggi']]],
     ['RACE', [['Gare di corsa', `${RUN_RACES} gare in calendario, maratone e mezze.`, '/gare/?f=run']]],
     ['FUEL & RECOVERY', [['Carboidrati in maratona', 'Quanti all\'ora, in base alla durata.', '/articoli/carboidrati-maratona/'], ['Calcolatore carboidrati', 'Gel, grammi e tempi di assunzione.', '/allenamento/#carboidrati'], ['Gel di carboidrati', 'Confronto sui dati dichiarati.', '/picks/gel-carboidrati/'], ['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/'], ['Caffeina e prestazione', 'Dosi, tempi e quando evitarla.', '/articoli/caffeina-e-prestazione/']]],
     ['GEAR', [['Scarpe da allenamento', 'Guida e criteri.', '/picks/scarpe-allenamento/'], ['Confronto Evo SL, Novablast 6, Ghost 18', 'Dati con fonte, nessun punteggio.', '/picks/confronto-evo-sl-novablast-6-ghost-18/'], ['Scarpe con piastra in carbonio', 'Cosa dicono gli studi.', '/articoli/scarpe-con-piastra-carbonio/']]]] },
   RIDE: { url: '/ride', en: '/en/ride', desc: 'Potenza, FTP, gare e materiali per la bici.', lead: 'Potenza, gare e materiali.', blocks: [
-    ['TRAINING', [['FTP e zone di potenza', 'Cosa misurano e quanto fidarsi.', '/articoli/ftp-e-zone-di-potenza/'], ['Piramidale o polarizzato', 'Cosa dicono gli studi.', '/piramidale-o-polarizzato'], ['Metodi di allenamento', 'Libreria dei metodi, filtro Bici.', '/allenamento/#allenamento']]],
+    ['TRAINING', [['FTP e zone di potenza', 'Cosa misurano e quanto fidarsi.', '/articoli/ftp-e-zone-di-potenza/'], ['Piramidale o polarizzato', 'Cosa dicono gli studi.', '/piramidale-o-polarizzato'], ['Forza per la bici', 'Carichi pesanti e protocollo studiato.', '/articoli/forza-bici-metodi/'], ['Metodi di allenamento', 'Libreria dei metodi, filtro Bici.', '/allenamento/?s=ride#allenamento']]],
     ['PERFORMANCE', [['Wolf Engine', 'Zone di potenza dalla tua FTP.', '/engine']]],
     ['RACE', [['Gare in bici', `${BIKE_RACES} granfondo in calendario.`, '/gare/?f=bike']]],
     ['FUEL & RECOVERY', [['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/']]],
@@ -68,9 +68,9 @@ const DISC = {
     ['FUEL & RECOVERY', [['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/']]],
     ['GEAR', []]] },
   STRENGTH: { url: '/strength/', en: '/en/strength/', desc: 'Forza per l\'atleta endurance: programmi, esercizi, metodi.', lead: 'Come deve allenare la forza un atleta endurance?', blocks: [
-    ['PROGRAMS', [['Bill Starr 5×5', 'Origine, struttura e varianti, con fonti.', '/train/strength/starr-5x5/']]],
+    ['PROGRAMS', [['Bill Starr 5×5', 'Origine, struttura e varianti, con fonti.', '/train/strength/starr-5x5/'], ['Protocolli studiati: corsa', 'Serie, ripetizioni e carichi negli studi.', '/articoli/forza-corsa-metodi/#protocolli'], ['Protocolli studiati: bici', 'Il protocollo di 12 settimane testato.', '/articoli/forza-bici-metodi/#protocolli']]],
     ['EXERCISES', [['Catalogo esercizi', '53 esercizi per muscolo, attrezzo e schema.', '/train/strength/esercizi/']]],
-    ['METHODS', [['Forza, ipertrofia e potenza', 'Tre risultati diversi, da non confondere.', '/allenamento/#allenamento-3'], ['Forza e endurance insieme', 'Cosa dicono le revisioni.', '/allenamento/#allenamento-4']]],
+    ['METHODS', [['Forza per la corsa', 'Carichi alti, pliometria e altri metodi.', '/articoli/forza-corsa-metodi/'], ['Forza per la bici', 'Cosa mostrano gli studi sui ciclisti.', '/articoli/forza-bici-metodi/'], ['Forza, ipertrofia e potenza', 'Tre risultati diversi, da non confondere.', '/allenamento/#allenamento-3'], ['Forza e endurance insieme', 'Cosa dicono le revisioni.', '/allenamento/#allenamento-4']]],
     ['ENDURANCE STRENGTH', [['Forza per runner e ciclisti', 'Interferenza o vantaggio?', '/articoli/forza-per-endurance/'], ['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/']]],
     ['GEAR', []]] },
 };
