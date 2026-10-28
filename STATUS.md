@@ -11,6 +11,7 @@
 - News with NEWS tag. Ask Wolf: declared rule-based guide, not AI.
 - Articles: static Wolf sidebar (date, read time, source count, evidence level and Wolf Confidence shown as "not assigned yet").
 - Races: "Course" row on all 27 pages. 24 have official-source data (see content/races.json fields course and courseSource), the other 3 (Florence, Sydney, Budapest) say "not yet verified". Filter "Course data" on /gare/ uses only this flag. NYC and Cape Town entries are qualitative (no figures read).
+- Trips: altitude and airport claims for Tenerife, Sierra Nevada and Iten now cite official or named sources (Parador, CSD, Aena, Reuters, a local centre). Not verified or sourced yet: Calpe and Mallorca airport distances, Livigno road access, hire prices. No prices, availability or forecast weather are promised.
 
 ## Not done (real gaps)
 - Wolf Score values, ANALYSIS/TEST/VERDICT content: need real tests. None exist.
