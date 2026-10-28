@@ -324,4 +324,5 @@ EN = {
 '. Nessuna fonte la valuta.':'. No source assesses it.',
 'Scheda metodologica: origine, struttura e varianti →':'Method sheet: origin, structure and variants →',
 'secondaria':'secondary',
+'Fonti e regole lette il 28 ottobre 2026. Nessuna data di revisione precedente è registrata.':'Sources and rules read on 28 October 2026. No earlier revision date is recorded.',
 }
