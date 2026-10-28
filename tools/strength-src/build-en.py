@@ -6,9 +6,9 @@ try:
 except ImportError: pass
 from en_progress import EN as EP; EN={**EN,**EP}
 out=sys.argv[1]; os.makedirs(out,exist_ok=True)
-for f in ['App.tsx','MethodCard.tsx','shim.tsx','main.tsx','style.css','Progress.tsx','Program.tsx','lab.ts']:
+for f in ['App.tsx','MethodCard.tsx','shim.tsx','main.tsx','style.css','Progress.tsx','Program.tsx','lab.ts','methods.ts']:
     s=open(f).read()
-    if f in('App.tsx','MethodCard.tsx','shim.tsx','Progress.tsx','Program.tsx','lab.ts'):
+    if f in('App.tsx','MethodCard.tsx','shim.tsx','Progress.tsx','Program.tsx','lab.ts','methods.ts'):
         for k in sorted(EN,key=len,reverse=True):
             v=re.sub(r"(?<=[A-Za-z])'(?=[a-z])","’",EN[k])
             if len(k)>22 or k.endswith(' ') or k.startswith(' '):
