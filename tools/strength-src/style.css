@@ -8,3 +8,5 @@
 
 .wolf button.tile{min-height:0;gap:8px;padding:16px 18px;background:#303030;border:0}.wolf button.tile strong{margin-top:6px;font-size:19px}.wolf button.tile .ico{color:#fff}.wolf button.tile:hover{background:#383838;outline:1px solid #d6ff35}.tiles{margin-top:16px}.wolf .top small{font-size:13px;letter-spacing:0;color:#c8c8c8;text-transform:none}.wolf nav{padding:14px 0}
 .wolf button.tile span{color:#d0d0d0}
+
+.wolf nav:empty{display:none}.wolf nav{padding:14px 0 6px;border-bottom:0}
