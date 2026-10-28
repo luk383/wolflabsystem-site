@@ -16,3 +16,6 @@
 @media print{body *{visibility:hidden!important}.wolf,.wolf *{visibility:visible!important}.wolf{position:absolute;left:0;top:0;width:100%;background:#fff!important;color:#000!important;border:0!important}.wolf *{color:#000!important;background:transparent!important;border-color:#bbb!important}.wolf button,.wolf nav,.wolf .actions,.wolf input[type=file],.wolf summary{display:none!important}.wolf article{break-inside:avoid}}
 .wolf .fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px}.wolf .fields label{display:flex;flex-direction:column;gap:4px;min-width:0}.wolf .fields select,.wolf .fields input{width:100%;max-width:100%;min-width:0;text-overflow:ellipsis}
 @media(max-width:560px){.wolf .fields{grid-template-columns:1fr}.wolf .fields select{height:auto;min-height:44px;white-space:normal}}
+
+.wolf .wiz small{margin-top:8px}.wolf .chips{border:0;padding:0;margin:15px 0;display:flex;flex-wrap:wrap;gap:8px}.wolf .chips legend{font-size:12px;color:#c8c8c8;margin-bottom:8px;padding:0}.wolf button.tile.on{outline:2px solid #d6ff35}.wolf button.linkish{background:none;border:0;color:#9a9a9a;text-decoration:underline;font-weight:400}
+.wolf .wiz .sticky{position:static;border-top:0;padding:8px 0}
