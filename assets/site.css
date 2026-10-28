@@ -434,3 +434,9 @@ html[data-theme="dark"] .w-prose a{color:var(--accent)}
 .w-hero,.w-band,.w-latest,.w-numbers,.w-score-home,.w-start{padding:0}
 @media(max-width:800px){.w-hero-grid{min-height:0!important}.w-hero-img{margin-bottom:0}}
 .w-rules{margin:0 0 16px;padding-left:22px;display:grid;gap:8px}
+/* contrast: darker accent ink for small text on light backgrounds, dark text on orange fills */
+html:not([data-theme="dark"]) :is(.w-band,.w-latest,.w-score-home,.w-start) .w-kicker,html:not([data-theme="dark"]) .w-tools em,html:not([data-theme="dark"]) .major,html:not([data-theme="dark"]) .prose a:not(.btn),html:not([data-theme="dark"]) .sources a,html:not([data-theme="dark"]) .art-body .brief h2,html:not([data-theme="dark"]) .art-toc-m summary,html:not([data-theme="dark"]) .art-related h2{color:#A8380D}
+html:not([data-theme="dark"]) :is(.w-tools .dev span,.w-tools .dev em,.w-meta,.art-related span,.w-tools span){color:#555f59}
+.nav .nav-engine,.filter button[aria-pressed="true"]{color:#0A0A0A!important}
+.w-numbers .wrap{grid-template-columns:repeat(4,1fr)!important}.w-num-note{grid-column:1/-1;margin:0;font:500 12px var(--mono);letter-spacing:.08em;color:#a9a8a1}
+@media(max-width:800px){.w-numbers .wrap{grid-template-columns:1fr 1fr!important}}

@@ -23,6 +23,7 @@ for (const f of walk(root)) {
     add += j({ '@context': 'https://schema.org', '@type': 'Article', headline: hd || title, description: desc, datePublished: date, inLanguage: lang, mainEntityOfPage: canon, image: IMG, author: { '@type': 'Organization', name: 'Wolf Lab' }, publisher: { '@type': 'Organization', name: 'Wolf Lab', url: SITE + '/' } });
     h = h.replace(/<meta property="og:type" content="website"/, '<meta property="og:type" content="article"');
   }
+  if (isHome) add += '<link rel="preload" as="image" href="/assets/hero-kenya.jpg" fetchpriority="high">';
   if (isHome) add += j({ '@context': 'https://schema.org', '@graph': [{ '@type': 'Organization', name: 'Wolf Lab', url: SITE + '/', logo: SITE + '/assets/favicon.svg' }, { '@type': 'WebSite', name: 'Wolf Lab', url: canon, inLanguage: lang }] });
   h = h.replace('</head>', add + '</head>');
   fs.writeFileSync(f, h); n++;

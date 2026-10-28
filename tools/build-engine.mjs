@@ -185,7 +185,7 @@ function hub(lang, key) {
 function home(lang) {
   const it = !lang, A = articles(lang);
   const feat = A.find((a) => a.id === "bici-per-la-maratona") || A[0], rest = A.filter((a) => a !== feat).slice(0, 2);
-  const nR = RACES.races.length, nT = TRIPS.trips.length, nA = Object.keys(JSON.parse(fs.readFileSync(path.join(ROOT, "content/article-review.json"), "utf8"))).length;
+  const nC = RACES.races.filter((r) => r.course).length, nR = RACES.races.length, nT = TRIPS.trips.length, nA = Object.keys(JSON.parse(fs.readFileSync(path.join(ROOT, "content/article-review.json"), "utf8"))).length;
   const link = (a) => art(lang, a.slug, a.slug);
   const tiles = [["RUN", it ? "Ritmi · Scienza · Scarpe" : "Paces · Science · Shoes", "run"], ["RIDE", it ? "Potenza · Zone · Granfondo" : "Power · Zones · Gran fondo", "ride"], ["TRAIN", it ? "Forza · Ibrido · Recupero" : "Strength · Hybrid · Recovery", "train"], ["FUEL", it ? "Carboidrati · Fluidi · Gara" : "Carbs · Fluids · Race day", "fuel"], ["RACE", it ? "Gare · Training camp" : "Races · Training camps", "race"], ["GEAR", it ? "Novità · Scarpe · Tech" : "News · Shoes · Tech", "gear"]];
   const body = `<section class="w-hero"><div class="wrap w-hero-grid">
@@ -210,9 +210,11 @@ function home(lang) {
   </div>
 </div></section>
 <section class="w-numbers"><div class="wrap">
-  <div><strong data-count="${nR}">${nR}</strong><span>${it ? "gare con fonte e data di verifica" : "races with source and check date"}</span></div>
-  <div><strong data-count="${nT}">${nT}</strong><span>${it ? "mete per training camp" : "training camp destinations"}</span></div>
-  <div><strong data-count="${nA}">${nA}</strong><span>${it ? "guide con livello di prova e Wolf Confidence" : "guides with evidence level and Wolf Confidence"}</span></div>
+  <div><strong>${nR}</strong><span>${it ? "gare in inventario" : "races in inventory"}</span></div>
+  <div><strong>${nC}</strong><span>${it ? "gare con percorso da fonte ufficiale" : "races with course from an official source"}</span></div>
+  <div><strong>${nT}</strong><span>${it ? "mete camp in inventario" : "camp destinations in inventory"}</span></div>
+  <div><strong>${nA}</strong><span>${it ? "guide con livello di prova e Wolf Confidence" : "guides with evidence level and Wolf Confidence"}</span></div>
+  <p class="w-num-note">${it ? "Inventario non significa verificato: ogni scheda mostra cosa manca." : "Inventory does not mean verified: each card shows what is missing."}</p>
 </div></section>
 <section class="w-score-home"><div class="wrap">
   <p class="w-kicker">WOLF SCORE</p>
@@ -262,6 +264,7 @@ function engine(lang) {
 
 // ---------- Metodologia ----------
 function method(lang) {
+  const nRev = Object.keys(JSON.parse(fs.readFileSync(path.join(ROOT, "content/article-review.json"), "utf8"))).length;
   const it = !lang, T = (a, b) => (it ? a : b);
   const lv = [[1, T("Revisione sistematica / meta-analisi", "Systematic review / meta-analysis")], [2, T("Studio randomizzato controllato", "Randomized controlled trial")], [3, T("Studio controllato", "Controlled study")], [4, T("Studio osservazionale", "Observational study")], [5, T("Parere di esperti", "Expert opinion")], [6, T("Dichiarazione del produttore", "Manufacturer claim")]];
   const conf = [["★★★★★", T("Alta", "High"), T("Risultati coerenti da livelli 1–2 su atleti simili.", "Consistent results from levels 1–2 in similar athletes.")], ["★★★★☆", T("Moderata", "Moderate"), T("Buone prove, con limiti di popolazione o metodo.", "Good evidence, with population or method limits.")], ["★★★☆☆", T("Limitata", "Limited"), T("Poche prove o contrastanti.", "Few or conflicting studies.")], ["★★☆☆☆", T("Molto limitata", "Very limited"), T("Solo osservazioni o pareri di esperti.", "Observations or expert opinion only.")], ["★☆☆☆☆", T("Non provata", "Unproven"), T("Solo dichiarazioni del produttore.", "Manufacturer claims only.")]];
@@ -274,7 +277,7 @@ function method(lang) {
 <p>${T("È una semplificazione: un buon studio osservazionale può valere più di un trial piccolo e mal fatto. Il livello è il punto di partenza, poi guardiamo qualità, popolazione e coerenza.", "A simplification: a good observational study can beat a small, poorly run trial. Level is the starting point; then we look at quality, population and consistency.")}</p>
 <h2>Wolf Confidence</h2>
 <table class="w-table"><tbody>${conf.map(([s, n, d]) => `<tr><th scope="row">${s}</th><td><b>${n}</b></td><td>${d}</td></tr>`).join("")}</tbody></table>
-<p>${T("Il 28 ottobre 2026 otto articoli hanno livello di prova e stelle dopo una revisione documentale delle loro fonti, con limiti e motivazione scritti nella pagina. È ANALYSIS, non un nostro test. Gli articoli non ancora rivisti mostrano \"non ancora assegnata\": nessuna stella viene assegnata in blocco.", "On 28 October 2026 eight articles received an evidence level and stars after a documentary review of their sources, with limits and rationale written on the page. This is ANALYSIS, not a test of our own. Articles not yet reviewed show \"not assigned yet\": no stars are assigned in bulk.")}</p>
+<p>${T("Il 28 ottobre 2026 tutti i " + nRev + " articoli hanno livello di prova e stelle dopo una revisione documentale delle loro fonti, con limiti e motivazione scritti nella pagina. È ANALYSIS, non un nostro test. Ogni nuovo articolo mostra \"non ancora assegnata\" finché non è rivisto: nessuna stella viene assegnata in blocco.", "On 28 October 2026 all " + nRev + " articles received an evidence level and stars after a documentary review of their sources, with limits and rationale written on the page. This is ANALYSIS, not a test of our own. Any new article shows \"not assigned yet\" until reviewed: no stars are assigned in bulk.")}</p>
 <h2>Wolf Score</h2>
 <p>${T("Il Wolf Score è un punteggio da 0 a 100 con criteri e pesi pubblici. Compare solo se ogni criterio ha una fonte o un nostro test. Per i prodotti serve un test fatto davvero. <b>Oggi nessun Wolf Score è pubblicato.</b>", "The Wolf Score is a 0 to 100 score with public criteria and weights. It appears only if every criterion has a source or our own test. Products need a test actually run. <b>Today no Wolf Score is published.</b>")}</p>
 <table class="w-table"><tbody>${crit.map(([a, b]) => `<tr><th scope="row">${a}</th><td>${b}</td></tr>`).join("")}</tbody></table>
