@@ -3,3 +3,5 @@
 .library .tool{margin:0;padding:0}.library .calculator .library-detail{padding:8px 8px 20px}.library section{scroll-margin-top:24px}.library .fields{max-width:100%}.library .band{overflow-x:auto}.library table{display:block;max-width:100%;overflow-x:auto}
 
 .library .library-body>section{padding:0;margin:36px 0}.library .tool.calculator{background:transparent;border-left:0;border-right:0;border-top:0;border-radius:0}.library .tool h2{margin-top:20px}
+
+.sport-filter{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}.sport-filter button{font:inherit;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border:1px solid #777;background:transparent;color:inherit;border-radius:0;cursor:pointer}.sport-filter button[aria-pressed=true]{background:#E65A2E;border-color:#E65A2E;color:#0A0A0A}details[hidden]{display:none}
