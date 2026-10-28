@@ -228,7 +228,7 @@ function home(lang) {
     <li><a href="${R.race[lang]}"><span class="w-num">03</span><b>${it?"Scegli la gara":"Pick a race"}</b><small>${it?"Gare e training camp con fonte e data.":"Races and training camps with source and date."}</small></a></li>
   </ol>
 </div></section>`;
-  return layout({ lang, key: "home", title: "Home", desc: "Wolf Lab - Run. Ride. One engine. The science of endurance performance.", body });
+  return layout({ lang, key: "home", title: "Home", desc: it ? "Wolf Engine gratuito per ritmi, zone, fuel e gara. Guide su corsa e bici con fonti e livello di prova, gare e training camp verificati." : "Free Wolf Engine for paces, zones, fuel and race plans. Running and cycling guides with sources and evidence level, plus checked races and training camps.", body });
 }
 
 // ---------- Engine ----------
