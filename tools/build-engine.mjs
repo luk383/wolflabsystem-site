@@ -106,35 +106,38 @@ const HUBS = {
   },
   swim: {
     kicker: ["SWIM", "SWIM"], title: ["Nuoto: metodi, tecnica, piscina, acque libere e gare.", "Swimming: methods, technique, pool, open water and races."],
-    lede: ["Guide con fonti e limiti dichiarati. Calcolatori e zone di nuoto non ci sono ancora: non pubblichiamo numeri senza dati e test.", "Guides with sources and declared limits. Swim calculators and zones do not exist yet: we publish no numbers without data and tests."],
+    lede: ["Guide con fonti e limiti dichiarati, più un calcolatore di velocità critica con controlli sui dati. Zone di nuoto non ancora disponibili.", "Guides with sources and declared limits, plus a critical swim speed calculator with data checks. Swim zones are not available yet."],
     groups: [],
     sections: [
       ["metodi", ["Metodi di allenamento", "Training methods"], [
-        ["Metodi nel nuoto", "Polarizzato, a soglia, piramidale, HIIT, forza a secco e scarico: cosa dicono gli studi.", ["/articoli/nuoto-metodi-di-allenamento/", "/en/articles/swim-training-methods/"]],
-        ["Zone di nuoto", "Richiedono un test tuo e una fonte valida per amatori.", null],
-        ["Piani di nuoto", "Nessun piano finché mancano prove per amatori e triatleti.", null],
+        ["Distribuzione dell'intensità", "Polarizzato, a soglia, piramidale: cosa fanno i nuotatori per distanza di gara.", ["/articoli/nuoto-metodi-di-allenamento/", "/en/articles/swim-training-methods/"]],
+        ["HIIT e basso volume", "Cosa riportano meta-analisi e revisioni, con l'età dei gruppi studiati.", ["/articoli/nuoto-metodi-di-allenamento/", "/en/articles/swim-training-methods/"]],
+        ["Forza a secco", "Miglioramenti medi riportati e perché non c'è un metodo migliore.", ["/articoli/nuoto-metodi-di-allenamento/", "/en/articles/swim-training-methods/"]],
+        ["Scarico prima della gara", "Meta-analisi su atleti di più sport: 2 settimane, volume ridotto del 41-60%.", ["/articoli/nuoto-metodi-di-allenamento/", "/en/articles/swim-training-methods/"]],
       ], ["Methods", "Methods"]],
       ["tecnica", ["Tecnica", "Technique"], [
         ["Frequenza e lunghezza di bracciata", "Cosa si misura, come cambia con la fatica, perché non diamo valori obiettivo.", ["/articoli/nuoto-tecnica-bracciata/", "/en/articles/swim-stroke-technique/"]],
-        ["Esercizi tecnici", "Non pubblicati: serve un allenatore che ti veda nuotare.", null],
       ], ["Technique", "Technique"]],
-      ["piscina", ["Piscina", "Pool"], [
-        ["Velocità critica (CSS)", "Come si calcola, i limiti del metodo e i controlli sui dati.", ["/articoli/nuoto-css-velocita-critica/", "/en/articles/swim-critical-speed/"]],
-        ["Calcolatore CSS", "Non disponibile: lo pubblichiamo solo con controlli di coerenza e limiti dichiarati.", null],
-        ["Sedute in piscina", "Non ancora pubblicate.", null],
+      ["piscina", ["Piscina e velocità critica", "Pool and critical speed"], [
+        ["Calcolatore CSS", "Due prove, controlli di coerenza, nessuna zona. Funziona nel browser.", ["/articoli/nuoto-css-velocita-critica/#s5", "/en/articles/swim-critical-speed/#s5"]],
+        ["Velocità critica (CSS)", "Come si calcola, 16 protocolli in 41 studi, limiti del metodo.", ["/articoli/nuoto-css-velocita-critica/", "/en/articles/swim-critical-speed/"]],
       ], ["Pool", "Pool"]],
       ["acque-libere", ["Acque libere", "Open water"], [
-        ["Sicurezza e acqua fredda", "Raccomandazioni RNLI, shock da acqua fredda, attrezzatura.", ["/articoli/nuoto-acque-libere-sicurezza/", "/en/articles/open-water-swimming-safety/"]],
-        ["Muta", "Cosa riporta una revisione sistematica e dove vale il regolamento dell'evento.", ["/articoli/nuoto-acque-libere-sicurezza/", "/en/articles/open-water-swimming-safety/"]],
-        ["Orientamento e nuotata in gruppo", "Non trattati: mancano fonti verificate.", null],
+        ["Sicurezza e acqua fredda", "Raccomandazioni RNLI, shock da acqua fredda, attrezzatura.", ["/articoli/nuoto-acque-libere-sicurezza/#s2", "/en/articles/open-water-swimming-safety/#s2"]],
+        ["Muta", "Cosa riporta una revisione sistematica e dove vale il regolamento dell'evento.", ["/articoli/nuoto-acque-libere-sicurezza/#s5", "/en/articles/open-water-swimming-safety/#s5"]],
       ], ["Open water", "Open water"]],
       ["gare", ["Gare e formati", "Races and formats"], [
-        ["Nuoto in acque libere", "Programma olimpico dal regolamento World Aquatics.", ["/articoli/nuoto-gare-e-formati/", "/en/articles/swim-race-formats/"]],
-        ["Triathlon", "Formati Standard e Sprint secondo World Triathlon: il nuoto è la prima frazione.", ["/articoli/nuoto-gare-e-formati/", "/en/articles/swim-race-formats/"]],
-        ["IRONMAN e 70.3", "Contesto multisport: distanze dichiarate dall'organizzatore.", ["/articoli/nuoto-gare-e-formati/", "/en/articles/swim-race-formats/"]],
-        ["HYROX", "Disciplina separata: corsa e stazioni di forza, senza nuoto.", ["/articoli/nuoto-gare-e-formati/", "/en/articles/swim-race-formats/"]],
-        ["Calendari delle gare di nuoto", "Non pubblicati: nessun calendario verificato.", null],
+        ["Nuoto in acque libere", "Programma olimpico dal regolamento World Aquatics.", ["/articoli/nuoto-gare-e-formati/#s2", "/en/articles/swim-race-formats/#s2"]],
+        ["Triathlon", "Formati Standard e Sprint secondo World Triathlon: il nuoto è la prima frazione.", ["/articoli/nuoto-gare-e-formati/#s3", "/en/articles/swim-race-formats/#s3"]],
+        ["IRONMAN e 70.3", "Contesto multisport: distanze dichiarate dall'organizzatore.", ["/articoli/nuoto-gare-e-formati/#s4", "/en/articles/swim-race-formats/#s4"]],
+        ["HYROX", "Disciplina separata: corsa e stazioni di forza, senza nuoto.", ["/articoli/nuoto-gare-e-formati/#s5", "/en/articles/swim-race-formats/#s5"]],
       ], ["Races", "Races"]],
+      ["mancano", ["Non ancora disponibile", "Not available yet"], [
+        ["Zone di nuoto", "Richiedono un test tuo e una fonte valida per il tuo gruppo.", null],
+        ["Piani e sedute", "Nessun piano finché le fonti non lo reggono.", null],
+        ["Esercizi tecnici e orientamento", "Non trattati: mancano fonti verificate.", null],
+        ["Calendari delle gare", "Nessun calendario verificato: usa i siti ufficiali.", null],
+      ], ["Missing", "Missing"]],
     ],
   },
   train: {
@@ -233,7 +236,7 @@ function home(lang) {
 <section class="w-band"><div class="wrap">
   <p class="w-kicker">THE WOLF ENGINE</p>
   <h2 class="w-big">Calculate. Understand. Perform.</h2>
-  <ul class="w-tools">${[["PACE","run",["Ritmi di allenamento dai tuoi tempi recenti.","Training paces from your recent times."]],["FTP","ride",["Zone di potenza dalla tua FTP.","Power zones from your FTP."]],["FUEL","fuel",["Carboidrati e liquidi per la gara.","Carbohydrate and fluids for race day."]],["RACE","race",["Passaggi di gara dal tempo obiettivo.","Race splits from your target time."]],["ZONES","ride",["Zone di potenza e cardio.","Power and heart-rate zones."]]].map(([n,k,d])=>`<li><a href="${R.engine[lang]}#${k}"><b>${n}</b><span>${d[lang]}</span><em>${it?"FUNZIONANTE":"WORKING"}</em></a></li>`).join("")}<li class="dev"><a href="${R.swim[lang]}"><b>SWIM</b><span>${it?"Guide su metodi, CSS, acque libere e gare. Calcolatore non ancora disponibile.":"Guides on methods, CSS, open water and races. No calculator yet."}</span><em>${it?"GUIDE · CALCOLATORE IN SVILUPPO":"GUIDES · CALCULATOR IN DEVELOPMENT"}</em></a></li><li class="dev"><a href="${R.method[lang]}"><b>WOLF SCORE</b><span>${it?"Criteri pubblici. Nessun punteggio finché mancano dati e test.":"Public criteria. No score until data and tests exist."}</span><em>${it?"IN SVILUPPO":"IN DEVELOPMENT"}</em></a></li></ul>
+  <ul class="w-tools">${[["PACE","run",["Ritmi di allenamento dai tuoi tempi recenti.","Training paces from your recent times."]],["FTP","ride",["Zone di potenza dalla tua FTP.","Power zones from your FTP."]],["FUEL","fuel",["Carboidrati e liquidi per la gara.","Carbohydrate and fluids for race day."]],["RACE","race",["Passaggi di gara dal tempo obiettivo.","Race splits from your target time."]],["ZONES","ride",["Zone di potenza e cardio.","Power and heart-rate zones."]]].map(([n,k,d])=>`<li><a href="${R.engine[lang]}#${k}"><b>${n}</b><span>${d[lang]}</span><em>${it?"FUNZIONANTE":"WORKING"}</em></a></li>`).join("")}<li class="dev"><a href="${R.swim[lang]}"><b>SWIM</b><span>${it?"Guide, calcolatore CSS e gare. Zone di nuoto non ancora disponibili.":"Guides, CSS calculator and races. Swim zones not available yet."}</span><em>${it?"PARZIALE · ZONE IN SVILUPPO":"PARTIAL · ZONES IN DEVELOPMENT"}</em></a></li><li class="dev"><a href="${R.method[lang]}"><b>WOLF SCORE</b><span>${it?"Criteri pubblici. Nessun punteggio finché mancano dati e test.":"Public criteria. No score until data and tests exist."}</span><em>${it?"IN SVILUPPO":"IN DEVELOPMENT"}</em></a></li></ul>
 </div></section>
 <section class="w-latest"><div class="wrap">
   <p class="w-kicker">LATEST FROM WOLF</p>

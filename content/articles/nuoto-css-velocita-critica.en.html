@@ -34,8 +34,35 @@
   <li><strong>Trials must be done the same way</strong> (pool, type of start, rest between trials), because the protocol changes the result.</li>
 </ul>
 
+
+<h2>CSS calculator (two trials)</h2>
+<p>Enter two maximal trials swum the same way (same pool, same start). The calculation runs in your browser: nothing is sent or saved. The result is an indicative estimate from the two-point method, not a threshold measurement, and it produces no zones.</p>
+<form id="css-calc" class="css-calc" novalidate>
+  <div class="css-row"><label for="css-d1">Trial 1: distance (m)</label><input id="css-d1" inputmode="decimal" autocomplete="off" placeholder="m"><label for="css-t1">Time (m:ss)</label><input id="css-t1" inputmode="numeric" autocomplete="off" placeholder="m:ss"></div>
+  <div class="css-row"><label for="css-d2">Trial 2: distance (m)</label><input id="css-d2" inputmode="decimal" autocomplete="off" placeholder="m"><label for="css-t2">Time (m:ss)</label><input id="css-t2" inputmode="numeric" autocomplete="off" placeholder="m:ss"></div>
+  <button type="submit">Calculate</button>
+</form>
+<div id="css-out" class="css-out" role="status" aria-live="polite"></div>
+<script>
+(function(){var it=false,f=document.getElementById('css-calc'),o=document.getElementById('css-out');if(!f)return;
+function tm(s){s=String(s).trim().replace(',','.');var m=s.match(/^(\d+):([0-5]?\d(?:\.\d+)?)$/);if(m)return +m[1]*60+ +m[2];if(/^\d+(\.\d+)?$/.test(s))return +s;return NaN}
+function fm(x){var m=Math.floor(x/60),s=x-m*60;return m+':'+(s<9.995?'0':'')+s.toFixed(1)}
+function put(cls,h){o.className='css-out '+cls;o.innerHTML=h}
+f.addEventListener('submit',function(e){e.preventDefault();
+var d1=parseFloat(String(document.getElementById('css-d1').value).replace(',','.')),d2=parseFloat(String(document.getElementById('css-d2').value).replace(',','.')),t1=tm(document.getElementById('css-t1').value),t2=tm(document.getElementById('css-t2').value);
+if(!(d1>0&&d2>0&&t1>0&&t2>0))return put('err',it?'Controlla i dati: servono due distanze in metri e due tempi (m:ss) maggiori di zero.':'Check the data: two distances in metres and two times (m:ss) above zero are needed.');
+if(d1>d2){var a=d1;d1=d2;d2=a;a=t1;t1=t2;t2=a}
+if(d1===d2)return put('err',it?'Le due distanze sono uguali: servono distanze diverse.':'The two distances are equal: different distances are needed.');
+if(t2<=t1)return put('err',it?'La prova più lunga ha un tempo uguale o inferiore a quella corta: i tempi non sono coerenti. Nessun risultato.':'The longer trial has an equal or shorter time than the short one: the times are not coherent. No result.');
+var css=(d2-d1)/(t2-t1),v1=d1/t1,v2=d2/t2;
+if(css>=v2||css>=v1)return put('err',it?'Il risultato non è coerente: la velocità critica risulterebbe pari o superiore alla velocità media di una delle prove (la prova lunga non è più lenta di media). Controlla i tempi o ripeti il test. Nessun risultato.':'The result is not coherent: critical speed would equal or exceed the mean speed of one of the trials (the long trial is not slower on average). Check the times or repeat the test. No result.');
+var w=[];if(t1<120||t1>900||t2<120||t2>900)w.push(it?'Almeno una prova dura fuori dall\'intervallo 2-15 minuti indicato dalla revisione sul protocollo: il metodo non è stato studiato così.':'At least one trial lasts outside the 2-15 minute range suggested by the protocol review: the method was not studied this way.');
+if(d1<200)w.push(it?'Distanze di 50 e 100 m sono escluse dal metodo studiato.':'Distances of 50 and 100 m are excluded from the studied method.');
+put('ok','<p><b>CSS '+css.toFixed(3)+' m/s</b> · '+(it?'circa ':'about ')+fm(100/css)+' /100 m</p><p>'+(it?'Stima orientativa dal metodo a due punti. Dipende dal protocollo e non è una misura di laboratorio. Non sono zone di allenamento.':'Indicative estimate from the two-point method. It depends on the protocol and is not a laboratory measure. These are not training zones.')+'</p>'+(w.length?'<ul>'+w.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>':''))})})();
+</script>
+
 <h2>What we do not do</h2>
-<p>We do not publish a CSS calculator or swim zones: the site currently has no swim test or data, and a zone derived from two times without the checks above would be a number without a criterion. If a calculator is added it will carry the consistency checks and the limits written here, and stay an indicative estimate.</p>
+<p>We do not publish swim zones: they need a source valid for your group and a test of your own. The calculator above stops at CSS and refuses incoherent data instead of returning a number.</p>
 
 <h2>What we know and what we do not</h2>
 <p>We know how it is calculated, that the result depends on the protocol, and that the 200 m and 400 m pair is repeatable in a group of young competitive swimmers. We do not know how well it holds for amateurs and triathletes, or whether zones built on CSS improve training in those groups.</p>

@@ -177,11 +177,11 @@
  ],
  "Velocità critica (CSS)": [
   "Critical swim speed (CSS)",
-  "How it is calculated, the method's limits and the checks on the data."
+  "How it is calculated, 16 protocols in 41 studies, method limits."
  ],
  "Calcolatore CSS": [
   "CSS calculator",
-  "Not available: we publish it only with consistency checks and declared limits."
+  "Two trials, consistency checks, no zones. Runs in your browser."
  ],
  "Sedute in piscina": [
   "Pool sessions",
@@ -222,5 +222,33 @@
  "Nuoto, triathlon, IRONMAN e HYROX": [
   "Swimming, triathlon, IRONMAN and HYROX",
   "Distances and formats from the official bodies. No calendar."
+ ],
+ "Distribuzione dell'intensità": [
+  "Intensity distribution",
+  "Polarized, threshold, pyramidal: what swimmers do by race distance."
+ ],
+ "HIIT e basso volume": [
+  "HIIT and low volume",
+  "What meta-analyses and reviews report, with the age of the groups studied."
+ ],
+ "Forza a secco": [
+  "Dryland strength",
+  "Reported mean gains and why there is no better method."
+ ],
+ "Scarico prima della gara": [
+  "Taper before a race",
+  "Meta-analysis of athletes across sports: 2 weeks, volume cut by 41-60%."
+ ],
+ "Piani e sedute": [
+  "Plans and sessions",
+  "No plan until sources support it."
+ ],
+ "Esercizi tecnici e orientamento": [
+  "Technique drills and sighting",
+  "Not covered: no verified sources."
+ ],
+ "Calendari delle gare": [
+  "Race calendars",
+  "No verified calendar: use the official sites."
  ]
 }

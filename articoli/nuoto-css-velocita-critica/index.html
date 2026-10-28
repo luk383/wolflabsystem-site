@@ -16,14 +16,14 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://wolflabsystem.com/articoli/nuoto-css-velocita-critica/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/geist.woff2" crossorigin><link rel="stylesheet" href="/assets/site.css?v=5dc4f845cf"><link rel="stylesheet" href="/assets/article.css?v=80617fc9d5">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/geist.woff2" crossorigin><link rel="stylesheet" href="/assets/site.css?v=211447bb84"><link rel="stylesheet" href="/assets/article.css?v=80617fc9d5">
 <script defer src="/assets/site.js?v=251087c8b3"></script>
-<meta property="og:image" content="https://wolflabsystem.com/assets/og-wolflab.png" data-seo="1"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Velocità critica di nuoto (CSS): cos'è, come si misura e dove smette di valere — Wolf Lab"><meta name="twitter:description" content="La CSS è la pendenza tra distanza e tempo di più prove. Cosa dicono le revisioni sui protocolli, perché il risultato dipende dal metodo e quali controlli fare sui dati."><meta name="twitter:image" content="https://wolflabsystem.com/assets/og-wolflab.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Velocità critica di nuoto (CSS): cos'è, come si misura e dove smette di valere","description":"La CSS è la pendenza tra distanza e tempo di più prove. Cosa dicono le revisioni sui protocolli, perché il risultato dipende dal metodo e quali controlli fare sui dati.","datePublished":"2026-10-28","inLanguage":"it","mainEntityOfPage":"https://wolflabsystem.com/articoli/nuoto-css-velocita-critica/","image":"https://wolflabsystem.com/assets/og-wolflab.png","author":{"@type":"Organization","name":"Wolf Lab"},"publisher":{"@type":"Organization","name":"Wolf Lab","url":"https://wolflabsystem.com/"}}</script></head>
+<meta property="og:image" content="https://wolflabsystem.com/assets/og-wolflab.png?v=1d559bae" data-seo="1"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Velocità critica di nuoto (CSS): cos'è, come si misura e dove smette di valere — Wolf Lab"><meta name="twitter:description" content="La CSS è la pendenza tra distanza e tempo di più prove. Cosa dicono le revisioni sui protocolli, perché il risultato dipende dal metodo e quali controlli fare sui dati."><meta name="twitter:image" content="https://wolflabsystem.com/assets/og-wolflab.png?v=1d559bae"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Velocità critica di nuoto (CSS): cos'è, come si misura e dove smette di valere","description":"La CSS è la pendenza tra distanza e tempo di più prove. Cosa dicono le revisioni sui protocolli, perché il risultato dipende dal metodo e quali controlli fare sui dati.","datePublished":"2026-10-28","inLanguage":"it","mainEntityOfPage":"https://wolflabsystem.com/articoli/nuoto-css-velocita-critica/","image":"https://wolflabsystem.com/assets/og-wolflab.png?v=1d559bae","author":{"@type":"Organization","name":"Wolf Lab"},"publisher":{"@type":"Organization","name":"Wolf Lab","url":"https://wolflabsystem.com/"}}</script></head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="WOLFLAB"><img class="brand-img brand-on-dark" src="/assets/brand/logo-on-dark.svg" alt="WOLFLAB" width="190" height="44"><img class="brand-img brand-on-light" src="/assets/brand/logo-on-light.svg" alt="" width="190" height="44"></a>
+    <a class="brand" href="/" aria-label="WOLFLAB"><img class="brand-img brand-on-dark" src="/assets/brand/logo-on-dark.svg?v=a46ac693" alt="WOLFLAB" width="190" height="44"><img class="brand-img brand-on-light" src="/assets/brand/logo-on-light.svg?v=8f9daefc" alt="" width="190" height="44"></a>
     <nav class="nav" aria-label="Principale"><a href="/run">RUN</a><a href="/ride">RIDE</a><a href="/swim">SWIM</a><a href="/train">TRAIN</a><a href="/fuel">FUEL</a><a href="/race">RACE</a><a href="/gear">GEAR</a><a class="nav-engine" href="/engine">WOLF ENGINE</a></nav>
     <a class="lang" href="/en/articles/swim-critical-speed/" hreflang="en" lang="en">English</a>
   </div>
@@ -36,7 +36,7 @@
 </div></header>
 <div class="wrap art-grid">
 <div class="prose art-body">
-  <details class="art-toc-m"><summary>In questa pagina</summary><ol><li><a href="#s2">Cos'è</a></li><li><a href="#s3">Cosa dicono le revisioni</a></li><li><a href="#s4">Controlli sui dati prima di usare un risultato</a></li><li><a href="#s5">Cosa non facciamo</a></li><li><a href="#s6">Cosa sappiamo e cosa no</a></li><li><a href="#s-review">Come l'abbiamo valutato</a></li><li><a href="#s7">Fonti</a></li></ol></details>
+  <details class="art-toc-m"><summary>In questa pagina</summary><ol><li><a href="#s2">Cos'è</a></li><li><a href="#s3">Cosa dicono le revisioni</a></li><li><a href="#s4">Controlli sui dati prima di usare un risultato</a></li><li><a href="#s5">Calcolatore CSS (a due prove)</a></li><li><a href="#s6">Cosa non facciamo</a></li><li><a href="#s7">Cosa sappiamo e cosa no</a></li><li><a href="#s-review">Come l'abbiamo valutato</a></li><li><a href="#s8">Fonti</a></li></ol></details>
   <aside class="brief">
   <h2>In breve</h2>
   <ul>
@@ -61,13 +61,40 @@
   <li><strong>Le prove vanno fatte nello stesso modo</strong> (vasca, tipo di partenza, riposo tra le prove), perché il protocollo cambia il risultato.</li>
 </ul>
 
-<h2 id="s5">Cosa non facciamo</h2>
-<p>Non pubblichiamo un calcolatore di CSS né zone di nuoto: oggi sul sito non c'è nessun test né dato di nuoto, e una zona derivata da due tempi senza i controlli sopra sarebbe un numero senza criterio. Se un calcolatore verrà aggiunto avrà i controlli di coerenza e i limiti scritti qui, e resterà un'indicazione orientativa.</p>
 
-<h2 id="s6">Cosa sappiamo e cosa no</h2>
+<h2 id="s5">Calcolatore CSS (a due prove)</h2>
+<p>Inserisci due prove massimali nuotate nello stesso modo (stessa vasca, stessa partenza). Il calcolo avviene nel tuo browser: niente viene inviato né salvato. Il risultato è una stima orientativa dal metodo a due punti, non una misura di soglia e non produce zone.</p>
+<form id="css-calc" class="css-calc" novalidate>
+  <div class="css-row"><label for="css-d1">Prova 1: distanza (m)</label><input id="css-d1" inputmode="decimal" autocomplete="off" placeholder="m"><label for="css-t1">Tempo (m:ss)</label><input id="css-t1" inputmode="numeric" autocomplete="off" placeholder="m:ss"></div>
+  <div class="css-row"><label for="css-d2">Prova 2: distanza (m)</label><input id="css-d2" inputmode="decimal" autocomplete="off" placeholder="m"><label for="css-t2">Tempo (m:ss)</label><input id="css-t2" inputmode="numeric" autocomplete="off" placeholder="m:ss"></div>
+  <button type="submit">Calcola</button>
+</form>
+<div id="css-out" class="css-out" role="status" aria-live="polite"></div>
+<script>
+(function(){var it=true,f=document.getElementById('css-calc'),o=document.getElementById('css-out');if(!f)return;
+function tm(s){s=String(s).trim().replace(',','.');var m=s.match(/^(\d+):([0-5]?\d(?:\.\d+)?)$/);if(m)return +m[1]*60+ +m[2];if(/^\d+(\.\d+)?$/.test(s))return +s;return NaN}
+function fm(x){var m=Math.floor(x/60),s=x-m*60;return m+':'+(s<9.995?'0':'')+s.toFixed(1)}
+function put(cls,h){o.className='css-out '+cls;o.innerHTML=h}
+f.addEventListener('submit',function(e){e.preventDefault();
+var d1=parseFloat(String(document.getElementById('css-d1').value).replace(',','.')),d2=parseFloat(String(document.getElementById('css-d2').value).replace(',','.')),t1=tm(document.getElementById('css-t1').value),t2=tm(document.getElementById('css-t2').value);
+if(!(d1>0&&d2>0&&t1>0&&t2>0))return put('err',it?'Controlla i dati: servono due distanze in metri e due tempi (m:ss) maggiori di zero.':'Check the data: two distances in metres and two times (m:ss) above zero are needed.');
+if(d1>d2){var a=d1;d1=d2;d2=a;a=t1;t1=t2;t2=a}
+if(d1===d2)return put('err',it?'Le due distanze sono uguali: servono distanze diverse.':'The two distances are equal: different distances are needed.');
+if(t2<=t1)return put('err',it?'La prova più lunga ha un tempo uguale o inferiore a quella corta: i tempi non sono coerenti. Nessun risultato.':'The longer trial has an equal or shorter time than the short one: the times are not coherent. No result.');
+var css=(d2-d1)/(t2-t1),v1=d1/t1,v2=d2/t2;
+if(css>=v2||css>=v1)return put('err',it?'Il risultato non è coerente: la velocità critica risulterebbe pari o superiore alla velocità media di una delle prove (la prova lunga non è più lenta di media). Controlla i tempi o ripeti il test. Nessun risultato.':'The result is not coherent: critical speed would equal or exceed the mean speed of one of the trials (the long trial is not slower on average). Check the times or repeat the test. No result.');
+var w=[];if(t1<120||t1>900||t2<120||t2>900)w.push(it?'Almeno una prova dura fuori dall\'intervallo 2-15 minuti indicato dalla revisione sul protocollo: il metodo non è stato studiato così.':'At least one trial lasts outside the 2-15 minute range suggested by the protocol review: the method was not studied this way.');
+if(d1<200)w.push(it?'Distanze di 50 e 100 m sono escluse dal metodo studiato.':'Distances of 50 and 100 m are excluded from the studied method.');
+put('ok','<p><b>CSS '+css.toFixed(3)+' m/s</b> · '+(it?'circa ':'about ')+fm(100/css)+' /100 m</p><p>'+(it?'Stima orientativa dal metodo a due punti. Dipende dal protocollo e non è una misura di laboratorio. Non sono zone di allenamento.':'Indicative estimate from the two-point method. It depends on the protocol and is not a laboratory measure. These are not training zones.')+'</p>'+(w.length?'<ul>'+w.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>':''))})})();
+</script>
+
+<h2 id="s6">Cosa non facciamo</h2>
+<p>Non pubblichiamo zone di nuoto: servono una fonte valida per il tuo gruppo e un test tuo. Il calcolatore qui sopra si ferma alla CSS e rifiuta i dati incoerenti invece di restituire un numero.</p>
+
+<h2 id="s7">Cosa sappiamo e cosa no</h2>
 <p>Sappiamo come si calcola, che il risultato dipende dal protocollo e che la coppia 200 m e 400 m è ripetibile in un gruppo di nuotatori giovani agonisti. Non sappiamo quanto valga per amatori e triatleti, né se zone costruite sulla CSS migliorino l'allenamento in questi gruppi.</p>
 
-<h2 id="s-review">Come l'abbiamo valutato</h2><p>Testo completo di una scoping review (41 studi) e di un preprint; solo l'abstract dello studio originale del 1992.</p><p><strong>Limiti.</strong> Il risultato dipende dal protocollo; ripetibilità mostrata in nuotatori giovani di livello nazionale; triatleti e amatori non coperti.</p><p><strong>Wolf Confidence ★★☆☆☆ (vale per: calcolo e limiti della velocità critica di nuoto).</strong> Metodo noto ma dipendente dal protocollo e non studiato nel tuo gruppo: Molto limitata. È una revisione documentale (ANALYSIS). Wolf Lab non l'ha provato di persona (nessun TEST, nessun VERDICT). Rivisto il 28 ottobre 2026.</p><h2 id="s7">Fonti</h2>
+<h2 id="s-review">Come l'abbiamo valutato</h2><p>Testo completo di una scoping review (41 studi) e di un preprint; solo l'abstract dello studio originale del 1992.</p><p><strong>Limiti.</strong> Il risultato dipende dal protocollo; ripetibilità mostrata in nuotatori giovani di livello nazionale; triatleti e amatori non coperti.</p><p><strong>Wolf Confidence ★★☆☆☆ (vale per: calcolo e limiti della velocità critica di nuoto).</strong> Metodo noto ma dipendente dal protocollo e non studiato nel tuo gruppo: Molto limitata. È una revisione documentale (ANALYSIS). Wolf Lab non l'ha provato di persona (nessun TEST, nessun VERDICT). Rivisto il 28 ottobre 2026.</p><h2 id="s8">Fonti</h2>
 <ol class="sources">
   <li id="fonte-1">Wakayoshi et al. Determination and validity of critical velocity as an index of swimming performance in the competitive swimmer. <em>European Journal of Applied Physiology</em>, 1992. <a href="https://pubmed.ncbi.nlm.nih.gov/1521952/">PubMed</a> (solo abstract)</li>
   <li id="fonte-2">Petrigna, Karsten et al. Critical swimming speed: scoping review sui protocolli. <em>Science &amp; Sports</em>, 2022. <a href="https://doi.org/10.1016/j.scispo.2021.06.003">DOI</a> (testo completo, versione dell'autore)</li>
@@ -77,7 +104,7 @@
   <p class="note">Questo articolo è stato preparato con l'aiuto dell'intelligenza artificiale per la ricerca e la prima stesura, poi rivisto e verificato sulle fonti. Non sostituisce il parere di un medico o di un nutrizionista.</p>
   <p><a href="/articoli/">Tutti gli articoli</a></p>
 </div>
-<aside class="art-side"><div class="wolf-side"><h2>WOLF LAB</h2><dl><div><dt>Pubblicato</dt><dd>28 ottobre 2026</dd></div><div><dt>Lettura</dt><dd>7 min</dd></div><div><dt>Fonti</dt><dd>3</dd></div><div><dt>Livello di prova</dt><dd>scoping review letta + preprint</dd></div><div><dt>Wolf Confidence</dt><dd>★★☆☆☆ Molto limitata<br><small>Vale per: calcolo e limiti della velocità critica di nuoto</small></dd></div></dl></div><nav class="art-toc" aria-label="In questa pagina"><h2>In questa pagina</h2><ol><li><a href="#s2">Cos'è</a></li><li><a href="#s3">Cosa dicono le revisioni</a></li><li><a href="#s4">Controlli sui dati prima di usare un risultato</a></li><li><a href="#s5">Cosa non facciamo</a></li><li><a href="#s6">Cosa sappiamo e cosa no</a></li><li><a href="#s7">Fonti</a></li></ol></nav><nav class="art-related" aria-label="Da leggere dopo"><h2>Da leggere dopo</h2><ul><li><a href="/articoli/nuoto-metodi-di-allenamento/"><span>Nuoto</span>Nuoto: come si distribuisce l'intensità e cosa dicono gli studi sui metodi</a></li><li><a href="/articoli/nuoto-acque-libere-sicurezza/"><span>Nuoto</span>Acque libere: sicurezza, acqua fredda e muta</a></li><li><a href="/articoli/nuoto-gare-e-formati/"><span>Nuoto</span>Gare e formati: nuoto in acque libere, triathlon, IRONMAN e HYROX</a></li></ul></nav></aside>
+<aside class="art-side"><div class="wolf-side"><h2>WOLF LAB</h2><dl><div><dt>Pubblicato</dt><dd>28 ottobre 2026</dd></div><div><dt>Lettura</dt><dd>7 min</dd></div><div><dt>Fonti</dt><dd>3</dd></div><div><dt>Livello di prova</dt><dd>scoping review letta + preprint</dd></div><div><dt>Wolf Confidence</dt><dd>★★☆☆☆ Molto limitata<br><small>Vale per: calcolo e limiti della velocità critica di nuoto</small></dd></div></dl></div><nav class="art-toc" aria-label="In questa pagina"><h2>In questa pagina</h2><ol><li><a href="#s2">Cos'è</a></li><li><a href="#s3">Cosa dicono le revisioni</a></li><li><a href="#s4">Controlli sui dati prima di usare un risultato</a></li><li><a href="#s5">Calcolatore CSS (a due prove)</a></li><li><a href="#s6">Cosa non facciamo</a></li><li><a href="#s7">Cosa sappiamo e cosa no</a></li><li><a href="#s8">Fonti</a></li></ol></nav><nav class="art-related" aria-label="Da leggere dopo"><h2>Da leggere dopo</h2><ul><li><a href="/articoli/nuoto-metodi-di-allenamento/"><span>Nuoto</span>Nuoto: come si distribuisce l'intensità e cosa dicono gli studi sui metodi</a></li><li><a href="/articoli/nuoto-acque-libere-sicurezza/"><span>Nuoto</span>Acque libere: sicurezza, acqua fredda e muta</a></li><li><a href="/articoli/nuoto-gare-e-formati/"><span>Nuoto</span>Gare e formati: nuoto in acque libere, triathlon, IRONMAN e HYROX</a></li></ul></nav></aside>
 </div></article>
 </main>
 <footer class="site-foot">
