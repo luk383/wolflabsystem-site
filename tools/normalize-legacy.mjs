@@ -24,6 +24,18 @@ for (const f of walk(root)) {
   const lang = pick(h, /<a class="lang"[^>]*>[^<]*<\/a>/);
   h = h.replace(/<header class="site-head">[\s\S]*?<\/header>/, t.header.replace(/<a class="lang"[^>]*>[^<]*<\/a>/, lang || ''));
   h = h.replace(/<footer class="site-foot">[\s\S]*?<\/footer>/, t.footer);
+  // Static Wolf sidebar for article pages (research-paper layout): evidence, published date, reading time.
+  if (/<aside class="art-side">/.test(h) && !/class="wolf-side"/.test(h)) {
+    const en2 = l === 'en';
+    const tm = (h.match(/<time[^>]*>([^<]*)<\/time>/) || [])[1];
+    const mins = (h.match(/(\d+)\s*min/) || [])[1];
+    const ev = (h.match(/<[a-z]+ class="evidence[^"]*"[^>]*>([\s\S]*?)<\/[a-z]+>/) || [])[1];
+    if (tm) {
+      const date = tm.replace(/^(Published|Updated|Pubblicato il|Aggiornato il)\s*/i, '');
+      const box = `<div class="wolf-side"><h2>WOLF LAB</h2><dl>${ev ? `<div><dt>${en2 ? 'Evidence' : 'Prove'}</dt><dd>${ev.replace(/<[^>]+>/g, '').trim()}</dd></div>` : ''}<div><dt>${en2 ? 'Published' : 'Pubblicato'}</dt><dd>${date}</dd></div>${mins ? `<div><dt>${en2 ? 'Read' : 'Lettura'}</dt><dd>${mins} min</dd></div>` : ''}</dl></div>`;
+      h = h.replace('<aside class="art-side">', '<aside class="art-side">' + box);
+    }
+  }
   if (h !== o) { fs.writeFileSync(f, h); n++; }
 }
 console.log('normalized', n);

@@ -212,6 +212,6 @@
   }).catch(function(){});}
   // Barra Wolf negli articoli: livello di prova, aggiornamento, lettura (dati già presenti nella pagina)
   var side=document.querySelector('.art-side'),badge=document.querySelector('.art-hero .evidence, .art-body .evidence, .evidence'),tm=document.querySelector('.art-hero time');
-  if(side&&tm){var lv=badge?badge.textContent.trim():null,mins=(document.querySelector('.art-hero .article-meta')||{textContent:''}).textContent.match(/(\d+)\s*(min)/);
+  if(side&&tm&&!side.querySelector('.wolf-side')){var lv=badge?badge.textContent.trim():null,mins=(document.querySelector('.art-hero .article-meta')||{textContent:''}).textContent.match(/(\d+)\s*(min)/);
     var w=document.createElement('div');w.className='wolf-side';w.innerHTML='<h2>WOLF LAB</h2><dl>'+(lv?'<div><dt>'+(en?'Evidence':'Prove')+'</dt><dd>'+lv+'</dd></div>':'')+'<div><dt>'+(en?'Published':'Pubblicato')+'</dt><dd>'+tm.textContent.replace(/^(Published|Pubblicato il)\s*/i,'')+'</dd></div>'+(mins?'<div><dt>'+(en?'Read':'Lettura')+'</dt><dd>'+mins[1]+' min</dd></div>':'')+'</dl>';side.insertBefore(w,side.firstChild);}
 })();
