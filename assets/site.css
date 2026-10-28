@@ -440,3 +440,5 @@ html:not([data-theme="dark"]) :is(.w-tools .dev span,.w-tools .dev em,.w-meta,.a
 .nav .nav-engine,.filter button[aria-pressed="true"]{color:#0A0A0A!important}
 .w-numbers .wrap{grid-template-columns:repeat(4,1fr)!important}.w-num-note{grid-column:1/-1;margin:0;font:500 12px var(--mono);letter-spacing:.08em;color:#a9a8a1}
 @media(max-width:800px){.w-numbers .wrap{grid-template-columns:1fr 1fr!important}}
+.w-tools .dev{opacity:1}
+html:not([data-theme="dark"]) .w-feature .w-go,html:not([data-theme="dark"]) .w-side .w-go{color:#A8380D}
