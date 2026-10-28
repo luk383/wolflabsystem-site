@@ -69,8 +69,8 @@ const DISC = {
     ['GEAR', []]] },
   STRENGTH: { url: '/strength/', en: '/en/strength/', desc: 'Forza per l\'atleta endurance: programmi, esercizi, metodi.', lead: 'Come deve allenare la forza un atleta endurance?', blocks: [
     ['PROGRAMS', [['Bill Starr 5×5', 'Origine, struttura e varianti, con fonti.', '/train/strength/starr-5x5/']]],
-    ['EXERCISES', [['Catalogo esercizi', 'Muscoli, attrezzatura, schema motorio.', '/train/strength/#library']]],
-    ['METHODS', [['Versioni dei metodi', 'Ogni versione separata, con fonte e stato.', '/train/strength/#methods']]],
+    ['EXERCISES', [['Catalogo esercizi', '53 esercizi per muscolo, attrezzo e schema.', '/train/strength/esercizi/']]],
+    ['METHODS', [['Forza, ipertrofia e potenza', 'Tre risultati diversi, da non confondere.', '/allenamento/#allenamento-3'], ['Forza e endurance insieme', 'Cosa dicono le revisioni.', '/allenamento/#allenamento-4'], ['Versioni dei metodi', 'Ogni versione separata, con fonte e stato.', '/train/strength/#methods']]],
     ['ENDURANCE STRENGTH', [['Forza per runner e ciclisti', 'Interferenza o vantaggio?', '/articoli/forza-per-endurance/'], ['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/']]],
     ['GEAR', []]] },
 };
