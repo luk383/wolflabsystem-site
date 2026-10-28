@@ -8,7 +8,7 @@ import crypto from "node:crypto";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://wolflabsystem.com";
-const EMAIL = "luca@wolflabsystem.com";
+const EMAIL = "lab@wolflabsystem.com";
 // Versione dei file statici: cambia quando cambia il contenuto, così la cache non serve file vecchi
 const ver = (f) => crypto.createHash("sha256").update(fs.readFileSync(path.join(ROOT, f))).digest("hex").slice(0, 10);
 const ASSET_V = { css: ver("assets/site.css"), js: ver("assets/site.js"), art: ver("assets/article.css") };
