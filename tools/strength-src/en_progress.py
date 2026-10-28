@@ -288,4 +288,5 @@ EN = {
 'Proposta: ':'Proposal: ',
 'Valuta':'Evaluate',
 'Accetta':'Accept',
+'Settimana ':'Week ',
 }
