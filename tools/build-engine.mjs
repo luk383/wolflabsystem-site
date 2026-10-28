@@ -195,7 +195,7 @@ function home(lang) {
     <p class="w-strip">Training · Data · Nutrition · Equipment · Racing</p>
     <a class="w-btn" href="${R.engine[lang]}">${it ? "COSTRUISCI IL TUO PROFILO" : "BUILD YOUR ATHLETE PROFILE"} <span aria-hidden="true">→</span></a>
   </div>
-  <div class="sport-photo w-hero-img" role="img" aria-label="${it ? "Runner su strada sterrata, altopiani del Kenya" : "Runner on a dirt road, Kenyan highlands"}"><span class="w-visual">WOLF VISUAL / KENYA</span></div>
+  <div class="sport-photo w-hero-img" role="img" aria-label="${it ? "Runner su strada sterrata, altopiani del Kenya" : "Runner on a dirt road, Kenyan highlands"}"><img class="w-hero-logo" src="/assets/brand/logo-on-dark.svg" alt="" width="300" height="71" decoding="async"><span class="w-visual">WOLF VISUAL / KENYA</span></div>
 </div></section>
 <section class="w-band"><div class="wrap">
   <p class="w-kicker">THE WOLF ENGINE</p>
