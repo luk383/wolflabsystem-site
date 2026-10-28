@@ -29,13 +29,13 @@
       t5k: tim("t5k"), t10k: tim("t10k"), thm: tim("thm"), tm: tim("tm"),
       hrmax: num("hrmax"), lthr: num("lthr"), hours: num("hours"), days: Math.min(7, num("days")),
       sports: { run: q("sport-run").checked, bike: q("sport-bike").checked, strength: q("sport-strength").checked },
-      goal: q("goal").value, target: tim("target"), duration: tim("duration"), sweat: num("sweat")
+      s200: tim("s200"), s400: tim("s400"), goal: q("goal").value, target: tim("target"), duration: tim("duration"), sweat: num("sweat")
     };
   }
 
   function render() {
     var i = read(), r = E.compute(i), h = "";
-    var anyInput = i.t5k || i.t10k || i.thm || i.tm || i.ftp || i.hours || i.lthr;
+    var anyInput = i.t5k || i.t10k || i.thm || i.tm || i.ftp || i.hours || i.lthr || i.s200 || i.s400;
     if (!anyInput) { out.innerHTML = empty(L("Inserisci almeno un dato: un tempo di gara, la FTP o le ore a settimana. Il resto compare man mano.", "Enter at least one value: a race time, FTP or weekly hours. The rest appears as you go.")); return; }
 
     // RUN
@@ -95,6 +95,15 @@
       if (i.sports.run && i.sports.bike && i.sports.strength) hy += '<p class="eng-note">' + L("Interferenza forza/endurance: negli studi l'effetto negativo sulla forza è maggiore con più sedute e con la corsa che con la bici (Wilson 2012). Tieni la forza pesante lontana dalle sedute chiave di corsa quando puoi.", "Strength/endurance interference: in studies the negative effect on strength is larger with higher frequency and with running than with cycling (Wilson 2012). Keep heavy strength away from key run sessions when you can.") + "</p>";
     } else hy += empty(L("Servono ore e giorni disponibili e almeno uno sport.", "Available hours and days and at least one sport are needed."));
     h += block("hybrid", "HYBRID", hy, L("Regola pratica Wolf Lab, non il risultato di uno studio. Parte da due punti con prove: la gran parte del tempo facile (Seiler) e la forza 1–2 volte a settimana. Il resto è una proposta da adattare.", "Wolf Lab rule of thumb, not the result of a study. It starts from two points with evidence: most time easy (Seiler) and strength once or twice a week. The rest is a proposal to adapt."));
+
+    // SWIM: CSS dai due test dell'utente (Wakayoshi 1992). Nessuna zona.
+    var swm = "";
+    if (i.s200 && i.s400) {
+      var cs = 200 / (i.s400 - i.s200);
+      if (i.s400 <= i.s200 || cs >= 200 / i.s200 || cs >= 400 / i.s400) swm += '<p class="eng-empty">' + L("I due tempi non sono coerenti: la prova da 400 m deve essere più lenta di quella da 200 m e la CSS deve risultare più bassa della velocità media di entrambe. Controlla i tempi o ripeti il test: nessun risultato calcolato.", "The two times are not consistent: the 400 m trial must be slower than the 200 m trial and the CSS must come out lower than the average speed of both. Check the times or repeat the test: no result calculated.") + "</p>";
+      else swm += '<div class="big-figures"><div><strong>' + cs.toFixed(3) + " m/s</strong><span>CSS</span></div><div><strong>" + E.mmss(100 / cs) + " /100 m</strong><span>" + L("ritmo alla CSS (stima)", "pace at CSS (estimate)") + "</span></div></div>";
+    } else swm += empty(L("Inserisci i tempi di due prove massimali, 200 m e 400 m. Zone di nuoto non disponibili: servono una fonte valida per il tuo gruppo e un test tuo.", "Enter the times of two maximal trials, 200 m and 400 m. Swim zones are not available: they need a valid source for your group and a test of your own."));
+    h += block("swim", "SWIM", swm, L("Metodo a due punti (Wakayoshi e colleghi, 1992): stima orientativa che dipende dal protocollo, non una misura di laboratorio e non zone di allenamento.", "Two-point method (Wakayoshi et al., 1992): an indicative estimate that depends on the protocol, not a lab measure and not training zones."));
 
     // FUEL
     var fu = "";
