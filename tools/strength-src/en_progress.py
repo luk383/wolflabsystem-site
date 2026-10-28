@@ -413,4 +413,10 @@ EN = {
 'Bill Starr 5×5: scheda metodologica →':'Bill Starr 5×5: method sheet →',
 'Concurrent training, meta-analisi 2022 ↗':'Concurrent training, 2022 meta-analysis ↗',
 'Metodi':'Methods',
+'Scegli':'Choose',
+'Dal mio programma':'From my program',
+'Scegli settimana e seduta':'Choose week and session',
+'Configura il programma':'Set up the program',
+'Programma settimanale':'Weekly program',
+'Settimana':'Week',
 }
