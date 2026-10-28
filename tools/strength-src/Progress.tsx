@@ -16,7 +16,7 @@ const REASON:any={
  repeated_incomplete_sessions:'Sedute incomplete ripetute: riduzione di carico proposta.',
 };
 const ACTION:any={increase:'Proposta: aumentare',hold:'Proposta: mantenere',stop:'Proposta: fermare la progressione',reset:'Proposta: ridurre'};
-const fmtP=(s:any)=>(s.kg==null?'carico da definire':s.kg+' kg')+' × '+(s.repsMin==null?'ripetizioni da definire':s.repsMin===s.repsMax?s.repsMin:s.repsMin+'–'+s.repsMax);
+const fmtP=(s:any)=>(s.kg==null?'carico da definire':s.kg+' kg')+' × '+(s.repsMin==null?'ripetizioni da definire':s.repsMin===s.repsMax?s.repsMin:s.repsMin+'–'+s.repsMax)+(s.side==='left'?' · sinistra':s.side==='right'?' · destra':s.side==='each'?' · ogni lato':'')+(s.rir!=null?' · RIR '+s.rir:'')+(s.rpe!=null?' · RPE '+s.rpe:'')+(s.tempo?' · tempo '+s.tempo:'');
 const KL:any={work:'Lavoro',warmup:'Riscaldamento',ramp:'Crescente'};
 const TECH:any={unknown:'non indicata',valid:'pulita',compromised:'compromessa'};
 export function CircuitOrder({base}:any){
@@ -57,7 +57,7 @@ function Proposal({w,e,routines,onApply,history,k}:any){
 function V2Item({w,routines,update,data,setPending,edit,k,onApply}:any){
   return <article><small>{new Date(w.finishedAt).toLocaleString('it-IT')}</small><h3>{w.name||w.prescription.name}</h3>
    {w.prescription.exercises.map((e:any)=>{const r0=w.results[e.sets[0].id]||{};return <div key={e.id}><b>{e.name}</b><small> · tecnica {TECH[r0.technique||'unknown']}{r0.pain?' · dolore segnalato':''}</small>
-    <ul className="pe">{e.sets.map((s:any,j:number)=>{const a=w.results[s.id]||{};return <li key={s.id}>Serie {j+1} · {KL[s.kind]} · Prescritto {fmtP(s)} · Eseguito {a.done?a.kg+' kg × '+a.reps:'non completata'}</li>;})}</ul>
+    <ul className="pe">{e.sets.map((s:any,j:number)=>{const a=w.results[s.id]||{};return <li key={s.id}>Serie {j+1} · {KL[s.kind]} · Prescritto {fmtP(s)} · Eseguito {a.done?a.kg+' kg × '+a.reps+(a.rir!=null?' · RIR '+a.rir:'')+(a.rpe!=null?' · RPE '+a.rpe:''):'non completata'}</li>;})}</ul>
     <Proposal w={w} e={e} routines={routines} onApply={onApply} history={data.history} k={k}/></div>;})}
    <div className="actions"><button onClick={()=>edit(v2ToUi({...w.prescription,id:String(Date.now()),name:(w.name||w.prescription.name)+' nuova scheda',revision:1}))}>Usa come nuova scheda</button><button onClick={()=>setPending({label:'Eliminare questa registrazione?',run:()=>update({...data,history:data.history.filter((_:any,i:number)=>i!==k)})})}>Elimina registrazione</button></div></article>;
 }

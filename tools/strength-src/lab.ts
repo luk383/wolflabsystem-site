@@ -20,12 +20,12 @@ export function uiToV2(r:any){
   const out:any={id:n.id,name:n.name,method:n.method,notes:n.notes||'',revision:n.revision||1};
   if(n.goal)out.goal=n.goal;if(n.split)out.split=n.split;if(n.source)out.source=clone(n.source);
   out.exercises=n.exercises.map((e:any)=>{const x:any={id:e.id,name:e.name,muscle:e.muscle,equipment:e.equipment,notes:e.notes||''};if(e.groupId)x.groupId=e.groupId;
-    x.sets=e.sets.map((s:any)=>{const reps=num(s.reps),mx=num(s.repsMax);return {id:s.id,kind:kindOut(s.kind),kg:num(s.kg),repsMin:reps,repsMax:reps!=null&&mx!=null?mx:reps,restSeconds:num(s.rest)};});return x;});
+    x.sets=e.sets.map((s:any)=>{const reps=num(s.reps),mx=num(s.repsMax);const o:any={id:s.id,kind:kindOut(s.kind),kg:num(s.kg),repsMin:reps,repsMax:reps!=null&&mx!=null?mx:reps,restSeconds:num(s.rest)};const ri=num(s.rir),rp=num(s.rpe);if(ri!=null)o.rir=ri;if(rp!=null)o.rpe=rp;if(['left','right','each'].includes(s.side))o.side=s.side;if(typeof s.tempo==='string'&&s.tempo.trim())o.tempo=s.tempo.trim().slice(0,20);return o;});return x;});
   return out;
 }
 export function v2ToUi(v:any){
   const r=clone(v);
-  r.exercises=r.exercises.map((e:any)=>({...e,sets:e.sets.map((s:any)=>({...s,kg:s.kg==null?'':String(s.kg),reps:s.repsMin==null?'':String(s.repsMin),repsMax:s.repsMax!=null&&s.repsMax!==s.repsMin?String(s.repsMax):'',rest:s.restSeconds==null?'':String(s.restSeconds),kind:kindIn(s.kind),done:false}))}));
+  r.exercises=r.exercises.map((e:any)=>({...e,sets:e.sets.map((s:any)=>({...s,kg:s.kg==null?'':String(s.kg),reps:s.repsMin==null?'':String(s.repsMin),repsMax:s.repsMax!=null&&s.repsMax!==s.repsMin?String(s.repsMax):'',rest:s.restSeconds==null?'':String(s.restSeconds),rir:s.rir==null?'':String(s.rir),rpe:s.rpe==null?'':String(s.rpe),side:s.side||'',tempo:s.tempo||'',kind:kindIn(s.kind),done:false}))}));
   return r;
 }
 export const toStore=(ui:any)=>({schemaVersion:2,routines:ui.routines.map(uiToV2),history:ui.history});
@@ -35,6 +35,7 @@ export function groupsOk(r:any){
   for(let i=0;i<r.exercises.length;i++){const g=r.exercises[i].groupId||'';if(g&&g!==last&&seen[g]!==undefined)return false;if(g)seen[g]=i;last=g;}
   return true;
 }
+const effort=(v:any,lo:number,hi:number)=>{const n=num(v);return n!=null&&n>=lo&&n<=hi?n:null;};
 // Registro finale: prescrizione congelata dalla scheda all'avvio, risultati per id serie.
 export function buildWorkout(session:any){
   const base=uiToV2(session.base);if(base.source)delete base.source.snapshot;
@@ -42,7 +43,7 @@ export function buildWorkout(session:any){
   session.exercises.forEach((e:any,i:number)=>e.sets.forEach((s:any,j:number)=>{
     const id=base.exercises[i].sets[j].id,kg=num(s.kg),reps=num(s.reps);
     const ok=s.done&&kg!=null&&Number.isInteger(reps)&&reps>=0;
-    w=recordSet(w,id,{kg:kg!=null&&kg>=0?kg:null,reps:Number.isInteger(reps)&&reps>=0?reps:null,done:!!ok,technique:(session.technique||{})[e.id]||'unknown',pain:!!(session.pain||{})[e.id]});
+    w=recordSet(w,id,{kg:kg!=null&&kg>=0?kg:null,reps:Number.isInteger(reps)&&reps>=0?reps:null,done:!!ok,rir:effort(s.pRir,0,10),rpe:effort(s.pRpe,1,10),technique:(session.technique||{})[e.id]||'unknown',pain:!!(session.pain||{})[e.id]});
   }));
   const f=finishWorkout(w,new Date().toISOString());
   return {...f,name:session.name};
