@@ -9,25 +9,29 @@
         "intro": "Tre sport, più livelli: distribuzione dell’intensità, modelli e singole sedute non sono etichette equivalenti.",
         "items": [
           {
-            "title": "Piramidale e polarizzato",
-            "kind": "Corsa · ciclismo / distribuzione intensità",
+            "title": "Corsa: distribuzione dell’intensità",
+            "kind": "Corsa / piramidale e polarizzato",
             "paragraphs": [
-              "Nel modello fisiologico a tre zone, entrambi assegnano la quota maggiore al lavoro facile, sotto la prima soglia. Nel piramidale la quota intermedia supera quella alta; nel polarizzato la quota alta supera quella intermedia. Non esiste una percentuale unica obbligatoria.",
-              "La zona intermedia è tra prima e seconda soglia, quella alta sopra la seconda. Questi numeri non sono automaticamente le zone del tuo dispositivo. Per confrontare studi o settimane bisogna dichiarare come si misurano intensità e distribuzione: tempo nelle zone e obiettivo della seduta possono dare letture diverse.",
-              "A chi serve: a chi vuole capire come organizzare il carico, non a scegliere un vincitore per nome. La meta-analisi 2025 non trova una superiorità complessiva tra piramidale e polarizzato per VO₂max o cronometro; segnala possibili differenze secondo livello atletico. Non è una regola individuale.",
-              "Applicazione: descrivere prima il lavoro attuale con un sistema coerente. Una distribuzione non prescrive da sola ore, frequenza o progressione. Evitare di aggiungere sedute intense solo per raggiungere una percentuale."
+              "Distribuzione dell’intensità vuol dire quanto tempo di corsa cade sotto la prima soglia, tra le due soglie e sopra la seconda. Piramidale: la zona intermedia supera quella alta. Polarizzato: la zona alta supera quella intermedia. Entrambi tengono la maggior parte della corsa facile.",
+              "In corsa la stessa seduta può essere classificata in modo diverso a seconda che si usi ritmo, frequenza cardiaca o lattato. Prima di confrontare due settimane o due piani va dichiarato quale misura si usa e come si fissano le soglie. Le zone dell’orologio non coincidono per forza con le soglie fisiologiche.",
+              "La meta-analisi 2025 ha messo insieme 13 studi con 348 atleti di endurance, ricreativi e competitivi. Gli studi non sono solo di corsa: non mostra un risultato separato per la corsa. Con il tempo in zona di frequenza cardiaca non trova differenze complessive tra polarizzato e piramidale su VO₂max e cronometro. Segnala una possibile differenza per livello: più competitivi, polarizzato; ricreativi, piramidale. È un sottogruppo, non una regola individuale.",
+              "Applicazione: misura il tempo nelle zone con lo stesso metodo per qualche settimana, poi decidi se la zona intermedia è voluta. Non aggiungere sedute dure solo per raggiungere una percentuale."
             ],
             "links": [
               [
-                "Definizioni e limiti del conteggio: Treff et al.,2019",
+                "Guida Wolf Lab: piramidale o polarizzato",
+                "/piramidale-o-polarizzato"
+              ],
+              [
+                "Definizioni e limiti del conteggio: Treff et al., 2019",
                 "https://pmc.ncbi.nlm.nih.gov/articles/PMC6582670/"
               ],
               [
-                "Revisione e meta-analisi 2025",
+                "Revisione e meta-analisi 2025 (abstract)",
                 "https://link.springer.com/article/10.1007/s40279-024-02149-3"
               ],
               [
-                "Guida Wolf Lab già disponibile",
+                "Guida Wolf Lab: quanta intensità serve",
                 "/articoli/quanta-intensita-serve/"
               ]
             ]
@@ -48,6 +52,56 @@
               [
                 "Guida Wolf Lab: metodo norvegese",
                 "/articoli/metodo-norvegese-doppia-soglia/"
+              ]
+            ]
+          },
+          {
+            "title": "Corsa: forza e pliometria",
+            "kind": "Corsa / forza per la corsa",
+            "paragraphs": [
+              "Per i corridori di mezzofondo e fondo la forza tende a migliorare l’economia di corsa (nella revisione di Blagrove 2018, in genere del 2–8% rispetto ai controlli), mentre VO₂max e soglia di lattato in genere non cambiano.",
+              "I metodi non sono equivalenti: nella revisione di Llanos-Lagos 2024 carichi alti (almeno 80% di 1RM), pliometria e metodi combinati hanno mostrato effetti piccoli o moderati; carichi submassimali e isometria no. La qualità delle prove è moderata o bassa.",
+              "L’articolo riporta le famiglie di metodo, gli intervalli dei protocolli studiati (non una scheda) e i limiti."
+            ],
+            "links": [
+              [
+                "Guida Wolf Lab: forza per la corsa",
+                "/articoli/forza-corsa-metodi/"
+              ],
+              [
+                "Blagrove et al. 2018",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC5889786/"
+              ],
+              [
+                "Llanos-Lagos et al. 2024 (abstract)",
+                "https://pubmed.ncbi.nlm.nih.gov/38165636/"
+              ]
+            ]
+          },
+          {
+            "title": "Ciclismo: distribuzione dell’intensità",
+            "kind": "Ciclismo / piramidale e polarizzato",
+            "paragraphs": [
+              "In bici le zone si fissano di solito sulla potenza, spesso partendo dall’FTP. Piramidale e polarizzato descrivono come si divide il tempo tra le tre zone; entrambi tengono la maggior parte delle ore facili.",
+              "La meta-analisi 2025 (13 studi, 348 atleti di endurance di più sport, non solo ciclisti) ha classificato il lavoro con il tempo in zona di frequenza cardiaca. Una classificazione sulla potenza o sull’FTP può dare una distribuzione diversa: non va confrontata alla pari senza dichiararlo. Nessuna differenza complessiva su VO₂max e cronometro; possibile differenza per livello (competitivi: polarizzato; ricreativi: piramidale).",
+              "Applicazione: decidere prima come si misurano le zone (potenza, frequenza cardiaca, percezione), poi contare il tempo con quel metodo. Non copiare una percentuale."
+            ],
+            "links": [
+              [
+                "Guida Wolf Lab: FTP e zone di potenza",
+                "/articoli/ftp-e-zone-di-potenza/"
+              ],
+              [
+                "Guida Wolf Lab: piramidale o polarizzato",
+                "/piramidale-o-polarizzato"
+              ],
+              [
+                "Revisione e meta-analisi 2025 (abstract)",
+                "https://link.springer.com/article/10.1007/s40279-024-02149-3"
+              ],
+              [
+                "Definizioni e limiti del conteggio: Treff et al., 2019",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC6582670/"
               ]
             ]
           },
@@ -75,6 +129,28 @@
             ]
           },
           {
+            "title": "Ciclismo: forza pesante",
+            "kind": "Ciclismo / forza per la bici",
+            "paragraphs": [
+              "Nei ciclisti di endurance la meta-analisi 2025 (17 studi, 262 ciclisti) ha trovato effetti della forza pesante (almeno 80% di 1RM) su efficienza di pedalata, potenza anaerobica e prestazione. Nessun effetto significativo su VO₂max.",
+              "Per gli altri metodi (pliometria, carichi moderati) non c’è una sintesi sui ciclisti nelle fonti lette: non vengono confrontati. Il protocollo dello studio Rønnestad 2010 (12 settimane, 2 sedute a settimana, 4 esercizi per le gambe, 3 serie da 4–10 RM) è un esempio testato su 11 ciclisti uomini, non una scheda."
+            ],
+            "links": [
+              [
+                "Guida Wolf Lab: forza per la bici",
+                "/articoli/forza-bici-metodi/"
+              ],
+              [
+                "Meta-analisi sulla forza pesante nei ciclisti 2025 (abstract)",
+                "https://pubmed.ncbi.nlm.nih.gov/40632222/"
+              ],
+              [
+                "Rønnestad et al. 2010 (abstract)",
+                "https://pubmed.ncbi.nlm.nih.gov/19960350/"
+              ]
+            ]
+          },
+          {
             "title": "Pesi: forza, ipertrofia e potenza",
             "kind": "Pesi / obiettivi e variabili",
             "paragraphs": [
@@ -95,8 +171,8 @@
             ]
           },
           {
-            "title": "Combinare forza e endurance",
-            "kind": "Corsa · ciclismo · pesi / integrazione",
+            "title": "Forza e endurance insieme",
+            "kind": "Pesi / integrazione con endurance",
             "paragraphs": [
               "La revisione Schumann e colleghi 2022 non trova nel complesso una compromissione di forza massima o ipertrofia rispetto alla sola forza. I guadagni di forza esplosiva possono invece essere attenuati, soprattutto quando le attività sono nella stessa seduta.",
               "Questo non rende qualsiasi combinazione equivalente o sicura. Volume, obiettivo, recupero e popolazione vanno considerati; la scheda non prescrive una settimana tipo. Non attribuire ogni stanchezza a una generica “interferenza”."
@@ -324,24 +400,29 @@
         "intro": "Three sports, different levels: intensity distribution, training models and individual sessions are not equivalent labels.",
         "items": [
           {
-            "title": "Pyramidal and polarized",
-            "kind": "Running · cycling / intensity distribution",
+            "title": "Running: intensity distribution",
+            "kind": "Running / pyramidal and polarized",
             "paragraphs": [
-              "In the physiological three-zone model, both allocate the largest share to low intensity, below the first threshold. In pyramidal training the middle share exceeds the high share; in polarized training the high share exceeds the middle share. There is no single mandatory percentage.",
-              "The middle zone lies between the first and second thresholds; the high zone is above the second. These numbers do not automatically match your device zones. State the measurement method: time in zone and session goals can describe the same training differently.",
-              "The 2025 meta-analysis found no overall superiority of pyramidal versus polarized training for VO₂max or time trials, while identifying possible differences by athlete level. A distribution alone does not prescribe weekly hours, frequency or progression. Do not add hard sessions simply to match a percentage."
+              "Intensity distribution means how much running time falls below the first threshold, between the two thresholds and above the second. Pyramidal: the middle zone exceeds the high zone. Polarized: the high zone exceeds the middle zone. Both keep most running easy.",
+              "In running, the same session can be classified differently depending on whether you use pace, heart rate or lactate. Before comparing two weeks or two plans, state which measure you use and how thresholds are set. Watch zones do not necessarily match physiological thresholds.",
+              "The 2025 meta-analysis pooled 13 studies with 348 endurance athletes, recreational and competitive. The studies are not running only, and it gives no separate result for running. Using time in heart-rate zone, it found no overall difference between polarized and pyramidal for VO₂max and time trial. It reports a possible difference by level: more competitive, polarized; recreational, pyramidal. This is a subgroup, not an individual rule.",
+              "Application: measure time in zones with the same method for a few weeks, then decide whether the middle zone is intended. Do not add hard sessions just to reach a percentage."
             ],
             "links": [
               [
-                "Definitions and counting limits: Treff et al.,2019",
+                "Wolf Lab guide: polarised or pyramidal",
+                "/en/pyramidal-or-polarized"
+              ],
+              [
+                "Definitions and counting limits: Treff et al., 2019",
                 "https://pmc.ncbi.nlm.nih.gov/articles/PMC6582670/"
               ],
               [
-                "Systematic review and meta-analysis 2025",
+                "Systematic review and network meta-analysis 2025 (abstract)",
                 "https://link.springer.com/article/10.1007/s40279-024-02149-3"
               ],
               [
-                "Existing Wolf Lab guide",
+                "Wolf Lab guide: how much intensity",
                 "/en/articles/how-much-intensity/"
               ]
             ]
@@ -362,6 +443,56 @@
               [
                 "Wolf Lab guide: the Norwegian method",
                 "/en/articles/norwegian-method-double-threshold/"
+              ]
+            ]
+          },
+          {
+            "title": "Running: strength and plyometrics",
+            "kind": "Running / strength for running",
+            "paragraphs": [
+              "In middle- and long-distance runners, strength tends to improve running economy (Blagrove 2018: generally 2–8% versus controls), while VO₂max and lactate threshold generally do not change.",
+              "Methods are not equivalent: in the Llanos-Lagos 2024 review, heavy loads (at least 80% of 1RM), plyometrics and combined methods showed small to moderate effects; submaximal loads and isometrics did not. Certainty of evidence is moderate or low.",
+              "The article gives the method families, the ranges of the studied protocols (not a plan) and the limits."
+            ],
+            "links": [
+              [
+                "Wolf Lab guide: strength for running",
+                "/en/articles/strength-for-running-methods/"
+              ],
+              [
+                "Blagrove et al. 2018",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC5889786/"
+              ],
+              [
+                "Llanos-Lagos et al. 2024 (abstract)",
+                "https://pubmed.ncbi.nlm.nih.gov/38165636/"
+              ]
+            ]
+          },
+          {
+            "title": "Cycling: intensity distribution",
+            "kind": "Cycling / pyramidal and polarized",
+            "paragraphs": [
+              "On the bike, zones are usually set from power, often starting from FTP. Pyramidal and polarized describe how time is split across the three zones; both keep most hours easy.",
+              "The 2025 meta-analysis (13 studies, 348 endurance athletes across sports, not only cyclists) classified work by time in heart-rate zone. A power- or FTP-based classification can give a different distribution and should not be compared as equal without saying so. No overall difference in VO₂max and time trial; a possible difference by level (competitive: polarized; recreational: pyramidal).",
+              "Application: decide first how zones are measured (power, heart rate, perception), then count time with that method. Do not copy a percentage."
+            ],
+            "links": [
+              [
+                "Wolf Lab guide: FTP and power zones",
+                "/en/articles/ftp-and-power-zones/"
+              ],
+              [
+                "Wolf Lab guide: polarised or pyramidal",
+                "/en/pyramidal-or-polarized"
+              ],
+              [
+                "Systematic review and network meta-analysis 2025 (abstract)",
+                "https://link.springer.com/article/10.1007/s40279-024-02149-3"
+              ],
+              [
+                "Definitions and counting limits: Treff et al., 2019",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC6582670/"
               ]
             ]
           },
@@ -389,6 +520,28 @@
             ]
           },
           {
+            "title": "Cycling: heavy strength",
+            "kind": "Cycling / strength for cycling",
+            "paragraphs": [
+              "In endurance cyclists the 2025 meta-analysis (17 studies, 262 cyclists) found effects of heavy strength (at least 80% of 1RM) on cycling efficiency, anaerobic power and performance. No significant effect on VO₂max.",
+              "For other methods (plyometrics, moderate loads) the sources read give no synthesis in cyclists, so they are not compared. The Rønnestad 2010 protocol (12 weeks, 2 sessions a week, 4 leg exercises, 3 sets of 4–10 RM) is an example tested on 11 male cyclists, not a plan."
+            ],
+            "links": [
+              [
+                "Wolf Lab guide: strength for cycling",
+                "/en/articles/strength-for-cycling-methods/"
+              ],
+              [
+                "Heavy strength in cyclists, 2025 meta-analysis (abstract)",
+                "https://pubmed.ncbi.nlm.nih.gov/40632222/"
+              ],
+              [
+                "Rønnestad et al. 2010 (abstract)",
+                "https://pubmed.ncbi.nlm.nih.gov/19960350/"
+              ]
+            ]
+          },
+          {
             "title": "Strength, size and power",
             "kind": "Weights / goals and variables",
             "paragraphs": [
@@ -409,8 +562,8 @@
             ]
           },
           {
-            "title": "Combining strength and endurance",
-            "kind": "Running · cycling · weights / integration",
+            "title": "Strength and endurance together",
+            "kind": "Weights / integration with endurance",
             "paragraphs": [
               "The 2022 Schumann et al. review found no overall compromise of maximal strength or hypertrophy compared with strength alone. Explosive strength gains may be attenuated, particularly when both modes are trained in the same session.",
               "This does not make every combination equivalent or safe. Consider volume, goals, recovery and the population studied. This page does not prescribe a weekly schedule."

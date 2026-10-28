@@ -545,3 +545,5 @@ html:not([data-theme="dark"]) .w-feature-sym{color:#5A7300}
 .pl-d summary span{flex:1}
 .pl-ic{color:var(--accent);margin-bottom:auto;display:block}.pl-card{gap:14px}.pl-card-t{margin-top:12px}
 .pl-empty{margin:0;padding:14px 0 18px;color:var(--muted);font-size:15px}
+/* Desktop gutters: every container aligns to the header (28px inside a 1280px box). */
+@media(min-width:901px){body .wrap,body .w-body,body .w-page-hero .wrap,body .w-band .wrap,body .w-latest .wrap,body .w-numbers .wrap,body .w-score-home .wrap,body .w-tiles .wrap,body .w-start .wrap{width:min(1224px,100% - 56px)}}
