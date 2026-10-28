@@ -283,7 +283,7 @@ function engine(lang) {
   const f = (name, label, ph, extra = "") => `<div class="field"><label for="f-${name}">${label}</label><input id="f-${name}" name="${name}" ${extra} placeholder="${ph}" autocomplete="off"></div>`;
   const num = (n, l, ph) => f(n, l, ph, 'inputmode="decimal"');
   const tm = (n, l, ph) => f(n, l, ph, 'inputmode="numeric"');
-  const body = `${hero("WOLF ENGINE", T("Inserisci i tuoi dati.<br>Ricevi il tuo profilo.", "Enter your data.<br>Get your profile."), T("Calcoli da modelli pubblicati. Tutto resta nel tuo browser: nessun dato viene inviato. Si salva qualcosa solo se premi Salva, e solo su questo dispositivo.", "Calculations from published models. Everything stays in your browser: nothing is sent. Something is saved only if you press Save, and only on this device."))}
+  const body = `${hero("WOLF ENGINE", T("Inserisci i tuoi dati.<br>Ricevi il tuo profilo.", "Enter your data.<br>Get your profile."))}
 <div class="wrap w-engine">
 <form id="engine-form" class="eng-form" novalidate>
   <fieldset><legend>${T("Atleta", "Athlete")}</legend><div class="fields">${num("age", T("Età", "Age"), "40")}${num("weight", T("Peso (kg)", "Weight (kg)"), "70")}</div></fieldset>
