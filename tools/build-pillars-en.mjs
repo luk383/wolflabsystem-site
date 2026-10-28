@@ -1,0 +1,95 @@
+// WOLF: struttura a 5 pilastri per l'inglese (stesso albero di build-pillars.mjs). Etichette UI in inglese; i contenuti EN esistenti non sono toccati.
+// Uso: node tools/build-pillars-en.mjs [root]  (da eseguire dopo build-pillars.mjs)
+import fs from 'node:fs'; import path from 'node:path';
+const root = path.resolve(process.argv[2] || path.join(import.meta.dirname, '..'));
+const SITE = 'https://wolflabsystem.com';
+const rd = (f) => fs.readFileSync(path.join(root, f), 'utf8');
+const wr = (f, s) => { fs.mkdirSync(path.dirname(path.join(root, f)), { recursive: true }); fs.writeFileSync(path.join(root, f), s); };
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+const exists = (href) => { const p = href.split('#')[0].split('?')[0]; return p === '/' || [p + '.html', p.endsWith('/') ? p + 'index.html' : p + '/index.html'].some((x) => fs.existsSync(path.join(root, x))); };
+const bad = []; const link = (h) => { if (!exists(h)) bad.push(h); return h; };
+const TAGS = { // id articolo -> [disciplina, tipo] (stessi tag della versione IT)
+  'bici-per-la-maratona': ['RUN', 'ANALYSIS'], 'caffeina-e-prestazione': ['CROSS', 'GUIDE'], 'carboidrati-maratona': ['RUN', 'GUIDE'], 'forza-per-endurance': ['STRENGTH', 'ANALYSIS'],
+  'ftp-e-zone-di-potenza': ['RIDE', 'GUIDE'], 'hyrox-triathlon-lungo-studi': ['HYBRID', 'ANALYSIS'], 'quanta-intensita-serve': ['HYBRID', 'ANALYSIS'], 'nuoto-acque-libere-regole-fin-master': ['SWIM', 'GUIDE'],
+  'nuoto-acque-libere-sicurezza': ['SWIM', 'GUIDE'], 'nuoto-css-velocita-critica': ['SWIM', 'GUIDE'], 'nuoto-gare-e-formati': ['SWIM', 'GUIDE'], 'nuoto-metodi-di-allenamento': ['SWIM', 'METHOD'],
+  'nuoto-orientamento-sighting': ['SWIM', 'GUIDE'], 'nuoto-piscina-acque-libere': ['SWIM', 'ANALYSIS'], 'nuoto-ritmo-gara-triathlon': ['SWIM', 'GUIDE'], 'nuoto-sedute-esercizi-transizione': ['SWIM', 'METHOD'],
+  'nuoto-tecnica-bracciata': ['SWIM', 'ANALYSIS'], 'scarpe-con-piastra-carbonio': ['RUN', 'ANALYSIS'], 'sonno-e-recupero': ['CROSS', 'GUIDE'], 'scarico-pre-gara': ['RUN', 'GUIDE'] };
+const meta0 = (f) => JSON.parse(fs.readFileSync(path.join(root, 'content/articles', f), 'utf8').match(/<!--meta([\s\S]*?)-->/)[1]);
+const en = {}; for (const f of fs.readdirSync(path.join(root, 'content/articles'))) if (f.endsWith('.en.html')) { const m = meta0(f); en[m.id] = m; }
+const arts = fs.readdirSync(path.join(root, 'content/articles')).filter((f) => f.endsWith('.it.html')).map((f) => {
+  const it = meta0(f), e = en[it.id]; if (!e) { bad.push('EN mancante ' + it.slug); return null; } const t = TAGS[it.slug]; if (!t) bad.push('TAG ' + it.slug);
+  return { ...e, d: t[0], k: t[1], date: it.date, href: link('/en/articles/' + e.slug + '/') };
+}).filter(Boolean).sort((a, b) => (b.date + b.slug).localeCompare(a.date + a.slug));
+const PICKS = [['Guide: training shoes', '/en/picks/training-shoes/', 'RUN', 'GUIDE'], ['Compare Evo SL, Novablast 6, Ghost 18', '/en/picks/compare-evo-sl-novablast-6-ghost-18/', 'RUN', 'COMPARISON'],
+  ['Carb gels: three comparisons on declared data', '/en/picks/carb-gels/', 'RUN', 'COMPARISON'], ['Bike computers: how to choose', '/en/picks/bike-computers/', 'RIDE', 'GUIDE']].map(([title, href, d, k]) => ({ title, href: link(href), d, k }));
+
+const shell = rd('en/run.html'); const head0 = shell.slice(0, shell.indexOf('<main')); const foot0 = shell.slice(shell.indexOf('</main>') + 7);
+const NAV = [['RUN', '/en/run'], ['RIDE', '/en/ride'], ['SWIM', '/en/swim'], ['STRENGTH', '/en/strength/'], ['ARTICLES', '/en/articles/']];
+const navHtml = (cur) => `<nav class="nav" aria-label="Main">${NAV.map(([l, h]) => `<a href="${h}"${cur === l ? ' aria-current="page"' : ''}>${l}</a>`).join('')}</nav>`;
+const footHtml = `<nav class="foot-links" aria-label="Footer"><a href="/en/methodology">Methodology</a> <a href="/en/contact/">Contact</a> <a href="/en/app/">Android app</a> <a href="https://www.instagram.com/wolflabsystem/" rel="noopener me" target="_blank">Instagram</a> <a href="/en/feed.xml">RSS</a></nav>`;
+const patchChrome = (h, cur) => h.replace(/<nav class="nav"[\s\S]*?<\/nav>/, navHtml(cur)).replace(/<nav class="foot-links"[\s\S]*?<\/nav>/, footHtml);
+const meta = (h, { title, desc, url, it }) => h.replace(/<title>.*?<\/title>/, `<title>${esc(title)}</title>`).replace(/(<meta name="description" content=")[^"]*/, `$1${esc(desc)}`)
+  .replace(/(<link rel="canonical" href=")[^"]*/, `$1${SITE}${url}`).replace(/(<link rel="alternate" hreflang="en" href=")[^"]*/, `$1${SITE}${url}`).replace(/(<link rel="alternate" hreflang="it" href=")[^"]*/, `$1${SITE}${it}`)
+  .replace(/(<meta property="og:title" content=")[^"]*/, `$1${esc(title)}`).replace(/(<meta property="og:description" content=")[^"]*/, `$1${esc(desc)}`).replace(/(<meta property="og:url" content=")[^"]*/, `$1${SITE}${url}`)
+  .replace(/(<meta name="twitter:title" content=")[^"]*/, `$1${esc(title)}`).replace(/(<a class="lang" href=")[^"]*/, `$1${it}`);
+const page = (cur, m, main) => patchChrome(meta(head0, m), cur) + `<main id="main">\n${main}\n</main>` + foot0.replace(/<nav class="foot-links"[\s\S]*?<\/nav>/, footHtml);
+const item = (n, t, s, href) => `<li class="w-item"><a href="${link(href)}"><span class="w-num">${String(n).padStart(2, '0')}</span><span class="w-txt"><b>${esc(t)}</b><small>${esc(s)}</small></span><span class="w-go" aria-hidden="true">→</span></a></li>`;
+const tag = (d, k) => `<span class="pl-tag">${d === 'CROSS' ? 'CROSS-DISCIPLINE' : d} · ${k}</span>`;
+const A = (id) => { const a = arts.find((x) => x.slug === id); if (!a) bad.push('art ' + id); return a ? '/en/articles/' + a.slug + '/' : '/en/articles/'; };
+const sleep = ['Sleep and recovery', 'The cheapest performance gain.', '/en/articles/sleep-and-recovery/'];
+const DISC = {
+  RUN: { url: '/en/run', it: '/run', desc: 'Training, performance, races, fuel and gear for running.', lead: 'Training, performance, races, fuel and gear.', blocks: [
+    ['TRAINING', [['Polarised or pyramidal', 'What the studies say.', '/en/pyramidal-or-polarized'], ['Race taper', 'How much and how to cut back.', '/en/articles/race-taper/'], ['Training methods', 'Library of methods.', '/en/training/']]],
+    ['PERFORMANCE', [['Paces and VDOT', 'From your times to training paces.', '/en/engine#run'], ['Race pacing', 'Even split or negative split.', '/en/engine#race']]],
+    ['RACE', [['Race database', '27 races in the inventory.', '/en/races/'], ['Trips and camps', 'Altitude and training camps.', '/en/trips/']]],
+    ['FUEL & RECOVERY', [['Carbs and fluids', 'Race-day fuelling.', '/en/engine#fuel'], sleep, ['Caffeine and performance', 'Doses, timing and limits.', '/en/articles/caffeine-and-performance/']]],
+    ['GEAR', [['Training shoes', 'Guide and criteria.', '/en/picks/training-shoes/'], ['Compare Evo SL, Novablast 6, Ghost 18', 'Sourced data, no scores.', '/en/picks/compare-evo-sl-novablast-6-ghost-18/'], ['Carb gels', 'Comparison on declared data.', '/en/picks/carb-gels/'], ['Product sheets', 'Measured data and official list prices.', '/en/picks/']]]] },
+  RIDE: { url: '/en/ride', it: '/ride', desc: 'Power, FTP, races and gear for cycling.', lead: 'Power, races and gear.', blocks: [
+    ['TRAINING', [['FTP and power zones', 'What they measure and how far to trust them.', '/en/articles/ftp-and-power-zones/'], ['Training methods', 'Polarised, pyramidal.', '/en/training/']]],
+    ['PERFORMANCE', [['Power zones', 'From your FTP.', '/en/engine#ride']]],
+    ['RACE', [['Race database', 'Includes gran fondos.', '/en/races/']]],
+    ['FUEL & RECOVERY', [['Carbs and fluids', 'Race-day fuelling.', '/en/engine#fuel'], sleep]],
+    ['GEAR', [['Bike computers', 'Guide.', '/en/picks/bike-computers/']]]] },
+  SWIM: { url: '/en/swim', it: '/swim', desc: 'Critical speed, methods, open water and swim races.', lead: 'Critical speed, methods and open water.', blocks: [
+    ['TRAINING', [['Critical swim speed (CSS)', 'What it is and where it stops being valid.', '/en/articles/swim-critical-speed/'], ['Training methods', 'How intensity is distributed.', '/en/articles/swim-training-methods/'], ['Stroke technique', 'Stroke rate and stroke length.', '/en/articles/swim-stroke-technique/']]],
+    ['PERFORMANCE', [['CSS from your tests', '200 and 400 m tests. Swim zones not available yet.', '/en/engine#swim']]],
+    ['RACE', [['Races and formats', 'Open water, triathlon, IRONMAN.', '/en/articles/swim-race-formats/'], ['FIN Masters rules', 'Open water in Italy.', '/en/articles/swim-open-water-italy-fin-masters/'], ['Open water safety', 'Cold water and wetsuits.', '/en/articles/open-water-swimming-safety/']]],
+    ['FUEL & RECOVERY', [sleep]],
+    ['GEAR', []]] },
+  STRENGTH: { url: '/en/strength/', it: '/strength/', desc: 'Strength for the endurance athlete: programs, exercises, methods.', lead: '', blocks: [
+    ['PROGRAMS', [['Bill Starr 5×5', 'Origin, structure and variants, with sources.', '/en/train/strength/starr-5x5/']]],
+    ['EXERCISES', [['Exercise catalogue', 'Muscles, equipment, movement pattern.', '/en/train/strength/#library']]],
+    ['METHODS', [['Method versions', 'Each version kept separate, with source and status.', '/en/train/strength/#methods']]],
+    ['ENDURANCE STRENGTH', [['Strength for runners and cyclists', 'Interference or advantage?', '/en/articles/strength-for-endurance/'], sleep]],
+    ['GEAR', []]] },
+};
+for (const [name, d] of Object.entries(DISC)) {
+  const file = name === 'STRENGTH' ? 'en/strength/index.html' : 'en/' + name.toLowerCase() + '.html';
+  const blocks = d.blocks.map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span><em>${items.length || ''}</em></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">Nothing here yet.</p>'}</details>`).join('');
+  wr(file, page(name, { title: `${name} - Wolf Lab`, desc: d.desc, url: d.url, it: d.it },
+    `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Strength for people who run, ride and swim.' : name}</h1>${d.lead ? `<p class="pl-lead">${esc(d.lead)}</p>` : ''}</div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div><p class="pl-more"><a href="/en/articles/?d=${name}">All ${name} articles →</a></p></div>`));
+}
+const DISCS = ['RUN', 'RIDE', 'SWIM', 'STRENGTH', 'HYBRID'], TYPES = ['ANALYSIS', 'GUIDE', 'REVIEW', 'COMPARISON', 'METHOD'];
+const rows = [...arts.map((a) => ({ title: a.title, href: a.href, d: a.d, k: a.k, min: a.minutes })), ...PICKS];
+const row = (r) => `<li class="pl-row" data-d="${r.d}" data-k="${r.k}"><a href="${r.href}">${tag(r.d, r.k)}<b>${esc(r.title)}</b>${r.min ? `<small>${r.min} min</small>` : ''}</a></li>`;
+const chips = (arr, key) => arr.map((x) => `<button type="button" class="pl-chip" data-${key}="${x}">${x}</button>`).join('');
+const itArt = rd('articoli/index.html'); const script = itArt.match(/<script>\(function\(\)\{var s=\{\}[\s\S]*?<\/script>/)[0].replace("'TRASVERSALE'", "'CROSS'");
+wr('en/articles/index.html', page('ARTICLES', { title: 'Articles - Wolf Lab', desc: 'Analysis, guides, reviews, comparisons and methods for RUN, RIDE, SWIM and STRENGTH.', url: '/en/articles/', it: '/articoli/' },
+  `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">ARTICLES</p><h1>Articles</h1></div></header><div class="wrap w-body"><div class="pl-filters" aria-label="Filters"><div>${chips(DISCS, 'd')}</div><div>${chips(TYPES, 'k')}</div></div><ul class="pl-rows" id="pl-rows">${rows.map(row).join('')}</ul><p class="pl-more"><a href="/en/training/">Library of methods →</a></p></div>\n${script}`));
+const card = (t, href) => `<a class="pl-card" href="${link(href)}"><span class="pl-card-t">${t}</span><span class="w-go" aria-hidden="true">→</span></a>`;
+const lab = DISCS.map((d) => arts.find((a) => a.d === d)).filter(Boolean); for (const a of arts) { if (lab.length >= 6) break; if (!lab.includes(a)) lab.push(a); }
+const home = `<section class="w-hero"><div class="wrap pl-hero"><h1><span>ENDURANCE.</span><span class="acc">ENGINEERED.</span></h1><p class="pl-lead">Run. Ride. Swim. Strength.</p></div></section>
+<section class="pl-cards-wrap"><div class="wrap pl-cards">${card('RUN', '/en/run')}${card('RIDE', '/en/ride')}${card('SWIM', '/en/swim')}${card('STRENGTH', '/en/strength/')}</div></section>
+<section class="w-band"><div class="wrap pl-engine"><p class="w-kicker">WOLF ENGINE</p><h2 class="w-big">Calculate your performance.</h2><p class="pl-lead">Paces · FTP · Zones · Fuel · Race · CSS</p><p class="w-btns"><a class="w-btn" href="${link('/en/engine')}">BUILD YOUR ENGINE <span aria-hidden="true">→</span></a></p></div></section>
+<section class="w-latest"><div class="wrap"><p class="w-kicker">FROM THE LAB</p><ul class="pl-rows">${lab.map((a) => row({ title: a.title, href: a.href, d: a.d, k: a.k, min: a.minutes })).join('')}</ul><p class="pl-more"><a href="/en/articles/">All articles →</a></p></div></section>
+<section class="w-numbers"><div class="wrap pl-race"><p class="w-kicker">RACES</p><a class="w-cta" href="${link('/en/races/')}">Find your next race <span aria-hidden="true">→</span></a></div></section>`;
+const idx = rd('en/index.html');
+wr('en/index.html', patchChrome(meta(idx.slice(0, idx.indexOf('<main')), { title: 'Wolf Lab - Endurance. Engineered.', desc: 'Run, ride, swim, strength: articles with sources and the Wolf Engine to calculate your performance.', url: '/en/', it: '/' }), '') + `<main id="main">\n${home}\n</main>` + foot0.replace(/<nav class="foot-links"[\s\S]*?<\/nav>/, footHtml));
+// nav e footer sulle altre pagine EN
+const skip = new Set(['index.html', 'run.html', 'ride.html', 'swim.html', 'strength/index.html', 'articles/index.html']); let n = 0;
+const cur = (rel) => /^articles\//.test(rel) ? 'ARTICLES' : /^(run|ride|swim)\.html$/.test(rel) ? rel.split('.')[0].toUpperCase() : /^(train\/)?strength\//.test(rel) ? 'STRENGTH' : '';
+const walk = (d) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else if (e.name.endsWith('.html')) { const rel = path.relative(path.join(root, 'en'), p); if (skip.has(rel)) continue; const h = fs.readFileSync(p, 'utf8'); if (!/<nav class="nav"/.test(h)) continue; const o = patchChrome(h, cur(rel)); if (o !== h) { fs.writeFileSync(p, o); n++; } } } };
+walk(path.join(root, 'en'));
+if (bad.length) { console.error('PROBLEMI:', bad); process.exit(1); }
+console.log('pillars EN ok; pagine EN aggiornate', n, 'articoli', arts.length);
+{ const sp = path.join(root, 'sitemap.xml'); let sm = fs.readFileSync(sp, 'utf8'); for (const u of ['/strength/', '/en/strength/']) if (!sm.includes(SITE + u + '</loc>')) sm = sm.replace('</urlset>', `<url><loc>${SITE}${u}</loc></url>\n</urlset>`); fs.writeFileSync(sp, sm); }

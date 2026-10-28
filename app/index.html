@@ -15,15 +15,15 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wolflabsystem.com/app/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/geist.woff2" crossorigin><link rel="stylesheet" href="/assets/site.css?v=bf5982bc">
-<script defer src="/assets/site.js?v=67b4fd8e"></script>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/geist.woff2" crossorigin><link rel="stylesheet" href="/assets/site.css?v=5922cf8d">
+<script defer src="/assets/site.js?v=e1392ad6"></script>
 <meta property="og:image" content="https://wolflabsystem.com/assets/og-wolflab.png?v=1d559bae" data-seo="1"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="App Android alpha - Wolf Lab"><meta name="twitter:description" content="WOLFLAB per Android, versione alpha 0.2.0: download dell'APK, checksum, cosa funziona e cosa manca."><meta name="twitter:image" content="https://wolflabsystem.com/assets/og-wolflab.png?v=1d559bae"><style>.app-dl{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;margin:0 0 8px}.app-body h2{margin:44px 0 12px;font-size:1.4rem}.app-body ul,.app-body ol{padding-left:1.2em;max-width:62ch}.app-body li{margin:6px 0}.app-body p{max-width:62ch}.app-tab{border-top:1px solid var(--rule);margin:0}.app-tab div{display:grid;grid-template-columns:minmax(120px,220px) 1fr;gap:16px;padding:10px 0;border-bottom:1px solid var(--rule)}.app-tab dt{color:var(--muted)}.app-tab dd{margin:0;overflow-wrap:anywhere;font-family:var(--mono,monospace);font-size:.85rem}@media(max-width:560px){.app-tab div{grid-template-columns:1fr;gap:2px}}</style></head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="/" aria-label="WOLFLAB"><img class="brand-img brand-on-dark" src="/assets/brand/logo-on-dark.svg?v=a46ac693" alt="WOLFLAB" width="190" height="44"><img class="brand-img brand-on-light" src="/assets/brand/logo-on-light.svg?v=8f9daefc" alt="" width="190" height="44"></a>
-    <nav class="nav" aria-label="Principale"><a href="/run">RUN</a><a href="/ride">RIDE</a><a href="/swim">SWIM</a><a href="/train">TRAIN</a><a href="/fuel">FUEL</a><a href="/race">RACE</a><a href="/gear">GEAR</a><a class="nav-engine" href="/engine">WOLF ENGINE</a></nav>
+    <nav class="nav" aria-label="Principale"><a href="/run">RUN</a><a href="/ride">RIDE</a><a href="/swim">SWIM</a><a href="/strength/">STRENGTH</a><a href="/articoli/">ARTICLES</a></nav>
     <a class="lang" href="/en/app/" hreflang="en" lang="en">English</a>
   </div>
 </header>
@@ -33,7 +33,7 @@
 <div class="app-dl"><a class="btn btn-primary" href="/assets/app/WOLFLAB-0.2.0-alpha-release.apk" download>Scarica APK · 3,3 MB</a></div>
 <p class="note" style="border:0;margin-top:8px;padding-top:0">Alpha non pubblicata su Google Play. Android mostrerà un avviso perché l'app arriva fuori dallo store.</p>
 <h2>Stato</h2><ul><li>Versione alpha: funzioni limitate, possibili errori.</li><li>TRAIN è in preparazione: tre percorsi proposti, nessun programma operativo e nessuna seduta prescritta.</li><li>Questo APK firmato non è ancora stato provato su un telefono.</li><li>Non è su Google Play. Gli aggiornamenti sono manuali.</li></ul>
-<h2>Cosa c'è</h2><ul><li>PACE, FTP, FUEL, RACE e ZONES: cinque calcolatori base, con metodo e limiti dichiarati in app.</li><li>Guide offline di nuoto e pesi, con ritmo per 100 m e parziali (solo aritmetica, non CSS né zone) e calcolo del carico esterno (aritmetica, non una prescrizione). Preferiti salvati sul telefono.</li><li>Nessun programma o scheda settimanale e nessun registro di serie e ripetizioni.</li><li>MyWolf: preferenze salvate sul telefono solo se scegli di salvarle, cancellabili.</li><li>Nessun account, nessuna telemetria, nessun GPS, nessun collegamento Garmin o Strava, nessuna chat AI, nessun Wolf Score.</li></ul>
+<h2>Cosa c'è</h2><ul><li>PACE, FTP, FUEL, RACE e ZONES: cinque calcolatori base, con metodo e limiti dichiarati in app.</li><li>Guide offline di nuoto e pesi, con ritmo per 100 m e parziali (solo aritmetica, non CSS né zone) e calcolo del carico esterno (aritmetica, non una prescrizione). Preferiti salvati sul telefono.</li><li>Nessun programma o scheda settimanale e nessun registro di serie e ripetizioni.</li><li>MyWolf: preferenze salvate sul telefono solo se scegli di salvarle, cancellabili.</li><li>Nessun account, nessuna telemetria, nessun GPS, nessun collegamento Garmin o Strava, nessuna chat AI.</li></ul>
 <h2>Dati e privacy</h2><p>L'app non invia dati a server WOLFLAB. Nel pacchetto la pagina web interna ha una regola di sicurezza che vieta le connessioni di rete (connect-src none). Android elenca il permesso INTERNET nel manifesto: è presente nel pacchetto, ma il codice dell'app non fa richieste di rete. I link esterni si aprono solo su tua azione, nel browser.</p>
 <h2>Come installare</h2><ol><li>Scarica il file dal pulsante sopra.</li><li>Apri il file. Se Android lo chiede, consenti al browser o al gestore file di installare app sconosciute, solo per questa installazione.</li><li>Se vuoi, controlla prima il checksum SHA-256 qui sotto.</li><li>Se hai la 0.1.0: stessa app, stessa firma, versione più alta (versionCode 2). L'aggiornamento sul posto è previsto ma non è stato verificato su un telefono; se vuoi tenere i dati, annotali prima. Non c'è aggiornamento automatico.</li></ol><p>Se hai installato la versione di prova (debug), ha una firma diversa: questo APK non la aggiorna. Annota i dati che vuoi tenere e disinstalla prima quella: i salvataggi locali si perdono.</p>
 <h2>Dettagli del file</h2><dl class="app-tab"><div><dt>Versione</dt><dd>0.2.0-alpha (versionCode 2)</dd></div><div><dt>Pacchetto</dt><dd>com.wolflabsystem.app</dd></div><div><dt>Android</dt><dd>7 o successivo</dd></div><div><dt>Dimensione</dt><dd>3.267.986 byte</dd></div><div><dt>SHA-256 del file</dt><dd>e5a3c80e07435f7206e44a4317515da83081efac7e3a3348eb19cfad158288dd</dd></div><div><dt>SHA-256 del certificato di firma</dt><dd>1ed886753b6302f37a933d81d8af90beb13ddd22b6c81c6936a1ce2ffc9a2665</dd></div></dl><p>Per controllare il file: sha256sum WOLFLAB-0.2.0-alpha-release.apk (Linux/macOS) oppure Get-FileHash (Windows). Deve coincidere con il valore sopra.</p>
@@ -41,7 +41,7 @@
 </div></main>
 <footer class="site-foot">
   <div class="wrap">
-    <nav class="foot-links" aria-label="Piè di pagina"><a href="/metodologia">Metodologia</a> <a href="/articoli/">Articoli</a> <a href="/allenamento/">Libreria</a> <a href="/novita/">Novità</a> <a href="/ask-wolf/">Ask Wolf</a> <a href="/contatti/">Contatti</a> <a href="/feed.xml">RSS</a> <a href="https://www.instagram.com/wolflabsystem/" rel="noopener me" target="_blank">Instagram</a></nav>
+    <nav class="foot-links" aria-label="Piè di pagina"><a href="/metodologia">Metodologia</a> <a href="/contatti/">Contatti</a> <a href="/app/">App Android</a> <a href="https://www.instagram.com/wolflabsystem/" rel="noopener" target="_blank">Instagram</a> <a href="/feed.xml">RSS</a></nav>
   </div>
 </footer>
 </body>

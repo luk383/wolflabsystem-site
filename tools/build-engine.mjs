@@ -188,7 +188,7 @@ const HUBS = {
     kicker: ["GEAR", "GEAR"], title: ["Dal comunicato alla decisione.", "From press release to decision."],
     lede: ["Quattro livelli, dichiarati: NEWS, ANALYSIS, TEST, VERDICT. Oggi pubblichiamo solo NEWS: nessun test fatto da noi.", "Four declared levels: NEWS, ANALYSIS, TEST, VERDICT. Today we publish NEWS only: no tests run by us."],
     groups: [
-      [["Novità", "Orologi, ciclocomputer, scarpe, bici: annunci datati con fonti.", "news"], ["Scarpe con piastra in carbonio", "Cosa dicono gli studi.", ["/articoli/scarpe-con-piastra-carbonio/", "/en/articles/carbon-plate-running-shoes/"]], ["Come valutiamo", "Livelli di prova e regole del Wolf Score.", "method"]],
+      [["Novità", "Orologi, ciclocomputer, scarpe, bici: annunci datati con fonti.", "news"], ["Scarpe con piastra in carbonio", "Cosa dicono gli studi.", ["/articoli/scarpe-con-piastra-carbonio/", "/en/articles/carbon-plate-running-shoes/"]], ["Come valutiamo", "Livelli di prova e fonti.", "method"]],
     ],
     levels: true,
   },
@@ -244,7 +244,7 @@ function home(lang) {
 <section class="w-band"><div class="wrap">
   <p class="w-kicker">THE WOLF ENGINE</p>
   <h2 class="w-big">Calculate. Understand. Perform.</h2>
-  <ul class="w-tools">${[["PACE","run",["Ritmi di allenamento dai tuoi tempi recenti.","Training paces from your recent times."]],["FTP","ride",["Zone di potenza dalla tua FTP.","Power zones from your FTP."]],["FUEL","fuel",["Carboidrati e liquidi per la gara.","Carbohydrate and fluids for race day."]],["RACE","race",["Passaggi di gara dal tempo obiettivo.","Race splits from your target time."]],["ZONES","ride",["Zone di potenza e cardio.","Power and heart-rate zones."]]].map(([n,k,d])=>`<li><a href="${R.engine[lang]}#${k}"><b>${n}</b><span>${d[lang]}</span><em>${it?"FUNZIONANTE":"WORKING"}</em></a></li>`).join("")}<li class="dev"><a href="${R.engine[lang]}#swim"><b>SWIM</b><span>${it?"CSS dai tuoi test su 200 e 400 m. Zone di nuoto non ancora disponibili.":"CSS from your 200 m and 400 m trials. Swim zones not available yet."}</span><em>${it?"PARZIALE · ZONE IN SVILUPPO":"PARTIAL · ZONES IN DEVELOPMENT"}</em></a></li><li class="dev"><a href="${R.method[lang]}"><b>WOLF SCORE</b><span>${it?"Criteri pubblici. Nessun punteggio finché mancano dati e test.":"Public criteria. No score until data and tests exist."}</span><em>${it?"IN SVILUPPO":"IN DEVELOPMENT"}</em></a></li></ul>
+  <ul class="w-tools">${[["PACE","run",["Ritmi di allenamento dai tuoi tempi recenti.","Training paces from your recent times."]],["FTP","ride",["Zone di potenza dalla tua FTP.","Power zones from your FTP."]],["FUEL","fuel",["Carboidrati e liquidi per la gara.","Carbohydrate and fluids for race day."]],["RACE","race",["Passaggi di gara dal tempo obiettivo.","Race splits from your target time."]],["ZONES","ride",["Zone di potenza e cardio.","Power and heart-rate zones."]]].map(([n,k,d])=>`<li><a href="${R.engine[lang]}#${k}"><b>${n}</b><span>${d[lang]}</span><em>${it?"FUNZIONANTE":"WORKING"}</em></a></li>`).join("")}<li class="dev"><a href="${R.engine[lang]}#swim"><b>SWIM</b><span>${it?"CSS dai tuoi test su 200 e 400 m. Zone di nuoto non ancora disponibili.":"CSS from your 200 m and 400 m trials. Swim zones not available yet."}</span><em>${it?"PARZIALE · ZONE IN SVILUPPO":"PARTIAL · ZONES IN DEVELOPMENT"}</em></a></li></ul>
 </div></section>
 <section class="w-latest"><div class="wrap">
   <p class="w-kicker">LATEST FROM WOLF</p>
@@ -260,12 +260,7 @@ function home(lang) {
   <div><strong>${nA}</strong><span>${it ? "guide con livello di prova e Wolf Confidence" : "guides with evidence level and Wolf Confidence"}</span></div>
   <p class="w-num-note">${it ? "Inventario non significa verificato: ogni scheda mostra cosa manca." : "Inventory does not mean verified: each card shows what is missing."}</p>
 </div></section>
-<section class="w-score-home"><div class="wrap">
-  <p class="w-kicker">WOLF SCORE</p>
-  <h2 class="w-big">${it ? "Nessun punteggio senza criteri, dati e test." : "No score without criteria, data and tests."}</h2>
-  <p class="w-lede dim">${it ? "Un Wolf Score compare solo quando i criteri, le fonti e, per i prodotti, un nostro test sono pubblici. Oggi non ne esiste nessuno." : "A Wolf Score appears only when criteria, sources and, for products, our own test are public. Today there are none."}</p>
-  <a class="w-cta" href="${R.method[lang]}">${it ? "Come valutiamo" : "How we evaluate"} <span aria-hidden="true">→</span></a>
-</div></section>
+
 <section class="w-start"><div class="wrap">
   <p class="w-kicker">START HERE</p>
   <ol>
@@ -322,18 +317,6 @@ function method(lang) {
 <h2>Wolf Confidence</h2>
 <table class="w-table"><tbody>${conf.map(([s, n, d]) => `<tr><th scope="row">${s}</th><td><b>${n}</b></td><td>${d}</td></tr>`).join("")}</tbody></table>
 <p>${T("Il 28 ottobre 2026 tutti i " + nRev + " articoli hanno livello di prova e stelle dopo una revisione documentale delle loro fonti, con limiti e motivazione scritti nella pagina. È ANALYSIS, non un nostro test. Ogni nuovo articolo mostra \"non ancora assegnata\" finché non è rivisto: nessuna stella viene assegnata in blocco.", "On 28 October 2026 all " + nRev + " articles received an evidence level and stars after a documentary review of their sources, with limits and rationale written on the page. This is ANALYSIS, not a test of our own. Any new article shows \"not assigned yet\" until reviewed: no stars are assigned in bulk.")}</p>
-<h2>Wolf Score</h2>
-<p>${T("Il Wolf Score è un punteggio da 0 a 100 con criteri e pesi pubblici. Compare solo se ogni criterio ha una fonte o un nostro test. Per i prodotti serve un test fatto davvero. <b>Oggi nessun Wolf Score è pubblicato.</b>", "The Wolf Score is a 0 to 100 score with public criteria and weights. It appears only if every criterion has a source or our own test. Products need a test actually run. <b>Today no Wolf Score is published.</b>")}</p>
-<table class="w-table"><tbody>${crit.map(([a, b]) => `<tr><th scope="row">${a}</th><td>${b}</td></tr>`).join("")}</tbody></table>
-<div class="w-score-demo" aria-label="${T("Esempio grafico", "Graphic example")}"><p class="w-kicker">${T("ESEMPIO GRAFICO · VALORI FITTIZI · NON È UNA MISURA", "GRAPHIC EXAMPLE · MADE-UP VALUES · NOT A MEASUREMENT")}</p><div class="w-score-ring"><strong>00</strong><span>/100</span></div><ul>${["PERFORMANCE", "VALUE", "DURABILITY", "VERSATILITY"].map((n) => `<li><span>${n}</span><i style="--v:0%"></i></li>`).join("")}</ul></div>
-<h3>${T("Come si calcolerebbe (proposta sperimentale v0.1, non validata)", "How it would be computed (experimental proposal v0.1, not validated)")}</h3>
-<ol class="w-rules">
-<li>${T("Ogni criterio riceve un valore da 0 a 100 da una regola scritta prima, legata a un dato con fonte o a un nostro test con protocollo.", "Each criterion gets a 0 to 100 value from a rule written in advance, tied to a sourced data point or to our own test with a protocol.")}</li>
-<li>${T("Punteggio = media dei criteri, con pesi uguali. I pesi uguali sono una scelta provvisoria e arbitraria, non un risultato scientifico.", "Score = average of the criteria, with equal weights. Equal weights are a provisional, arbitrary choice, not a scientific result.")}</li>
-<li>${T("Se manca un criterio, il punteggio non viene calcolato. Nessuna stima per i dati mancanti.", "If a criterion is missing, the score is not computed. No estimates for missing data.")}</li>
-<li>${T("Accanto al punteggio compaiono sempre le fonti, la data di verifica e la Wolf Confidence.", "The sources, check date and Wolf Confidence always appear next to the score.")}</li>
-</ol>
-<p class="dim">${T("Pubblicare formula e pesi rende il calcolo ripetibile da chiunque, ma non lo rende valido. La validità (se il punteggio misura davvero ciò che conta) non è stata dimostrata: finché mancano dati e test non pubblichiamo nessun punteggio.", "Publishing formula and weights lets anyone repeat the calculation, but does not make it valid. Validity (whether the score really measures what matters) has not been shown: until data and tests exist we publish no score.")}</p>
 <h2>NEWS → ANALYSIS → TEST → VERDICT</h2>
 <p>${T("<b>News</b>: cosa è uscito, con le dichiarazioni del produttore. <b>Analysis</b>: cosa dicono i dati disponibili. <b>Test</b>: lo abbiamo provato, con protocollo. <b>Verdict</b>: lo comprerei, solo dopo un test. Oggi pubblichiamo solo News.", "<b>News</b>: what came out, with manufacturer claims. <b>Analysis</b>: what available data say. <b>Test</b>: we tried it, with a protocol. <b>Verdict</b>: would I buy it, only after a test. Today we publish News only.")}</p>
 <h2>${T("Scheda metodo", "Method card")}</h2>
@@ -348,7 +331,7 @@ function method(lang) {
 <h2>${T("Fonti dei modelli", "Model sources")}</h2>
 <ul class="w-src">${src.map(([t, u]) => `<li><a href="${u}" rel="noopener">${t}</a></li>`).join("")}</ul>
 </div>`;
-  return layout({ lang, key: "method", title: T("Metodologia", "Methodology"), desc: T("Gerarchia delle prove, Wolf Confidence, regole del Wolf Score e fonti dei modelli del Wolf Engine.", "Evidence hierarchy, Wolf Confidence, Wolf Score rules and the model sources behind Wolf Engine."), body });
+  return layout({ lang, key: "method", title: T("Metodologia", "Methodology"), desc: T("Gerarchia delle prove, Wolf Confidence e fonti dei modelli del Wolf Engine.", "Evidence hierarchy, Wolf Confidence and the model sources behind Wolf Engine."), body });
 }
 
 // ---------- Guida: piramidale o polarizzato ----------

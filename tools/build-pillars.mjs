@@ -1,0 +1,107 @@
+// WOLF: struttura a 5 pilastri (RUN RIDE SWIM STRENGTH ARTICOLI). Home, hub discipline, hub articoli, nav e footer.
+// Usa solo pagine esistenti (controlla ogni link). Idempotente. Uso: node tools/build-pillars.mjs [root]
+import fs from 'node:fs'; import path from 'node:path';
+const root = path.resolve(process.argv[2] || path.join(import.meta.dirname, '..'));
+const SITE = 'https://wolflabsystem.com';
+const rd = (f) => fs.readFileSync(path.join(root, f), 'utf8');
+const wr = (f, s) => { fs.mkdirSync(path.dirname(path.join(root, f)), { recursive: true }); fs.writeFileSync(path.join(root, f), s); };
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+const exists = (href) => { const p = href.split('#')[0].split('?')[0]; const c = [p + '.html', p.endsWith('/') ? p + 'index.html' : p + '/index.html', p + 'index.html']; return p === '/' || c.some((x) => fs.existsSync(path.join(root, x))); };
+const bad = [];
+const link = (href) => { if (!exists(href)) bad.push(href); return href; };
+
+// ---- articoli: tag disciplina + tipo (da conferma editoriale dove marcato ?)
+const TAGS = {
+  'bici-per-la-maratona': ['RUN', 'ANALISI'], 'caffeina-e-prestazione': ['TRASVERSALE', 'GUIDA'], 'carboidrati-maratona': ['RUN', 'GUIDA'],
+  'forza-per-endurance': ['STRENGTH', 'ANALISI'], 'ftp-e-zone-di-potenza': ['RIDE', 'GUIDA'], 'hyrox-triathlon-lungo-studi': ['HYBRID', 'ANALISI'],
+  'quanta-intensita-serve': ['HYBRID', 'ANALISI'], 'nuoto-acque-libere-regole-fin-master': ['SWIM', 'GUIDA'], 'nuoto-acque-libere-sicurezza': ['SWIM', 'GUIDA'],
+  'nuoto-css-velocita-critica': ['SWIM', 'GUIDA'], 'nuoto-gare-e-formati': ['SWIM', 'GUIDA'], 'nuoto-metodi-di-allenamento': ['SWIM', 'METODO'],
+  'nuoto-orientamento-sighting': ['SWIM', 'GUIDA'], 'nuoto-piscina-acque-libere': ['SWIM', 'ANALISI'], 'nuoto-ritmo-gara-triathlon': ['SWIM', 'GUIDA'],
+  'nuoto-sedute-esercizi-transizione': ['SWIM', 'METODO'], 'nuoto-tecnica-bracciata': ['SWIM', 'ANALISI'], 'scarpe-con-piastra-carbonio': ['RUN', 'ANALISI'],
+  'sonno-e-recupero': ['TRASVERSALE', 'GUIDA'], 'scarico-pre-gara': ['RUN', 'GUIDA'],
+};
+const arts = fs.readdirSync(path.join(root, 'content/articles')).filter((f) => f.endsWith('.it.html')).map((f) => {
+  const m = JSON.parse(fs.readFileSync(path.join(root, 'content/articles', f), 'utf8').match(/<!--meta([\s\S]*?)-->/)[1]);
+  const t = TAGS[m.slug]; if (!t) bad.push('TAG mancante ' + m.slug);
+  return { ...m, d: (t || ['?', '?'])[0], k: (t || ['?', '?'])[1], href: link('/articoli/' + m.slug + '/') };
+}).sort((a, b) => (b.date + b.slug).localeCompare(a.date + a.slug));
+const PICKS = [
+  ['Guida: scarpe da allenamento', '/picks/scarpe-allenamento/', 'RUN', 'GUIDA'], ['Confronto Evo SL, Novablast 6, Ghost 18', '/picks/confronto-evo-sl-novablast-6-ghost-18/', 'RUN', 'COMPARAZIONE'],
+  ['Gel di carboidrati: tre confronti sui dati dichiarati', '/picks/gel-carboidrati/', 'RUN', 'COMPARAZIONE'], ['Ciclocomputer: come scegliere', '/picks/ciclocomputer/', 'RIDE', 'GUIDA'],
+].map(([title, href, d, k]) => ({ title, href: link(href), d, k }));
+
+// ---- shell
+const shell = rd('run.html'); const head0 = shell.slice(0, shell.indexOf('<main')); const foot0 = shell.slice(shell.indexOf('</main>') + 7);
+const NAV = [['RUN', '/run'], ['RIDE', '/ride'], ['SWIM', '/swim'], ['STRENGTH', '/strength/'], ['ARTICLES', '/articoli/']];
+const navHtml = (cur) => `<nav class="nav" aria-label="Principale">${NAV.map(([l, h]) => `<a href="${h}"${cur === l ? ' aria-current="page"' : ''}>${l}</a>`).join('')}</nav>`;
+const footHtml = `<nav class="foot-links" aria-label="Piè di pagina"><a href="/metodologia">Metodologia</a> <a href="/contatti/">Contatti</a> <a href="/app/">App Android</a> <a href="https://www.instagram.com/wolflabsystem/" rel="noopener" target="_blank">Instagram</a> <a href="/feed.xml">RSS</a></nav>`;
+const patchChrome = (h, cur) => h.replace(/<nav class="nav"[\s\S]*?<\/nav>/, navHtml(cur)).replace(/<nav class="foot-links"[\s\S]*?<\/nav>/, footHtml);
+const meta = (h, { title, desc, url, en }) => h.replace(/<title>.*?<\/title>/, `<title>${esc(title)}</title>`).replace(/(<meta name="description" content=")[^"]*/, `$1${esc(desc)}`)
+  .replace(/(<link rel="canonical" href=")[^"]*/, `$1${SITE}${url}`).replace(/(<link rel="alternate" hreflang="it" href=")[^"]*/, `$1${SITE}${url}`).replace(/(<link rel="alternate" hreflang="en" href=")[^"]*/, `$1${SITE}${en}`)
+  .replace(/(<meta property="og:title" content=")[^"]*/, `$1${esc(title)}`).replace(/(<meta property="og:description" content=")[^"]*/, `$1${esc(desc)}`).replace(/(<meta property="og:url" content=")[^"]*/, `$1${SITE}${url}`)
+  .replace(/(<meta name="twitter:title" content=")[^"]*/, `$1${esc(title)}`).replace(/(<a class="lang" href=")[^"]*/, `$1${en}`);
+const page = (cur, m, main) => patchChrome(meta(head0, m), cur) + `<main id="main">\n${main}\n</main>` + foot0.replace(/<nav class="foot-links"[\s\S]*?<\/nav>/, footHtml);
+const item = (n, t, s, href) => `<li class="w-item"><a href="${link(href)}"><span class="w-num">${String(n).padStart(2, '0')}</span><span class="w-txt"><b>${esc(t)}</b><small>${esc(s)}</small></span><span class="w-go" aria-hidden="true">→</span></a></li>`;
+const tag = (d, k) => `<span class="pl-tag">${d} · ${k}</span>`;
+
+// ---- discipline: 4 blocchi, solo link a pagine esistenti
+const DISC = {
+  RUN: { url: '/run', en: '/en/run', desc: 'Allenamento, prestazione, gare e materiali per la corsa.', lead: 'Allenamento, prestazione, gare e materiali.', blocks: [
+    ['TRAINING', [['Piramidale o polarizzato', 'Cosa dicono gli studi.', '/piramidale-o-polarizzato'], ['Scarico pre-gara', 'Quanto e come ridurre.', '/articoli/scarico-pre-gara/'], ['Metodi di allenamento', 'Piramidale, polarizzato, modello norvegese.', '/allenamento/#allenamento']]],
+    ['PERFORMANCE', [['Ritmi e VDOT', 'Dai tuoi tempi ai ritmi di allenamento.', '/engine#run'], ['Passaggi di gara', 'Ritmo costante o negative split.', '/engine#race']]],
+    ['RACE', [['Database gare', '27 gare in inventario.', '/gare/'], ['Viaggi e camp', 'Altura e training camp.', '/viaggi/']]],
+    ['FUEL & RECOVERY', [['Carboidrati e liquidi', 'Rifornimento per gara.', '/engine#fuel'], ['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/'], ['Caffeina', 'Quanta, quando, con quali limiti.', '/articoli/caffeina-e-prestazione/']]],
+    ['GEAR', [['Scarpe da allenamento', 'Guida e criteri.', '/picks/scarpe-allenamento/'], ['Confronto Evo SL, Novablast 6, Ghost 18', 'Dati con fonte, nessun punteggio.', '/picks/confronto-evo-sl-novablast-6-ghost-18/'], ['Gel di carboidrati', 'Confronto sui dati dichiarati.', '/picks/gel-carboidrati/'], ['Schede prodotto', 'Dati misurati e listino ufficiale.', '/picks/']]]] },
+  RIDE: { url: '/ride', en: '/en/ride', desc: 'Potenza, FTP, gare e materiali per la bici.', lead: 'Potenza, gare e materiali.', blocks: [
+    ['TRAINING', [['FTP e zone di potenza', 'Cosa misurano e quanto fidarsi.', '/articoli/ftp-e-zone-di-potenza/'], ['Metodi di allenamento', 'Piramidale, polarizzato.', '/allenamento/#allenamento']]],
+    ['PERFORMANCE', [['Zone di potenza', 'Dalla tua FTP.', '/engine#ride']]],
+    ['RACE', [['Database gare', 'Include granfondo.', '/gare/'], ['Maiorca in bici', 'Viaggio di allenamento.', '/viaggi/maiorca-in-bici/']]],
+    ['FUEL & RECOVERY', [['Carboidrati e liquidi', 'Rifornimento per gara.', '/engine#fuel'], ['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/']]],
+    ['GEAR', [['Ciclocomputer', 'Guida.', '/picks/ciclocomputer/']]]] },
+  SWIM: { url: '/swim', en: '/en/swim', desc: 'Velocità critica, metodi, acque libere e gare di nuoto.', lead: 'Velocità critica, metodi e acque libere.', blocks: [
+    ['TRAINING', [['Velocità critica (CSS)', 'Cos\'è e dove smette di valere.', '/articoli/nuoto-css-velocita-critica/'], ['Metodi di allenamento', 'Distribuzione dell\'intensità.', '/articoli/nuoto-metodi-di-allenamento/'], ['Tecnica di nuoto', 'Frequenza e lunghezza di bracciata.', '/articoli/nuoto-tecnica-bracciata/']]],
+    ['PERFORMANCE', [['CSS dai tuoi test', 'Test su 200 e 400 m. Zone di nuoto non ancora disponibili.', '/engine#swim']]],
+    ['RACE', [['Gare e formati', 'Acque libere, triathlon, IRONMAN.', '/articoli/nuoto-gare-e-formati/'], ['Regolamento FIN Master', 'Acque libere in Italia.', '/articoli/nuoto-acque-libere-regole-fin-master/'], ['Sicurezza in acque libere', 'Acqua fredda e muta.', '/articoli/nuoto-acque-libere-sicurezza/']]],
+    ['FUEL & RECOVERY', [['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/']]],
+    ['GEAR', []]] },
+  STRENGTH: { url: '/strength/', en: '/en/strength/', desc: 'Forza per l\'atleta endurance: programmi, esercizi, metodi.', lead: 'Come deve allenare la forza un atleta endurance?', blocks: [
+    ['PROGRAMS', [['Bill Starr 5×5', 'Origine, struttura e varianti, con fonti.', '/train/strength/starr-5x5/']]],
+    ['EXERCISES', [['Catalogo esercizi', 'Muscoli, attrezzatura, schema motorio.', '/train/strength/#library']]],
+    ['METHODS', [['Versioni dei metodi', 'Ogni versione separata, con fonte e stato.', '/train/strength/#methods']]],
+    ['ENDURANCE STRENGTH', [['Forza per runner e ciclisti', 'Interferenza o vantaggio?', '/articoli/forza-per-endurance/'], ['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/']]],
+    ['GEAR', []]] },
+};
+for (const [name, d] of Object.entries(DISC)) {
+  const file = name === 'STRENGTH' ? 'strength/index.html' : name.toLowerCase() + '.html';
+  const blocks = d.blocks.map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span><em>${items.length || ''}</em></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">Nessun contenuto ancora.</p>'}</details>`).join('');
+  const more = `<p class="pl-more"><a href="/articoli/?d=${name}">Tutti gli articoli ${name} →</a></p>`;
+  wr(file, page(name, { title: `${name} - Wolf Lab`, desc: d.desc, url: d.url, en: d.en },
+    `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Forza per chi corre, pedala e nuota.' : name}</h1>${name === 'STRENGTH' ? '' : `<p class="pl-lead">${esc(d.lead)}</p>`}</div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div>${more}</div>`));
+}
+
+// ---- articoli: un solo hub con tag
+const DISCS = ['RUN', 'RIDE', 'SWIM', 'STRENGTH', 'HYBRID'], TYPES = ['ANALISI', 'GUIDA', 'REVIEW', 'COMPARAZIONE', 'METODO'];
+const rows = [...arts.map((a) => ({ title: a.title, href: a.href, d: a.d, k: a.k, min: a.minutes })), ...PICKS];
+const row = (r) => `<li class="pl-row" data-d="${r.d}" data-k="${r.k}"><a href="${r.href}">${tag(r.d, r.k)}<b>${esc(r.title)}</b>${r.min ? `<small>${r.min} min</small>` : ''}</a></li>`;
+const chips = (arr, key) => arr.map((x) => `<button type="button" class="pl-chip" data-${key}="${x}">${x}</button>`).join('');
+wr('articoli/index.html', page('ARTICLES', { title: 'Articles - Wolf Lab', desc: 'Analisi, guide, review, comparazioni e metodi per RUN, RIDE, SWIM e STRENGTH.', url: '/articoli/', en: '/en/articles/' },
+  `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">ARTICLES</p><h1>Articles</h1></div></header><div class="wrap w-body"><div class="pl-filters" aria-label="Filtri"><div>${chips(DISCS, 'd')}</div><div>${chips(TYPES, 'k')}</div></div><ul class="pl-rows" id="pl-rows">${rows.map(row).join('')}</ul><p class="pl-more"><a href="/allenamento/">Libreria dei metodi →</a></p></div>
+<script>(function(){var s={},rows=[].slice.call(document.querySelectorAll('.pl-row'));function a(){rows.forEach(function(r){r.hidden=!!((s.d&&r.dataset.d!==s.d&&r.dataset.d!=='TRASVERSALE')||(s.k&&r.dataset.k!==s.k))});[].forEach.call(document.querySelectorAll('.pl-chip'),function(c){var k=c.dataset.d?'d':'k';c.setAttribute('aria-pressed',s[k]===(c.dataset.d||c.dataset.k))})}[].forEach.call(document.querySelectorAll('.pl-chip'),function(c){c.addEventListener('click',function(){var k=c.dataset.d?'d':'k',v=c.dataset.d||c.dataset.k;s[k]=s[k]===v?null:v;a()})});var q=new URLSearchParams(location.search);if(q.get('d')){s.d=q.get('d');}if(q.get('k')){s.k=q.get('k');}a()})()</script>`));
+
+// ---- home
+const lab = [...DISCS.map((d) => arts.find((a) => a.d === d)).filter(Boolean)]; for (const a of arts) { if (lab.length >= 6) break; if (!lab.includes(a)) lab.push(a); }
+const card = (n, t, s, href) => `<a class="pl-card" href="${link(href)}"><span class="pl-card-t">${t}</span><span class="w-go" aria-hidden="true">→</span></a>`;
+const home = `<section class="w-hero"><div class="wrap pl-hero"><h1 lang="en"><span>ENDURANCE.</span><span class="acc">ENGINEERED.</span></h1><p class="pl-lead">Run. Ride. Swim. Strength.</p></div></section>
+<section class="pl-cards-wrap"><div class="wrap pl-cards">${card(1, 'RUN', 'Corsa', '/run')}${card(2, 'RIDE', 'Bici', '/ride')}${card(3, 'SWIM', 'Nuoto', '/swim')}${card(4, 'STRENGTH', 'Forza', '/strength/')}</div></section>
+<section class="w-band"><div class="wrap pl-engine"><p class="w-kicker">WOLF ENGINE</p><h2 class="w-big">Calcola la tua prestazione.</h2><p class="pl-lead">Ritmi · FTP · Zone · Fuel · Gara · CSS</p><p class="w-btns"><a class="w-btn" href="${link('/engine')}">COSTRUISCI IL TUO ENGINE <span aria-hidden="true">→</span></a></p></div></section>
+<section class="w-latest"><div class="wrap"><p class="w-kicker">FROM THE LAB</p><ul class="pl-rows">${lab.map((a) => row({ title: a.title, href: a.href, d: a.d, k: a.k, min: a.minutes })).join('')}</ul><p class="pl-more"><a href="/articoli/">Tutti gli articoli →</a></p></div></section>
+<section class="w-numbers"><div class="wrap pl-race"><p class="w-kicker">GARE</p><a class="w-cta" href="${link('/gare/')}">Trova la tua prossima gara <span aria-hidden="true">→</span></a></div></section>`;
+wr('index.html', patchChrome(meta(rd('index.html').slice(0, rd('index.html').indexOf('<main')), { title: 'Wolf Lab - Endurance. Engineered.', desc: 'Run, ride, swim, strength: articoli con fonti e il Wolf Engine per calcolare la tua prestazione.', url: '/', en: '/en/' }), '') + `<main id="main">\n${home}\n</main>` + foot0.replace(/<nav class="foot-links"[\s\S]*?<\/nav>/, footHtml));
+
+// ---- nav e footer su tutte le altre pagine IT (non toccano il contenuto)
+const cur = (rel) => /^articoli\//.test(rel) ? 'ARTICLES' : /^(run|ride|swim)\.html$/.test(rel) ? rel.split('.')[0].toUpperCase() : /^train\/strength\//.test(rel) || /^strength\//.test(rel) ? 'STRENGTH' : '';
+const skip = new Set(['index.html', 'run.html', 'ride.html', 'swim.html', 'strength/index.html', 'articoli/index.html']);
+let n = 0; const walk = (d) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { if (['.git', 'node_modules', 'assets', 'tools', 'content', 'builds', 'en'].includes(e.name)) continue; const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else if (e.name.endsWith('.html')) { const rel = path.relative(root, p); if (skip.has(rel)) continue; const h = fs.readFileSync(p, 'utf8'); if (!/<nav class="nav"/.test(h)) continue; const o = patchChrome(h, cur(rel)); if (o !== h) { fs.writeFileSync(p, o); n++; } } } };
+walk(root);
+if (bad.length) { console.error('PROBLEMI:', bad); process.exit(1); }
+console.log('pillars ok; nav/footer aggiornati in', n, 'pagine IT; articoli', arts.length);
