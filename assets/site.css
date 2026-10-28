@@ -433,3 +433,4 @@ html[data-theme="dark"] .w-prose a{color:var(--accent)}
 @media(max-width:800px){.w-hero-copy{padding:32px 20px 28px!important}.w-hero h1{margin-bottom:20px!important}.w-band .wrap{padding:40px 0!important}.w-latest .wrap{padding:36px 0!important}.w-score-home .wrap{padding:44px 0!important}.w-start .wrap{padding:36px 0!important}.w-numbers .wrap{grid-template-columns:repeat(3,1fr)!important;gap:10px!important;padding:36px 0!important}.w-numbers strong{font-size:clamp(44px,15vw,64px)!important}.w-numbers span{font-size:10px!important;letter-spacing:.08em!important}.w-big{margin-bottom:20px!important}.w-feature,.w-side a{padding-top:20px!important;padding-bottom:20px!important}}
 .w-hero,.w-band,.w-latest,.w-numbers,.w-score-home,.w-start{padding:0}
 @media(max-width:800px){.w-hero-grid{min-height:0!important}.w-hero-img{margin-bottom:0}}
+.w-rules{margin:0 0 16px;padding-left:22px;display:grid;gap:8px}

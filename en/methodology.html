@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&family=Instrument+Serif:ital@0;1&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=ed1853c454">
+<link rel="stylesheet" href="/assets/site.css?v=d05dec0ceb">
 <script defer src="/assets/site.js?v=68864e30a7"></script>
 <meta property="og:image" content="https://wolflabsystem.com/assets/hero-kenya.jpg" data-seo="1"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Methodology - Wolf Lab"><meta name="twitter:description" content="Evidence hierarchy, Wolf Confidence, Wolf Score rules and the model sources behind Wolf Engine."><meta name="twitter:image" content="https://wolflabsystem.com/assets/hero-kenya.jpg"></head>
 <body>
@@ -43,6 +43,14 @@
 <p>The Wolf Score is a 0 to 100 score with public criteria and weights. It appears only if every criterion has a source or our own test. Products need a test actually run. <b>Today no Wolf Score is published.</b></p>
 <table class="w-table"><tbody><tr><th scope="row">Races</th><td>course, climate, logistics, organisation, cost, PB potential, prestige, accessibility</td></tr><tr><th scope="row">Training camps</th><td>cycling, running, climbing, altitude, weather, accommodation, airport, cost</td></tr><tr><th scope="row">Gear</th><td>only after our own test: performance, value, durability, versatility</td></tr><tr><th scope="row">Methods</th><td>from level and consistency of evidence only</td></tr></tbody></table>
 <div class="w-score-demo" aria-label="Graphic example"><p class="w-kicker">GRAPHIC EXAMPLE · MADE-UP VALUES · NOT A MEASUREMENT</p><div class="w-score-ring"><strong>00</strong><span>/100</span></div><ul><li><span>PERFORMANCE</span><i style="--v:0%"></i></li><li><span>VALUE</span><i style="--v:0%"></i></li><li><span>DURABILITY</span><i style="--v:0%"></i></li><li><span>VERSATILITY</span><i style="--v:0%"></i></li></ul></div>
+<h3>How it would be computed (experimental proposal v0.1, not validated)</h3>
+<ol class="w-rules">
+<li>Each criterion gets a 0 to 100 value from a rule written in advance, tied to a sourced data point or to our own test with a protocol.</li>
+<li>Score = average of the criteria, with equal weights. Equal weights are a provisional, arbitrary choice, not a scientific result.</li>
+<li>If a criterion is missing, the score is not computed. No estimates for missing data.</li>
+<li>The sources, check date and Wolf Confidence always appear next to the score.</li>
+</ol>
+<p class="dim">Publishing formula and weights lets anyone repeat the calculation, but does not make it valid. Validity (whether the score really measures what matters) has not been shown: until data and tests exist we publish no score.</p>
 <h2>NEWS → ANALYSIS → TEST → VERDICT</h2>
 <p><b>News</b>: what came out, with manufacturer claims. <b>Analysis</b>: what available data say. <b>Test</b>: we tried it, with a protocol. <b>Verdict</b>: would I buy it, only after a test. Today we publish News only.</p>
 <h2>Method card</h2>

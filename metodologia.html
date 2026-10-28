@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&family=Instrument+Serif:ital@0;1&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=ed1853c454">
+<link rel="stylesheet" href="/assets/site.css?v=d05dec0ceb">
 <script defer src="/assets/site.js?v=68864e30a7"></script>
 <meta property="og:image" content="https://wolflabsystem.com/assets/hero-kenya.jpg" data-seo="1"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Metodologia - Wolf Lab"><meta name="twitter:description" content="Gerarchia delle prove, Wolf Confidence, regole del Wolf Score e fonti dei modelli del Wolf Engine."><meta name="twitter:image" content="https://wolflabsystem.com/assets/hero-kenya.jpg"></head>
 <body>
@@ -43,6 +43,14 @@
 <p>Il Wolf Score è un punteggio da 0 a 100 con criteri e pesi pubblici. Compare solo se ogni criterio ha una fonte o un nostro test. Per i prodotti serve un test fatto davvero. <b>Oggi nessun Wolf Score è pubblicato.</b></p>
 <table class="w-table"><tbody><tr><th scope="row">Gare</th><td>percorso, clima, logistica, organizzazione, costo, possibilità di PB, prestigio, accessibilità</td></tr><tr><th scope="row">Training camp</th><td>ciclismo, corsa, salite, altitudine, meteo, alloggio, aeroporto, costo</td></tr><tr><th scope="row">Prodotti</th><td>solo dopo un nostro test: prestazione, valore, durabilità, versatilità</td></tr><tr><th scope="row">Metodi</th><td>solo dal livello e dalla coerenza delle prove</td></tr></tbody></table>
 <div class="w-score-demo" aria-label="Esempio grafico"><p class="w-kicker">ESEMPIO GRAFICO · VALORI FITTIZI · NON È UNA MISURA</p><div class="w-score-ring"><strong>00</strong><span>/100</span></div><ul><li><span>PERFORMANCE</span><i style="--v:0%"></i></li><li><span>VALUE</span><i style="--v:0%"></i></li><li><span>DURABILITY</span><i style="--v:0%"></i></li><li><span>VERSATILITY</span><i style="--v:0%"></i></li></ul></div>
+<h3>Come si calcolerebbe (proposta sperimentale v0.1, non validata)</h3>
+<ol class="w-rules">
+<li>Ogni criterio riceve un valore da 0 a 100 da una regola scritta prima, legata a un dato con fonte o a un nostro test con protocollo.</li>
+<li>Punteggio = media dei criteri, con pesi uguali. I pesi uguali sono una scelta provvisoria e arbitraria, non un risultato scientifico.</li>
+<li>Se manca un criterio, il punteggio non viene calcolato. Nessuna stima per i dati mancanti.</li>
+<li>Accanto al punteggio compaiono sempre le fonti, la data di verifica e la Wolf Confidence.</li>
+</ol>
+<p class="dim">Pubblicare formula e pesi rende il calcolo ripetibile da chiunque, ma non lo rende valido. La validità (se il punteggio misura davvero ciò che conta) non è stata dimostrata: finché mancano dati e test non pubblichiamo nessun punteggio.</p>
 <h2>NEWS → ANALYSIS → TEST → VERDICT</h2>
 <p><b>News</b>: cosa è uscito, con le dichiarazioni del produttore. <b>Analysis</b>: cosa dicono i dati disponibili. <b>Test</b>: lo abbiamo provato, con protocollo. <b>Verdict</b>: lo comprerei, solo dopo un test. Oggi pubblichiamo solo News.</p>
 <h2>Scheda metodo</h2>
