@@ -470,3 +470,13 @@ html:not([data-theme="dark"]) .w-feature-sym{color:#5A7300}
 .css-calc{display:grid;gap:12px;margin:16px 0}.css-row{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px}.css-row label{font-size:13px;color:var(--muted)}.css-calc input{font:inherit;padding:12px;border:1px solid var(--text);background:transparent;color:var(--text);min-width:0}.css-calc button{justify-self:start;font:800 13px var(--sans,inherit);letter-spacing:.1em;padding:14px 22px;background:var(--accent);color:#0A0A0A;border:0;cursor:pointer}.css-out{margin:8px 0 24px}.css-out.err{border-left:3px solid #E5484D;padding:4px 14px}.css-out.ok{border-left:3px solid var(--accent);padding:4px 14px}
 .w-body{padding-top:28px}.w-section{margin-top:12px}.w-section h2{margin-top:20px!important}.w-list{margin-bottom:16px}
 .w-body .w-section{padding-block:0!important}
+
+/* Hero multisport (scena A, immagine generata). Logo in fascia scura sopra l'immagine: non copre i volti. */
+.w-hero-img{background:#0A0A0A!important;filter:none!important;min-height:min(78vh,720px)}
+.w-hero-img:before{inset:84px 0 0 0!important;background:url(/assets/hero-multisport-a-1200.jpg) 50% 35%/cover no-repeat!important}
+.w-hero-img:after{inset:84px 0 0 0!important;background:linear-gradient(90deg,#0A0A0A 0,transparent 14%)!important}
+.w-hero-logo{top:22px!important;left:clamp(20px,3vw,40px)!important;right:auto!important;width:min(260px,62%)!important;filter:none!important}
+.w-hero-cap{position:absolute;z-index:2;right:14px;bottom:12px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#F5F4EF;opacity:.8;background:rgba(10,10,10,.55);padding:3px 7px}
+.sport-photo.w-hero-img{background-image:none!important}
+@media(max-width:800px){.w-hero-img{min-height:620px!important}.w-hero-img:before{background:url(/assets/hero-multisport-a-800.jpg) 50% 35%/cover no-repeat!important;inset:84px 0 0 0!important}}
+.sport-photo .w-hero-cap{display:block!important}

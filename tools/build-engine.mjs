@@ -232,7 +232,7 @@ function home(lang) {
     <p class="w-strip">Training · Data · Nutrition · Recovery · Equipment · Racing</p>
     <a class="w-btn" href="${R.engine[lang]}">${it ? "COSTRUISCI IL TUO PROFILO" : "BUILD YOUR ATHLETE PROFILE"} <span aria-hidden="true">→</span></a>
   </div>
-  <div class="sport-photo w-hero-img" role="img" aria-label="${it ? "Runner su un sentiero di montagna al tramonto" : "Runner on a mountain trail at sunset"}"><img class="w-hero-logo" src="/assets/brand/logo-on-dark.svg" alt="" width="300" height="71" decoding="async"></div>
+  <div class="sport-photo w-hero-img" role="img" aria-label="${it ? "Immagine generata: nuotatore, ciclista e runner al tramonto in una scena scura" : "Generated image: swimmer, cyclist and runner at sunset in a dark scene"}"><img class="w-hero-logo" src="/assets/brand/logo-on-dark.svg" alt="" width="300" height="71" decoding="async"><small class="w-hero-cap">${it ? "Immagine generata" : "Generated image"}</small></div>
 </div></section>
 <section class="w-band"><div class="wrap">
   <p class="w-kicker">THE WOLF ENGINE</p>
