@@ -442,3 +442,5 @@ html:not([data-theme="dark"]) :is(.w-tools .dev span,.w-tools .dev em,.w-meta,.a
 @media(max-width:800px){.w-numbers .wrap{grid-template-columns:1fr 1fr!important}}
 .w-tools .dev{opacity:1}
 html:not([data-theme="dark"]) .w-feature .w-go,html:not([data-theme="dark"]) .w-side .w-go{color:#A8380D}
+html:not([data-theme="dark"]) .w-num{color:#A8380D}
+html:not([data-theme="dark"]) .w-numbers .w-num,html:not([data-theme="dark"]) .wolf-side .w-num{color:inherit}
