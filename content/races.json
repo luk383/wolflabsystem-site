@@ -184,7 +184,12 @@
         "it": "da €82,10",
         "en": "from €82.10"
       },
-      "major": false
+      "major": false,
+      "course": {
+        "it": "Circuito piatto; l'organizzazione lo definisce \"il più piatto d'Europa\" (dichiarazione dell'organizzatore). Dislivello in metri non indicato nella pagina consultata.",
+        "en": "Flat circuit; the organiser calls it \"the flattest in Europe\" (organiser's claim). Elevation in metres not given on the page consulted."
+      },
+      "courseSource": "https://www.zurichmaratonsevilla.es/zms-recorrido"
     },
     {
       "id": "romaostia",
@@ -364,7 +369,12 @@
         "en": "It sold out in 2026: enter early."
       },
       "source": "https://barcelonaurbana.com/blog/maraton-barcelona-2027-inscripcion-precio-recorrido",
-      "major": false
+      "major": false,
+      "course": {
+        "it": "Dislivello cumulato 134 m, secondo l'organizzazione per il percorso 2025 (può cambiare tra edizioni).",
+        "en": "Cumulative elevation 134 m, according to the organiser for the 2025 course (may change between editions)."
+      },
+      "courseSource": "https://zurichmaratobarcelona.es/es/2025/02/26/la-zurich-marato-barcelona-2025-optimiza-su-recorrido-para-mejorar-la-experiencia-de-corredores-y-espectadores/"
     },
     {
       "id": "milano",
@@ -409,7 +419,12 @@
         "it": "variabile",
         "en": "variable"
       },
-      "major": false
+      "major": false,
+      "course": {
+        "it": "Dislivello positivo di circa 100 m e 3,3 km di pavé, secondo il manuale ufficiale dell'edizione 2025 (può cambiare).",
+        "en": "Elevation gain of about 100 m and 3.3 km of cobbles, according to the official 2025 handbook (may change)."
+      },
+      "courseSource": "https://www.milanomarathon.it/wp-content/uploads/2025/04/handbook-MM25.pdf"
     },
     {
       "id": "paris",
@@ -499,7 +514,12 @@
         "en": "Flat course, among Europe's fastest in spring."
       },
       "source": "https://nnmarathonrotterdam.nl/en/register/nn-marathon-rotterdam-2/",
-      "major": false
+      "major": false,
+      "course": {
+        "it": "Percorso piatto secondo l'organizzazione, tra le maratone più veloci. Dislivello in metri non indicato nella pagina consultata.",
+        "en": "Flat course according to the organiser, among the fastest marathons. Elevation in metres not given on the page consulted."
+      },
+      "courseSource": "https://nnmarathonrotterdam.nl/en/course/"
     },
     {
       "id": "boston",
@@ -590,7 +610,12 @@
         "it": "Le charity chiedono di solito una raccolta minima intorno a £2.500. Il sorteggio per il 2028 si apre in genere ad aprile, durante la gara.",
         "en": "Charities usually ask for a minimum of around £2,500. The 2028 ballot usually opens in April, around race weekend."
       },
-      "source": "https://www.londonmarathonevents.co.uk/london-marathon"
+      "source": "https://www.londonmarathonevents.co.uk/london-marathon",
+      "course": {
+        "it": "Dislivello positivo 246 piedi (circa 74 m), percorso definito \"veloce e piatto\" dall'organizzazione.",
+        "en": "Elevation gain 246 feet (about 74 m); the organiser describes the course as \"fast and flat\"."
+      },
+      "courseSource": "https://www.londonmarathonevents.co.uk/london-marathon/event-overview"
     },
     {
       "id": "novecolli",
@@ -912,7 +937,12 @@
         "it": "Percorso piatto e veloce. Con le charity la quota sale a $335 e serve una raccolta minima di $2.500.",
         "en": "Flat, fast course. Charity entries cost $335 and require raising at least $2,500."
       },
-      "source": "https://www.marathonballot.com/news/chicago-2027-ballot-dates-announced"
+      "source": "https://www.marathonballot.com/news/chicago-2027-ballot-dates-announced",
+      "course": {
+        "it": "Percorso \"piatto e veloce\" secondo l'organizzazione. Dislivello in metri non indicato nella pagina consultata.",
+        "en": "The organiser says it is known for a flat and fast course. Elevation in metres not given on the page consulted."
+      },
+      "courseSource": "https://www.chicagomarathon.com/event-info/participant-information/course/"
     },
     {
       "id": "nyc",
