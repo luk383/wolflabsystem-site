@@ -1,0 +1,1 @@
+Sorgente di WOLF STRENGTH LAB (builder). Build: esbuild src/main.tsx --bundle --minify --format=iife --jsx=automatic --define:process.env.NODE_ENV='"production"' --outdir=assets/strength (react@18, react-dom@18, esbuild). Nessun backend: dati solo in localStorage, solo con opt-in.
