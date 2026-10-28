@@ -44,7 +44,10 @@
         "it": "€69–109",
         "en": "€69–109"
       },
-      "major": false
+      "major": false,
+      "listed": false,
+      "unlistedReason": "Iscrizioni esaurite (comunicato ufficiale 27/08/2026)",
+      "unlistedOn": "2026-10-28"
     },
     {
       "id": "valencia",
@@ -294,7 +297,10 @@
         "it": "Dal grafico altimetrico ufficiale (lettura nostra, nessuna cifra scritta dall'organizzazione): partenza in quota più alta, discesa nei primi circa 6 km, poi tratto quasi piatto vicino al livello del mare fino al traguardo.",
         "en": "From the official elevation chart (our reading, no figure stated by the organiser): the start is higher, the course descends over the first 6 km or so, then stays close to flat near sea level to the finish."
       },
-      "courseSource": "https://www.marathon.tokyo/en/about/course/"
+      "courseSource": "https://www.marathon.tokyo/en/about/course/",
+      "listed": false,
+      "unlistedReason": "Charity e sorteggio generale chiusi (marathon.tokyo)",
+      "unlistedOn": "2026-10-28"
     },
     {
       "id": "roma",
@@ -594,7 +600,10 @@
         "it": "Dal profilo altimetrico ufficiale della mappa (lettura nostra, nessuna cifra scritta): il percorso scende dalla partenza a Hopkinton verso il traguardo, con una salita intorno al miglio 20-21; la mappa indica la cima di Heartbreak Hill al miglio 20,8. La discesa netta non è una misura di difficoltà comparabile con le altre gare.",
         "en": "From the official elevation profile on the course map (our reading, no figure stated): the course descends from the Hopkinton start toward the finish, with a climb around mile 20-21; the map marks the crest of Heartbreak Hill at mile 20.8. Net descent is not a comparable measure of difficulty with other races."
       },
-      "courseSource": "https://www.baa.org/wp-content/uploads/2026/03/2026-Course-Map.pdf"
+      "courseSource": "https://www.baa.org/wp-content/uploads/2026/03/2026-Course-Map.pdf",
+      "listed": false,
+      "unlistedReason": "Registrazione qualificati chiusa il 18/09/2026 (baa.org)",
+      "unlistedOn": "2026-10-28"
     },
     {
       "id": "london",
@@ -1219,7 +1228,10 @@
         "it": "Percorso con profilo altimetrico basso (piatto nella versione tedesca) secondo l'organizzazione, che pubblica anche il grafico. Dislivello in metri non letto da noi.",
         "en": "Course with a low elevation profile according to the organiser, who also publishes the elevation graph. We did not read elevation in metres."
       },
-      "courseSource": "https://www.generali-berliner-halbmarathon.de/en/your-race/course"
+      "courseSource": "https://www.generali-berliner-halbmarathon.de/en/your-race/course",
+      "listed": false,
+      "unlistedReason": "Sorteggio corridori chiuso il 28/05/2026 (pagina ufficiale)",
+      "unlistedOn": "2026-10-28"
     },
     {
       "id": "cph-half",
@@ -1257,7 +1269,10 @@
         "it": "Partenza da Jagtvej, arrivo su Øster Allé. Descritto dall'organizzazione come percorso velocissimo (affermazione promozionale, non una misura). Nessun dislivello in metri letto.",
         "en": "Starts on Jagtvej, finishes on Øster Allé. Described by the organiser as a lightning-fast course (promotional claim, not a measurement). No elevation in metres read."
       },
-      "courseSource": "https://cphhalf.dk/en/alt-om-ruten/"
+      "courseSource": "https://cphhalf.dk/en/alt-om-ruten/",
+      "listed": false,
+      "unlistedReason": "Sorteggio chiuso il 30/09/2026 (pagina ufficiale)",
+      "unlistedOn": "2026-10-28"
     }
   ]
 }

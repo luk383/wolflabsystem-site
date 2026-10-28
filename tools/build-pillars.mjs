@@ -8,6 +8,9 @@ const wr = (f, s) => { fs.mkdirSync(path.dirname(path.join(root, f)), { recursiv
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 const exists = (href) => { const p = href.split('#')[0].split('?')[0]; const c = [p + '.html', p.endsWith('/') ? p + 'index.html' : p + '/index.html', p + 'index.html']; return p === '/' || c.some((x) => fs.existsSync(path.join(root, x))); };
 const bad = [];
+const TODAY = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Rome' });
+const BIKE_RACES = JSON.parse(fs.readFileSync(path.join(root, 'content/races.json'), 'utf8')).races.filter((r) => r.sport === 'bike' && r.listed !== false && r.date >= TODAY).length;
+const RUN_RACES = JSON.parse(fs.readFileSync(path.join(root, 'content/races.json'), 'utf8')).races.filter((r) => r.sport === 'run' && r.listed !== false && r.date >= TODAY).length;
 const link = (href) => { if (!exists(href)) bad.push(href); return href; };
 
 // ---- articoli: tag disciplina + tipo (da conferma editoriale dove marcato ?)
@@ -47,20 +50,20 @@ const tag = (d, k) => `<span class="pl-tag">${d} · ${k}</span>`;
 // ---- discipline: 4 blocchi, solo link a pagine esistenti
 const DISC = {
   RUN: { url: '/run', en: '/en/run', desc: 'Allenamento, prestazione, gare e materiali per la corsa.', lead: 'Allenamento, prestazione, gare e materiali.', blocks: [
-    ['TRAINING', [['Piramidale o polarizzato', 'Cosa dicono gli studi.', '/piramidale-o-polarizzato'], ['Scarico pre-gara', 'Quanto e come ridurre.', '/articoli/scarico-pre-gara/'], ['Metodi di allenamento', 'Piramidale, polarizzato, modello norvegese.', '/allenamento/#allenamento']]],
-    ['PERFORMANCE', [['Ritmi e VDOT', 'Dai tuoi tempi ai ritmi di allenamento.', '/engine#run'], ['Passaggi di gara', 'Ritmo costante o negative split.', '/engine#race']]],
-    ['RACE', [['Database gare', '27 gare in inventario.', '/gare/'], ['Viaggi e camp', 'Altura e training camp.', '/viaggi/']]],
-    ['FUEL & RECOVERY', [['Carboidrati e liquidi', 'Rifornimento per gara.', '/engine#fuel'], ['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/'], ['Caffeina', 'Quanta, quando, con quali limiti.', '/articoli/caffeina-e-prestazione/']]],
-    ['GEAR', [['Scarpe da allenamento', 'Guida e criteri.', '/picks/scarpe-allenamento/'], ['Confronto Evo SL, Novablast 6, Ghost 18', 'Dati con fonte, nessun punteggio.', '/picks/confronto-evo-sl-novablast-6-ghost-18/'], ['Gel di carboidrati', 'Confronto sui dati dichiarati.', '/picks/gel-carboidrati/'], ['Schede prodotto', 'Dati misurati e listino ufficiale.', '/picks/']]]] },
+    ['TRAINING', [['Piramidale o polarizzato', 'Cosa dicono gli studi.', '/piramidale-o-polarizzato'], ['Scarico pre-gara', 'Quanto e come ridurre.', '/articoli/scarico-pre-gara/'], ['La bici per preparare la maratona', 'Cosa trasferisce e cosa no.', '/articoli/bici-per-la-maratona/'], ['Metodi di allenamento', 'Libreria dei metodi, filtro Corsa.', '/allenamento/#allenamento']]],
+    ['PERFORMANCE', [['Wolf Engine', 'Ritmi, VDOT e zone dai tuoi tempi.', '/engine'], ['Passaggi in maratona', 'Tempi di passaggio a ritmo costante.', '/allenamento/#passaggi']]],
+    ['RACE', [['Gare di corsa', `${RUN_RACES} gare in calendario, maratone e mezze.`, '/gare/?f=run']]],
+    ['FUEL & RECOVERY', [['Carboidrati in maratona', 'Quanti all\'ora, in base alla durata.', '/articoli/carboidrati-maratona/'], ['Calcolatore carboidrati', 'Gel, grammi e tempi di assunzione.', '/allenamento/#carboidrati'], ['Gel di carboidrati', 'Confronto sui dati dichiarati.', '/picks/gel-carboidrati/'], ['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/'], ['Caffeina e prestazione', 'Dosi, tempi e quando evitarla.', '/articoli/caffeina-e-prestazione/']]],
+    ['GEAR', [['Scarpe da allenamento', 'Guida e criteri.', '/picks/scarpe-allenamento/'], ['Confronto Evo SL, Novablast 6, Ghost 18', 'Dati con fonte, nessun punteggio.', '/picks/confronto-evo-sl-novablast-6-ghost-18/'], ['Scarpe con piastra in carbonio', 'Cosa dicono gli studi.', '/articoli/scarpe-con-piastra-carbonio/']]]] },
   RIDE: { url: '/ride', en: '/en/ride', desc: 'Potenza, FTP, gare e materiali per la bici.', lead: 'Potenza, gare e materiali.', blocks: [
     ['TRAINING', [['FTP e zone di potenza', 'Cosa misurano e quanto fidarsi.', '/articoli/ftp-e-zone-di-potenza/'], ['Metodi di allenamento', 'Piramidale, polarizzato.', '/allenamento/#allenamento']]],
-    ['PERFORMANCE', [['Zone di potenza', 'Dalla tua FTP.', '/engine#ride']]],
-    ['RACE', [['Database gare', 'Include granfondo.', '/gare/'], ['Maiorca in bici', 'Viaggio di allenamento.', '/viaggi/maiorca-in-bici/']]],
-    ['FUEL & RECOVERY', [['Carboidrati e liquidi', 'Rifornimento per gara.', '/engine#fuel'], ['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/']]],
+    ['PERFORMANCE', [['Wolf Engine', 'Zone di potenza dalla tua FTP.', '/engine']]],
+    ['RACE', [['Gare in bici', `${BIKE_RACES} granfondo in calendario.`, '/gare/?f=bike']]],
+    ['FUEL & RECOVERY', [['Calcolatore carboidrati', 'Gel, grammi e tempi di assunzione.', '/allenamento/#carboidrati'], ['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/']]],
     ['GEAR', [['Ciclocomputer', 'Guida.', '/picks/ciclocomputer/']]]] },
   SWIM: { url: '/swim', en: '/en/swim', desc: 'Velocità critica, metodi, acque libere e gare di nuoto.', lead: 'Velocità critica, metodi e acque libere.', blocks: [
     ['TRAINING', [['Velocità critica (CSS)', 'Cos\'è e dove smette di valere.', '/articoli/nuoto-css-velocita-critica/'], ['Metodi di allenamento', 'Distribuzione dell\'intensità.', '/articoli/nuoto-metodi-di-allenamento/'], ['Tecnica di nuoto', 'Frequenza e lunghezza di bracciata.', '/articoli/nuoto-tecnica-bracciata/']]],
-    ['PERFORMANCE', [['CSS dai tuoi test', 'Test su 200 e 400 m. Zone di nuoto non ancora disponibili.', '/engine#swim']]],
+    ['PERFORMANCE', [['Wolf Engine', 'CSS dai tuoi test su 200 e 400 m. Zone di nuoto non ancora disponibili.', '/engine']]],
     ['RACE', [['Gare e formati', 'Acque libere, triathlon, IRONMAN.', '/articoli/nuoto-gare-e-formati/'], ['Regolamento FIN Master', 'Acque libere in Italia.', '/articoli/nuoto-acque-libere-regole-fin-master/'], ['Sicurezza in acque libere', 'Acqua fredda e muta.', '/articoli/nuoto-acque-libere-sicurezza/']]],
     ['FUEL & RECOVERY', [['Sonno e recupero', 'Il miglioramento più economico.', '/articoli/sonno-e-recupero/']]],
     ['GEAR', []]] },

@@ -228,7 +228,7 @@ function hub(lang, key) {
 function home(lang) {
   const it = !lang, A = articles(lang);
   const feat = A.find((a) => a.id === "bici-per-la-maratona") || A[0], rest = A.filter((a) => a !== feat).slice(0, 2);
-  const nC = RACES.races.filter((r) => r.course).length, nR = RACES.races.length, nT = TRIPS.trips.length, nA = Object.keys(JSON.parse(fs.readFileSync(path.join(ROOT, "content/article-review.json"), "utf8"))).length;
+  const nC = RACES.races.filter((r) => r.course).length, nR = RACES.races.filter((r) => r.listed !== false).length, nT = TRIPS.trips.length, nA = Object.keys(JSON.parse(fs.readFileSync(path.join(ROOT, "content/article-review.json"), "utf8"))).length;
   const link = (a) => art(lang, a.slug, a.slug);
   const tiles = [["RUN", it ? "Ritmi · Scienza · Scarpe" : "Paces · Science · Shoes", "run"], ["RIDE", it ? "Potenza · Zone · Granfondo" : "Power · Zones · Gran fondo", "ride"], ["TRAIN", it ? "Forza · Ibrido · Recupero" : "Strength · Hybrid · Recovery", "train"], ["FUEL", it ? "Carboidrati · Fluidi · Gara" : "Carbs · Fluids · Race day", "fuel"], ["RACE", it ? "Gare · Training camp" : "Races · Training camps", "race"], ["GEAR", it ? "Novità · Scarpe · Tech" : "News · Shoes · Tech", "gear"]];
   const body = `<section class="w-hero"><div class="wrap w-hero-grid">

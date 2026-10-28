@@ -143,13 +143,18 @@
   var group = document.querySelector(".filter");
   var list = document.querySelector("[data-filter-list]");
   if (!group || !list) return;
+  function apply(f, btn) {
+    group.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
+    list.querySelectorAll("li").forEach(function (li) { li.hidden = f === "major" ? li.dataset.major !== "1" : f === "run" ? li.dataset.sport === "bike" : f !== "all" && li.dataset.sport !== f; });
+  }
   group.addEventListener("click", function (e) {
     var btn = e.target.closest("button[data-filter]");
     if (!btn) return;
-    var f = btn.dataset.filter;
-    group.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
-    list.querySelectorAll("li").forEach(function (li) { li.hidden = f === "major" ? li.dataset.major !== "1" : f !== "all" && li.dataset.sport !== f; });
+    apply(btn.dataset.filter, btn);
   });
+  var q = new URLSearchParams(location.search).get("f");
+  if (q === "run") apply("run", null);
+  else if (q) { var qb = group.querySelector('button[data-filter="' + q.replace(/[^a-z]/g, "") + '"]'); if (qb) apply(q, qb); }
 })();
 
 
@@ -203,7 +208,7 @@
     }
     function x(id){return document.getElementById(id).value;}
     function sync(){items.forEach(function(li){li.hidden=li.dataset.xhide==='1'||li.dataset.fhide==='1';});}
-    box.appendChild(row);box.appendChild(cnt);list.parentNode.insertBefore(box,list);box.addEventListener('change',apply);apply();
+    items.forEach(function(li){li.dataset.fhide=li.hidden?'1':'';});box.appendChild(row);box.appendChild(cnt);list.parentNode.insertBefore(box,list);box.addEventListener('change',apply);apply();
     var f=document.querySelector('.filter');if(f)f.addEventListener('click',function(){setTimeout(function(){items.forEach(function(li){li.dataset.fhide=li.hidden&&li.dataset.xhide!=='1'?'1':'';});sync();},0);});
   }).catch(function(){});}
   // Barra Wolf negli articoli: livello di prova, aggiornamento, lettura (dati già presenti nella pagina)

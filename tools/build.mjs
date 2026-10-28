@@ -303,7 +303,7 @@ ${articles.slice(3,4).map(a=>`<a class="sport-more" href="${articlePath(lang,a.s
 
   races(lang) {
     const it = lang === "it";
-    const rows = RACES.races.map((r) => `<li data-sport="${kindOf(r)}" data-major="${r.major ? "1" : "0"}"><a href="${racePath(lang, r)}">
+    const rows = RACES.races.filter((r) => r.listed !== false).map((r) => `<li data-sport="${kindOf(r)}" data-major="${r.major ? "1" : "0"}"><a href="${racePath(lang, r)}">
       ${raceTime(r, lang, true)}
       <span class="r-name">${esc(r.name)}${r.major ? ` <span class="major">Major</span>` : ""}<small>${esc(r.city[lang])}</small></span>
       <span class="r-dist">${esc(raceDistance(r, lang))}</span>

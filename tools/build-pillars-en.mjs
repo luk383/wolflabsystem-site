@@ -7,7 +7,10 @@ const rd = (f) => fs.readFileSync(path.join(root, f), 'utf8');
 const wr = (f, s) => { fs.mkdirSync(path.dirname(path.join(root, f)), { recursive: true }); fs.writeFileSync(path.join(root, f), s); };
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 const exists = (href) => { const p = href.split('#')[0].split('?')[0]; return p === '/' || [p + '.html', p.endsWith('/') ? p + 'index.html' : p + '/index.html'].some((x) => fs.existsSync(path.join(root, x))); };
-const bad = []; const link = (h) => { if (!exists(h)) bad.push(h); return h; };
+const bad = [];
+const TODAY = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Rome' });
+const BIKE_RACES = JSON.parse(fs.readFileSync(path.join(root, 'content/races.json'), 'utf8')).races.filter((r) => r.sport === 'bike' && r.listed !== false && r.date >= TODAY).length;
+const RUN_RACES = JSON.parse(fs.readFileSync(path.join(root, 'content/races.json'), 'utf8')).races.filter((r) => r.sport === 'run' && r.listed !== false && r.date >= TODAY).length; const link = (h) => { if (!exists(h)) bad.push(h); return h; };
 const TAGS = { // id articolo -> [disciplina, tipo] (stessi tag della versione IT)
   'bici-per-la-maratona': ['RUN', 'ANALYSIS'], 'caffeina-e-prestazione': ['CROSS', 'GUIDE'], 'carboidrati-maratona': ['RUN', 'GUIDE'], 'forza-per-endurance': ['STRENGTH', 'ANALYSIS'],
   'ftp-e-zone-di-potenza': ['RIDE', 'GUIDE'], 'hyrox-triathlon-lungo-studi': ['HYBRID', 'ANALYSIS'], 'quanta-intensita-serve': ['HYBRID', 'ANALYSIS'], 'nuoto-acque-libere-regole-fin-master': ['SWIM', 'GUIDE'],
@@ -39,20 +42,20 @@ const A = (id) => { const a = arts.find((x) => x.slug === id); if (!a) bad.push(
 const sleep = ['Sleep and recovery', 'The cheapest performance gain.', '/en/articles/sleep-and-recovery/'];
 const DISC = {
   RUN: { url: '/en/run', it: '/run', desc: 'Training, performance, races, fuel and gear for running.', lead: 'Training, performance, races, fuel and gear.', blocks: [
-    ['TRAINING', [['Polarised or pyramidal', 'What the studies say.', '/en/pyramidal-or-polarized'], ['Race taper', 'How much and how to cut back.', '/en/articles/race-taper/'], ['Training methods', 'Library of methods.', '/en/training/']]],
-    ['PERFORMANCE', [['Paces and VDOT', 'From your times to training paces.', '/en/engine#run'], ['Race pacing', 'Even split or negative split.', '/en/engine#race']]],
-    ['RACE', [['Race database', '27 races in the inventory.', '/en/races/'], ['Trips and camps', 'Altitude and training camps.', '/en/trips/']]],
-    ['FUEL & RECOVERY', [['Carbs and fluids', 'Race-day fuelling.', '/en/engine#fuel'], sleep, ['Caffeine and performance', 'Doses, timing and limits.', '/en/articles/caffeine-and-performance/']]],
-    ['GEAR', [['Training shoes', 'Guide and criteria.', '/en/picks/training-shoes/'], ['Compare Evo SL, Novablast 6, Ghost 18', 'Sourced data, no scores.', '/en/picks/compare-evo-sl-novablast-6-ghost-18/'], ['Carb gels', 'Comparison on declared data.', '/en/picks/carb-gels/'], ['Product sheets', 'Measured data and official list prices.', '/en/picks/']]]] },
+    ['TRAINING', [['Polarised or pyramidal', 'What the studies say.', '/en/pyramidal-or-polarized'], ['Race taper', 'How much and how to cut back.', '/en/articles/race-taper/'], ['Cycling to train for a marathon', 'What transfers and what doesn\'t.', '/en/articles/cycling-for-the-marathon/'], ['Training methods', 'Library of methods, Running filter.', '/en/training/']]],
+    ['PERFORMANCE', [['Wolf Engine', 'Paces, VDOT and zones from your times.', '/en/engine'], ['Marathon splits', 'Even-pace split times.', '/en/training/#splits']]],
+    ['RACE', [['Running races', `${RUN_RACES} races on the calendar, marathons and halves.`, '/en/races/?f=run']]],
+    ['FUEL & RECOVERY', [['Marathon carbohydrates', 'How many per hour, by duration.', '/en/articles/marathon-carbohydrates/'], ['Carb calculator', 'Gels, grams and timing.', '/en/training/#carbs'], ['Carb gels', 'Comparison on declared data.', '/en/picks/carb-gels/'], sleep, ['Caffeine and performance', 'Doses, timing and when to avoid it.', '/en/articles/caffeine-and-performance/']]],
+    ['GEAR', [['Training shoes', 'Guide and criteria.', '/en/picks/training-shoes/'], ['Compare Evo SL, Novablast 6, Ghost 18', 'Sourced data, no scores.', '/en/picks/compare-evo-sl-novablast-6-ghost-18/'], ['Carbon-plate running shoes', 'What the studies say.', '/en/articles/carbon-plate-running-shoes/']]]] },
   RIDE: { url: '/en/ride', it: '/ride', desc: 'Power, FTP, races and gear for cycling.', lead: 'Power, races and gear.', blocks: [
     ['TRAINING', [['FTP and power zones', 'What they measure and how far to trust them.', '/en/articles/ftp-and-power-zones/'], ['Training methods', 'Polarised, pyramidal.', '/en/training/']]],
-    ['PERFORMANCE', [['Power zones', 'From your FTP.', '/en/engine#ride']]],
-    ['RACE', [['Race database', 'Includes gran fondos.', '/en/races/']]],
-    ['FUEL & RECOVERY', [['Carbs and fluids', 'Race-day fuelling.', '/en/engine#fuel'], sleep]],
+    ['PERFORMANCE', [['Wolf Engine', 'Power zones from your FTP.', '/en/engine']]],
+    ['RACE', [['Cycling races', `${BIKE_RACES} gran fondos on the calendar.`, '/en/races/?f=bike']]],
+    ['FUEL & RECOVERY', [['Carb calculator', 'Gels, grams and timing.', '/en/training/#carbs'], sleep]],
     ['GEAR', [['Bike computers', 'Guide.', '/en/picks/bike-computers/']]]] },
   SWIM: { url: '/en/swim', it: '/swim', desc: 'Critical speed, methods, open water and swim races.', lead: 'Critical speed, methods and open water.', blocks: [
     ['TRAINING', [['Critical swim speed (CSS)', 'What it is and where it stops being valid.', '/en/articles/swim-critical-speed/'], ['Training methods', 'How intensity is distributed.', '/en/articles/swim-training-methods/'], ['Stroke technique', 'Stroke rate and stroke length.', '/en/articles/swim-stroke-technique/']]],
-    ['PERFORMANCE', [['CSS from your tests', '200 and 400 m tests. Swim zones not available yet.', '/en/engine#swim']]],
+    ['PERFORMANCE', [['Wolf Engine', 'CSS from your 200 and 400 m tests. Swim zones not available yet.', '/en/engine']]],
     ['RACE', [['Races and formats', 'Open water, triathlon, IRONMAN.', '/en/articles/swim-race-formats/'], ['FIN Masters rules', 'Open water in Italy.', '/en/articles/swim-open-water-italy-fin-masters/'], ['Open water safety', 'Cold water and wetsuits.', '/en/articles/open-water-swimming-safety/']]],
     ['FUEL & RECOVERY', [sleep]],
     ['GEAR', []]] },
