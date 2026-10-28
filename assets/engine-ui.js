@@ -56,7 +56,7 @@
       if (r.warnings.indexOf("vdot") >= 0) run += '<p class="eng-warn">' + L("Il VDOT è fuori dall'intervallo 20–85 in cui il modello è sensato: controlla i tempi inseriti.", "VDOT is outside the 20–85 range where the model makes sense: check the times you entered.") + "</p>";
     } else run += empty(L("Serve un tempo di gara (5K, 10K, mezza o maratona) per VDOT e ritmi.", "A race time (5K, 10K, half or marathon) is needed for VDOT and paces."));
     if (r.hr) {
-      var f = function (z) { return z[2] == null ? ">" + w(z[1]) : (z[1] ? w(z[1]) + "–" + w(z[2]) : "<" + w(z[2])); };
+      var f = function (z) { return z[2] == null ? ">" + w(z[1]) : (z[1] ? w(z[1]) + "–" + w(z[2]) : "≤" + w(z[2])); };
       run += "<h4>" + L("Zone cardio dalla soglia (LTHR " + w(i.lthr) + ")", "Heart-rate zones from threshold (LTHR " + w(i.lthr) + ")") + "</h4>" + table(["", L("Corsa (bpm)", "Run (bpm)"), L("Bici (bpm)", "Bike (bpm)")], r.hr.run.map(function (z, k) { return [z[0], f(z), f(r.hr.bike[k])]; }));
     } else {
       run += '<p class="eng-note">' + L("Per le zone cardio serve la frequenza di soglia (LTHR): una prova da 30 minuti da soli, media degli ultimi 20 minuti (Friel).", "Heart-rate zones need your threshold heart rate (LTHR): a solo 30-minute time trial, average of the last 20 minutes (Friel).") + (r.hrmaxEst ? " " + L("Stima della FC max per l'età: ", "Age-based max heart rate estimate: ") + w(r.hrmaxEst) + L(" bpm, con scarto tipico di circa ±10 bpm: non usarla per fissare le zone.", " bpm, typical spread around ±10 bpm: do not use it to set zones.") : "") + "</p>";
@@ -71,7 +71,7 @@
         "<div><strong>" + range(r.ride.endurance[0], r.ride.endurance[1], "W") + "</strong><span>" + L("potenza endurance (zona 2)", "endurance power (zone 2)") + "</span></div></div>";
       var names = { "1": L("Recupero attivo", "Active recovery"), "2": "Endurance", "3": "Tempo", "4": L("Soglia", "Threshold"), "5": "VO₂max", "6": L("Capacità anaerobica", "Anaerobic capacity") };
       ride += table([L("Zona", "Zone"), L("Nome", "Name"), "W", "% FTP"], r.ride.zones.map(function (z) {
-        var wt = z[2] == null ? ">" + w(z[1]) : (z[1] ? w(z[1]) + "–" + w(z[2]) : "<" + w(z[2]));
+        var wt = z[2] == null ? ">" + w(z[1]) : (z[1] ? w(z[1]) + "–" + w(z[2]) : "≤" + w(z[2]));
         var pc = z[4] == null ? ">" + Math.round(z[3] * 100) : (z[3] ? Math.round(z[3] * 100) + "–" + Math.round(z[4] * 100) : "<" + Math.round(z[4] * 100));
         return [z[0], names[z[0]], wt, pc];
       }));
