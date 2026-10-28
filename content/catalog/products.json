@@ -1,0 +1,224 @@
+{
+ "schema": "wolflab-catalog-products/1",
+ "note": "Dati con fonte e data di consultazione per campo. Nessun prezzo, voto o verdetto. Non pubblicato.",
+ "products": [
+  {
+   "id": "adidas-adizero-evo-sl",
+   "brand": "adidas",
+   "model": "Adizero Evo SL",
+   "category": "running/scarpe-allenamento",
+   "level": "SELECTED",
+   "status": "bozza-non-pubblicata",
+   "lastVerified": "2026-10-28",
+   "specs": {
+    "weightG": {
+     "value": 220.0,
+     "source": "https://www.rtings.com/running-shoes/reviews/adidas/adizero-evo-sl",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    },
+    "heelStackMm": {
+     "value": 36.9,
+     "source": "https://www.rtings.com/running-shoes/reviews/adidas/adizero-evo-sl",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    },
+    "dropMm": {
+     "value": 6.7,
+     "source": "https://www.rtings.com/running-shoes/reviews/adidas/adizero-evo-sl",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    },
+    "forefootEnergyReturnPct": {
+     "value": 83.3,
+     "source": "https://www.rtings.com/running-shoes/reviews/adidas/adizero-evo-sl",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    },
+    "heelEnergyReturnPct": {
+     "value": 81.4,
+     "source": "https://www.rtings.com/running-shoes/reviews/adidas/adizero-evo-sl",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    }
+   },
+   "summary": "Intersuola Lightstrike Pro senza piastra in carbonio, leggera. Nei test RTINGS ammortizzazione e ritorno di energia alti per il peso.",
+   "fitsIt": [
+    "Chi vuole una scarpa per chilometri quotidiani, lavori più veloci e qualche gara",
+    "Chi cerca ammortizzazione senza uno stack alto"
+   ],
+   "lessFitIt": [
+    "Chi ha bisogno di supporto o rotola verso l'interno (RTINGS)",
+    "Chi cerca la massima stabilità quando è stanco: la piattaforma è stretta al tallone e vuota sull'arco",
+    "Grip sul bagnato giudicato scarso da RTINGS"
+   ],
+   "sources": [
+    {
+     "label": "RTINGS, recensione con misure di laboratorio",
+     "url": "https://www.rtings.com/running-shoes/reviews/adidas/adizero-evo-sl"
+    },
+    {
+     "label": "adidas US, pagina prodotto (descrizione, prezzo indicativo USD 150 al 28/10/2026)",
+     "url": "https://www.adidas.com/us/adizero_evo_sl"
+    },
+    {
+     "label": "Runner's World, recensione (dati dichiarati: stack 39/33 mm, drop 6 mm, 8,1 oz)",
+     "url": "https://www.runnersworld.com/gear/a65269844/adidas-adizero-evo-sl-review/"
+    }
+   ],
+   "affiliate": {
+    "program": null,
+    "link": null
+   },
+   "ownTest": null,
+   "score": null,
+   "verdict": null,
+   "slug": "evo-sl"
+  },
+  {
+   "id": "asics-novablast-6",
+   "brand": "ASICS",
+   "model": "Novablast 6",
+   "category": "running/scarpe-allenamento",
+   "level": "SELECTED",
+   "status": "bozza-non-pubblicata",
+   "lastVerified": "2026-10-28",
+   "specs": {
+    "weightG": {
+     "value": 247.7,
+     "source": "https://www.rtings.com/running-shoes/reviews/asics/novablast-6",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    },
+    "heelStackMm": {
+     "value": 41.9,
+     "source": "https://www.rtings.com/running-shoes/reviews/asics/novablast-6",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    },
+    "dropMm": {
+     "value": 8.8,
+     "source": "https://www.rtings.com/running-shoes/reviews/asics/novablast-6",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    },
+    "forefootEnergyReturnPct": {
+     "value": 78.9,
+     "source": "https://www.rtings.com/running-shoes/reviews/asics/novablast-6",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    },
+    "heelEnergyReturnPct": {
+     "value": 74.3,
+     "source": "https://www.rtings.com/running-shoes/reviews/asics/novablast-6",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    }
+   },
+   "summary": "Schiuma FF BLAST MAX con pod FF TURBO SQUARED sotto l'avampiede. Molto ammortizzata. Nei test RTINGS l'avampiede rimbalza più del tallone.",
+   "fitsIt": [
+    "Chi vuole una sola scarpa per tutto il chilometraggio settimanale",
+    "Chi atterra di mesopiede o avampiede e cerca un'andatura ammortizzata e vivace",
+    "Chi dà priorità alla protezione dagli impatti"
+   ],
+   "lessFitIt": [
+    "Chi atterra di tallone e cerca una scarpa vivace (il tallone rende meno)",
+    "Chi vuole scatto per intervalli o gare brevi (peso e avampiede morbido, RTINGS)"
+   ],
+   "sources": [
+    {
+     "label": "RTINGS, recensione con misure di laboratorio",
+     "url": "https://www.rtings.com/running-shoes/reviews/asics/novablast-6"
+    },
+    {
+     "label": "ASICS, comunicato ufficiale Novablast 6 (29/05/2026)",
+     "url": "https://corp.asics.com/en/press/article/the-new-novablasttm-6-shoe-is-here-delivering-more-energy-for-body-and-mind"
+    },
+    {
+     "label": "ASICS Australia, Novablast 6 vs Novablast 5",
+     "url": "https://www.asics.com/au/en-au/blog/novablast-6-vs-novablast-5/"
+    },
+    {
+     "label": "Runner's World, recensione (dati dichiarati: stack tallone 41,5 mm, drop 8 mm, 8,7 oz)",
+     "url": "https://www.runnersworld.com/gear/a72633226/asics-novablast-6-review/"
+    }
+   ],
+   "affiliate": {
+    "program": null,
+    "link": null
+   },
+   "ownTest": null,
+   "score": null,
+   "verdict": null,
+   "slug": "novablast-6"
+  },
+  {
+   "id": "brooks-ghost-18",
+   "brand": "Brooks",
+   "model": "Ghost 18",
+   "category": "running/scarpe-allenamento",
+   "level": "SELECTED",
+   "status": "bozza-non-pubblicata",
+   "lastVerified": "2026-10-28",
+   "specs": {
+    "weightG": {
+     "value": 283.3,
+     "source": "https://www.rtings.com/running-shoes/reviews/brooks/ghost-18",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    },
+    "heelStackMm": {
+     "value": 36.6,
+     "source": "https://www.rtings.com/running-shoes/reviews/brooks/ghost-18",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    },
+    "dropMm": {
+     "value": 10.8,
+     "source": "https://www.rtings.com/running-shoes/reviews/brooks/ghost-18",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    },
+    "forefootEnergyReturnPct": {
+     "value": 71.6,
+     "source": "https://www.rtings.com/running-shoes/reviews/brooks/ghost-18",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    },
+    "heelEnergyReturnPct": {
+     "value": 69.5,
+     "source": "https://www.rtings.com/running-shoes/reviews/brooks/ghost-18",
+     "method": "misura di laboratorio RTINGS su un paio",
+     "checked": "2026-10-28"
+    }
+   },
+   "summary": "Trainer classico neutro con schiuma DNA Loft v3. Nei test RTINGS piattaforma molto stabile e tallone protetto, ma pesante e con poco ritorno di energia.",
+   "fitsIt": [
+    "Chi cerca una scarpa stabile e prevedibile per chilometri tranquilli",
+    "Chi atterra di tallone e vuole protezione al tallone"
+   ],
+   "lessFitIt": [
+    "Chi vuole alzare il ritmo: pesante e poco reattiva (RTINGS)",
+    "Chi cerca ammortizzazione sotto l'avampiede (giudicata scarsa da RTINGS)"
+   ],
+   "sources": [
+    {
+     "label": "RTINGS, recensione con misure di laboratorio",
+     "url": "https://www.rtings.com/running-shoes/reviews/brooks/ghost-18"
+    },
+    {
+     "label": "Runner's World, Ghost 18 (dati dichiarati: 10,2 oz, drop 10 mm, stack 36 mm)",
+     "url": "https://www.runnersworld.com/gear/a71283760/brooks-ghost-18-release/"
+    }
+   ],
+   "affiliate": {
+    "program": null,
+    "link": null
+   },
+   "ownTest": null,
+   "score": null,
+   "verdict": null,
+   "slug": "ghost-18"
+  }
+ ]
+}

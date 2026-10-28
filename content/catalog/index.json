@@ -1,0 +1,558 @@
+{
+ "schema": "wolflab-catalog-index/1",
+ "generated": "by tools/catalog.mjs",
+ "items": [
+  {
+   "type": "race",
+   "id": "firenze",
+   "name": "Firenze Marathon",
+   "path": "/gare/maratona-di-firenze/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "not-verified"
+  },
+  {
+   "type": "race",
+   "id": "valencia",
+   "name": "Maratón Valencia",
+   "path": "/gare/maratona-di-valencia/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "napoli-half",
+   "name": "Napoli City Half Marathon",
+   "path": "/gare/napoli-city-half-marathon/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "sevilla",
+   "name": "Zurich Maratón de Sevilla",
+   "path": "/gare/maratona-di-siviglia/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "romaostia",
+   "name": "RomaOstia Half Marathon",
+   "path": "/gare/roma-ostia-half-marathon/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "tokyo",
+   "name": "Tokyo Marathon",
+   "path": "/gare/maratona-di-tokyo/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "roma",
+   "name": "Run Rome The Marathon",
+   "path": "/gare/maratona-di-roma/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "barcelona",
+   "name": "Zurich Marató de Barcelona",
+   "path": "/gare/maratona-di-barcellona/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "milano",
+   "name": "Milano Marathon",
+   "path": "/gare/maratona-di-milano/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "paris",
+   "name": "Marathon de Paris",
+   "path": "/gare/maratona-di-parigi/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "rotterdam",
+   "name": "NN Marathon Rotterdam",
+   "path": "/gare/maratona-di-rotterdam/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "boston",
+   "name": "Boston Marathon",
+   "path": "/gare/maratona-di-boston/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "london",
+   "name": "TCS London Marathon",
+   "path": "/gare/maratona-di-londra/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "novecolli",
+   "name": "Granfondo Nove Colli",
+   "path": "/gare/nove-colli/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "capetown",
+   "name": "Sanlam Cape Town Marathon",
+   "path": "/gare/maratona-di-citta-del-capo/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "dolomites",
+   "name": "Maratona dles Dolomites",
+   "path": "/gare/maratona-dles-dolomites/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "etape",
+   "name": "L'Étape du Tour",
+   "path": "/gare/etape-du-tour/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "sydney",
+   "name": "TCS Sydney Marathon",
+   "path": "/gare/maratona-di-sydney/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "not-verified"
+  },
+  {
+   "type": "race",
+   "id": "berlin",
+   "name": "GENERALI BERLIN-MARATHON",
+   "path": "/gare/maratona-di-berlino/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "chicago",
+   "name": "Bank of America Chicago Marathon",
+   "path": "/gare/maratona-di-chicago/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "nyc",
+   "name": "TCS New York City Marathon",
+   "path": "/gare/maratona-di-new-york/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "amsterdam",
+   "name": "TCS Amsterdam Marathon",
+   "path": "/gare/maratona-di-amsterdam/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "warsaw",
+   "name": "Maraton Warszawski",
+   "path": "/gare/maratona-di-varsavia/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "budapest",
+   "name": "SPAR Budapest Maraton",
+   "path": "/gare/maratona-di-budapest/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "not-verified"
+  },
+  {
+   "type": "race",
+   "id": "lisbon-half",
+   "name": "EDP Lisbon Half Marathon",
+   "path": "/gare/mezza-maratona-di-lisbona/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "berlin-half",
+   "name": "GENERALI Berlin Half Marathon",
+   "path": "/gare/mezza-maratona-di-berlino/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "race",
+   "id": "cph-half",
+   "name": "CPH Half",
+   "path": "/gare/mezza-maratona-di-copenaghen/",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null,
+   "course": "official-source"
+  },
+  {
+   "type": "news",
+   "id": "topo-ultraventure-5-gtx",
+   "name": "Topo Ultraventure 5 GTX",
+   "collectionVerified": "2026-10-27",
+   "itemVerified": null,
+   "date": "2026-10-22"
+  },
+  {
+   "type": "news",
+   "id": "garmin-edge-1060",
+   "name": "Garmin Edge 1060",
+   "collectionVerified": "2026-10-27",
+   "itemVerified": null,
+   "date": "2026-10-20"
+  },
+  {
+   "type": "news",
+   "id": "tacx-nera",
+   "name": "Tacx Nēra",
+   "collectionVerified": "2026-10-27",
+   "itemVerified": null,
+   "date": "2026-10-20"
+  },
+  {
+   "type": "news",
+   "id": "colnago-g5-x",
+   "name": "Colnago G5-X",
+   "collectionVerified": "2026-10-27",
+   "itemVerified": null,
+   "date": "2026-10-07"
+  },
+  {
+   "type": "news",
+   "id": "garmin-enduro-4",
+   "name": "Garmin Enduro 4",
+   "collectionVerified": "2026-10-27",
+   "itemVerified": null,
+   "date": "2026-10-06"
+  },
+  {
+   "type": "trip",
+   "id": "tenerife",
+   "name": "Tenerife e il Teide",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null
+  },
+  {
+   "type": "trip",
+   "id": "mallorca",
+   "name": "Maiorca in bici",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null
+  },
+  {
+   "type": "trip",
+   "id": "calpe",
+   "name": "Calpe e la Costa Blanca",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null
+  },
+  {
+   "type": "trip",
+   "id": "livigno",
+   "name": "Livigno",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null
+  },
+  {
+   "type": "trip",
+   "id": "iten",
+   "name": "Iten, Kenya",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null
+  },
+  {
+   "type": "trip",
+   "id": "sierra-nevada",
+   "name": "Sierra Nevada",
+   "collectionVerified": "2026-10-26",
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "sonno-e-recupero|sleep-and-recovery",
+   "evidence": [
+    "L5 + L4",
+    "L5 + L4"
+   ],
+   "stars": 3,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "scarico-pre-gara|race-taper",
+   "evidence": [
+    "L1",
+    "L1"
+   ],
+   "stars": 4,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "caffeina-e-prestazione|caffeine-and-performance",
+   "evidence": [
+    "L5 (sintesi di studi)",
+    "L5 (study synthesis)"
+   ],
+   "stars": 4,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "carboidrati-maratona|marathon-carbohydrates",
+   "evidence": [
+    "L5 + L1",
+    "L5 + L1"
+   ],
+   "stars": 4,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "forza-per-endurance|strength-for-endurance",
+   "evidence": [
+    "L1",
+    "L1"
+   ],
+   "stars": 4,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "ftp-e-zone-di-potenza|ftp-and-power-zones",
+   "evidence": [
+    "L4",
+    "L4"
+   ],
+   "stars": 3,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "quanta-intensita-serve|how-much-intensity",
+   "evidence": [
+    "L4 + L3",
+    "L4 + L3"
+   ],
+   "stars": 3,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "bici-per-la-maratona|cycling-for-the-marathon",
+   "evidence": [
+    "L1 datata + L5",
+    "Dated L1 + L5"
+   ],
+   "stars": 2,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "scarpe-con-piastra-carbonio|carbon-plate-running-shoes",
+   "evidence": [
+    "L1 (energia) · L2-L4 (durata, infortuni)",
+    "L1 (energy) · L2-L4 (durability, injuries)"
+   ],
+   "stars": 4,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "nuoto-metodi-di-allenamento|swim-training-methods",
+   "evidence": [
+    "L1-L2 su nuotatori agonisti",
+    "L1-L2 in competitive swimmers"
+   ],
+   "stars": 2,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "nuoto-css-velocita-critica|swim-critical-speed",
+   "evidence": [
+    "scoping review letta + preprint",
+    "Scoping review read + preprint"
+   ],
+   "stars": 2,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "nuoto-tecnica-bracciata|swim-stroke-technique",
+   "evidence": [
+    "abstract di una revisione",
+    "Abstract of a review"
+   ],
+   "stars": 1,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "nuoto-acque-libere-sicurezza|open-water-swimming-safety",
+   "evidence": [
+    "L5 + revisione sistematica",
+    "L5 + systematic review"
+   ],
+   "stars": 3,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "nuoto-gare-e-formati|swim-race-formats",
+   "evidence": [
+    "fonti ufficiali degli organizzatori",
+    "Official organiser sources"
+   ],
+   "stars": 3,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "nuoto-ritmo-gara-triathlon|swim-pacing-triathlon",
+   "evidence": [
+    "2 revisioni, solo abstract",
+    "2 reviews, abstracts only"
+   ],
+   "stars": 2,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "nuoto-piscina-acque-libere|swim-pool-vs-open-water",
+   "evidence": [
+    "2 studi, abstract e parti del testo",
+    "2 studies, abstract and parts of the text"
+   ],
+   "stars": 2,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "nuoto-orientamento-sighting|swim-open-water-sighting",
+   "evidence": [
+    "indicazioni di federazione e 1 studio, abstract",
+    "governing-body guidance and 1 study, abstract"
+   ],
+   "stars": 1,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "hyrox-triathlon-lungo-studi|hyrox-long-triathlon-studies",
+   "evidence": [
+    "2 studi osservazionali, testo letto",
+    "2 observational studies, text read"
+   ],
+   "stars": 1,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "nuoto-acque-libere-regole-fin-master|swim-open-water-italy-fin-masters",
+   "evidence": [
+    "regolamento ufficiale FIN",
+    "Official FIN regulations"
+   ],
+   "stars": 3,
+   "itemVerified": null
+  },
+  {
+   "type": "article",
+   "id": "nuoto-sedute-esercizi-transizione|swim-sessions-drills-transition",
+   "evidence": [
+    "indicazioni di federazione e regolamento ufficiale, nessuno studio",
+    "governing-body guidance and official rulebook, no study"
+   ],
+   "stars": 1,
+   "itemVerified": null
+  },
+  {
+   "type": "product",
+   "id": "adidas-adizero-evo-sl",
+   "name": "adidas Adizero Evo SL",
+   "status": "bozza-non-pubblicata",
+   "itemVerified": "2026-10-28",
+   "affiliate": null,
+   "ownTest": null
+  },
+  {
+   "type": "product",
+   "id": "asics-novablast-6",
+   "name": "ASICS Novablast 6",
+   "status": "bozza-non-pubblicata",
+   "itemVerified": "2026-10-28",
+   "affiliate": null,
+   "ownTest": null
+  },
+  {
+   "type": "product",
+   "id": "brooks-ghost-18",
+   "name": "Brooks Ghost 18",
+   "status": "bozza-non-pubblicata",
+   "itemVerified": "2026-10-28",
+   "affiliate": null,
+   "ownTest": null
+  }
+ ]
+}

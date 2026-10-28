@@ -234,12 +234,13 @@ function home(lang) {
   const body = `<section class="w-hero"><div class="wrap w-hero-grid">
   <div class="w-hero-copy">
     <h1 lang="en"><span>ENDURANCE.</span><span class="acc">ENGINEERED.</span></h1>
-    <p class="w-serif"><em>Run. Ride. Swim. Strength.</em> One system.</p>
-    <p class="w-strip">Training · Data · Nutrition · Recovery · Equipment · Racing</p>
-    <a class="w-btn" href="${R.engine[lang]}">${it ? "COSTRUISCI IL TUO PROFILO" : "BUILD YOUR ATHLETE PROFILE"} <span aria-hidden="true">→</span></a>
+    <p class="w-serif"><em>Understand. Compare. Choose. Perform.</em></p>
+    <p class="w-strip">Evidence-based endurance intelligence for runners, cyclists, swimmers and hybrid athletes.</p>
+    <p class="w-btns"><a class="w-btn" href="${R.engine[lang]}">BUILD YOUR ENGINE <span aria-hidden="true">→</span></a><a class="w-btn w-btn-ghost" href="/picks/">EXPLORE WOLF PICKS <span aria-hidden="true">→</span></a></p>
   </div>
   <div class="sport-photo w-hero-img" role="img" aria-label="${it ? "Nuotatore, ciclista e runner al tramonto in una scena scura" : "Swimmer, cyclist and runner at sunset in a dark scene"}"><img class="w-hero-logo" src="/assets/brand/logo-on-dark.svg" alt="" width="300" height="71" decoding="async"></div>
 </div></section>
+<nav class="pk-quick" aria-label="Wolf"><div class="wrap"><a href="${lang ? "/en/articles/" : "/articoli/"}">Latest Analysis</a><a href="/picks/">Wolf Picks</a><a href="/picks/confronto-evo-sl-novablast-6-ghost-18/">Comparisons</a><a href="${R.engine[lang]}">Tools</a><a href="${lang ? "/en/races/" : "/gare/"}">Race Database</a></div></nav>
 <section class="w-band"><div class="wrap">
   <p class="w-kicker">THE WOLF ENGINE</p>
   <h2 class="w-big">Calculate. Understand. Perform.</h2>
