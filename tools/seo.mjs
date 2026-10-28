@@ -7,9 +7,13 @@ const IMG = SITE + '/assets/hero-kenya.jpg';
 const walk = (d, o = []) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { if (['.git', 'node_modules', 'content', 'tools', 'assets'].includes(e.name)) continue; const p = path.join(d, e.name); e.isDirectory() ? walk(p, o) : e.name.endsWith('.html') && o.push(p); } return o; };
 const j = o => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, '\\u003c')}</script>`;
 let n = 0;
+const stripFonts = h => h.replace(/<link rel="preconnect" href="https:\/\/fonts\.(googleapis|gstatic)\.com"[^>]*>\s*/g, '').replace(/<link rel="stylesheet" href="https:\/\/fonts\.googleapis\.com[^>]*>\s*/g, '');
 for (const f of walk(root)) {
   let h = fs.readFileSync(f, 'utf8');
-  if (/http-equiv="refresh"/.test(h) || !/<link rel="canonical"/.test(h) || h.includes('data-seo="1"')) continue;
+  if (/http-equiv="refresh"/.test(h)) continue;
+  const h0 = h; h = stripFonts(h);
+  if (!h.includes('fonts/geist.woff2')) h = h.replace(/(<link rel="stylesheet" href="\/assets\/site\.css)/, '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/geist.woff2" crossorigin>$1');
+  if (!/<link rel="canonical"/.test(h) || h.includes('data-seo="1"')) { if (h !== h0) { fs.writeFileSync(f, h); n++; } continue; }
   const canon = (h.match(/<link rel="canonical" href="([^"]+)"/) || [])[1];
   const lang = /<html lang="en"/.test(h) ? 'en' : 'it';
   const title = ((h.match(/<meta property="og:title" content="([^"]*)"/) || [])[1] || '');
