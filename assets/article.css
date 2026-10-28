@@ -48,3 +48,4 @@ html[data-theme="dark"] .art-body tbody tr:nth-child(even){background:#141414}
 html[data-theme="dark"] .art-body td,html[data-theme="dark"] .art-body table{border-color:rgba(245,244,239,.2)}
 html[data-theme="dark"] .art-toc-m a,html[data-theme="dark"] .art-side a{color:#F5F4EF}
 html[data-theme="dark"] .art-side a:hover{color:#E65A2E}
+.wolf-side .missing{opacity:.65;font-style:italic;font-weight:400}

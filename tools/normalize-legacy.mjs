@@ -30,10 +30,12 @@ for (const f of walk(root)) {
     const en2 = l === 'en';
     const tm = (h.match(/<time[^>]*>([^<]*)<\/time>/) || [])[1];
     const mins = (h.match(/(\d+)\s*min/) || [])[1];
+    const srcBlock = (h.match(/class="sources">([\s\S]*?)<\/(?:ol|ul)>/) || [])[1] || '';
+    const nSrc = (srcBlock.match(/<li/g) || []).length;
     const ev = (h.match(/<[a-z]+ class="evidence[^"]*"[^>]*>([\s\S]*?)<\/[a-z]+>/) || [])[1];
     if (tm) {
       const date = tm.replace(/^(Published|Updated|Pubblicato il|Aggiornato il)\s*/i, '');
-      const box = `<div class="wolf-side"><h2>WOLF LAB</h2><dl>${ev ? `<div><dt>${en2 ? 'Evidence' : 'Prove'}</dt><dd>${ev.replace(/<[^>]+>/g, '').trim()}</dd></div>` : ''}<div><dt>${en2 ? 'Published' : 'Pubblicato'}</dt><dd>${date}</dd></div>${mins ? `<div><dt>${en2 ? 'Read' : 'Lettura'}</dt><dd>${mins} min</dd></div>` : ''}</dl></div>`;
+      const box = `<div class="wolf-side"><h2>WOLF LAB</h2><dl>${ev ? `<div><dt>${en2 ? 'Evidence' : 'Prove'}</dt><dd>${ev.replace(/<[^>]+>/g, '').trim()}</dd></div>` : ''}<div><dt>${en2 ? 'Published' : 'Pubblicato'}</dt><dd>${date}</dd></div>${mins ? `<div><dt>${en2 ? 'Read' : 'Lettura'}</dt><dd>${mins} min</dd></div>` : ''}${nSrc ? `<div><dt>${en2 ? 'Sources' : 'Fonti'}</dt><dd>${nSrc}</dd></div>` : ''}${ev ? '' : `<div><dt>${en2 ? 'Evidence level' : 'Livello di prova'}</dt><dd class="missing">${en2 ? 'not assigned yet' : 'non ancora assegnato'}</dd></div>`}<div><dt>Wolf Confidence</dt><dd class="missing">${en2 ? 'not assigned yet' : 'non ancora assegnata'}</dd></div></dl></div>`;
       h = h.replace('<aside class="art-side">', '<aside class="art-side">' + box);
     }
   }
