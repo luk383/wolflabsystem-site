@@ -10,3 +10,6 @@
 .wolf button.tile span{color:#d0d0d0}
 
 .wolf nav:empty{display:none}.wolf nav{padding:14px 0 6px;border-bottom:0}
+.wolf .pe{list-style:none;margin:6px 0 10px;padding:0}.wolf .pe li{padding:6px 0;border-bottom:1px solid #2a2a2a;font-size:.92rem}
+.wolf details.circuit,.wolf details.diffbox{margin:10px 0;padding:10px 12px;border:1px solid #303030;border-radius:10px}.wolf details.circuit ol,.wolf details.diffbox ul{margin:8px 0;padding-left:20px}
+.wolf .tech{display:grid;gap:8px;margin:8px 0}.wolf .tech select{width:100%}.wolf .tech .check{display:flex;align-items:center;gap:10px}.wolf .tech .check input{width:20px;height:20px;flex:none}
