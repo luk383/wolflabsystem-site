@@ -13,19 +13,19 @@ const wr = (file, txt) => { const p = path.join(ROOT, file); fs.mkdirSync(path.d
 
 // ---------- Indirizzi ----------
 const R = {
-  home: ["/", "/en/"], engine: ["/engine", "/en/engine"], run: ["/run", "/en/run"], ride: ["/ride", "/en/ride"], train: ["/train", "/en/train"],
+  home: ["/", "/en/"], engine: ["/engine", "/en/engine"], run: ["/run", "/en/run"], ride: ["/ride", "/en/ride"], swim: ["/swim", "/en/swim"], train: ["/train", "/en/train"],
   fuel: ["/fuel", "/en/fuel"], race: ["/race", "/en/race"], gear: ["/gear", "/en/gear"],
   method: ["/metodologia", "/en/methodology"], decide: ["/piramidale-o-polarizzato", "/en/pyramidal-or-polarized"],
 };
 const L = { races: ["/gare/", "/en/races/"], trips: ["/viaggi/", "/en/trips/"], training: ["/allenamento/", "/en/training/"], news: ["/novita/", "/en/news/"], articles: ["/articoli/", "/en/articles/"], contact: ["/contatti/", "/en/contact/"] };
 const art = (lang, it, en) => (lang === 0 ? `/articoli/${it}/` : `/en/articles/${en}/`);
 
-const NAV = [["RUN", "run"], ["RIDE", "ride"], ["TRAIN", "train"], ["FUEL", "fuel"], ["RACE", "race"], ["GEAR", "gear"]];
+const NAV = [["RUN", "run"], ["RIDE", "ride"], ["SWIM", "swim"], ["TRAIN", "train"], ["FUEL", "fuel"], ["RACE", "race"], ["GEAR", "gear"]];
 
 function layout({ lang, key, title, desc, body, dark = false, extra = "" }) {
   const it = lang === 0, pathname = R[key][lang], alt = R[key][1 - lang];
   const nav = NAV.map(([n, k]) => `<a href="${R[k][lang]}"${key === k ? ' aria-current="page"' : ""}>${n}</a>`).join("") + `<a class="nav-engine" href="${R.engine[lang]}"${key === "engine" ? ' aria-current="page"' : ""}>WOLF ENGINE</a>`;
-  const full = key === "home" ? "Wolf Lab - Run. Ride. One engine." : `${title} - Wolf Lab`;
+  const full = key === "home" ? "Wolf Lab - Endurance. Engineered." : `${title} - Wolf Lab`;
   return `<!doctype html>
 <html lang="${it ? "it" : "en"}" class="wolf2"${dark ? ' data-theme-default="dark"' : ""}>
 <head>
@@ -104,6 +104,39 @@ const HUBS = {
       [["Granfondo", "Nove Colli, Maratona dles Dolomites, Étape du Tour.", "races"], ["Ciclocomputer e bici", "Novità e annunci datati.", "news"], ["Mete per la bici", "Maiorca, Calpe, Tenerife.", "trips"]],
     ],
   },
+  swim: {
+    kicker: ["SWIM", "SWIM"], title: ["Nuoto: metodi, tecnica, piscina, acque libere e gare.", "Swimming: methods, technique, pool, open water and races."],
+    lede: ["Guide con fonti e limiti dichiarati. Calcolatori e zone di nuoto non ci sono ancora: non pubblichiamo numeri senza dati e test.", "Guides with sources and declared limits. Swim calculators and zones do not exist yet: we publish no numbers without data and tests."],
+    groups: [],
+    sections: [
+      ["metodi", ["Metodi di allenamento", "Training methods"], [
+        ["Metodi nel nuoto", "Polarizzato, a soglia, piramidale, HIIT, forza a secco e scarico: cosa dicono gli studi.", ["/articoli/nuoto-metodi-di-allenamento/", "/en/articles/swim-training-methods/"]],
+        ["Zone di nuoto", "Richiedono un test tuo e una fonte valida per amatori.", null],
+        ["Piani di nuoto", "Nessun piano finché mancano prove per amatori e triatleti.", null],
+      ], ["Methods", "Methods"]],
+      ["tecnica", ["Tecnica", "Technique"], [
+        ["Frequenza e lunghezza di bracciata", "Cosa si misura, come cambia con la fatica, perché non diamo valori obiettivo.", ["/articoli/nuoto-tecnica-bracciata/", "/en/articles/swim-stroke-technique/"]],
+        ["Esercizi tecnici", "Non pubblicati: serve un allenatore che ti veda nuotare.", null],
+      ], ["Technique", "Technique"]],
+      ["piscina", ["Piscina", "Pool"], [
+        ["Velocità critica (CSS)", "Come si calcola, i limiti del metodo e i controlli sui dati.", ["/articoli/nuoto-css-velocita-critica/", "/en/articles/swim-critical-speed/"]],
+        ["Calcolatore CSS", "Non disponibile: lo pubblichiamo solo con controlli di coerenza e limiti dichiarati.", null],
+        ["Sedute in piscina", "Non ancora pubblicate.", null],
+      ], ["Pool", "Pool"]],
+      ["acque-libere", ["Acque libere", "Open water"], [
+        ["Sicurezza e acqua fredda", "Raccomandazioni RNLI, shock da acqua fredda, attrezzatura.", ["/articoli/nuoto-acque-libere-sicurezza/", "/en/articles/open-water-swimming-safety/"]],
+        ["Muta", "Cosa riporta una revisione sistematica e dove vale il regolamento dell'evento.", ["/articoli/nuoto-acque-libere-sicurezza/", "/en/articles/open-water-swimming-safety/"]],
+        ["Orientamento e nuotata in gruppo", "Non trattati: mancano fonti verificate.", null],
+      ], ["Open water", "Open water"]],
+      ["gare", ["Gare e formati", "Races and formats"], [
+        ["Nuoto in acque libere", "Programma olimpico dal regolamento World Aquatics.", ["/articoli/nuoto-gare-e-formati/", "/en/articles/swim-race-formats/"]],
+        ["Triathlon", "Formati Standard e Sprint secondo World Triathlon: il nuoto è la prima frazione.", ["/articoli/nuoto-gare-e-formati/", "/en/articles/swim-race-formats/"]],
+        ["IRONMAN e 70.3", "Contesto multisport: distanze dichiarate dall'organizzatore.", ["/articoli/nuoto-gare-e-formati/", "/en/articles/swim-race-formats/"]],
+        ["HYROX", "Disciplina separata: corsa e stazioni di forza, senza nuoto.", ["/articoli/nuoto-gare-e-formati/", "/en/articles/swim-race-formats/"]],
+        ["Calendari delle gare di nuoto", "Non pubblicati: nessun calendario verificato.", null],
+      ], ["Races", "Races"]],
+    ],
+  },
   train: {
     kicker: ["TRAIN", "TRAIN"], title: ["Forza, ibrido, prestazione e recupero.", "Strength, hybrid, performance and recovery."],
     lede: ["Dove corsa e bici si incontrano con la forza. Qui trovi anche i concetti di prestazione e di recupero.", "Where running and cycling meet strength. Performance and recovery concepts live here too."],
@@ -138,7 +171,7 @@ const HUBS = {
     kicker: ["RACE", "RACE"], title: ["Scegliere la gara. Preparare il viaggio.", "Pick the race. Plan the trip."],
     lede: ["Gare e training camp con fonti e data di verifica. Filtri per sport, paese, mese e tipo di iscrizione.", "Races and training camps with sources and check dates. Filters by sport, country, month and entry type."],
     groups: [
-      [["Gare", "Maratone, mezze e granfondo con date, quote e iscrizioni.", "races"], ["Training camp e viaggi", "Altura, bici e corsa: dove, quando, quanto.", "trips"], ["Passaggi di gara", "Calcolali dal tuo obiettivo.", "engine#race"], ["Scarico pre-gara", "Le ultime due settimane.", ["/articoli/scarico-pre-gara/", "/en/articles/race-taper/"]]],
+      [["Gare", "Maratone, mezze e granfondo con date, quote e iscrizioni.", "races"], ["Nuoto, triathlon, IRONMAN e HYROX", "Distanze e formati dagli enti ufficiali. Nessun calendario.", ["/articoli/nuoto-gare-e-formati/", "/en/articles/swim-race-formats/"]], ["Training camp e viaggi", "Altura, bici e corsa: dove, quando, quanto.", "trips"], ["Passaggi di gara", "Calcolali dal tuo obiettivo.", "engine#race"], ["Scarico pre-gara", "Le ultime due settimane.", ["/articoli/scarico-pre-gara/", "/en/articles/race-taper/"]]],
     ],
   },
   gear: {
@@ -190,9 +223,9 @@ function home(lang) {
   const tiles = [["RUN", it ? "Ritmi · Scienza · Scarpe" : "Paces · Science · Shoes", "run"], ["RIDE", it ? "Potenza · Zone · Granfondo" : "Power · Zones · Gran fondo", "ride"], ["TRAIN", it ? "Forza · Ibrido · Recupero" : "Strength · Hybrid · Recovery", "train"], ["FUEL", it ? "Carboidrati · Fluidi · Gara" : "Carbs · Fluids · Race day", "fuel"], ["RACE", it ? "Gare · Training camp" : "Races · Training camps", "race"], ["GEAR", it ? "Novità · Scarpe · Tech" : "News · Shoes · Tech", "gear"]];
   const body = `<section class="w-hero"><div class="wrap w-hero-grid">
   <div class="w-hero-copy">
-    <h1 lang="en"><span>RUN.</span><span>RIDE.</span><span class="acc">ONE ENGINE.</span></h1>
-    <p class="w-serif"><em>The science of</em> endurance performance.</p>
-    <p class="w-strip">Training · Data · Nutrition · Equipment · Racing</p>
+    <h1 lang="en"><span>ENDURANCE.</span><span class="acc">ENGINEERED.</span></h1>
+    <p class="w-serif"><em>Run. Ride. Swim. Strength.</em> One system.</p>
+    <p class="w-strip">Training · Data · Nutrition · Recovery · Equipment · Racing</p>
     <a class="w-btn" href="${R.engine[lang]}">${it ? "COSTRUISCI IL TUO PROFILO" : "BUILD YOUR ATHLETE PROFILE"} <span aria-hidden="true">→</span></a>
   </div>
   <div class="sport-photo w-hero-img" role="img" aria-label="${it ? "Runner su un sentiero di montagna al tramonto" : "Runner on a mountain trail at sunset"}"><img class="w-hero-logo" src="/assets/brand/logo-on-dark.svg" alt="" width="300" height="71" decoding="async"></div>
@@ -200,7 +233,7 @@ function home(lang) {
 <section class="w-band"><div class="wrap">
   <p class="w-kicker">THE WOLF ENGINE</p>
   <h2 class="w-big">Calculate. Understand. Perform.</h2>
-  <ul class="w-tools">${[["PACE","run",["Ritmi di allenamento dai tuoi tempi recenti.","Training paces from your recent times."]],["FTP","ride",["Zone di potenza dalla tua FTP.","Power zones from your FTP."]],["FUEL","fuel",["Carboidrati e liquidi per la gara.","Carbohydrate and fluids for race day."]],["RACE","race",["Passaggi di gara dal tempo obiettivo.","Race splits from your target time."]],["ZONES","ride",["Zone di potenza e cardio.","Power and heart-rate zones."]]].map(([n,k,d])=>`<li><a href="${R.engine[lang]}#${k}"><b>${n}</b><span>${d[lang]}</span><em>${it?"FUNZIONANTE":"WORKING"}</em></a></li>`).join("")}<li class="dev"><a href="${R.method[lang]}"><b>WOLF SCORE</b><span>${it?"Criteri pubblici. Nessun punteggio finché mancano dati e test.":"Public criteria. No score until data and tests exist."}</span><em>${it?"IN SVILUPPO":"IN DEVELOPMENT"}</em></a></li></ul>
+  <ul class="w-tools">${[["PACE","run",["Ritmi di allenamento dai tuoi tempi recenti.","Training paces from your recent times."]],["FTP","ride",["Zone di potenza dalla tua FTP.","Power zones from your FTP."]],["FUEL","fuel",["Carboidrati e liquidi per la gara.","Carbohydrate and fluids for race day."]],["RACE","race",["Passaggi di gara dal tempo obiettivo.","Race splits from your target time."]],["ZONES","ride",["Zone di potenza e cardio.","Power and heart-rate zones."]]].map(([n,k,d])=>`<li><a href="${R.engine[lang]}#${k}"><b>${n}</b><span>${d[lang]}</span><em>${it?"FUNZIONANTE":"WORKING"}</em></a></li>`).join("")}<li class="dev"><a href="${R.swim[lang]}"><b>SWIM</b><span>${it?"Guide su metodi, CSS, acque libere e gare. Calcolatore non ancora disponibile.":"Guides on methods, CSS, open water and races. No calculator yet."}</span><em>${it?"GUIDE · CALCOLATORE IN SVILUPPO":"GUIDES · CALCULATOR IN DEVELOPMENT"}</em></a></li><li class="dev"><a href="${R.method[lang]}"><b>WOLF SCORE</b><span>${it?"Criteri pubblici. Nessun punteggio finché mancano dati e test.":"Public criteria. No score until data and tests exist."}</span><em>${it?"IN SVILUPPO":"IN DEVELOPMENT"}</em></a></li></ul>
 </div></section>
 <section class="w-latest"><div class="wrap">
   <p class="w-kicker">LATEST FROM WOLF</p>
@@ -331,7 +364,7 @@ function decide(lang) {
 // ---------- Esecuzione ----------
 const urls = [];
 for (const lang of [0, 1]) {
-  for (const k of ["run", "ride", "train", "fuel", "race", "gear"]) { wr(`${R[k][lang].replace(/^\//, "")}.html`, hub(lang, k)); urls.push(R[k][lang]); }
+  for (const k of ["run", "ride", "swim", "train", "fuel", "race", "gear"]) { wr(`${R[k][lang].replace(/^\//, "")}.html`, hub(lang, k)); urls.push(R[k][lang]); }
   wr(R.engine[lang].replace(/^\//, "") + ".html", engine(lang)); urls.push(R.engine[lang]);
   wr(R.method[lang].replace(/^\//, "") + ".html", method(lang)); urls.push(R.method[lang]);
   wr(R.decide[lang].replace(/^\//, "") + ".html", decide(lang)); urls.push(R.decide[lang]);

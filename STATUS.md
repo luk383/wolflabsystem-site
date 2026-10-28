@@ -5,7 +5,7 @@
 - Wolf Engine: VDOT and paces, race splits, HR zones, power zones, fuel ranges, hybrid week (our own rule, declared). Sources listed in tools/build-engine.mjs.
 - My Wolf: local profile in the browser, saved only on the Save button, deletable. No account, nothing sent.
 - Methodology: evidence levels, Wolf Confidence, Wolf Score rules (no score published), NEWS > ANALYSIS > TEST > VERDICT (only NEWS published), method card template, AI use and image credits.
-- Home: hero "RUN. RIDE. ONE ENGINE.", palette per brief, label "WOLF VISUAL / KENYA".
+- Home: hero "RUN. RIDE. ENGINEERED.", palette per brief, label "WOLF VISUAL / KENYA".
 - Dark mode and toggle on all pages. All 100+ legacy pages (articles, races, trips, contact) normalized to the v3 shell by tools/normalize-legacy.mjs, hooked in tools/build.mjs.
 - Library: methods with sport filter, nutrition, supplements, calculators, books. /biblioteca/ and /strumenti/ redirects kept.
 - News with NEWS tag. Ask Wolf: declared rule-based guide, not AI.

@@ -205,5 +205,120 @@
    "solo il costo energetico. Durata e infortuni: Molto limitata",
    "energy cost only. Durability and injuries: Very limited"
   ]
+ },
+ "nuoto-metodi-di-allenamento|swim-training-methods": {
+  "lv": [
+   "L1-L2 su nuotatori agonisti",
+   "L1-L2 in competitive swimmers"
+  ],
+  "stars": 2,
+  "how": [
+   "Revisione documentale: 3 revisioni sistematiche o meta-analisi e uno studio incrociato, in gran parte letti solo negli abstract.",
+   "Document review: 3 systematic reviews or meta-analyses and one crossover study, mostly read as abstracts only."
+  ],
+  "lim": [
+   "Nuotatori agonisti, spesso giovani; studi osservazionali o brevi; testo completo non letto per la maggior parte. Non vale per amatori e triatleti.",
+   "Competitive, often young swimmers; observational or short studies; full text not read for most. Does not apply to amateurs and triathletes."
+  ],
+  "why": [
+   "Prove su un gruppo diverso dal tuo e abstract: Molto limitata.",
+   "Evidence from a different group and abstracts: Very limited."
+  ],
+  "scope": [
+   "metodi di allenamento in nuotatori agonisti",
+   "training methods in competitive swimmers"
+  ]
+ },
+ "nuoto-css-velocita-critica|swim-critical-speed": {
+  "lv": [
+   "scoping review letta + preprint",
+   "Scoping review read + preprint"
+  ],
+  "stars": 2,
+  "how": [
+   "Testo completo di una scoping review (41 studi) e di un preprint; solo l'abstract dello studio originale del 1992.",
+   "Full text of a scoping review (41 studies) and a preprint; abstract only for the original 1992 study."
+  ],
+  "lim": [
+   "Il risultato dipende dal protocollo; ripetibilità mostrata in nuotatori giovani di livello nazionale; triatleti e amatori non coperti.",
+   "Result depends on the protocol; repeatability shown in young national-level swimmers; triathletes and amateurs not covered."
+  ],
+  "why": [
+   "Metodo noto ma dipendente dal protocollo e non studiato nel tuo gruppo: Molto limitata.",
+   "Known method but protocol-dependent and not studied in your group: Very limited."
+  ],
+  "scope": [
+   "calcolo e limiti della velocità critica di nuoto",
+   "calculation and limits of critical swim speed"
+  ]
+ },
+ "nuoto-tecnica-bracciata|swim-stroke-technique": {
+  "lv": [
+   "abstract di una revisione",
+   "Abstract of a review"
+  ],
+  "stars": 1,
+  "how": [
+   "Solo gli abstract di una revisione e di una revisione sulla muta.",
+   "Abstracts only of a review and a wetsuit review."
+  ],
+  "lim": [
+   "Nessun valore obiettivo verificato per amatori; testo completo non letto.",
+   "No verified target values for amateurs; full text not read."
+  ],
+  "why": [
+   "Solo abstract e nessun valore applicabile: Insufficiente.",
+   "Abstracts only and no applicable value: Insufficient."
+  ],
+  "scope": [
+   "grandezze che descrivono la tecnica di nuoto",
+   "quantities describing swim technique"
+  ]
+ },
+ "nuoto-acque-libere-sicurezza|open-water-swimming-safety": {
+  "lv": [
+   "L5 + revisione sistematica",
+   "L5 + systematic review"
+  ],
+  "stars": 3,
+  "how": [
+   "Testo di due pagine di sicurezza del RNLI e abstract di una revisione sistematica sulla muta.",
+   "Text of two RNLI safety pages and the abstract of a systematic review on wetsuits."
+  ],
+  "lim": [
+   "Enti britannici, non norme italiane; la revisione sulla muta copre protocolli molto diversi.",
+   "British bodies, not Italian rules; the wetsuit review covers very different protocols."
+  ],
+  "why": [
+   "Raccomandazioni di enti di soccorso, non studi controllati: Limitata.",
+   "Recommendations from rescue bodies, not controlled studies: Limited."
+  ],
+  "scope": [
+   "buone pratiche di sicurezza in acque libere e effetto della muta",
+   "open-water safety good practice and wetsuit effect"
+  ]
+ },
+ "nuoto-gare-e-formati|swim-race-formats": {
+  "lv": [
+   "fonti ufficiali degli organizzatori",
+   "Official organiser sources"
+  ],
+  "stars": 3,
+  "how": [
+   "Siti e regolamenti ufficiali degli enti e degli organizzatori citati.",
+   "Official sites and rulebooks of the cited bodies and organisers."
+  ],
+  "lim": [
+   "Distanze dichiarate dagli organizzatori; nessun calendario o regolamento completo verificato.",
+   "Distances as stated by organisers; no calendar or full rulebook verified."
+  ],
+  "why": [
+   "Dati ufficiali dell'organizzatore, non una prova scientifica: Limitata.",
+   "Official organiser data, not scientific evidence: Limited."
+  ],
+  "scope": [
+   "distanze e formati di gara dichiarati",
+   "distances and formats as stated"
+  ]
  }
 }

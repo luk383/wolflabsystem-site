@@ -154,5 +154,73 @@
  "Come valutiamo": [
   "How we evaluate",
   "Evidence levels and Wolf Score rules."
+ ],
+ "Metodi nel nuoto": [
+  "Methods in swimming",
+  "Polarized, threshold, pyramidal, HIIT, dryland strength and taper: what studies say."
+ ],
+ "Zone di nuoto": [
+  "Swim zones",
+  "They need your own test and a source valid for amateurs."
+ ],
+ "Piani di nuoto": [
+  "Swim plans",
+  "No plan until evidence for amateurs and triathletes exists."
+ ],
+ "Frequenza e lunghezza di bracciata": [
+  "Stroke rate and stroke length",
+  "What is measured, how it changes with fatigue, why we give no target values."
+ ],
+ "Esercizi tecnici": [
+  "Technique drills",
+  "Not published: you need a coach who watches you swim."
+ ],
+ "Velocità critica (CSS)": [
+  "Critical swim speed (CSS)",
+  "How it is calculated, the method's limits and the checks on the data."
+ ],
+ "Calcolatore CSS": [
+  "CSS calculator",
+  "Not available: we publish it only with consistency checks and declared limits."
+ ],
+ "Sedute in piscina": [
+  "Pool sessions",
+  "Not published yet."
+ ],
+ "Sicurezza e acqua fredda": [
+  "Safety and cold water",
+  "RNLI recommendations, cold water shock, kit."
+ ],
+ "Muta": [
+  "Wetsuit",
+  "What a systematic review reports and where event rules apply."
+ ],
+ "Orientamento e nuotata in gruppo": [
+  "Sighting and group swimming",
+  "Not covered: no verified sources."
+ ],
+ "Nuoto in acque libere": [
+  "Open water swimming",
+  "Olympic programme from the World Aquatics regulations."
+ ],
+ "Triathlon": [
+  "Triathlon",
+  "Standard and Sprint formats per World Triathlon: the swim is the first leg."
+ ],
+ "IRONMAN e 70.3": [
+  "IRONMAN and 70.3",
+  "Multisport context: distances as stated by the organiser."
+ ],
+ "HYROX": [
+  "HYROX",
+  "Separate discipline: running and strength stations, no swimming."
+ ],
+ "Calendari delle gare di nuoto": [
+  "Swim race calendars",
+  "Not published: no verified calendar."
+ ],
+ "Nuoto, triathlon, IRONMAN e HYROX": [
+  "Swimming, triathlon, IRONMAN and HYROX",
+  "Distances and formats from the official bodies. No calendar."
  ]
 }

@@ -105,7 +105,7 @@ function layout({ lang, title, description, current, alt, body, pathname, extraC
   const navItems = ["training", "races", "trips", "news"]
     .map((k) => `<a href="${ROUTES[k][lang]}"${current === k ? ' aria-current="page"' : ""}>${t.nav[k]}</a>`)
     .join("");
-  const fullTitle = current === "home" ? "Wolf Lab - Run. Ride. One engine." : `${title} — Wolf Lab`;
+  const fullTitle = current === "home" ? "Wolf Lab - Endurance. Engineered." : `${title} — Wolf Lab`;
   return `<!doctype html>
 <html lang="${lang}">
 <head>
@@ -231,9 +231,9 @@ const PAGES = {
     const it = lang === "it";
     return {
       title: it ? "Home" : "Home",
-      description: "Wolf Lab - Run. Ride. One engine.",
+      description: "Wolf Lab - Endurance. Engineered.",
       body: `<section class="sport-home"><div class="wrap">
-<div class="sport-hero"><div class="sport-copy"><h1 lang="en">Run.<br>Ride.<br><span>One engine.</span></h1></div><div class="sport-photo" role="img" aria-label="${it ? "Runner su un sentiero di montagna al tramonto" : "Runner on a mountain trail at sunset"}"></div></div>
+<div class="sport-hero"><div class="sport-copy"><h1 lang="en">Endurance.<br><span>Engineered.</span></h1></div><div class="sport-photo" role="img" aria-label="${it ? "Runner su un sentiero di montagna al tramonto" : "Runner on a mountain trail at sunset"}"></div></div>
 <div class="sport-latest" id="read-next"><div class="section-title"><a href="${ROUTES.articles[lang]}">${T[lang].allArticles} ↗</a></div>
 <div class="sport-stories">${articles.slice(0,1).map(a=>`<a href="${articlePath(lang,a.slug)}"><div class="sport-symbol">↗<span>RUN<br>× RIDE</span></div><span class="sport-topic">${esc(a.topic)} / ${a.minutes} ${it ? "MIN" : "MIN"}</span><h3>${esc(a.title)}</h3><span class="sport-read">${it ? "Leggi l'articolo" : "Read the article"} ↗</span></a>`).join("")}<div class="sport-support">${articles.slice(1,3).map(a=>`<a href="${articlePath(lang,a.slug)}"><span class="sport-topic">${esc(a.topic)}</span><h3>${esc(a.title)}</h3><span class="sport-read">${it ? "Leggi" : "Read"} ↗</span></a>`).join("")}</div></div>
 ${articles.slice(3,4).map(a=>`<a class="sport-more" href="${articlePath(lang,a.slug)}">${esc(a.title)} ↗</a>`).join("")}</div>
