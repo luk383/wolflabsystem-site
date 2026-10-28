@@ -469,7 +469,12 @@
         "it": "€169",
         "en": "€169"
       },
-      "major": false
+      "major": false,
+      "course": {
+        "it": "Dislivello 256 m positivi e 252 m negativi, secondo l'organizzazione per l'edizione 2026 (può cambiare).",
+        "en": "256 m of climbing and 252 m of descent, according to the organiser for the 2026 edition (may change)."
+      },
+      "courseSource": "https://www.schneiderelectricparismarathon.com/fr/actus/decouvre-le-profil-du-parcours/337"
     },
     {
       "id": "rotterdam",
