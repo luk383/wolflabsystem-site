@@ -517,4 +517,5 @@ await import("./build-engine.mjs");
 await import("./build-library.mjs");
 await import("./build-news.mjs");
 await import("./normalize-legacy.mjs");
+await import("./apply-review.mjs");
 await import("./build-ask.mjs");
