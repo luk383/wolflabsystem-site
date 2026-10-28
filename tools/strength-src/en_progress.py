@@ -201,7 +201,7 @@ EN = {
 'Venerdi: triplo pesante un po sopra il top set del lunedi, poi serie da 8. Top set circa +2,5% a settimana.':"Friday: heavy triple a little above Monday's top set, then a set of 8. Top set about +2.5% per week.",
 'Struttura Pesante / Leggera / Media per Starr originale. Il libro del 1976 non e stato verificato direttamente.':'Heavy / Light / Medium structure for the original Starr. The 1976 book was not checked directly.',
 'Madcow 5×5, struttura da fonti secondarie':'Madcow 5×5, structure from secondary sources',
-'adattamento di comunita, non verificato su fonte primaria':'community adaptation, not verified against a primary source',
+:'community adaptation, not verified against a primary source',
 'Struttura Lunedi / Mercoledi / Venerdi. Le fonti non concordano su incrementi e percentuali: nessun valore e proposto, li scegli tu. La progressione settimanale non e automatica: usa Aggiorna riferimento.':'Monday / Wednesday / Friday structure. The sources disagree on increments and percentages: no value is proposed, you choose them. Weekly progression is not automatic: use Update the reference.',
 'non verificato su fonte originale':'not verified against an original source',
 'Pesante 100%, Leggera 80%, Media 90%.':'Heavy 100%, Light 80%, Medium 90%.',
@@ -212,4 +212,5 @@ EN = {
 'Venerdì':'Friday',
 'Madcow 5×5 (fonti secondarie)':'Madcow 5×5 (secondary sources)',
 ' (fonte secondaria)':' (secondary source)',
+'GAP: struttura a rampa/triplo/back-off NON implementata nel Programma; solo fonti secondarie discordanti raccolte':'GAP: ramp/triple/back-off structure NOT implemented in the Program; only conflicting secondary sources collected',
 }

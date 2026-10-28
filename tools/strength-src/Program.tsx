@@ -1,10 +1,8 @@
 import React,{useState} from 'react';
 import {createProgram,enduranceConflicts,acceptReferenceUpdate} from './core/core.mjs';
-import {METHOD_SOURCES,METHOD_VERSIONS} from './methods';
 import {validProgram,uiToV2,saveText,saveMsg,routineFromProgramSession} from './lab';
 const PRESETS:any={
  custom:{label:'Configurazione digitale WOLFLAB (fattori scelti da te)',note:'Regole digitali WOLFLAB scelte da te. Non sono attribuite a una fonte storica.',days:[{name:'Giorno 1',f:'100'}]},
- m:{label:'Madcow 5×5, struttura da fonti secondarie',note:'Adattamento di comunità, non verificato su una fonte primaria. Le fonti non concordano su incrementi e percentuali: non ne propongo, inseriscili tu. La progressione settimanale non è automatica: usa Aggiorna riferimento.',days:[{name:'Lunedì',f:''},{name:'Mercoledì',f:''},{name:'Venerdì',f:''}],src:['vz','sl','sp']},
  a:{label:'HLM, variante 80 / 90',note:'Pesante 100%, Media 90%, Leggera 80% del carico di riferimento. Preset non verificato su una fonte storica originale.',days:[{name:'Pesante',f:'100'},{name:'Leggera',f:'80'},{name:'Media',f:'90'}]},
  b:{label:'HLM, variante 70–75 / 80–85',note:'Leggera 70 o 75%, Media 80 o 85%: scegli un valore preciso, non esiste un punto medio. Preset non verificato su una fonte storica originale.',days:[{name:'Pesante',f:'100'},{name:'Leggera',f:''},{name:'Media',f:''}],choices:{1:['70','75'],2:['80','85']}}
 };
@@ -22,7 +20,7 @@ export function ProgramBox({routine,onClose,data,update,setPending,startSession}
     const w=Number(weeks);if(!Number.isInteger(w)||w<1||w>12)throw own('Settimane: da 1 a 12.');
     if(!/^\d{4}-\d{2}-\d{2}$/.test(start))throw own('Scegli la data di inizio.');
     const r=Number(round);if(!(r>0))throw own('Passo dei dischi non valido.');
-    const versionId=ver==='custom'?'wolflab-digital-1':ver==='a'?'hlm-80-90-unverified':ver==='m'?'madcow-secondary-user-params':'hlm-70-75-80-85-unverified-'+days[1].f+'-'+days[2].f;
+    const versionId=ver==='custom'?'wolflab-digital-1':ver==='a'?'hlm-80-90-unverified':'hlm-70-75-80-85-unverified-'+days[1].f+'-'+days[2].f;
     const template={versionId,sessions:days.map((d:any,i:number)=>({id:'d'+(i+1),name:d.name.trim(),exercises:ex.map((e:any)=>({exerciseId:e.id,name:e.name,...(e.groupId?{groupId:e.groupId}:{}),sets:e.sets.filter((s:any)=>s.kind!=='warmup').map((s:any)=>{const pc=s.kind==='ramp'?Number(ramp[s.id]):100;const o:any={...s,referenceFactor:Number(d.f)/100*pc/100};delete o.kg;return o;})})).filter((e:any)=>e.sets.length)}))};
     const rl:any=Object.fromEntries(ex.map((e:any)=>[e.id,Number(refs[e.id])]));
     setProg(createProgram({id:'p'+Date.now(),template,referenceLoads:rl,weeks:w,startDate:start,roundingKg:r}));setErr('');
@@ -31,8 +29,8 @@ export function ProgramBox({routine,onClose,data,update,setPending,startSession}
   const saveProg=()=>{const nm=name.trim();if(!nm){setErr('Dai un nome al programma prima di salvarlo.');return;}const saved={...prog,name:nm,routineId:routine.id,routineName:routine.name||'Scheda',routineSnapshot:JSON.parse(JSON.stringify(routine))};if(update({...data,programs:[...(data.programs||[]),saved]})){setErr('');setMsg('Programma salvato.');}else setMsg('Programma non salvato: nessuna modifica.');};
   const exp=async()=>{const t='\uFEFF'+rows().map(r=>r.map(cell).join(',')).join('\r\n');setMsg(saveMsg(await saveText(t,'wolflab-programma.csv','text/csv;charset=utf-8')));};
   return <div className="program"><div className="heading"><div><small>PROGRAMMA</small><h2>{routine.name||'Scheda'}</h2></div><div className="actions"><button onClick={onClose}>← Schede</button></div></div>
-   <label>Configurazione<select aria-label="Configurazione programma" value={ver} onChange={v=>pick(v.target.value)}>{Object.keys(PRESETS).map(k=><option key={k} value={k}>{k==='custom'?'Digitale WOLFLAB':k==='a'?'HLM 80 / 90':k==='m'?'Madcow 5×5 (fonti secondarie)':'HLM 70–75 / 80–85'}</option>)}</select></label>
-   <p className="hint">{P.label}. {P.note}</p>{P.src&&<ul className="pe">{P.src.map((k:string)=><li key={k}><a href={METHOD_SOURCES[k].url} target="_blank" rel="noopener noreferrer">{METHOD_SOURCES[k].label}</a>: {METHOD_SOURCES[k].says} (fonte secondaria)</li>)}</ul>}
+   <label>Configurazione<select aria-label="Configurazione programma" value={ver} onChange={v=>pick(v.target.value)}>{Object.keys(PRESETS).map(k=><option key={k} value={k}>{k==='custom'?'Digitale WOLFLAB':k==='a'?'HLM 80 / 90':'HLM 70–75 / 80–85'}</option>)}</select></label>
+   <p className="hint">{P.label}. {P.note}</p>
    <div className="fields">{days.map((d:any,i:number)=><React.Fragment key={i}><label>Giorno {i+1}<input value={d.name} aria-label={'Nome giorno '+(i+1)} onChange={v=>setDay(i,'name',v.target.value)}/></label>{P.choices&&P.choices[i]?<label>% del riferimento<select aria-label={'Fattore giorno '+(i+1)} value={d.f} onChange={v=>setDay(i,'f',v.target.value)}><option value="">Scegli…</option>{P.choices[i].map((c:string)=><option key={c} value={c}>{c}%</option>)}</select></label>:<label>% del riferimento<input type="number" min="1" max="150" value={d.f} aria-label={'Fattore giorno '+(i+1)} onChange={v=>setDay(i,'f',v.target.value)}/></label>}</React.Fragment>)}</div>
    {ver==='custom'&&<div className="actions"><button onClick={()=>{setDays([...days,{name:'Giorno '+(days.length+1),f:'100'}]);setProg(null);}}>+ Giorno</button>{days.length>1&&<button onClick={()=>{setDays(days.slice(0,-1));setProg(null);}}>Rimuovi ultimo giorno</button>}</div>}
    <h3>Carichi di riferimento</h3><div className="fields">{routine.exercises.map((e:any)=><label key={e.id}>{e.name} · kg<input type="number" min="0" step="0.5" value={refs[e.id]??''} aria-label={e.name+' riferimento'} onChange={v=>{setRefs({...refs,[e.id]:v.target.value});setProg(null);}}/></label>)}</div>
