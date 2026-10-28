@@ -249,7 +249,6 @@ ${articles.slice(3,4).map(a=>`<a class="sport-more" href="${articlePath(lang,a.s
       description: it ? "Tutti gli articoli su corsa, bici, nutrizione e forza, con le fonti." : "All articles on running, cycling, nutrition and strength, with sources.",
       body: `<div class="page"><div class="wrap">
   <h1>${it ? "Articoli" : "Articles"}</h1>
-  <p class="lede">${it ? "Un tema per volta: cosa dice la ricerca e cosa fare in pratica." : "One topic at a time: what the research says and what to do in practice."}</p>
   ${topicNav(articles)}
   ${topicsOf(articles).map((t) => `<section class="topic-section" id="${slugify(t)}"><h2>${esc(t)}</h2>${articleRows(articles.filter((x) => x.topic === t), lang)}</section>`).join("\n")}
 </div></div>`,
@@ -315,7 +314,6 @@ ${articles.slice(3,4).map(a=>`<a class="sport-more" href="${articlePath(lang,a.s
       description: it ? "Calendario di maratone, mezze e granfondo in Italia ed Europa con date, distanze, quote di iscrizione e logistica." : "Calendar of marathons, half marathons and gran fondos in Italy and Europe with dates, distances, entry fees and logistics.",
       body: `<div class="page"><div class="wrap">
   <h1>${it ? "Gare" : "Races"}</h1>
-  <p class="lede">${it ? "Le gare della stagione con date, quote e come arrivarci." : "This season's races with dates, fees and how to get there."}</p>
   <div class="filter" role="group" aria-label="${it ? "Filtra per sport" : "Filter by sport"}">
     <button type="button" data-filter="all" aria-pressed="true">${it ? "Tutte" : "All"}</button>
     <button type="button" data-filter="marathon" aria-pressed="false">${it ? "Maratone" : "Marathons"}</button>
@@ -339,7 +337,6 @@ ${rows}
       description: it ? "Mete per training camp e viaggi di corsa e bici: quando andare, cosa allenare, costi indicativi e logistica." : "Training camp and travel destinations for running and cycling: when to go, what to train, indicative costs and logistics.",
       body: `<div class="page"><div class="wrap">
   <h1>${it ? "Viaggi" : "Trips"}</h1>
-  <p class="lede">${it ? "Training camp e viaggi per correre e pedalare: dove, quando e quanto costa." : "Training camps and trips to run and ride: where, when and what it costs."}</p>
   <ul class="trip-list">
 ${TRIPS.trips.map((t) => `    <li><a href="${tripPath(lang, t)}"><span class="t-name">${esc(it ? t.name : t.nameEn)}</span><span class="t-kind">${esc(t.kind[lang])}</span><span class="t-season">${esc(t.season[lang].split(";")[0])}</span></a></li>`).join("\n")}
   </ul>
@@ -354,7 +351,6 @@ ${TRIPS.trips.map((t) => `    <li><a href="${tripPath(lang, t)}"><span class="t-
       description: it ? "Scrivi a Wolf Lab per domande, correzioni o proposte di argomenti." : "Write to Wolf Lab with questions, corrections or topic ideas.",
       body: `<div class="page"><div class="wrap prose">
   <h1>${it ? "Contatti" : "Contact"}</h1>
-  <p class="lede">${it ? "Domande, correzioni a un articolo o un tema che vorresti approfondito." : "Questions, corrections to an article or a topic you'd like covered."}</p>
   <p><a href="mailto:${EMAIL}">${EMAIL}</a></p>
   <p>${it ? "Se trovi un errore in un articolo, indica il passaggio e, se puoi, la fonte: lo correggiamo e lo segnaliamo in fondo alla pagina." : "If you spot an error in an article, point to the passage and, if you can, the source: we'll fix it and note the correction at the bottom of the page."}</p>
 </div></div>`,

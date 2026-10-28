@@ -106,6 +106,7 @@ const HUBS = {
   },
   swim: {
     kicker: ["SWIM", "SWIM"], title: ["Nuoto: metodi, tecnica, piscina, acque libere e gare.", "Swimming: methods, technique, pool, open water and races."],
+    keepLede: true,
     lede: ["Guide con fonti e limiti dichiarati, più un calcolatore di velocità critica con controlli sui dati. Zone di nuoto non ancora disponibili.", "Guides with sources and declared limits, plus a critical swim speed calculator with data checks. Swim zones are not available yet."],
     groups: [],
     sections: [
@@ -186,6 +187,7 @@ const HUBS = {
   },
   gear: {
     kicker: ["GEAR", "GEAR"], title: ["Dal comunicato alla decisione.", "From press release to decision."],
+    keepLede: true,
     lede: ["Quattro livelli, dichiarati: NEWS, ANALYSIS, TEST, VERDICT. Oggi pubblichiamo solo NEWS: nessun test fatto da noi.", "Four declared levels: NEWS, ANALYSIS, TEST, VERDICT. Today we publish NEWS only: no tests run by us."],
     groups: [
       [["Novità", "Orologi, ciclocomputer, scarpe, bici: annunci datati con fonti.", "news"], ["Scarpe con piastra in carbonio", "Cosa dicono gli studi.", ["/articoli/scarpe-con-piastra-carbonio/", "/en/articles/carbon-plate-running-shoes/"]], ["Come valutiamo", "Livelli di prova e regole del Wolf Score.", "method"]],
@@ -212,7 +214,7 @@ function itemHtml(lang, [t, line, tgt], i) {
 
 function hub(lang, key) {
   const h = HUBS[key], it = !lang;
-  let body = hero(h.kicker[0], h.title[lang], h.lede[lang]);
+  let body = hero(h.kicker[0], h.title[lang], h.keepLede ? h.lede[lang] : "");
   body += `<div class="wrap w-body">`;
   if (h.levels) {
     const lv = [["NEWS", it ? "Cosa è appena uscito" : "What just came out", 5], ["ANALYSIS", it ? "Cosa dicono davvero i dati" : "What the data really say", 0], ["TEST", it ? "Lo abbiamo provato" : "We tried it", 0], ["VERDICT", it ? "Lo comprerei?" : "Would I buy it?", 0]];

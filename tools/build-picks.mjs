@@ -59,7 +59,7 @@ page(URL.cmp, 'Adizero Evo SL, Novablast 6, Ghost 18: quale scegliere', 'Tre sca
   `<div class="pk-box"><h3>Fonti</h3><ol>${P.map((p) => `<li><a href="${p.sources[0].url}" rel="noopener">${esc(p.brand)} ${esc(p.model)}: ${esc(p.sources[0].label)}</a></li>`).join('')}</ol><p class="pk-note">Ultima verifica: 28 ottobre 2026.</p></div>` + DISC + END);
 // guida
 page(URL.guide, 'Scarpe da corsa da allenamento: come scegliere', "Cosa guardare in una scarpa da allenamento neutra e tre modelli da cui partire. Fonti e data di verifica.",
-  hero("WOLF PICKS · GUIDA ALL'ACQUISTO", 'Scarpe da corsa da allenamento: come scegliere.', 'Cosa guardare in una scarpa da allenamento neutra, e tre modelli da cui partire.') + LV +
+  hero("WOLF PICKS · GUIDA ALL'ACQUISTO", 'Scarpe da corsa da allenamento: come scegliere.') + LV +
   '<div class="pk-box"><h3>Cosa guardare</h3><ul><li><b>Peso:</b> una scarpa più leggera aiuta nei ritmi vivaci; una più pesante di solito offre più struttura.</li><li><b>Altezza e morbidezza:</b> più stack e schiuma morbida proteggono dagli impatti, ma possono dare meno stabilità.</li><li><b>Dove atterri:</b> tallone o mesopiede/avampiede cambiano quale scarpa funziona meglio, come mostrano le misure sul ritorno di energia.</li><li><b>Uso:</b> chilometri facili, lavori più veloci, lunghi.</li></ul></div>' +
   `<div class="pk-box"><h3>Tre punti di partenza</h3><ul>${P.map((p) => `<li><b><a href="${pu(p)}">${esc(p.brand)} ${esc(p.model)}</a></b>: ${esc(p.summary)}</li>`).join('')}</ul><p><a href="${URL.cmp}">Vai al confronto →</a></p></div>` +
   '<div class="pk-box"><h3>Fonti</h3><p>Misure di laboratorio e recensioni indipendenti elencate nelle schede e nel confronto. Ultima verifica: 28 ottobre 2026.</p></div>' + DISC + END);
