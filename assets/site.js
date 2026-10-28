@@ -196,7 +196,8 @@
       row.appendChild(sel('x-country',en?'Country':'Paese',[['',en?'All':'Tutti']].concat(Object.keys(C).sort().map(function(c){return [c,c];}))));
       row.appendChild(sel('x-month',en?'Month':'Mese',[['',en?'All':'Tutti']].concat(mn.map(function(m,i){return [String(i+1),m];}))));
       row.appendChild(sel('x-entry',en?'Entry':'Iscrizione',[['',en?'All':'Tutte'],['lottery',en?'Lottery / ballot':'Lotteria / sorteggio'],['qualifying',en?'Qualifying time':'Tempo di qualifica'],['open',en?'Open / standard':'Standard'],['soldout',en?'Sold out':'Esaurita']]));
-      apply=function(){var c=x('x-country'),m=x('x-month'),e=x('x-entry'),n=0;items.forEach(function(li){var d=li._m,ok=!d||((!c||d.country===c)&&(!m||String(d.month)===m)&&(!e||d.entry===e));li.dataset.xhide=ok?'':'1';n+=ok?1:0;});sync();cnt.textContent=n+(en?' races':' gare');};
+      row.appendChild(sel('x-course',en?'Course data':'Dati percorso',[['',en?'All':'Tutti'],['1',en?'With official source':'Con fonte ufficiale'],['0',en?'Not yet verified':'Non ancora verificati']]));
+      apply=function(){var c=x('x-country'),m=x('x-month'),e=x('x-entry'),k=x('x-course'),n=0;items.forEach(function(li){var d=li._m,ok=!d||((!c||d.country===c)&&(!m||String(d.month)===m)&&(!e||d.entry===e)&&(!k||String(d.course)===k));li.dataset.xhide=ok?'':'1';n+=ok?1:0;});sync();cnt.textContent=n+(en?' races':' gare');};
     }else{
       row.appendChild(sel('x-sport',en?'Focus':'Focus',[['',en?'All':'Tutti'],['bike',en?'Cycling':'Bici'],['run',en?'Running':'Corsa'],['altitude',en?'Altitude':'Altura']]));
       apply=function(){var s=x('x-sport'),n=0;items.forEach(function(li){var d=li._m,ok=!d||!s||d.sports.indexOf(s)>=0;li.dataset.xhide=ok?'':'1';n+=ok?1:0;});sync();cnt.textContent=n+(en?' destinations':' mete');};

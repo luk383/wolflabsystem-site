@@ -342,7 +342,7 @@ const entry = { firenze: "soldout", boston: "qualifying" };
 for (const id of ["valencia", "tokyo", "paris", "london", "capetown", "sydney", "berlin", "chicago", "nyc", "dolomites", "berlin-half", "cph-half"]) entry[id] = "lottery";
 const meta = { races: {}, trips: {} };
 for (const r of RACES.races) {
-  const info = { country: r.city.en.split(", ").pop(), month: Number(r.date.slice(5, 7)), entry: entry[r.id] || "open", sport: r.sport === "bike" ? "bike" : r.distance.startsWith("21") ? "half" : "marathon", major: !!r.major };
+  const info = { country: r.city.en.split(", ").pop(), month: Number(r.date.slice(5, 7)), entry: entry[r.id] || "open", sport: r.sport === "bike" ? "bike" : r.distance.startsWith("21") ? "half" : "marathon", major: !!r.major, course: r.course ? 1 : 0 };
   meta.races[`/gare/${r.slug.it}/`] = info; meta.races[`/en/races/${r.slug.en}/`] = info;
 }
 const tripSports = { tenerife: ["bike", "run", "altitude"], mallorca: ["bike"], calpe: ["bike"], livigno: ["run", "bike", "altitude"], iten: ["run", "altitude"], "sierra-nevada": ["run", "bike", "altitude"] };

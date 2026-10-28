@@ -139,7 +139,12 @@
         "it": "da €38",
         "en": "from €38"
       },
-      "major": false
+      "major": false,
+      "course": {
+        "it": "Descritto dall'organizzazione come tra i percorsi più veloci del Mediterraneo (affermazione promozionale, non una misura). Nessun dislivello in metri nella pagina consultata.",
+        "en": "Described by the organiser as among the fastest courses in the Mediterranean (promotional claim, not a measurement). No elevation in metres on the page consulted."
+      },
+      "courseSource": "https://www.napolirunning.com/cnchm/"
     },
     {
       "id": "sevilla",
@@ -234,7 +239,12 @@
         "en": "Fast course with a single climb, the 'salita del Camping', and a downhill finish towards the sea."
       },
       "source": "https://running.life/en/event/romaostia-half-marathon",
-      "major": false
+      "major": false,
+      "course": {
+        "it": "Zona EUR piatta; la salita del Camping inizia verso il decimo km: primo tratto di circa 1,5 km con pendenza massima di tre gradi, poi altri 1.400 m più dolci (descrizione dell'organizzazione).",
+        "en": "Flat EUR streets; the Camping climb starts around km 10: first part about 1.5 km with a maximum gradient of three degrees, then another 1,400 m that is gentler (organiser's description)."
+      },
+      "courseSource": "https://romaostia.it/course/"
     },
     {
       "id": "tokyo",
@@ -329,7 +339,12 @@
         "it": "€129",
         "en": "€129"
       },
-      "major": false
+      "major": false,
+      "course": {
+        "it": "Descritto dall'organizzazione come percorso veloce e scorrevole (edizione 2026). Nessun dislivello in metri nella pagina consultata.",
+        "en": "Described by the organiser as a fast, smooth course (2026 edition). No elevation in metres on the page consulted."
+      },
+      "courseSource": "https://www.acea.it/eventi/acea-run-rome-the-marathon"
     },
     {
       "id": "barcelona",
@@ -676,7 +691,12 @@
         "it": "€110–150",
         "en": "€110–150"
       },
-      "major": false
+      "major": false,
+      "course": {
+        "it": "Dislivello dichiarato dall'organizzazione: percorso lungo 200 km con 3.814 m (pendenza massima 18%), percorso medio 137 km con 1.872 m. Il percorso gravel non è incluso in questi numeri.",
+        "en": "Elevation stated by the organiser: long course 200 km with 3,814 m (maximum gradient 18%), medium course 137 km with 1,872 m. The gravel course is not covered by these figures."
+      },
+      "courseSource": "https://www.novecolli.it/it-it/percorso"
     },
     {
       "id": "capetown",
@@ -721,7 +741,12 @@
         "it": "È la Major più giovane: il sorteggio di solito riceve meno richieste rispetto alle altre.",
         "en": "It's the newest Major: its ballot usually gets fewer applications than the others."
       },
-      "source": "https://therunningchannel.com/cape-town-marathon-major-2027/"
+      "source": "https://therunningchannel.com/cape-town-marathon-major-2027/",
+      "course": {
+        "it": "Dal 2023 l'organizzazione ha tolto la salita di District Six per ridurre la salita totale (nessuna cifra pubblicata in quell'articolo). Il percorso può cambiare di edizione in edizione.",
+        "en": "Since 2023 the organiser removed the District Six hill to reduce total ascent (no figure given in that article). The course can change between editions."
+      },
+      "courseSource": "https://capetownmarathon.com/marathon-innovation-a-flatter-and-faster-route-coming-your-way-in-2023/"
     },
     {
       "id": "dolomites",
@@ -766,7 +791,12 @@
         "it": "€185",
         "en": "€185"
       },
-      "major": false
+      "major": false,
+      "course": {
+        "it": "Dislivello positivo dichiarato dall'organizzazione: percorso Maratona 138 km con 4.230 m, Medio 106 km con 3.130 m, Sellaronda 55 km con 1.780 m.",
+        "en": "Elevation gain stated by the organiser: Maratona course 138 km with 4,230 m, Middle 106 km with 3,130 m, Sellaronda 55 km with 1,780 m."
+      },
+      "courseSource": "https://www.maratona.it/en/138km"
     },
     {
       "id": "etape",
@@ -812,7 +842,12 @@
         "it": "£185",
         "en": "£185"
       },
-      "major": false
+      "major": false,
+      "course": {
+        "it": "Dati ufficiali dell'edizione 2026 (non del 2027 in elenco): 170 km e 5.400 m di dislivello positivo. Il percorso cambia ogni anno: quello 2027 qui sopra viene da una fonte terza e non è confermato dall'organizzazione.",
+        "en": "Official figures for the 2026 edition (not the 2027 listed): 170 km and 5,400 m of climbing. The course changes every year: the 2027 figures above come from a third-party source and are not confirmed by the organiser."
+      },
+      "courseSource": "https://www.letapedutourdefrance.com/fr/actus/decouvre-le-parcours-de-letape-du-tour-de-france-2026/157"
     },
     {
       "id": "sydney",
@@ -1002,7 +1037,12 @@
         "it": "È la maratona più grande del mondo: prenota l'hotel appena hai il pettorale.",
         "en": "It's the world's largest marathon: book your hotel as soon as you have a bib."
       },
-      "source": "https://marathonhandbook.com/heres-how-to-enter-the-2026-new-york-city-marathon/"
+      "source": "https://marathonhandbook.com/heres-how-to-enter-the-2026-new-york-city-marathon/",
+      "course": {
+        "it": "Cinque distretti, dal Verrazzano-Narrows Bridge a Staten Island fino a Central Park. L'organizzazione pubblica un profilo altimetrico, che non abbiamo letto in numeri.",
+        "en": "Five boroughs, from the Verrazzano-Narrows Bridge on Staten Island to Central Park. The organiser publishes an elevation profile, which we did not read in numbers."
+      },
+      "courseSource": "https://webassets.nyrr.org/nyrrwebsiteassets/TCSNYCM25_RunnerGuide_Mobile_M.pdf"
     },
     {
       "id": "amsterdam",
@@ -1035,7 +1075,12 @@
       "start": {
         "it": "Il weekend di gara è sabato 30 e domenica 31 ottobre 2027",
         "en": "Race weekend is Saturday 30 and Sunday 31 October 2027"
-      }
+      },
+      "course": {
+        "it": "Percorso piatto e veloce secondo l'organizzazione, che pubblica anche un profilo altimetrico. Nessun dislivello in metri letto da noi.",
+        "en": "Flat and fast according to the organiser, who also publishes an elevation profile. We did not read elevation in metres."
+      },
+      "courseSource": "https://www.tcsamsterdammarathon.eu/tcs-marathon"
     },
     {
       "id": "warsaw",
@@ -1068,7 +1113,12 @@
       "start": {
         "it": "Partenza alle 9:00",
         "en": "Start at 9:00 am"
-      }
+      },
+      "course": {
+        "it": "Secondo l'organizzazione (articolo di agosto 2026, edizione 2026) il percorso è per lo più piatto, con circa 84 m di dislivello positivo cumulato; partenza a 113 m s.l.m., arrivo a 113 m.",
+        "en": "According to the organiser (August 2026 article, 2026 edition) the course is mostly flat, with about 84 m of cumulative climb; start at 113 m above sea level, finish at 113 m."
+      },
+      "courseSource": "https://maratonwarszawski.com/pl/aktualnosci/trasa-maratonu/"
     },
     {
       "id": "budapest",
@@ -1130,7 +1180,12 @@
       "limit": {
         "it": "3 ore",
         "en": "3 hours"
-      }
+      },
+      "course": {
+        "it": "Descritta dall'organizzazione come una delle mezze maratone più veloci al mondo (affermazione promozionale, non una misura). Nessun dislivello in metri letto.",
+        "en": "Described by the organiser as one of the fastest half marathons in the world (promotional claim, not a measurement). No elevation in metres read."
+      },
+      "courseSource": "https://maratonaclubedeportugal.com/en/corrida-marco/edp-lisbon-half-marathon/"
     },
     {
       "id": "berlin-half",
@@ -1159,7 +1214,12 @@
         "it": "da confermare",
         "en": "to be confirmed"
       },
-      "major": false
+      "major": false,
+      "course": {
+        "it": "Percorso con profilo altimetrico basso (piatto nella versione tedesca) secondo l'organizzazione, che pubblica anche il grafico. Dislivello in metri non letto da noi.",
+        "en": "Course with a low elevation profile according to the organiser, who also publishes the elevation graph. We did not read elevation in metres."
+      },
+      "courseSource": "https://www.generali-berliner-halbmarathon.de/en/your-race/course"
     },
     {
       "id": "cph-half",
@@ -1192,7 +1252,12 @@
       "start": {
         "it": "Partenza alle 9:30 a Østerbro, 45.000 posti",
         "en": "Start at 9:30 am in Østerbro, 45,000 places"
-      }
+      },
+      "course": {
+        "it": "Partenza da Jagtvej, arrivo su Øster Allé. Descritto dall'organizzazione come percorso velocissimo (affermazione promozionale, non una misura). Nessun dislivello in metri letto.",
+        "en": "Starts on Jagtvej, finishes on Øster Allé. Described by the organiser as a lightning-fast course (promotional claim, not a measurement). No elevation in metres read."
+      },
+      "courseSource": "https://cphhalf.dk/en/alt-om-ruten/"
     }
   ]
 }
