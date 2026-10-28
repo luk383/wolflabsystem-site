@@ -26,3 +26,5 @@
 .wolf .today .rest{display:flex;gap:8px;align-items:center;margin-top:14px;flex-wrap:wrap}.wolf .today .rest span{flex:1;min-width:140px;color:#d6ff35;font-weight:700}.wolf .today .next{color:#c8c8c8}
 .wolf details.hint summary{color:#9a9a9a;font-size:12px}.wolf p.hint{color:#9a9a9a;font-size:12px}
 .wolf nav:empty{display:none}
+@media(max-width:700px){body.wz-active .w-page-hero{display:none}body.wz-active .site-head .nav{display:none}body.wz-active .site-head{padding-block:6px}body.wz-active .site-head .wrap{min-height:0}body.wz-active .w-body{padding-top:10px}}
+.wolf section.wiz,.wolf section.today{padding:8px 0 4px}

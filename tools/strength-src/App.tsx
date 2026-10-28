@@ -35,6 +35,7 @@ export function App(){
  const exportData=async()=>{const r=await saveText(storage.backup(data),'wolflab-schede-builder.json','application/json');setNotice(saveMsg(r));};
  const list=library.map((e,i)=>({e,i})).filter(({e,i})=>(muscle==='Tutti'||e[1]===muscle)&&(equipment==='Tutti'||e[2]===equipment)&&(pattern==='Tutti'||patterns[i]===pattern)&&e[0].toLowerCase().includes(query.toLowerCase()));
  const [wz,setWz]=useState(window.location.hash==='#wizard');const inWz=tab==='wizard'||((wz||(session&&session.uiMode==='today'))&&tab==='allenamento');
+ useEffect(()=>{document.body.classList.toggle('wz-active',!!inWz);return()=>document.body.classList.remove('wz-active');},[inWz]);
  const seconds=Math.max(0,Math.ceil((deadline-now)/1000));
  return <FileCard><div className={"wolf"+(inWz?" wzmode":"")} aria-busy={!storage.ready}><div className="top"><strong>WOLF <span>STRENGTH LAB</span></strong></div>{!storage.ready&&<p role="status">Preparazione dati di prova…</p>}<nav aria-label="Navigazione">{tab!=='home'&&!inWz&&<button onClick={()=>switchTab('home')}>← Dashboard</button>}{session&&tab!=='allenamento'&&<button className="on" onClick={()=>switchTab('allenamento')}>Allenamento in corso ●</button>}</nav>
  {pending&&<div className="notice" role="alert"><p>{pending.label}</p><div className="actions"><button onClick={()=>setPending(null)}>Annulla conferma</button><button className="primary" onClick={()=>{pending.run();setPending(null);}}>Conferma</button></div></div>}{notice&&<p className="notice" role="status">{notice}</p>}
