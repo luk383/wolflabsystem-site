@@ -1,462 +1,439 @@
 {
- "sonno-e-recupero|sleep-and-recovery": {
-  "lv": [
-   "L5 + L4",
-   "L5 + L4"
-  ],
-  "stars": 3,
-  "how": [
-   "Revisione documentale delle 4 fonti citate. Una raccomandazione di società scientifiche e un consenso di esperti (L5), una revisione con risultati contrastanti, uno studio su 11 giocatori di basket.",
-   "Document review of the 4 cited sources: a joint recommendation by scientific societies and an expert consensus (L5), a review with mixed results, and a study of 11 basketball players."
-  ],
-  "lim": [
-   "Campione molto piccolo e di un solo sport. Non prova l'effetto sui runner amatori. Le indicazioni pratiche sono buone pratiche, non risultati degli studi.",
-   "Very small sample from a single sport. It does not prove the effect for recreational runners. The practical tips are good practice, not study results."
-  ],
-  "why": [
-   "Prove poche e in parte contrastanti: Limitata.",
-   "Few and partly conflicting studies: Limited."
-  ],
-  "scope": [
-   "durata del sonno e prestazione",
-   "sleep duration and performance"
-  ]
- },
- "scarico-pre-gara|race-taper": {
-  "lv": [
-   "L1",
-   "L1"
-  ],
-  "stars": 4,
-  "how": [
-   "Revisione documentale delle 2 fonti: una meta-analisi di 27 studi (L1) e una revisione precedente.",
-   "Document review of the 2 sources: a meta-analysis of 27 studies (L1) and an earlier review."
-  ],
-  "lim": [
-   "Atleti agonisti di vari sport, non solo maratoneti. Sono medie: il singolo atleta può rispondere diversamente. La tabella per la maratona è un adattamento pratico, non un protocollo testato.",
-   "Competitive athletes from several sports, not only marathoners. These are averages and individuals may respond differently. The marathon table is a practical adaptation, not a tested protocol."
-  ],
-  "why": [
-   "Prove buone, con limite di popolazione: Moderata.",
-   "Good evidence with a population limit: Moderate."
-  ],
-  "scope": [
-   "durata e riduzione di volume dello scarico",
-   "taper length and volume reduction"
-  ]
- },
- "caffeina-e-prestazione|caffeine-and-performance": {
-  "lv": [
-   "L5 (sintesi di studi)",
-   "L5 (study synthesis)"
-  ],
-  "stars": 4,
-  "how": [
-   "Revisione documentale di 1 fonte: la posizione ufficiale della International Society of Sports Nutrition, che riassume decenni di studi.",
-   "Document review of 1 source: the International Society of Sports Nutrition position stand, which summarizes decades of studies."
-  ],
-  "lim": [
-   "Fonte unica, consenso di esperti e non prescrizione individuale. La risposta varia molto da persona a persona. Il contenuto di caffeina dell'espresso è una nostra stima indicativa, non della fonte.",
-   "Single source, an expert consensus and not an individual prescription. Response varies widely between people. The espresso caffeine content is our rough estimate, not from the source."
-  ],
-  "why": [
-   "Prove consistenti ma da una sola sintesi di esperti: Moderata.",
-   "Consistent evidence but from one expert synthesis: Moderate."
-  ],
-  "scope": [
-   "dose e prestazione di endurance",
-   "dose and endurance performance"
-  ]
- },
- "carboidrati-maratona|marathon-carbohydrates": {
-  "lv": [
-   "L5 + L1",
-   "L5 + L1"
-  ],
-  "stars": 4,
-  "how": [
-   "Revisione documentale delle fonti: linee guida di nutrizione sportiva e revisioni sull'assorbimento dei carboidrati.",
-   "Document review of the sources: sports nutrition guidelines and reviews on carbohydrate absorption."
-  ],
-  "lim": [
-   "Le assunzioni sopra i 90 g/h riguardano atleti abituati e non sono un punto di partenza per amatori. L'ipotesi dei 120 g/h viene da una revisione 2026 e non è dimostrata sul campo.",
-   "Intakes above 90 g/h concern habituated athletes and are not a starting point for recreational runners. The 120 g/h idea comes from a 2026 review and is not proven in the field."
-  ],
-  "why": [
-   "Linee guida solide, limiti sugli amatori: Moderata.",
-   "Solid guidelines, limits for recreational runners: Moderate."
-  ],
-  "scope": [
-   "grammi all'ora per durata di gara e carico pre-gara",
-   "grams per hour by race duration and pre-race loading"
-  ]
- },
- "forza-per-endurance|strength-for-endurance": {
-  "lv": [
-   "L1",
-   "L1"
-  ],
-  "stars": 4,
-  "how": [
-   "Revisione documentale: una meta-analisi di 59 studi (L1) e due revisioni su corridori e ciclisti allenati.",
-   "Document review: a meta-analysis of 59 studies (L1) and two reviews on trained runners and cyclists."
-  ],
-  "lim": [
-   "Il risultato sul VO₂max non è un risultato di gara. Qualità metodologica medio-bassa nelle revisioni su corsa (PEDro 4-6 su 10). Non sono studi sulla maratona. Servono più studi su donne e atleti molto allenati.",
-   "The VO₂max result is not a race result. Medium-to-low methodological quality in the running reviews (PEDro 4-6 out of 10). Not marathon studies. More studies are needed on women and highly trained athletes."
-  ],
-  "why": [
-   "Prove buone ma di qualità mista e non sulla maratona: Moderata.",
-   "Good evidence of mixed quality, not on the marathon: Moderate."
-  ],
-  "scope": [
-   "effetto sul VO₂max; economia di corsa con prove più deboli",
-   "effect on VO₂max; running economy with weaker evidence"
-  ]
- },
- "ftp-e-zone-di-potenza|ftp-and-power-zones": {
-  "lv": [
-   "L4",
-   "L4"
-  ],
-  "stars": 3,
-  "how": [
-   "Revisione documentale delle fonti: studi di validazione su piccoli campioni di ciclisti allenati e testi di riferimento sulle zone.",
-   "Document review of the sources: validation studies on small samples of trained cyclists and reference texts on zones."
-  ],
-  "lim": [
-   "Pochi studi, campioni piccoli, quasi solo ciclisti allenati e in maggioranza uomini. Il 95% dei 20 minuti può sovrastimare la soglia e differire anche di 40-60 W tra persone.",
-   "Few studies, small samples, almost only trained and mostly male cyclists. The 95% of the 20-minute test can overestimate threshold and differ by 40-60 W between people."
-  ],
-  "why": [
-   "Poche prove su campioni piccoli: Limitata.",
-   "Few studies on small samples: Limited."
-  ],
-  "scope": [
-   "test da 20 minuti come stima della soglia",
-   "20-minute test as a threshold estimate"
-  ]
- },
- "quanta-intensita-serve|how-much-intensity": {
-  "lv": [
-   "L4 + L3",
-   "L4 + L3"
-  ],
-  "stars": 3,
-  "how": [
-   "Revisione documentale: studi descrittivi su atleti d'élite, una revisione sistematica di 10 studi e un singolo studio di 9 settimane su 48 atleti.",
-   "Document review: descriptive studies on elite athletes, a systematic review of 10 studies and a single 9-week study of 48 athletes."
-  ],
-  "lim": [
-   "Gli studi descrivono cosa fanno gli atleti migliori, non provano che sia lo schema migliore. Lo studio di intervento è uno solo. Non è dimostrato che polarizzato o piramidale sia meglio per tutti.",
-   "The studies describe what top athletes do and do not prove it is the best scheme. There is only one intervention study. It is not shown that polarized or pyramidal is better for everyone."
-  ],
-  "why": [
-   "Prove osservazionali e un solo intervento: Limitata.",
-   "Observational evidence and a single intervention: Limited."
-  ],
-  "scope": [
-   "distribuzione dell'intensità negli atleti allenati",
-   "intensity distribution in trained athletes"
-  ]
- },
- "bici-per-la-maratona|cycling-for-the-marathon": {
-  "lv": [
-   "L1 datata + L5",
-   "Dated L1 + L5"
-  ],
-  "stars": 2,
-  "how": [
-   "Revisione documentale: una revisione del 1994 sul VO₂max, testi sulla biomeccanica e un parere di un allenatore-ricercatore.",
-   "Document review: a 1994 review on VO₂max, biomechanics texts and an opinion from a coach-researcher."
-  ],
-  "lim": [
-   "Revisione datata e solo sul VO₂max, non sulla prestazione in maratona. Parte delle indicazioni è parere di esperti.",
-   "Dated review about VO₂max only, not marathon performance. Part of the guidance is expert opinion."
-  ],
-  "why": [
-   "Prove datate e in parte pareri: Molto limitata.",
-   "Dated evidence and partly opinion: Very limited."
-  ],
-  "scope": [
-   "trasferimento del VO₂max da bici a corsa",
-   "VO₂max transfer from bike to run"
-  ]
- },
- "scarpe-con-piastra-carbonio|carbon-plate-running-shoes": {
-  "lv": [
-   "L1 (energia) · L2-L4 (durata, infortuni)",
-   "L1 (energy) · L2-L4 (durability, injuries)"
-  ],
-  "stars": 4,
-  "how": [
-   "Revisione documentale delle fonti: una meta-analisi del 2026 su 14 studi (certezza moderata), una meta-analisi su 17 studi incrociati randomizzati con 281 partecipanti, studi singoli su placebo (24 corritrici), durata (22 corridori), infortuni (848 e 195 corridori) e un editoriale BJSM.",
-   "Document review of the sources: a 2026 meta-analysis of 14 studies (moderate certainty), a meta-analysis of 17 randomized crossover studies with 281 participants, single studies on placebo (24 women runners), durability (22 runners), injuries (848 and 195 runners) and a BJSM editorial."
-  ],
-  "lim": [
-   "Il risultato sul costo energetico è di laboratorio, a ritmo costante: non diventa in modo lineare un uguale guadagno di tempo in gara. Sulla durata il campione è piccolo (solo uomini allenati, un ritmo). Sugli infortuni i dati sono pochi, uno studio ha un autore legato al produttore e l'editoriale segnala dubbi senza prove.",
-   "The energy-cost result is a laboratory finding at constant pace: it does not translate linearly into an equal race time gain. The durability sample is small (trained men only, one pace). Injury data are few, one study has an author linked to the manufacturer, and the editorial raises concerns without evidence."
-  ],
-  "why": [
-   "La stella vale per l'effetto sul costo energetico (prove di livello 1, certezza moderata). Per durata e infortuni la fiducia è Molto limitata, e la pagina lo dice separatamente. Voto: Moderata.",
-   "The rating applies to the energy-cost effect (level 1 evidence, moderate certainty). For durability and injuries confidence is Very limited, and the page says so separately. Rating: Moderate."
-  ],
-  "scope": [
-   "solo il costo energetico. Durata e infortuni: Molto limitata",
-   "energy cost only. Durability and injuries: Very limited"
-  ]
- },
- "nuoto-metodi-di-allenamento|swim-training-methods": {
-  "lv": [
-   "L1-L2 su nuotatori agonisti",
-   "L1-L2 in competitive swimmers"
-  ],
-  "stars": 2,
-  "how": [
-   "Revisione documentale: 3 revisioni sistematiche o meta-analisi e due studi sperimentali, in gran parte letti solo negli abstract.",
-   "Document review: 3 systematic reviews or meta-analyses and two experimental studies, mostly read as abstracts only."
-  ],
-  "lim": [
-   "Nuotatori agonisti, spesso giovani; studi osservazionali o brevi; testo completo non letto per la maggior parte. Non vale per amatori e triatleti.",
-   "Competitive, often young swimmers; observational or short studies; full text not read for most. Does not apply to amateurs and triathletes."
-  ],
-  "why": [
-   "Prove su un gruppo diverso dal tuo e abstract: Molto limitata.",
-   "Evidence from a different group and abstracts: Very limited."
-  ],
-  "scope": [
-   "metodi di allenamento in nuotatori agonisti",
-   "training methods in competitive swimmers"
-  ]
- },
- "nuoto-css-velocita-critica|swim-critical-speed": {
-  "lv": [
-   "scoping review letta + preprint",
-   "Scoping review read + preprint"
-  ],
-  "stars": 2,
-  "how": [
-   "Testo completo di una scoping review (41 studi) e di un preprint; solo l'abstract dello studio originale del 1992.",
-   "Full text of a scoping review (41 studies) and a preprint; abstract only for the original 1992 study."
-  ],
-  "lim": [
-   "Il risultato dipende dal protocollo; ripetibilità mostrata in nuotatori giovani di livello nazionale; triatleti e amatori non coperti.",
-   "Result depends on the protocol; repeatability shown in young national-level swimmers; triathletes and amateurs not covered."
-  ],
-  "why": [
-   "Metodo noto ma dipendente dal protocollo e non studiato nel tuo gruppo: Molto limitata.",
-   "Known method but protocol-dependent and not studied in your group: Very limited."
-  ],
-  "scope": [
-   "calcolo e limiti della velocità critica di nuoto",
-   "calculation and limits of critical swim speed"
-  ]
- },
- "nuoto-tecnica-bracciata|swim-stroke-technique": {
-  "lv": [
-   "abstract di una revisione",
-   "Abstract of a review"
-  ],
-  "stars": 1,
-  "how": [
-   "Solo gli abstract di una revisione e di una revisione sulla muta.",
-   "Abstracts only of a review and a wetsuit review."
-  ],
-  "lim": [
-   "Nessun valore obiettivo verificato per amatori; testo completo non letto.",
-   "No verified target values for amateurs; full text not read."
-  ],
-  "why": [
-   "Solo abstract e nessun valore applicabile: Insufficiente.",
-   "Abstracts only and no applicable value: Insufficient."
-  ],
-  "scope": [
-   "grandezze che descrivono la tecnica di nuoto",
-   "quantities describing swim technique"
-  ]
- },
- "nuoto-acque-libere-sicurezza|open-water-swimming-safety": {
-  "lv": [
-   "L5 + revisione sistematica",
-   "L5 + systematic review"
-  ],
-  "stars": 3,
-  "how": [
-   "Testo di due pagine di sicurezza del RNLI e abstract di una revisione sistematica sulla muta.",
-   "Text of two RNLI safety pages and the abstract of a systematic review on wetsuits."
-  ],
-  "lim": [
-   "Enti britannici, non norme italiane; la revisione sulla muta copre protocolli molto diversi.",
-   "British bodies, not Italian rules; the wetsuit review covers very different protocols."
-  ],
-  "why": [
-   "Raccomandazioni di enti di soccorso, non studi controllati: Limitata.",
-   "Recommendations from rescue bodies, not controlled studies: Limited."
-  ],
-  "scope": [
-   "buone pratiche di sicurezza in acque libere e effetto della muta",
-   "open-water safety good practice and wetsuit effect"
-  ]
- },
- "nuoto-gare-e-formati|swim-race-formats": {
-  "lv": [
-   "fonti ufficiali degli organizzatori",
-   "Official organiser sources"
-  ],
-  "stars": 3,
-  "how": [
-   "Siti e regolamenti ufficiali degli enti e degli organizzatori citati.",
-   "Official sites and rulebooks of the cited bodies and organisers."
-  ],
-  "lim": [
-   "Distanze, categorie e pesi come dichiarati da enti e organizzatori; letti i testi di HYROX Singles 26/27 e IRONMAN 2026, World Aquatics solo giugno 2025; nessun calendario.",
-   "Distances, categories and weights as stated by bodies and organisers; texts of HYROX Singles 26/27 and IRONMAN 2026 read, World Aquatics June 2025 only; no calendar."
-  ],
-  "why": [
-   "Dati ufficiali dell'organizzatore, non una prova scientifica: Limitata.",
-   "Official organiser data, not scientific evidence: Limited."
-  ],
-  "scope": [
-   "distanze e formati di gara dichiarati",
-   "distances and formats as stated"
-  ]
- },
- "nuoto-ritmo-gara-triathlon|swim-pacing-triathlon": {
-  "lv": [
-   "2 revisioni, solo abstract",
-   "2 reviews, abstracts only"
-  ],
-  "stars": 2,
-  "how": [
-   "Revisione documentale di due revisioni (una sistematica di 23 studi), lette solo nell'abstract.",
-   "Document review of two reviews (one systematic, 23 studies), read as abstracts only."
-  ],
-  "lim": [
-   "Nuotatori e triatleti agonisti; formati Sprint e Olimpico; nessun numero applicabile; testo completo non letto.",
-   "Competitive swimmers and triathletes; Sprint and Olympic formats; no applicable numbers; full text not read."
-  ],
-  "why": [
-   "Solo abstract e gruppo diverso dal tuo: Molto limitata.",
-   "Abstracts only and a different group: Very limited."
-  ],
-  "scope": [
-   "gestione del ritmo e intensità del nuoto in atleti agonisti",
-   "pacing and swim intensity in competitive athletes"
-  ]
- },
- "nuoto-piscina-acque-libere|swim-pool-vs-open-water": {
-  "lv": [
-   "2 studi, abstract e parti del testo",
-   "2 studies, abstract and parts of the text"
-  ],
-  "stars": 2,
-  "how": [
-   "Revisione documentale di due studi sperimentali (14 triatleti élite; 15 nuotatori master).",
-   "Document review of two experimental studies (14 elite triathletes; 15 master swimmers)."
-  ],
-  "lim": [
-   "Atleti élite e master maschi allenati, una prova ciascuno; risultati sul carico non coincidenti; nessun obiettivo o ritmo applicabile.",
-   "Elite athletes and trained male masters, one test each; load results not matching; no applicable target or pace."
-  ],
-  "why": [
-   "Due studi piccoli su gruppi diversi dal tuo: Molto limitata.",
-   "Two small studies on groups different from yours: Very limited."
-  ],
-  "scope": [
-   "differenze tra piscina e acque libere in triatleti élite",
-   "pool vs open-water differences in elite triathletes"
-  ]
- },
- "nuoto-orientamento-sighting|swim-open-water-sighting": {
-  "lv": [
-   "indicazioni di federazione e 1 studio, abstract",
-   "governing-body guidance and 1 study, abstract"
-  ],
-  "stars": 1,
-  "how": [
-   "Revisione documentale di tre pagine di Swim England e di uno studio sulla resistenza passiva.",
-   "Document review of three Swim England pages and one passive-drag study."
-  ],
-  "lim": [
-   "Indicazioni non sperimentali; lo studio è su scivolamento passivo in piscina, 10 nuotatori; nessuno studio su amatori o su tempi di gara.",
-   "Non-experimental guidance; the study covers passive gliding in the pool, 10 swimmers; no study on amateurs or race times."
-  ],
-  "why": [
-   "Indicazioni di federazione e un test indiretto: Molto limitata.",
-   "Governing-body guidance and an indirect test: Very limited."
-  ],
-  "scope": [
-   "esercizi di orientamento e posizione della testa, indicazioni generali",
-   "sighting drills and head position, general guidance"
-  ]
- },
- "hyrox-triathlon-lungo-studi|hyrox-long-triathlon-studies": {
-  "lv": [
-   "2 studi osservazionali, testo letto",
-   "2 observational studies, text read"
-  ],
-  "stars": 1,
-  "how": [
-   "Revisione documentale di due studi osservazionali su atleti amatoriali (11 e 18 partecipanti).",
-   "Document review of two observational studies of amateur athletes (11 and 18 participants)."
-  ],
-  "lim": [
-   "Campioni piccoli, associazioni non causali; HYROX simulata e atleti molto in forma; mezzo IRONMAN solo maschi con meno di 2 anni di triathlon; nessun piano applicabile.",
-   "Small samples, non-causal associations; simulated HYROX and very fit athletes; half IRONMAN with males under 2 years of triathlon only; no applicable plan."
-  ],
-  "why": [
-   "Due piccoli studi osservazionali su gruppi specifici: Molto limitata.",
-   "Two small observational studies on specific groups: Very limited."
-  ],
-  "scope": [
-   "atleti amatoriali in HYROX simulata e triatleti amatori verso un mezzo IRONMAN",
-   "amateur athletes in a simulated HYROX and amateur triathletes toward a half IRONMAN"
-  ]
- },
- "nuoto-acque-libere-regole-fin-master|swim-open-water-italy-fin-masters": {
-  "lv": [
-   "regolamento ufficiale FIN",
-   "Official FIN regulations"
-  ],
-  "stars": 3,
-  "how": [
-   "Lettura della sezione I del regolamento acque libere Master 2025-2026.",
-   "Reading of section I of the 2025-2026 open-water Masters regulations."
-  ],
-  "lim": [
-   "Solo sezione I, stagione 2025-2026, settore Master; non il regolamento per intero né altri eventi.",
-   "Section I only, 2025-2026 season, Masters sector; not the full regulation or other events."
-  ],
-  "why": [
-   "Regolamento ufficiale, non una prova scientifica: Limitata.",
-   "Official regulation, not scientific evidence: Limited."
-  ],
-  "scope": [
-   "gare acque libere Master FIN, stagione 2025-2026",
-   "FIN Masters open-water races, 2025-2026 season"
-  ]
- },
- "nuoto-sedute-esercizi-transizione|swim-sessions-drills-transition": {
-  "lv": [
-   "indicazioni di federazione e regolamento ufficiale, nessuno studio",
-   "governing-body guidance and official rulebook, no study"
-  ],
-  "stars": 1,
-  "how": [
-   "Lettura di sei pagine di Swim England e U.S. Masters Swimming e delle sezioni 4.2 e 7.1 del regolamento World Triathlon.",
-   "Reading of six Swim England and U.S. Masters Swimming pages and of sections 4.2 and 7.1 of the World Triathlon rulebook."
-  ],
-  "lim": [
-   "Indicazioni non sperimentali, non studi su amatori; sedute 2-20 di Swim England riservate ai soci; il regolamento riguarda le gare World Triathlon, altri eventi possono differire.",
-   "Non-experimental guidance, not studies on amateurs; Swim England sessions 2-20 are members-only; the rulebook covers World Triathlon races, other events can differ."
-  ],
-  "why": [
-   "Indicazioni di federazione e regolamento: Molto limitata.",
-   "Governing-body guidance and a rulebook: Very limited."
-  ],
-  "scope": [
-   "struttura delle sedute, esercizi di respirazione, regole di muta e prima transizione nelle gare World Triathlon; non piani né prescrizioni",
-   "session structure, breathing drills, wetsuit and first-transition rules in World Triathlon races; not plans or prescriptions"
-  ]
- }
+  "sonno-e-recupero|sleep-and-recovery": {
+    "lv": [
+      "L5 + L4",
+      "L5 + L4"
+    ],
+    "stars": 3,
+    "how": [
+      "Revisione documentale delle 4 fonti citate. Una raccomandazione di società scientifiche e un consenso di esperti (L5), una revisione con risultati contrastanti, uno studio su 11 giocatori di basket.",
+      "Document review of the 4 cited sources: a joint recommendation by scientific societies and an expert consensus (L5), a review with mixed results, and a study of 11 basketball players."
+    ],
+    "lim": [
+      "Campione molto piccolo e di un solo sport. Non prova l'effetto sui runner amatori. Le indicazioni pratiche sono buone pratiche, non risultati degli studi.",
+      "Very small sample from a single sport. It does not prove the effect for recreational runners. The practical tips are good practice, not study results."
+    ],
+    "why": [
+      "Prove poche e in parte contrastanti: Limitata.",
+      "Few and partly conflicting studies: Limited."
+    ],
+    "scope": [
+      "durata del sonno e prestazione",
+      "sleep duration and performance"
+    ]
+  },
+  "scarico-pre-gara|race-taper": {
+    "lv": [
+      "L1",
+      "L1"
+    ],
+    "stars": 4,
+    "how": [
+      "Revisione documentale delle 2 fonti: una meta-analisi di 27 studi (L1) e una revisione precedente.",
+      "Document review of the 2 sources: a meta-analysis of 27 studies (L1) and an earlier review."
+    ],
+    "lim": [
+      "Atleti agonisti di vari sport, non solo maratoneti. Sono medie: il singolo atleta può rispondere diversamente. La tabella per la maratona è un adattamento pratico, non un protocollo testato.",
+      "Competitive athletes from several sports, not only marathoners. These are averages and individuals may respond differently. The marathon table is a practical adaptation, not a tested protocol."
+    ],
+    "why": [
+      "Prove buone, con limite di popolazione: Moderata.",
+      "Good evidence with a population limit: Moderate."
+    ],
+    "scope": [
+      "durata e riduzione di volume dello scarico",
+      "taper length and volume reduction"
+    ]
+  },
+  "caffeina-e-prestazione|caffeine-and-performance": {
+    "lv": [
+      "L5 (sintesi di studi)",
+      "L5 (study synthesis)"
+    ],
+    "stars": 4,
+    "how": [
+      "Revisione documentale di 1 fonte: la posizione ufficiale della International Society of Sports Nutrition, che riassume decenni di studi.",
+      "Document review of 1 source: the International Society of Sports Nutrition position stand, which summarizes decades of studies."
+    ],
+    "lim": [
+      "Fonte unica, consenso di esperti e non prescrizione individuale. La risposta varia molto da persona a persona. Il contenuto di caffeina dell'espresso è una nostra stima indicativa, non della fonte.",
+      "Single source, an expert consensus and not an individual prescription. Response varies widely between people. The espresso caffeine content is our rough estimate, not from the source."
+    ],
+    "why": [
+      "Prove consistenti ma da una sola sintesi di esperti: Moderata.",
+      "Consistent evidence but from one expert synthesis: Moderate."
+    ],
+    "scope": [
+      "dose e prestazione di endurance",
+      "dose and endurance performance"
+    ]
+  },
+  "carboidrati-maratona|marathon-carbohydrates": {
+    "lv": [
+      "L5 + L1",
+      "L5 + L1"
+    ],
+    "stars": 4,
+    "how": [
+      "Revisione documentale delle fonti: linee guida di nutrizione sportiva e revisioni sull'assorbimento dei carboidrati.",
+      "Document review of the sources: sports nutrition guidelines and reviews on carbohydrate absorption."
+    ],
+    "lim": [
+      "Le assunzioni sopra i 90 g/h riguardano atleti abituati e non sono un punto di partenza per amatori. L'ipotesi dei 120 g/h viene da una revisione 2026 e non è dimostrata sul campo.",
+      "Intakes above 90 g/h concern habituated athletes and are not a starting point for recreational runners. The 120 g/h idea comes from a 2026 review and is not proven in the field."
+    ],
+    "why": [
+      "Linee guida solide, limiti sugli amatori: Moderata.",
+      "Solid guidelines, limits for recreational runners: Moderate."
+    ],
+    "scope": [
+      "grammi all'ora per durata di gara e carico pre-gara",
+      "grams per hour by race duration and pre-race loading"
+    ]
+  },
+  "forza-per-endurance|strength-for-endurance": {
+    "lv": [
+      "L1",
+      "L1"
+    ],
+    "stars": 4,
+    "how": [
+      "Revisione documentale: una meta-analisi di 59 studi (L1) e due revisioni su corridori e ciclisti allenati.",
+      "Document review: a meta-analysis of 59 studies (L1) and two reviews on trained runners and cyclists."
+    ],
+    "lim": [
+      "Il risultato sul VO₂max non è un risultato di gara. Qualità metodologica medio-bassa nelle revisioni su corsa (PEDro 4-6 su 10). Non sono studi sulla maratona. Servono più studi su donne e atleti molto allenati.",
+      "The VO₂max result is not a race result. Medium-to-low methodological quality in the running reviews (PEDro 4-6 out of 10). Not marathon studies. More studies are needed on women and highly trained athletes."
+    ],
+    "why": [
+      "Prove buone ma di qualità mista e non sulla maratona: Moderata.",
+      "Good evidence of mixed quality, not on the marathon: Moderate."
+    ],
+    "scope": [
+      "effetto sul VO₂max; economia di corsa con prove più deboli",
+      "effect on VO₂max; running economy with weaker evidence"
+    ]
+  },
+  "ftp-e-zone-di-potenza|ftp-and-power-zones": {
+    "lv": [
+      "L4",
+      "L4"
+    ],
+    "stars": 3,
+    "how": [
+      "Revisione documentale delle fonti: studi di validazione su piccoli campioni di ciclisti allenati e testi di riferimento sulle zone.",
+      "Document review of the sources: validation studies on small samples of trained cyclists and reference texts on zones."
+    ],
+    "lim": [
+      "Pochi studi, campioni piccoli, quasi solo ciclisti allenati e in maggioranza uomini. Il 95% dei 20 minuti può sovrastimare la soglia e differire anche di 40-60 W tra persone.",
+      "Few studies, small samples, almost only trained and mostly male cyclists. The 95% of the 20-minute test can overestimate threshold and differ by 40-60 W between people."
+    ],
+    "why": [
+      "Poche prove su campioni piccoli: Limitata.",
+      "Few studies on small samples: Limited."
+    ],
+    "scope": [
+      "test da 20 minuti come stima della soglia",
+      "20-minute test as a threshold estimate"
+    ]
+  },
+  "bici-per-la-maratona|cycling-for-the-marathon": {
+    "lv": [
+      "L1 datata + L5",
+      "Dated L1 + L5"
+    ],
+    "stars": 2,
+    "how": [
+      "Revisione documentale: una revisione del 1994 sul VO₂max, testi sulla biomeccanica e un parere di un allenatore-ricercatore.",
+      "Document review: a 1994 review on VO₂max, biomechanics texts and an opinion from a coach-researcher."
+    ],
+    "lim": [
+      "Revisione datata e solo sul VO₂max, non sulla prestazione in maratona. Parte delle indicazioni è parere di esperti.",
+      "Dated review about VO₂max only, not marathon performance. Part of the guidance is expert opinion."
+    ],
+    "why": [
+      "Prove datate e in parte pareri: Molto limitata.",
+      "Dated evidence and partly opinion: Very limited."
+    ],
+    "scope": [
+      "trasferimento del VO₂max da bici a corsa",
+      "VO₂max transfer from bike to run"
+    ]
+  },
+  "scarpe-con-piastra-carbonio|carbon-plate-running-shoes": {
+    "lv": [
+      "L1 (energia) · L2-L4 (durata, infortuni)",
+      "L1 (energy) · L2-L4 (durability, injuries)"
+    ],
+    "stars": 4,
+    "how": [
+      "Revisione documentale delle fonti: una meta-analisi del 2026 su 14 studi (certezza moderata), una meta-analisi su 17 studi incrociati randomizzati con 281 partecipanti, studi singoli su placebo (24 corritrici), durata (22 corridori), infortuni (848 e 195 corridori) e un editoriale BJSM.",
+      "Document review of the sources: a 2026 meta-analysis of 14 studies (moderate certainty), a meta-analysis of 17 randomized crossover studies with 281 participants, single studies on placebo (24 women runners), durability (22 runners), injuries (848 and 195 runners) and a BJSM editorial."
+    ],
+    "lim": [
+      "Il risultato sul costo energetico è di laboratorio, a ritmo costante: non diventa in modo lineare un uguale guadagno di tempo in gara. Sulla durata il campione è piccolo (solo uomini allenati, un ritmo). Sugli infortuni i dati sono pochi, uno studio ha un autore legato al produttore e l'editoriale segnala dubbi senza prove.",
+      "The energy-cost result is a laboratory finding at constant pace: it does not translate linearly into an equal race time gain. The durability sample is small (trained men only, one pace). Injury data are few, one study has an author linked to the manufacturer, and the editorial raises concerns without evidence."
+    ],
+    "why": [
+      "La stella vale per l'effetto sul costo energetico (prove di livello 1, certezza moderata). Per durata e infortuni la fiducia è Molto limitata, e la pagina lo dice separatamente. Voto: Moderata.",
+      "The rating applies to the energy-cost effect (level 1 evidence, moderate certainty). For durability and injuries confidence is Very limited, and the page says so separately. Rating: Moderate."
+    ],
+    "scope": [
+      "solo il costo energetico. Durata e infortuni: Molto limitata",
+      "energy cost only. Durability and injuries: Very limited"
+    ]
+  },
+  "nuoto-metodi-di-allenamento|swim-training-methods": {
+    "lv": [
+      "L1-L2 su nuotatori agonisti",
+      "L1-L2 in competitive swimmers"
+    ],
+    "stars": 2,
+    "how": [
+      "Revisione documentale: 3 revisioni sistematiche o meta-analisi e due studi sperimentali, in gran parte letti solo negli abstract.",
+      "Document review: 3 systematic reviews or meta-analyses and two experimental studies, mostly read as abstracts only."
+    ],
+    "lim": [
+      "Nuotatori agonisti, spesso giovani; studi osservazionali o brevi; testo completo non letto per la maggior parte. Non vale per amatori e triatleti.",
+      "Competitive, often young swimmers; observational or short studies; full text not read for most. Does not apply to amateurs and triathletes."
+    ],
+    "why": [
+      "Prove su un gruppo diverso dal tuo e abstract: Molto limitata.",
+      "Evidence from a different group and abstracts: Very limited."
+    ],
+    "scope": [
+      "metodi di allenamento in nuotatori agonisti",
+      "training methods in competitive swimmers"
+    ]
+  },
+  "nuoto-css-velocita-critica|swim-critical-speed": {
+    "lv": [
+      "scoping review letta + preprint",
+      "Scoping review read + preprint"
+    ],
+    "stars": 2,
+    "how": [
+      "Testo completo di una scoping review (41 studi) e di un preprint; solo l'abstract dello studio originale del 1992.",
+      "Full text of a scoping review (41 studies) and a preprint; abstract only for the original 1992 study."
+    ],
+    "lim": [
+      "Il risultato dipende dal protocollo; ripetibilità mostrata in nuotatori giovani di livello nazionale; triatleti e amatori non coperti.",
+      "Result depends on the protocol; repeatability shown in young national-level swimmers; triathletes and amateurs not covered."
+    ],
+    "why": [
+      "Metodo noto ma dipendente dal protocollo e non studiato nel tuo gruppo: Molto limitata.",
+      "Known method but protocol-dependent and not studied in your group: Very limited."
+    ],
+    "scope": [
+      "calcolo e limiti della velocità critica di nuoto",
+      "calculation and limits of critical swim speed"
+    ]
+  },
+  "nuoto-tecnica-bracciata|swim-stroke-technique": {
+    "lv": [
+      "abstract di una revisione",
+      "Abstract of a review"
+    ],
+    "stars": 1,
+    "how": [
+      "Solo gli abstract di una revisione e di una revisione sulla muta.",
+      "Abstracts only of a review and a wetsuit review."
+    ],
+    "lim": [
+      "Nessun valore obiettivo verificato per amatori; testo completo non letto.",
+      "No verified target values for amateurs; full text not read."
+    ],
+    "why": [
+      "Solo abstract e nessun valore applicabile: Insufficiente.",
+      "Abstracts only and no applicable value: Insufficient."
+    ],
+    "scope": [
+      "grandezze che descrivono la tecnica di nuoto",
+      "quantities describing swim technique"
+    ]
+  },
+  "nuoto-acque-libere-sicurezza|open-water-swimming-safety": {
+    "lv": [
+      "L5 + revisione sistematica",
+      "L5 + systematic review"
+    ],
+    "stars": 3,
+    "how": [
+      "Testo di due pagine di sicurezza del RNLI e abstract di una revisione sistematica sulla muta.",
+      "Text of two RNLI safety pages and the abstract of a systematic review on wetsuits."
+    ],
+    "lim": [
+      "Enti britannici, non norme italiane; la revisione sulla muta copre protocolli molto diversi.",
+      "British bodies, not Italian rules; the wetsuit review covers very different protocols."
+    ],
+    "why": [
+      "Raccomandazioni di enti di soccorso, non studi controllati: Limitata.",
+      "Recommendations from rescue bodies, not controlled studies: Limited."
+    ],
+    "scope": [
+      "buone pratiche di sicurezza in acque libere e effetto della muta",
+      "open-water safety good practice and wetsuit effect"
+    ]
+  },
+  "nuoto-gare-e-formati|swim-race-formats": {
+    "lv": [
+      "fonti ufficiali degli organizzatori",
+      "Official organiser sources"
+    ],
+    "stars": 3,
+    "how": [
+      "Siti e regolamenti ufficiali degli enti e degli organizzatori citati.",
+      "Official sites and rulebooks of the cited bodies and organisers."
+    ],
+    "lim": [
+      "Distanze, categorie e pesi come dichiarati da enti e organizzatori; letti i testi di HYROX Singles 26/27 e IRONMAN 2026, World Aquatics solo giugno 2025; nessun calendario.",
+      "Distances, categories and weights as stated by bodies and organisers; texts of HYROX Singles 26/27 and IRONMAN 2026 read, World Aquatics June 2025 only; no calendar."
+    ],
+    "why": [
+      "Dati ufficiali dell'organizzatore, non una prova scientifica: Limitata.",
+      "Official organiser data, not scientific evidence: Limited."
+    ],
+    "scope": [
+      "distanze e formati di gara dichiarati",
+      "distances and formats as stated"
+    ]
+  },
+  "nuoto-ritmo-gara-triathlon|swim-pacing-triathlon": {
+    "lv": [
+      "2 revisioni, solo abstract",
+      "2 reviews, abstracts only"
+    ],
+    "stars": 2,
+    "how": [
+      "Revisione documentale di due revisioni (una sistematica di 23 studi), lette solo nell'abstract.",
+      "Document review of two reviews (one systematic, 23 studies), read as abstracts only."
+    ],
+    "lim": [
+      "Nuotatori e triatleti agonisti; formati Sprint e Olimpico; nessun numero applicabile; testo completo non letto.",
+      "Competitive swimmers and triathletes; Sprint and Olympic formats; no applicable numbers; full text not read."
+    ],
+    "why": [
+      "Solo abstract e gruppo diverso dal tuo: Molto limitata.",
+      "Abstracts only and a different group: Very limited."
+    ],
+    "scope": [
+      "gestione del ritmo e intensità del nuoto in atleti agonisti",
+      "pacing and swim intensity in competitive athletes"
+    ]
+  },
+  "nuoto-piscina-acque-libere|swim-pool-vs-open-water": {
+    "lv": [
+      "2 studi, abstract e parti del testo",
+      "2 studies, abstract and parts of the text"
+    ],
+    "stars": 2,
+    "how": [
+      "Revisione documentale di due studi sperimentali (14 triatleti élite; 15 nuotatori master).",
+      "Document review of two experimental studies (14 elite triathletes; 15 master swimmers)."
+    ],
+    "lim": [
+      "Atleti élite e master maschi allenati, una prova ciascuno; risultati sul carico non coincidenti; nessun obiettivo o ritmo applicabile.",
+      "Elite athletes and trained male masters, one test each; load results not matching; no applicable target or pace."
+    ],
+    "why": [
+      "Due studi piccoli su gruppi diversi dal tuo: Molto limitata.",
+      "Two small studies on groups different from yours: Very limited."
+    ],
+    "scope": [
+      "differenze tra piscina e acque libere in triatleti élite",
+      "pool vs open-water differences in elite triathletes"
+    ]
+  },
+  "nuoto-orientamento-sighting|swim-open-water-sighting": {
+    "lv": [
+      "indicazioni di federazione e 1 studio, abstract",
+      "governing-body guidance and 1 study, abstract"
+    ],
+    "stars": 1,
+    "how": [
+      "Revisione documentale di tre pagine di Swim England e di uno studio sulla resistenza passiva.",
+      "Document review of three Swim England pages and one passive-drag study."
+    ],
+    "lim": [
+      "Indicazioni non sperimentali; lo studio è su scivolamento passivo in piscina, 10 nuotatori; nessuno studio su amatori o su tempi di gara.",
+      "Non-experimental guidance; the study covers passive gliding in the pool, 10 swimmers; no study on amateurs or race times."
+    ],
+    "why": [
+      "Indicazioni di federazione e un test indiretto: Molto limitata.",
+      "Governing-body guidance and an indirect test: Very limited."
+    ],
+    "scope": [
+      "esercizi di orientamento e posizione della testa, indicazioni generali",
+      "sighting drills and head position, general guidance"
+    ]
+  },
+  "hyrox-triathlon-lungo-studi|hyrox-long-triathlon-studies": {
+    "lv": [
+      "2 studi osservazionali, testo letto",
+      "2 observational studies, text read"
+    ],
+    "stars": 1,
+    "how": [
+      "Revisione documentale di due studi osservazionali su atleti amatoriali (11 e 18 partecipanti).",
+      "Document review of two observational studies of amateur athletes (11 and 18 participants)."
+    ],
+    "lim": [
+      "Campioni piccoli, associazioni non causali; HYROX simulata e atleti molto in forma; mezzo IRONMAN solo maschi con meno di 2 anni di triathlon; nessun piano applicabile.",
+      "Small samples, non-causal associations; simulated HYROX and very fit athletes; half IRONMAN with males under 2 years of triathlon only; no applicable plan."
+    ],
+    "why": [
+      "Due piccoli studi osservazionali su gruppi specifici: Molto limitata.",
+      "Two small observational studies on specific groups: Very limited."
+    ],
+    "scope": [
+      "atleti amatoriali in HYROX simulata e triatleti amatori verso un mezzo IRONMAN",
+      "amateur athletes in a simulated HYROX and amateur triathletes toward a half IRONMAN"
+    ]
+  },
+  "nuoto-acque-libere-regole-fin-master|swim-open-water-italy-fin-masters": {
+    "lv": [
+      "regolamento ufficiale FIN",
+      "Official FIN regulations"
+    ],
+    "stars": 3,
+    "how": [
+      "Lettura della sezione I del regolamento acque libere Master 2025-2026.",
+      "Reading of section I of the 2025-2026 open-water Masters regulations."
+    ],
+    "lim": [
+      "Solo sezione I, stagione 2025-2026, settore Master; non il regolamento per intero né altri eventi.",
+      "Section I only, 2025-2026 season, Masters sector; not the full regulation or other events."
+    ],
+    "why": [
+      "Regolamento ufficiale, non una prova scientifica: Limitata.",
+      "Official regulation, not scientific evidence: Limited."
+    ],
+    "scope": [
+      "gare acque libere Master FIN, stagione 2025-2026",
+      "FIN Masters open-water races, 2025-2026 season"
+    ]
+  },
+  "nuoto-sedute-esercizi-transizione|swim-sessions-drills-transition": {
+    "lv": [
+      "indicazioni di federazione e regolamento ufficiale, nessuno studio",
+      "governing-body guidance and official rulebook, no study"
+    ],
+    "stars": 1,
+    "how": [
+      "Lettura di sei pagine di Swim England e U.S. Masters Swimming e delle sezioni 4.2 e 7.1 del regolamento World Triathlon.",
+      "Reading of six Swim England and U.S. Masters Swimming pages and of sections 4.2 and 7.1 of the World Triathlon rulebook."
+    ],
+    "lim": [
+      "Indicazioni non sperimentali, non studi su amatori; sedute 2-20 di Swim England riservate ai soci; il regolamento riguarda le gare World Triathlon, altri eventi possono differire.",
+      "Non-experimental guidance, not studies on amateurs; Swim England sessions 2-20 are members-only; the rulebook covers World Triathlon races, other events can differ."
+    ],
+    "why": [
+      "Indicazioni di federazione e regolamento: Molto limitata.",
+      "Governing-body guidance and a rulebook: Very limited."
+    ],
+    "scope": [
+      "struttura delle sedute, esercizi di respirazione, regole di muta e prima transizione nelle gare World Triathlon; non piani né prescrizioni",
+      "session structure, breathing drills, wetsuit and first-transition rules in World Triathlon races; not plans or prescriptions"
+    ]
+  }
 }

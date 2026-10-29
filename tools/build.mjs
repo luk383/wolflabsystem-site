@@ -406,7 +406,7 @@ function main() {
       });
       const tocItems = toc.filter(Boolean);
       const rel = articles[lang].filter((x) => x.id !== a.id);
-      const DISC = (x) => /^(run-|strength-run|carbon-shoes)/.test(x.id) ? "run" : /^(ride-|ftp$|strength-ride)/.test(x.id) ? "ride" : /^bike$/.test(x.id) ? "runbike" : /^swim-/.test(x.id) ? "swim" : /^(prog-|strength$)/.test(x.id) ? "strength" : "";
+      const DISC = (x) => /^(run-|intensity$|strength-run|carbon-shoes)/.test(x.id) ? "run" : /^(ride-|ftp$|strength-ride)/.test(x.id) ? "ride" : /^bike$/.test(x.id) ? "runbike" : /^swim-/.test(x.id) ? "swim" : /^(prog-|strength$)/.test(x.id) ? "strength" : "";
       const dA = DISC(a);
       const relOk = dA ? rel.filter((x) => DISC(x) === dA || DISC(x) === "") : rel;
       const related = [...relOk.filter((x) => dA && DISC(x) === dA), ...relOk.filter((x) => !(dA && DISC(x) === dA) && x.topic === a.topic), ...relOk.filter((x) => !(dA && DISC(x) === dA) && x.topic !== a.topic)].slice(0, 3);
