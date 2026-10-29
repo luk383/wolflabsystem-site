@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 const root = path.resolve(import.meta.dirname, '..');
 const R = JSON.parse(fs.readFileSync(path.join(root, 'content/article-review.json'), 'utf8'));
-const TOOL = { 'ftp-e-zone-di-potenza': ['ride', 'zone di potenza', 'power zones'], 'carboidrati-maratona': ['fuel', 'Fuel', 'Fuel'], 'scarico-pre-gara': ['race', 'passaggi di gara', 'race splits'], 'quanta-intensita-serve': ['run', 'ritmi di allenamento', 'training paces'], 'bici-per-la-maratona': ['ride', 'zone di potenza', 'power zones'], 'forza-per-endurance': ['run', 'ritmi di allenamento', 'training paces'] };
+const TOOL = { 'ftp-e-zone-di-potenza': ['f-ftp', 'zone di potenza', 'power zones'], 'carboidrati-maratona': ['f-duration', 'Fuel', 'Fuel'], 'scarico-pre-gara': ['f-goal', 'passaggi di gara', 'race splits'], 'quanta-intensita-serve': ['f-t5k', 'ritmi di allenamento', 'training paces'], 'bici-per-la-maratona': ['f-ftp', 'zone di potenza', 'power zones'], 'forza-per-endurance': ['f-t5k', 'ritmi di allenamento', 'training paces'] };
 let n = 0;
 for (const [k, d] of Object.entries(R)) {
   const [it, en] = k.split('|');

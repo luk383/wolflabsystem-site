@@ -92,7 +92,7 @@ const HUBS = {
     kicker: ["RUN", "RUN"], title: ["Correre meglio, con i numeri giusti.", "Run better, with the right numbers."],
     noLede: true, lede: ["Ritmi, soglia, gare e scarpe. Parti dai tuoi tempi: il Wolf Engine li trasforma in ritmi di allenamento.", "Paces, threshold, races and shoes. Start from your times: Wolf Engine turns them into training paces."],
     groups: [
-      [["Ritmi e VDOT", "Dai tuoi tempi di gara ai ritmi di allenamento.", "engine#run"], ["Passaggi di gara", "Ritmo costante o negative split, ogni 5 km.", "engine#race"], ["Metodi di allenamento", "Piramidale, polarizzato, modello norvegese.", "training#allenamento"], ["Come scegliere: piramidale o polarizzato", "Cosa dicono gli studi e cosa fare.", "decide"]],
+      [["Ritmi e VDOT", "Dai tuoi tempi di gara ai ritmi di allenamento.", "engine#f-t5k"], ["Passaggi di gara", "Ritmo costante o negative split, ogni 5 km.", "engine#f-goal"], ["Metodi di allenamento", "Piramidale, polarizzato, modello norvegese.", "training#allenamento"], ["Come scegliere: piramidale o polarizzato", "Cosa dicono gli studi e cosa fare.", "decide"]],
       [["Scarpe con piastra in carbonio", "Cosa dicono gli studi.", ["/articoli/scarpe-con-piastra-carbonio/", "/en/articles/carbon-plate-running-shoes/"]], ["Scarico pre-gara", "Come ridurre il carico prima della gara.", ["/articoli/scarico-pre-gara/", "/en/articles/race-taper/"]], ["Maratone e mezze", "Date, quote e logistica.", "races"]],
     ],
   },
@@ -100,7 +100,7 @@ const HUBS = {
     kicker: ["RIDE", "RIDE"], title: ["Pedalare con la potenza come linguaggio.", "Ride with power as the language."],
     noLede: true, lede: ["FTP, zone e granfondo. Inserisci la FTP nel Wolf Engine e ottieni zone e potenza endurance.", "FTP, zones and gran fondos. Enter your FTP in Wolf Engine for zones and endurance power."],
     groups: [
-      [["FTP e zone di potenza", "Zone di Coggan calcolate dalla tua FTP.", "engine#ride"], ["FTP: come si misura", "Test, limiti e uso pratico.", ["/articoli/ftp-e-zone-di-potenza/", "/en/articles/ftp-and-power-zones/"]], ["Quanta intensità serve", "Distribuzione dell'intensità in pratica.", ["/articoli/quanta-intensita-serve/", "/en/articles/how-much-intensity/"]]],
+      [["FTP e zone di potenza", "Zone di Coggan calcolate dalla tua FTP.", "engine#f-ftp"], ["FTP: come si misura", "Test, limiti e uso pratico.", ["/articoli/ftp-e-zone-di-potenza/", "/en/articles/ftp-and-power-zones/"]], ["Quanta intensità serve", "Distribuzione dell'intensità in pratica.", ["/articoli/quanta-intensita-serve/", "/en/articles/how-much-intensity/"]]],
       [["Granfondo", "Nove Colli, Maratona dles Dolomites, Étape du Tour.", "races"], ["Ciclocomputer e bici", "Novità e annunci datati.", "news"], ["Mete per la bici", "Maiorca, Calpe, Tenerife.", "trips"]],
     ],
   },
@@ -155,8 +155,8 @@ const HUBS = {
     ],
     sections: [
       ["performance", ["Prestazione", "Performance"], [
-        ["VDOT", "Indice di Daniels e Gilbert che converte una gara in un valore confrontabile con il VO₂max; serve a ritmi e prestazioni equivalenti.", "engine#run"],
-        ["FTP", "Potenza massima sostenibile in condizioni stabili per circa un'ora; si stima da un test (20 minuti × 0,95).", "engine#ride"],
+        ["VDOT", "Indice di Daniels e Gilbert che converte una gara in un valore confrontabile con il VO₂max; serve a ritmi e prestazioni equivalenti.", "engine#f-t5k"],
+        ["FTP", "Potenza massima sostenibile in condizioni stabili per circa un'ora; si stima da un test (20 minuti × 0,95).", "engine#f-ftp"],
         ["Soglia", "Le due soglie dividono l'intensità in tre zone; i valori cambiano con il metodo di misura.", "training#allenamento"],
         ["VO₂max", "Massimo consumo di ossigeno, misurato in laboratorio: dice quanto è grande il motore, non come lo usi.", null],
         ["Durability", "Quanto tardi e quanto peggiorano i parametri fisiologici durante l'esercizio prolungato (Maunder et al., 2021).", null],
@@ -173,20 +173,20 @@ const HUBS = {
     kicker: ["FUEL", "FUEL"], title: ["Carboidrati, fluidi e strategia di gara.", "Carbohydrate, fluids and race strategy."],
     noLede: true, lede: ["Dal pasto pre-gara ai grammi all'ora. I numeri vengono da linee guida citate, non da mode.", "From the pre-race meal to grams per hour. Numbers come from cited guidelines, not fads."],
     groups: [
-      [["Carboidrati all'ora", "Il Wolf Engine li calcola dalla durata.", "engine#fuel"], ["Calcolatore carboidrati in gara", "Gel, grammi e tempi di assunzione.", "training#carboidrati"], ["Carboidrati in maratona", "Linee guida e limiti.", ["/articoli/carboidrati-maratona/", "/en/articles/marathon-carbohydrates/"]], ["Caffeina", "Dosi, tempi e quando evitarla.", ["/articoli/caffeina-e-prestazione/", "/en/articles/caffeine-and-performance/"]]],
-      [["Nutrizione", "Fonti di carboidrati, proteine e grassi.", "training#nutrizione"], ["Integratori", "Come leggere le evidenze.", "training#integratori"], ["Idratazione ed elettroliti", "Punto di partenza e sudore personale.", "engine#fuel"]],
+      [["Carboidrati all'ora", "Il Wolf Engine li calcola dalla durata.", "engine#f-duration"], ["Calcolatore carboidrati in gara", "Gel, grammi e tempi di assunzione.", "training#carboidrati"], ["Carboidrati in maratona", "Linee guida e limiti.", ["/articoli/carboidrati-maratona/", "/en/articles/marathon-carbohydrates/"]], ["Caffeina", "Dosi, tempi e quando evitarla.", ["/articoli/caffeina-e-prestazione/", "/en/articles/caffeine-and-performance/"]]],
+      [["Nutrizione", "Fonti di carboidrati, proteine e grassi.", "training#nutrizione"], ["Integratori", "Come leggere le evidenze.", "training#integratori"], ["Idratazione ed elettroliti", "Punto di partenza e sudore personale.", "engine#f-duration"]],
     ],
   },
   race: {
     kicker: ["RACE", "RACE"], title: ["Scegliere la gara. Preparare il viaggio.", "Pick the race. Plan the trip."],
     lede: ["Gare e training camp con fonti e data di verifica. Filtri per sport, paese, mese e tipo di iscrizione.", "Races and training camps with sources and check dates. Filters by sport, country, month and entry type."],
     groups: [
-      [["Gare", "Maratone, mezze e granfondo con date, quote e iscrizioni.", "races"], ["Nuoto, triathlon, IRONMAN e HYROX", "Distanze e formati dagli enti ufficiali, con i collegamenti ai loro calendari.", ["/articoli/nuoto-gare-e-formati/", "/en/articles/swim-race-formats/"]], ["Training camp e viaggi", "Altura, bici e corsa: dove, quando, quanto.", "trips"], ["Passaggi di gara", "Calcolali dal tuo obiettivo.", "engine#race"], ["Scarico pre-gara", "Le ultime due settimane.", ["/articoli/scarico-pre-gara/", "/en/articles/race-taper/"]]],
+      [["Gare", "Maratone, mezze e granfondo con date, quote e iscrizioni.", "races"], ["Nuoto, triathlon, IRONMAN e HYROX", "Distanze e formati dagli enti ufficiali, con i collegamenti ai loro calendari.", ["/articoli/nuoto-gare-e-formati/", "/en/articles/swim-race-formats/"]], ["Training camp e viaggi", "Altura, bici e corsa: dove, quando, quanto.", "trips"], ["Passaggi di gara", "Calcolali dal tuo obiettivo.", "engine#f-goal"], ["Scarico pre-gara", "Le ultime due settimane.", ["/articoli/scarico-pre-gara/", "/en/articles/race-taper/"]]],
     ],
   },
   gear: {
     kicker: ["GEAR", "GEAR"], title: ["Dal comunicato alla decisione.", "From press release to decision."],
-    lede: ["Quattro livelli, dichiarati: NEWS, ANALYSIS, TEST, VERDICT. Oggi pubblichiamo solo NEWS: nessun test fatto da noi.", "Four declared levels: NEWS, ANALYSIS, TEST, VERDICT. Today we publish NEWS only: no tests run by us."],
+    lede: ["Dati dichiarati dai produttori e fonti consultabili. Gli annunci non sono test sul campo.", "Manufacturer-declared data with sources to read. Announcements are not hands-on tests."],
     groups: [
       [["Novità", "Orologi, ciclocomputer, scarpe, bici: annunci datati con fonti.", "news"], ["Scarpe con piastra in carbonio", "Cosa dicono gli studi.", ["/articoli/scarpe-con-piastra-carbonio/", "/en/articles/carbon-plate-running-shoes/"]], ["Come valutiamo", "Livelli di prova e fonti.", "method"]],
     ],
@@ -196,7 +196,8 @@ const HUBS = {
 
 const resolve = (lang, tgt) => {
   if (Array.isArray(tgt)) return tgt[lang];
-  const [k, h] = tgt.split("#");
+  const [k, rawHash] = tgt.split("#");
+  const h = lang && k === "training" ? ({allenamento:"training",carboidrati:"carbs",nutrizione:"nutrition",integratori:"supplements"}[rawHash] || rawHash) : rawHash;
   const base = L[k] ? L[k][lang] : R[k][lang];
   return h ? `${base}#${h}` : base;
 };
@@ -215,10 +216,6 @@ function hub(lang, key) {
   const h = HUBS[key], it = !lang;
   let body = hero(h.kicker[0], h.title[lang], h.noLede ? "" : h.lede[lang]);
   body += `<div class="wrap w-body">`;
-  if (h.levels) {
-    const lv = [["NEWS", it ? "Cosa è appena uscito" : "What just came out", 5], ["ANALYSIS", it ? "Cosa dicono davvero i dati" : "What the data really say", 0], ["TEST", it ? "Lo abbiamo provato" : "We tried it", 0], ["VERDICT", it ? "Lo comprerei?" : "Would I buy it?", 0]];
-    body += `<ol class="w-levels">${lv.map(([n, d, c], k) => `<li class="${c ? "on" : "off"}"><span class="w-num">0${k + 1}</span><b>${n}</b><small>${d}</small><i>${c ? (it ? c + " pubblicati" : c + " published") : (it ? "non ancora pubblicato" : "not published yet")}</i></li>`).join("")}</ol>`;
-  }
   for (const g of h.groups) body += `<ul class="w-list">${g.filter(x => x[2]).map((x, i) => itemHtml(lang, x, i)).join("")}</ul>`;
   for (const s of h.sections || []) body += `<section id="${s[0]}" class="w-section"><h2>${s[1][lang]}</h2><ul class="w-list">${s[2].filter(x => x[2]).map((x, i) => itemHtml(lang, x, i)).join("")}</ul></section>`;
   body += `<p class="w-foot"><a class="w-cta" href="${R.engine[lang]}">${it ? "Apri il Wolf Engine" : "Open Wolf Engine"} <span aria-hidden="true">→</span></a></p></div>`;
