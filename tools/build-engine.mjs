@@ -151,7 +151,7 @@ const HUBS = {
     kicker: ["TRAIN", "TRAIN"], title: ["Forza, ibrido, prestazione e recupero.", "Strength, hybrid, performance and recovery."],
     noLede: true, lede: ["Dove corsa e bici si incontrano con la forza. Qui trovi anche i concetti di prestazione e di recupero.", "Where running and cycling meet strength. Performance and recovery concepts live here too."],
     groups: [
-      [["Wolf Strength Lab", "Costruisci schede di forza, cerca esercizi, registra gli allenamenti. Dati solo nel tuo browser ", ["/train/strength/", "/en/train/strength/"]], ["Libreria dei metodi", "Corsa, ciclismo e pesi: cosa dicono le prove.", "training#allenamento"], ["Forza per l'endurance", "Quanta, quando, con quali limiti.", ["/articoli/forza-per-endurance/", "/en/articles/strength-for-endurance/"]], ["Bici per la maratona", "Cosa trasferisce e cosa no.", ["/articoli/bici-per-la-maratona/", "/en/articles/cycling-for-the-marathon/"]], ["Settimana ibrida", "Ore, giorni duri e facili dal Wolf Engine.", "engine#hybrid"], ["Mobilità", "", null]],
+      [["Wolf Strength Lab", "Costruisci schede di forza, cerca esercizi, registra gli allenamenti. Dati solo nel tuo browser ", ["/train/strength/", "/en/train/strength/"]], ["Libreria dei metodi", "Corsa, ciclismo e pesi: cosa dicono le prove.", "training#allenamento"], ["Forza per l'endurance", "Quanta, quando, con quali limiti.", ["/articoli/forza-per-endurance/", "/en/articles/strength-for-endurance/"]], ["Bici per la maratona", "Cosa trasferisce e cosa no.", ["/articoli/bici-per-la-maratona/", "/en/articles/cycling-for-the-marathon/"]]],
     ],
     sections: [
       ["performance", ["Prestazione", "Performance"], [
