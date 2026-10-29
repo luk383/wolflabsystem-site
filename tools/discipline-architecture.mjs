@@ -29,11 +29,13 @@ export function organize(D,en){
  for(const x of methods){if(/#(?:allenamento|training)-4$/.test(x[2]))x[2]=tr+'#'+an+(/insieme|together/.test(x[0])?'-9':'-8')}
  const paths=en?['strength-for-running-methods','strength-for-cycling-methods','strength-for-swimming-methods']:['forza-corsa-metodi','forza-bici-metodi','forza-nuoto-metodi'];
  S.blocks=[['PROGRAMS',get('STRENGTH','PROGRAMS')],['EXERCISES',[]],['METHODS',methods.filter(x=>!paths.some(p=>x[2].includes(p)))],['ENDURANCE',['Run','Ride','Swim'].map((d,i)=>['Strength for '+d,en?'Methods, studied protocols and limits.':'Metodi, protocolli studiati e limiti.',base+(en?'/articles/':'/articoli/')+paths[i]+'/']).concat(old.filter(x=>!paths.some(p=>x[2].includes(p))))]];
+ guide('STRENGTH','ENDURANCE','Collocare le sedute e gestire la fatica','Session placement and fatigue','forza-endurance-collocare-sedute','strength-endurance-session-placement');
  // Individual exercise names point into the real read-only catalogue.
  const methodRows=S.blocks[2][1];
  const vars=base+(en?'/articles/strength-volume-intensity-rir/':'/articoli/forza-volume-intensita-rir/');
  methodRows.unshift([en?'Volume, intensity and RIR':'Volume, intensità e RIR','',vars],[en?'Progression and deload':'Progressione e deload','',base+(en?'/articles/strength-progression-deload/':'/articoli/forza-progressione-deload/')]);
  S.blocks[0][1].push(['Full Body',en?'Structure within Starting Strength: not a separate program.':'Struttura in Starting Strength: non un programma separato.',base+(en?'/articles/starting-strength-novice-progression/':'/articoli/starting-strength-progressione-novizi/')]);
+ methodRows.push(['Bill Starr 5×5','',base+(en?'/train/strength/starr-5x5/':'/train/strength/starr-5x5/')],['5/3/1','',base+(en?'/articles/531-wendler-beginners/':'/articoli/531-wendler-principianti/')]);
  const catalogue=base+(en?'/train/strength/exercises/':'/train/strength/esercizi/');
  const groups=en?['Legs','Posterior chain','Glutes','Calves','Chest','Back','Shoulders','Biceps','Triceps','Core','Compound']:['Gambe','Catena posteriore','Glutei','Polpacci','Petto','Dorso','Spalle','Bicipiti','Tricipiti','Core','Multigruppo'];
  S.blocks[1][1]=groups.map((g,i)=>[g,en?'Browse exercises by muscle group.':'Esplora gli esercizi per gruppo muscolare.',catalogue+'#muscle-'+i]);
