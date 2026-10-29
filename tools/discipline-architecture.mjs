@@ -36,8 +36,8 @@ export function organize(D,en){
  methodRows.unshift([en?'Volume, intensity and RIR':'Volume, intensità e RIR','',vars],[en?'Progression and deload':'Progressione e deload','',base+(en?'/articles/strength-progression-deload/':'/articoli/forza-progressione-deload/')]);
  S.blocks[0][1].push(['Full Body',en?'Structure within Starting Strength: not a separate program.':'Struttura in Starting Strength: non un programma separato.',base+(en?'/articles/starting-strength-novice-progression/':'/articoli/starting-strength-progressione-novizi/')]);
  methodRows.push(['Bill Starr 5×5','',base+(en?'/train/strength/starr-5x5/':'/train/strength/starr-5x5/')],['5/3/1','',base+(en?'/articles/531-wendler-beginners/':'/articoli/531-wendler-principianti/')]);
- S.blocks[0][1]=S.blocks[0][1].filter(x=>x[0]!=='Full Body'&&!/#protocol/.test(x[2]));
- S.blocks[2][1]=S.blocks[2][1].filter(x=>!/starr-5x5|531-wendler/.test(x[2])&&!/#(?:allenamento|training)-9$/.test(x[2]));
+ S.blocks[0][1]=S.blocks[0][1].filter(x=>x[0]!=='Full Body'&&!/#protocol|starr-5x5/.test(x[2]));
+ S.blocks[2][1]=S.blocks[2][1].filter(x=>!/531-wendler/.test(x[2])&&!/#(?:allenamento|training)-9$/.test(x[2]));
  S.blocks[3][1]=S.blocks[3][1].filter(x=>!/sonno-e-recupero|sleep/.test(x[2]));
  const catalogue=base+(en?'/train/strength/exercises/':'/train/strength/esercizi/');
  const groups=en?['Legs','Posterior chain','Glutes','Calves','Chest','Back','Shoulders','Biceps','Triceps','Core','Compound']:['Gambe','Catena posteriore','Glutei','Polpacci','Petto','Dorso','Spalle','Bicipiti','Tricipiti','Core','Multigruppo'];
