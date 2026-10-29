@@ -56,6 +56,33 @@
             ]
           },
           {
+            "title": "Corsa: sistemi descritti da allenatori",
+            "kind": "Corsa / Daniels, Lydiard, Hansons, MAF",
+            "paragraphs": [
+              "Quattro sistemi diversi, ognuno con una fonte e dei limiti: Daniels (cinque intensità legate al VDOT), Lydiard (fasi con base aerobica e colline), Hansons (maratona con fatica accumulata e lungo da 16 miglia), Maffetone (frequenza cardiaca MAF).",
+              "Non sono varianti dello stesso metodo e non vanno fusi in un piano. Sono descritti dagli autori o da articoli su di loro: nessuno è stato valutato in uno studio controllato.",
+              "Ogni scheda riporta struttura, un esempio chiaramente illustrativo e i limiti della fonte."
+            ],
+            "links": [
+              [
+                "Daniels e il VDOT",
+                "/articoli/daniels-vdot-metodo/"
+              ],
+              [
+                "Lydiard",
+                "/articoli/lydiard-fasi-base-aerobica/"
+              ],
+              [
+                "Hansons",
+                "/articoli/hansons-maratona-metodo/"
+              ],
+              [
+                "Maffetone: formula MAF",
+                "/articoli/maf-180-maffetone/"
+              ]
+            ]
+          },
+          {
             "title": "Corsa: forza e pliometria",
             "kind": "Corsa / forza per la corsa",
             "paragraphs": [
@@ -443,6 +470,33 @@
               [
                 "Wolf Lab guide: the Norwegian method",
                 "/en/articles/norwegian-method-double-threshold/"
+              ]
+            ]
+          },
+          {
+            "title": "Running: systems described by coaches",
+            "kind": "Running / Daniels, Lydiard, Hansons, MAF",
+            "paragraphs": [
+              "Four different systems, each with a source and limits: Daniels (five intensities tied to VDOT), Lydiard (phases with aerobic base and hills), Hansons (marathon with accumulated fatigue and a 16-mile long run), Maffetone (MAF heart rate).",
+              "They are not variants of the same method and should not be merged into one plan. They are described by the authors or by articles about them: none has been evaluated in a controlled study.",
+              "Each sheet gives the structure, a clearly illustrative example and the limits of the source."
+            ],
+            "links": [
+              [
+                "Daniels and VDOT",
+                "/en/articles/daniels-vdot-method/"
+              ],
+              [
+                "Lydiard",
+                "/en/articles/lydiard-aerobic-base-phases/"
+              ],
+              [
+                "Hansons",
+                "/en/articles/hansons-marathon-method/"
+              ],
+              [
+                "Maffetone: MAF formula",
+                "/en/articles/maf-180-maffetone-method/"
               ]
             ]
           },
