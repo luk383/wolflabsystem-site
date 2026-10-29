@@ -548,3 +548,6 @@ html:not([data-theme="dark"]) .w-feature-sym{color:#5A7300}
 /* Desktop gutters: every container aligns to the header (28px inside a 1280px box). */
 @media(min-width:901px){body .wrap,body .w-body,body .w-page-hero .wrap,body .w-band .wrap,body .w-latest .wrap,body .w-numbers .wrap,body .w-score-home .wrap,body .w-tiles .wrap,body .w-start .wrap{width:min(1224px,100% - 56px)}}
 .page.news { padding-top: 0; }
+
+/* Restore the previously selected multisport image without cropping any discipline. */
+.pl-hero-with-image{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.pl-hero-picture{display:block;line-height:0;text-align:center}.pl-hero-picture img{display:block;width:100%;height:auto;max-height:600px;object-fit:contain}.pl-hero-text{min-width:0}@media(max-width:800px){.pl-hero-with-image{grid-template-columns:1fr;gap:28px}.pl-hero-picture img{max-height:none;width:100%;height:auto}}
