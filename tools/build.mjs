@@ -366,7 +366,7 @@ function write(pathname, html) {
 function rss(lang, articles) {
   const items = articles
     .map(
-      (a) => `<item><title>${esc(a.title)}</title><link>${SITE}${articlePath(lang, a.slug)}</link><guid>${SITE}${articlePath(lang, a.slug)}</guid><pubDate>${new Date(a.date + "T08:00:00Z").toUTCString()}</pubDate><description>${esc(a.description)}</description></item>`
+      (a) => `<item><title>${esc(a.title)}</title><link>${SITE}${articlePath(lang, a.slug)}</link><guid>${SITE}${articlePath(lang, a.slug)}</guid><description>${esc(a.description)}</description></item>`
     )
     .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
