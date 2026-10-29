@@ -27,7 +27,7 @@ const PICKS = [['Guide: training shoes', '/en/picks/training-shoes/', 'RUN', 'GU
   ['Carb gels: three comparisons on declared data', '/en/picks/carb-gels/', 'RUN', 'COMPARISON'], ['Bike computers: how to choose', '/en/picks/bike-computers/', 'RIDE', 'GUIDE']].map(([title, href, d, k]) => ({ title, href: link(href), d, k }));
 
 const shell = rd('en/run.html'); const head0 = shell.slice(0, shell.indexOf('<main')); const foot0 = shell.slice(shell.indexOf('</main>') + 7);
-const NAV = [['RUN', '/en/run'], ['RIDE', '/en/ride'], ['SWIM', '/en/swim'], ['STRENGTH', '/en/strength/'], ['ARTICLES', '/en/articles/']];
+const NAV = [['RUN', '/en/run'], ['RIDE', '/en/ride'], ['SWIM', '/en/swim'], ['STRENGTH', '/en/strength/'], ['ARTICLES', '/en/articles/'], ['WOLF ENGINE', '/en/engine']];
 const navHtml = (cur) => `<nav class="nav" aria-label="Main">${NAV.map(([l, h]) => `<a href="${h}"${cur === l ? ' aria-current="page"' : ''}>${l}</a>`).join('')}</nav>`;
 const footHtml = `<nav class="foot-links" aria-label="Footer"><a href="/en/methodology">Methodology</a> <a href="/en/contact/">Contact</a> <a href="/en/app/">Android app</a> <a href="https://www.instagram.com/wolflabsystem/" rel="noopener me" target="_blank">Instagram</a> <a href="/en/feed.xml">RSS</a></nav>`;
 const patchChrome = (h, cur) => h.replace(/<nav class="nav"[\s\S]*?<\/nav>/, navHtml(cur)).replace(/<nav class="foot-links"[\s\S]*?<\/nav>/, footHtml);
@@ -96,3 +96,6 @@ walk(path.join(root, 'en'));
 if (bad.length) { console.error('PROBLEMI:', bad); process.exit(1); }
 console.log('pillars EN ok; pagine EN aggiornate', n, 'articoli', arts.length);
 { const sp = path.join(root, 'sitemap.xml'); let sm = fs.readFileSync(sp, 'utf8'); for (const u of ['/strength/', '/en/strength/']) if (!sm.includes(SITE + u + '</loc>')) sm = sm.replace('</urlset>', `<url><loc>${SITE}${u}</loc></url>\n</urlset>`); fs.writeFileSync(sp, sm); }
+
+// Render the approved RUN direction after IT and EN pillar shells.
+await import('./build-run-hub.mjs');

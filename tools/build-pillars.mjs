@@ -35,7 +35,7 @@ const PICKS = [
 
 // ---- shell
 const shell = rd('run.html'); const head0 = shell.slice(0, shell.indexOf('<main')); const foot0 = shell.slice(shell.indexOf('</main>') + 7);
-const NAV = [['RUN', '/run'], ['RIDE', '/ride'], ['SWIM', '/swim'], ['STRENGTH', '/strength/'], ['ARTICLES', '/articoli/']];
+const NAV = [['RUN', '/run'], ['RIDE', '/ride'], ['SWIM', '/swim'], ['STRENGTH', '/strength/'], ['ARTICOLI', '/articoli/'], ['WOLF ENGINE', '/engine']];
 const navHtml = (cur) => `<nav class="nav" aria-label="Principale">${NAV.map(([l, h]) => `<a href="${h}"${cur === l ? ' aria-current="page"' : ''}>${l}</a>`).join('')}</nav>`;
 const footHtml = `<nav class="foot-links" aria-label="Piè di pagina"><a href="/metodologia">Metodologia</a> <a href="/contatti/">Contatti</a> <a href="/app/">App Android</a> <a href="https://www.instagram.com/wolflabsystem/" rel="noopener" target="_blank">Instagram</a> <a href="/feed.xml">RSS</a></nav>`;
 const patchChrome = (h, cur) => h.replace(/<nav class="nav"[\s\S]*?<\/nav>/, navHtml(cur)).replace(/<nav class="foot-links"[\s\S]*?<\/nav>/, footHtml);
@@ -87,7 +87,7 @@ const DISCS = ['RUN', 'RIDE', 'SWIM', 'STRENGTH', 'HYBRID'], TYPES = ['ANALISI',
 const rows = [...arts.map((a) => ({ title: a.title, href: a.href, d: a.d, k: a.k, min: a.minutes })), ...PICKS];
 const row = (r) => `<li class="pl-row" data-d="${r.d}" data-k="${r.k}"><a href="${r.href}">${tag(r.d, r.k)}<b>${esc(r.title)}</b>${r.min ? `<small>${r.min} min</small>` : ''}</a></li>`;
 const chips = (arr, key) => arr.map((x) => `<button type="button" class="pl-chip" data-${key}="${x}">${x}</button>`).join('');
-wr('articoli/index.html', page('ARTICLES', { title: 'Articles - Wolf Lab', desc: 'Analisi, guide, review, comparazioni e metodi per RUN, RIDE, SWIM e STRENGTH.', url: '/articoli/', en: '/en/articles/' },
+wr('articoli/index.html', page('ARTICOLI', { title: 'Articles - Wolf Lab', desc: 'Analisi, guide, review, comparazioni e metodi per RUN, RIDE, SWIM e STRENGTH.', url: '/articoli/', en: '/en/articles/' },
   `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">ARTICLES</p><h1>Articles</h1></div></header><div class="wrap w-body"><div class="pl-filters" aria-label="Filtri"><div>${chips(DISCS, 'd')}</div><div>${chips(TYPES, 'k')}</div></div><ul class="pl-rows" id="pl-rows">${rows.map(row).join('')}</ul><p class="pl-empty" id="pl-empty" hidden>Nessun contenuto ancora.</p><p class="pl-more"><a href="/allenamento/">Libreria dei metodi →</a></p></div>
 <script>(function(){var s={},rows=[].slice.call(document.querySelectorAll('.pl-row'));function a(){rows.forEach(function(r){r.hidden=!!((s.d&&r.dataset.d!==s.d&&r.dataset.d!=='TRASVERSALE')||(s.k&&r.dataset.k!==s.k))});document.getElementById('pl-empty').hidden=rows.some(function(r){return !r.hidden});[].forEach.call(document.querySelectorAll('.pl-chip'),function(c){var k=c.dataset.d?'d':'k';c.setAttribute('aria-pressed',s[k]===(c.dataset.d||c.dataset.k))})}[].forEach.call(document.querySelectorAll('.pl-chip'),function(c){c.addEventListener('click',function(){var k=c.dataset.d?'d':'k',v=c.dataset.d||c.dataset.k;s[k]=s[k]===v?null:v;a()})});var q=new URLSearchParams(location.search);if(q.get('d')){s.d=q.get('d');}if(q.get('k')){s.k=q.get('k');}a()})()</script>`));
 
@@ -102,7 +102,7 @@ const home = `<section class="w-hero"><div class="wrap pl-hero"><h1 lang="en"><s
 wr('index.html', patchChrome(meta(rd('index.html').slice(0, rd('index.html').indexOf('<main')), { title: 'Wolf Lab - Endurance. Engineered.', desc: 'Run, ride, swim, strength: articoli con fonti e il Wolf Engine per calcolare la tua prestazione.', url: '/', en: '/en/' }), '') + `<main id="main">\n${home}\n</main>` + foot0.replace(/<nav class="foot-links"[\s\S]*?<\/nav>/, footHtml));
 
 // ---- nav e footer su tutte le altre pagine IT (non toccano il contenuto)
-const cur = (rel) => /^articoli\//.test(rel) ? 'ARTICLES' : /^(run|ride|swim)\.html$/.test(rel) ? rel.split('.')[0].toUpperCase() : /^train\/strength\//.test(rel) || /^strength\//.test(rel) ? 'STRENGTH' : '';
+const cur = (rel) => /^articoli\//.test(rel) ? 'ARTICOLI' : /^(run|ride|swim)\.html$/.test(rel) ? rel.split('.')[0].toUpperCase() : /^train\/strength\//.test(rel) || /^strength\//.test(rel) ? 'STRENGTH' : '';
 const skip = new Set(['index.html', 'run.html', 'ride.html', 'swim.html', 'strength/index.html', 'articoli/index.html']);
 let n = 0; const walk = (d) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { if (['.git', 'node_modules', 'assets', 'tools', 'content', 'builds', 'en'].includes(e.name)) continue; const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else if (e.name.endsWith('.html')) { const rel = path.relative(root, p); if (skip.has(rel)) continue; const h = fs.readFileSync(p, 'utf8'); if (!/<nav class="nav"/.test(h)) continue; const o = patchChrome(h, cur(rel)); if (o !== h) { fs.writeFileSync(p, o); n++; } } } };
 walk(root);
