@@ -38,7 +38,6 @@ const T = {
     contact: "Contatti",
     updated: "Pubblicato il",
     months: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
-    note: "Questo articolo è stato preparato con l'aiuto dell'intelligenza artificiale per la ricerca e la prima stesura, poi rivisto e verificato sulle fonti. Non sostituisce il parere di un medico o di un nutrizionista.",
     allArticles: "Tutti gli articoli",
     toc: "In questa pagina",
     related: "Da leggere dopo",
@@ -54,7 +53,6 @@ const T = {
     contact: "Contact",
     updated: "Published",
     months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    note: "This article was prepared with the help of AI for research and a first draft, then reviewed and checked against the sources. It doesn't replace advice from a doctor or dietitian.",
     allArticles: "All articles",
     toc: "On this page",
     related: "Read next",
@@ -422,7 +420,6 @@ function main() {
 <div class="prose art-body">
   ${tocItems.length ? `<details class="art-toc-m"><summary>${T[lang].toc}</summary><ol>${tocItems.map((i) => `<li><a href="#${i.id}">${i.label}</a></li>`).join("")}</ol></details>` : ""}
   ${bodyHtml}
-  <p class="note">${T[lang].note}</p>
   <p><a href="${ROUTES.articles[lang]}">${T[lang].allArticles}</a></p>
 </div>
 ${side}

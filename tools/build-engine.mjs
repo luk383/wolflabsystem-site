@@ -326,8 +326,7 @@ function method(lang) {
 <p>${T("My Wolf salva i valori del Wolf Engine solo su questo dispositivo, nel browser, e solo se premi Salva. Non c'è un account e non viene inviato nulla a Wolf Lab. Puoi cancellare tutto con un pulsante.", "My Wolf saves the Wolf Engine values only on this device, in the browser, and only if you press Save. There is no account and nothing is sent to Wolf Lab. You can delete everything with one button.")}</p>
 <h2>Wolf Engine</h2>
 <p>${T("Il Wolf Engine usa formule pubblicate (VDOT di Daniels e Gilbert, zone di Coggan, zone cardio di Friel, linee guida ACSM). Il calcolo è dentro il browser. Le regole per la settimana ibrida sono nostre, dichiarate come regole pratiche e non come risultati di studi.", "Wolf Engine uses published formulas (Daniels and Gilbert VDOT, Coggan zones, Friel heart-rate zones, ACSM guidelines). Calculation runs inside your browser. The hybrid-week rules are ours, declared as rules of thumb, not study results.")}</p>
-<h2>${T("Uso dell'intelligenza artificiale", "Use of artificial intelligence")}</h2>
-<p>${T("Testi e ricerca sono preparati con aiuto dell'intelligenza artificiale e poi verificati sulle fonti. Nessun test è presentato come reale se non lo è.", "Text and research are prepared with AI assistance and then checked against sources. No test is presented as real unless it is.")}</p>
+<p>${T("Nessun test è presentato come reale se non lo è.", "No test is presented as real unless it is.")}</p>
 <h2>${T("Fonti dei modelli", "Model sources")}</h2>
 <ul class="w-src">${src.map(([t, u]) => `<li><a href="${u}" rel="noopener">${t}</a></li>`).join("")}</ul>
 </div>`;
