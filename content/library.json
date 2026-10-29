@@ -133,6 +133,24 @@
             ]
           },
           {
+            "title": "Ciclismo: sweet spot e intervalli",
+            "kind": "Ciclismo / sweet spot, intervalli per il VO₂max",
+            "paragraphs": [
+              "Due schede distinte. Il sweet spot (88–94% dell'FTP) è una convenzione dei coach, non una soglia misurata. Gli intervalli per il VO₂max sono di due famiglie, brevi e lunghi, con uno studio su ciclisti ben allenati.",
+              "Entrambe riguardano la bici e non si applicano alla corsa. Nessuna è un piano: sono descrizioni con evidenza e limiti."
+            ],
+            "links": [
+              [
+                "Sweet spot",
+                "/articoli/sweet-spot-ciclismo/"
+              ],
+              [
+                "Intervalli per il VO₂max",
+                "/articoli/intervalli-vo2max-ciclismo/"
+              ]
+            ]
+          },
+          {
             "title": "Ciclismo: FTP, zone e sedute",
             "kind": "Ciclismo / test e organizzazione",
             "paragraphs": [
@@ -547,6 +565,24 @@
               [
                 "Definitions and counting limits: Treff et al., 2019",
                 "https://pmc.ncbi.nlm.nih.gov/articles/PMC6582670/"
+              ]
+            ]
+          },
+          {
+            "title": "Cycling: sweet spot and intervals",
+            "kind": "Cycling / sweet spot, VO₂max intervals",
+            "paragraphs": [
+              "Two separate sheets. Sweet spot (88–94% of FTP) is a coaching convention, not a measured threshold. VO₂max intervals come in two families, short and long, with a study of well-trained cyclists.",
+              "Both are about the bike and do not apply to running. Neither is a plan: they are descriptions with evidence and limits."
+            ],
+            "links": [
+              [
+                "Sweet spot",
+                "/en/articles/sweet-spot-cycling/"
+              ],
+              [
+                "VO₂max intervals",
+                "/en/articles/vo2max-intervals-cycling/"
               ]
             ]
           },
