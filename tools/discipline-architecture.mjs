@@ -15,6 +15,11 @@ export function organize(D,en){
  for(const d of ['RIDE','SWIM'])add(d,'FUEL & RECOVERY',[en?'Caffeine and performance':'Caffeina e prestazione',en?'Studied doses and safety references.':'Dosaggi studiati e riferimenti di sicurezza.',base+(en?'/articles/caffeine-and-performance/':'/articoli/caffeina-e-prestazione/')]);
  add('SWIM','GEAR',[en?'Wetsuits and open water':'Muta e acque libere',en?'Safety context, not a product comparison.':'Contesto di sicurezza, non confronto prodotti.',base+(en?'/articles/open-water-swimming-safety/':'/articoli/nuoto-acque-libere-sicurezza/')]);
 
+ // GEAR guides built from published tests (29 October): only pages relevant to each sport.
+ add('RUN','GEAR',[en?'Running shoes: Daily, Tempo, Marathon':'Scarpe da corsa: Daily, Tempo, Marathon','',base+(en?'/picks/running-shoes-daily-tempo-marathon/':'/picks/scarpe-daily-tempo-marathon/')]);
+ add('RUN','GEAR',[en?'Running GPS watches compared':'Orologi GPS per la corsa, a confronto','',base+(en?'/picks/running-gps-watches/':'/picks/orologi-gps-corsa/')]);
+ add('RIDE','GEAR',[en?'Bike computers from emerging brands':'Ciclocomputer di marchi emergenti','',base+(en?'/picks/bike-computers-emerging-brands/':'/picks/ciclocomputer-marchi-emergenti/')]);
+ add('RIDE','GEAR',[en?'News: Shimano and SRAM groupsets':'Novità: gruppi Shimano e SRAM','',base+(en?'/news/':'/novita/')]);
  const guide=(d,b,it,enTitle,itSlug,enSlug)=>add(d,b,[en?enTitle:it,'',base+(en?'/articles/':'/articoli/')+(en?enSlug:itSlug)+'/']);
  guide('RIDE','GEAR','Bici, ruote e coperture','Bikes, wheels and tyres','bici-ruote-coperture-compatibilita','bike-wheels-tyres-compatibility');
  guide('RIDE','GEAR','Misuratori di potenza','Power meters','potenza-bici-misuratori-dati','cycling-power-meters-data');
