@@ -1,27 +1,4 @@
 {
-  "sonno-e-recupero|sleep-and-recovery": {
-    "lv": [
-      "L5 + L4",
-      "L5 + L4"
-    ],
-    "stars": 3,
-    "how": [
-      "Revisione documentale delle 4 fonti citate. Una raccomandazione di società scientifiche e un consenso di esperti (L5), una revisione con risultati contrastanti, uno studio su 11 giocatori di basket.",
-      "Document review of the 4 cited sources: a joint recommendation by scientific societies and an expert consensus (L5), a review with mixed results, and a study of 11 basketball players."
-    ],
-    "lim": [
-      "Campione molto piccolo e di un solo sport. Non prova l'effetto sui runner amatori. Le indicazioni pratiche sono buone pratiche, non risultati degli studi.",
-      "Very small sample from a single sport. It does not prove the effect for recreational runners. The practical tips are good practice, not study results."
-    ],
-    "why": [
-      "Prove poche e in parte contrastanti: Limitata.",
-      "Few and partly conflicting studies: Limited."
-    ],
-    "scope": [
-      "durata del sonno e prestazione",
-      "sleep duration and performance"
-    ]
-  },
   "scarico-pre-gara|race-taper": {
     "lv": [
       "L1",
