@@ -284,6 +284,38 @@
      "https://www.cyclingweekly.com/news/mathieu-van-der-poel-rides-13-speed-dura-ace-prototype-at-uci-world-championships"
     ]
    ]
+  },
+  {
+   "id": "sram-eagle-s-series",
+   "category": "groupsets",
+   "date": "2026-04-20",
+   "name": "SRAM Eagle S-Series (S100, S200, S500 AXS)",
+   "change": {
+    "it": "SRAM riunisce nove trasmissioni Eagle in tre gruppi a 12 velocità: S100 e S200 meccanici, S500 AXS elettronico. Montano sul normale forcellino filettato, non sull'UDH, e arriva una piastra UDH Half Mount da circa 10 €. Il deragliatore S500 si abbina anche a leve stradali AXS, secondo SRAM.",
+    "en": "SRAM merges nine Eagle drivetrains into three 12-speed groupsets: mechanical S100 and S200, electronic S500 AXS. They fit a traditional threaded hanger, not UDH, and an UDH Half Mount plate arrives at about €10. The S500 derailleur also pairs with road AXS shifters, according to SRAM."
+   },
+   "fit": {
+    "it": "Soprattutto MTB e gravel, per chi ha un telaio senza UDH. Per la strada interessa solo chi accoppia S500 con leve stradali.",
+    "en": "Mostly MTB and gravel, for frames without UDH. For road it matters only to riders pairing the S500 with road shifters."
+   },
+   "limit": {
+    "it": "Dati e prezzi riportati da BikeRadar, non letti dal sito SRAM. Nessuna prova diretta. Prezzi in euro dei singoli componenti (es. deragliatore S100 75 €, S200 145 €).",
+    "en": "Data and prices as reported by BikeRadar, not read on SRAM's site. No hands-on test. Euro prices are for single parts (e.g. S100 derailleur €75, S200 €145)."
+   },
+   "price": {
+    "it": "Vedi i prezzi dei componenti riportati da BikeRadar.",
+    "en": "See the part prices reported by BikeRadar."
+   },
+   "availability": {
+    "it": "Annunciato il 20 aprile 2026 secondo BikeRadar.",
+    "en": "Announced 20 April 2026 according to BikeRadar."
+   },
+   "sources": [
+    [
+     "BikeRadar",
+     "https://www.bikeradar.com/news/sram-new-s-series-components"
+    ]
+   ]
   }
  ]
 }
