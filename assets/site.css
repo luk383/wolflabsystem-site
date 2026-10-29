@@ -630,3 +630,4 @@ html:not([data-theme="dark"]) .w-feature-sym{color:#5A7300}
 .discipline-panel .w-item a:hover .w-txt,.discipline-panel .w-item a:hover .w-txt b,.discipline-panel .w-item a:focus-visible .w-txt,.discipline-panel .w-item a:focus-visible .w-txt b{color:#f5f4ef!important}
 .discipline-panel .w-item a:hover .w-go,.discipline-panel .w-item a:focus-visible .w-go{color:#d6ff35!important}
 .discipline-panel .w-item a:focus-visible,.discipline-panel .pl-d summary:focus-visible,.discipline-panel .pl-more a:focus-visible{outline:2px solid #d6ff35;outline-offset:-2px}
+.exercise-card .exercise-variant{margin:6px 0 10px;font-size:13px;line-height:1.4;color:var(--muted)}
