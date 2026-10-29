@@ -45,7 +45,7 @@ const meta = (h, { title, desc, url, en }) => h.replace(/<title>.*?<\/title>/, `
   .replace(/(<meta property="og:title" content=")[^"]*/, `$1${esc(title)}`).replace(/(<meta property="og:description" content=")[^"]*/, `$1${esc(desc)}`).replace(/(<meta property="og:url" content=")[^"]*/, `$1${SITE}${url}`)
   .replace(/(<meta name="twitter:title" content=")[^"]*/, `$1${esc(title)}`).replace(/(<a class="lang" href=")[^"]*/, `$1${en}`);
 const page = (cur, m, main) => patchChrome(meta(head0, m), cur) + `<main id="main">\n${main}\n</main>` + foot0.replace(/<nav class="foot-links"[\s\S]*?<\/nav>/, footHtml);
-const item = (n, t, s, href) => `<li class="w-item"><a href="${link(href)}"><span class="w-num">${String(n).padStart(2, '0')}</span><span class="w-txt"><b>${esc(t)}</b><small>${esc(s)}</small></span><span class="w-go" aria-hidden="true">→</span></a></li>`;
+const item = (n, t, s, href) => `<li class="w-item"><a href="${link(href)}"><span class="w-num">${String(n).padStart(2, '0')}</span><span class="w-txt"><b>${esc(t)}</b></span><span class="w-go" aria-hidden="true">→</span></a></li>`;
 const tag = (d, k) => `<span class="pl-tag">${d} · ${k}</span>`;
 
 // ---- discipline: 4 blocchi, solo link a pagine esistenti
@@ -81,7 +81,7 @@ for (const [name, d] of Object.entries(DISC)) {
   const blocks = d.blocks.map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">Nessuna guida pubblicata in questa categoria.</p>'}</details>`).join('');
   const more = `<p class="pl-more"><a href="/articoli/?d=${name}">Tutti gli articoli ${name} →</a></p>`;
   wr(file, page(name, { title: `${name} - Wolf Lab`, desc: d.desc, url: d.url, en: d.en },
-    `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Forza per chi corre, pedala e nuota.' : name}</h1>${name === 'STRENGTH' ? '' : `<p class="pl-lead">${d.leadHtml ? esc(d.lead) + ' ' + d.leadHtml : esc(d.lead)}</p>`}</div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div>${more}</div>`));
+    `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Forza per chi corre, pedala e nuota.' : name}</h1></div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div>${more}</div>`));
 }
 
 // ---- articoli: un solo hub con tag

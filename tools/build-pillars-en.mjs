@@ -37,7 +37,7 @@ const meta = (h, { title, desc, url, it }) => h.replace(/<title>.*?<\/title>/, `
   .replace(/(<meta property="og:title" content=")[^"]*/, `$1${esc(title)}`).replace(/(<meta property="og:description" content=")[^"]*/, `$1${esc(desc)}`).replace(/(<meta property="og:url" content=")[^"]*/, `$1${SITE}${url}`)
   .replace(/(<meta name="twitter:title" content=")[^"]*/, `$1${esc(title)}`).replace(/(<a class="lang" href=")[^"]*/, `$1${it}`);
 const page = (cur, m, main) => patchChrome(meta(head0, m), cur) + `<main id="main">\n${main}\n</main>` + foot0.replace(/<nav class="foot-links"[\s\S]*?<\/nav>/, footHtml);
-const item = (n, t, s, href) => `<li class="w-item"><a href="${link(href)}"><span class="w-num">${String(n).padStart(2, '0')}</span><span class="w-txt"><b>${esc(t)}</b><small>${esc(s)}</small></span><span class="w-go" aria-hidden="true">→</span></a></li>`;
+const item = (n, t, s, href) => `<li class="w-item"><a href="${link(href)}"><span class="w-num">${String(n).padStart(2, '0')}</span><span class="w-txt"><b>${esc(t)}</b></span><span class="w-go" aria-hidden="true">→</span></a></li>`;
 const tag = (d, k) => `<span class="pl-tag">${d === 'CROSS' ? 'CROSS-DISCIPLINE' : d} · ${k}</span>`;
 const A = (id) => { const a = arts.find((x) => x.slug === id); if (!a) bad.push('art ' + id); return a ? '/en/articles/' + a.slug + '/' : '/en/articles/'; };
 const sleep = ['Sleep and recovery', 'The cheapest performance gain.', '/en/articles/sleep-and-recovery/'];
@@ -72,7 +72,7 @@ for (const [name, d] of Object.entries(DISC)) {
   const file = name === 'STRENGTH' ? 'en/strength/index.html' : 'en/' + name.toLowerCase() + '.html';
   const blocks = d.blocks.map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">No guides published in this category.</p>'}</details>`).join('');
   wr(file, page(name, { title: `${name} - Wolf Lab`, desc: d.desc, url: d.url, it: d.it },
-    `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Strength for people who run, ride and swim.' : name}</h1>${d.lead ? `<p class="pl-lead">${d.leadHtml ? esc(d.lead) + ' ' + d.leadHtml : esc(d.lead)}</p>` : ''}</div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div><p class="pl-more"><a href="/en/articles/?d=${name}">All ${name} articles →</a></p></div>`));
+    `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Strength for people who run, ride and swim.' : name}</h1></div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div><p class="pl-more"><a href="/en/articles/?d=${name}">All ${name} articles →</a></p></div>`));
 }
 const DISCS = ['RUN', 'RIDE', 'SWIM', 'STRENGTH', 'HYBRID'], TYPES = ['ANALYSIS', 'GUIDE', 'REVIEW', 'COMPARISON', 'METHOD'];
 const rows = [...arts.map((a) => ({ title: a.title, href: a.href, d: a.d, k: a.k, min: a.minutes })), ...PICKS];
