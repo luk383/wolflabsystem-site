@@ -428,5 +428,205 @@
    ],
    "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
   }
+ },
+ "Leg press": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/154/seated-leg-press/",
+  "source": "ACE, Seated Leg Press",
+  "it": {
+   "steps": [
+    "Sedersi con schiena e sacro piatti contro lo schienale. Piedi sulla pedana, punte in avanti; regolare sedile e piedi in modo che le ginocchia siano piegate a circa 90 gradi, talloni piatti. Impugnare piano le maniglie e contrarre l’addome.",
+    "Espirare e spingere la pedana estendendo anche e ginocchia, talloni sempre a contatto con la pedana, fino a ginocchia estese ma rilassate.",
+    "Pausa breve, poi tornare lentamente piegando anche e ginocchia."
+   ],
+   "checks": [
+    "Non bloccare le ginocchia in estensione.",
+    "Glutei sul sedile e zona lombare non arrotondata.",
+    "Non lasciare che le cosce schiaccino la cassa toracica nel ritorno."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Sit with the back and sacrum flat against the backrest. Feet on the platform, toes forward; adjust seat and foot position so the knees are bent about 90 degrees with heels flat. Lightly hold the handles and brace the abdomen.",
+    "Exhale and push the platform away by extending hips and knees, heels in contact with the plate, until the knees are extended but relaxed.",
+    "Pause briefly, then return slowly by bending hips and knees."
+   ],
+   "checks": [
+    "Do not lock out the knees.",
+    "Hips stay on the seat pad and the low back does not round.",
+    "Do not let the thighs compress the rib cage on the way back."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Leg curl": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/153/lying-hamstrings-curl/",
+  "source": "ACE, Lying Hamstrings Curl",
+  "it": {
+   "steps": [
+    "Sdraiarsi a pancia in giù sulla macchina, con il centro del ginocchio allineato all’asse della leva. Cuscini sul terzo inferiore delle gambe, non sul tallone. Impugnare le maniglie e contrarre l’addome.",
+    "Espirare e piegare le ginocchia portando il cuscino verso i glutei in modo controllato, senza inarcare la schiena.",
+    "Continuare finché le ginocchia superano i 90 gradi o i cuscini si avvicinano ai glutei. Pausa breve e ritorno lento."
+   ],
+   "checks": [
+    "Stabilizzare la zona lombare: la fonte avverte che una tecnica scorretta porta a un uso eccessivo degli estensori lombari.",
+    "Se non si controlla la zona lombare, usare un carico più leggero."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Lie face down on the machine, the knee joint aligned with the lever axis. Pads on the lower third of the lower legs, not at the heel. Hold the handles and brace the abdomen.",
+    "Exhale and bend the knees, moving the pad toward the buttocks in a controlled way, without arching the back.",
+    "Continue until the knees are bent past 90 degrees or the pads near the buttocks. Pause briefly and return slowly."
+   ],
+   "checks": [
+    "Stabilise the low back: the source warns that poor technique leads to excessive use of the low back extensors.",
+    "If you cannot control the low back, use a lighter load."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Rematore manubrio": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/126/single-arm-row/",
+  "source": "ACE, Single Arm Row",
+  "it": {
+   "steps": [
+    "Con un manubrio nella mano destra, appoggiare ginocchio e mano sinistri su una panca: mano sotto la spalla e ginocchio sotto l’anca. Addome contratto, schiena piatta, testa allineata, scapole abbassate e addotte. Braccio destro esteso verso il pavimento senza ruotare il busto.",
+    "Espirare e tirare il manubrio verso l’alto piegando il gomito e portando il braccio indietro, vicino al fianco, finché non si può salire oltre senza ruotare il busto.",
+    "Inspirare e riportare il manubrio in basso, mantenendo schiena piatta e spalla addotta."
+   ],
+   "checks": [
+    "Niente rotazione del busto né cambi nella posizione della colonna.",
+    "La fonte suggerisce di eseguirlo davanti a uno specchio per controllare schiena, spalla e rotazione."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Holding a dumbbell in the right hand, place the left knee and left hand on a bench: hand under the shoulder, knee under the hip. Abs braced, back flat, head aligned, shoulder blades down and back. Right arm extended toward the floor without rotating the torso.",
+    "Exhale and pull the dumbbell up by bending the elbow and pulling the upper arm back, close to the side, until you cannot lift further without rotating the torso.",
+    "Inhale and lower the dumbbell to the start, keeping the back flat and the shoulder retracted."
+   ],
+   "checks": [
+    "No torso rotation or change in spine position.",
+    "The source suggests training in front of a mirror to check back, shoulder and trunk rotation."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Pushdown tricipiti": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/185/triceps-pushdowns/",
+  "source": "ACE, Triceps Pushdowns",
+  "it": {
+   "steps": [
+    "Di fronte al cavo, con l’attacco sopra la testa e maniglia o corda in presa piena. Piedi alla larghezza delle anche o sfalsati. Addome contratto, busto verticale, scapole abbassate e addotte. Gomiti ai lati del tronco, polsi neutri.",
+    "Espirare ed estendere lentamente i gomiti spingendo maniglia o corda verso il pavimento, tenendo busto, spalle, braccia e polsi fermi.",
+    "Continuare fino a gomiti estesi (senza bloccarli), pausa breve, poi risalire lentamente finché i gomiti iniziano ad avanzare, circa all’altezza della parte alta del petto."
+   ],
+   "checks": [
+    "Controllare che i gomiti non vadano in avanti: la fonte indica che coinvolge i dorsali e riduce l’enfasi sui tricipiti.",
+    "Non bloccare i gomiti a fine corsa."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Facing the cable machine with the attachment above head height, handle or rope in a full grip. Feet hip-width or staggered. Abs braced, torso vertical, shoulder blades down and back. Elbows at the sides of the trunk, wrists neutral.",
+    "Exhale and slowly extend the elbows, pressing the handle or rope toward the floor, keeping torso, shoulders, arms and wrists still.",
+    "Continue to extended elbows (without locking out), pause briefly, then let the handle rise slowly until the elbows start to drift forward, around upper chest level."
+   ],
+   "checks": [
+    "Watch that the elbows do not drift forward: the source says it recruits the lats and reduces emphasis on the triceps.",
+    "Do not lock the elbows out at the end."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Crunch": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/52/crunch/",
+  "source": "ACE, Crunch",
+  "it": {
+   "steps": [
+    "Sdraiarsi supini su un tappetino con ginocchia piegate e piedi piatti, talloni a 30-45 cm dal coccige. Mani dietro la testa, scapole ravvicinate e gomiti indietro senza inarcare la zona lombare.",
+    "Espirare, contrarre addome e core e flettere leggermente il mento verso il petto, arricciando il busto verso le cosce. L’idea è avvicinare la cassa toracica al bacino, con il collo rilassato. Salire finché la parte alta della schiena si stacca dal tappetino, con una breve pausa.",
+    "Inspirare e tornare giù lentamente, con piedi, coccige e zona lombare sempre a contatto con il tappetino."
+   ],
+   "checks": [
+    "La fonte avverte che si tende a eseguirlo troppo in fretta, usando i flessori dell’anca: questo inclina il bacino e aumenta lo stress lombare.",
+    "Collo e spalle rilassati."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Lie on your back on a mat, knees bent, feet flat, heels 12-18 inches from the tailbone. Hands behind the head, shoulder blades together and elbows back without arching the low back.",
+    "Exhale, contract the abs and core and tuck the chin slightly toward the chest while curling the torso toward the thighs. Focus on bringing the rib cage toward the pelvis with the neck relaxed. Curl up until the upper back leaves the mat and hold briefly.",
+    "Inhale and lower slowly, keeping feet, tailbone and low back on the mat."
+   ],
+   "checks": [
+    "The source warns people usually go too fast and use the hip flexors, which tilts the pelvis and raises low back stress.",
+    "Keep neck and shoulders relaxed."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Hammer curl": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/10/hammer-curl/",
+  "source": "ACE, Hammer Curl",
+  "it": {
+   "steps": [
+    "In piedi con i manubri lungo le cosce, presa neutra con pollici avvolti, gomiti estesi. Posizione sfalsata, addome contratto, scapole abbassate e addotte, testa e collo allineati alla colonna.",
+    "Espirare e piegare lentamente uno o entrambi i gomiti fino a portare il manubrio vicino alla spalla. Nelle versioni alternate, l’altro braccio resta in basso. Busto eretto, gomiti non spinti in avanti, polsi neutri, senza alzare le spalle.",
+    "Inspirare e riportare i manubri in basso fino a gomiti estesi, mantenendo la presa neutra."
+   ],
+   "checks": [
+    "Busto eretto, senza inarcare la zona lombare.",
+    "Se i manubri non stanno lungo i fianchi senza piegare i polsi, scegliere la posizione che mantiene i polsi allineati agli avambracci (indicazione della fonte)."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Stand with dumbbells beside the thighs, neutral grip with thumbs wrapped, elbows extended. Split stance, abs braced, shoulder blades down and back, head and neck aligned with the spine.",
+    "Exhale and slowly bend one or both elbows until the dumbbell nears the front of the shoulder. In alternating curls the other arm stays down. Torso upright, elbows not moving forward, wrists neutral, shoulders not shrugged.",
+    "Inhale and lower the dumbbells to straight elbows, keeping the neutral grip."
+   ],
+   "checks": [
+    "Torso upright, no arching of the low back.",
+    "If the dumbbells cannot rest at your sides without bending the wrists, choose the position that keeps the wrists aligned with the forearms (source guidance)."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Panca inclinata manubri": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/25/incline-chest-press/",
+  "source": "ACE, Incline Chest Press",
+  "it": {
+   "steps": [
+    "Con due manubri, sdraiarsi su una panca inclinata tra 45 e 60 gradi, piedi ben appoggiati a terra o su una pedana. Scapole abbassate e addotte a contatto con la panca. Testa, spalle, glutei e piedi restano in contatto per tutto l’esercizio. Presa chiusa in pronazione, polsi neutri.",
+    "Spingere i manubri insieme fino a gomiti estesi, circa sopra gli occhi o poco più in alto.",
+    "Inspirare e abbassare i manubri in modo controllato verso la parte alta del petto, un poco più larghi verso le ascelle, toccando il petto senza rimbalzo. Gomiti sotto i polsi.",
+    "Espirare e spingere di nuovo fino a gomiti estesi, senza inarcare la schiena."
+   ],
+   "checks": [
+    "La fonte indica come sicurezza importante la presenza di un assistente per portare i manubri in posizione e riprenderli a fine serie.",
+    "Gomiti vicini ai fianchi enfatizzano più i tricipiti; gomiti più aperti più i pettorali (indicazione della fonte)."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "With two dumbbells, lie on an incline bench set between 45 and 60 degrees, feet firmly on the floor or on a platform. Shoulder blades down and back against the bench. Head, shoulders, hips and feet stay in contact throughout. Closed pronated grip, neutral wrists.",
+    "Press the dumbbells together to straight elbows, about over the eyes or slightly higher.",
+    "Inhale and lower the dumbbells in a controlled way toward the upper chest, slightly wider toward the armpits, touching the chest without bouncing. Elbows under the wrists.",
+    "Exhale and press back to straight elbows, without arching the back."
+   ],
+   "checks": [
+    "The source treats a spotter as important for safety, to hand over the dumbbells and take them at the end of the set.",
+    "Elbows close to the sides emphasise the triceps more; flared elbows emphasise the pecs more (source statement)."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
  }
 }
