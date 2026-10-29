@@ -496,7 +496,7 @@ html:not([data-theme="dark"]) .w-feature-sym{color:#5A7300}
 
 /* mobile: evidence list and tables must not overflow */
 .w-levels.w-ev{grid-template-columns:minmax(0,1fr)}.w-levels.w-ev li{grid-template-columns:48px minmax(0,1fr)}.w-levels.w-ev b{font-size:18px;overflow-wrap:anywhere}
-@media(max-width:700px){.w-table{display:block;overflow-x:auto}.w-table tbody{display:table;width:100%}.w-table th{white-space:normal}}
+@media(max-width:700px){.w-table{display:table;width:100%;font-size:14px;overflow-wrap:break-word}.w-table td:first-child{min-width:5.5em}.w-table th{white-space:normal}.w-table th,.w-table td{padding-right:8px}}
 
 /* pilastri */
 .pl-lead{font:500 clamp(18px,2.4vw,26px)/1.3 var(--sans);margin:0;color:inherit;opacity:.85}
