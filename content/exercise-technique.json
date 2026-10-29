@@ -1,170 +1,432 @@
 {
-  "Squat con bilanciere": {
-    "url": "https://www.acefitness.org/resources/everyone/exercise-library/11/back-squat/",
-    "source": "ACE, Back Squat",
-    "it": {
-      "steps": [
-        "Preparare il bilanciere nel rack sotto l’altezza delle spalle; appoggiarlo sulla parte alta della schiena e afferrarlo più largo delle spalle.",
-        "Sollevare il torace, mantenere il tronco controllato e uscire dal rack. La guida descrive piedi poco più larghi delle spalle.",
-        "Flettere anche e ginocchia mantenendo il controllo; risalire spingendo i piedi contro il terreno. Profondità e carico richiedono una verifica della capacità individuale."
-      ],
-      "checks": [
-        "Non confondere la posizione del bilanciere sulla parte alta della schiena con un appoggio diretto sul collo.",
-        "Controllare la posizione del tronco durante discesa e risalita, senza inseguire profondità o carico a scapito del controllo."
-      ],
-      "program": "Lo squat compare in programmi generali con dosi diverse. Serie, ripetizioni e progressione vanno lette nel programma scelto: il nome dell’esercizio non stabilisce la dose. Non è una prova di trasferimento diretto alla prestazione di un singolo sport."
-    },
-    "en": {
-      "steps": [
-        "Set the bar in a rack below shoulder height; rest it across the upper back and hold it wider than shoulder width.",
-        "Lift the chest, keep the trunk controlled and step out of the rack. The guide describes feet slightly wider than shoulder width.",
-        "Bend the hips and knees under control; stand by pressing the feet into the ground. Depth and load require assessment of individual ability."
-      ],
-      "checks": [
-        "Do not confuse upper-back placement with resting the bar directly on the neck.",
-        "Check trunk position through descent and ascent rather than pursuing depth or load at the expense of control."
-      ],
-      "program": "Squats appear in general programs with different doses. Read sets, repetitions and progression in the selected program: the exercise name does not establish the dose. This is not proof of direct transfer to a particular sport."
-    }
+ "Squat con bilanciere": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/11/back-squat/",
+  "source": "ACE, Back Squat",
+  "it": {
+   "steps": [
+    "Preparare il bilanciere nel rack sotto l’altezza delle spalle; appoggiarlo sulla parte alta della schiena e afferrarlo più largo delle spalle.",
+    "Sollevare il torace, mantenere il tronco controllato e uscire dal rack. La guida descrive piedi poco più larghi delle spalle.",
+    "Flettere anche e ginocchia mantenendo il controllo; risalire spingendo i piedi contro il terreno. Profondità e carico richiedono una verifica della capacità individuale."
+   ],
+   "checks": [
+    "Non confondere la posizione del bilanciere sulla parte alta della schiena con un appoggio diretto sul collo.",
+    "Controllare la posizione del tronco durante discesa e risalita, senza inseguire profondità o carico a scapito del controllo."
+   ],
+   "program": "Lo squat compare in programmi generali con dosi diverse. Serie, ripetizioni e progressione vanno lette nel programma scelto: il nome dell’esercizio non stabilisce la dose. Non è una prova di trasferimento diretto alla prestazione di un singolo sport."
   },
-  "Rematore con bilanciere": {
-    "url": "https://www.acefitness.org/resources/everyone/exercise-library/12/bent-over-row/",
-    "source": "ACE, Bent-over Row",
-    "it": {
-      "steps": [
-        "Impugnare il bilanciere con palmi verso il basso e flettere il busto dalle anche, con ginocchia leggermente piegate.",
-        "Mantenere il dorso controllato e portare il bilanciere verso l’ombelico.",
-        "Ridiscendere lentamente fino a distendere le braccia, mantenendo la posizione del busto."
-      ],
-      "checks": [
-        "Non trasformare ogni tirata in un sollevamento del busto: la posizione descritta dalla fonte resta flessa alle anche.",
-        "Non lasciare cadere il carico nella discesa; la guida richiede un ritorno lento e controllato."
-      ],
-      "program": "È una tirata orizzontale con carico sul tronco, non un sostituto automatico della tecnica di nuoto. Se un programma richiede una variante diversa di rematore, cambiano appoggi e richieste: non considerarle identiche per il solo gruppo muscolare."
-    },
-    "en": {
-      "steps": [
-        "Hold the bar with palms down and hinge forward at the hips with slightly bent knees.",
-        "Keep the back controlled and pull the bar towards the navel.",
-        "Lower slowly until the arms straighten while maintaining trunk position."
-      ],
-      "checks": [
-        "Do not turn each pull into a trunk lift: the source describes maintaining the hip-hinged position.",
-        "Do not drop the load on the return; the guide calls for a slow, controlled lowering."
-      ],
-      "program": "This is a horizontal pull that also loads the trunk, not an automatic substitute for swimming technique. If a program calls for another row variation, support and demands change: the same muscle-group label does not make them identical."
-    }
-  },
-  "Stacco rumeno": {
-    "url": "https://www.acefitness.org/resources/everyone/exercise-library/317/romanian-deadlift/",
-    "source": "ACE, Romanian Deadlift",
-    "it": {
-      "steps": [
-        "Partire in piedi con il bilanciere davanti alle cosce, ginocchia leggermente piegate e schiena controllata.",
-        "Spingere le anche indietro mentre il carico scende vicino al corpo, fino a percepire tensione nella parte posteriore delle cosce.",
-        "Ritornare in piedi mantenendo il bilanciere vicino al corpo. La fonte non richiede di portarlo a terra."
-      ],
-      "checks": [
-        "Non cercare il pavimento come obiettivo obbligatorio: il riferimento descritto è la tensione posteriore con posizione controllata.",
-        "Non allontanare il bilanciere dal corpo per aumentare la discesa."
-      ],
-      "program": "È uno schema di hip hinge. Non è automaticamente equivalente allo stacco da terra previsto in un programma: posizione iniziale, escursione e regole di progressione possono essere diverse. La scheda tecnica non assegna serie o carichi personali."
-    },
-    "en": {
-      "steps": [
-        "Start standing with the bar in front of the thighs, knees slightly bent and back controlled.",
-        "Push the hips backwards as the load lowers close to the body, until tension is felt along the back of the thighs.",
-        "Return to standing with the bar close to the body. The source does not require it to reach the floor."
-      ],
-      "checks": [
-        "Do not treat reaching the floor as compulsory: the described reference is posterior-thigh tension with a controlled position.",
-        "Do not move the bar away from the body to gain more depth."
-      ],
-      "program": "This is a hip-hinge pattern. It is not automatically equivalent to the conventional deadlift required by a program: starting position, range and progression rules can differ. The technique entry does not assign personal sets or loads."
-    }
-  },
-  "Push-up": {
-    "url": "https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/",
-    "source": "ACE, Push-up",
-    "it": {
-      "steps": [
-        "Appoggiare le mani circa alla larghezza delle spalle e sistemarle sotto le spalle; distendere il corpo e sostenere il tronco con addominali, glutei e cosce.",
-        "Scendere con controllo mantenendo testa e colonna allineate, senza lasciare scendere la zona lombare o sollevare le anche.",
-        "Spingere il pavimento per tornare a braccia distese mantenendo il corpo controllato."
-      ],
-      "checks": [
-        "Non lasciare cedere la zona lombare durante la discesa o la spinta.",
-        "Non sollevare le anche per completare una ripetizione che perde l’allineamento del corpo."
-      ],
-      "program": "È una spinta orizzontale a corpo libero. La variante e il numero di ripetizioni cambiano la richiesta: non è una dose equivalente alla panca soltanto perché appartiene allo stesso schema. Questa scheda non prescrive serie a cedimento."
-    },
-    "en": {
-      "steps": [
-        "Place the hands about shoulder-width apart under the shoulders; extend the body and brace the trunk with the abdominal, gluteal and thigh muscles.",
-        "Lower under control with the head aligned with the spine, without letting the lower back sag or the hips rise.",
-        "Press the floor away to straighten the arms while retaining body control."
-      ],
-      "checks": [
-        "Do not let the lower back sag during lowering or pressing.",
-        "Do not raise the hips to complete a repetition that loses body alignment."
-      ],
-      "program": "This is a bodyweight horizontal push. Variation and repetition count change the demand: it is not an equivalent bench-press dose merely because it shares a movement category. This entry does not prescribe sets to failure."
-    }
-  },
-  "Plank": {
-    "url": "https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/",
-    "source": "ACE, Front Plank",
-    "it": {
-      "steps": [
-        "Appoggiare gli avambracci con gomiti sotto le spalle e mani rivolte avanti; distendere le gambe e sostenere il tronco.",
-        "Sollevare tronco e gambe dal pavimento mantenendoli allineati, senza lasciare scendere la zona lombare o sollevare le anche.",
-        "Continuare a respirare durante la tenuta; tornare lentamente al pavimento mantenendo il controllo."
-      ],
-      "checks": [
-        "Non spostare le spalle indietro rispetto ai gomiti per cambiare la leva durante la tenuta.",
-        "Non trattenere il respiro o sostituire il controllo del tronco con una posizione arcuata. In presenza di dolore lombare interrompere il movimento."
-      ],
-      "program": "È una tenuta isometrica: il tempo descrive solo parte della dose. Non equiparare automaticamente dieci secondi di plank a dieci ripetizioni di un esercizio dinamico. La guida tecnica non stabilisce una durata personale o un trasferimento dimostrato a un singolo sport."
-    },
-    "en": {
-      "steps": [
-        "Place the forearms with elbows under the shoulders and hands facing forwards; extend the legs and brace the trunk.",
-        "Lift the trunk and legs from the floor, keeping them aligned without sagging through the lower back or raising the hips.",
-        "Keep breathing during the hold; lower slowly to the floor under control."
-      ],
-      "checks": [
-        "Do not shift the shoulders behind the elbows to change the lever during the hold.",
-        "Do not hold the breath or replace trunk control with an arched position. Stop the movement if lower-back pain occurs."
-      ],
-      "program": "This is an isometric hold: time describes only part of the dose. Do not equate ten seconds of planking automatically with ten repetitions of a dynamic exercise. The technique guide does not establish an individual hold duration or demonstrated transfer to a particular sport."
-    }
-  },
-  "Panca con manubri": {
-    "url": "https://www.acefitness.org/resources/everyone/exercise-library/19/chest-press/",
-    "source": "ACE, Chest Press (dumbbells)",
-    "it": {
-      "steps": [
-        "Sdraiarsi sulla panca con un manubrio per mano e piedi sostenuti dal pavimento o da un rialzo; mantenere testa, spalle e glutei a contatto con la panca.",
-        "Tenere le scapole appoggiate e i polsi controllati; scendere con i manubri verso il torace sotto controllo, senza rimbalzo.",
-        "Spingere fino a distendere i gomiti mantenendo gli appoggi. Concordare prima l’aiuto di uno spotter per consegna e ritiro dei manubri quando necessario."
-      ],
-      "checks": [
-        "Non perdere i punti di appoggio o inarcare la zona lombare per completare la spinta.",
-        "Non lasciare che i polsi si pieghino sotto il carico e non far rimbalzare i manubri sul torace."
-      ],
-      "program": "La fonte descrive una panca piana con manubri: non la chest press alla macchina né la panca inclinata. Se un programma prescrive una di queste varianti, la sostituzione va dichiarata. Serie e carichi appartengono al programma scelto, non alla sola scheda tecnica."
-    },
-    "en": {
-      "steps": [
-        "Lie on a flat bench with one dumbbell in each hand and feet supported by the floor or a platform; keep the head, shoulders and buttocks on the bench.",
-        "Keep the shoulder blades supported and wrists controlled; lower the dumbbells towards the chest under control without bouncing.",
-        "Press until the elbows extend while retaining the points of contact. Agree on spotter assistance for handing over and taking back the dumbbells when needed."
-      ],
-      "checks": [
-        "Do not lose the points of contact or arch the lower back to finish the press.",
-        "Do not let the wrists bend under the load or bounce the dumbbells on the chest."
-      ],
-      "program": "The source describes a flat dumbbell bench press, not a machine chest press or incline press. If a program prescribes one of those variations, identify any substitution. Sets and loads belong to the selected program, not to the technique entry alone."
-    }
+  "en": {
+   "steps": [
+    "Set the bar in a rack below shoulder height; rest it across the upper back and hold it wider than shoulder width.",
+    "Lift the chest, keep the trunk controlled and step out of the rack. The guide describes feet slightly wider than shoulder width.",
+    "Bend the hips and knees under control; stand by pressing the feet into the ground. Depth and load require assessment of individual ability."
+   ],
+   "checks": [
+    "Do not confuse upper-back placement with resting the bar directly on the neck.",
+    "Check trunk position through descent and ascent rather than pursuing depth or load at the expense of control."
+   ],
+   "program": "Squats appear in general programs with different doses. Read sets, repetitions and progression in the selected program: the exercise name does not establish the dose. This is not proof of direct transfer to a particular sport."
   }
+ },
+ "Rematore con bilanciere": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/12/bent-over-row/",
+  "source": "ACE, Bent-over Row",
+  "it": {
+   "steps": [
+    "Impugnare il bilanciere con palmi verso il basso e flettere il busto dalle anche, con ginocchia leggermente piegate.",
+    "Mantenere il dorso controllato e portare il bilanciere verso l’ombelico.",
+    "Ridiscendere lentamente fino a distendere le braccia, mantenendo la posizione del busto."
+   ],
+   "checks": [
+    "Non trasformare ogni tirata in un sollevamento del busto: la posizione descritta dalla fonte resta flessa alle anche.",
+    "Non lasciare cadere il carico nella discesa; la guida richiede un ritorno lento e controllato."
+   ],
+   "program": "È una tirata orizzontale con carico sul tronco, non un sostituto automatico della tecnica di nuoto. Se un programma richiede una variante diversa di rematore, cambiano appoggi e richieste: non considerarle identiche per il solo gruppo muscolare."
+  },
+  "en": {
+   "steps": [
+    "Hold the bar with palms down and hinge forward at the hips with slightly bent knees.",
+    "Keep the back controlled and pull the bar towards the navel.",
+    "Lower slowly until the arms straighten while maintaining trunk position."
+   ],
+   "checks": [
+    "Do not turn each pull into a trunk lift: the source describes maintaining the hip-hinged position.",
+    "Do not drop the load on the return; the guide calls for a slow, controlled lowering."
+   ],
+   "program": "This is a horizontal pull that also loads the trunk, not an automatic substitute for swimming technique. If a program calls for another row variation, support and demands change: the same muscle-group label does not make them identical."
+  }
+ },
+ "Stacco rumeno": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/317/romanian-deadlift/",
+  "source": "ACE, Romanian Deadlift",
+  "it": {
+   "steps": [
+    "Partire in piedi con il bilanciere davanti alle cosce, ginocchia leggermente piegate e schiena controllata.",
+    "Spingere le anche indietro mentre il carico scende vicino al corpo, fino a percepire tensione nella parte posteriore delle cosce.",
+    "Ritornare in piedi mantenendo il bilanciere vicino al corpo. La fonte non richiede di portarlo a terra."
+   ],
+   "checks": [
+    "Non cercare il pavimento come obiettivo obbligatorio: il riferimento descritto è la tensione posteriore con posizione controllata.",
+    "Non allontanare il bilanciere dal corpo per aumentare la discesa."
+   ],
+   "program": "È uno schema di hip hinge. Non è automaticamente equivalente allo stacco da terra previsto in un programma: posizione iniziale, escursione e regole di progressione possono essere diverse. La scheda tecnica non assegna serie o carichi personali."
+  },
+  "en": {
+   "steps": [
+    "Start standing with the bar in front of the thighs, knees slightly bent and back controlled.",
+    "Push the hips backwards as the load lowers close to the body, until tension is felt along the back of the thighs.",
+    "Return to standing with the bar close to the body. The source does not require it to reach the floor."
+   ],
+   "checks": [
+    "Do not treat reaching the floor as compulsory: the described reference is posterior-thigh tension with a controlled position.",
+    "Do not move the bar away from the body to gain more depth."
+   ],
+   "program": "This is a hip-hinge pattern. It is not automatically equivalent to the conventional deadlift required by a program: starting position, range and progression rules can differ. The technique entry does not assign personal sets or loads."
+  }
+ },
+ "Push-up": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/",
+  "source": "ACE, Push-up",
+  "it": {
+   "steps": [
+    "Appoggiare le mani circa alla larghezza delle spalle e sistemarle sotto le spalle; distendere il corpo e sostenere il tronco con addominali, glutei e cosce.",
+    "Scendere con controllo mantenendo testa e colonna allineate, senza lasciare scendere la zona lombare o sollevare le anche.",
+    "Spingere il pavimento per tornare a braccia distese mantenendo il corpo controllato."
+   ],
+   "checks": [
+    "Non lasciare cedere la zona lombare durante la discesa o la spinta.",
+    "Non sollevare le anche per completare una ripetizione che perde l’allineamento del corpo."
+   ],
+   "program": "È una spinta orizzontale a corpo libero. La variante e il numero di ripetizioni cambiano la richiesta: non è una dose equivalente alla panca soltanto perché appartiene allo stesso schema. Questa scheda non prescrive serie a cedimento."
+  },
+  "en": {
+   "steps": [
+    "Place the hands about shoulder-width apart under the shoulders; extend the body and brace the trunk with the abdominal, gluteal and thigh muscles.",
+    "Lower under control with the head aligned with the spine, without letting the lower back sag or the hips rise.",
+    "Press the floor away to straighten the arms while retaining body control."
+   ],
+   "checks": [
+    "Do not let the lower back sag during lowering or pressing.",
+    "Do not raise the hips to complete a repetition that loses body alignment."
+   ],
+   "program": "This is a bodyweight horizontal push. Variation and repetition count change the demand: it is not an equivalent bench-press dose merely because it shares a movement category. This entry does not prescribe sets to failure."
+  }
+ },
+ "Plank": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/",
+  "source": "ACE, Front Plank",
+  "it": {
+   "steps": [
+    "Appoggiare gli avambracci con gomiti sotto le spalle e mani rivolte avanti; distendere le gambe e sostenere il tronco.",
+    "Sollevare tronco e gambe dal pavimento mantenendoli allineati, senza lasciare scendere la zona lombare o sollevare le anche.",
+    "Continuare a respirare durante la tenuta; tornare lentamente al pavimento mantenendo il controllo."
+   ],
+   "checks": [
+    "Non spostare le spalle indietro rispetto ai gomiti per cambiare la leva durante la tenuta.",
+    "Non trattenere il respiro o sostituire il controllo del tronco con una posizione arcuata. In presenza di dolore lombare interrompere il movimento."
+   ],
+   "program": "È una tenuta isometrica: il tempo descrive solo parte della dose. Non equiparare automaticamente dieci secondi di plank a dieci ripetizioni di un esercizio dinamico. La guida tecnica non stabilisce una durata personale o un trasferimento dimostrato a un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Place the forearms with elbows under the shoulders and hands facing forwards; extend the legs and brace the trunk.",
+    "Lift the trunk and legs from the floor, keeping them aligned without sagging through the lower back or raising the hips.",
+    "Keep breathing during the hold; lower slowly to the floor under control."
+   ],
+   "checks": [
+    "Do not shift the shoulders behind the elbows to change the lever during the hold.",
+    "Do not hold the breath or replace trunk control with an arched position. Stop the movement if lower-back pain occurs."
+   ],
+   "program": "This is an isometric hold: time describes only part of the dose. Do not equate ten seconds of planking automatically with ten repetitions of a dynamic exercise. The technique guide does not establish an individual hold duration or demonstrated transfer to a particular sport."
+  }
+ },
+ "Panca con manubri": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/19/chest-press/",
+  "source": "ACE, Chest Press (dumbbells)",
+  "it": {
+   "steps": [
+    "Sdraiarsi sulla panca con un manubrio per mano e piedi sostenuti dal pavimento o da un rialzo; mantenere testa, spalle e glutei a contatto con la panca.",
+    "Tenere le scapole appoggiate e i polsi controllati; scendere con i manubri verso il torace sotto controllo, senza rimbalzo.",
+    "Spingere fino a distendere i gomiti mantenendo gli appoggi. Concordare prima l’aiuto di uno spotter per consegna e ritiro dei manubri quando necessario."
+   ],
+   "checks": [
+    "Non perdere i punti di appoggio o inarcare la zona lombare per completare la spinta.",
+    "Non lasciare che i polsi si pieghino sotto il carico e non far rimbalzare i manubri sul torace."
+   ],
+   "program": "La fonte descrive una panca piana con manubri: non la chest press alla macchina né la panca inclinata. Se un programma prescrive una di queste varianti, la sostituzione va dichiarata. Serie e carichi appartengono al programma scelto, non alla sola scheda tecnica."
+  },
+  "en": {
+   "steps": [
+    "Lie on a flat bench with one dumbbell in each hand and feet supported by the floor or a platform; keep the head, shoulders and buttocks on the bench.",
+    "Keep the shoulder blades supported and wrists controlled; lower the dumbbells towards the chest under control without bouncing.",
+    "Press until the elbows extend while retaining the points of contact. Agree on spotter assistance for handing over and taking back the dumbbells when needed."
+   ],
+   "checks": [
+    "Do not lose the points of contact or arch the lower back to finish the press.",
+    "Do not let the wrists bend under the load or bounce the dumbbells on the chest."
+   ],
+   "program": "The source describes a flat dumbbell bench press, not a machine chest press or incline press. If a program prescribes one of those variations, identify any substitution. Sets and loads belong to the selected program, not to the technique entry alone."
+  }
+ },
+ "Goblet squat": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/362/goblet-squat/",
+  "source": "ACE, Goblet Squat",
+  "it": {
+   "steps": [
+    "Stare in piedi con i piedi circa alla larghezza delle spalle, tenendo un manubrio in verticale davanti al petto.",
+    "Scendere in squat con i gomiti vicini alla cassa toracica e la schiena dritta, fino ad avere i fianchi sotto le ginocchia.",
+    "Spingere i piedi nel pavimento per tornare in piedi."
+   ],
+   "checks": [
+    "Il manubrio resta davanti al petto per tutta la ripetizione.",
+    "Gomiti vicini al busto e schiena dritta in discesa e risalita."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Stand with the feet about shoulder-width apart, holding a dumbbell vertically in front of the chest.",
+    "Lower into a squat with the elbows close to the rib cage and the back straight, until the hips are below the knees.",
+    "Push the feet into the floor to return to standing."
+   ],
+   "checks": [
+    "The dumbbell stays in front of the chest throughout the repetition.",
+    "Elbows close to the torso and back straight on the way down and up."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Stacco da terra": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/6/deadlift/",
+  "source": "ACE, Deadlift",
+  "it": {
+   "steps": [
+    "Stare dietro al bilanciere con i piedi circa alla larghezza delle spalle, punte leggermente extra-ruotate e tibie quasi a contatto con la barra.",
+    "Spostare un poco i fianchi indietro mantenendo la schiena dritta e il petto alto, poi piegarsi in avanti e afferrare la barra in presa mista (un palmo in alto, uno in basso).",
+    "Stringere la barra e spingere i piedi nel pavimento; con la schiena piatta, portare i fianchi in avanti fino alla posizione eretta, con spalle indietro e gambe dritte.",
+    "Tornare a terra riportando il peso sui fianchi, schiena dritta, lasciando piegare le ginocchia."
+   ],
+   "checks": [
+    "La guida indica che, se il gesto è corretto, il lavoro si sente su glutei e parte posteriore delle cosce, non sulla schiena.",
+    "Schiena piatta dall’inizio alla fine della ripetizione.",
+    "Livello indicato dalla fonte: avanzato."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Stand behind the bar with the feet about shoulder-width apart, toes slightly turned out and shins almost touching the bar.",
+    "Sit the hips back slightly, keeping the back straight and the chest lifted, then bend forward and grip the bar with an over-under grip (one palm up, one down).",
+    "Squeeze the bar and press the feet into the floor; keeping the back flat, drive the hips forward to a tall standing position with shoulders back and legs straight.",
+    "Return by shifting the weight back into the hips, back straight, letting the knees bend."
+   ],
+   "checks": [
+    "The guide notes that when the movement is done properly the work is felt in the glutes and back of the thighs, not in the back.",
+    "Keep the back flat from the start to the end of the repetition.",
+    "Difficulty given by the source: advanced."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Trazioni": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/191/pull-ups/",
+  "source": "ACE, Pull-Ups",
+  "it": {
+   "steps": [
+    "Partenza: sotto la sbarra, presa completa con i pollici avvolti, palmi in avanti. Incrociare piano una gamba sull’altra e contrarre l’addome. Testa allineata al tronco, polsi neutri, scapole abbassate e addotte.",
+    "Espirare e tirare il corpo verso l’alto piegando i gomiti e portandoli verso il basso, ai lati del tronco, senza oscillare.",
+    "Salire finché il mento è all’altezza della sbarra o delle mani, fare una breve pausa e tornare lentamente fino a braccia distese, mantenendo spalle e polsi nella stessa posizione."
+   ],
+   "checks": [
+    "Niente oscillazioni del corpo durante la trazione.",
+    "La fonte avverte di eseguire l’esercizio senza compromettere la spalla: seguire le indicazioni di posizione delle scapole.",
+    "Una presa stretta con palmi in avanti sposta parte del carico dai dorsali alla parte alta della schiena."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Start: under the bar, full grip with thumbs wrapped, palms facing away. Gently cross one leg over the other and brace the abdomen. Head aligned with the trunk, wrists neutral, shoulder blades down and back.",
+    "Exhale and pull the body up by bending the elbows and driving them down to the sides of the trunk, without swinging.",
+    "Pull until the chin is level with the bar or the hands, pause briefly, then lower slowly to straight arms, keeping the shoulder and wrist position."
+   ],
+   "checks": [
+    "No swinging of the body during the pull.",
+    "The source warns to perform the exercise without compromising the shoulder: follow its shoulder-blade position cues.",
+    "A narrow palms-forward grip shifts some load from the lats to the upper back."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Lat machine": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/158/seated-lat-pulldown/",
+  "source": "ACE, Seated Lat Pulldown",
+  "it": {
+   "steps": [
+    "Sedersi alla macchina e bloccare le cosce sotto il cuscino. Contrarre l’addome ed evitare di inarcare la zona lombare. Afferrare la barra con presa salda; a braccia in alto abbassare e addurre le scapole. Inclinarsi indietro poco (non oltre circa 30 gradi) e tenere la testa allineata alla colonna.",
+    "Espirare e iniziare la discesa abbassando prima le scapole, poi tirare la barra verso la parte alta o media del petto, con i gomiti diretti verso il basso e vicini ai fianchi.",
+    "Continuare finché la barra si avvicina o tocca il petto, o finché i gomiti smettono di scendere e iniziano ad andare indietro; non tirare oltre. Pausa breve, poi risalire lentamente fino ai gomiti estesi."
+   ],
+   "checks": [
+    "Nessun ulteriore inarcamento all’indietro durante la tirata.",
+    "Fermarsi quando i gomiti iniziano ad andare indietro: tirare oltre carica la spalla, secondo la fonte."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Sit at the machine and lock the thighs under the pad. Brace the abdomen and avoid arching the low back. Grip the bar firmly; with arms overhead, depress and retract the shoulder blades. Lean back slightly (no more than about 30 degrees) and keep the head aligned with the spine.",
+    "Exhale and start the pull by lowering the shoulder blades first, then pull the bar to the upper or mid chest, driving the elbows down and toward the sides.",
+    "Continue until the bar nears or touches the chest, or the elbows stop moving down and start moving back; do not pull further. Pause briefly, then let the bar rise slowly until the elbows are straight."
+   ],
+   "checks": [
+    "No extra backward lean during the pull.",
+    "Stop when the elbows start moving backwards: pulling further loads the shoulder joint, according to the source."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Military press": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/71/standing-shoulder-press/",
+  "source": "ACE, Standing Shoulder Press",
+  "it": {
+   "steps": [
+    "Posizionare il bilanciere nel rack all’altezza delle spalle. Presa circa alla larghezza delle spalle, palmi verso l’alto.",
+    "Infilarsi sotto la barra, toglierla dal rack e appoggiarla sulla parte alta delle spalle, gomiti puntati in avanti.",
+    "Fare un passo indietro con schiena dritta e alta e spingere il bilanciere sopra la testa. Riportarlo lentamente alle spalle e ripetere."
+   ],
+   "checks": [
+    "Schiena dritta e alta durante la spinta.",
+    "Ritorno lento del carico alle spalle."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Set the bar in a rack at about shoulder height. Grip it about shoulder-width apart, palms facing up.",
+    "Duck under the bar, lift it off the rack and rest it across the top of the shoulders, elbows pointing forward.",
+    "Step back with the back straight and tall and press the bar directly overhead. Lower it slowly to the shoulders and repeat."
+   ],
+   "checks": [
+    "Back straight and tall during the press.",
+    "Lower the load slowly back to the shoulders."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Step-up": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/28/step-up/",
+  "source": "ACE, Step-Up",
+  "it": {
+   "steps": [
+    "Partenza: in piedi, piedi paralleli larghi come le anche, manubri in mano con palmi rivolti all’interno. Scapole abbassate e addotte, senza alzare le spalle.",
+    "Salita: appoggiare con decisione il piede destro su una piattaforma, busto eretto e ginocchio allineato al secondo dito del piede. Spingere con la gamba posteriore e portare il piede accanto all’altro.",
+    "Discesa: caricare il piede anteriore, tornare indietro con il piede posteriore, poi scendere con l’altro piede. Ripetere dal lato opposto."
+   ],
+   "checks": [
+    "Ginocchio allineato al secondo dito del piede; piede e caviglia non devono collassare verso l’interno o l’esterno.",
+    "Busto eretto: la fonte accetta una leggera inclinazione in avanti, ma evita un movimento eccessivo.",
+    "Progressione indicata dalla fonte: salire su una gamba sola e restare in appoggio monopodalico prima di scendere."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Start: stand with feet parallel, hip-width apart, dumbbells in hand with palms facing in. Shoulder blades down and back, shoulders not shrugged.",
+    "Up: place the right foot firmly on a platform, torso upright and knee aligned over the second toe. Push off with the trailing leg and bring that foot beside the lead foot.",
+    "Down: load the lead foot, step the trailing foot back to the floor, then step off with the lead foot. Repeat on the other side."
+   ],
+   "checks": [
+    "Knee aligned over the second toe; the foot and ankle should not collapse in or out.",
+    "Keep the torso upright: the source allows a slight forward lean but avoids excessive movement.",
+    "Progression given by the source: step up onto one leg only and stay balanced on that leg before stepping down."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Curl con bilanciere": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/70/bicep-curl/",
+  "source": "ACE, Bicep Curl",
+  "it": {
+   "steps": [
+    "Tenere il bilanciere con le mani in presa supina, larghe come le spalle, in modo che polsi, gomiti e spalle siano allineati.",
+    "Sollevare la barra verso le spalle piegando i gomiti, che restano vicini al centro del corpo.",
+    "Abbassare lentamente il peso fino alla posizione di partenza."
+   ],
+   "checks": [
+    "Petto fermo: il movimento è delle sole braccia.",
+    "Gomiti vicini al corpo durante la salita."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Hold the bar with both hands facing up, wrists, elbows and shoulders in a straight line about shoulder-width apart.",
+    "Lift the bar toward the shoulders by bending the elbows, keeping them next to the middle of the body.",
+    "Slowly lower the weight to the starting position."
+   ],
+   "checks": [
+    "Keep the chest still: only the arms move.",
+    "Elbows stay close to the body on the way up."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Alzate laterali": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/26/lateral-raise/",
+  "source": "ACE, Lateral Raise",
+  "it": {
+   "steps": [
+    "Partenza: in piedi con i manubri lungo le cosce, presa neutra con i pollici avvolti, gomiti estesi o appena flessi. Piedi leggermente più larghi delle anche o in posizione sfalsata. Addome contratto, scapole abbassate e addotte, testa allineata alla colonna.",
+    "Salita: espirare e sollevare i manubri in alto e ai lati; gomiti e braccia salgono insieme, un poco davanti agli avambracci. Oltre 60-70 gradi ruotare leggermente le braccia verso l’alto. Salire fino a braccia all’altezza delle spalle, circa parallele al pavimento.",
+    "Discesa: inspirare e riportare i manubri lentamente alla partenza, con gomiti leggermente flessi, ruotando le braccia verso il basso oltre i 60-70 gradi."
+   ],
+   "checks": [
+    "Busto eretto, senza inarcare la zona lombare.",
+    "Polsi neutri, senza flettere o estendere.",
+    "La fonte indica che la leggera rotazione esterna oltre i 60-70 gradi può ridurre il rischio di impingement alla spalla (indicazione della guida, non una stima del rischio)."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Start: stand with dumbbells beside the thighs, neutral grip with thumbs wrapped, elbows straight or slightly bent. Feet slightly wider than hip-width or in a split stance. Abs braced, shoulder blades down and back, head aligned with the spine.",
+    "Up: exhale and raise the dumbbells up and out to the sides; elbows and upper arms rise together, slightly ahead of the forearms. Past 60-70 degrees rotate the arms slightly upward. Raise until the arms are level with the shoulders, about parallel to the floor.",
+    "Down: inhale and lower the dumbbells slowly to the start, elbows slightly bent, rotating the arms slightly downward past the 60-70 degree mark."
+   ],
+   "checks": [
+    "Torso upright, no arching of the low back.",
+    "Neutral wrists, no flexion or extension.",
+    "The source says the slight external rotation past 60-70 degrees may reduce potential shoulder impingement (the guide's statement, not a risk estimate)."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Farmer walk": {
+  "url": "https://www.acefitness.org/resources/everyone/exercise-library/359/farmer-s-carry/",
+  "source": "ACE, Farmer's Carry",
+  "it": {
+   "steps": [
+    "Tenere un manubrio per mano con presa salda e palmi rivolti verso il basso; le braccia restano lungo i fianchi, manubri accanto alle anche.",
+    "Mantenendo la schiena dritta, camminare per una distanza stabilita in anticipo.",
+    "Arrivati alla fine, girarsi e tornare al punto di partenza."
+   ],
+   "checks": [
+    "Presa salda e schiena dritta per tutto il tragitto.",
+    "Distanza decisa prima di partire."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Hold a dumbbell in each hand with a firm grip, palms facing down; arms rest along the sides with the dumbbells next to the hips.",
+    "Keeping the back straight, walk a pre-set distance.",
+    "At the end, turn around and return to the starting point."
+   ],
+   "checks": [
+    "Firm grip and straight back for the whole walk.",
+    "Set the distance before you start."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ }
 }

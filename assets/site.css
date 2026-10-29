@@ -625,3 +625,8 @@ html:not([data-theme="dark"]) .w-feature-sym{color:#5A7300}
 @media(max-width:700px){.pl-ico{width:24px}}
 .pl-ico{width:clamp(30px,3.4vw,48px);height:auto;stroke:none}
 @media(max-width:700px){.pl-ico{width:24px}}
+/* hub: the panel is always dark, so hover and focus must stay dark in both themes */
+.discipline-panel .w-item a:hover,.discipline-panel .w-item a:focus-visible{background:#1d1d1d!important;color:#f5f4ef}
+.discipline-panel .w-item a:hover .w-txt,.discipline-panel .w-item a:hover .w-txt b,.discipline-panel .w-item a:focus-visible .w-txt,.discipline-panel .w-item a:focus-visible .w-txt b{color:#f5f4ef!important}
+.discipline-panel .w-item a:hover .w-go,.discipline-panel .w-item a:focus-visible .w-go{color:#d6ff35!important}
+.discipline-panel .w-item a:focus-visible,.discipline-panel .pl-d summary:focus-visible,.discipline-panel .pl-more a:focus-visible{outline:2px solid #d6ff35;outline-offset:-2px}
