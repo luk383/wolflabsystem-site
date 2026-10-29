@@ -219,8 +219,8 @@ function hub(lang, key) {
     const lv = [["NEWS", it ? "Cosa è appena uscito" : "What just came out", 5], ["ANALYSIS", it ? "Cosa dicono davvero i dati" : "What the data really say", 0], ["TEST", it ? "Lo abbiamo provato" : "We tried it", 0], ["VERDICT", it ? "Lo comprerei?" : "Would I buy it?", 0]];
     body += `<ol class="w-levels">${lv.map(([n, d, c], k) => `<li class="${c ? "on" : "off"}"><span class="w-num">0${k + 1}</span><b>${n}</b><small>${d}</small><i>${c ? (it ? c + " pubblicati" : c + " published") : (it ? "non ancora pubblicato" : "not published yet")}</i></li>`).join("")}</ol>`;
   }
-  for (const g of h.groups) body += `<ul class="w-list">${g.map((x, i) => itemHtml(lang, x, i)).join("")}</ul>`;
-  for (const s of h.sections || []) body += `<section id="${s[0]}" class="w-section"><h2>${s[1][lang]}</h2><ul class="w-list">${s[2].map((x, i) => itemHtml(lang, x, i)).join("")}</ul></section>`;
+  for (const g of h.groups) body += `<ul class="w-list">${g.filter(x => x[2]).map((x, i) => itemHtml(lang, x, i)).join("")}</ul>`;
+  for (const s of h.sections || []) body += `<section id="${s[0]}" class="w-section"><h2>${s[1][lang]}</h2><ul class="w-list">${s[2].filter(x => x[2]).map((x, i) => itemHtml(lang, x, i)).join("")}</ul></section>`;
   body += `<p class="w-foot"><a class="w-cta" href="${R.engine[lang]}">${it ? "Apri il Wolf Engine" : "Open Wolf Engine"} <span aria-hidden="true">→</span></a></p></div>`;
   return layout({ lang, key, title: h.kicker[0], desc: h.lede[lang], body });
 }
