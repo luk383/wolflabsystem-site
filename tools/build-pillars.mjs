@@ -49,7 +49,7 @@ const tag = (d, k) => `<span class="pl-tag">${d} · ${k}</span>`;
 
 // ---- discipline: 4 blocchi, solo link a pagine esistenti
 const DISC = {
-  RUN: { url: '/run', en: '/en/run', desc: 'Allenamento, prestazione, gare e materiali per la corsa.', lead: 'Allenamento, prestazione, gare e materiali.', blocks: [
+  RUN: { url: '/run', en: '/en/run', desc: 'Allenamento, prestazione, gare e materiali per la corsa.', lead: 'Allenamento, prestazione, gare e materiali.', leadHtml: 'Maratona di New York, 1 novembre 2026: <a href="/articoli/scarico-pre-gara/" style="color:#D6FF35;text-decoration:underline">scarico pre-gara</a> · <a href="/articoli/carboidrati-maratona/" style="color:#D6FF35;text-decoration:underline">carboidrati</a>.', blocks: [
     ['TRAINING', [['Distribuzione dell\'intensità', 'Piramidale e polarizzato in corsa.', '/allenamento/?s=run#allenamento-0'], ['Scarico pre-gara', 'Quanto e come ridurre.', '/articoli/scarico-pre-gara/'], ['La bici per preparare la maratona', 'Cosa trasferisce e cosa no.', '/articoli/bici-per-la-maratona/'], ['Pfitzinger', 'Maratona in 18 settimane.', '/articoli/pfitzinger-maratona-18-settimane/'], ['Daniels e il VDOT', 'Cinque intensità e 24 settimane.', '/articoli/daniels-vdot-metodo/'], ['Lydiard', 'Base aerobica, colline e rifinitura.', '/articoli/lydiard-fasi-base-aerobica/'], ['Hansons', 'Maratona con fatica accumulata.', '/articoli/hansons-maratona-metodo/'], ['MAF di Maffetone', 'La formula 180 e i suoi limiti.', '/articoli/maf-180-maffetone/'], ['Metodo norvegese', 'Soglia guidata dal lattato: versioni, prove, limiti.', '/articoli/metodo-norvegese-doppia-soglia/'], ['Forza per la corsa', 'Metodi studiati e protocolli.', '/articoli/forza-corsa-metodi/'], ['Metodi di allenamento', 'Libreria dei metodi, filtro Corsa.', '/allenamento/?s=run#allenamento']]],
     ['PERFORMANCE', [['Wolf Engine', 'Ritmi, VDOT e zone dai tuoi tempi.', '/engine'], ['Passaggi in maratona', 'Tempi di passaggio a ritmo costante.', '/allenamento/#passaggi']]],
     ['RACE', [['Gare di corsa', `${RUN_RACES} gare in calendario, maratone e mezze.`, '/gare/?f=run']]],
@@ -79,7 +79,7 @@ for (const [name, d] of Object.entries(DISC)) {
   const blocks = d.blocks.map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span><em>${items.length || ''}</em></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">Nessun contenuto ancora.</p>'}</details>`).join('');
   const more = `<p class="pl-more"><a href="/articoli/?d=${name}">Tutti gli articoli ${name} →</a></p>`;
   wr(file, page(name, { title: `${name} - Wolf Lab`, desc: d.desc, url: d.url, en: d.en },
-    `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Forza per chi corre, pedala e nuota.' : name}</h1>${name === 'STRENGTH' ? '' : `<p class="pl-lead">${esc(d.lead)}</p>`}</div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div>${more}</div>`));
+    `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Forza per chi corre, pedala e nuota.' : name}</h1>${name === 'STRENGTH' ? '' : `<p class="pl-lead">${d.leadHtml ? esc(d.lead) + ' ' + d.leadHtml : esc(d.lead)}</p>`}</div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div>${more}</div>`));
 }
 
 // ---- articoli: un solo hub con tag
