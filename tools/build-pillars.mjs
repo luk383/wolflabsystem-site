@@ -81,7 +81,7 @@ for (const [name, d] of Object.entries(DISC)) {
   const blocks = d.blocks.map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">Nessuna guida pubblicata in questa categoria.</p>'}</details>`).join('');
   const more = `<p class="pl-more"><a href="/articoli/?d=${name}">Tutti gli articoli ${name} →</a></p>`;
   wr(file, page(name, { title: `${name} - Wolf Lab`, desc: d.desc, url: d.url, en: d.en },
-    `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Forza per chi corre, pedala e nuota.' : name}</h1></div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div>${more}</div>`));
+    name === 'STRENGTH' ? `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Forza per chi corre, pedala e nuota.' : name}</h1></div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div>${more}</div>` : `<section class="wrap discipline-panel"><header><p class="w-kicker">${name}</p><h1>${name}</h1></header><div class="pl-blocks">${blocks}</div>${more}</section>`));
 }
 
 // ---- articoli: un solo hub con tag

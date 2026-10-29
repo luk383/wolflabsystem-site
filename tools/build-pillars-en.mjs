@@ -72,7 +72,7 @@ for (const [name, d] of Object.entries(DISC)) {
   const file = name === 'STRENGTH' ? 'en/strength/index.html' : 'en/' + name.toLowerCase() + '.html';
   const blocks = d.blocks.map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">No guides published in this category.</p>'}</details>`).join('');
   wr(file, page(name, { title: `${name} - Wolf Lab`, desc: d.desc, url: d.url, it: d.it },
-    `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Strength for people who run, ride and swim.' : name}</h1></div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div><p class="pl-more"><a href="/en/articles/?d=${name}">All ${name} articles →</a></p></div>`));
+    name === 'STRENGTH' ? `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Strength for people who run, ride and swim.' : name}</h1></div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div><p class="pl-more"><a href="/en/articles/?d=${name}">All ${name} articles →</a></p></div>` : `<section class="wrap discipline-panel"><header><p class="w-kicker">${name}</p><h1>${name}</h1></header><div class="pl-blocks">${blocks}</div><p class="pl-more"><a href="/en/articles/?d=${name}">All ${name} articles →</a></p></section>`));
 }
 const DISCS = ['RUN', 'RIDE', 'SWIM', 'STRENGTH', 'HYBRID'], TYPES = ['ANALYSIS', 'GUIDE', 'REVIEW', 'COMPARISON', 'METHOD'];
 const rows = [...arts.map((a) => ({ title: a.title, href: a.href, d: a.d, k: a.k, min: a.minutes })), ...PICKS];
