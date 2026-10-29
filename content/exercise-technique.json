@@ -750,5 +750,469 @@
    ],
    "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
   }
+ },
+ "Leg extension": {
+  "url": "https://exrx.net/WeightExercises/Quadriceps/LVLegExtension",
+  "source": "ExRx.net, Lever Leg Extension",
+  "it": {
+   "steps": [
+    "Sedersi sull’attrezzo con la schiena contro lo schienale imbottito. Mettere la parte anteriore delle gambe sotto la leva imbottita, con l’articolazione del ginocchio allineata al fulcro della leva. Impugnare le maniglie ai lati.",
+    "Spingere la leva in avanti e in alto estendendo le ginocchia fino a gambe dritte.",
+    "Riportare la leva alla posizione iniziale piegando le ginocchia."
+   ],
+   "checks": [
+    "Con carichi elevati la fonte indica di usare gli stabilizzatori o la cintura del sedile per evitare che il corpo si sollevi dal sedile.",
+    "Appoggiarsi sui fianchi o inclinarsi un poco all’indietro può ridurre l’insufficienza attiva del retto femorale vicino all’estensione (nota della fonte)."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Sit on the machine with the back against the padded support. Place the front of the lower legs under the padded lever, with the knee joint at the lever fulcrum axis. Hold the handles at the sides.",
+    "Move the lever forward and up by extending the knees until the legs are straight.",
+    "Return the lever to the start by bending the knees."
+   ],
+   "checks": [
+    "With heavy loads the source says to use the stabilisers or the seat belt so the body does not rise off the seat.",
+    "Sitting back on the hips or leaning back slightly may reduce the active insufficiency of the rectus femoris near extension (source note)."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Front squat": {
+  "url": "https://exrx.net/WeightExercises/Quadriceps/BBFrontSquat",
+  "source": "ExRx.net, Barbell Front Squat",
+  "it": {
+   "steps": [
+    "Dal rack, con il bilanciere all’altezza della parte alta del petto, posizionare la barra davanti alle spalle. Incrociare le braccia con le mani sopra la barra e le braccia parallele al pavimento. Staccare la barra dal rack.",
+    "Scendere piegando i fianchi indietro e lasciando avanzare le ginocchia, schiena dritta e ginocchia orientate come i piedi. Scendere finché le cosce sono appena oltre il parallelo.",
+    "Estendere ginocchia e anche fino a gambe dritte. Ripetere."
+   ],
+   "checks": [
+    "Testa in avanti, schiena dritta e piedi piatti con il peso distribuito tra avampiede e tallone.",
+    "Le ginocchia puntano nella stessa direzione dei piedi per tutto il movimento."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "From a rack with the bar at upper chest height, position the bar in front of the shoulders. Cross the arms and place the hands on top of the bar with the upper arms parallel to the floor. Take the bar off the rack.",
+    "Squat down by bending the hips back and letting the knees bend forward, back straight and knees pointing the same way as the feet. Descend until the thighs are just past parallel.",
+    "Extend knees and hips until the legs are straight. Repeat."
+   ],
+   "checks": [
+    "Head facing forward, back straight and feet flat with weight spread between forefoot and heel.",
+    "Knees point the same way as the feet throughout."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Good morning": {
+  "url": "https://exrx.net/WeightExercises/Hamstrings/BBGoodMorning",
+  "source": "ExRx.net, Barbell Good-morning",
+  "it": {
+   "steps": [
+    "Appoggiare il bilanciere sulla parte posteriore delle spalle e afferrarlo ai lati.",
+    "Mantenendo la schiena dritta, piegare i fianchi per abbassare il busto in avanti fino al parallelo con il pavimento.",
+    "Sollevare il busto fino a estendere i fianchi. Ripetere."
+   ],
+   "checks": [
+    "Iniziare con un carico molto leggero e aggiungere peso gradualmente, secondo la fonte.",
+    "Schiena e ginocchia dritte per tutta l’alzata.",
+    "Non scendere oltre un leggero allungamento degli ischiocrurali: l’escursione varia con la flessibilità."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Set the bar on the back of the shoulders and grip it at the sides.",
+    "Keeping the back straight, bend at the hips to lower the torso forward until parallel to the floor.",
+    "Raise the torso until the hips are extended. Repeat."
+   ],
+   "checks": [
+    "Start with a very light load and add weight gradually, says the source.",
+    "Keep back and knees straight throughout the lift.",
+    "Do not lower beyond a mild hamstring stretch: range varies with flexibility."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Hip thrust": {
+  "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBHipThrust",
+  "source": "ExRx.net, Barbell Hip Thrust",
+  "it": {
+   "steps": [
+    "Sedersi a terra con il lato lungo di una panca dietro la schiena. Rotolare il bilanciere indietro e al centro sopra i fianchi. Appoggiare la parte alta della schiena sull’angolo della panca, piedi a terra circa larghi come le spalle e ginocchia piegate. Afferrare la barra ai lati.",
+    "Sollevare la barra estendendo i fianchi fino alla posizione dritta.",
+    "Abbassare e ripetere."
+   ],
+   "checks": [
+    "Panca bassa (circa 40-46 cm) in modo che il busto sia inclinato a circa 45 gradi; la panca potrebbe dover essere fissata perché non scivoli.",
+    "La barra va sopra la parte alta dei fianchi e il basso addome; se serve, usare un’imbottitura.",
+    "Il movimento avviene dall’anca con il busto rigido: evitare di inarcare il petto e l’inclinazione anteriore del bacino, che producono iperestensione lombare."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Sit on the floor with the long side of a bench behind the back. Roll the bar back over the hips. Place the upper back on the corner of the bench, feet on the floor about shoulder-width, knees bent. Grip the bar at the sides.",
+    "Raise the bar by extending the hips until straight.",
+    "Lower and repeat."
+   ],
+   "checks": [
+    "Use a low bench (about 40 to 46 cm) so the torso is angled about 45 degrees; the bench may need securing so it does not slide.",
+    "The bar sits across the upper hip flexors and lower abdomen; use padding if needed.",
+    "Movement comes from the hip with a rigid torso: avoid arching the chest and anterior pelvic tilt, which produce spinal hyperextension."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "French press": {
+  "url": "https://exrx.net/WeightExercises/Triceps/BBLyingTriExtSC",
+  "source": "ExRx.net, Barbell Lying Triceps Extension",
+  "it": {
+   "steps": [
+    "Sdraiarsi su una panca con presa stretta in pronazione sul bilanciere. Portare la barra sopra le spalle con le braccia estese.",
+    "Abbassare la barra verso la fronte piegando i gomiti.",
+    "Estendere le braccia e ripetere."
+   ],
+   "checks": [
+    "Rallentare la discesa quando la barra si avvicina alla fronte.",
+    "La fonte indica che si può usare una barra dritta o EZ.",
+    "Una variante prevede il gomito leggermente indietro in estensione, così la barra si muove su una linea retta sopra la fronte."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Lie on a bench with a narrow overhand grip on the bar. Position the bar over the shoulders with arms extended.",
+    "Lower the bar to the forehead by bending the elbows.",
+    "Extend the arms and repeat."
+   ],
+   "checks": [
+    "Slow the descent as the bar nears the forehead.",
+    "The source says a straight or EZ bar can be used.",
+    "A variant lets the elbows travel slightly back during extension so the bar moves in a straight line over the forehead."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Dip alle parallele": {
+  "url": "https://exrx.net/WeightExercises/PectoralSternal/BWChestDip",
+  "source": "ExRx.net, Chest Dip",
+  "it": {
+   "steps": [
+    "Salire sulle parallele larghe con presa obliqua (barra in diagonale sotto il palmo), braccia dritte e spalle sopra le mani. Piegare un poco ginocchia e anche.",
+    "Abbassare il corpo piegando le braccia, lasciando che i gomiti si aprano ai lati. Quando si sente un leggero allungamento al petto o alle spalle, spingere fino a braccia dritte.",
+    "Ripetere."
+   ],
+   "checks": [
+    "Per ridurre la difficoltà la fonte indica l’assistenza di una macchina o di un compagno, o l’esecuzione tra due panche o con i piedi su una panca.",
+    "Per aumentarla, si può aggiungere peso con una cintura per dip o un manubrio tra le caviglie."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Mount a wide dip bar with an oblique grip (bar diagonal under the palm), arms straight with shoulders above the hands. Bend the knees and hips slightly.",
+    "Lower the body by bending the arms, letting the elbows flare out. When a slight stretch is felt in the chest or shoulders, push up until the arms are straight.",
+    "Repeat."
+   ],
+   "checks": [
+    "To make it easier the source lists machine or partner assistance, between two benches, or feet on a bench.",
+    "To make it harder, add weight on a dip belt or a dumbbell between the ankles."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Sit-up": {
+  "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWSitUp",
+  "source": "ExRx.net, Sit-up",
+  "it": {
+   "steps": [
+    "Bloccare i piedi sotto un supporto o una sporgenza bassa. Sdraiarsi supini su pavimento o panca con i fianchi flessi. Mani dietro il collo o ai lati del collo.",
+    "Sollevare il busto dalla panca piegando vita e anche.",
+    "Tornare giù fino a toccare con la parte posteriore delle spalle. Ripetere."
+   ],
+   "checks": [
+    "I piedi possono essere tenuti da un compagno invece che dal supporto.",
+    "Alcune persone devono mantenere il collo neutro, con spazio tra mento e sterno.",
+    "Se la parte alta della schiena non torna completamente giù, gli addominali possono lavorare solo in modo isometrico (nota della fonte).",
+    "Più facile: braccia più lontane dalla testa. Più difficile: mani più in alto sulla testa, panca inclinata o carico aggiuntivo."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Hook the feet under a foot brace or low overhang. Lie on your back on the floor or a bench with the hips bent. Hands behind or at the side of the neck.",
+    "Raise the torso from the bench by bending at the waist and hips.",
+    "Return until the back of the shoulders touches the board. Repeat."
+   ],
+   "checks": [
+    "A partner can hold the feet instead of a foot bar.",
+    "Some people need to keep the neck neutral with space between chin and sternum.",
+    "If the upper back does not come fully down, the abs may only work isometrically (source note).",
+    "Easier: arms further from the head. Harder: hands further up the head, an incline board or added weight."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Kickback ai cavi": {
+  "url": "https://exrx.net/WeightExercises/GluteusMaximus/CBGluteKickback",
+  "source": "ExRx.net, Cable Glute Kickback",
+  "it": {
+   "steps": [
+    "Fissare la cavigliera al cavo basso. Con la cavigliera su una caviglia, afferrare la barra con entrambe le mani e fare un passo ampio indietro con l’altro piede. Le braccia restano estese per sostenere il corpo inclinato in avanti. La gamba con la cavigliera è flessa a anca e ginocchio.",
+    "Tirare l’attacco del cavo indietro estendendo anca e ginocchio.",
+    "Riportare la gamba alla posizione iniziale e ripetere. Continuare con l’altra gamba."
+   ],
+   "checks": [
+    "La fonte nota che, rispetto all’estensione d’anca ai cavi in piedi, la stabilizzazione spinale nel piano sagittale è meno importante, perché il vettore di forza è quasi parallelo alla colonna.",
+    "Gli erettori spinali, gli obliqui e il quadrato dei lombi restano coinvolti come stabilizzatori per il carico su un solo lato."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Attach the ankle cuff to the low pulley. With the cuff on one ankle, hold the bar with both hands and step far back with the other foot. Arms stay extended to support the forward-leaning body. The cuffed leg is flexed at hip and knee.",
+    "Pull the cable attachment back by extending hip and knee.",
+    "Return the leg to the start and repeat. Continue with the other leg."
+   ],
+   "checks": [
+    "The source notes that, compared with upright cable hip extension, sagittal spinal stabilisation matters less because the force vector is nearly parallel to the spine.",
+    "The spinal erectors, obliques and quadratus lumborum still stabilise for the one-sided load."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Croci ai cavi": {
+  "url": "https://exrx.net/WeightExercises/PectoralSternal/CBSeatedFly",
+  "source": "ExRx.net, Cable Seated Fly",
+  "it": {
+   "steps": [
+    "Sedersi e afferrare le staffe ai lati. Piegare leggermente i gomiti e ruotare internamente le spalle in modo che i gomiti siano indietro.",
+    "Con i gomiti alti e fissi, portare gli attacchi dei cavi uno verso l’altro con un movimento di abbraccio.",
+    "Tornare alla partenza fino a un leggero allungamento. Ripetere."
+   ],
+   "checks": [
+    "Le spalle restano ruotate internamente, con i gomiti indietro e verso i lati.",
+    "La scheda descrive la versione da seduti della fonte; l’esecuzione con cavi alti in piedi non è coperta."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Sit and hold the stirrups at the sides. Bend the elbows slightly and internally rotate the shoulders so the elbows are back.",
+    "Keeping the elbows high and fixed, bring the cable attachments together in a hugging motion.",
+    "Return to the start until a slight stretch. Repeat."
+   ],
+   "checks": [
+    "The shoulders stay internally rotated, elbows pointing back and out to the sides.",
+    "The card describes the source's seated version; a standing high-cable setup is not covered."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Pulley": {
+  "url": "https://exrx.net/WeightExercises/BackGeneral/CBSeatedRow",
+  "source": "ExRx.net, Cable Seated Row",
+  "it": {
+   "steps": [
+    "Sedersi leggermente in avanti sul sedile per afferrare l’attacco del cavo. Piedi sulle pedane. Portare i fianchi indietro con le ginocchia leggermente piegate.",
+    "Tirare l’attacco verso la vita raddrizzando la zona lombare. Portare le spalle indietro e il petto in avanti inarcando la schiena.",
+    "Tornare finché le braccia sono estese, le spalle in avanti e la zona lombare flessa in avanti. Ripetere."
+   ],
+   "checks": [
+    "Iniziare con un carico leggero e aggiungere peso gradualmente per dare tempo di adattamento alla zona lombare.",
+    "Non fermarsi né rimbalzare in basso.",
+    "Non scendere oltre un leggero allungamento: l’escursione lombare varia da persona a persona."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Sit slightly forward on the seat to grasp the cable attachment. Feet on the footplates. Slide the hips back with the knees slightly bent.",
+    "Pull the attachment to the waist while straightening the lower back. Pull the shoulders back and push the chest forward, arching the back.",
+    "Return until the arms are extended, shoulders stretched forward and lower back flexed forward. Repeat."
+   ],
+   "checks": [
+    "Start with light weight and add gradually to let the lower back adapt.",
+    "Do not pause or bounce at the bottom.",
+    "Do not lower beyond a mild stretch: lower back range varies between people."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Alzate posteriori": {
+  "url": "https://exrx.net/WeightExercises/DeltoidPosterior/DBRearLateralRaise",
+  "source": "ExRx.net, Dumbbell Rear Lateral Raise",
+  "it": {
+   "steps": [
+    "Afferrare i manubri ai lati. Piegare le ginocchia e il busto dai fianchi con la schiena piatta, quasi orizzontale. Gomiti leggermente piegati, palmi uno di fronte all’altro.",
+    "Sollevare le braccia ai lati fino all’altezza delle spalle dei gomiti. Mantenere le braccia perpendicolari al busto e l’angolo del gomito fisso (10-30 gradi). Tenere i gomiti sopra i polsi sollevando il lato del mignolo.",
+    "Abbassare e ripetere."
+   ],
+   "checks": [
+    "Per lavorare il deltoide posteriore e non il laterale, il busto deve restare vicino all’orizzontale: 45 gradi non bastano, dice la fonte.",
+    "Le ginocchia piegate servono a tenere la schiena dritta; se la zona lombare si arrotonda per ischiocrurali rigidi, piegare di più le ginocchia o non abbassare tanto il busto.",
+    "Percorso perpendicolare al busto per ridurre il coinvolgimento del gran dorsale."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Hold dumbbells at the sides. Bend the knees and bend over at the hips with a flat back, close to horizontal. Elbows slightly bent, palms facing each other.",
+    "Raise the upper arms to the sides until the elbows are at shoulder height. Keep the upper arms perpendicular to the torso and the elbow angle fixed (10 to 30 degrees). Keep the elbows above the wrists by raising the pinkie side.",
+    "Lower and repeat."
+   ],
+   "checks": [
+    "To work the rear deltoid rather than the lateral deltoid, keep the torso near horizontal: 45 degrees is not enough, says the source.",
+    "Bent knees help keep the back straight; if tight hamstrings round the low back, bend the knees more or do not lower the torso as far.",
+    "Path perpendicular to the torso to limit latissimus dorsi involvement."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Shoulder press manubri": {
+  "url": "https://exrx.net/WeightExercises/DeltoidAnterior/DBShoulderPress",
+  "source": "ExRx.net, Dumbbell Shoulder Press",
+  "it": {
+   "steps": [
+    "Posizionare i manubri ai lati delle spalle, con i gomiti sotto i polsi.",
+    "Spingere i manubri verso l’alto fino a braccia estese sopra la testa.",
+    "Abbassare ai lati delle spalle e ripetere."
+   ],
+   "checks": [
+    "Con manubri pesanti la fonte rimanda a una procedura di salita e discesa dei manubri (non riportata qui)."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Position the dumbbells at the sides of the shoulders with the elbows below the wrists.",
+    "Press the dumbbells up until the arms are extended overhead.",
+    "Lower to the sides of the shoulders and repeat."
+   ],
+   "checks": [
+    "With heavy dumbbells the source points to a mount and dismount procedure (not reproduced here)."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Low row": {
+  "url": "https://exrx.net/WeightExercises/BackGeneral/LVSeatedLowRow",
+  "source": "ExRx.net, Lever Isolateral Seated Low Row",
+  "it": {
+   "steps": [
+    "Sedersi con il petto contro il cuscino. Afferrare le maniglie della leva con presa prona o neutra.",
+    "Tirare le leve indietro finché i gomiti sono dietro la schiena e le spalle sono portate indietro.",
+    "Tornare fino a braccia estese e spalle allungate in avanti. Ripetere."
+   ],
+   "checks": [
+    "Regolare altezza del sedile e presa in modo che i polsi seguano l’avambraccio.",
+    "A fine tirata sollevare il petto lasciando che le spalle vadano indietro, tenendo la parte bassa del petto sul cuscino.",
+    "Lasciare che le spalle ruotino in avanti quando le braccia si estendono."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Sit with the chest against the pad. Grasp the lever handles with an overhand or neutral grip.",
+    "Pull the levers back until the elbows are behind the back and the shoulders are pulled back.",
+    "Return until the arms are extended and the shoulders are stretched forward. Repeat."
+   ],
+   "checks": [
+    "Adjust seat height and grip so the wrists follow the lower arm.",
+    "At the end of the pull lift the chest, letting the shoulder girdle pull back, while keeping the lower chest on the pad.",
+    "Let the shoulders roll forward as the arms extend."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Calf raise seduto": {
+  "url": "https://exrx.net/WeightExercises/Soleus/LVSeatedCalfRaise",
+  "source": "ExRx.net, Lever Seated Calf Raise",
+  "it": {
+   "steps": [
+    "Sedersi di fronte alla leva. Tirare la leva a mano verso il corpo. Appoggiare l’avampiede sulla piattaforma con i talloni fuori. Mettere la parte bassa delle cosce sotto i cuscini. Rilasciare la leva spingendola via e appoggiare le mani sopra i cuscini.",
+    "Sollevare i talloni estendendo le caviglie il più possibile.",
+    "Abbassare i talloni piegando le caviglie fino ad allungare i polpacci. Ripetere."
+   ],
+   "checks": [
+    "Da seduti con le ginocchia molto piegate il lavoro è prevalentemente del soleo; i gemelli sono in insufficienza attiva (nota della fonte)."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Sit facing the lever. Pull the hand lever toward the body. Place the forefeet on the platform with the heels off. Position the lower thighs under the pads. Release the lever by pushing away and rest the hands on the thigh pads.",
+    "Raise the heels by extending the ankles as high as possible.",
+    "Lower the heels by bending the ankles until the calves are stretched. Repeat."
+   ],
+   "checks": [
+    "Seated with knees well bent, the work is mainly soleus; the gastrocnemius is in active insufficiency (source note)."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Hack squat": {
+  "url": "https://exrx.net/WeightExercises/Quadriceps/SLHackSquat",
+  "source": "ExRx.net, Sled Hack Squat",
+  "it": {
+   "steps": [
+    "Sdraiarsi supini sul cuscino schiena con le spalle sotto i cuscini delle spalle. Piedi sulla piattaforma, poco sopra la base della slitta. Estendere anche e ginocchia e sbloccare le leve di sicurezza.",
+    "Abbassare la slitta piegando anche e ginocchia fino a ginocchia appena prima della flessione completa.",
+    "Sollevare la slitta estendendo ginocchia e anche. Ripetere."
+   ],
+   "checks": [
+    "Riagganciare la leva di supporto in posizione estesa prima di scendere dalla macchina.",
+    "Se la mobilità dell’anca fa staccare il bacino dal cuscino in basso, scendere solo fino appena prima di quel punto.",
+    "Ginocchia orientate come i piedi; non sollevare i talloni, spingendo con tallone e avampiede.",
+    "Piedi poco più alti sulla piattaforma enfatizzano il grande gluteo; poco più bassi il quadricipite."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Lie on your back on the back pad with the shoulders under the shoulder pads. Feet on the platform, slightly above the base of the sled. Extend hips and knees and release the dock levers.",
+    "Lower the sled by bending hips and knees until the knees are just short of full flexion.",
+    "Raise the sled by extending knees and hips. Repeat."
+   ],
+   "checks": [
+    "Re-engage the support lever in the extended position before dismounting.",
+    "If limited hip mobility pulls the pelvis off the pad at the bottom, lower only to just short of that point.",
+    "Knees point the same way as the feet; do not let the heels lift, push through heel and forefoot.",
+    "Feet slightly high on the platform emphasise the gluteus maximus; slightly lower, the quadriceps."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Push press": {
+  "url": "https://exrx.net/WeightExercises/OlympicLifts/PushPress",
+  "source": "ExRx.net, Push Press",
+  "it": {
+   "steps": [
+    "Prendere il bilanciere dal rack o fare uno strappo da terra con presa prona, poco più larga delle spalle. Portare la barra all’altezza del petto con il busto teso. Testa leggermente indietro.",
+    "Piegare un poco ginocchia, anche e caviglie. Spingere con forza verso l’alto con le gambe, spingendo la barra via dalle spalle ed estendendo le braccia sopra la testa.",
+    "Riportare la barra alle spalle e ripetere."
+   ],
+   "checks": [
+    "La fonte riporta solo preparazione ed esecuzione, senza note di controllo.",
+    "Il nome dell’esercizio non stabilisce la dose: serie e ripetizioni dipendono dal programma."
+   ],
+   "program": "Le serie, le ripetizioni e la progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Take the bar from the rack or clean it from the floor with an overhand grip slightly wider than shoulder width. Hold the bar at chest height with the torso tight. Head slightly back.",
+    "Dip by bending knees, hips and ankles slightly. Drive up explosively with the legs, driving the bar off the shoulders and extending the arms overhead.",
+    "Return to the shoulders and repeat."
+   ],
+   "checks": [
+    "The source gives only preparation and execution, with no further cues.",
+    "The exercise name does not set the dose: sets and reps depend on the programme."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
  }
 }
