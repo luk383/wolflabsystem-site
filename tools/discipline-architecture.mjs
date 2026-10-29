@@ -24,8 +24,6 @@ export function organize(D,en){
  for(const label of ['Volume','Intensity','RIR'])methodRows.unshift([label,en?'Variables and evidence limits in resistance training.':'Variabili e limiti delle prove nell’allenamento con i pesi.',tr+'#'+an+'-8']);
  S.blocks[0][1].push(['Full Body',en?'Structure within Starting Strength: not a separate program.':'Struttura in Starting Strength: non un programma separato.',base+(en?'/articles/starting-strength-novice-progression/':'/articoli/starting-strength-progressione-novizi/')]);
  const catalogue=base+(en?'/train/strength/exercises/':'/train/strength/esercizi/');
- const exercises=[['Squat',0],['Deadlift',20],['Bench',9],['Press',12],['Pull',10],['Carry',39]];
- // IDs are resolved against the source catalogue by exact exercise name below.
- const names=['Squat con bilanciere','Stacco da terra','Panca piana','Military press','Trazioni','Farmer walk'];
- S.blocks[1][1]=exercises.map(([t],i)=>[t,en?'Exercise catalogue: equipment and movement pattern.':'Catalogo: attrezzatura e schema motorio.',catalogue+'#catalogue-'+i]);
+ const groups=en?['Legs','Posterior chain','Glutes','Calves','Chest','Back','Shoulders','Biceps','Triceps','Core','Compound']:['Gambe','Catena posteriore','Glutei','Polpacci','Petto','Dorso','Spalle','Bicipiti','Tricipiti','Core','Multigruppo'];
+ S.blocks[1][1]=groups.map((g,i)=>[g,en?'Browse exercises by muscle group.':'Esplora gli esercizi per gruppo muscolare.',catalogue+'#muscle-'+i]);
 }
