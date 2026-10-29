@@ -15,7 +15,7 @@ const RUN_RACES = JSON.parse(fs.readFileSync(path.join(root, 'content/races.json
 const link = (href) => { if (!exists(href)) bad.push(href); return href; };
 
 // ---- articoli: tag disciplina + tipo (da conferma editoriale dove marcato ?)
-const TAGS = { 'cadenza-bici-protocolli': ['RIDE', 'METODO'], 'sprint-interval-training-ciclismo': ['RIDE', 'METODO'], 'push-pull-legs-varianti': ['STRENGTH', 'METODO'], 'starting-strength-progressione-novizi': ['STRENGTH', 'METODO'], 'phul-campbell-upper-lower': ['STRENGTH', 'METODO'], '8020-running-fitzgerald': ['RUN', 'METODO'], 'gzclp-progressione-lineare': ['STRENGTH', 'METODO'],
+const TAGS = { 'bici-ruote-coperture-compatibilita': ['RIDE', 'GUIDA'], 'potenza-bici-misuratori-dati': ['RIDE', 'GUIDA'], 'carboidrati-idratazione-bici': ['RIDE', 'GUIDA'], 'nuoto-alimentazione-recupero': ['SWIM', 'GUIDA'], 'nuoto-attrezzatura-muta-occhialini': ['SWIM', 'GUIDA'], 'orologio-nuoto-vasche-gps': ['SWIM', 'GUIDA'], 'forza-volume-intensita-rir': ['STRENGTH', 'GUIDA'], 'forza-progressione-deload': ['STRENGTH', 'GUIDA'],  'cadenza-bici-protocolli': ['RIDE', 'METODO'], 'sprint-interval-training-ciclismo': ['RIDE', 'METODO'], 'push-pull-legs-varianti': ['STRENGTH', 'METODO'], 'starting-strength-progressione-novizi': ['STRENGTH', 'METODO'], 'phul-campbell-upper-lower': ['STRENGTH', 'METODO'], '8020-running-fitzgerald': ['RUN', 'METODO'], 'gzclp-progressione-lineare': ['STRENGTH', 'METODO'],
   'bici-per-la-maratona': ['RUN', 'ANALISI'], 'caffeina-e-prestazione': ['TRASVERSALE', 'GUIDA'], 'carboidrati-maratona': ['RUN', 'GUIDA'],
   'forza-per-endurance': ['STRENGTH', 'ANALISI'], 'ftp-e-zone-di-potenza': ['RIDE', 'GUIDA'], 'hyrox-triathlon-lungo-studi': ['HYBRID', 'ANALISI'],
   'quanta-intensita-serve': ['HYBRID', 'ANALISI'], 'nuoto-acque-libere-regole-fin-master': ['SWIM', 'GUIDA'], 'nuoto-acque-libere-sicurezza': ['SWIM', 'GUIDA'],
@@ -81,7 +81,7 @@ for (const [name, d] of Object.entries(DISC)) {
   const blocks = d.blocks.map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">Nessuna guida pubblicata in questa categoria.</p>'}</details>`).join('');
   const more = `<p class="pl-more"><a href="/articoli/?d=${name}">Tutti gli articoli ${name} →</a></p>`;
   wr(file, page(name, { title: `${name} - Wolf Lab`, desc: d.desc, url: d.url, en: d.en },
-    name === 'STRENGTH' ? `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Forza per chi corre, pedala e nuota.' : name}</h1></div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div>${more}</div>` : `<section class="wrap discipline-panel"><header><p class="w-kicker">${name}</p><h1>${name}</h1></header><div class="pl-blocks">${blocks}</div>${more}</section>`));
+    `<section class="wrap discipline-panel"><header><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Forza per chi corre, pedala e nuota.' : name}</h1></header><div class="pl-blocks">${blocks}</div>${more}</section>`));
 }
 
 // ---- articoli: un solo hub con tag

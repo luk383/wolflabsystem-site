@@ -14,6 +14,16 @@ export function organize(D,en){
  // General recovery applies across disciplines; marathon fuel advice stays RUN-specific.
  for(const d of ['RIDE','SWIM'])add(d,'FUEL & RECOVERY',[en?'Caffeine and performance':'Caffeina e prestazione',en?'Studied doses and safety references.':'Dosaggi studiati e riferimenti di sicurezza.',base+(en?'/articles/caffeine-and-performance/':'/articoli/caffeina-e-prestazione/')]);
  add('SWIM','GEAR',[en?'Wetsuits and open water':'Muta e acque libere',en?'Safety context, not a product comparison.':'Contesto di sicurezza, non confronto prodotti.',base+(en?'/articles/open-water-swimming-safety/':'/articoli/nuoto-acque-libere-sicurezza/')]);
+
+ const guide=(d,b,it,enTitle,itSlug,enSlug)=>add(d,b,[en?enTitle:it,'',base+(en?'/articles/':'/articoli/')+(en?enSlug:itSlug)+'/']);
+ guide('RIDE','GEAR','Bici, ruote e coperture','Bikes, wheels and tyres','bici-ruote-coperture-compatibilita','bike-wheels-tyres-compatibility');
+ guide('RIDE','GEAR','Misuratori di potenza','Power meters','potenza-bici-misuratori-dati','cycling-power-meters-data');
+ guide('RIDE','PERFORMANCE','Leggere potenza e frequenza cardiaca','Reading power and heart rate','potenza-bici-misuratori-dati','cycling-power-meters-data');
+ guide('RIDE','FUEL & RECOVERY','Carboidrati e liquidi in bici','Carbohydrate and fluid on the bike','carboidrati-idratazione-bici','cycling-carbohydrate-hydration');
+ guide('SWIM','GEAR','Muta, occhialini e boa','Wetsuits, goggles and tow floats','nuoto-attrezzatura-muta-occhialini','swimming-equipment-wetsuit-goggles');
+ guide('SWIM','GEAR','Orologio: vasche e GPS','Watch: lengths and GPS','orologio-nuoto-vasche-gps','swimming-watch-lengths-gps');
+ guide('SWIM','PERFORMANCE','Come leggere i dati del nuoto','Reading swimming data','orologio-nuoto-vasche-gps','swimming-watch-lengths-gps');
+ guide('SWIM','FUEL & RECOVERY','Alimentazione e recupero nel nuoto','Swimming fuel and recovery','nuoto-alimentazione-recupero','swimming-fuelling-recovery');
  const S=D.STRENGTH;const old=get('STRENGTH','ENDURANCE STRENGTH');
  const methods=get('STRENGTH','METHODS').map(x=>[...x]);
  for(const x of methods){if(/#(?:allenamento|training)-4$/.test(x[2]))x[2]=tr+'#'+an+(/insieme|together/.test(x[0])?'-9':'-8')}
@@ -21,7 +31,8 @@ export function organize(D,en){
  S.blocks=[['PROGRAMS',get('STRENGTH','PROGRAMS')],['EXERCISES',[]],['METHODS',methods.filter(x=>!paths.some(p=>x[2].includes(p)))],['ENDURANCE',['Run','Ride','Swim'].map((d,i)=>['Strength for '+d,en?'Methods, studied protocols and limits.':'Metodi, protocolli studiati e limiti.',base+(en?'/articles/':'/articoli/')+paths[i]+'/']).concat(old.filter(x=>!paths.some(p=>x[2].includes(p))))]];
  // Individual exercise names point into the real read-only catalogue.
  const methodRows=S.blocks[2][1];
- for(const label of ['Volume','Intensity','RIR'])methodRows.unshift([label,en?'Variables and evidence limits in resistance training.':'Variabili e limiti delle prove nell’allenamento con i pesi.',tr+'#'+an+'-8']);
+ const vars=base+(en?'/articles/strength-volume-intensity-rir/':'/articoli/forza-volume-intensita-rir/');
+ methodRows.unshift([en?'Volume, intensity and RIR':'Volume, intensità e RIR','',vars],[en?'Progression and deload':'Progressione e deload','',base+(en?'/articles/strength-progression-deload/':'/articoli/forza-progressione-deload/')]);
  S.blocks[0][1].push(['Full Body',en?'Structure within Starting Strength: not a separate program.':'Struttura in Starting Strength: non un programma separato.',base+(en?'/articles/starting-strength-novice-progression/':'/articoli/starting-strength-progressione-novizi/')]);
  const catalogue=base+(en?'/train/strength/exercises/':'/train/strength/esercizi/');
  const groups=en?['Legs','Posterior chain','Glutes','Calves','Chest','Back','Shoulders','Biceps','Triceps','Core','Compound']:['Gambe','Catena posteriore','Glutei','Polpacci','Petto','Dorso','Spalle','Bicipiti','Tricipiti','Core','Multigruppo'];
