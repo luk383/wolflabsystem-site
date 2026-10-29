@@ -37,7 +37,7 @@ for (const [lang, c] of Object.entries(C)) {
     .replace(/<a class="lang" href="[^"]*" hreflang="(it|en)" lang="(it|en)">/, `<a class="lang" href="${c.alt}" hreflang="${lang === 'it' ? 'en' : 'it'}" lang="${lang === 'it' ? 'en' : 'it'}">`);
   const groups = [...new Set(lib.map((e) => e[1]))];
   const body = groups.map((g) => { const rows = lib.map((e, i) => [e, i]).filter(([e]) => e[1] === g);
-    return `<h2>${esc(c.t(g))}</h2><table class="w-table"><thead><tr>${c.cols.map((x) => `<th>${x}</th>`).join('')}</tr></thead><tbody>${rows.map(([e, i]) => `<tr><td>${esc(lang === 'it' ? e[0] : (EN[e[0]] || e[0]))}</td><td>${esc(c.t(e[2]))}</td><td>${esc(c.t(pats[i]))}</td></tr>`).join('')}</tbody></table>`; }).join('\n');
+    return `<h2>${esc(c.t(g))}</h2><table class="w-table"><thead><tr>${c.cols.map((x) => `<th>${x}</th>`).join('')}</tr></thead><tbody>${rows.map(([e, i]) => `<tr><td>${['Squat con bilanciere','Stacco da terra','Panca piana','Military press','Trazioni','Farmer walk'].includes(e[0]) ? `<span id="catalogue-${['Squat con bilanciere','Stacco da terra','Panca piana','Military press','Trazioni','Farmer walk'].indexOf(e[0])}"></span>` : ''}${esc(lang === 'it' ? e[0] : (EN[e[0]] || e[0]))}</td><td>${esc(c.t(e[2]))}</td><td>${esc(c.t(pats[i]))}</td></tr>`).join('')}</tbody></table>`; }).join('\n');
   const main = `<main id="main"><header class="w-page-hero"><div class="wrap"><p class="w-kicker">${c.kick}</p><h1>${c.title}</h1><p class="w-lede">${c.lede}</p></div></header><div class="wrap w-body w-prose">${body}<p class="w-note">${c.note}</p></div></main>`;
   const out = path.join(root, c.rel.slice(1), 'index.html');
   fs.mkdirSync(path.dirname(out), { recursive: true });

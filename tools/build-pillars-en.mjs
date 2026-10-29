@@ -1,3 +1,4 @@
+import { organize } from './discipline-architecture.mjs';
 // WOLF: struttura a 5 pilastri per l'inglese (stesso albero di build-pillars.mjs). Etichette UI in inglese; i contenuti EN esistenti non sono toccati.
 // Uso: node tools/build-pillars-en.mjs [root]  (da eseguire dopo build-pillars.mjs)
 import fs from 'node:fs'; import path from 'node:path';
@@ -44,13 +45,13 @@ const DISC = {
   RUN: { url: '/en/run', it: '/run', desc: 'Training, performance, races, fuel and gear for running.', lead: 'Training, performance, races, fuel and gear.', leadHtml: 'New York City Marathon, 1 November 2026: <a href="/en/articles/race-taper/" style="color:#D6FF35;text-decoration:underline">race taper</a> · <a href="/en/articles/marathon-carbohydrates/" style="color:#D6FF35;text-decoration:underline">carbohydrates</a>.', blocks: [
     ['TRAINING', [['80/20 Running', 'Zones, counting minutes and limits.', '/en/articles/8020-running-fitzgerald/'], ['Intensity distribution', 'Pyramidal and polarised in running.', '/en/training/?s=run#training-0'], ['Race taper', 'How much and how to cut back.', '/en/articles/race-taper/'], ['Cycling to train for a marathon', 'What transfers and what doesn\'t.', '/en/articles/cycling-for-the-marathon/'], ['Pfitzinger', 'The 18-week marathon plan.', '/en/articles/pfitzinger-marathon-18-weeks/'], ['Daniels and VDOT', 'Five intensities and 24 weeks.', '/en/articles/daniels-vdot-method/'], ['Lydiard', 'Aerobic base, hills and sharpening.', '/en/articles/lydiard-aerobic-base-phases/'], ['Hansons', 'Marathon with accumulated fatigue.', '/en/articles/hansons-marathon-method/'], ["Maffetone's MAF", 'The 180 formula and its limits.', '/en/articles/maf-180-maffetone-method/'], ['Norwegian method', 'Lactate-guided threshold: versions, evidence, limits.', '/en/articles/norwegian-method-double-threshold/'], ['Strength for running', 'Studied methods and protocols.', '/en/articles/strength-for-running-methods/'], ['Training methods', 'Library of methods, Running filter.', '/en/training/?s=run#training']]],
     ['PERFORMANCE', [['Wolf Engine', 'Paces, VDOT and zones from your times.', '/en/engine'], ['Marathon splits', 'Even-pace split times.', '/en/training/#splits']]],
-    ['RACE', [['Running races', `${RUN_RACES} races on the calendar, marathons and halves.`, '/en/races/?f=run']]],
+    ['RACE', [['Running races', 'Dates, distances and sources.', '/en/races/?f=run']]],
     ['FUEL & RECOVERY', [['Marathon carbohydrates', 'How many per hour, by duration.', '/en/articles/marathon-carbohydrates/'], ['Carb calculator', 'Gels, grams and timing.', '/en/training/#carbs'], ['Carb gels', 'Comparison on declared data.', '/en/picks/carb-gels/'], sleep, ['Caffeine and performance', 'Doses, timing and when to avoid it.', '/en/articles/caffeine-and-performance/']]],
     ['GEAR', [['Training shoes', 'Guide and criteria.', '/en/picks/training-shoes/'], ['Compare Evo SL, Novablast 6, Ghost 18', 'Sourced data, no scores.', '/en/picks/compare-evo-sl-novablast-6-ghost-18/'], ['Carbon-plate running shoes', 'What the studies say.', '/en/articles/carbon-plate-running-shoes/']]]] },
   RIDE: { url: '/en/ride', it: '/ride', desc: 'Power, FTP, races and gear for cycling.', lead: 'Power, races and gear.', blocks: [
     ['TRAINING', [['Cycling cadence', 'Protocols, recoveries and evidence limits.', '/en/articles/cycling-cadence-protocols/'], ['Sprint interval training', 'Maximal protocol and evidence limits.', '/en/articles/sprint-interval-training-cycling/'], ['FTP and power zones', 'What they measure and how far to trust them.', '/en/articles/ftp-and-power-zones/'], ['Intensity distribution', 'Pyramidal and polarised in cycling.', '/en/training/?s=ride#training-4'], ['Sweet spot', 'A convention, not a threshold.', '/en/articles/sweet-spot-cycling/'], ['VO₂max intervals', 'Short or long, with the study.', '/en/articles/vo2max-intervals-cycling/'], ['Strength for cycling', 'Heavy loads and a studied protocol.', '/en/articles/strength-for-cycling-methods/'], ['Training methods', 'Library of methods, Cycling filter.', '/en/training/?s=ride#training']]],
     ['PERFORMANCE', [['Wolf Engine', 'Power zones from your FTP.', '/en/engine']]],
-    ['RACE', [['Cycling races', `${BIKE_RACES} gran fondos on the calendar.`, '/en/races/?f=bike']]],
+    ['RACE', [['Cycling races', 'Gran fondos, dates and sources.', '/en/races/?f=bike']]],
     ['FUEL & RECOVERY', [sleep]],
     ['GEAR', [['Bike computers', 'Guide.', '/en/picks/bike-computers/']]]] },
   SWIM: { url: '/en/swim', it: '/swim', desc: 'Critical speed, methods, open water and swim races.', lead: 'Critical speed, methods and open water.', blocks: [
@@ -66,9 +67,10 @@ const DISC = {
     ['ENDURANCE STRENGTH', [['Strength for swimmers', 'Pool studies, protocols and transfer limits.', '/en/articles/strength-for-swimming-methods/'], ['Strength for runners and cyclists', 'Interference or advantage?', '/en/articles/strength-for-endurance/'], sleep]],
     ['GEAR', []]] },
 };
+organize(DISC, true);
 for (const [name, d] of Object.entries(DISC)) {
   const file = name === 'STRENGTH' ? 'en/strength/index.html' : 'en/' + name.toLowerCase() + '.html';
-  const blocks = d.blocks.filter(([, it]) => it.length).map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">Nothing here yet.</p>'}</details>`).join('');
+  const blocks = d.blocks.map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">No guides published in this category.</p>'}</details>`).join('');
   wr(file, page(name, { title: `${name} - Wolf Lab`, desc: d.desc, url: d.url, it: d.it },
     `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Strength for people who run, ride and swim.' : name}</h1>${d.lead ? `<p class="pl-lead">${d.leadHtml ? esc(d.lead) + ' ' + d.leadHtml : esc(d.lead)}</p>` : ''}</div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div><p class="pl-more"><a href="/en/articles/?d=${name}">All ${name} articles →</a></p></div>`));
 }
@@ -84,8 +86,8 @@ const lab = DISCS.map((d) => arts.find((a) => a.d === d)).filter(Boolean); for (
 const home = `<section class="w-hero"><div class="wrap pl-hero"><h1><span>ENDURANCE.</span><span class="acc">ENGINEERED.</span></h1><p class="pl-lead">Run. Ride. Swim. Strength.</p></div></section>
 <section class="pl-cards-wrap"><div class="wrap pl-cards">${card('RUN', '/en/run')}${card('RIDE', '/en/ride')}${card('SWIM', '/en/swim')}${card('STRENGTH', '/en/strength/')}</div></section>
 <section class="w-band"><div class="wrap pl-engine"><p class="w-kicker">WOLF ENGINE</p><h2 class="w-big">Calculate your performance.</h2><p class="pl-lead">Paces · FTP · Zones · Fuel · Race · CSS</p><p class="w-btns"><a class="w-btn" href="${link('/en/engine')}">BUILD YOUR ENGINE <span aria-hidden="true">→</span></a></p></div></section>
-<section class="w-latest"><div class="wrap"><p class="w-kicker">FROM THE LAB</p><ul class="pl-rows">${lab.map((a) => row({ title: a.title, href: a.href, d: a.d, k: a.k, min: a.minutes })).join('')}</ul><p class="pl-more"><a href="/en/articles/">All articles →</a></p></div></section>
-<section class="w-numbers"><div class="wrap pl-race"><p class="w-kicker">RACES</p><a class="w-cta" href="${link('/en/races/')}">Find your next race <span aria-hidden="true">→</span></a></div></section>`;
+<section class="w-latest"><div class="wrap"><p class="w-kicker">LATEST FROM THE LAB</p><div class="pl-filters lab-filters" aria-label="Filter latest articles"><div>${['ALL','RUN','RIDE','SWIM','STRENGTH'].map(d=>`<button type="button" class="pl-chip" data-lab-d="${d}" aria-pressed="${d==='ALL'}">${d}</button>`).join('')}</div></div><ul class="pl-rows" id="lab-rows">${lab.map((a) => row({ title: a.title, href: a.href, d: a.d, k: a.k, min: a.minutes })).join('')}</ul><p class="pl-more"><a href="/en/articles/">All articles →</a></p></div></section>
+<section class="w-numbers"><div class="wrap pl-race"><p class="w-kicker">RACES</p><a class="w-cta" href="${link('/en/races/')}">Find your next race <span aria-hidden="true">→</span></a></div></section><script>(function(){var root=document.querySelector('.w-latest');if(!root)return;root.querySelectorAll('[data-lab-d]').forEach(function(b){b.addEventListener('click',function(){var d=b.dataset.labD;root.querySelectorAll('.pl-row').forEach(function(r){r.hidden=d!=='ALL'&&r.dataset.d!==d});root.querySelectorAll('[data-lab-d]').forEach(function(c){c.setAttribute('aria-pressed',c===b?'true':'false')})})})})()</script>`;
 const idx = rd('en/index.html');
 wr('en/index.html', patchChrome(meta(idx.slice(0, idx.indexOf('<main')), { title: 'Wolf Lab - Endurance. Engineered.', desc: 'Run, ride, swim, strength: articles with sources and the Wolf Engine to calculate your performance.', url: '/en/', it: '/' }), '') + `<main id="main">\n${home}\n</main>` + foot0.replace(/<nav class="foot-links"[\s\S]*?<\/nav>/, footHtml));
 // nav e footer sulle altre pagine EN
@@ -96,6 +98,3 @@ walk(path.join(root, 'en'));
 if (bad.length) { console.error('PROBLEMI:', bad); process.exit(1); }
 console.log('pillars EN ok; pagine EN aggiornate', n, 'articoli', arts.length);
 { const sp = path.join(root, 'sitemap.xml'); let sm = fs.readFileSync(sp, 'utf8'); for (const u of ['/strength/', '/en/strength/']) if (!sm.includes(SITE + u + '</loc>')) sm = sm.replace('</urlset>', `<url><loc>${SITE}${u}</loc></url>\n</urlset>`); fs.writeFileSync(sp, sm); }
-
-// Render the approved RUN direction after IT and EN pillar shells.
-await import('./build-run-hub.mjs');
