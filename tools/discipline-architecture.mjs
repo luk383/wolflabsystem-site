@@ -28,8 +28,7 @@ export function organize(D,en){
  const methods=get('STRENGTH','METHODS').map(x=>[...x]);
  for(const x of methods){if(/#(?:allenamento|training)-4$/.test(x[2]))x[2]=tr+'#'+an+(/insieme|together/.test(x[0])?'-9':'-8')}
  const paths=en?['strength-for-running-methods','strength-for-cycling-methods','strength-for-swimming-methods']:['forza-corsa-metodi','forza-bici-metodi','forza-nuoto-metodi'];
- S.blocks=[['PROGRAMS',get('STRENGTH','PROGRAMS')],['EXERCISES',[]],['METHODS',methods.filter(x=>!paths.some(p=>x[2].includes(p)))],['ENDURANCE',['Run','Ride','Swim'].map((d,i)=>['Strength for '+d,en?'Methods, studied protocols and limits.':'Metodi, protocolli studiati e limiti.',base+(en?'/articles/':'/articoli/')+paths[i]+'/']).concat(old.filter(x=>!paths.some(p=>x[2].includes(p))))]];
- guide('STRENGTH','ENDURANCE','Collocare le sedute e gestire la fatica','Session placement and fatigue','forza-endurance-collocare-sedute','strength-endurance-session-placement');
+ S.blocks=[['PROGRAMS',get('STRENGTH','PROGRAMS')],['EXERCISES',[]],['METHODS',methods.filter(x=>!paths.some(p=>x[2].includes(p)))],['ENDURANCE',['Run','Ride','Swim'].map((d,i)=>['Strength for '+d,en?'Methods, studied protocols and limits.':'Metodi, protocolli studiati e limiti.',base+(en?'/articles/':'/articoli/')+paths[i]+'/'])]];
  // Individual exercise names point into the real read-only catalogue.
  const methodRows=S.blocks[2][1];
  const vars=base+(en?'/articles/strength-volume-intensity-rir/':'/articoli/forza-volume-intensita-rir/');
