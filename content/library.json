@@ -57,9 +57,9 @@
           },
           {
             "title": "Corsa: sistemi descritti da allenatori",
-            "kind": "Corsa / Daniels, Lydiard, Hansons, MAF",
+            "kind": "Corsa / Daniels, Lydiard, Hansons, Pfitzinger, MAF",
             "paragraphs": [
-              "Quattro sistemi diversi, ognuno con una fonte e dei limiti: Daniels (cinque intensità legate al VDOT), Lydiard (fasi con base aerobica e colline), Hansons (maratona con fatica accumulata e lungo da 16 miglia), Maffetone (frequenza cardiaca MAF).",
+              "Cinque sistemi diversi, ognuno con una fonte e dei limiti: Daniels (cinque intensità legate al VDOT), Lydiard (fasi con base aerobica e colline), Hansons (maratona con fatica accumulata e lungo da 16 miglia), Pfitzinger (piano maratona da 18 settimane), Maffetone (frequenza cardiaca MAF).",
               "Non sono varianti dello stesso metodo e non vanno fusi in un piano. Sono descritti dagli autori o da articoli su di loro: nessuno è stato valutato in uno studio controllato.",
               "Ogni scheda riporta struttura, un esempio chiaramente illustrativo e i limiti della fonte."
             ],
@@ -79,6 +79,10 @@
               [
                 "Maffetone: formula MAF",
                 "/articoli/maf-180-maffetone/"
+              ],
+              [
+                "Pfitzinger",
+                "/articoli/pfitzinger-maratona-18-settimane/"
               ]
             ]
           },
@@ -493,9 +497,9 @@
           },
           {
             "title": "Running: systems described by coaches",
-            "kind": "Running / Daniels, Lydiard, Hansons, MAF",
+            "kind": "Running / Daniels, Lydiard, Hansons, Pfitzinger, MAF",
             "paragraphs": [
-              "Four different systems, each with a source and limits: Daniels (five intensities tied to VDOT), Lydiard (phases with aerobic base and hills), Hansons (marathon with accumulated fatigue and a 16-mile long run), Maffetone (MAF heart rate).",
+              "Five different systems, each with a source and limits: Daniels (five intensities tied to VDOT), Lydiard (phases with aerobic base and hills), Hansons (marathon with accumulated fatigue and a 16-mile long run), Pfitzinger (18-week marathon plan), Maffetone (MAF heart rate).",
               "They are not variants of the same method and should not be merged into one plan. They are described by the authors or by articles about them: none has been evaluated in a controlled study.",
               "Each sheet gives the structure, a clearly illustrative example and the limits of the source."
             ],
@@ -515,6 +519,10 @@
               [
                 "Maffetone: MAF formula",
                 "/en/articles/maf-180-maffetone-method/"
+              ],
+              [
+                "Pfitzinger",
+                "/en/articles/pfitzinger-marathon-18-weeks/"
               ]
             ]
           },
