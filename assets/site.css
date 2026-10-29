@@ -623,3 +623,5 @@ html:not([data-theme="dark"]) .w-feature-sym{color:#5A7300}
 @media(max-width:700px){.pl-card{padding:14px}.pl-card-t{font-size:21px}.pl-card-h{gap:8px;flex-wrap:nowrap}.pl-ico{width:22px}.pl-card-t{min-width:0}}
 .pl-ico{width:clamp(36px,4.4vw,62px);stroke-width:1.6}
 @media(max-width:700px){.pl-ico{width:24px}}
+.pl-ico{width:clamp(30px,3.4vw,48px);height:auto;stroke:none}
+@media(max-width:700px){.pl-ico{width:24px}}
