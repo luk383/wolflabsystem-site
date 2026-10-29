@@ -1,213 +1,289 @@
 {
-  "verified": "2026-10-28",
-  "items": [
-    {
-      "id": "topo-ultraventure-5-gtx",
-      "category": "shoes",
-      "date": "2026-10-22",
-      "name": "Topo Ultraventure 5 GTX",
-      "price": {
-        "it": "180 USD, sito USA, imposte locali escluse. Listino Italia non verificato.",
-        "en": "USD 180, US site, before local taxes. Italian list price not verified."
-      },
-      "change": {
-        "it": "La prima Ultraventure impermeabile: membrana GORE-TEX Invisible Fit, suola Vibram Megagrip e intersuola ZipFoam.",
-        "en": "The first waterproof Ultraventure: GORE-TEX Invisible Fit membrane, Vibram Megagrip outsole and ZipFoam midsole."
-      },
-      "fit": {
-        "it": "Trail running e camminate su percorsi misti, per chi cerca protezione dalla pioggia.",
-        "en": "Trail running and hiking on mixed routes, for people seeking wet-weather protection."
-      },
-      "limit": {
-        "it": "Non abbiamo verificato comfort, grip o traspirabilità sul campo. Non è una scarpa da gara su strada.",
-        "en": "We have not tested comfort, traction or breathability. This is not a road-racing shoe."
-      },
-      "availability": {
-        "it": "Il comunicato USA del 22 ottobre indica disponibilità sul sito e presso rivenditori selezionati. Non è la data certa della prima vendita; taglie e disponibilità Italia da confermare.",
-        "en": "The October 22 US release reports availability online and at selected retailers. This is not a confirmed first-sale date; sizes and Italian availability need checking."
-      },
-      "sources": [
-        [
-          "Prodotto / Product",
-          "https://www.topoathletic.com/mens-ultraventure-5-GTX"
-        ],
-        [
-          "Comunicato del marchio / Brand release",
-          "https://www.endurancesportswire.com/topo-athletic-launches-the-topo-athletic-gore-tex-footwear-collection-bringing-a-waterproof-option-to-the-ultraventure-franchise-for-the-first-time/"
-        ]
-      ]
-    },
-    {
-      "id": "garmin-edge-explore-3",
-      "category": "computers",
-      "date": "2026-10-20",
-      "name": "Garmin Edge Explore 3 e Explore 3 Plus",
-      "change": {
-        "it": "Due ciclocomputer con touchscreen, mappe e navigazione curva per curva. Solo il modello Plus ha il controllo vocale.",
-        "en": "Two touchscreen cycling computers with maps and turn-by-turn navigation. Only the Plus model has voice control."
-      },
-      "fit": {
-        "it": "Chi vuole un navigatore semplice con mappe e dati essenziali; il Plus per chi vuole comandi vocali.",
-        "en": "Riders who want a simple navigator with maps and essential data; the Plus for those who want voice commands."
-      },
-      "limit": {
-        "it": "Autonomia dichiarata: fino a 16 ore (Explore 3) e 14 ore (Plus) nell'uso più intenso, 48 ore in risparmio energetico. Dati del produttore, nessuna prova diretta.",
-        "en": "Claimed battery life: up to 16 hours (Explore 3) and 14 hours (Plus) in the most demanding use, 48 hours in battery saver. Manufacturer figures, no hands-on test."
-      },
-      "price": {
-        "it": "399,99 USD (Explore 3) e 499,99 USD (Plus), listino USA (Garmin). Per l'Italia 399,99 e 499,99 EUR riportati da Cyclinside, non da Garmin Italia.",
-        "en": "USD 399.99 (Explore 3) and USD 499.99 (Plus), US suggested retail (Garmin). For Italy EUR 399.99 and 499.99 as reported by Cyclinside, not by Garmin Italy."
-      },
-      "availability": {
-        "it": "Disponibili secondo il comunicato USA del 20 ottobre. Cyclinside indica la stessa data per l'Italia: non confermata da Garmin Italia.",
-        "en": "Available according to the October 20 US release. Cyclinside gives the same date for Italy: not confirmed by Garmin Italy."
-      },
-      "sources": [
-        [
-          "Garmin Newsroom",
-          "https://www.garmin.com/en-US/newsroom/press-release/sports-fitness/ride-with-more-confidence-with-edge-explore-3-cycling-computers-from-garmin/"
-        ],
-        [
-          "Prezzi Italia, fonte secondaria / Italian prices, secondary source",
-          "https://cyclinside.it/garmin-edge-1060-ed-explore-3-la-voce-arriva-sui-ciclocomputer/"
-        ]
-      ]
-    },
-    {
-      "id": "garmin-edge-1060",
-      "category": "computers",
-      "date": "2026-10-20",
-      "name": "Garmin Edge 1060",
-      "change": {
-        "it": "Microfono e altoparlante permettono comandi vocali, dati letti ad alta voce e nuove opzioni di navigazione.",
-        "en": "A microphone and speaker enable voice commands, spoken ride data and new navigation options."
-      },
-      "fit": {
-        "it": "Ciclisti che cercano navigazione e allenamento avanzati, con meno interazioni sullo schermo.",
-        "en": "Cyclists seeking advanced navigation and training, with less touchscreen interaction."
-      },
-      "limit": {
-        "it": "Messaggi vocali via Garmin Messenger richiedono uno smartphone connesso. Lingue e funzioni compatibili da controllare prima di acquistare. Nessuna prova diretta.",
-        "en": "Garmin Messenger voice messages require a connected smartphone. Check supported languages and features before buying. No hands-on test."
-      },
-      "price": {
-        "it": "799,99 USD, listino USA (Garmin). Per l'Italia 799,99 EUR riportato da Cyclinside, non da Garmin Italia.",
-        "en": "USD 799.99, US suggested retail price (Garmin). For Italy EUR 799.99 as reported by Cyclinside, not by Garmin Italy."
-      },
-      "availability": {
-        "it": "Disponibile secondo il comunicato USA del 20 ottobre. Non equivale a disponibilità immediata in Italia.",
-        "en": "Available according to the October 20 US release. This does not confirm immediate Italian availability."
-      },
-      "sources": [
-        [
-          "Garmin Newsroom",
-          "https://www.garmin.com/en-US/newsroom/press-release/sports-fitness/new-garmin-edge-1060-cycling-computer-gives-cyclists-hands-free-voice-control/"
-        ],
-        [
-          "Prezzi Italia, fonte secondaria / Italian prices, secondary source",
-          "https://cyclinside.it/garmin-edge-1060-ed-explore-3-la-voce-arriva-sui-ciclocomputer/"
-        ]
-      ]
-    },
-    {
-      "id": "tacx-nera",
-      "category": "gear",
-      "date": "2026-10-20",
-      "name": "Tacx Nēra",
-      "change": {
-        "it": "Rullo smart con movimento multidirezionale integrato e Wi-Fi. Versione con cassetta oppure Zwift Cog e Click; precisione di potenza dichiarata entro l’1%.",
-        "en": "A smart trainer with built-in multidirectional movement and Wi-Fi. Cassette or Zwift Cog and Click versions; claimed power accuracy within 1%."
-      },
-      "fit": {
-        "it": "Chi si allena indoor e cerca movimento della bici e cambiata virtuale nella versione compatibile.",
-        "en": "Indoor riders looking for bike movement and virtual shifting on the compatible version."
-      },
-      "limit": {
-        "it": "Precisione e realismo sono dichiarazioni del produttore, non nostre misure. Verificare compatibilità di bici, trasmissione e app; abbonamenti eventuali separati.",
-        "en": "Accuracy and ride feel are manufacturer claims, not our measurements. Check bike, drivetrain and app compatibility; subscriptions may cost extra."
-      },
-      "price": {
-        "it": "999,99 USD per entrambe le versioni, listino USA. Prezzo Italia non verificato.",
-        "en": "USD 999.99 for either version, US suggested retail price. Italian price not verified."
-      },
-      "availability": {
-        "it": "Disponibile secondo il comunicato USA del 20 ottobre. Stock e distribuzione Italia non confermati.",
-        "en": "Available according to the October 20 US release. Italian stock and distribution are not confirmed."
-      },
-      "sources": [
-        [
-          "Garmin / Tacx Newsroom",
-          "https://www.garmin.com/en-US/newsroom/press-release/sports-fitness/garmin-unveils-tacx-nera-an-immersive-indoor-smart-trainer-with-integrated-movement/"
-        ]
-      ]
-    },
-    {
-      "id": "colnago-g5-x",
-      "category": "bikes",
-      "date": "2026-10-07",
-      "name": "Colnago G5-X",
-      "change": {
-        "it": "Nuova piattaforma gravel: passaggio gomme fino a 53 mm nominali, geometrie riviste e vano nel tubo obliquo.",
-        "en": "A new gravel platform: clearance for nominal 53 mm tyres, revised geometry and down-tube storage."
-      },
-      "fit": {
-        "it": "Gravel sportivo e lunghe uscite su fondi irregolari, con spazio per gomme larghe e carico.",
-        "en": "Performance gravel and long rides on rough surfaces, with room for wide tyres and luggage."
-      },
-      "limit": {
-        "it": "Non abbiamo misurato comfort o prestazioni. La data è quella dell’annuncio, non una promessa di consegna.",
-        "en": "We have not measured comfort or performance. The date is the announcement date, not a delivery promise."
-      },
-      "price": {
-        "it": "Da 4.900 EUR, pagina ufficiale Italia, allestimento di ingresso. Prezzo finale secondo versione e rivenditore.",
-        "en": "From EUR 4,900, official Italian page, entry build. Final price depends on specification and dealer."
-      },
-      "availability": {
-        "it": "Presente nel catalogo Italia. Taglia, colore, stock e tempi di consegna da confermare al rivenditore; non dichiarata pronta consegna.",
-        "en": "Listed in the Italian catalogue. Confirm size, colour, stock and delivery with a dealer; immediate delivery is not claimed."
-      },
-      "sources": [
-        [
-          "Colnago Italia",
-          "https://www.colnago.com/it-it/products/bici-g5-x"
-        ],
-        [
-          "Annuncio ufficiale / Official announcement, 07.10.2026",
-          "https://shifta.jp/colnago/news-archive/detail/1146/"
-        ]
-      ]
-    },
-    {
-      "id": "garmin-enduro-4",
-      "category": "watches",
-      "date": "2026-10-06",
-      "name": "Garmin Enduro 4",
-      "change": {
-        "it": "Display MIP da 1,4 pollici con ricarica solare, nuovi obiettivi di passo corretti per pendenza e motore mappe aggiornato.",
-        "en": "A 1.4-inch MIP display with solar charging, new grade-adjusted pace targets and an updated mapping engine."
-      },
-      "fit": {
-        "it": "Ultratrail, avventure di più giorni e chi dà priorità all’autonomia; cassa da 51 mm.",
-        "en": "Ultratrail, multiday adventures and people prioritising battery life; 51 mm case."
-      },
-      "limit": {
-        "it": "Le 320 ore massime dichiarate valgono in modalità batteria estesa con luce continua a 50.000 lux: non sono autonomia GPS ordinaria. Nessun test Wolf Lab.",
-        "en": "The claimed 320-hour maximum requires extended-battery mode and continuous 50,000-lux light: it is not normal GPS battery life. Not tested by Wolf Lab."
-      },
-      "price": {
-        "it": "899,99 USD, listino USA. Prezzo Italia non verificato.",
-        "en": "USD 899.99, US suggested retail price. Italian price not verified."
-      },
-      "availability": {
-        "it": "Disponibile secondo il comunicato USA del 6 ottobre. Disponibilità Italia non verificata.",
-        "en": "Available according to the October 6 US release. Italian availability not verified."
-      },
-      "sources": [
-        [
-          "Garmin Newsroom",
-          "https://www.garmin.com/en-US/newsroom/press-release/outdoor/enduro-4-smartwatch-redefines-ultraperformance-with-extreme-battery-life-and-advanced-training-features/"
-        ]
-      ]
-    }
-  ]
+ "verified": "2026-10-28",
+ "items": [
+  {
+   "id": "topo-ultraventure-5-gtx",
+   "category": "shoes",
+   "date": "2026-10-22",
+   "name": "Topo Ultraventure 5 GTX",
+   "price": {
+    "it": "180 USD, sito USA, imposte locali escluse. Listino Italia non verificato.",
+    "en": "USD 180, US site, before local taxes. Italian list price not verified."
+   },
+   "change": {
+    "it": "La prima Ultraventure impermeabile: membrana GORE-TEX Invisible Fit, suola Vibram Megagrip e intersuola ZipFoam.",
+    "en": "The first waterproof Ultraventure: GORE-TEX Invisible Fit membrane, Vibram Megagrip outsole and ZipFoam midsole."
+   },
+   "fit": {
+    "it": "Trail running e camminate su percorsi misti, per chi cerca protezione dalla pioggia.",
+    "en": "Trail running and hiking on mixed routes, for people seeking wet-weather protection."
+   },
+   "limit": {
+    "it": "Non abbiamo verificato comfort, grip o traspirabilità sul campo. Non è una scarpa da gara su strada.",
+    "en": "We have not tested comfort, traction or breathability. This is not a road-racing shoe."
+   },
+   "availability": {
+    "it": "Il comunicato USA del 22 ottobre indica disponibilità sul sito e presso rivenditori selezionati. Non è la data certa della prima vendita; taglie e disponibilità Italia da confermare.",
+    "en": "The October 22 US release reports availability online and at selected retailers. This is not a confirmed first-sale date; sizes and Italian availability need checking."
+   },
+   "sources": [
+    [
+     "Prodotto / Product",
+     "https://www.topoathletic.com/mens-ultraventure-5-GTX"
+    ],
+    [
+     "Comunicato del marchio / Brand release",
+     "https://www.endurancesportswire.com/topo-athletic-launches-the-topo-athletic-gore-tex-footwear-collection-bringing-a-waterproof-option-to-the-ultraventure-franchise-for-the-first-time/"
+    ]
+   ]
+  },
+  {
+   "id": "garmin-edge-explore-3",
+   "category": "computers",
+   "date": "2026-10-20",
+   "name": "Garmin Edge Explore 3 e Explore 3 Plus",
+   "change": {
+    "it": "Due ciclocomputer con touchscreen, mappe e navigazione curva per curva. Solo il modello Plus ha il controllo vocale.",
+    "en": "Two touchscreen cycling computers with maps and turn-by-turn navigation. Only the Plus model has voice control."
+   },
+   "fit": {
+    "it": "Chi vuole un navigatore semplice con mappe e dati essenziali; il Plus per chi vuole comandi vocali.",
+    "en": "Riders who want a simple navigator with maps and essential data; the Plus for those who want voice commands."
+   },
+   "limit": {
+    "it": "Autonomia dichiarata: fino a 16 ore (Explore 3) e 14 ore (Plus) nell'uso più intenso, 48 ore in risparmio energetico. Dati del produttore, nessuna prova diretta.",
+    "en": "Claimed battery life: up to 16 hours (Explore 3) and 14 hours (Plus) in the most demanding use, 48 hours in battery saver. Manufacturer figures, no hands-on test."
+   },
+   "price": {
+    "it": "399,99 USD (Explore 3) e 499,99 USD (Plus), listino USA (Garmin). Per l'Italia 399,99 e 499,99 EUR riportati da Cyclinside, non da Garmin Italia.",
+    "en": "USD 399.99 (Explore 3) and USD 499.99 (Plus), US suggested retail (Garmin). For Italy EUR 399.99 and 499.99 as reported by Cyclinside, not by Garmin Italy."
+   },
+   "availability": {
+    "it": "Disponibili secondo il comunicato USA del 20 ottobre. Cyclinside indica la stessa data per l'Italia: non confermata da Garmin Italia.",
+    "en": "Available according to the October 20 US release. Cyclinside gives the same date for Italy: not confirmed by Garmin Italy."
+   },
+   "sources": [
+    [
+     "Garmin Newsroom",
+     "https://www.garmin.com/en-US/newsroom/press-release/sports-fitness/ride-with-more-confidence-with-edge-explore-3-cycling-computers-from-garmin/"
+    ],
+    [
+     "Prezzi Italia, fonte secondaria / Italian prices, secondary source",
+     "https://cyclinside.it/garmin-edge-1060-ed-explore-3-la-voce-arriva-sui-ciclocomputer/"
+    ]
+   ]
+  },
+  {
+   "id": "garmin-edge-1060",
+   "category": "computers",
+   "date": "2026-10-20",
+   "name": "Garmin Edge 1060",
+   "change": {
+    "it": "Microfono e altoparlante permettono comandi vocali, dati letti ad alta voce e nuove opzioni di navigazione.",
+    "en": "A microphone and speaker enable voice commands, spoken ride data and new navigation options."
+   },
+   "fit": {
+    "it": "Ciclisti che cercano navigazione e allenamento avanzati, con meno interazioni sullo schermo.",
+    "en": "Cyclists seeking advanced navigation and training, with less touchscreen interaction."
+   },
+   "limit": {
+    "it": "Messaggi vocali via Garmin Messenger richiedono uno smartphone connesso. Lingue e funzioni compatibili da controllare prima di acquistare. Nessuna prova diretta.",
+    "en": "Garmin Messenger voice messages require a connected smartphone. Check supported languages and features before buying. No hands-on test."
+   },
+   "price": {
+    "it": "799,99 USD, listino USA (Garmin). Per l'Italia 799,99 EUR riportato da Cyclinside, non da Garmin Italia.",
+    "en": "USD 799.99, US suggested retail price (Garmin). For Italy EUR 799.99 as reported by Cyclinside, not by Garmin Italy."
+   },
+   "availability": {
+    "it": "Disponibile secondo il comunicato USA del 20 ottobre. Non equivale a disponibilità immediata in Italia.",
+    "en": "Available according to the October 20 US release. This does not confirm immediate Italian availability."
+   },
+   "sources": [
+    [
+     "Garmin Newsroom",
+     "https://www.garmin.com/en-US/newsroom/press-release/sports-fitness/new-garmin-edge-1060-cycling-computer-gives-cyclists-hands-free-voice-control/"
+    ],
+    [
+     "Prezzi Italia, fonte secondaria / Italian prices, secondary source",
+     "https://cyclinside.it/garmin-edge-1060-ed-explore-3-la-voce-arriva-sui-ciclocomputer/"
+    ]
+   ]
+  },
+  {
+   "id": "tacx-nera",
+   "category": "gear",
+   "date": "2026-10-20",
+   "name": "Tacx Nēra",
+   "change": {
+    "it": "Rullo smart con movimento multidirezionale integrato e Wi-Fi. Versione con cassetta oppure Zwift Cog e Click; precisione di potenza dichiarata entro l’1%.",
+    "en": "A smart trainer with built-in multidirectional movement and Wi-Fi. Cassette or Zwift Cog and Click versions; claimed power accuracy within 1%."
+   },
+   "fit": {
+    "it": "Chi si allena indoor e cerca movimento della bici e cambiata virtuale nella versione compatibile.",
+    "en": "Indoor riders looking for bike movement and virtual shifting on the compatible version."
+   },
+   "limit": {
+    "it": "Precisione e realismo sono dichiarazioni del produttore, non nostre misure. Verificare compatibilità di bici, trasmissione e app; abbonamenti eventuali separati.",
+    "en": "Accuracy and ride feel are manufacturer claims, not our measurements. Check bike, drivetrain and app compatibility; subscriptions may cost extra."
+   },
+   "price": {
+    "it": "999,99 USD per entrambe le versioni, listino USA. Prezzo Italia non verificato.",
+    "en": "USD 999.99 for either version, US suggested retail price. Italian price not verified."
+   },
+   "availability": {
+    "it": "Disponibile secondo il comunicato USA del 20 ottobre. Stock e distribuzione Italia non confermati.",
+    "en": "Available according to the October 20 US release. Italian stock and distribution are not confirmed."
+   },
+   "sources": [
+    [
+     "Garmin / Tacx Newsroom",
+     "https://www.garmin.com/en-US/newsroom/press-release/sports-fitness/garmin-unveils-tacx-nera-an-immersive-indoor-smart-trainer-with-integrated-movement/"
+    ]
+   ]
+  },
+  {
+   "id": "colnago-g5-x",
+   "category": "bikes",
+   "date": "2026-10-07",
+   "name": "Colnago G5-X",
+   "change": {
+    "it": "Nuova piattaforma gravel: passaggio gomme fino a 53 mm nominali, geometrie riviste e vano nel tubo obliquo.",
+    "en": "A new gravel platform: clearance for nominal 53 mm tyres, revised geometry and down-tube storage."
+   },
+   "fit": {
+    "it": "Gravel sportivo e lunghe uscite su fondi irregolari, con spazio per gomme larghe e carico.",
+    "en": "Performance gravel and long rides on rough surfaces, with room for wide tyres and luggage."
+   },
+   "limit": {
+    "it": "Non abbiamo misurato comfort o prestazioni. La data è quella dell’annuncio, non una promessa di consegna.",
+    "en": "We have not measured comfort or performance. The date is the announcement date, not a delivery promise."
+   },
+   "price": {
+    "it": "Da 4.900 EUR, pagina ufficiale Italia, allestimento di ingresso. Prezzo finale secondo versione e rivenditore.",
+    "en": "From EUR 4,900, official Italian page, entry build. Final price depends on specification and dealer."
+   },
+   "availability": {
+    "it": "Presente nel catalogo Italia. Taglia, colore, stock e tempi di consegna da confermare al rivenditore; non dichiarata pronta consegna.",
+    "en": "Listed in the Italian catalogue. Confirm size, colour, stock and delivery with a dealer; immediate delivery is not claimed."
+   },
+   "sources": [
+    [
+     "Colnago Italia",
+     "https://www.colnago.com/it-it/products/bici-g5-x"
+    ],
+    [
+     "Annuncio ufficiale / Official announcement, 07.10.2026",
+     "https://shifta.jp/colnago/news-archive/detail/1146/"
+    ]
+   ]
+  },
+  {
+   "id": "garmin-enduro-4",
+   "category": "watches",
+   "date": "2026-10-06",
+   "name": "Garmin Enduro 4",
+   "change": {
+    "it": "Display MIP da 1,4 pollici con ricarica solare, nuovi obiettivi di passo corretti per pendenza e motore mappe aggiornato.",
+    "en": "A 1.4-inch MIP display with solar charging, new grade-adjusted pace targets and an updated mapping engine."
+   },
+   "fit": {
+    "it": "Ultratrail, avventure di più giorni e chi dà priorità all’autonomia; cassa da 51 mm.",
+    "en": "Ultratrail, multiday adventures and people prioritising battery life; 51 mm case."
+   },
+   "limit": {
+    "it": "Le 320 ore massime dichiarate valgono in modalità batteria estesa con luce continua a 50.000 lux: non sono autonomia GPS ordinaria. Nessun test Wolf Lab.",
+    "en": "The claimed 320-hour maximum requires extended-battery mode and continuous 50,000-lux light: it is not normal GPS battery life. Not tested by Wolf Lab."
+   },
+   "price": {
+    "it": "899,99 USD, listino USA. Prezzo Italia non verificato.",
+    "en": "USD 899.99, US suggested retail price. Italian price not verified."
+   },
+   "availability": {
+    "it": "Disponibile secondo il comunicato USA del 6 ottobre. Disponibilità Italia non verificata.",
+    "en": "Available according to the October 6 US release. Italian availability not verified."
+   },
+   "sources": [
+    [
+     "Garmin Newsroom",
+     "https://www.garmin.com/en-US/newsroom/press-release/outdoor/enduro-4-smartwatch-redefines-ultraperformance-with-extreme-battery-life-and-advanced-training-features/"
+    ]
+   ]
+  },
+  {
+   "id": "shimano-tiagra-r4000",
+   "category": "groupsets",
+   "date": "2026-03-03",
+   "name": "Shimano Tiagra R4000",
+   "change": {
+    "it": "Il gruppo stradale meccanico passa da 10 a 11 velocità (2x11), con nuova leva ergonomica per mani più piccole e cassetta 11-36 più leggera, oltre 200 g in meno rispetto alle configurazioni di riferimento di Shimano.",
+    "en": "The mechanical road groupset moves from 10 to 11 speeds (2x11), with a new lever shape for smaller hands and a lighter 11-36 cassette, over 200 g lighter than Shimano's reference configurations."
+   },
+   "fit": {
+    "it": "Chi cerca un gruppo stradale meccanico accessibile, sopra il CUES e sotto il 105 R7000, secondo la collocazione dichiarata da Shimano.",
+    "en": "Riders who want an accessible mechanical road groupset, between CUES and 105 R7000 in Shimano's own positioning."
+   },
+   "limit": {
+    "it": "Dati del produttore, nessuna prova diretta. La riduzione di peso è un confronto di Shimano con configurazioni sue.",
+    "en": "Manufacturer data, no hands-on test. The weight saving is Shimano's comparison against its own configurations."
+   },
+   "price": {
+    "it": "Prezzo non indicato nel comunicato letto.",
+    "en": "Price not given in the release we read."
+   },
+   "availability": {
+    "it": "Annunciato il 3 marzo 2026. Date di vendita in Italia non lette.",
+    "en": "Announced 3 March 2026. Italian on-sale dates not read."
+   },
+   "sources": [
+    [
+     "Comunicato Shimano Europa / Shimano Europe release",
+     "https://media.shimano-eu.com/en-CEU/260405-shimano-launches-new-tiagra-r4000-series-lightweight-2x11-road-drivetrain-with-accessible-ergonomic-shifters/"
+    ],
+    [
+     "road.cc",
+     "https://road.cc/tech-news/shimano-launches-tiagra-r4000-series-groupset"
+    ]
+   ]
+  },
+  {
+   "id": "shimano-dura-ace-r9300-prototipo",
+   "category": "groupsets",
+   "date": "2026-09-27",
+   "name": "Shimano Dura-Ace R9300 (prototype / prototipo)",
+   "change": {
+    "it": "Un nuovo gruppo con cassetta a 13 pignoni e un nuovo pulsante sulle leve è stato visto sulle bici di Alpecin-Premier Tech alla Vuelta (22 agosto) e ai Mondiali UCI (27 settembre). Resta semi-wireless: c'è ancora un cavo dal fodero.",
+    "en": "A new groupset with a 13-sprocket cassette and a new shifter button was spotted on Alpecin-Premier Tech bikes at the Vuelta (22 August) and the UCI Worlds (27 September). It stays semi-wireless: a wire still leaves the chainstay."
+   },
+   "fit": {
+    "it": "Per ora riguarda solo chi segue il mercato: non esistono specifiche ufficiali né una data di vendita.",
+    "en": "For now it matters only to people following the market: there are no official specs or on-sale date."
+   },
+   "limit": {
+    "it": "Non è un annuncio del marchio. Shimano non ha confermato nome, funzioni o date; \"R9300\" è il nome usato dalla stampa. Cyclingnews e Cycling Weekly parlano di un lancio commerciale probabile solo nel 2027, ma è una loro valutazione.",
+    "en": "This is not a brand announcement. Shimano has not confirmed name, features or dates; \"R9300\" is the name the press uses. Cyclingnews and Cycling Weekly expect a commercial launch only in 2027, which is their own assessment."
+   },
+   "price": {
+    "it": "Non annunciato.",
+    "en": "Not announced."
+   },
+   "availability": {
+    "it": "Nessuna data ufficiale.",
+    "en": "No official date."
+   },
+   "sources": [
+    [
+     "Cyclingnews, avvistamento (22/08/2026)",
+     "https://www.cyclingnews.com/cycling-tech-components/groupsets/new-dura-ace-spotted/"
+    ],
+    [
+     "Cyclingnews, perché non è wireless (26/08/2026)",
+     "https://www.cyclingnews.com/cycling-tech-components/groupsets/the-new-shimano-dura-ace-still-isnt-wireless-but-does-it-actually-matter/"
+    ],
+    [
+     "Cycling Weekly, Mondiali (27/09/2026)",
+     "https://www.cyclingweekly.com/news/mathieu-van-der-poel-rides-13-speed-dura-ace-prototype-at-uci-world-championships"
+    ]
+   ]
+  }
+ ]
 }
