@@ -206,7 +206,8 @@ const EN_TXT = JSON.parse(fs.readFileSync(path.join(ROOT, "content/hubs-en.json"
 function itemHtml(lang, [t, line, tgt], i) {
   const tt = lang ? (EN_TXT[t]?.[0] ?? t) : t, ll = lang ? (EN_TXT[t]?.[1] ?? line) : line;
   const num = String(i + 1).padStart(2, "0");
-  if (!tgt) return `<li class="w-item soon"><span class="w-num">${num}</span><span class="w-txt"><b>${esc(tt)}</b>${ll ? `<small>${esc(ll)}</small>` : ""}</span><em>${lang ? "in preparation" : "in preparazione"}</em></li>`;
+  if (!tgt) return '';
+  if (false) return `<li class="w-item soon"><span class="w-num">${num}</span><span class="w-txt"><b>${esc(tt)}</b>${ll ? `<small>${esc(ll)}</small>` : ""}</span><em>${lang ? "in preparation" : "in preparazione"}</em></li>`;
   return `<li class="w-item"><a href="${resolve(lang, tgt)}"><span class="w-num">${num}</span><span class="w-txt"><b>${esc(tt)}</b><small>${esc(ll)}</small></span><span class="w-go" aria-hidden="true">→</span></a></li>`;
 }
 
