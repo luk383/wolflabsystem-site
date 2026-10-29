@@ -41,13 +41,21 @@
             "kind": "Corsa / modello con soglia guidata dal lattato",
             "paragraphs": [
               "Qui il termine indica il modello descritto da Casado e colleghi 2023: intervalli a soglia guidati da misurazioni del lattato, dentro un alto volume di lavoro facile. La doppia soglia è una pratica di alcuni élite descritti, non una definizione universale di allenamento norvegese.",
-              "Il lavoro espone osservazioni e possibili spiegazioni fisiologiche in corridori di livello mondiale. Dichiarava assenti prove controllate sul modello descritto e incerta la trasferibilità ad altre gare, come la maratona. Non dimostra superiorità per un amatore; questa scheda non è una revisione sistematica di tutta la ricerca successiva.",
+              "Il testo del 2023 descriveva osservazioni in corridori di livello mondiale. Uno studio controllato del 2024 su 14 uomini allenati ha poi confrontato, in modo acuto, 6×10 minuti in una seduta e due sedute da 3×10 minuti separate da 6,5 ore: non misura miglioramenti dopo mesi. Una comunicazione NIH del 2026 riferisce un progetto su 25 amatori ben allenati, con due periodi di 14 giorni e più volume nella doppia soglia; non è trattata qui come un articolo scientifico completo. Questi dati non stabiliscono superiorità per la maratona o per ogni amatore.",
               "Applicazione prudente: comprendere controllo dell’intensità e gestione del carico. Non copiare volumi o doppie sedute, né ricavare la propria soglia da un valore di lattato universale. Non è una raccomandazione a cambiare il proprio piano."
             ],
             "links": [
               [
                 "Casado, Foster, Bakken e Tjelta 2023: testo e limiti",
                 "https://pmc.ncbi.nlm.nih.gov/articles/PMC10000870/"
+              ],
+              [
+                "Talsnes et al. 2024: confronto acuto",
+                "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2024.1428536/full"
+              ],
+              [
+                "NIH 2026: comunicazione universitaria",
+                "https://www.nih.no/om/aktuelt/podden/2026/slik-gjekk-da-da-25-mosjonistar-testa-dobbel-terskel.html"
               ],
               [
                 "Guida Wolf Lab: metodo norvegese",
@@ -481,13 +489,21 @@
             "kind": "Running / lactate-guided threshold model",
             "paragraphs": [
               "Here the name refers to the model described by Casado et al.2023: lactate-guided threshold intervals within a high volume of easy running. Double threshold is one practice reported in some elite runners, not a universal definition of Norwegian training.",
-              "The paper describes observations and potential mechanisms in world-class runners. It reported no controlled tests of the model and uncertain transfer to events such as the marathon. It does not establish superiority for recreational runners; this page is not a systematic review of all later research.",
+              "The 2023 paper described observations in world-class runners. A 2024 controlled study in 14 trained men later compared the acute responses to one 6×10-minute session and two 3×10-minute sessions separated by 6.5 hours: it does not measure improvements after months. A 2026 NIH communication reports a project in 25 well-trained recreational runners with two 14-day periods and more volume in double threshold; it is not treated here as a full scientific paper. These data do not establish superiority for the marathon or for every recreational runner.",
               "Understand intensity control and load management rather than copying elite volumes or double sessions. Do not infer individual thresholds from one universal lactate value. This is not a recommendation to change your plan."
             ],
             "links": [
               [
                 "Casado, Foster, Bakken and Tjelta 2023: full paper",
                 "https://pmc.ncbi.nlm.nih.gov/articles/PMC10000870/"
+              ],
+              [
+                "Talsnes et al. 2024: acute comparison",
+                "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2024.1428536/full"
+              ],
+              [
+                "NIH 2026: university communication",
+                "https://www.nih.no/om/aktuelt/podden/2026/slik-gjekk-da-da-25-mosjonistar-testa-dobbel-terskel.html"
               ],
               [
                 "Wolf Lab guide: the Norwegian method",
