@@ -114,29 +114,6 @@
       "20-minute test as a threshold estimate"
     ]
   },
-  "bici-per-la-maratona|cycling-for-the-marathon": {
-    "lv": [
-      "L1 datata + L5",
-      "Dated L1 + L5"
-    ],
-    "stars": 2,
-    "how": [
-      "Revisione documentale: una revisione del 1994 sul VO₂max, testi sulla biomeccanica e un parere di un allenatore-ricercatore.",
-      "Document review: a 1994 review on VO₂max, biomechanics texts and an opinion from a coach-researcher."
-    ],
-    "lim": [
-      "Revisione datata e solo sul VO₂max, non sulla prestazione in maratona. Parte delle indicazioni è parere di esperti.",
-      "Dated review about VO₂max only, not marathon performance. Part of the guidance is expert opinion."
-    ],
-    "why": [
-      "Prove datate e in parte pareri: Molto limitata.",
-      "Dated evidence and partly opinion: Very limited."
-    ],
-    "scope": [
-      "trasferimento del VO₂max da bici a corsa",
-      "VO₂max transfer from bike to run"
-    ]
-  },
   "scarpe-con-piastra-carbonio|carbon-plate-running-shoes": {
     "lv": [
       "L1 (energia) · L2-L4 (durata, infortuni)",
