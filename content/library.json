@@ -211,10 +211,14 @@
             "title": "Pesi: forza, ipertrofia e potenza",
             "kind": "Pesi / obiettivi e variabili",
             "paragraphs": [
-              "Forza massima, dimensione muscolare e potenza non sono lo stesso risultato. Prima di una metodica vanno definiti obiettivo, esperienza, esercizi e progressione. Il position stand ACSM 2026 sintetizza 137 revisioni su adulti sani: non è una guida per riabilitazione o dolore.",
-              "Nel complesso il lavoro contro resistenza migliora funzione e dimensione muscolare. La sintesi associa carichi più alti a maggiori guadagni di forza, volume più alto a ipertrofia e intento veloce a potenza. Non significa che un unico protocollo serva a tutti.",
-              "Applicazione: annotare serie, ripetizioni, carico, recupero, tecnica e fatica. Confrontare programmi a parità di obiettivo, non soltanto dal loro nome. Non servono cedimento o tecniche complesse per rendere valido ogni allenamento: la sintesi non mostra vantaggi costanti di molte di queste variabili.",
-              "Nei pesi “piramidale” può riferirsi alla sequenza di carichi e ripetizioni, non alle zone endurance: non trasferire automaticamente le definizioni."
+              "La forza massima misura quanta forza si produce, l’ipertrofia il cambiamento delle dimensioni muscolari e la potenza quanto rapidamente si compie lavoro. La resistenza muscolare riguarda invece il mantenere ripetizioni o forza nel tempo. Migliorare uno di questi risultati non dimostra automaticamente di migliorare gli altri o il tempo in gara.",
+              "Il position stand ACSM 2026 sintetizza 137 revisioni di studi su adulti sani, con interventi da 6 a 52 settimane. Gran parte delle prove riguarda persone con poca esperienza di pesi; non è una guida per riabilitazione, dolore o una specifica gara endurance.",
+              "Per la forza, i confronti favoriscono carichi almeno all’80% di 1RM, 2–3 serie, almeno due sedute a settimana, escursione completa e lavoro prioritario all’inizio della seduta. Sono variabili associate a maggiori guadagni nelle sintesi, non un obbligo a iniziare pesante. Un 1RM ipotetico di 100 kg dà 80 kg all’80%: questo è solo il calcolo della percentuale, non la scelta di un carico sicuro né un numero di ripetizioni garantito.",
+              "Per l’ipertrofia, volumi di almeno 10 serie per gruppo muscolare a settimana sono associati a maggiori guadagni; il volume non va confuso con la frequenza. Esempio di conteggio: 5 serie lunedì + 5 giovedì = 10 serie settimanali per il gruppo considerato. È un esempio aritmetico, non una routine; non stabilisce che i contributi indiretti di esercizi diversi valgano sempre una serie intera, né che 10 sia il minimo per migliorare.",
+              "Per la potenza, la sintesi favorisce carichi moderati (30–70% di 1RM) e una fase concentrica eseguita con intento rapido, con volume basso o moderato. Esempio: 3 serie da 4 ripetizioni = 12 ripetizioni; 4 serie da 6 = 24. La stessa quantità di ripetizioni non rende equivalenti esercizi, velocità o fatica. Non è un invito a eseguire sollevamenti olimpici senza preparazione tecnica.",
+              "Per la resistenza muscolare, l’allenamento contro resistenza migliora il risultato rispetto a non allenarsi, ma i dati della sintesi non bastano a scegliere una dose superiore per tutti. Un circuito di 20 ripetizioni non diventa automaticamente un metodo per migliorare una maratona o una granfondo.",
+              "Cedimento, attrezzo, struttura delle serie e periodizzazione non modificano costantemente tutti gli esiti nelle prove considerate. Questo non li rende irrilevanti per tecnica, comfort, gestione della fatica o aderenza. Registrare serie, ripetizioni, carico, recupero e sintomi permette di capire che cosa è cambiato; non si aggiungono serie solo per raggiungere una soglia numerica.",
+              "Nei pesi “piramidale” indica spesso una sequenza di carichi e ripetizioni; drop set, cluster e circuito sono strutture delle serie. Non sono la distribuzione delle zone di corsa o bici e non vanno presentati come metodi equivalenti. Per schede d’autore e varianti, aprire STRENGTH; per trasferimento alla gara, usare le schede specifiche di corsa, bici e nuoto."
             ],
             "links": [
               [
@@ -224,6 +228,10 @@
               [
                 "Principi e metodi: scheda editore del manuale",
                 "https://us.humankinetics.com/products/science-and-practice-of-strength-training-3rd-edition"
+              ],
+              [
+                "STRENGTH: programmi e metodi",
+                "/strength/"
               ]
             ]
           },
@@ -231,13 +239,17 @@
             "title": "Forza e endurance insieme",
             "kind": "Pesi / integrazione con endurance",
             "paragraphs": [
-              "La revisione Schumann e colleghi 2022 non trova nel complesso una compromissione di forza massima o ipertrofia rispetto alla sola forza. I guadagni di forza esplosiva possono invece essere attenuati, soprattutto quando le attività sono nella stessa seduta.",
-              "Questo non rende qualsiasi combinazione equivalente o sicura. Volume, obiettivo, recupero e popolazione vanno considerati; la scheda non prescrive una settimana tipo. Non attribuire ogni stanchezza a una generica “interferenza”."
+              "La revisione Schumann e colleghi, pubblicata online nel 2021 e nel volume 2022, include 43 studi e 1.090 partecipanti. Confronta almeno quattro settimane di forza più lavoro aerobico con la stessa prescrizione di forza senza lavoro aerobico. Non è un confronto tra qualsiasi coppia di piani settimanali.",
+              "Nel complesso non emerge una differenza significativa per forza massima o ipertrofia. I guadagni di forza esplosiva risultano invece attenuati: SMD −0,28, intervallo di confidenza 95% da −0,48 a −0,08. SMD è una differenza standardizzata, non un calo del 28% della prestazione e non un numero di secondi in gara.",
+              "Nel sottogruppo con attività nella stessa seduta (al massimo 20 minuti tra aerobico e forza) compare un’attenuazione della forza esplosiva; non risulta significativa quando sono separate da almeno 3 ore. Non prova che 3 ore siano una soglia biologica netta o una garanzia di recupero per ogni atleta. I sottogruppi non sono una prova diretta di tutte le distanze temporali possibili.",
+              "Esempio di sola lettura del calendario: fine bici alle 08:00 e inizio pesi alle 11:00 danno 3 ore di separazione. Non equivale a concludere che la seduta sia recuperata, né suggerisce come distribuire il volume. Per un obiettivo di potenza, la separazione è un fattore da valutare insieme a qualità e carico delle due attività.",
+              "La qualità media degli studi è moderata; l’intensità aerobica non è analizzata in modo affidabile per informazioni non uniformi. Il gruppo “attivi” mescola livelli diversi: non dimostra che il risultato sia identico in un principiante e in un élite. Mancata significatività tra corsa e bici o fasce d’età non è equivalenza certa.",
+              "Questa sintesi studia esiti muscolari, non dimostra da sola un miglioramento di VO₂max, maratona, nuoto o triathlon. Le schede specifiche distinguono carichi, popolazioni e risultati. Non attribuire ogni stanchezza a una generica “interferenza” e non trattare il modello combinato come una settimana generata automaticamente."
             ],
             "links": [
               [
-                "Revisione e meta-analisi: abstract",
-                "https://pubmed.ncbi.nlm.nih.gov/34757594/"
+                "Schumann et al. 2022: testo completo",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC8891239/"
               ],
               [
                 "Forza per la corsa: metodi e protocolli",
@@ -246,6 +258,10 @@
               [
                 "Forza per la bici: metodi e protocollo",
                 "/articoli/forza-bici-metodi/"
+              ],
+              [
+                "Forza per il nuoto: metodi e protocolli",
+                "/articoli/forza-nuoto-metodi/"
               ],
               [
                 "Guida bici e maratona: trasferimento e limiti",
@@ -659,10 +675,14 @@
             "title": "Strength, size and power",
             "kind": "Weights / goals and variables",
             "paragraphs": [
-              "Maximal strength, hypertrophy and power are different outcomes. Define the goal, experience, exercise selection and progression before choosing a method. The 2026 ACSM position stand synthesizes 137 reviews in healthy adults, not rehabilitation or pain management.",
-              "Resistance training improves muscle function and size. The synthesis associates heavier loads with strength, higher volume with hypertrophy and fast movement intent with power. This does not establish one program for everyone.",
-              "Record sets, repetitions, load, rest, technique and fatigue. Compare programs by goal, not name. Training to failure or complex techniques are not mandatory: many such variables did not consistently alter outcomes in the synthesis.",
-              "In weight training, pyramidal may describe a sequence of loads and repetitions, not endurance zones. Do not transfer the definition automatically."
+              "Maximal strength measures how much force can be produced, hypertrophy changes in muscle size, and power how quickly work is done. Muscular endurance concerns sustaining repetitions or force over time. Improving one outcome does not automatically demonstrate improvement in the others or in race time.",
+              "The 2026 ACSM position stand synthesizes 137 reviews of trials in healthy adults, with interventions lasting 6–52 weeks. Much of the evidence concerns people with little resistance-training experience. It is not a guide to rehabilitation, pain management or a specific endurance event.",
+              "For strength, comparisons favor loads of at least 80% of 1RM, 2–3 sets, at least two weekly sessions, full range of motion and priority work early in the session. These variables are associated with larger gains in the syntheses, not a requirement to start heavy. A hypothetical 100 kg 1RM gives 80 kg at 80%: this is only percentage arithmetic, not selection of a safe load or a guaranteed repetition count.",
+              "For hypertrophy, volumes of at least 10 sets per muscle group per week are associated with greater gains. Volume and frequency are different. Counting example: 5 sets on Monday + 5 on Thursday = 10 weekly sets for the muscle group concerned. This is arithmetic, not a routine; it does not establish that indirect contributions from different exercises always count as a full set, or that 10 is the minimum needed to improve.",
+              "For power, the synthesis favors moderate loads (30–70% of 1RM), a fast concentric intent and low-to-moderate volume. Example: 3 sets of 4 reps = 12 repetitions; 4 sets of 6 = 24. Equal repetition totals do not make exercises, velocity or fatigue equivalent. This does not recommend Olympic-style lifts without technical preparation.",
+              "For muscular endurance, resistance training improves outcomes compared with no training, but the synthesis does not provide enough evidence to select a superior dose for everyone. A circuit of 20 repetitions does not automatically become a method for improving a marathon or granfondo.",
+              "Failure, equipment, set structure and periodization do not consistently change all outcomes in the evidence considered. This does not make them irrelevant to technique, comfort, fatigue management or adherence. Record sets, reps, load, rest and symptoms to understand what changed; do not add sets just to reach a numerical threshold.",
+              "In weight training, pyramidal often describes a sequence of loads and repetitions; drop sets, clusters and circuits describe set structures. These are not running or cycling intensity distributions and should not be presented as equivalent methods. Open STRENGTH for author programs and variants, and sport-specific running, cycling and swimming guides for race transfer."
             ],
             "links": [
               [
@@ -672,6 +692,10 @@
               [
                 "Strength principles: publisher book page",
                 "https://us.humankinetics.com/products/science-and-practice-of-strength-training-3rd-edition"
+              ],
+              [
+                "STRENGTH: programs and methods",
+                "/en/strength/"
               ]
             ]
           },
@@ -679,13 +703,17 @@
             "title": "Strength and endurance together",
             "kind": "Weights / integration with endurance",
             "paragraphs": [
-              "The 2022 Schumann et al. review found no overall compromise of maximal strength or hypertrophy compared with strength alone. Explosive strength gains may be attenuated, particularly when both modes are trained in the same session.",
-              "This does not make every combination equivalent or safe. Consider volume, goals, recovery and the population studied. This page does not prescribe a weekly schedule."
+              "The Schumann et al. review, published online in 2021 and in the 2022 volume, includes 43 studies and 1,090 participants. It compares at least four weeks of strength plus aerobic training with the same strength prescription without aerobic work. It does not compare any arbitrary pair of weekly plans.",
+              "Overall, there is no significant difference in maximal strength or hypertrophy. Explosive-strength gains are attenuated: SMD −0.28, 95% confidence interval −0.48 to −0.08. SMD is a standardized difference, not a 28% performance loss or a number of race seconds.",
+              "The subgroup training both modes in the same session (at most 20 minutes apart) shows attenuated explosive-strength gains. This is not significant when modes are separated by at least 3 hours. It does not prove that 3 hours is a sharp biological threshold or a recovery guarantee for every athlete. Subgroups are not a direct trial of every possible separation interval.",
+              "Calendar-reading example only: cycling ends at 08:00 and weights start at 11:00, giving 3 hours of separation. This does not establish recovery or prescribe volume. For a power goal, separation is one factor to consider alongside the quality and load of both activities.",
+              "Average study quality is moderate. Aerobic intensity is not analyzed reliably because reporting is inconsistent. The active subgroup mixes training levels, so identical findings in novices and elite athletes are not established. No significant differences between running and cycling or age groups does not prove equivalence.",
+              "This synthesis concerns muscle outcomes; by itself it does not establish improvements in VO₂max, marathon, swimming or triathlon performance. Sport-specific guides separate loads, populations and results. Do not label all fatigue as generic interference or treat concurrent training as an automatically generated week."
             ],
             "links": [
               [
-                "Systematic review and meta-analysis: abstract",
-                "https://pubmed.ncbi.nlm.nih.gov/34757594/"
+                "Schumann et al. 2022: full text",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC8891239/"
               ],
               [
                 "Strength for running: methods and protocols",
@@ -694,6 +722,10 @@
               [
                 "Strength for cycling: methods and protocol",
                 "/en/articles/strength-for-cycling-methods/"
+              ],
+              [
+                "Strength for swimming: methods and protocols",
+                "/en/articles/strength-for-swimming-methods/"
               ],
               [
                 "Cycling and marathon guide",
