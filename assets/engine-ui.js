@@ -27,8 +27,8 @@
     return {
       age: num("age"), weight: num("weight"), ftp: num("ftp"),
       t5k: tim("t5k"), t10k: tim("t10k"), thm: tim("thm"), tm: tim("tm"),
-      hrmax: num("hrmax"), lthr: num("lthr"), hours: num("hours"), days: Math.min(7, num("days")),
-      sports: { run: q("sport-run").checked, bike: q("sport-bike").checked, strength: q("sport-strength").checked },
+      hrmax: num("hrmax"), lthr: num("lthr"), hours: 0, days: 0,
+      sports: { run: false, bike: false, strength: false },
       s200: tim("s200"), s400: tim("s400"), goal: q("goal").value, target: tim("target"), duration: tim("duration"), sweat: num("sweat")
     };
   }
@@ -36,7 +36,7 @@
   function render() {
     var i = read(), r = E.compute(i), h = "";
     var anyInput = i.t5k || i.t10k || i.thm || i.tm || i.ftp || i.hours || i.lthr || i.s200 || i.s400;
-    if (!anyInput) { out.innerHTML = empty(L("Inserisci almeno un dato: un tempo di gara, la FTP o le ore a settimana. Il resto compare man mano.", "Enter at least one value: a race time, FTP or weekly hours. The rest appears as you go.")); return; }
+    if (!anyInput) { out.innerHTML = empty(L("Inserisci almeno un dato: un tempo di gara, la FTP o le prove di nuoto. Il resto compare man mano.", "Enter at least one value: a race time, FTP or the swim trials. The rest appears as you go.")); return; }
 
     // RUN
     var run = "";
@@ -94,7 +94,7 @@
       if (y.rideLoad) hy += '<p class="eng-note">' + L("Carico in bici indicativo a ritmo endurance: ", "Indicative cycling load at endurance effort: ") + range(y.rideLoad[0], y.rideLoad[1], "TSS/" + L("settimana", "week")) + "</p>";
       if (i.sports.run && i.sports.bike && i.sports.strength) hy += '<p class="eng-note">' + L("Interferenza forza/endurance: negli studi l'effetto negativo sulla forza è maggiore con più sedute e con la corsa che con la bici (Wilson 2012). Tieni la forza pesante lontana dalle sedute chiave di corsa quando puoi.", "Strength/endurance interference: in studies the negative effect on strength is larger with higher frequency and with running than with cycling (Wilson 2012). Keep heavy strength away from key run sessions when you can.") + "</p>";
     } else hy += empty(L("Servono ore e giorni disponibili e almeno uno sport.", "Available hours and days and at least one sport are needed."));
-    h += block("hybrid", "HYBRID", hy, L("Regola pratica Wolf Lab, non il risultato di uno studio. Parte da due punti con prove: la gran parte del tempo facile (Seiler) e la forza 1–2 volte a settimana. Il resto è una proposta da adattare.", "Wolf Lab rule of thumb, not the result of a study. It starts from two points with evidence: most time easy (Seiler) and strength once or twice a week. The rest is a proposal to adapt."));
+    if (false) h += block("hybrid", "HYBRID", hy, L("Regola pratica Wolf Lab, non il risultato di uno studio. Parte da due punti con prove: la gran parte del tempo facile (Seiler) e la forza 1–2 volte a settimana. Il resto è una proposta da adattare.", "Wolf Lab rule of thumb, not the result of a study. It starts from two points with evidence: most time easy (Seiler) and strength once or twice a week. The rest is a proposal to adapt."));
 
     // SWIM: CSS dai due test dell'utente (Wakayoshi 1992). Nessuna zona.
     var swm = "";
