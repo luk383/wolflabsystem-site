@@ -13,6 +13,7 @@ const L = {
 const G = [
  { it: '/picks/orologi-gps-corsa/', en: '/en/picks/running-gps-watches/' },
  { it: '/picks/ciclocomputer-marchi-emergenti/', en: '/en/picks/bike-computers-emerging-brands/' },
+ { it: '/picks/scarpe-daily-tempo-marathon/', en: '/en/picks/running-shoes-daily-tempo-marathon/' },
 ];
 function page(lang, rel, title, desc, main) {
   const shell = fs.readFileSync(path.join(root, L[lang].shell), 'utf8');
@@ -143,6 +144,64 @@ const C = {
   src: [['COROS, Dura 2 Solar page (specs)', S.corosD2], ['COROS Europe, prices', S.corosEUp], ['Magene, C506 page', S.mageneC506], ['iGPSPORT, BSC300 page', S.igpBSC], ['DC Rainmaker, COROS Dura 2 Solar in-depth review (22/10/2026)', S.dcrDura2], ['road.cc, Magene C506 review', S.roadMagene], ['Cyclists Hub, iGPSPORT BSC300 review', S.hubBSC], ['iGPSPORT, company page', S.igpAbout], ['FCC, iGPSPORT letter (Wuhan Qiwu Technology)', S.igpFCC], ['Magene, company profile', S.mageneCo], ['CIPO Canada, COROS trademark', S.corosTM]],
  },
 };
+
+// ---------- SHOES (RTINGS lab data and use-case scores; categories follow the use each review states)
+const R = 'https://www.rtings.com/running-shoes/reviews/';
+const SH = {
+ evo: ['adidas Adizero Evo SL', '220,0 g', '36,9 mm', '6,7 mm', 'Piastra in plastica (shank)', '8.3', '8.0', '6.6', R + 'adidas/adizero-evo-sl'],
+ nova: ['ASICS Novablast 6', '247,7 g', '41,9 mm', '8,8 mm', 'Nessuna', '7.2', '8.5', '7.1', R + 'asics/novablast-6'],
+ ghost: ['Brooks Ghost 18', '283,3 g', '36,6 mm', '10,8 mm', 'Nessuna', '4.3', '6.6', '8.1', R + 'brooks/ghost-18'],
+ speed: ['Saucony Endorphin Speed 6', '222,0 g', '37,8 mm', '7,3 mm', 'Piastra in plastica', '8.5', '7.7', '7.4', R + 'saucony/endorphin-speed-6'],
+ anta: ['ANTA C202 7', '212,9 g', '37,8 mm', '7,5 mm', 'Carbonio', '7.5', '8.0', '6.3', R + 'anta/c202-7'],
+ x260: ['XTEP 260X 3.0', '216,0 g', '36,8 mm', '10,4 mm', 'Carbonio', '8.2', '6.8', '7.1', R + 'xtep/260x-3-0'],
+ adios: ['adidas Adizero Adios Pro 4', '197,5 g', '39,5 mm', '7,0 mm', 'Aste in fibra di carbonio', '8.8', '7.9', '5.5', R + 'adidas/adizero-adios-pro-4'],
+ fei: ['Li-Ning Feidian 6 Elite', '205,1 g', '39,7 mm', '5,4 mm', 'Carbonio', '8.9', '9.0', '6.2', R + 'li-ning/feidian-6-elite'],
+ x160: ['XTEP 160X 7.0 PRO', '226,8 g', '38,2 mm', '4,0 mm', 'Carbonio', '8.3', '8.3', '6.7', R + 'xtep/160x-7-0-pro'],
+};
+// use-case scores: [Half/Full marathon racing, 5K/10K racing, Long run, Daily training]
+const UC = { evo: [7.6, 7.3, 7.3, 7.4], nova: [7.4, 6.5, 7.4, 7.9], ghost: [5.4, 6.2, 6.4, 7.4], speed: [8.0, 7.6, 7.7, 7.0], anta: [7.9, 7.9, 7.5, 6.2], x260: [7.1, 8.0, 7.0, 6.1], adios: [8.1, 7.9, 7.2, 6.0], fei: [8.4, 7.5, 8.0, 6.5], x160: [8.2, 7.8, 7.9, 6.5] };
+const PL = { Nessuna: 'None', 'Piastra in plastica (shank)': 'Plastic shank', 'Piastra in plastica': 'Plastic plate', Carbonio: 'Carbon fibre plate', 'Aste in fibra di carbonio': 'Carbon fibre rods' };
+const shoeTable = (keys, ucIdx, lang) => {
+  const it = lang === 'it', n = (x) => (it ? x : x.replace(',', '.'));
+  const rows = [
+    [it ? 'Peso' : 'Weight', ...keys.map((k) => n(SH[k][1].replace(' g', ' g')))],
+    [it ? 'Altezza tallone' : 'Heel stack', ...keys.map((k) => n(SH[k][2]))],
+    ['Drop', ...keys.map((k) => n(SH[k][3]))],
+    [it ? 'Piastra' : 'Plate', ...keys.map((k) => (it ? SH[k][4] : PL[SH[k][4]]))],
+    [it ? 'Ritorno di energia (0-10)' : 'Energy return (0-10)', ...keys.map((k) => SH[k][5])],
+    [it ? 'Ammortizzazione (0-10)' : 'Cushioning (0-10)', ...keys.map((k) => SH[k][6])],
+    [it ? 'Stabilità (0-10)' : 'Stability (0-10)', ...keys.map((k) => SH[k][7])],
+    [it ? ['Uso: allenamento quotidiano', 'Uso: gara 5-10 km', 'Uso: gara mezza e maratona'][ucIdx === 3 ? 0 : ucIdx === 1 ? 1 : 2] + ' (0-10)' : ['Use: daily training', 'Use: 5K/10K racing', 'Use: half and full marathon racing'][ucIdx === 3 ? 0 : ucIdx === 1 ? 1 : 2] + ' (0-10)', ...keys.map((k) => Number(UC[k][ucIdx]).toFixed(1))],
+  ];
+  return tbl(keys.map((k) => SH[k][0]), rows, lang);
+};
+const SHOE = {
+ it: { rel: G[2].it, title: 'Scarpe da corsa per categoria: Daily, Tempo, Marathon', desc: 'Nove scarpe da corsa, anche di marchi cinesi, divise in Daily, Tempo e Marathon sui test di laboratorio RTINGS. Ultima verifica 29/10/2026.',
+   h1: 'Scarpe da corsa: Daily, Tempo, Marathon.', lede: 'Misure di laboratorio e punteggi d\'uso di RTINGS, con marchi cinesi inclusi. Nessun test nostro e nessuna classifica.',
+   intro: ['Come abbiamo diviso le categorie: RTINGS non usa la parola "Tempo". Per Daily e Marathon usiamo i suoi punteggi d\'uso ("Daily Training", "Half/Full Marathon Racing"). Per Tempo mettiamo le scarpe che le recensioni RTINGS descrivono per allenamenti veloci e gare brevi. Sono scelte nostre di raggruppamento, i numeri sono di RTINGS.', 'I punteggi 0-10 e le misure sono di RTINGS su un paio (taglia uomo) e cambiano con gli aggiornamenti del loro banco di prova. Prezzi non inclusi: variano per mercato.'],
+   sec: [
+    ['Daily', 'Chilometri di tutti i giorni. In ordine di punteggio d\'uso, la più alta è la ASICS Novablast 6; Evo SL e Ghost 18 hanno lo stesso punteggio. Nessuna scarpa daily di marchi cinesi letta finora.', ['nova', 'evo', 'ghost'], 3,
+     'RTINGS sulla Novablast 6: nella sua comparazione, la Gel-Nimbus 28 è migliore per allenamento quotidiano e lunghi per stabilità e ammortizzazione più resistente; la Novablast resta più reattiva.'],
+    ['Tempo', 'Allenamenti veloci e gare corte. RTINGS descrive la ANTA C202 7 come più pratica "per allenamenti e sedute veloci" della versione da gara; la XTEP 260X 3.0 come scarpa "da allenamenti e gare brevi"; la Endorphin Speed 6 come aggiornamento utile "per allenamenti lunghi e gare".', ['speed', 'anta', 'x260'], 1,
+     'ANTA e XTEP: dai marchi cinesi testati da RTINGS. XTEP è citata come marchio cinese da Outside (Running).'],
+    ['Marathon', 'Scarpe da gara con piastra in carbonio. Punteggio RTINGS per mezza e maratona più alto: Li-Ning Feidian 6 Elite (8,4), poi XTEP 160X 7.0 PRO (8,2) e Adizero Adios Pro 4 (8,1). Outside (Running) definisce Feidian 6 Elite e XTEP 160X 7.0 PRO "marathon racers" cinesi con piastra in carbonio.', ['fei', 'x160', 'adios'], 2,
+     'Stabilità bassa in tutte e tre (5,5-6,7 su 10): sono scarpe da gara, non da uso quotidiano, e il loro punteggio daily è tra 6,0 e 6,5.'],
+   ],
+   src: [['RTINGS, Adizero Evo SL', R + 'adidas/adizero-evo-sl'], ['RTINGS, ASICS Novablast 6', R + 'asics/novablast-6'], ['RTINGS, Brooks Ghost 18', R + 'brooks/ghost-18'], ['RTINGS, Saucony Endorphin Speed 6', R + 'saucony/endorphin-speed-6'], ['RTINGS, ANTA C202 7', R + 'anta/c202-7'], ['RTINGS, XTEP 260X 3.0', R + 'xtep/260x-3-0'], ['RTINGS, adidas Adizero Adios Pro 4', R + 'adidas/adizero-adios-pro-4'], ['RTINGS, Li-Ning Feidian 6 Elite', R + 'li-ning/feidian-6-elite'], ['RTINGS, XTEP 160X 7.0 PRO', R + 'xtep/160x-7-0-pro'], ['Outside (Running), 8 scarpe cinesi testate (10/06/2026)', 'https://run.outsideonline.com/gear/road-shoes/chinese-running-shoes/']], cap: ['Daily', 'Tempo', 'Marathon'] },
+ en: { rel: G[2].en, title: 'Running shoes by category: Daily, Tempo, Marathon', desc: 'Nine running shoes, including Chinese brands, split into Daily, Tempo and Marathon on RTINGS lab tests. Last checked 29/10/2026.',
+   h1: 'Running shoes: Daily, Tempo, Marathon.', lede: 'RTINGS lab measurements and use scores, Chinese brands included. No tests of our own and no ranking.',
+   intro: ['How we split the categories: RTINGS does not use the word "Tempo". For Daily and Marathon we use its use scores ("Daily Training", "Half/Full Marathon Racing"). For Tempo we group shoes that RTINGS reviews describe for fast workouts and short races. The grouping is ours; the numbers are RTINGS\'.', 'The 0-10 scores and measurements are RTINGS\' on one pair (men\'s size) and change as their test bench updates. Prices are left out: they vary by market.'],
+   sec: [
+    ['Daily', 'Everyday miles. By use score the ASICS Novablast 6 is highest; Evo SL and Ghost 18 score the same. No Chinese-brand daily shoe read so far.', ['nova', 'evo', 'ghost'], 3,
+     'RTINGS on the Novablast 6: in its comparison, the Gel-Nimbus 28 is better for daily training and long runs thanks to stability and more resilient cushioning; the Novablast stays more lively.'],
+    ['Tempo', 'Fast workouts and short races. RTINGS describes the ANTA C202 7 as more practical "for workouts and general faster training sessions" than the race version; the XTEP 260X 3.0 as a "short-distance workout and racing shoe"; the Endorphin Speed 6 as a meaningful upgrade "especially for longer workouts and races".', ['speed', 'anta', 'x260'], 1,
+     'ANTA and XTEP: Chinese brands tested by RTINGS. XTEP is named as a Chinese brand by Outside (Running).'],
+    ['Marathon', 'Carbon-plated race shoes. Highest RTINGS half and full marathon scores: Li-Ning Feidian 6 Elite (8.4), then XTEP 160X 7.0 PRO (8.2) and Adizero Adios Pro 4 (8.1). Outside (Running) calls the Feidian 6 Elite and XTEP 160X 7.0 PRO Chinese carbon-plated "marathon racers".', ['fei', 'x160', 'adios'], 2,
+     'Low stability on all three (5.5-6.7 out of 10): race shoes, not everyday shoes, and their daily-training score is between 6.0 and 6.5.'],
+   ],
+   src: null, cap: ['Daily', 'Tempo', 'Marathon'] },
+};
+SHOE.en.src = [['RTINGS, Adizero Evo SL', R + 'adidas/adizero-evo-sl'], ['RTINGS, ASICS Novablast 6', R + 'asics/novablast-6'], ['RTINGS, Brooks Ghost 18', R + 'brooks/ghost-18'], ['RTINGS, Saucony Endorphin Speed 6', R + 'saucony/endorphin-speed-6'], ['RTINGS, ANTA C202 7', R + 'anta/c202-7'], ['RTINGS, XTEP 260X 3.0', R + 'xtep/260x-3-0'], ['RTINGS, adidas Adizero Adios Pro 4', R + 'adidas/adizero-adios-pro-4'], ['RTINGS, Li-Ning Feidian 6 Elite', R + 'li-ning/feidian-6-elite'], ['RTINGS, XTEP 160X 7.0 PRO', R + 'xtep/160x-7-0-pro'], ['Outside (Running), 8 Chinese running shoes tested (10/06/2026)', 'https://run.outsideonline.com/gear/road-shoes/chinese-running-shoes/']];
 for (const lang of ['it', 'en']) {
   const kick = lang === 'it' ? ['WOLF PICKS · RUNNING · OROLOGI', 'WOLF PICKS · CYCLING · CICLOCOMPUTER'] : ['WOLF PICKS · RUNNING · WATCHES', 'WOLF PICKS · CYCLING · BIKE COMPUTERS'];
   [W[lang], C[lang]].forEach((p, i) => {
@@ -151,10 +210,14 @@ for (const lang of ['it', 'en']) {
       box(p.how, ul(p.howl)) +
       box(lang === 'it' ? 'Fonti' : 'Sources', '<ol>' + p.src.map((s) => `<li>${a(s[1], s[0])}</li>`).join('') + '</ol>' + note(D[lang])) + note(TR[lang]) + END);
   });
+  { const p = SHOE[lang];
+    page(lang, p.rel, p.title, p.desc, hero(lang === 'it' ? 'WOLF PICKS · RUNNING · SCARPE' : 'WOLF PICKS · RUNNING · SHOES', p.h1, p.lede) + ul(p.intro) +
+      p.sec.map((x) => `<h2 class="pk-h2">${x[0]}</h2><p>${x[1]}</p>` + shoeTable(x[2], x[3], lang) + note(x[4])).join('') +
+      box(lang === 'it' ? 'Fonti' : 'Sources', '<ol>' + p.src.map((q) => `<li>${a(q[1], q[0])}</li>`).join('') + '</ol>' + note(D[lang])) + note(TR[lang]) + END); }
   // hub links
   const hubp = path.join(root, lang === 'it' ? 'picks/index.html' : 'en/picks/index.html');
   let h = fs.readFileSync(hubp, 'utf8');
-  for (const [p, sub] of [[W[lang], lang === 'it' ? 'Dati dei produttori e test già pubblicati' : 'Manufacturer data and published tests'], [C[lang], lang === 'it' ? 'Marchi emergenti, da test già pubblicati' : 'Emerging brands, from published tests']]) {
+  for (const [p, sub] of [[W[lang], lang === 'it' ? 'Dati dei produttori e test già pubblicati' : 'Manufacturer data and published tests'], [C[lang], lang === 'it' ? 'Marchi emergenti, da test già pubblicati' : 'Emerging brands, from published tests'], [SHOE[lang], lang === 'it' ? 'Daily, Tempo e Marathon, da test di laboratorio già pubblicati' : 'Daily, Tempo and Marathon, from published lab tests']]) {
     if (h.includes(`href="${p.rel}"`)) continue;
     const li = `<li><a href="${p.rel}">${p.h1.replace(/\.$/, '')}</a><small>${sub}</small></li>`;
     const m = h.match(/(href="[^"]*ciclocomputer\/"|href="[^"]*bike-computers\/")[^]*?<\/li>/);
