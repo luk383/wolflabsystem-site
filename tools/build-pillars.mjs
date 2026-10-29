@@ -76,7 +76,7 @@ const DISC = {
 };
 for (const [name, d] of Object.entries(DISC)) {
   const file = name === 'STRENGTH' ? 'strength/index.html' : name.toLowerCase() + '.html';
-  const blocks = d.blocks.map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span><em>${items.length || ''}</em></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">Nessun contenuto ancora.</p>'}</details>`).join('');
+  const blocks = d.blocks.filter(([, it]) => it.length).map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span><em>${items.length || ''}</em></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">Nessun contenuto ancora.</p>'}</details>`).join('');
   const more = `<p class="pl-more"><a href="/articoli/?d=${name}">Tutti gli articoli ${name} →</a></p>`;
   wr(file, page(name, { title: `${name} - Wolf Lab`, desc: d.desc, url: d.url, en: d.en },
     `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Forza per chi corre, pedala e nuota.' : name}</h1>${name === 'STRENGTH' ? '' : `<p class="pl-lead">${d.leadHtml ? esc(d.lead) + ' ' + d.leadHtml : esc(d.lead)}</p>`}</div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div>${more}</div>`));

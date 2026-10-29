@@ -68,7 +68,7 @@ const DISC = {
 };
 for (const [name, d] of Object.entries(DISC)) {
   const file = name === 'STRENGTH' ? 'en/strength/index.html' : 'en/' + name.toLowerCase() + '.html';
-  const blocks = d.blocks.map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span><em>${items.length || ''}</em></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">Nothing here yet.</p>'}</details>`).join('');
+  const blocks = d.blocks.filter(([, it]) => it.length).map(([b, items]) => `<details class="pl-d"><summary><span>${b}</span><em>${items.length || ''}</em></summary>${items.length ? `<ul class="w-list">${items.map((it, i) => item(i + 1, ...it)).join('')}</ul>` : '<p class="pl-empty">Nothing here yet.</p>'}</details>`).join('');
   wr(file, page(name, { title: `${name} - Wolf Lab`, desc: d.desc, url: d.url, it: d.it },
     `<header class="w-page-hero"><div class="wrap"><p class="w-kicker">${name}</p><h1>${name === 'STRENGTH' ? 'Strength for people who run, ride and swim.' : name}</h1>${d.lead ? `<p class="pl-lead">${d.leadHtml ? esc(d.lead) + ' ' + d.leadHtml : esc(d.lead)}</p>` : ''}</div></header><div class="wrap w-body"><div class="pl-blocks">${blocks}</div><p class="pl-more"><a href="/en/articles/?d=${name}">All ${name} articles →</a></p></div>`));
 }
