@@ -21,16 +21,12 @@ const C = {
 <ul><li>80% leggero e 90% medio: «Strength training for sport» e StrongLifts.</li><li>70–75% leggero e 80–85% medio: Patrick Ward (2015).</li></ul>
 <h2>Progressione</h2>
 <p><b>Dalle fonti:</b> Ward propone di provare un aumento di 5–10 lb sul carico più alto del lunedì. Le fonti lette non descrivono cosa fare se le serie non vengono completate.</p>
-<p><b>Regola digitale WOLFLAB, non storica:</b> il builder può proporre un aumento solo se tutte le serie sono completate con tecnica valida e senza dolore. Con serie incomplete mantiene il carico. L'aumento lo scegli tu e lo accetti tu. Non è una regola attribuita a Starr o a Madcow.</p>
 <h2>Limiti</h2>
 <ul><li>Il power clean richiede tecnica. Se lo sostituisci, la scheda è «ispirata a», non originale.</li><li>Tre sedute con squat e lavoro multiarticolare pesano se si somma molta corsa, bici o lavoro fisico.</li><li>Una progressione fissa può non andare bene vicino ai propri limiti o con poco recupero.</li><li>È un modello di forza generale, non un protocollo per l'ipertrofia o per la prestazione endurance.</li><li>Dolore o limitazioni richiedono una valutazione appropriata: la scheda non è diagnostica né riabilitativa.</li><li>Il circuito storico non è una seduta HIIT.</li></ul>
 <h2>Compatibilità con endurance</h2>
 <p>Etichetta per ogni versione: <b>non valutata</b>. Nessuna fonte letta valuta questo metodo per runner o ciclisti. Le revisioni scientifiche sotto valgono per l'allenamento di forza in generale, non per questa scheda.</p>
-<h2>Cosa è implementato nel builder</h2>
-<p>Serie a rampa e a carico costante distinte; giorni pesante, leggero e medio configurabili; percentuali dal riferimento della variante scelta; carichi in kg e arrotondati ai dischi; registro con carico prescritto, eseguito e ripetizioni reali; proposta di carico a fine seduta; copia personalizzabile con differenze rispetto alla ricostruzione. Madcow è un configuratore avanzato: fattori e carichi li inserisci tu.</p>
 <h2>Cosa resta aperto</h2>
 <ul><li>Il libro di Starr del 1976 non è verificato direttamente.</li><li>Il sito originale di Madcow non è verificato.</li><li>Nessuna variante «Starr per intermedi» distinta da Madcow è stata trovata nelle fonti.</li></ul>
-<p class="w-note"><a href="/train/strength/">Apri il builder →</a> Il builder è separato da questa pagina: qui leggi, là costruisci. I dati restano nel tuo browser.</p>
 <h2>Fonti</h2>
 <ul class="w-src">__SRC__</ul>`,
   s: ['Patrick Ward, Bill Starr and the 5×5 Training Template (2015), secondaria', 'Strength training for sport, Bill Starr 5x5 Program (secondaria)', 'StrongLifts, History of the 5×5 Workout (secondaria)', 'StrongLifts, Madcow 5×5 workout guide (secondaria)', 'ACSM Position Stand 2026, prescrizione dell\'allenamento di forza (revisione generale)', 'Concurrent training, meta-analisi 2022 (revisione generale)'] },
@@ -49,16 +45,12 @@ const C = {
 <ul><li>80% light and 90% medium: “Strength training for sport” and StrongLifts.</li><li>70–75% light and 80–85% medium: Patrick Ward (2015).</li></ul>
 <h2>Progression</h2>
 <p><b>From the sources:</b> Ward suggests trying a 5–10 lb increase on Monday’s highest load. The sources read do not describe what to do when sets are not completed.</p>
-<p><b>WOLFLAB digital rule, not historical:</b> the builder can propose an increase only if all sets are completed with valid technique and no pain. With incomplete sets it keeps the load. You choose the increase and you accept it. It is not a rule attributed to Starr or Madcow.</p>
 <h2>Limits</h2>
 <ul><li>The power clean needs technique. If you replace it, the routine is “inspired by”, not original.</li><li>Three sessions with squats and other compound lifts add up if you also run, ride or do physical work.</li><li>A fixed progression may not suit you near your limits or with poor recovery.</li><li>It is a general strength model, not a protocol for hypertrophy or endurance performance.</li><li>Pain or limitations call for proper assessment: the routine is neither diagnostic nor rehabilitative.</li><li>The historical circuit is not an HIIT session.</li></ul>
 <h2>Endurance compatibility</h2>
 <p>Label for each version: <b>not assessed</b>. No source read assesses this method for runners or cyclists. The scientific reviews below apply to strength training in general, not to this routine.</p>
-<h2>What the builder implements</h2>
-<p>Ramp and constant-load sets kept distinct; heavy, light and medium days configurable; percentages from the reference of the chosen variant; loads in kg rounded to plates; log with prescribed load, executed load and actual reps; load proposal at the end of a session; customisable copy with differences from the reconstruction. Madcow is an advanced configurator: you enter the factors and loads.</p>
 <h2>What stays open</h2>
 <ul><li>Starr’s 1976 book is not verified directly.</li><li>Madcow’s original site is not verified.</li><li>No “Starr for intermediates” variant distinct from Madcow was found in the sources.</li></ul>
-<p class="w-note"><a href="/en/train/strength/">Open the builder →</a> The builder is separate from this page: you read here, you build there. Your data stays in your browser.</p>
 <h2>Sources</h2>
 <ul class="w-src">__SRC__</ul>`,
   s: ['Patrick Ward, Bill Starr and the 5×5 Training Template (2015), secondary', 'Strength training for sport, Bill Starr 5x5 Program (secondary)', 'StrongLifts, History of the 5×5 Workout (secondary)', 'StrongLifts, Madcow 5×5 workout guide (secondary)', 'ACSM Position Stand 2026, resistance training prescription (general review)', 'Concurrent training, 2022 meta-analysis (general review)'] },

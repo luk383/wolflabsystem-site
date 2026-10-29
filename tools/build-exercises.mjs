@@ -16,11 +16,11 @@ const C = {
  it: { rel: '/train/strength/esercizi/', alt: '/en/train/strength/exercises/', shell: 'gear.html', builder: '/train/strength/#library', t: (s) => s,
   title: 'Catalogo esercizi', kick: 'STRENGTH · ESERCIZI', desc: 'Elenco di 53 esercizi per gruppo muscolare, attrezzatura e schema motorio.',
   lede: 'Elenco di consultazione: 53 esercizi.', cols: ['Esercizio', 'Attrezzatura', 'Schema motorio'],
-  note: 'Catalogo dimostrativo, senza video né istruzioni tecniche. Le etichette sono organizzative e non esclusive. Non è una guida all’esecuzione.', open: 'Apri il catalogo interattivo →' },
+  note: 'Catalogo di consultazione, senza video né istruzioni tecniche. Le etichette sono organizzative e non esclusive. Non è una guida all’esecuzione.', open: 'Apri il catalogo interattivo →' },
  en: { rel: '/en/train/strength/exercises/', alt: '/train/strength/esercizi/', shell: 'en/gear.html', builder: '/en/train/strength/#library', t: (s) => { if (!EN[s]) MISS.add(s); return EN[s] || s; },
   title: 'Exercise catalogue', kick: 'STRENGTH · EXERCISES', desc: 'List of 53 exercises by muscle group, equipment and movement pattern.',
   lede: 'Reference list: 53 exercises.', cols: ['Exercise', 'Equipment', 'Movement pattern'],
-  note: 'Demo catalogue, with no videos or technique instructions. Labels are organisational and not exclusive. It is not an execution guide.', open: 'Open the interactive catalogue →' },
+  note: 'Reference catalogue, with no videos or technique instructions. Labels are organisational and not exclusive. It is not an execution guide.', open: 'Open the interactive catalogue →' },
 };
 const sp = path.join(root, 'sitemap.xml'); let sm = fs.readFileSync(sp, 'utf8');
 for (const [lang, c] of Object.entries(C)) {
@@ -38,7 +38,7 @@ for (const [lang, c] of Object.entries(C)) {
   const groups = [...new Set(lib.map((e) => e[1]))];
   const body = groups.map((g) => { const rows = lib.map((e, i) => [e, i]).filter(([e]) => e[1] === g);
     return `<h2>${esc(c.t(g))} <small>${rows.length}</small></h2><table class="w-table"><thead><tr>${c.cols.map((x) => `<th>${x}</th>`).join('')}</tr></thead><tbody>${rows.map(([e, i]) => `<tr><td>${esc(lang === 'it' ? e[0] : (EN[e[0]] || e[0]))}</td><td>${esc(c.t(e[2]))}</td><td>${esc(c.t(pats[i]))}</td></tr>`).join('')}</tbody></table>`; }).join('\n');
-  const main = `<main id="main"><header class="w-page-hero"><div class="wrap"><p class="w-kicker">${c.kick}</p><h1>${c.title}</h1><p class="w-lede">${c.lede}</p></div></header><div class="wrap w-body w-prose">${body}<p class="w-note">${c.note} <a href="${c.builder}">${c.open}</a></p></div></main>`;
+  const main = `<main id="main"><header class="w-page-hero"><div class="wrap"><p class="w-kicker">${c.kick}</p><h1>${c.title}</h1><p class="w-lede">${c.lede}</p></div></header><div class="wrap w-body w-prose">${body}<p class="w-note">${c.note}</p></div></main>`;
   const out = path.join(root, c.rel.slice(1), 'index.html');
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, h + main + foot);
