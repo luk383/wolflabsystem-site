@@ -5,7 +5,7 @@ export function organize(D,en){
  const get=(d,b)=>D[d].blocks.find(x=>x[0]===b)?.[1]||[];
  const add=(d,b,row)=>{const x=D[d].blocks.find(x=>x[0]===b);if(x&&!x[1].some(y=>y[2]===row[2]&&y[0]===row[0]))x[1].push(row)};
  for(const d of ['RUN','RIDE','SWIM']){
-  D[d].blocks=['TRAINING','PERFORMANCE','RACE','FUEL & RECOVERY','GEAR'].map(b=>[b,get(d,b)]);
+  D[d].blocks=['TRAINING','PERFORMANCE','FUEL & RECOVERY','GEAR'].map(b=>[b,get(d,b)]);
   // Remove stale home-specific lead from the discipline index.
   delete D[d].leadHtml;
  }
