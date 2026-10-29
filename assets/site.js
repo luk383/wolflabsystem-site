@@ -191,7 +191,7 @@
   if(raceList||tripList){fetch('/assets/explore-data.json').then(function(r){return r.json();}).then(function(D){
     var list=raceList||tripList,meta=raceList?D.races:D.trips,items=[].slice.call(list.querySelectorAll('li'));
     items.forEach(function(li){var a=li.querySelector('a');var m=a&&meta[new URL(a.href).pathname];li._m=m;});
-    var box=document.createElement('div');box.className='explore';var cnt=document.createElement('p');cnt.className='explore-count';cnt.setAttribute('role','status');
+    var box=document.createElement('div');box.className='explore';
     function sel(id,label,opts){var l=document.createElement('label');l.textContent=label;var s=document.createElement('select');s.id=id;opts.forEach(function(o){var op=document.createElement('option');op.value=o[0];op.textContent=o[1];s.appendChild(op);});l.appendChild(s);return l;}
     var row=document.createElement('div');row.className='row';var apply;
     if(raceList){
@@ -201,14 +201,14 @@
       row.appendChild(sel('x-month',en?'Month':'Mese',[['',en?'All':'Tutti']].concat(mn.map(function(m,i){return [String(i+1),m];}))));
       row.appendChild(sel('x-entry',en?'Entry':'Iscrizione',[['',en?'All':'Tutte'],['lottery',en?'Lottery / ballot':'Lotteria / sorteggio'],['qualifying',en?'Qualifying time':'Tempo di qualifica'],['open',en?'Open / standard':'Standard'],['soldout',en?'Sold out':'Esaurita']]));
       row.appendChild(sel('x-course',en?'Course data':'Dati percorso',[['',en?'All':'Tutti'],['1',en?'With official source':'Con fonte ufficiale'],['0',en?'Not yet verified':'Non ancora verificati']]));
-      apply=function(){var c=x('x-country'),m=x('x-month'),e=x('x-entry'),k=x('x-course'),n=0;items.forEach(function(li){var d=li._m,ok=!d||((!c||d.country===c)&&(!m||String(d.month)===m)&&(!e||d.entry===e)&&(!k||String(d.course)===k));li.dataset.xhide=ok?'':'1';n+=ok?1:0;});sync();cnt.textContent=n+(en?' races':' gare');};
+      apply=function(){var c=x('x-country'),m=x('x-month'),e=x('x-entry'),k=x('x-course'),n=0;items.forEach(function(li){var d=li._m,ok=!d||((!c||d.country===c)&&(!m||String(d.month)===m)&&(!e||d.entry===e)&&(!k||String(d.course)===k));li.dataset.xhide=ok?'':'1';n+=ok?1:0;});sync();};
     }else{
       row.appendChild(sel('x-sport',en?'Focus':'Focus',[['',en?'All':'Tutti'],['bike',en?'Cycling':'Bici'],['run',en?'Running':'Corsa'],['altitude',en?'Altitude':'Altura']]));
-      apply=function(){var s=x('x-sport'),n=0;items.forEach(function(li){var d=li._m,ok=!d||!s||d.sports.indexOf(s)>=0;li.dataset.xhide=ok?'':'1';n+=ok?1:0;});sync();cnt.textContent=n+(en?' destinations':' mete');};
+      apply=function(){var s=x('x-sport'),n=0;items.forEach(function(li){var d=li._m,ok=!d||!s||d.sports.indexOf(s)>=0;li.dataset.xhide=ok?'':'1';n+=ok?1:0;});sync();};
     }
     function x(id){return document.getElementById(id).value;}
     function sync(){items.forEach(function(li){li.hidden=li.dataset.xhide==='1'||li.dataset.fhide==='1';});}
-    items.forEach(function(li){li.dataset.fhide=li.hidden?'1':'';});box.appendChild(row);box.appendChild(cnt);list.parentNode.insertBefore(box,list);box.addEventListener('change',apply);apply();
+    items.forEach(function(li){li.dataset.fhide=li.hidden?'1':'';});box.appendChild(row);list.parentNode.insertBefore(box,list);box.addEventListener('change',apply);apply();
     var f=document.querySelector('.filter');if(f)f.addEventListener('click',function(){setTimeout(function(){items.forEach(function(li){li.dataset.fhide=li.hidden&&li.dataset.xhide!=='1'?'1':'';});sync();},0);});
   }).catch(function(){});}
   // Barra Wolf negli articoli: livello di prova, aggiornamento, lettura (dati già presenti nella pagina)

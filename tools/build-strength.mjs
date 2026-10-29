@@ -28,8 +28,8 @@ for (const [lang, c] of Object.entries(L)) {
     .replace(/<a class="lang" href="[^"]*" hreflang="(it|en)" lang="(it|en)">/, `<a class="lang" href="${c.alt}" hreflang="${lang === 'it' ? 'en' : 'it'}" lang="${lang === 'it' ? 'en' : 'it'}">`);
   const sub = lang === 'en' ? 'en/' : '';
   const links = lang === 'it'
-    ? [['/train/strength/esercizi/', 'Catalogo esercizi', '53 esercizi per muscolo, attrezzo e schema.'], ['/train/strength/starr-5x5/', 'Bill Starr 5×5', 'Origine, struttura e varianti, con fonti.'], ['/strength/', 'STRENGTH', 'Programmi, metodi e forza per l\'endurance.']]
-    : [['/en/train/strength/exercises/', 'Exercise catalogue', '53 exercises by muscle, equipment and pattern.'], ['/en/train/strength/starr-5x5/', 'Bill Starr 5×5', 'Origin, structure and variants, with sources.'], ['/en/strength/', 'STRENGTH', 'Programs, methods and strength for endurance.']];
+    ? [['/train/strength/esercizi/', 'Catalogo esercizi', 'esercizi per muscolo, attrezzo e schema.'], ['/train/strength/starr-5x5/', 'Bill Starr 5×5', 'Origine, struttura e varianti, con fonti.'], ['/strength/', 'STRENGTH', 'Programmi, metodi e forza per l\'endurance.']]
+    : [['/en/train/strength/exercises/', 'Exercise catalogue', 'exercises by muscle, equipment and pattern.'], ['/en/train/strength/starr-5x5/', 'Bill Starr 5×5', 'Origin, structure and variants, with sources.'], ['/en/strength/', 'STRENGTH', 'Programs, methods and strength for endurance.']];
   const main = `<main id="main"><header class="w-page-hero"><div class="wrap"><p class="w-kicker">${c.kick}</p><h1>${c.title}</h1></div></header><div class="wrap w-body"><ul class="w-list">${links.map(([u, t, d], i) => `<li class="w-item"><a href="${u}"><span class="w-num">0${i + 1}</span><span class="w-txt"><b>${t}</b><small>${d}</small></span><span class="w-go" aria-hidden="true">→</span></a></li>`).join('')}</ul></div></main>`;
   const out = path.join(root, c.rel.slice(1), 'index.html');
   fs.mkdirSync(path.dirname(out), { recursive: true });
