@@ -1214,5 +1214,147 @@
    ],
    "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
   }
+ },
+ "Panca piana": {
+  "url": "https://exrx.net/WeightExercises/PectoralSternal/BBBenchPress",
+  "source": "ExRx.net, Barbell Bench Press",
+  "it": {
+   "steps": [
+    "Sdraiarsi supini sulla panca. Staccare il bilanciere dal rack sopra la parte alta del petto con presa prona ampia e obliqua.",
+    "Abbassare il peso fino al petto.",
+    "Spingere la barra verso l’alto fino a braccia estese. Ripetere."
+   ],
+   "checks": [
+    "Se la presa è troppo larga, l’escursione si riduce (nota della fonte)."
+   ],
+   "program": "Serie, ripetizioni e progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Lie on your back on the bench. Take the bar off the rack over the upper chest with a wide oblique overhand grip.",
+    "Lower the weight to the chest.",
+    "Press the bar up until the arms are extended. Repeat."
+   ],
+   "checks": [
+    "Range of motion is reduced if the grip is too wide (source note)."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Curl manubri": {
+  "url": "https://exrx.net/WeightExercises/Biceps/DBCurl",
+  "source": "ExRx.net, Dumbbell Curl",
+  "it": {
+   "steps": [
+    "Posizionare due manubri ai lati, palmi verso l’interno, braccia dritte.",
+    "Con i gomiti ai fianchi, sollevare un manubrio ruotando l’avambraccio fino a quando è verticale e il palmo guarda la spalla.",
+    "Abbassare alla posizione iniziale e ripetere con l’altro braccio, alternando i lati."
+   ],
+   "checks": [
+    "La fonte indica che si può eseguire in alternata (come descritto), in simultanea o in simultanea-alternata.",
+    "A gomito completamente flesso può avanzare leggermente, con gli avambracci non oltre la verticale: serve a rilasciare un po’ la tensione tra le ripetizioni."
+   ],
+   "program": "Serie, ripetizioni e progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Hold two dumbbells at the sides, palms facing in, arms straight.",
+    "With the elbows at the sides, raise one dumbbell and rotate the forearm until it is vertical and the palm faces the shoulder.",
+    "Lower to the start and repeat with the other arm, alternating sides."
+   ],
+   "checks": [
+    "The source says it can be done alternating (as described), simultaneous, or simultaneous-alternating.",
+    "At full elbow flexion the elbow may travel forward slightly, with forearms no more than vertical: this releases some tension between repetitions."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Calf raise": {
+  "url": "https://exrx.net/WeightExercises/Gastrocnemius/LVStandingCalfRaise",
+  "source": "ExRx.net, Lever Standing Calf Raise",
+  "it": {
+   "steps": [
+    "Mettere le spalle sotto la leva imbottita. Punte e avampiede sul blocco, con archi e talloni fuori. Impugnare le maniglie o i lati della leva. Alzarsi estendendo anche e ginocchia.",
+    "Sollevare i talloni estendendo le caviglie il più possibile.",
+    "Abbassare i talloni piegando le caviglie fino ad allungare i polpacci. Ripetere."
+   ],
+   "checks": [
+    "Se possibile, posizionare la leva appena sotto il punto più basso dell’escursione.",
+    "Ginocchia dritte per tutto l’esercizio, oppure leggermente piegate solo durante l’allungamento; in quel caso il quadricipite interviene come sinergista."
+   ],
+   "program": "Serie, ripetizioni e progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Place the shoulders under the padded lever. Toes and balls of the feet on the calf block with arches and heels off. Hold the handles or the sides of the lever. Stand up by extending hips and knees.",
+    "Raise the heels by extending the ankles as high as possible.",
+    "Lower the heels by bending the ankles until the calves are stretched. Repeat."
+   ],
+   "checks": [
+    "If possible, set the lever just below the lowest point of the range of motion.",
+    "Keep the knees straight throughout, or bend them slightly only during the stretch; the quadriceps then act as a synergist."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Affondi indietro": {
+  "url": "https://exrx.net/WeightExercises/Quadriceps/DBRearLunge",
+  "source": "ExRx.net, Dumbbell Rear Lunge",
+  "it": {
+   "steps": [
+    "In piedi con i manubri ai lati.",
+    "Fare un passo indietro con una gamba piegando la gamba di appoggio. Appoggiare l’avampiede lontano dietro. Abbassare il corpo flettendo ginocchio e anca della gamba di appoggio, finché il ginocchio posteriore è quasi a contatto con il pavimento.",
+    "Tornare in piedi estendendo anca e ginocchio della gamba anteriore e riportando la gamba posteriore accanto all’altra. Ripetere con le gambe alternate."
+   ],
+   "checks": [
+    "Busto eretto durante l’affondo: la flessibilità dei flessori dell’anca è importante.",
+    "Il ginocchio anteriore punta nella stessa direzione del piede.",
+    "Un affondo lungo enfatizza il grande gluteo; uno corto il quadricipite."
+   ],
+   "program": "Serie, ripetizioni e progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Stand with dumbbells at the sides.",
+    "Step back with one leg while bending the supporting leg. Plant the forefoot far back. Lower the body by flexing knee and hip of the supporting leg until the rear knee is almost touching the floor.",
+    "Return to standing by extending hip and knee of the front leg and bringing the rear leg beside it. Repeat alternating legs."
+   ],
+   "checks": [
+    "Keep the torso upright during the lunge: flexible hip flexors matter.",
+    "The front knee points the same way as the foot.",
+    "A long lunge emphasises the gluteus maximus; a short lunge the quadriceps."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
+ },
+ "Sollevamento ginocchia alla sbarra": {
+  "url": "https://exrx.net/WeightExercises/HipFlexors/BWHangingLegRaise",
+  "source": "ExRx.net, Hanging Leg Raise (also known as Hanging Knee Raise)",
+  "it": {
+   "steps": [
+    "Afferrare una sbarra alta e restare appesi con presa prona poco più larga delle spalle.",
+    "Sollevare le gambe flettendo anche e ginocchia fino a flettere completamente le anche o a portare le ginocchia ben sopra le anche.",
+    "Tornare con anche e ginocchia estese verso il basso. Ripetere."
+   ],
+   "checks": [
+    "Si possono usare cinghie per gli addominali.",
+    "Retto addominale e obliqui si contraggono dinamicamente solo se c’è una vera flessione della vita; senza, stabilizzano il bacino durante la flessione dell’anca (nota della fonte).",
+    "Più facile: su superficie piana o inclinata (sollevamenti sdraiati). Più difficile: gambe tese, carico aggiuntivo, o ginocchia portate alle spalle."
+   ],
+   "program": "Serie, ripetizioni e progressione dipendono dal programma scelto: il nome dell’esercizio non stabilisce la dose. La scheda descrive il gesto, non dimostra un trasferimento diretto alla prestazione di un singolo sport."
+  },
+  "en": {
+   "steps": [
+    "Grasp a high bar and hang with an overhand grip slightly wider than shoulder width.",
+    "Raise the legs by flexing hips and knees until the hips are fully flexed or the knees are well above the hips.",
+    "Return with hips and knees extended downward. Repeat."
+   ],
+   "checks": [
+    "Ab straps can be used.",
+    "Rectus abdominis and obliques contract dynamically only if actual waist flexion occurs; without it they only stabilise the pelvis during hip flexion (source note).",
+    "Easier: on a flat or incline surface (lying leg raise). Harder: straight legs, added weight, or knees raised to the shoulders."
+   ],
+   "program": "Sets, repetitions and progression depend on the programme you choose: the exercise name does not set the dose. The card describes the movement and does not show direct transfer to performance in a single sport."
+  }
  }
 }
