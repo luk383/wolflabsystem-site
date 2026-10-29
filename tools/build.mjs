@@ -408,7 +408,10 @@ function main() {
       });
       const tocItems = toc.filter(Boolean);
       const rel = articles[lang].filter((x) => x.id !== a.id);
-      const related = [...rel.filter((x) => x.topic === a.topic), ...rel.filter((x) => x.topic !== a.topic)].slice(0, 3);
+      const DISC = (x) => /^(run-|strength-run|carbon-shoes)/.test(x.id) ? "run" : /^(ride-|ftp$|strength-ride)/.test(x.id) ? "ride" : /^bike$/.test(x.id) ? "runbike" : /^swim-/.test(x.id) ? "swim" : /^(prog-|strength$)/.test(x.id) ? "strength" : "";
+      const dA = DISC(a);
+      const relOk = dA ? rel.filter((x) => DISC(x) === dA || DISC(x) === "") : rel;
+      const related = [...relOk.filter((x) => dA && DISC(x) === dA), ...relOk.filter((x) => !(dA && DISC(x) === dA) && x.topic === a.topic), ...relOk.filter((x) => !(dA && DISC(x) === dA) && x.topic !== a.topic)].slice(0, 3);
       const side = `<aside class="art-side">${tocItems.length ? `<nav class="art-toc" aria-label="${T[lang].toc}"><h2>${T[lang].toc}</h2><ol>${tocItems.map((i) => `<li><a href="#${i.id}">${i.label}</a></li>`).join("")}</ol></nav>` : ""}<nav class="art-related" aria-label="${T[lang].related}"><h2>${T[lang].related}</h2><ul>${related.map((x) => `<li><a href="${articlePath(lang, x.slug)}"><span>${esc(x.topic)}</span>${esc(x.title)}</a></li>`).join("")}</ul></nav></aside>`;
       const body = `<article class="page art">
 <header class="art-hero"><div class="wrap">
