@@ -31,3 +31,5 @@
 .m-t:focus-visible,.m-feat:focus-visible,.m-c:focus-visible,.m-eng:focus-visible,.m-more a:focus-visible{outline:3px solid #111;outline-offset:3px;box-shadow:0 0 0 6px #D6FF35}
 .m-eng:focus-visible{outline-color:#fff}
 @media(max-width:360px){.m-t{padding:14px}.m-t b{font-size:24px}}
+.m-t{justify-content:flex-start}.m-t b{display:block}.m-t span{margin-top:10px}.m-t i{margin-top:auto;padding-top:16px}
+@media(min-width:801px){.m-t{min-height:300px}.m-t b{margin-top:76px}}
