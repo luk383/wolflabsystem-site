@@ -145,7 +145,7 @@
   if (!group || !list) return;
   function apply(f, btn) {
     group.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
-    list.querySelectorAll("li").forEach(function (li) { li.hidden = f === "major" ? li.dataset.major !== "1" : f === "run" ? li.dataset.sport === "bike" : f !== "all" && li.dataset.sport !== f; });
+    list.querySelectorAll("li").forEach(function (li) { li.hidden = f === "elev" ? li.dataset.elev !== "1" : f === "major" ? li.dataset.major !== "1" : f === "run" ? li.dataset.sport === "bike" : f !== "all" && li.dataset.sport !== f; });
   }
   group.addEventListener("click", function (e) {
     var btn = e.target.closest("button[data-filter]");

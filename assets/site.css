@@ -634,3 +634,6 @@ html:not([data-theme="dark"]) .w-feature-sym{color:#5A7300}
 .pk-hint{display:none;margin:8px 0 0;font:600 12px var(--mono);letter-spacing:.06em;color:var(--mute,#666)}.pk-hint span{color:var(--accent-ink,#4a5a00)}
 .pk-scroll:focus-visible{outline:2px solid currentColor;outline-offset:2px}
 @media(max-width:700px){.pk-hint{display:block}.pk-scroll{background:linear-gradient(to right,var(--bg) 30%,transparent),linear-gradient(to left,var(--bg) 30%,transparent) 100% 0,radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.28),transparent),radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.28),transparent) 100% 0;background-repeat:no-repeat;background-size:44px 100%,44px 100%,16px 100%,16px 100%;background-attachment:local,local,scroll,scroll}}
+
+.r-name small.r-elev{color:var(--muted);margin-top:2px}
+.r-cov{max-width:60ch;margin:-12px 0 24px}

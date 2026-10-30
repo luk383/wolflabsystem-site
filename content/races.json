@@ -400,7 +400,11 @@
         "it": "Dislivello cumulato 134 m, secondo l'organizzazione per il percorso 2025 (può cambiare tra edizioni).",
         "en": "Cumulative elevation 134 m, according to the organiser for the 2025 course (may change between editions)."
       },
-      "courseSource": "https://zurichmaratobarcelona.es/es/2025/02/26/la-zurich-marato-barcelona-2025-optimiza-su-recorrido-para-mejorar-la-experiencia-de-corredores-y-espectadores/"
+      "courseSource": "https://zurichmaratobarcelona.es/es/2025/02/26/la-zurich-marato-barcelona-2025-optimiza-su-recorrido-para-mejorar-la-experiencia-de-corredores-y-espectadores/",
+      "elevation": {
+        "it": "134 m (ed. 2025)",
+        "en": "134 m (2025 edition)"
+      }
     },
     {
       "id": "milano",
@@ -450,7 +454,11 @@
         "it": "Dislivello positivo di circa 100 m e 3,3 km di pavé, secondo il manuale ufficiale dell'edizione 2025 (può cambiare).",
         "en": "Elevation gain of about 100 m and 3.3 km of cobbles, according to the official 2025 handbook (may change)."
       },
-      "courseSource": "https://www.milanomarathon.it/wp-content/uploads/2025/04/handbook-MM25.pdf"
+      "courseSource": "https://www.milanomarathon.it/wp-content/uploads/2025/04/handbook-MM25.pdf",
+      "elevation": {
+        "it": "circa 100 m (ed. 2025)",
+        "en": "about 100 m (2025 edition)"
+      }
     },
     {
       "id": "paris",
@@ -500,7 +508,11 @@
         "it": "Dislivello 256 m positivi e 252 m negativi, secondo l'organizzazione per l'edizione 2026 (può cambiare).",
         "en": "256 m of climbing and 252 m of descent, according to the organiser for the 2026 edition (may change)."
       },
-      "courseSource": "https://www.schneiderelectricparismarathon.com/fr/actus/decouvre-le-profil-du-parcours/337"
+      "courseSource": "https://www.schneiderelectricparismarathon.com/fr/actus/decouvre-le-profil-du-parcours/337",
+      "elevation": {
+        "it": "256 m salita, 252 m discesa (ed. 2026)",
+        "en": "256 m up, 252 m down (2026 edition)"
+      }
     },
     {
       "id": "rotterdam",
@@ -651,7 +663,11 @@
         "it": "Dislivello positivo 246 piedi (circa 74 m), percorso definito \"veloce e piatto\" dall'organizzazione.",
         "en": "Elevation gain 246 feet (about 74 m); the organiser describes the course as \"fast and flat\"."
       },
-      "courseSource": "https://www.londonmarathonevents.co.uk/london-marathon/event-overview"
+      "courseSource": "https://www.londonmarathonevents.co.uk/london-marathon/event-overview",
+      "elevation": {
+        "it": "circa 74 m, 246 ft (edizione non indicata)",
+        "en": "about 74 m, 246 ft (edition not stated)"
+      }
     },
     {
       "id": "novecolli",
@@ -702,7 +718,11 @@
         "it": "Dislivello dichiarato dall'organizzazione: percorso lungo 200 km con 3.814 m (pendenza massima 18%), percorso medio 137 km con 1.872 m. Il percorso gravel non è incluso in questi numeri.",
         "en": "Elevation stated by the organiser: long course 200 km with 3,814 m (maximum gradient 18%), medium course 137 km with 1,872 m. The gravel course is not covered by these figures."
       },
-      "courseSource": "https://www.novecolli.it/it-it/percorso"
+      "courseSource": "https://www.novecolli.it/it-it/percorso",
+      "elevation": {
+        "it": "3.814 m su 200 km; 1.872 m su 137 km (edizione non indicata)",
+        "en": "3,814 m over 200 km; 1,872 m over 137 km (edition not stated)"
+      }
     },
     {
       "id": "capetown",
@@ -802,7 +822,11 @@
         "it": "Dislivello positivo dichiarato dall'organizzazione: percorso Maratona 138 km con 4.230 m, Medio 106 km con 3.130 m, Sellaronda 55 km con 1.780 m.",
         "en": "Elevation gain stated by the organiser: Maratona course 138 km with 4,230 m, Middle 106 km with 3,130 m, Sellaronda 55 km with 1,780 m."
       },
-      "courseSource": "https://www.maratona.it/en/138km"
+      "courseSource": "https://www.maratona.it/en/138km",
+      "elevation": {
+        "it": "4.230 m su 138 km; 3.130 m su 106 km; 1.780 m su 55 km (edizione non indicata)",
+        "en": "4,230 m over 138 km; 3,130 m over 106 km; 1,780 m over 55 km (edition not stated)"
+      }
     },
     {
       "id": "etape",
@@ -853,7 +877,11 @@
         "it": "Dati ufficiali dell'edizione 2026 (non del 2027 in elenco): 170 km e 5.400 m di dislivello positivo. Il percorso cambia ogni anno: quello 2027 qui sopra viene da una fonte terza e non è confermato dall'organizzazione.",
         "en": "Official figures for the 2026 edition (not the 2027 listed): 170 km and 5,400 m of climbing. The course changes every year: the 2027 figures above come from a third-party source and are not confirmed by the organiser."
       },
-      "courseSource": "https://www.letapedutourdefrance.com/fr/actus/decouvre-le-parcours-de-letape-du-tour-de-france-2026/157"
+      "courseSource": "https://www.letapedutourdefrance.com/fr/actus/decouvre-le-parcours-de-letape-du-tour-de-france-2026/157",
+      "elevation": {
+        "it": "5.400 m su 170 km (ed. 2026, non 2027)",
+        "en": "5,400 m over 170 km (2026 edition, not 2027)"
+      }
     },
     {
       "id": "sydney",
