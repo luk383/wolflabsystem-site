@@ -61,7 +61,7 @@
     } else {
       run += '<p class="eng-note">' + L("Per le zone cardio serve la frequenza di soglia (LTHR): una prova da 30 minuti da soli, media degli ultimi 20 minuti (Friel).", "Heart-rate zones need your threshold heart rate (LTHR): a solo 30-minute time trial, average of the last 20 minutes (Friel).") + (r.hrmaxEst ? " " + L("Stima della FC max per l'età: ", "Age-based max heart rate estimate: ") + w(r.hrmaxEst) + L(" bpm, con scarto tipico di circa ±10 bpm: non usarla per fissare le zone.", " bpm, typical spread around ±10 bpm: do not use it to set zones.") : "") + "</p>";
     }
-    h += block("run", "RUN", run, L("Modello: Daniels e Gilbert. Calcolo entro circa lo 0,2% dalle tabelle stampate di Daniels. Sono punti di partenza, non una prescrizione.", "Model: Daniels and Gilbert. Calculation within about 0.2% of Daniels' printed tables. Starting points, not a prescription."));
+    h += block("run", "RUN", run, L("Ritmi e prestazioni equivalenti: modello di Daniels e Gilbert, entro circa lo 0,2% dalle tabelle stampate di Daniels. Zone cardio: percentuali della soglia secondo Friel. Sono punti di partenza, non una prescrizione.", "Paces and equivalent performances: Daniels and Gilbert model, within about 0.2% of Daniels' printed tables. Heart-rate zones: percentages of threshold after Friel. Starting points, not a prescription."));
 
     // RIDE
     var ride = "";
@@ -76,7 +76,7 @@
         return [z[0], names[z[0]], wt, pc];
       }));
     } else ride += empty(L("Serve la FTP (potenza media di 20 minuti × 0,95, oppure test da 30 minuti).", "FTP is needed (20-minute average power × 0.95, or a 30-minute test)."));
-    h += block("ride", "RIDE", ride, L("Zone di Coggan (Allen e Coggan, Training and Racing with a Power Meter). Il carico settimanale è indicativo: TSS = ore × IF² × 100.", "Coggan zones (Allen and Coggan, Training and Racing with a Power Meter). Weekly load is indicative: TSS = hours × IF² × 100."));
+    h += block("ride", "RIDE", ride, L("Zone di Coggan (Allen e Coggan, Training and Racing with a Power Meter). Le percentuali sono le fasce nominali, in numeri interi. I watt sono intervalli arrotondati e contigui: ogni valore cade in una zona, senza vuoti tra l'una e l'altra. Il carico settimanale è indicativo: TSS = ore × IF² × 100.", "Coggan zones (Allen and Coggan, Training and Racing with a Power Meter). Percentages are the nominal bands, in whole numbers. Watts are rounded, contiguous ranges: every value falls in a zone, with no gaps between them. Weekly load is indicative: TSS = hours × IF² × 100."));
 
     // HYBRID
     var hy = "";
