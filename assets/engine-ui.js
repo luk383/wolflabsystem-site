@@ -68,7 +68,7 @@
     if (r.ride) {
       ride += '<div class="big-figures"><div><strong>' + w(r.ride.ftp) + " W</strong><span>FTP</span></div>" +
         (r.ride.wkg ? "<div><strong>" + r.ride.wkg.toFixed(2) + "</strong><span>W/kg</span></div>" : "") +
-        "<div><strong>" + range(r.ride.endurance[0], r.ride.endurance[1], "W") + "</strong><span>" + L("potenza endurance (zona 2)", "endurance power (zone 2)") + "</span></div></div>";
+        "<div><strong>" + range(r.ride.zones[1][1], r.ride.zones[1][2], "W") + "</strong><span>" + L("potenza endurance (zona 2)", "endurance power (zone 2)") + "</span></div></div>";
       var names = { "1": L("Recupero attivo", "Active recovery"), "2": "Endurance", "3": "Tempo", "4": L("Soglia", "Threshold"), "5": "VO₂max", "6": L("Capacità anaerobica", "Anaerobic capacity") };
       ride += table([L("Zona", "Zone"), L("Nome", "Name"), "W", "% FTP"], r.ride.zones.map(function (z) {
         var wt = z[2] == null ? "≥" + w(z[1]) : (z[1] ? w(z[1]) + "–" + w(z[2]) : "≤" + w(z[2]));
