@@ -305,8 +305,8 @@ ${articles.slice(3,4).map(a=>`<a class="sport-more" href="${articlePath(lang,a.s
     const listed = RACES.races.filter((r) => r.listed !== false), nList = listed.length, nElev = listed.filter((r) => r.elevation).length;
     const rows = listed.map((r) => `<li data-sport="${kindOf(r)}" data-major="${r.major ? "1" : "0"}" data-elev="${r.elevation ? "1" : "0"}"><a href="${racePath(lang, r)}">
       ${raceTime(r, lang, true)}
-      <span class="r-name">${esc(r.name)}${r.major ? ` <span class="major">Major</span>` : ""}<small>${esc(r.city[lang])}</small>${r.elevation ? `<small class="r-elev">${it ? "Dislivello dichiarato: " : "Stated elevation gain: "}${esc(r.elevation[lang])}</small>` : ""}</span>
-      <span class="r-dist">${esc(raceDistance(r, lang))}</span>
+      <span class="r-name">${esc(r.name)}${r.major ? ` <span class="major">Major</span>` : ""}<small>${esc(r.city[lang])}</small>${r.elevation ? `<small class="r-elev">${it ? "Dislivello dichiarato: " : "Stated elevation gain: "}${esc(r.elevation[lang])}</small>` : ""}${r.dateNote ? `<small class="r-elev">${esc(r.dateNote[lang])}</small>` : ""}</span>
+      <span class="r-dist">${esc(raceDistance(r, lang))}${r.distanceNote ? `<small class="r-elev">${esc(r.distanceNote[lang])}</small>` : ""}</span>
       <span class="r-fee">${esc(r.feeShort[lang])}</span>
     </a></li>`).join("\n");
     return {
@@ -322,7 +322,7 @@ ${articles.slice(3,4).map(a=>`<a class="sport-more" href="${articlePath(lang,a.s
     <button type="button" data-filter="major" aria-pressed="false">World Marathon Majors</button>
     <button type="button" data-filter="elev" aria-pressed="false">${it ? "Dislivello dichiarato" : "Stated elevation gain"} (${nElev} ${it ? "su" : "of"} ${nList})</button>
   </div>
-  <p class="note r-cov">${it ? `Il filtro «Dislivello dichiarato» è parziale: solo ${nElev} gare su ${nList} hanno un dislivello indicato dall'organizzazione, con l'edizione citata. Per le altre la cifra non è pubblicata o non l'abbiamo trovata su una fonte ufficiale: non è un giudizio sul percorso.` : `The “Stated elevation gain” filter is partial: only ${nElev} of ${nList} races have an elevation gain stated by the organiser, with the edition cited. For the others the figure is not published, or we did not find it on an official source: this says nothing about the course.`}</p>
+  <p class="note r-cov">${it ? `Il filtro «Dislivello dichiarato» è parziale: solo ${nElev} gare su ${nList} hanno un dislivello indicato dall'organizzazione, con l'edizione citata. Le cifre sono di edizioni diverse: non sono confrontabili tra loro e un dato di un'edizione passata non conferma il percorso 2027. Per le altre la cifra non è pubblicata o non l'abbiamo trovata su una fonte ufficiale: non è un giudizio sul percorso.` : `The “Stated elevation gain” filter is partial: only ${nElev} of ${nList} races have an elevation gain stated by the organiser, with the edition cited. The figures come from different editions: they are not comparable with each other and a past edition's figure does not confirm the 2027 course. For the others the figure is not published, or we did not find it on an official source: this says nothing about the course.`}</p>
   <div class="race-head" aria-hidden="true"><span>${it ? "Data" : "Date"}</span><span>${it ? "Gara" : "Race"}</span><span>${it ? "Distanza" : "Distance"}</span><span>${it ? "Quota" : "Fee"}</span></div>
   <ul class="race-list" data-filter-list>
 ${rows}

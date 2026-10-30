@@ -637,3 +637,5 @@ html:not([data-theme="dark"]) .w-feature-sym{color:#5A7300}
 
 .r-name small.r-elev{color:var(--muted);margin-top:2px}
 .r-cov{max-width:60ch;margin:-12px 0 24px}
+
+.r-dist small.r-elev{display:block;font-family:inherit;font-size:.8rem;color:var(--muted);margin-top:2px}

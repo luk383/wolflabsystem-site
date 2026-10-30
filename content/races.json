@@ -667,6 +667,10 @@
       "elevation": {
         "it": "circa 74 m, 246 ft (edizione non indicata)",
         "en": "about 74 m, 246 ft (edition not stated)"
+      },
+      "dateNote": {
+        "it": "Due giorni: sabato 24 e domenica 25 aprile. Il giorno della tua gara dipende dall'assegnazione.",
+        "en": "Two days: Saturday 24 and Sunday 25 April. Your race day depends on your allocation."
       }
     },
     {
@@ -881,6 +885,10 @@
       "elevation": {
         "it": "5.400 m su 170 km (ed. 2026, non 2027)",
         "en": "5,400 m over 170 km (2026 edition, not 2027)"
+      },
+      "distanceNote": {
+        "it": "dato 2027 da fonte terza, non confermato dall'organizzazione",
+        "en": "2027 figure from a third-party source, not confirmed by the organiser"
       }
     },
     {
