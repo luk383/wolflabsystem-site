@@ -34,3 +34,10 @@ node tools/build.mjs
 `node tools/build-engine.mjs` generates the hub pages (run, ride, train, fuel, race, gear), the engine page, methodology, the new home and `assets/explore-data.json`. The calculation model is in `assets/engine.js`, the UI in `assets/engine-ui.js`.
 
 Build order (tools/build.mjs): base pages, library, news, Wolf Engine, then tools/normalize-legacy.mjs, which brings every older generated page (articles, races, trips, contact) to the Wolf v3 shell. Do not run the full build without reviewing the diff.
+
+
+## Stile "rivista" (redesign del 30/10/2026)
+Menu laterale, testata chiara in serif e solo tema chiaro vengono applicati da `node tools/apply-redesign.mjs` (idempotente, salta le pagine già convertite; usa `tools/redesign-templates.json` e `assets/home-preview.css`).
+- Dopo aver generato nuove pagine (per esempio un articolo): copia solo i file necessari, poi `node tools/apply-redesign.mjs` e per ultimo `node tools/version-assets.mjs`.
+- Non lanciare `node tools/build.mjs` completo sul sito attuale: le pagine committate non coincidono più con l'output del generatore (navigazione, hash degli asset), quindi il build rigenera una versione diversa da quella online. Se serve, rivedi il diff prima.
+- Home e hub RUN sono stati rifiniti a mano e non vengono rigenerati da `apply-redesign.mjs`.

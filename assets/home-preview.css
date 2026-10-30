@@ -189,3 +189,9 @@ html[data-theme=dark] .brand-on-light{display:block!important}html[data-theme=da
 html[data-theme=dark] body.hp-hub .w-prose a,html[data-theme=dark] body.hp-hub .prose a{color:#5A7300}
 body.hp-hub .art-hero .crumb{font:700 12px/1.2 var(--mono,monospace)!important;letter-spacing:.14em;text-transform:uppercase;color:#22262b!important;margin:0 0 14px!important}
 body.hp-hub .art-hero .crumb a{color:#5A7300!important;text-decoration:none;border-bottom:1px solid #D6FF35}
+.hp-d-h{margin:0;padding:14px 28px 4px;font:700 11px/1 var(--mono,monospace);letter-spacing:.16em;text-transform:uppercase;color:#6b7178}
+.hp-d-mini{display:flex;gap:18px;padding:14px 28px 28px;border-top:1px solid #e6e8ea;margin-top:8px}
+.hp-d-mini a{font-size:14px;font-weight:600;color:#5a6068;text-decoration:none}
+.hp-d-mini a:hover{color:#000;text-decoration:underline}
+.hp-drawer a.on{color:#000;text-decoration:underline;text-decoration-color:#D6FF35;text-decoration-thickness:3px;text-underline-offset:4px}
+.hp-d-sep .hp-d-link{padding:9px 28px;font-weight:600}
