@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // Brings older generated pages (articles, races, trips, contact, builds...) to the Wolf v3 shell:
 // head, theme script, stylesheet versions, header and footer. Idempotent. Run after tools/build.mjs.
 import fs from 'node:fs';

@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // Wolf Lab library. Run after tools/build.mjs. Static HTML, no dependencies.
 import fs from 'node:fs';
 import path from 'node:path';

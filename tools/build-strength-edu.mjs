@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // Pagina educativa /train/strength/starr-5x5/ (IT) e /en/train/strength/starr-5x5/ (EN). Separata dal builder eseguibile.
 import fs from 'node:fs';
 import path from 'node:path';

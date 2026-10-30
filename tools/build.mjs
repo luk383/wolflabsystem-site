@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // Generatore del sito Wolf Lab. Nessuna dipendenza: `node tools/build.mjs`
 // Legge content/articles/*.{it,en}.html e scrive le pagine HTML statiche nella radice del repo.
 // Le pagine generate vanno committate: l'hosting serve solo file statici, senza build.
@@ -517,3 +518,4 @@ await import("./apply-review.mjs");
 await import("./build-ask.mjs");
 await import("./apply-brand.mjs");
 await import("./seo.mjs");
+await import("./apply-redesign.mjs");

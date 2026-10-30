@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // Applies the WOLFLAB header logo (dark and light variants) to every page. Idempotent.
 import fs from 'node:fs';
 import path from 'node:path';

@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // Builds /app/ and /en/app/ (Android alpha download). Reads the shell from gear.html / en/gear.html.
 import fs from 'node:fs';
 const SHA='e5a3c80e07435f7206e44a4317515da83081efac7e3a3348eb19cfad158288dd';

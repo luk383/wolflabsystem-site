@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // Wolf Lab v3: home, hub (RUN RIDE TRAIN FUEL RACE GEAR), Wolf Engine, metodologia, guida decisionale, dati per i filtri.
 // Pagine in file .html alla radice (si servono come /run, /engine...). Esegui: node tools/build-engine.mjs
 import fs from "node:fs";
@@ -186,7 +187,7 @@ const HUBS = {
   },
   gear: {
     kicker: ["GEAR", "GEAR"], title: ["Dal comunicato alla decisione.", "From press release to decision."],
-    lede: ["Dati dichiarati dai produttori e fonti consultabili. Gli annunci non sono test sul campo.", "Manufacturer-declared data with sources to read. Announcements are not hands-on tests."],
+    lede: ["Dati dichiarati dai produttori e fonti consultabili.", "Manufacturer-declared data with sources to read."],
     groups: [
       [["Novità", "Orologi, ciclocomputer, scarpe, bici: annunci datati con fonti.", "news"], ["Scarpe con piastra in carbonio", "Cosa dicono gli studi.", ["/articoli/scarpe-con-piastra-carbonio/", "/en/articles/carbon-plate-running-shoes/"]], ["Come valutiamo", "Livelli di prova e fonti.", "method"]],
     ],

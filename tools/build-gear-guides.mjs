@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // GEAR guide pages built only from published tests and manufacturer pages we read. No tests of our own.
 // Writes /picks/orologi-gps-corsa/, /picks/ciclocomputer-marchi-emergenti/ and the EN twins, then links them from the hubs. Idempotent.
 import fs from 'node:fs';
@@ -40,7 +41,7 @@ const box = (h, inner) => `<div class="pk-box"><h3>${h}</h3>${inner}</div>`;
 const ul = (l) => '<ul>' + l.map((x) => `<li>${x}</li>`).join('') + '</ul>';
 const note = (t) => `<p class="pk-note">${t}</p>`;
 const D = { it: 'Ultima verifica: 29 ottobre 2026.', en: 'Last checked: 29 October 2026.' };
-const TR = { it: 'Trasparenza: WOLFLAB non fa test propri. Qui sintetizziamo test e recensioni già pubblicati, citando chi li ha fatti, e separiamo i dati dei produttori dai risultati dei tester. Nessun link affiliato su questa pagina.', en: 'Transparency: WOLFLAB does not run its own tests. We summarise tests and reviews already published, name who ran them, and keep manufacturer data apart from tester results. No affiliate links on this page.' };
+const TR = { it: 'Trasparenza: qui sintetizziamo test e recensioni già pubblicati, citando chi li ha fatti, e separiamo i dati dei produttori dai risultati dei tester. Nessun link affiliato su questa pagina.', en: 'Transparency: we summarise tests and reviews already published, name who ran them, and keep manufacturer data apart from tester results. No affiliate links on this page.' };
 const S = {
  dcrFR970: 'https://www.dcrainmaker.com/2025/06/garmin-forerunner-970-in-depth-review-brillance.html',
  dcrPace4: 'https://www.dcrainmaker.com/2025/11/coros-pace-4-in-depth-sports-review.html',
@@ -68,7 +69,7 @@ const NV = { it: 'non verificato', en: 'not verified' };
 const W = {
  it: {
   rel: G[0].it, title: 'Orologi GPS per la corsa: Forerunner 570, Forerunner 970, COROS Pace 4', desc: 'Tre orologi GPS da corsa a confronto: dati dei produttori e risultati dei test già pubblicati da DC Rainmaker. Ultima verifica 29/10/2026.',
-  h1: 'Orologi GPS per la corsa, a confronto.', lede: 'Garmin Forerunner 570 e 970 e COROS Pace 4. Dati dei produttori da una parte, risultati dei tester dall\'altra. Nessun test nostro e nessuna classifica.',
+  h1: 'Orologi GPS per la corsa, a confronto.', lede: 'Garmin Forerunner 570 e 970 e COROS Pace 4. Dati dei produttori da una parte, risultati dei tester dall\'altra. Nessuna classifica.',
   cols: ['Garmin Forerunner 570', 'Garmin Forerunner 970', 'COROS Pace 4'],
   rows: [
    ['Prezzo di lancio', '549,99 € (Garmin Italia)', '749,99 € (Garmin Italia)', 'da 269 € (store COROS Europa, letto il 29/10/2026)'],
@@ -87,7 +88,7 @@ const W = {
  },
  en: {
   rel: G[0].en, title: 'Running GPS watches: Forerunner 570, Forerunner 970, COROS Pace 4', desc: 'Three running GPS watches side by side: manufacturer data and results from tests already published by DC Rainmaker. Last checked 29/10/2026.',
-  h1: 'Running GPS watches, side by side.', lede: 'Garmin Forerunner 570 and 970, and COROS Pace 4. Manufacturer data on one side, tester results on the other. No tests of our own and no ranking.',
+  h1: 'Running GPS watches, side by side.', lede: 'Garmin Forerunner 570 and 970, and COROS Pace 4. Manufacturer data on one side, tester results on the other. No ranking.',
   cols: ['Garmin Forerunner 570', 'Garmin Forerunner 970', 'COROS Pace 4'],
   rows: [
    ['Launch price', '€549.99 (Garmin Italy)', '€749.99 (Garmin Italy)', 'from €269 (COROS Europe store, read 29/10/2026)'],
@@ -109,7 +110,7 @@ const W = {
 const C = {
  it: {
   rel: G[1].it, title: 'Ciclocomputer di marchi emergenti: COROS Dura 2, Magene C506, iGPSPORT BSC300', desc: 'Tre ciclocomputer di marchi con sede in Cina, letti attraverso test già pubblicati. Ultima verifica 29/10/2026.',
-  h1: 'Ciclocomputer di marchi emergenti.', lede: 'COROS Dura 2 Solar, Magene C506 e iGPSPORT BSC300, dai test di DC Rainmaker, road.cc e Cyclists Hub. Nessun test nostro e nessuna classifica.',
+  h1: 'Ciclocomputer di marchi emergenti.', lede: 'COROS Dura 2 Solar, Magene C506 e iGPSPORT BSC300, dai test di DC Rainmaker, road.cc e Cyclists Hub. Nessuna classifica.',
   cols: ['COROS Dura 2 Solar', 'Magene C506', 'iGPSPORT BSC300'],
   rows: [
    ['Prezzo', '499 € (store COROS Europa); 499-549 USD, la versione da 499 USD senza supporto (COROS USA)', '99 USD (Magene); 109 £ al lancio per road.cc', 'non indicato nelle pagine ufficiali lette'],
@@ -127,7 +128,7 @@ const C = {
  },
  en: {
   rel: G[1].en, title: 'Bike computers from emerging brands: COROS Dura 2, Magene C506, iGPSPORT BSC300', desc: 'Three bike computers from brands based in China, read through tests already published. Last checked 29/10/2026.',
-  h1: 'Bike computers from emerging brands.', lede: 'COROS Dura 2 Solar, Magene C506 and iGPSPORT BSC300, from tests by DC Rainmaker, road.cc and Cyclists Hub. No tests of our own and no ranking.',
+  h1: 'Bike computers from emerging brands.', lede: 'COROS Dura 2 Solar, Magene C506 and iGPSPORT BSC300, from tests by DC Rainmaker, road.cc and Cyclists Hub. No ranking.',
   cols: ['COROS Dura 2 Solar', 'Magene C506', 'iGPSPORT BSC300'],
   rows: [
    ['Price', '€499 (COROS Europe store); USD 499-549, the USD 499 unit without a mount (COROS US)', 'USD 99 (Magene); £109 at launch per road.cc', 'not given on the official pages we read'],
@@ -177,7 +178,7 @@ const shoeTable = (keys, ucIdx, lang) => {
 };
 const SHOE = {
  it: { rel: G[2].it, title: 'Scarpe da corsa per categoria: Daily, Tempo, Marathon', desc: 'Nove scarpe da corsa, anche di marchi cinesi, divise in Daily, Tempo e Marathon sui test di laboratorio RTINGS. Ultima verifica 29/10/2026.',
-   h1: 'Scarpe da corsa: Daily, Tempo, Marathon.', lede: 'Misure di laboratorio e punteggi d\'uso di RTINGS, con marchi cinesi inclusi. Nessun test nostro e nessuna classifica.',
+   h1: 'Scarpe da corsa: Daily, Tempo, Marathon.', lede: 'Misure di laboratorio e punteggi d\'uso di RTINGS, con marchi cinesi inclusi. Nessuna classifica.',
    intro: ['Come abbiamo diviso le categorie: RTINGS non usa la parola "Tempo". Per Daily e Marathon usiamo i suoi punteggi d\'uso ("Daily Training", "Half/Full Marathon Racing"). Per Tempo mettiamo le scarpe che le recensioni RTINGS descrivono per allenamenti veloci e gare brevi. Sono scelte nostre di raggruppamento, i numeri sono di RTINGS.', 'I punteggi 0-10 e le misure sono di RTINGS su un paio (taglia uomo) e cambiano con gli aggiornamenti del loro banco di prova. Prezzi non inclusi: variano per mercato.'],
    sec: [
     ['Daily', 'Chilometri di tutti i giorni. In ordine di punteggio d\'uso, la più alta è la ASICS Novablast 6; Evo SL e Ghost 18 hanno lo stesso punteggio. Nessuna scarpa daily di marchi cinesi letta finora.', ['nova', 'evo', 'ghost'], 3,
@@ -189,7 +190,7 @@ const SHOE = {
    ],
    src: [['RTINGS, Adizero Evo SL', R + 'adidas/adizero-evo-sl'], ['RTINGS, ASICS Novablast 6', R + 'asics/novablast-6'], ['RTINGS, Brooks Ghost 18', R + 'brooks/ghost-18'], ['RTINGS, Saucony Endorphin Speed 6', R + 'saucony/endorphin-speed-6'], ['RTINGS, ANTA C202 7', R + 'anta/c202-7'], ['RTINGS, XTEP 260X 3.0', R + 'xtep/260x-3-0'], ['RTINGS, adidas Adizero Adios Pro 4', R + 'adidas/adizero-adios-pro-4'], ['RTINGS, Li-Ning Feidian 6 Elite', R + 'li-ning/feidian-6-elite'], ['RTINGS, XTEP 160X 7.0 PRO', R + 'xtep/160x-7-0-pro'], ['Outside (Running), 8 scarpe cinesi testate (10/06/2026)', 'https://run.outsideonline.com/gear/road-shoes/chinese-running-shoes/']], cap: ['Daily', 'Tempo', 'Marathon'] },
  en: { rel: G[2].en, title: 'Running shoes by category: Daily, Tempo, Marathon', desc: 'Nine running shoes, including Chinese brands, split into Daily, Tempo and Marathon on RTINGS lab tests. Last checked 29/10/2026.',
-   h1: 'Running shoes: Daily, Tempo, Marathon.', lede: 'RTINGS lab measurements and use scores, Chinese brands included. No tests of our own and no ranking.',
+   h1: 'Running shoes: Daily, Tempo, Marathon.', lede: 'RTINGS lab measurements and use scores, Chinese brands included. No ranking.',
    intro: ['How we split the categories: RTINGS does not use the word "Tempo". For Daily and Marathon we use its use scores ("Daily Training", "Half/Full Marathon Racing"). For Tempo we group shoes that RTINGS reviews describe for fast workouts and short races. The grouping is ours; the numbers are RTINGS\'.', 'The 0-10 scores and measurements are RTINGS\' on one pair (men\'s size) and change as their test bench updates. Prices are left out: they vary by market.'],
    sec: [
     ['Daily', 'Everyday miles. By use score the ASICS Novablast 6 is highest; Evo SL and Ghost 18 score the same. No Chinese-brand daily shoe read so far.', ['nova', 'evo', 'ghost'], 3,

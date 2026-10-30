@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // Ask Wolf: a declared rule-based guide. NOT artificial intelligence. Fixed questions, fixed answers, sources.
 // Run last (after normalize-legacy). Also adds an Ask Wolf link to every footer. Idempotent.
 import fs from 'node:fs';

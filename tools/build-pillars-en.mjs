@@ -1,3 +1,4 @@
+import "./guard.mjs";
 import { organize } from './discipline-architecture.mjs';
 // WOLF: struttura a 5 pilastri per l'inglese (stesso albero di build-pillars.mjs). Etichette UI in inglese; i contenuti EN esistenti non sono toccati.
 // Uso: node tools/build-pillars-en.mjs [root]  (da eseguire dopo build-pillars.mjs)

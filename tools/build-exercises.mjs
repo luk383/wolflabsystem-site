@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // Pagina statica /train/strength/esercizi/ (IT) e /en/train/strength/exercises/ (EN): sola consultazione del catalogo esistente (53 voci).
 // Dati letti da strength-src/App.tsx (library, patterns) e dalle etichette EN gia presenti in en.py. Approfondimenti tecnici da fonti separate; nessun video.
 import fs from 'node:fs';

@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // WOLF PICKS EN: genera /en/picks/ e /en/partner/ dagli stessi dati di content/catalog. Idempotente.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -86,7 +87,7 @@ const FEN = {
 const fcell = (p, k) => { const v = p.specs[k].value; if (k === 'ratio') return FEN[p.id].ratio; if (k === 'kcal') return FEN[p.id].kcal; if (k === 'texture') return FEN[p.id].texture; if (k === 'caffeineVersion') return FEN[p.id].caf; return v === 'non indicato' ? 'not stated' : f(v) + ' g'; };
 const frow = (l, k) => `<tr><th>${l}</th>${FU.map((p) => `<td>${fcell(p, k)}</td>`).join('')}</tr>`;
 page(U.fuel, IT.fuel, 'Carb gels: what the labels say', 'Maurten Gel 100, SiS BETA Fuel and PF 30 compared on manufacturer-declared data. Last checked 28/10/2026.',
-  hero('WOLF PICKS · FUEL · GELS', 'Carb gels: what the labels say.', 'Three gels compared on manufacturer-declared data. This is not a test: we have not tried the products.') +
+  hero('WOLF PICKS · FUEL · GELS', 'Carb gels: what the labels say.', 'Three gels compared on manufacturer-declared data.') +
   `<div class="pk-scroll"><table class="pk-tbl"><thead><tr><th></th>${FU.map((p) => `<th>${esc(nm(p))}</th>`).join('')}</tr></thead><tbody>` +
   frow('Carbs per serving', 'carbsPerServingG') + frow('Ratio', 'ratio') + frow('Sachet weight', 'servingWeightG') + frow('Energy', 'kcal') + frow('Texture', 'texture') + frow('Caffeine version', 'caffeineVersion') +
   '<tr><th>List price</th>' + FU.map(() => '<td>not verified</td>').join('') + '</tbody></table></div>' +
@@ -99,7 +100,7 @@ U.cyc = '/en/picks/bike-computers/'; IT.cyc = '/picks/ciclocomputer/';
 const cv = (m, k) => (m[k] ? esc(m[k].en) : 'not verified');
 const crow = (l, k) => `<tr><th>${l}</th>${CY.models.map((m) => `<td>${cv(m, k)}</td>`).join('')}</tr>`;
 page(U.cyc, IT.cyc, 'GPS bike computers: how to choose', 'What to look at in a GPS bike computer and three models with declared specs, conditions included. Last checked 28/10/2026.',
-  hero('WOLF PICKS · CYCLING · BIKE COMPUTERS', 'GPS bike computers: how to choose.', 'What to look at, and three models with declared specs. This is not a test and there is no ranking.') +
+  hero('WOLF PICKS · CYCLING · BIKE COMPUTERS', 'GPS bike computers: how to choose.', 'What to look at, and three models with declared specs. No ranking.') +
   '<div class="pk-box"><h3>What to look at</h3><ul><li><b>Navigation:</b> loaded route, turn-by-turn prompts, maps on the device or on the phone.</li><li><b>Battery:</b> each brand states hours under different conditions. Check the condition (screen, navigation, sensors) and leave margin for your longest ride.</li><li><b>Screen:</b> size, sunlight readability, use in rain or with gloves.</li><li><b>Compatibility:</b> sensors, electronic shifting, e-bikes, the apps you already use.</li><li><b>Memory and maps:</b> room for maps and smoothness.</li></ul></div>' +
   `<div class="pk-scroll"><table class="pk-tbl"><thead><tr><th></th>${CY.models.map((m) => `<th>${esc(m.name)}</th>`).join('')}</tr></thead><tbody>` +
   crow('Declared battery', 'battery') + crow('Screen', 'screen') + crow('Memory', 'memory') + crow('Water resistance', 'water') + crow('Weight', 'weight') +

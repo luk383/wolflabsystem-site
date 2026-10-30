@@ -1,3 +1,4 @@
+import "./guard.mjs";
 import { organize } from './discipline-architecture.mjs';
 // WOLF: struttura a 5 pilastri (RUN RIDE SWIM STRENGTH ARTICOLI). Home, hub discipline, hub articoli, nav e footer.
 // Usa solo pagine esistenti (controlla ogni link). Idempotente. Uso: node tools/build-pillars.mjs [root]

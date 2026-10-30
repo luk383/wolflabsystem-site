@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // Adds og:image, twitter card and JSON-LD (Organization/WebSite on home, Article on guides). Idempotent. Run last.
 import fs from 'node:fs';
 import path from 'node:path';

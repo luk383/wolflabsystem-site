@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // Applies the per-article review (content/article-review.json) to generated article pages. Idempotent.
 // Values come only from a documentary review of the sources cited in each article. No field test is claimed.
 import fs from 'node:fs';

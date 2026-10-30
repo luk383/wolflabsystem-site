@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // WOLF PICKS: genera /picks/ (hub, guida, confronto, schede) da content/catalog/products.json.
 // Solo dati con fonte e data nel catalogo. Nessun prezzo, voto o verdetto. Idempotente.
 import fs from 'node:fs';
@@ -70,7 +71,7 @@ const FURL = '/picks/gel-carboidrati/';
 const fv = (p, k) => { const x = p.specs[k].value; return typeof x === 'number' ? f(x) : esc(x); };
 const frow = (l, k, u) => `<tr><th>${l}</th>${FU.map((p) => `<td>${fv(p, k)}${typeof p.specs[k].value === 'number' ? u : ''}</td>`).join('')}</tr>`;
 page(FURL, 'Gel di carboidrati: confronto dei dati dichiarati', 'Maurten Gel 100, SiS BETA Fuel e PF 30 a confronto sui dati dichiarati dai produttori. Ultima verifica 28/10/2026.',
-  hero('WOLF PICKS · FUEL · GEL', 'Gel di carboidrati: cosa dicono le etichette.', 'Tre gel confrontati sui dati dichiarati dai produttori. Non è un test: non abbiamo provato i prodotti.') +
+  hero('WOLF PICKS · FUEL · GEL', 'Gel di carboidrati: cosa dicono le etichette.', 'Tre gel confrontati sui dati dichiarati dai produttori.') +
   `<div class="pk-scroll"><table class="pk-tbl"><thead><tr><th></th>${FU.map((p) => `<th>${esc(p.brand)} ${esc(p.model)}</th>`).join('')}</tr></thead><tbody>` +
   frow('Carboidrati per dose', 'carbsPerServingG', ' g') + frow('Rapporto', 'ratio', '') + frow('Peso della bustina', 'servingWeightG', ' g') + frow('Energia', 'kcal', '') + frow('Consistenza', 'texture', '') + frow('Versione con caffeina', 'caffeineVersion', '') +
   '<tr><th>Listino ufficiale</th>' + FU.map(() => '<td>non verificato</td>').join('') + '</tbody></table></div>' +

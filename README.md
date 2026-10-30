@@ -39,5 +39,5 @@ Build order (tools/build.mjs): base pages, library, news, Wolf Engine, then tool
 ## Stile "rivista" (redesign del 30/10/2026)
 Menu laterale, testata chiara in serif e solo tema chiaro vengono applicati da `node tools/apply-redesign.mjs` (idempotente, salta le pagine già convertite; usa `tools/redesign-templates.json` e `assets/home-preview.css`).
 - Dopo aver generato nuove pagine (per esempio un articolo): copia solo i file necessari, poi `node tools/apply-redesign.mjs` e per ultimo `node tools/version-assets.mjs`.
-- Non lanciare `node tools/build.mjs` completo sul sito attuale: le pagine committate non coincidono più con l'output del generatore (navigazione, hash degli asset), quindi il build rigenera una versione diversa da quella online. Se serve, rivedi il diff prima.
+- I generatori sono protetti da `tools/guard.mjs`: si rifiutano di girare senza `--force-regenerate` (o `WOLF_FORCE_REBUILD=1`), perché le pagine committate non coincidono più con il loro output (navigazione, home, hub, indici, hash asset) e un build completo le sostituirebbe con una versione diversa da quella online. Se serve generare, fallo in una copia di lavoro e copia solo i file necessari, poi `apply-redesign` e `version-assets`.
 - Home e hub RUN sono stati rifiniti a mano e non vengono rigenerati da `apply-redesign.mjs`.

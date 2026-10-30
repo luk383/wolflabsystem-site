@@ -1,3 +1,4 @@
+import "./guard.mjs";
 // Genera /train/strength/ (IT) e /en/train/strength/ (EN). Builder IT in assets/strength/, EN in assets/strength/en/.
 import fs from 'node:fs';
 import path from 'node:path';
