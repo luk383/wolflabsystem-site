@@ -518,4 +518,5 @@ await import("./apply-review.mjs");
 await import("./build-ask.mjs");
 await import("./apply-brand.mjs");
 await import("./seo.mjs");
+await import("./finalize.mjs");
 await import("./apply-redesign.mjs");

@@ -41,3 +41,9 @@ Menu laterale, testata chiara in serif e solo tema chiaro vengono applicati da `
 - Dopo aver generato nuove pagine (per esempio un articolo): copia solo i file necessari, poi `node tools/apply-redesign.mjs` e per ultimo `node tools/version-assets.mjs`.
 - I generatori sono protetti da `tools/guard.mjs`: si rifiutano di girare senza `--force-regenerate` (o `WOLF_FORCE_REBUILD=1`), perché le pagine committate non coincidono più con il loro output (navigazione, home, hub, indici, hash asset) e un build completo le sostituirebbe con una versione diversa da quella online. Se serve generare, fallo in una copia di lavoro e copia solo i file necessari, poi `apply-redesign` e `version-assets`.
 - Home e hub RUN sono stati rifiniti a mano e non vengono rigenerati da `apply-redesign.mjs`.
+
+## Build completo (allineato al sito pubblicato)
+
+`node tools/build.mjs --force-regenerate` ora riproduce il sito pubblicato: pagine generate, poi `tools/finalize.mjs` (pagine curate in `tools/overlay/`: home, hub RUN/RIDE/SWIM, gear, indici articoli, 404, Ask Wolf; più gli URL di sitemap delle sezioni costruite a parte in `tools/sitemap-extra.txt`), poi `apply-redesign` (barra, menu laterale, piè di pagina) e `node tools/version-assets.mjs`.
+Differenze note e volute rispetto al pubblicato: elenco "Da leggere dopo" calcolato dal generatore (include gli articoli più recenti), meta social (og/twitter) presenti anche su novità e alcune guide, conteggio fonti corretto in "Forza per endurance".
+Quando aggiungi un articolo, aggiorna anche l'indice in `tools/overlay/articoli/index.html` e `tools/overlay/en/articles/index.html` (il build avvisa se manca).
