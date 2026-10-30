@@ -50,3 +50,6 @@ html[data-theme="dark"] .art-body td,html[data-theme="dark"] .art-body table{bor
 html[data-theme="dark"] .art-toc-m a,html[data-theme="dark"] .art-side a{color:#F5F4EF}
 html[data-theme="dark"] .art-side a:hover{color:var(--acc-t)}
 .wolf-side .missing{opacity:.65;font-style:italic;font-weight:400}
+.art-figure{margin:24px 0}
+.art-figure img{display:block;width:100%;max-width:360px;height:auto;margin:0 auto;border-radius:4px}
+.art-figure figcaption{margin-top:8px;font-size:13px;line-height:1.4;opacity:.75;text-align:center}
