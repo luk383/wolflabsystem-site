@@ -435,5 +435,28 @@
    "cosa dicono gli studi su compressione, massaggio manuale, stretching, defaticamento, caldo, elettrostimolazione e ossigenoterapia iperbarica",
    "what studies say on compression, manual massage, stretching, cool-down, heat, electrical stimulation and hyperbaric oxygen"
   ]
+ },
+ "elettrostimolazione-ems-tens-studi|electrical-stimulation-ems-tens-studies": {
+  "lv": [
+   "L1 (revisioni e meta-analisi, certezza da molto bassa a moderata) + una revisione narrativa + documenti di esperti",
+   "L1 (reviews and meta-analyses, certainty very low to moderate) + one narrative review + expert documents"
+  ],
+  "stars": 2,
+  "how": [
+   "Revisione documentale delle fonti su stimolazione muscolare, TENS e corpo intero. Abstract e sezioni principali lette; non tutti i testi completi né gli studi primari. Nessun apparecchio testato o confrontato. Nessun test WOLF LAB.",
+   "Document review of sources on muscle stimulation, TENS and whole-body stimulation. Abstracts and main sections read; not every full text or primary study. No device tested or compared. No WOLF LAB tests."
+  ],
+  "lim": [
+   "Scopi diversi, revisioni non sommabili. Protocolli eterogenei, nessuna impostazione indicata. Le revisioni su recupero (2014) e pacemaker (ricerca al 2016) sono datate; studi più recenti non letti. Le fonti sulla TENS non concordano sulla certezza. Le liste di controindicazioni riguardano il corpo intero commerciale. Nessun apparecchio valutato. Non è consiglio medico.",
+   "Different goals, reviews cannot be added together. Mixed protocols, no settings given. The reviews on recovery (2014) and pacemakers (search to 2016) are dated; newer studies not read. The TENS sources disagree on certainty. The contraindication lists cover commercial whole-body use. No device assessed. Not medical advice."
+  ],
+  "why": [
+   "Revisioni di qualità e certezza diverse, con fonti discordanti sulla TENS: Limitata.",
+   "Reviews of differing quality and certainty, with sources that disagree on TENS: Limited."
+  ],
+  "scope": [
+   "cosa dicono gli studi su elettrostimolazione muscolare, TENS e corpo intero per forza, recupero e dolore",
+   "what studies say on muscle stimulation, TENS and whole-body stimulation for strength, recovery and pain"
+  ]
  }
 }
