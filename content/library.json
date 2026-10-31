@@ -447,6 +447,45 @@
             ]
           },
           {
+            "title": "Proteine ed EAA",
+            "kind": "Forza e recupero",
+            "paragraphs": [
+              "Un integratore proteico aggiunge qualcosa solo se le proteine totali della giornata sono basse. In una meta-analisi su 49 studi l'effetto sulla forza e sulla massa magra è piccolo e cala con l'età. Per l'endurance la priorità sono i carboidrati. Nessuna dose indicata."
+            ],
+            "links": [
+              [
+                "Guida WOLF LAB: proteine",
+                "/articoli/proteine-integratori-forza-endurance/"
+              ]
+            ]
+          },
+          {
+            "title": "Elettroliti e sodio",
+            "kind": "Gara lunga, caldo",
+            "paragraphs": [
+              "Il rischio più documentato in gara è bere più di quanto si perde (iponatriemia da esercizio), non il sodio mancante. ACSM: piani individuali in base alla sudorazione. Nessuna marca né quantità di sodio indicata."
+            ],
+            "links": [
+              [
+                "Guida WOLF LAB: elettroliti",
+                "/articoli/elettroliti-sodio-gara-idratazione/"
+              ]
+            ]
+          },
+          {
+            "title": "Magnesio, zinco e omega-3",
+            "kind": "Prove limitate",
+            "paragraphs": [
+              "Per la prestazione le prove sono limitate. Magnesio e crampi: nessuna differenza significativa dal placebo in adulti anziani (Cochrane 2020). Omega-3: nessun beneficio su forza e ipertrofia oltre l'allenamento, qualche effetto sul dolore muscolare ritardato. Nessuna dose indicata."
+            ],
+            "links": [
+              [
+                "Guida WOLF LAB: magnesio, zinco, omega-3",
+                "/articoli/magnesio-zinco-omega-3-prove-limitate/"
+              ]
+            ]
+          },
+          {
             "title": "Alimenti sportivi e integrazione per carenze",
             "kind": "Scopi diversi",
             "paragraphs": [
@@ -965,6 +1004,45 @@
               [
                 "IOC consensus 2018",
                 "https://pmc.ncbi.nlm.nih.gov/articles/PMC5867441/"
+              ]
+            ]
+          },
+          {
+            "title": "Protein and EAA",
+            "kind": "Strength and recovery",
+            "paragraphs": [
+              "A protein supplement adds something only if your total daily protein is low. In a meta-analysis of 49 studies the effect on strength and lean mass is small and falls with age. For endurance, carbohydrate comes first. No dose given."
+            ],
+            "links": [
+              [
+                "WOLF LAB guide: protein",
+                "/en/articles/protein-supplements-strength-endurance/"
+              ]
+            ]
+          },
+          {
+            "title": "Electrolytes and sodium",
+            "kind": "Long races, heat",
+            "paragraphs": [
+              "The best-documented race risk is drinking more than you lose (exercise-associated hyponatremia), not missing sodium. ACSM: individual plans based on sweat rate. No brands or sodium amounts given."
+            ],
+            "links": [
+              [
+                "WOLF LAB guide: electrolytes",
+                "/en/articles/electrolytes-sodium-racing-hydration/"
+              ]
+            ]
+          },
+          {
+            "title": "Magnesium, zinc and omega-3",
+            "kind": "Limited evidence",
+            "paragraphs": [
+              "For performance the evidence is limited. Magnesium and cramps: no significant difference from placebo in older adults (Cochrane 2020). Omega-3: no benefit on strength and hypertrophy beyond training, some effect on delayed-onset soreness. No dose given."
+            ],
+            "links": [
+              [
+                "WOLF LAB guide: magnesium, zinc, omega-3",
+                "/en/articles/magnesium-zinc-omega-3-limited-evidence/"
               ]
             ]
           },

@@ -527,5 +527,74 @@
    "quando l'integrazione di vitamine e minerali ha senso in chi si allena (carenza o rischio specifico), secondo CIO e AIS",
    "when vitamin and mineral supplementation makes sense for people who train (deficiency or specific risk), per the IOC and AIS"
   ]
+ },
+ "proteine-integratori-forza-endurance|protein-supplements-strength-endurance": {
+  "lv": [
+   "L1 + L5",
+   "L1 + L5"
+  ],
+  "stars": 3,
+  "how": [
+   "Revisione documentale: meta-analisi Morton 2018 (abstract e testo), posizione ISSN 2017, ISSN EAA 2023, pagine AIS e WADA. Non tutti i testi completi. Nessun test WOLF LAB.",
+   "Document review: Morton 2018 meta-analysis (abstract and text), 2017 ISSN position stand, 2023 ISSN EAA, AIS and WADA pages. Not every full text. No WOLF LAB tests."
+  ],
+  "lim": [
+   "Effetti medi di gruppo, piccoli. Posizione ISSN del 2017. Un autore dichiara finanziamenti dal National Dairy Council. Nessuna dose né prodotto. Non è consiglio medico.",
+   "Small group-average effects. 2017 ISSN position stand. One author declares National Dairy Council funding. No dose or product. Not medical advice."
+  ],
+  "why": [
+   "Meta-analisi su 49 studi con effetto piccolo, più consenso: Moderata-forte per forza e massa magra; non provata per la prestazione in gara.",
+   "Meta-analysis of 49 studies with a small effect, plus consensus: Moderate-strong for strength and lean mass; not shown for race performance."
+  ],
+  "scope": [
+   "cosa aggiungono le proteine in polvere al cibo per forza ed endurance",
+   "what protein powder adds to food for strength and endurance"
+  ]
+ },
+ "elettroliti-sodio-gara-idratazione|electrolytes-sodium-racing-hydration": {
+  "lv": [
+   "L5",
+   "L5"
+  ],
+  "stars": 2,
+  "how": [
+   "Revisione documentale: posizione ACSM 2007 (abstract), consenso internazionale sull'iponatriemia 2015 (testo), pagina AIS. Non ogni testo completo. Nessun test WOLF LAB.",
+   "Document review: 2007 ACSM position stand (abstract), 2015 international hyponatremia consensus (text), AIS page. Not every full text. No WOLF LAB tests."
+  ],
+  "lim": [
+   "Fonti del 2007 e 2015, nulla di più recente letto. Su atleti sani. Nessun prodotto, marca o quantità di sodio valutati. Non è consiglio medico.",
+   "Sources from 2007 and 2015, nothing more recent read. Healthy athletes. No product, brand or sodium amount assessed. Not medical advice."
+  ],
+  "why": [
+   "Consenso di esperti e posizione di società scientifiche: Moderata.",
+   "Expert consensus and scientific society position: Moderate."
+  ],
+  "scope": [
+   "come leggere elettroliti e sodio in gara senza regole uguali per tutti",
+   "how to read electrolytes and sodium in racing without one rule for everyone"
+  ]
+ },
+ "magnesio-zinco-omega-3-prove-limitate|magnesium-zinc-omega-3-limited-evidence": {
+  "lv": [
+   "L1",
+   "L1"
+  ],
+  "stars": 2,
+  "how": [
+   "Revisione documentale: revisione sistematica sui minerali 2019, Cochrane 2020 sul magnesio e i crampi, revisione sugli omega-3 2022 (abstract), pagine AIS, IOC e WADA. Studi primari non letti. Nessun test WOLF LAB.",
+   "Document review: 2019 systematic review on minerals, 2020 Cochrane on magnesium and cramps, 2022 review on omega-3 (abstract), AIS, IOC and WADA pages. Primary studies not read. No WOLF LAB tests."
+  ],
+  "lim": [
+   "Studi piccoli e diversi per dosi e popolazioni. Cochrane su crampi non da esercizio. Omega-3 e resistenza non coperti. Zinco solo nella revisione sui minerali. Nessuna dose. Non è consiglio medico.",
+   "Small studies that differ in doses and populations. Cochrane on non-exercise cramps. Omega-3 and endurance not covered. Zinc only in the minerals review. No dose. Not medical advice."
+  ],
+  "why": [
+   "Revisioni sistematiche con prove limitate o discordanti: Limitata-moderata.",
+   "Systematic reviews with limited or mixed evidence: Limited-moderate."
+  ],
+  "scope": [
+   "cosa è dimostrato e cosa no su magnesio, zinco e omega-3",
+   "what is and is not shown on magnesium, zinc and omega-3"
+  ]
  }
 }
