@@ -447,12 +447,12 @@
    "Document review of sources on muscle stimulation, TENS and whole-body stimulation. Abstracts and main sections read; not every full text or primary study. No device tested or compared. No WOLF LAB tests."
   ],
   "lim": [
-   "Scopi diversi, revisioni non sommabili. Protocolli eterogenei, nessuna impostazione indicata. Le revisioni su recupero (2014) e pacemaker (ricerca al 2016) sono datate; studi più recenti non letti. Le fonti sulla TENS non concordano sulla certezza. Le liste di controindicazioni riguardano il corpo intero commerciale. Nessun apparecchio valutato. Non è consiglio medico.",
-   "Different goals, reviews cannot be added together. Mixed protocols, no settings given. The reviews on recovery (2014) and pacemakers (search to 2016) are dated; newer studies not read. The TENS sources disagree on certainty. The contraindication lists cover commercial whole-body use. No device assessed. Not medical advice."
+   "Scopi diversi, revisioni non sommabili. Protocolli eterogenei, nessuna impostazione indicata. Le revisioni su recupero (2014) e pacemaker (ricerca al 2016) sono datate; studi più recenti non letti. Le fonti sulla TENS differiscono per popolazione ed esiti e non sono sommabili. Le liste di controindicazioni riguardano il corpo intero commerciale. Nessun apparecchio valutato. Non è consiglio medico.",
+   "Different goals, reviews cannot be added together. Mixed protocols, no settings given. The reviews on recovery (2014) and pacemakers (search to 2016) are dated; newer studies not read. The TENS sources differ in population and outcomes and cannot be added together. The contraindication lists cover commercial whole-body use. No device assessed. Not medical advice."
   ],
   "why": [
-   "Revisioni di qualità e certezza diverse, con fonti discordanti sulla TENS: Limitata.",
-   "Reviews of differing quality and certainty, with sources that disagree on TENS: Limited."
+   "Revisioni di qualità e certezza diverse, con fonti sulla TENS non direttamente confrontabili: Limitata.",
+   "Reviews of differing quality and certainty, with TENS sources not directly comparable: Limited."
   ],
   "scope": [
    "cosa dicono gli studi su elettrostimolazione muscolare, TENS e corpo intero per forza, recupero e dolore",
