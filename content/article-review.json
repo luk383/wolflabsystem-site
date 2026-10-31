@@ -470,8 +470,8 @@
    "Document review of the sources: IOC consensus, 2017 ISSN position stand, 2024 ISSN paper on common questions, AIS and WADA pages. Abstracts and main sections read; not every full text or primary study. No WOLF LAB tests."
   ],
   "lim": [
-   "Le fonti sono consensi e posizioni di esperti, non una meta-analisi nuova. La maggior parte degli studi è su uomini. Nessuna dose indicata. Liste WADA: da controllare alla data di gara. Nessun prodotto valutato. Non è consiglio medico.",
-   "The sources are consensus and expert position papers, not a new meta-analysis. Most studies are in men. No dose given. WADA lists: check on race day. No product assessed. Not medical advice."
+   "Le fonti sono consensi e posizioni di esperti, non una meta-analisi nuova. La maggior parte degli studi è su uomini e i dati non permettono regole per tutti. Il peso è l'unico effetto indesiderato costante tra quelli riportati: non è garanzia di sicurezza. Nessuna dose indicata. Liste WADA da controllare. Non è consiglio medico.",
+   "The sources are consensus and expert position papers, not a new meta-analysis. Most studies are in men and the data do not allow rules for everyone. Weight is the only consistent side effect among those reported: not a guarantee of safety. No dose given. Check WADA lists. Not medical advice."
   ],
   "why": [
    "Prove forti per sforzi brevi e intensi e allenamento di forza; per l'endurance lunga le fonti non mostrano un beneficio chiaro: Forti per lo scopo studiato.",
@@ -524,8 +524,8 @@
    "Expert consensus with thresholds not established for athletes: Moderate."
   ],
   "scope": [
-   "quando l'integrazione di vitamine e minerali ha senso in chi si allena, secondo CIO e AIS",
-   "when vitamin and mineral supplementation makes sense for people who train, per the IOC and AIS"
+   "quando l'integrazione di vitamine e minerali ha senso in chi si allena (carenza o rischio specifico), secondo CIO e AIS",
+   "when vitamin and mineral supplementation makes sense for people who train (deficiency or specific risk), per the IOC and AIS"
   ]
  }
 }
