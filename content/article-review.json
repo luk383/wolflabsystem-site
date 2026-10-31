@@ -424,16 +424,16 @@
    "Document review of the sources: meta-analyses, Cochrane, one narrative review and a consensus on medical compression. Abstracts and main sections read; not every full text or primary study. No WOLF LAB tests."
   ],
   "lim": [
-   "Revisioni con metodi e conclusioni diversi, a volte discordanti. Nessun protocollo indicato. Sicurezza non analizzata nelle fonti su massaggio e caldo; il consenso sulla compressione riguarda dispositivi medici, non capi sportivi. Non copre altre tecniche (per esempio elettrostimolazione, camere iperbariche, integratori). Non è consiglio medico.",
-   "Reviews with different methods and conclusions, sometimes conflicting. No protocol given. Safety not analysed in the massage and heat sources; the compression consensus covers medical devices, not sports garments. Does not cover other techniques (for example electrical stimulation, hyperbaric chambers, supplements). Not medical advice."
+   "Revisioni con metodi e conclusioni diversi, a volte discordanti. Nessun protocollo indicato. Sicurezza non analizzata nelle fonti su massaggio, caldo, elettrostimolazione e ossigenoterapia iperbarica; il consenso sulla compressione riguarda dispositivi medici, non capi sportivi. L'elettrostimolazione si basa su una revisione del 2014. Non copre integratori e nutrizione (altre pagine) né i farmaci. Non è consiglio medico.",
+   "Reviews with different methods and conclusions, sometimes conflicting. No protocol given. Safety not analysed in the sources on massage, heat, electrical stimulation and hyperbaric oxygen; the compression consensus covers medical devices, not sports garments. Electrical stimulation rests on a 2014 review. Does not cover supplements and nutrition (other pages) or drugs. Not medical advice."
   ],
   "why": [
    "Revisioni con certezza bassa e fonti discordanti: Limitata.",
    "Reviews with low certainty and conflicting sources: Limited."
   ],
   "scope": [
-   "cosa dicono gli studi su compressione, massaggio manuale, stretching, defaticamento e caldo",
-   "what studies say on compression, manual massage, stretching, cool-down and heat"
+   "cosa dicono gli studi su compressione, massaggio manuale, stretching, defaticamento, caldo, elettrostimolazione e ossigenoterapia iperbarica",
+   "what studies say on compression, manual massage, stretching, cool-down, heat, electrical stimulation and hyperbaric oxygen"
   ]
  }
 }
