@@ -458,5 +458,74 @@
    "cosa dicono gli studi su elettrostimolazione muscolare, TENS e corpo intero per forza, recupero e dolore",
    "what studies say on muscle stimulation, TENS and whole-body stimulation for strength, recovery and pain"
   ]
+ },
+ "creatina-prove-limiti|creatine-evidence-limits": {
+  "lv": [
+   "L5 + L1",
+   "L5 + L1"
+  ],
+  "stars": 3,
+  "how": [
+   "Revisione documentale delle fonti: consenso CIO, posizione ISSN 2017, documento ISSN 2024 sui dubbi comuni, pagina AIS e WADA. Abstract e sezioni principali lette; non tutti i testi completi né gli studi primari. Nessun test WOLF LAB.",
+   "Document review of the sources: IOC consensus, 2017 ISSN position stand, 2024 ISSN paper on common questions, AIS and WADA pages. Abstracts and main sections read; not every full text or primary study. No WOLF LAB tests."
+  ],
+  "lim": [
+   "Le fonti sono consensi e posizioni di esperti, non una meta-analisi nuova. La maggior parte degli studi è su uomini. Nessuna dose indicata. Liste WADA: da controllare alla data di gara. Nessun prodotto valutato. Non è consiglio medico.",
+   "The sources are consensus and expert position papers, not a new meta-analysis. Most studies are in men. No dose given. WADA lists: check on race day. No product assessed. Not medical advice."
+  ],
+  "why": [
+   "Prove forti per sforzi brevi e intensi e allenamento di forza; per l'endurance lunga le fonti non mostrano un beneficio chiaro: Forti per lo scopo studiato.",
+   "Strong evidence for short intense efforts and strength training; for long endurance the sources show no clear benefit: Strong for the purpose studied."
+  ],
+  "scope": [
+   "cosa dicono consensi ed esperti sulla creatina monoidrato per forza e sforzi brevi, peso e sicurezza",
+   "what consensus and expert papers say on creatine monohydrate for strength and short efforts, body mass and safety"
+  ]
+ },
+ "beta-alanina-prove-limiti|beta-alanine-evidence-limits": {
+  "lv": [
+   "L1 + L5",
+   "L1 + L5"
+  ],
+  "stars": 2,
+  "how": [
+   "Revisione documentale delle fonti: posizione ISSN 2015, meta-analisi Saunders 2017 (abstract), consenso CIO, pagine AIS e WADA. Non tutti i testi completi. Nessun test WOLF LAB.",
+   "Document review of the sources: 2015 ISSN position stand, 2017 Saunders meta-analysis (abstract), IOC consensus, AIS and WADA pages. Not every full text. No WOLF LAB tests."
+  ],
+  "lim": [
+   "Effetto piccolo e dipendente dalla durata dello sforzo. ISSN (2015) e meta-analisi (2017) sono datate e le fonti su atleti allenati non coincidono. Gli effetti della meta-analisi sono standardizzati, non secondi. Nessuna dose indicata. Non è consiglio medico.",
+   "Small effect that depends on effort duration. The ISSN (2015) paper and the meta-analysis (2017) are dated and the sources on trained athletes do not agree. Meta-analysis effects are standardised, not seconds. No dose given. Not medical advice."
+  ],
+  "why": [
+   "Meta-analisi con effetto piccolo e fonti discordanti su atleti allenati: Moderata.",
+   "Meta-analysis with a small effect and sources that disagree on trained athletes: Moderate."
+  ],
+  "scope": [
+   "cosa dicono ISSN, CIO e una meta-analisi sulla beta-alanina per durata dello sforzo, dimensione dell'effetto ed effetti indesiderati",
+   "what ISSN, the IOC and a meta-analysis say on beta-alanine for effort duration, effect size and side effects"
+  ]
+ },
+ "vitamine-minerali-integratori-carenze|vitamins-minerals-supplements-deficiency": {
+  "lv": [
+   "L5",
+   "L5"
+  ],
+  "stars": 2,
+  "how": [
+   "Revisione documentale: testo del consenso CIO 2018 (tabelle su vitamina D, ferro, calcio, vitamina C) e pagina AIS Gruppo A. Studi primari non letti. Nessun test WOLF LAB.",
+   "Document review: text of the 2018 IOC consensus (tables on vitamin D, iron, calcium, vitamin C) and the AIS Group A page. Primary studies not read. No WOLF LAB tests."
+  ],
+  "lim": [
+   "Fonti di consenso del 2018, non studi primari: nulla di più recente letto. Nessuna dose indicata. Multivitaminici, zinco, magnesio, omega-3 non trattati. Le soglie di carenza non sono uniche. Non è consiglio medico.",
+   "2018 consensus sources, not primary studies: nothing more recent read. No dose given. Multivitamins, zinc, magnesium, omega-3 not covered. Deficiency thresholds are not unique. Not medical advice."
+  ],
+  "why": [
+   "Consenso di esperti con soglie non stabilite per gli atleti: Moderata.",
+   "Expert consensus with thresholds not established for athletes: Moderate."
+  ],
+  "scope": [
+   "quando l'integrazione di vitamine e minerali ha senso in chi si allena, secondo CIO e AIS",
+   "when vitamin and mineral supplementation makes sense for people who train, per the IOC and AIS"
+  ]
  }
 }

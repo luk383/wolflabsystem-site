@@ -393,6 +393,60 @@
             ]
           },
           {
+            "title": "Creatina",
+            "kind": "Forza e sforzi brevi e intensi",
+            "paragraphs": [
+              "La creatina monoidrato ha prove solide per sforzi brevi e intensi ripetuti e per gli adattamenti all’allenamento di forza (massa magra, forza, potenza). Per le gare lunghe di corsa, bici e nuoto non è il suo ambito, e può aumentare il peso corporeo.",
+              "L’unico effetto indesiderato costante nelle fonti lette è l’aumento di peso. Con condizioni di salute o farmaci serve il medico. Nessuna dose indicata."
+            ],
+            "links": [
+              [
+                "Guida WOLF LAB: creatina",
+                "/articoli/creatina-prove-limiti/"
+              ],
+              [
+                "ISSN 2017: sicurezza ed efficacia",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC5469049/"
+              ]
+            ]
+          },
+          {
+            "title": "Beta-alanina",
+            "kind": "Sforzi da 1 a 10 minuti",
+            "paragraphs": [
+              "Aumenta la carnosina nel muscolo e serve uso quotidiano per settimane. L’effetto è piccolo (meta-analisi su 40 studi: 0,18) e più chiaro per sforzi di 1-4 minuti. Effetto indesiderato descritto: formicolio.",
+              "Per la forza e per l’endurance oltre i 25 minuti servono altri studi."
+            ],
+            "links": [
+              [
+                "Guida WOLF LAB: beta-alanina",
+                "/articoli/beta-alanina-prove-limiti/"
+              ],
+              [
+                "Saunders 2017: meta-analisi",
+                "https://pubmed.ncbi.nlm.nih.gov/27797728/"
+              ]
+            ]
+          },
+          {
+            "title": "Vitamine e minerali",
+            "kind": "Solo per una carenza accertata",
+            "paragraphs": [
+              "Vitamina D, ferro, calcio, B12 e le vitamine C ed E non sono ergogenici: l’integrazione ha senso per correggere o prevenire una carenza dopo una valutazione. Dosi alte di singoli antiossidanti possono smorzare gli adattamenti all’allenamento.",
+              "Nessuna dose indicata: servono esami e un medico o un dietista dello sport."
+            ],
+            "links": [
+              [
+                "Guida WOLF LAB: vitamine e minerali",
+                "/articoli/vitamine-minerali-integratori-carenze/"
+              ],
+              [
+                "Consenso CIO 2018",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC5867441/"
+              ]
+            ]
+          },
+          {
             "title": "Alimenti sportivi e integrazione per carenze",
             "kind": "Scopi diversi",
             "paragraphs": [
@@ -857,6 +911,60 @@
               [
                 "Wolf Lab guide: supplements with evidence",
                 "/en/articles/supplements-evidence-guide/"
+              ]
+            ]
+          },
+          {
+            "title": "Creatine",
+            "kind": "Strength and short intense efforts",
+            "paragraphs": [
+              "Creatine monohydrate has solid evidence for repeated short intense efforts and for strength-training adaptations (lean mass, strength, power). For long running, cycling and swimming races it is not its field, and it can raise body mass.",
+              "The only consistent side effect in the sources read is weight gain. With health conditions or medicines, see a doctor. No dose given."
+            ],
+            "links": [
+              [
+                "WOLF LAB guide: creatine",
+                "/en/articles/creatine-evidence-limits/"
+              ],
+              [
+                "ISSN 2017: safety and efficacy",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC5469049/"
+              ]
+            ]
+          },
+          {
+            "title": "Beta-alanine",
+            "kind": "Efforts of 1 to 10 minutes",
+            "paragraphs": [
+              "It raises carnosine in muscle and needs daily use for weeks. The effect is small (meta-analysis of 40 studies: 0.18) and clearer for efforts of 1-4 minutes. Reported side effect: tingling.",
+              "For strength and for endurance beyond 25 minutes more studies are needed."
+            ],
+            "links": [
+              [
+                "WOLF LAB guide: beta-alanine",
+                "/en/articles/beta-alanine-evidence-limits/"
+              ],
+              [
+                "Saunders 2017: meta-analysis",
+                "https://pubmed.ncbi.nlm.nih.gov/27797728/"
+              ]
+            ]
+          },
+          {
+            "title": "Vitamins and minerals",
+            "kind": "Only for a confirmed deficiency",
+            "paragraphs": [
+              "Vitamin D, iron, calcium, B12 and vitamins C and E are not ergogenic aids: supplementing makes sense to correct or prevent a deficiency after an assessment. High doses of single antioxidants may blunt training adaptations.",
+              "No dose given: tests and a doctor or sports dietitian are needed."
+            ],
+            "links": [
+              [
+                "WOLF LAB guide: vitamins and minerals",
+                "/en/articles/vitamins-minerals-supplements-deficiency/"
+              ],
+              [
+                "IOC consensus 2018",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC5867441/"
               ]
             ]
           },
