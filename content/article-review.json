@@ -389,5 +389,28 @@
    "quali integratori hanno prove, per quale sforzo",
    "which supplements have evidence, for which effort"
   ]
+ },
+ "recupero-freddo-crioterapia-pistole|recovery-cold-cryotherapy-massage-guns": {
+  "lv": [
+   "L1 (revisioni e meta-analisi, certezza spesso bassa) + L5 (editoriale, documenti di posizione) + casi clinici",
+   "L1 (reviews and meta-analyses, certainty often low) + L5 (editorial, position statements) + case reports"
+  ],
+  "stars": 2,
+  "how": [
+   "Revisione documentale delle fonti: revisioni di revisioni, meta-analisi, Cochrane, documenti di posizione e casi clinici. Abstract e sezioni principali lette; non tutti gli studi primari. Nessun test WOLF LAB.",
+   "Document review of the sources: umbrella reviews, meta-analyses, Cochrane, position statements and case reports. Abstracts and main sections read; not all primary studies. No WOLF LAB tests."
+  ],
+  "lim": [
+   "Certezza delle prove da bassa a molto bassa quasi ovunque. Nessuna temperatura, durata o frequenza indicata: i protocolli degli studi sono troppo diversi. Gli studi sulla crioterapia successivi alla Cochrane del 2015 non sono stati riletti uno per uno. I casi clinici non stimano la frequenza dei danni. Non è consiglio medico.",
+   "Certainty of evidence low to very low almost everywhere. No temperature, duration or frequency given: study protocols differ too much. Cryotherapy studies published after the 2015 Cochrane review were not re-read one by one. Case reports cannot estimate how often harm occurs. Not medical advice."
+  ],
+  "why": [
+   "Revisioni sistematiche con certezza bassa, più documenti di esperti e casi singoli: Limitata.",
+   "Systematic reviews with low certainty, plus expert documents and single cases: Limited."
+  ],
+  "scope": [
+   "cosa dicono gli studi su acqua fredda, crioterapia e pistole massaggianti, con limiti e precauzioni",
+   "what studies say on cold water, cryotherapy and massage guns, with limits and precautions"
+  ]
  }
 }
