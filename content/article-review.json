@@ -412,5 +412,28 @@
    "cosa dicono gli studi su acqua fredda, crioterapia e pistole massaggianti, con limiti e precauzioni",
    "what studies say on cold water, cryotherapy and massage guns, with limits and precautions"
   ]
+ },
+ "recupero-compressione-massaggio-stretching-caldo|recovery-compression-massage-stretching-heat": {
+  "lv": [
+   "L1 (revisioni e meta-analisi, certezza da bassa a molto bassa) + una revisione narrativa",
+   "L1 (reviews and meta-analyses, certainty low to very low) + one narrative review"
+  ],
+  "stars": 2,
+  "how": [
+   "Revisione documentale delle fonti: meta-analisi, Cochrane, una revisione narrativa e un consenso sulla compressione medica. Abstract e sezioni principali lette; non tutti i testi completi né gli studi primari. Nessun test WOLF LAB.",
+   "Document review of the sources: meta-analyses, Cochrane, one narrative review and a consensus on medical compression. Abstracts and main sections read; not every full text or primary study. No WOLF LAB tests."
+  ],
+  "lim": [
+   "Revisioni con metodi e conclusioni diversi, a volte discordanti. Nessun protocollo indicato. Sicurezza non analizzata nelle fonti su massaggio e caldo; il consenso sulla compressione riguarda dispositivi medici, non capi sportivi. Non copre altre tecniche (per esempio elettrostimolazione, camere iperbariche, integratori). Non è consiglio medico.",
+   "Reviews with different methods and conclusions, sometimes conflicting. No protocol given. Safety not analysed in the massage and heat sources; the compression consensus covers medical devices, not sports garments. Does not cover other techniques (for example electrical stimulation, hyperbaric chambers, supplements). Not medical advice."
+  ],
+  "why": [
+   "Revisioni con certezza bassa e fonti discordanti: Limitata.",
+   "Reviews with low certainty and conflicting sources: Limited."
+  ],
+  "scope": [
+   "cosa dicono gli studi su compressione, massaggio manuale, stretching, defaticamento e caldo",
+   "what studies say on compression, manual massage, stretching, cool-down and heat"
+  ]
  }
 }
