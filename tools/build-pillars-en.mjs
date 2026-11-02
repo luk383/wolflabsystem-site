@@ -30,7 +30,7 @@ const PICKS = [['Guide: training shoes', '/en/picks/training-shoes/', 'RUN', 'GU
 
 const shell = rd('en/run.html'); const head0 = shell.slice(0, shell.indexOf('<main')); const foot0 = shell.slice(shell.indexOf('</main>') + 7);
 const NAV = [['RUN', '/en/run'], ['RIDE', '/en/ride'], ['SWIM', '/en/swim'], ['STRENGTH', '/en/strength/'], ['ARTICLES', '/en/articles/']];
-const navHtml = (cur) => `<nav class="nav" aria-label="Main">${NAV.map(([l, h]) => `<a href="${h}"${cur === l ? ' aria-current="page"' : ''}>${l}</a>`).join('')}</nav>`;
+const navHtml = (cur) => `<nav class="nav" aria-label="Main">${NAV.map(([l, h]) => `<a href="${h}"${cur === l ? ' aria-current="page"' : ''}>${l}</a>`).join('')}<a href="/app/web/#/builder">BUILDER</a></nav>`;
 const footHtml = `<nav class="foot-links" aria-label="Footer"><a href="/en/methodology">Methodology</a> <a href="/en/contact/">Contact</a> <a href="/en/app/">Android app</a> <a href="https://www.instagram.com/wolflabsystem/" rel="noopener me" target="_blank">Instagram</a> <a href="/en/feed.xml">RSS</a></nav>`;
 const patchChrome = (h, cur) => h.replace(/<nav class="nav"[\s\S]*?<\/nav>/, navHtml(cur)).replace(/<nav class="foot-links"[\s\S]*?<\/nav>/, footHtml);
 const meta = (h, { title, desc, url, it }) => h.replace(/<title>.*?<\/title>/, `<title>${esc(title)}</title>`).replace(/(<meta name="description" content=")[^"]*/, `$1${esc(desc)}`)
