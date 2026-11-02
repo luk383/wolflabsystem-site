@@ -533,7 +533,7 @@ function doImport(file) {
       S.profile = Store.readProfile(storage);
       S.profileMsg = 'Import completato: ' + r.schede + ' schede' + (r.profile ? ' + profilo atleta' : '') + '.';
     } else S.profileMsg = '';
-    if (!r.ok) window.alert('File non valido o non riconosciuto. Usa un backup WOLFLAB (anche delle versioni 0.x).');
+    if (!r.ok) window.alert(r.error === 'piano_non_valido' ? 'Questo backup contiene un piano creato con una versione di prova non ancora pubblica: questa versione web non può ripristinarlo. Nessun dato è stato modificato.' : 'File non valido o non riconosciuto. Usa un backup WOLFLAB (anche delle versioni 0.x).');
     render();
   };
   rd.readAsText(file);
@@ -698,7 +698,7 @@ document.addEventListener('click', function (ev) {
         var res = Store.importBackup(storage, String((r && r.text) || ''));
         if (res.ok) { S.state = Store.readState(storage).state; S.profile = Store.readProfile(storage);
           S.profileMsg = 'Import completato: ' + res.schede + ' schede' + (res.profile ? ' + profilo atleta' : '') + '.'; }
-        else window.alert('File non valido o non riconosciuto. Usa un backup WOLFLAB (anche delle versioni 0.x).');
+        else window.alert(res.error === 'piano_non_valido' ? 'Questo backup contiene un piano creato con una versione di prova non ancora pubblica: questa versione web non può ripristinarlo. Nessun dato è stato modificato.' : 'File non valido o non riconosciuto. Usa un backup WOLFLAB (anche delle versioni 0.x).');
         render();
       }).catch(function () {});
       return;
