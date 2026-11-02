@@ -3,7 +3,7 @@
 const copy=x=>JSON.parse(JSON.stringify(x));
 function feedback(plan,index,report){
  if(!plan||!Array.isArray(plan.weeks)||!Number.isInteger(index)||index<0||index>=plan.weeks.length||!['done','partial','skipped'].includes(report?.outcome)||!['easy','right','hard'].includes(report.effort)||typeof report.symptoms!=='boolean'||typeof report.recovered!=='boolean')return{status:'invalid-feedback'};
- if(index>0&&!plan.weeks[index-1].responseAccepted)return{status:'earlier-feedback-needed',reason:'Prima registra come sono andate le settimane precedenti; non considero gia acquisita la progressione futura.'};
+ if(index>0&&!plan.weeks[index-1].responseAccepted&&!plan.weeks[index].rebaselineEntryConfirmed)return{status:'earlier-feedback-needed',reason:'Prima registra come sono andate le settimane precedenti; non considero gia acquisita la progressione futura.'};
  const n=copy(plan),current=n.weeks[index];current.feedback={...copy(report),kind:'subjective-adherence',recordsActualDistance:false,recordsActualDuration:false};
  if(report.symptoms){n.progressionSuspended=true;n.suspensionReason='Sintomi: nessuna nuova dose proposta.';for(const w of n.weeks.slice(index+1))w.suspended=true;return{status:'symptom-stop',plan:n};}
  if(report.outcome!=='done'||!report.recovered||report.effort==='hard'){
@@ -32,7 +32,7 @@ function rebase(plan,lastIndex,future){
  if(!plan||!future||future.status!=='provisional-whole-plan'||!Number.isInteger(lastIndex)||lastIndex<0||lastIndex>=plan.weeks.length)return{status:'invalid-rebase'};
  const history=copy(plan.weeks.slice(0,lastIndex+1)),last=history.at(-1);
  if(!future.weeks.length||future.weeks[0].start<=last.start)return{status:'rebase-date-conflict'};
- const n=copy(future);n.weeks=[...history,...n.weeks.map((w,i)=>({...w,index:history.length+i}))];n.rebasedFrom={afterWeek:lastIndex+1,previousForecastInvalidated:true};n.progressionSuspended=false;
+ const n=copy(future);n.weeks=[...history,...n.weeks.map((w,i)=>({...w,index:history.length+i}))];n.weeks[history.length].rebaselineEntryConfirmed=true;n.rebasedFrom={afterWeek:lastIndex+1,previousForecastInvalidated:true};n.progressionSuspended=false;
  return{status:'rebase-preview',plan:n,requiresConfirmation:true,reason:'Conserva le settimane registrate. Sostituisce solo il futuro con una proposta dal riepilogo recente appena confermato. Nessun recupero di sedute perse.'};
 }
 window.WolfAdapt={feedback,move,rebase};
