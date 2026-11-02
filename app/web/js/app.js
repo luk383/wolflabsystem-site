@@ -443,7 +443,7 @@ function vProfilo() {
     ' · ' + (p ? 'SALVATO ' + new Date(p.savedAt).toLocaleDateString('it-IT') : 'MAI SALVATO') + '</div></div>' +
     '<button class="btn ghost" data-go="engine">Modifica →</button></div></div>';
   h += '<div class="sh"><h2>Dati e backup</h2></div>';
-  h += '<div class="card"><b class="nm nm-sm">Export</b><div class="meta">SCHEDE + PROFILO + EVENTUALE PIANO IN JSON</div>' +
+  h += '<div class="card"><b class="nm nm-sm">Export</b><div class="meta">SCHEDE E PROFILO IN JSON</div>' +
     '<div class="btnrow"><button class="btn" data-act="export">Scarica backup</button></div></div>';
   h += '<div class="card"><b class="nm nm-sm">Import</b><div class="meta">RIPRISTINA DA FILE (ANCHE BACKUP DELLE VERSIONI 0.x)</div>' +
     '<div class="btnrow"><button class="btn" data-act="import">Scegli file…</button></div><input type="file" id="import-file" accept=".json,application/json" class="hidden"></div>';
