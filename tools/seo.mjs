@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 const root = path.resolve(import.meta.dirname, '..');
 const SITE = 'https://wolflabsystem.com';
-const IMG = SITE + '/assets/og-wolflab.png';
+const IMG = SITE + '/assets/og-card.jpg';
 const walk = (d, o = []) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { if (['.git', 'node_modules', 'content', 'tools', 'assets'].includes(e.name)) continue; const p = path.join(d, e.name); e.isDirectory() ? walk(p, o) : e.name.endsWith('.html') && o.push(p); } return o; };
 const j = o => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, '\\u003c')}</script>`;
 let n = 0;
@@ -21,7 +21,7 @@ for (const f of walk(root)) {
   const desc = ((h.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '');
   const isArticle = /<aside class="art-side">/.test(h) && /<time datetime="/.test(h);
   const isHome = canon === SITE + '/' || canon === SITE + '/en/';
-  let add = `<meta property="og:image" content="${IMG}" data-seo="1"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${desc}"><meta name="twitter:image" content="${IMG}">`;
+  let add = `<meta property="og:image" content="${IMG}" data-seo="1"><meta property="og:image:type" content="image/jpeg" data-seo="1"><meta property="og:image:width" content="1200" data-seo="1"><meta property="og:image:height" content="630" data-seo="1"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${desc}"><meta name="twitter:image" content="${IMG}">`;
   if (isArticle) {
     const hd = ((h.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || '').replace(/<[^>]+>/g, '').trim();
     const date = (h.match(/<time datetime="([^"]+)"/) || [])[1];
