@@ -1,0 +1,26 @@
+(function(){
+'use strict';
+const SPORTS=['run','ride','swim','strength'];
+const dayChoices={1:[5],2:[2,5],3:[0,2,5],4:[0,2,4,6],5:[0,1,3,5,6],6:[0,1,2,3,4,5],7:[0,1,2,3,4,5,6]};
+const LEVELS={base:{run:12,ride:20,swim:10,strength:20,sets:1,reps:8},intermediate:{run:20,ride:35,swim:15,strength:25,sets:2,reps:8},advanced:{run:30,ride:45,swim:20,strength:30,sets:2,reps:10}};
+const GOALS={fitness:{label:'Stare in forma',longMinutes:0,phase:'Costanza e varieta senza volume obbligato'},'5k':{label:'5 km',longMinutes:5,phase:'Continuita e primo completamento'},'10k':{label:'10 km',longMinutes:8,phase:'Autonomia e distanza progressiva'},half:{label:'Mezza maratona',longMinutes:10,phase:'Base aerobica prima della resistenza specifica'},marathon:{label:'Maratona',longMinutes:12,phase:'Base distribuita prima della preparazione specifica'}};
+function combinations(a,k,start=0,prefix=[],out=[]){if(k===0){out.push(prefix);return out;}for(let i=start;i<=a.length-k;i++)combinations(a,k-1,i+1,[...prefix,a[i]],out);return out;}
+function schedule(c){
+ if(!c||!GOALS[c.goal]||!LEVELS[c.level]||!Number.isInteger(c.dayCount)||c.dayCount<1||c.dayCount>7||!c.counts||SPORTS.some(s=>!Number.isInteger(c.counts[s]||0)||(c.counts[s]||0)<0||(c.counts[s]||0)>c.dayCount))return{status:'invalid-setup'};
+ if(c.goal!=='fitness'&&!(c.counts.run>0))return{status:'run-needed-for-distance-goal',reason:'Un obiettivo di corsa richiede RUN; per gli altri sport scegli fitness.'};
+ const total=SPORTS.reduce((a,s)=>a+(c.counts[s]||0),0);if(total<c.dayCount||total>c.dayCount*2)return{status:'session-day-mismatch',reason:total<c.dayCount?'Le sedute non coprono tutti i giorni scelti. Scegli meno giorni o piu sedute.':'Servirebbero piu di due sedute in un giorno, non ancora supportate.'};
+ const days=c.days||dayChoices[c.dayCount];if(!Array.isArray(days)||days.length!==c.dayCount||new Set(days).size!==days.length||days.some(d=>!Number.isInteger(d)||d<0||d>6))return{status:'invalid-days'};
+ if(c.counts.swim&&!c.swimAutonomy)return{status:'swim-autonomy-needed',reason:'Per proporre SWIM servono autonomia nel nuoto e piscina sorvegliata. Non la deduco dal livello generale.'};
+ const active=SPORTS.filter(s=>c.counts[s]);let beam=[{slots:Array.from({length:7},()=>[]),score:0}];
+ for(const sport of active.sort((a,b)=>(c.counts[b]-c.counts[a])||(a==='strength'?1:-1))){let next=[];for(const b of beam)for(const selected of combinations(days,c.counts[sport])){if(selected.some(d=>b.slots[d].length>=2))continue;if(sport==='run'&&c.runRestBetween&&selected.some((d,i)=>selected.some((e,j)=>j!==i&&[1,6].includes(Math.abs(d-e)))))continue;const slots=b.slots.map(a=>[...a]);let score=b.score;for(const d of selected){if(slots[d].length){const other=slots[d][0];score+=sport==='strength'&&other==='run'||sport==='run'&&other==='strength'?0:20;}slots[d].push(sport);}for(let i=0;i<selected.length;i++)for(let j=i+1;j<selected.length;j++)if([1,6].includes(Math.abs(selected[i]-selected[j])))score+=sport==='run'?8:sport==='strength'?15:3;score+=days.filter(d=>slots[d].length===0).length*2;next.push({slots,score});}beam=next.sort((a,b)=>a.score-b.score).slice(0,256);if(!beam.length)return{status:'no-supported-allocation'};}
+ const candidates=beam.filter(b=>days.every(d=>b.slots[d].length));if(!candidates.length)return{status:'no-supported-allocation'};
+ const allocation=candidates.sort((a,b)=>a.score-b.score)[0],level=LEVELS[c.level],runs=allocation.slots.flatMap((s,d)=>s.includes('run')?[d]:[]),longDay=runs.at(-1),sessions=[];
+ for(let day=0;day<7;day++)for(const sport of allocation.slots[day]){
+  const isLong=sport==='run'&&day===longDay&&runs.length>=2;
+  sessions.push({id:sport+'-'+day,day,sport,role:isLong?'endurance':'easy',minutes:level[sport]+(isLong?GOALS[c.goal].longMinutes:0),intensity:sport==='strength'?'Tecnica controllata, senza ripetizioni forzate':'Facile, conversazione possibile',slot:allocation.slots[day].length===2?(sport==='strength'?'seconda seduta suggerita':'prima seduta suggerita'):'Orario da scegliere',routine:sport==='strength'?[{movement:'Alzarsi da una sedia o squat comodo',sets:level.sets,reps:level.reps},{movement:'Piegamenti al muro o su appoggio stabile',sets:level.sets,reps:level.reps},{movement:'Remata con elastico se disponibile, altrimenti retrazioni scapolari controllate',sets:level.sets,reps:level.reps},{movement:'Ponte glutei a terra',sets:level.sets,reps:level.reps},{movement:'Bird dog alternato',sets:level.sets,reps:level.reps}]:undefined,baselineNature:'original-firstweek-proposal-not-observed-habit'});
+ }
+ return{status:'automatic-week-proposal',sessions,selectedDays:days,totalSessions:sessions.length,totalMinutes:sessions.reduce((a,s)=>a+s.minutes,0),doubleDays:days.filter(d=>allocation.slots[d].length===2),goal:c.goal,phase:GOALS[c.goal].phase,requiresConfirmation:true,limitations:['Livello non prova capacita individuale; settimana iniziale originale da verificare, non dose abituale misurata.','Nessun ritmo, chilogrammo o data gara dedotti.','Con sintomi o ripresa da infortunio il generatore non decide il carico.']};
+}
+window.WolfSchedule={schedule,SPORTS,LEVELS,GOALS};
+
+})();

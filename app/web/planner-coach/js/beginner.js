@@ -1,0 +1,19 @@
+(function(){
+'use strict';
+// Original WOLFLAB entry scenario. Not a reproduction/adaptation of an external
+// branded programme. Exact timings are original proposals, not validated rules.
+function generate(config,history,options,S,H){
+ if(!history?.confirmed||!history.run?.beginnerEntryConfirmed)return{status:'beginner-entry-needed',reason:'Conferma cammino comodo di circa30min e brevi tratti di corsa facile gia tollerati senza sintomi. Altrimenti non invento capacita.'};
+ const desired=config.counts.run,count=Math.min(3,desired),counts={...config.counts,run:count},total=Object.values(counts).reduce((a,b)=>a+b,0),c={...config,counts,dayCount:Math.min(config.dayCount,total),runRestBetween:true},w=S.schedule(c);if(w.status!=='automatic-week-proposal')return w;
+ for(const s of w.sessions){if(s.sport==='ride'||s.sport==='swim'){const h=history[s.sport],n=counts[s.sport];if(!h||!Number.isFinite(h.weeklyMinutes)||h.weeklyMinutes<=0||!h.currentFrequency)return{status:s.sport+'-summary-needed'};s.minutes=Math.min(h.weeklyMinutes/n,h.weeklyMinutes/h.currentFrequency);}s.actualMinutes=null;s.actualKm=null;}
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(options.start)||new Date(options.start+'T12:00:00Z').getUTCDay()!==1)return{status:'monday-start-needed'};
+ const stable=options.progressVolume===false,weeks=[];
+ // Six weeks only, then fresh-capacity gateway. Never project a new runner's
+ // eventual km/pace, nor promise a full race preparation from this entry.
+ for(let i=0;i<6;i++){const n=JSON.parse(JSON.stringify(w));n.index=i;n.start=H.dateAdd(options.start,i*7);n.phase=stable?'Corsa/cammino a volume stabile':'Ingresso corsa/cammino, proposta originale';n.provisional=i>0;n.beginnerStage=true;for(const s of n.sessions.sort((a,b)=>a.day-b.day)){s.date=H.dateAdd(n.start,s.day);if(s.sport==='run'){const run=stable?.5:.5+Math.floor(i/2)*.25;s.pattern=[{kind:'walk',minutes:3}];for(let j=0;j<6;j++){s.pattern.push({kind:'run',minutes:run});if(j<5)s.pattern.push({kind:'walk',minutes:1.5});}s.pattern.push({kind:'walk',minutes:3});s.minutes=s.pattern.reduce((a,b)=>a+b.minutes,0);delete s.km;s.runMinutes=run*6;s.method=s.pattern.map(b=>(b.kind==='run'?'Corri facile':'Cammina')+' '+b.minutes+' min').join('\n');s.intensity='Corsa comoda e cammino, nessun ritmo dedotto';s.originalProgrammingChoice=true;}const cap=options.dayMinutes?.[s.day];if(Number.isFinite(cap)&&n.sessions.filter(t=>t.day===s.day).reduce((a,b)=>a+b.minutes,0)>cap)return{status:'time-budget-conflict',week:n.index+1,day:s.day};}weeks.push(n);}
+ if(options.eventDate&&options.eventDate<=H.dateAdd(options.start,weeks.length*7))return{status:'event-before-beginner-gateway',reason:'La data cade prima della fine ipotetica della fase iniziale. Non comprimo le sedute.'};
+ return{status:'provisional-whole-plan',weeks,beginner:true,goal:config.goal,maintenance:stable,progressVolume:!stable,programmingOrigin:'original-wolflab',sourceSequenceUsed:false,requestedRunFrequency:desired,initialRunFrequency:count,targetDistanceNotPredicted:true,eventDate:options.eventDate||null,eventReadinessClaim:false,gateway:{afterWeeks:weeks.length,kind:'fresh-capacity-check',reason:stable?'Schema stabile. Per cambiare obiettivo riconferma capacita attuali e recupero.':'Dopo questa fase rivaluto continuita e recupero reali. Non equivale a correre una distanza o a preparazione completa per la gara.'},allFutureDoseChangesRequireFeedback:true};
+}
+window.WolfBeginner={generate};
+
+})();
