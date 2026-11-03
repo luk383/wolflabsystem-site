@@ -35,6 +35,44 @@ function rebase(plan,lastIndex,future){
  const n=copy(future);n.weeks=[...history,...n.weeks.map((w,i)=>({...w,index:history.length+i}))];n.weeks[history.length].rebaselineEntryConfirmed=true;n.rebasedFrom={afterWeek:lastIndex+1,previousForecastInvalidated:true};n.progressionSuspended=false;
  return{status:'rebase-preview',plan:n,requiresConfirmation:true,reason:'Conserva le settimane registrate. Sostituisce solo il futuro con una proposta dal riepilogo recente appena confermato. Nessun recupero di sedute perse.'};
 }
-window.WolfAdapt={feedback,move,rebase};
+const SPORTLIST=['run','ride','swim','strength'];
+function adjust(plan,{weekIndex,sessionId,minutes,sport}){
+ if(!plan||!Number.isInteger(weekIndex)||!plan.weeks[weekIndex])return{status:'invalid-adjust'};
+ const n=copy(plan),w=n.weeks[weekIndex],s=w.sessions.find(x=>x.id===sessionId);
+ if(!s||w.feedback)return{status:'history-protected'};
+ let changed=false;
+ if(minutes!=null){
+  if(!Number.isFinite(minutes)||minutes<10)return{status:'invalid-minutes'};
+  if(minutes>=s.minutes)return{status:'no-manual-increase',reason:'Un aumento inserito a mano non e una dose: le progressioni arrivano solo da storico e riscontri.'};
+  s.minutes=minutes;delete s.km;changed=true;
+ }
+ if(sport&&sport!==s.sport){
+  if(!SPORTLIST.includes(sport))return{status:'invalid-sport'};
+  if(w.sessions.some(t=>t.id!==s.id&&t.day===s.day&&t.sport===sport))return{status:'same-sport-double-conflict'};
+  s.sport=sport;delete s.km;delete s.routine;delete s.method;changed=true;
+ }
+ if(!changed)return{status:'no-change'};
+ s.userAdjusted=true;s.doseOrigin='manual-user-adjustment-not-computed';w.userModified=true;
+ return{status:'adjust-preview',plan:n,requiresConfirmation:true,reason:'Modifica manuale alla singola seduta: non e una dose calcolata ne una equivalenza fra sport. Storico e altre sedute invariati.'};
+}
+function addSession(plan,{weekIndex,day,sport,minutes,intensity}){
+ if(!plan||!Number.isInteger(weekIndex)||!plan.weeks[weekIndex])return{status:'invalid-add'};
+ if(!Number.isInteger(day)||day<0||day>6||!SPORTLIST.includes(sport))return{status:'invalid-add'};
+ if(!Number.isFinite(minutes)||minutes<10||minutes>600)return{status:'invalid-minutes'};
+ const n=copy(plan),w=n.weeks[weekIndex];
+ if(w.feedback)return{status:'history-protected'};
+ if(w.sessions.filter(t=>t.day===day).length>=2)return{status:'double-capacity-conflict'};
+ if(w.sessions.some(t=>t.day===day&&t.sport===sport))return{status:'same-sport-double-conflict'};
+ const date=new Date(w.start+'T12:00:00Z');date.setUTCDate(date.getUTCDate()+day);
+ w.sessions.push({id:'user-'+sport+'-'+day+'-'+minutes+'-'+w.index,day,sport,role:'user-added',minutes,intensity:intensity||'Facile, conversazione possibile',slot:'Orario da scegliere',date:date.toISOString().slice(0,10),userCreated:true,doseOrigin:'manual-user-added-not-computed'});
+ w.userModified=true;
+ return{status:'add-preview',plan:n,requiresConfirmation:true,reason:'Seduta aggiunta da te: e una tua scelta, non una dose calcolata, e non cambia storico o progressioni future.'};
+}
+function addEvent(plan,{date,label}){
+ if(!plan||typeof date!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(date)||!label||!String(label).trim())return{status:'invalid-event'};
+ const n=copy(plan);n.events=[...(n.events||[]),{date,label:String(label).trim().slice(0,60),userCreated:true}];
+ return{status:'event-preview',plan:n,requiresConfirmation:true,reason:'Evento annotato da te: il percorso non viene ricalcolato sull evento e non promette preparazione specifica.'};
+}
+window.WolfAdapt={feedback,move,rebase,adjust,addSession,addEvent};
 
 })();

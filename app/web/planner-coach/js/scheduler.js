@@ -21,6 +21,6 @@ function schedule(c){
  }
  return{status:'automatic-week-proposal',sessions,selectedDays:days,totalSessions:sessions.length,totalMinutes:sessions.reduce((a,s)=>a+s.minutes,0),doubleDays:days.filter(d=>allocation.slots[d].length===2),goal:c.goal,phase:GOALS[c.goal].phase,requiresConfirmation:true,limitations:['Livello non prova capacita individuale; settimana iniziale originale da verificare, non dose abituale misurata.','Nessun ritmo, chilogrammo o data gara dedotti.','Con sintomi o ripresa da infortunio il generatore non decide il carico.']};
 }
-window.WolfSchedule={schedule,SPORTS,LEVELS,GOALS};
+window.WolfSchedule={schedule,SPORTS,LEVELS,GOALS,dayChoices};
 
 })();
