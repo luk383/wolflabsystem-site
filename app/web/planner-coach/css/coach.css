@@ -1,0 +1,36 @@
+/* Wolf Coach: layout compatto (mockup Luca 03/11 07:10). Solo planner-coach. */
+main{padding-top:20px}
+header{background:#142422}
+header a{display:inline-flex;align-items:center}
+header img{height:26px;width:auto;display:block}
+header span{color:#9fb3a8}
+h1{font-size:clamp(26px,5vw,38px)}
+h2{font-size:18px;margin:8px 0 4px}
+h3{font-size:15px;margin:10px 0 2px}
+p{margin:4px 0;font-size:14px}
+.gcard,.plan-day,.setup{background:#fff;border:1px solid #dfe5da;border-radius:14px;padding:12px;margin:8px 0}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(46px,1fr));gap:5px}
+.opts-lg{grid-template-columns:repeat(auto-fill,minmax(104px,1fr))}
+.opts button{margin:0;padding:8px 2px;min-height:40px;font-size:13px;text-align:center}
+button,.btn{background:#fff;border:1px solid #c2cec2;color:#172423}
+button:hover{border-color:#7a9440}
+.selected,.primary{background:#D6FF35;border-color:#b8de1f;color:#172423;font-weight:700}
+.sport.selected{background:#D6FF35;color:#172423;border-color:#b8de1f}
+.btnrow{margin:14px 0 4px}
+.btnrow .primary{width:100%;padding:13px;font-size:16px}
+.today{border:1px solid #dfe5da;border-left:6px solid #D6FF35}
+.today .big{font-size:24px;font-weight:800;color:#172423;margin:4px 0}
+.today .stats{display:flex;gap:18px;flex-wrap:wrap;margin-top:8px}
+.today .stats b{display:block;font-size:19px;color:#3c5a1e}
+.weekgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin:10px 0}
+.weekgrid .plan-day{padding:6px 4px;margin:0;border-radius:10px;min-height:64px;text-align:left;font-size:inherit;min-height:64px}
+.weekgrid .plan-day.sel{outline:3px solid #D6FF35}
+.weekgrid .kicker{font-size:10px;letter-spacing:.5px;text-transform:uppercase;color:#58635a}
+.wsess{display:block;font-size:10px;line-height:1.25;border-radius:6px;padding:3px 4px;margin-top:3px;color:#172423;font-weight:700}
+.wsess.run{background:#D6FF35}.wsess.ride{background:#a8d8f0}.wsess.swim{background:#a9e8e0}.wsess.strength{background:#ffd2ad}
+.wsess.rest{background:transparent;color:#8b978b;font-weight:400;font-size:9px;padding:3px 1px}
+.day-detail .sess{border-top:1px solid #e4e9df;padding:8px 0}
+@media(max-width:600px){.weekgrid{gap:3px}.weekgrid .plan-day{min-height:56px;padding:4px 3px}}
+.warn{border:1px solid #e8d9b0;border-left:6px solid #e0a32e;background:#fdf8ec}
+.warn h2{color:#7a5a10}
+.plan-day.past{opacity:.55}
