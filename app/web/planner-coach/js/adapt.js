@@ -22,8 +22,7 @@ function move(plan,{weekIndex,sessionId,newDay,dayBudget}){
  if(plan.beginner&&s.sport==='run'&&w.sessions.some(t=>t.id!==s.id&&t.sport==='run'&&[1,6].includes(Math.abs(t.day-newDay))))return{status:'beginner-restday-conflict',reason:'Mantieni un giorno senza corsa fra le sedute iniziali.'};
  if(w.sessions.filter(t=>t.id!==s.id&&t.day===newDay).length>=2)return{status:'double-capacity-conflict'};
  if(w.sessions.some(t=>t.id!==s.id&&t.day===newDay&&t.sport===s.sport))return{status:'same-sport-double-conflict'};
- const total=w.sessions.filter(t=>t.id!==s.id&&t.day===newDay).reduce((a,t)=>a+t.minutes,0)+s.minutes;
- if(!Number.isFinite(s.minutes)||s.minutes<=0)return{status:'unverified-session-duration'};
+ const total=w.sessions.filter(t=>t.id!==s.id&&t.day===newDay).reduce((a,t)=>a+(Number.isFinite(t.minutes)?t.minutes:0),0)+(Number.isFinite(s.minutes)?s.minutes:0);
  if(!Number.isFinite(dayBudget?.[newDay])||total>dayBudget[newDay])return{status:'time-budget-conflict',neededMinutes:total};
  const date=new Date(w.start+'T12:00:00Z');date.setUTCDate(date.getUTCDate()+newDay);s.day=newDay;s.date=date.toISOString().slice(0,10);s.slot=w.sessions.filter(t=>t.day===newDay).length===2?'Doppia proposta, orari da confermare':'Orario da scegliere';
  return{status:'move-preview',plan:n,requiresConfirmation:true,reason:'Cambia solo collocazione: dose e storico conservati. Nessun aumento o seduta persa recuperata.'};

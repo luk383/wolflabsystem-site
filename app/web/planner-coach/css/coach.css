@@ -118,6 +118,7 @@ button.wcard:hover{border:none}
 .day-detail .dicon.sp-swim{background:#CBEAE4}.day-detail .dicon.sp-swim svg{color:#0E9F8A}
 .day-detail .dicon.sp-strength{background:#F1DBC1}.day-detail .dicon.sp-strength svg{color:#D98A2B}
 .day-detail .dmin{font-size:34px;font-weight:800;margin:8px 0 0;line-height:1;color:#111418}
+.day-detail .dmin-tbd{font-size:19px;font-weight:700;line-height:1.25;color:#5a626d}
 .day-detail .dmeta{color:#6B7280;margin:4px 0}
 .day-detail .why{color:#1E4A6B;margin-top:8px;background:#E7F3FE;border-radius:12px;padding:8px 12px}
 .day-detail .dwhat h4{font-size:13px;margin:0 0 4px;text-transform:uppercase;letter-spacing:.5px;color:#6B7280}
