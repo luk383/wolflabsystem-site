@@ -2,24 +2,38 @@
 'use strict';
 const app=document.getElementById('app'),S=WolfSchedule,A=WolfAggregate,H=WolfHorizon,X=WolfExport,KEY='wolf-web-coach-beta.v1',days=['Lun','Mar','Mer','Gio','Ven','Sab','Dom'];
 let budgetConflict=null;
-let planBackup=null,configBackup=null,editingFromPlan=false;
+let planBackup=null,configBackup=null,editingFromPlan=false,entryDone=false,intent=null;
 let changePreview=null,rebaseOriginal=null,rebaseIndex=null;
 let step=0,config={goal:'half',sports:['run','ride','strength'],level:'intermediate',dayCount:5,counts:{run:4,ride:1,swim:0,strength:1},progressVolume:true,runMode:'continuous'},hist={confirmed:false,run:{currentFrequency:null,weeklyKm:null,longestKm:null,easyMinutesPerKm:null},ride:{currentFrequency:null,weeklyMinutes:null},swim:{currentFrequency:null,weeklyMinutes:null}},plan=null,preview=null,msg='',wi=0,start=nextMonday(),eventDate='',dayCap=120,dayBudgets=null,feedback={outcome:'done',effort:'right',symptoms:false,recovered:true},undo=null;
 function nextMonday(){const d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+((8-d.getDay())%7||7));return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function buttons(key,values,current){return '<div class="opts">'+values.map(v=>{const p=Array.isArray(v)?v:[v,v];return '<button data-key="'+key+'" data-val="'+p[0]+'" class="'+(current===p[0]?'selected':'')+'" aria-pressed="'+(current===p[0])+'">'+p[1]+'</button>';}).join('')+'</div>';}
 function select(key,label,values,current){return '<label>'+label+'<select data-select="'+key+'"><option value=""'+(current===null?' selected':'')+'>Scegli il dato reale</option>'+values.map(v=>'<option value="'+v+'"'+(v===current?' selected':'')+'>'+v+'</option>').join('')+'</select></label>';}
+function coverDays(){const sel=S.SPORTS.filter(sp=>config.sports.includes(sp));if(!sel.length)return;const tot=sel.reduce((a,sp)=>a+(config.counts[sp]||0),0);if(tot<config.dayCount){const prim=sel.includes('run')?'run':sel[0];config.counts[prim]=(config.counts[prim]||0)+(config.dayCount-tot);}}
+function syncGoal(){if(intent==='race'&&!config.sports.includes('run')&&config.goal!=='fitness')config.goal='fitness';if(intent==='race'&&config.sports.includes('run')&&config.goal==='fitness')config.goal='half';}
 function render(){
 let h='<p role="status">'+esc(msg)+'</p>';
 if(budgetConflict){
 const c=budgetConflict,day=days[c.day]||'giorno da verificare';
 h+='<section class="setup" role="alert"><h2>'+(c.week>1?'Il limite riguarda una settimana futura':'Il limite riguarda la partenza')+'</h2><p>Settimana '+c.week+' · '+day+': la proposta richiede '+(Number.isFinite(c.neededMinutes)?c.neededMinutes:'non verificati')+' min, il limite inserito e '+(Number.isFinite(c.availableMinutes)?c.availableMinutes:'non verificato')+' min.</p>'+(c.conflictSessions?'<p>'+c.conflictSessions.map(s=>esc(s.sport.toUpperCase())+' '+Math.ceil(s.minutes)+' min').join(' + ')+'</p>':'')+'<p>'+((c.feasibleWeeks||[]).length?'Le prime '+c.feasibleWeeks.length+' settimane rispettano il tempo indicato. Il percorso completo verso l\u2019obiettivo non e ancora compatibile: non e necessario cambiare i km realmente abituali.':'Non ho ancora una prima settimana compatibile. Non modifico il tuo passato per fare tornare i conti.')+'</p><button data-action="review-budget">Rivedi solo il tempo disponibile</button><button data-action="review-choices">Rivedi giorni, frequenze e progressione</button>'+((c.feasibleWeeks||[]).length?'<details><summary>Mostra la parte fattibile, solo anteprima</summary>'+c.feasibleWeeks.map(w=>'<p>Settimana '+(w.index+1)+' · '+esc(w.start)+' · '+w.sessions.reduce((a,s)=>a+s.minutes,0)+' min totali</p>').join('')+'<p>Non salvata come piano completo, nessun aumento autorizzato.</p></details>':'')+'<p>Dati inseriti conservati. Aumenta la disponibilita soltanto se il tempo esiste davvero; cambiare data da solo non rende piu breve una seduta.</p></section>';
 }
-if(!plan&&!preview){
+if(!plan&&!preview&&!rebaseOriginal&&!entryDone){
+// ---- Schermata iniziale (Luca 03/11): sport, intento, Continua. Nient'altro. ----
+h+='<h1>WOLF PLANNER</h1><p>Tu scegli l\u2019obiettivo. Wolf costruisce il percorso.</p><section class="setup"><h2>Cosa vuoi ottenere?</h2>';
+h+='<div class="opts">'+S.SPORTS.map(s=>'<button data-sport="'+s+'" class="'+(config.sports.includes(s)?'selected':'')+'">'+s.toUpperCase()+'</button>').join('')+'<button data-multisport class="'+(config.sports.length===S.SPORTS.length?'selected':'')+'">MULTISPORT</button></div><p>MULTISPORT seleziona tutti e quattro gli sport; puoi toglierli singolarmente.</p>';
+h+='<hr><div class="opts">'+[['race','PREPARO UNA GARA'],['improve','VOGLIO MIGLIORARE'],['start','VOGLIO INIZIARE']].map(([v,l])=>'<button data-intent="'+v+'" class="'+(intent===v?'selected':'')+'">'+l+'</button>').join('')+'</div>';
+h+='<hr><div class="btnrow"><button data-entry-next class="primary">Continua</button></div></section>';
+}
+if(!plan&&!preview&&(rebaseOriginal||entryDone)){
 // ---- Schermata unica: obiettivo + sport + recente reale + impostazioni gia pronte ----
 h+='<h1>Al tuo obiettivo, senza costruire ogni seduta.</h1><p>Una sola schermata: le basi sono gia pronte, cambi solo quello che serve. Il piano arriva subito.</p><section class="setup">';
 if(!rebaseOriginal){
-h+='<h2>Obiettivo</h2>'+buttons('goal',Object.entries(S.GOALS).map(([id,g])=>[id,g.label]),config.goal);
+h+='<p><button data-entry-back>&larr; Sport e obiettivo</button></p>';
+if(intent==='race'&&config.sports.includes('run'))h+='<h2>Distanza gara</h2>'+buttons('goal',[['5k','5 km'],['10k','10 km'],['half','Mezza maratona'],['marathon','Maratona']],config.goal);
+else if(intent==='race')h+='<p>Le gare a distanza disponibili sono per la corsa. Con gli sport scelti il percorso punta a migliorare, senza gara a distanza: aggiungi RUN se la gara e di corsa.</p>';
+else if(intent==='improve')h+='<p>Obiettivo: migliorare, senza gara obbligatoria. Se un giorno avrai una gara, torna su Sport e obiettivo.</p>';
+else if(intent==='start')h+='<p>Obiettivo: iniziare, con passi graduali. Nessuna gara richiesta.</p>';
+else h+='<h2>Obiettivo</h2>'+buttons('goal',Object.entries(S.GOALS).map(([id,g])=>[id,g.label]),config.goal);
 h+='<h2>Sport</h2><div class="opts">'+S.SPORTS.map(s=>'<button data-sport="'+s+'" class="'+(config.sports.includes(s)?'selected':'')+'">'+s.toUpperCase()+'</button>').join('')+'</div>';
 const total=config.sports.reduce((a,s)=>a+config.counts[s],0);
 const split=config.sports.map(s=>config.counts[s]+' '+s.toUpperCase()).join(' + ');
@@ -60,7 +74,7 @@ h+='<section class="setup"><h2>Com e andata?</h2>'+buttons('feedback.outcome',[[
 if(changePreview)h+='<section class="setup"><h2>Controlla la modifica</h2><p>'+esc(changePreview.reason)+'</p><button data-action="apply-change">Applica modifica</button><button data-action="cancel-change">Scarta</button></section>';
 h+='<details class="gcard"><summary>Metodo, fonti e limiti</summary><p>Fonte ACSM: progressione graduale, individualizzazione e forza. Dosi, allocazione e riferimenti sono scelte originali WOLFLAB, non soglie di sicurezza o piano clinico. Settimane future sono scenari condizionati al recupero e vanno riviste. La data non comprime carico o riposo. Livello e passato aggregato non sono una valutazione medica.</p><p>Tempi e sequenza corsa/cammino sono programmazione originale WOLFLAB. La fase di adattamento della frequenza usa una proposta originale a volume non crescente. Dopo riscontri difficili il futuro viene sospeso finche riconfermi il passato recente. Import esterno non e stato verificato. Non modifica i piani delle altre versioni del planner.</p></details><p class="foot">Versione beta. Dati locali e backup manuale, nessun account o sincronizzazione. Non modifica i piani delle altre versioni. <a href="/app/web/planner-beta/">Apri Wolf Planner beta</a> · <a href="/app/web/planner/">Apri la prima versione</a></p>';
 app.innerHTML=h;
-if(!plan&&!preview)try{sessionStorage.setItem(KEY+'.draft',JSON.stringify({step,config,hist,start,eventDate,dayCap,dayBudgets,fromPlan:editingFromPlan}));}catch(e){}
+if(!plan&&!preview)try{sessionStorage.setItem(KEY+'.draft',JSON.stringify({step,config,hist,start,eventDate,dayCap,dayBudgets,fromPlan:editingFromPlan,entryDone,intent}));}catch(e){}
 }
 function validBackup(d){return d?.format==='wolf-web-coach-beta'&&d.config&&S.GOALS[d.config.goal]&&S.LEVELS[d.config.level]&&d.plan?.status==='provisional-whole-plan'&&Array.isArray(d.plan.weeks)&&d.plan.weeks.length>0&&d.plan.weeks.length<=180&&d.plan.weeks.every(w=>Array.isArray(w.sessions)&&w.sessions.length<=14&&/^\d{4}-\d{2}-\d{2}$/.test(w.start)&&w.sessions.every(s=>S.SPORTS.includes(s.sport)&&Number.isInteger(s.day)&&s.day>=0&&s.day<=6&&Number.isFinite(s.minutes)&&s.minutes>0&&s.minutes<=600&&typeof s.id==='string'&&typeof s.date==='string'));}
 function save(){localStorage.setItem(KEY,JSON.stringify({config,plan,hist,start,eventDate,dayCap,dayBudgets}));}
@@ -88,13 +102,17 @@ budgetConflict=null;
 if(rebaseOriginal){const r=WolfAdapt.rebase(rebaseOriginal,rebaseIndex,q);if(r.status!=='rebase-preview')throw Error(r.reason||r.status);preview=r.plan;wi=rebaseIndex+1;msg=r.reason;}else{preview=q;wi=0;}
 render();
 }
-function saveDraft(){if(!plan&&!preview)try{sessionStorage.setItem(KEY+'.draft',JSON.stringify({step,config,hist,start,eventDate,dayCap,dayBudgets,fromPlan:editingFromPlan}));}catch(e){}}
+function saveDraft(){if(!plan&&!preview)try{sessionStorage.setItem(KEY+'.draft',JSON.stringify({step,config,hist,start,eventDate,dayCap,dayBudgets,fromPlan:editingFromPlan,entryDone,intent}));}catch(e){}}
 document.addEventListener('click',ev=>{
 const t=ev.target.closest('button');if(!t)return;
 try{
 msg='';
 if(t.dataset.key){const k=t.dataset.key;let v=t.dataset.val;if(v==='true'||v==='false')v=v==='true';else if(['dayCount','dayCap'].includes(k)||k.startsWith('count.'))v=Number(v);if(k==='dayCap'){dayCap=v;dayBudgets=null;}else if(k.startsWith('feedback.'))feedback[k.split('.')[1]]=v;else if(k.startsWith('count.'))config.counts[k.split('.')[1]]=v;else config[k]=v;}
-if(t.dataset.sport){const s=t.dataset.sport;config.sports=config.sports.includes(s)?config.sports.filter(x=>x!==s):[...config.sports,s];if(!config.counts[s])config.counts[s]=1;}
+if(t.dataset.multisport!==undefined){config.sports=[...S.SPORTS];for(const sp of S.SPORTS)if(!config.counts[sp])config.counts[sp]=1;coverDays();syncGoal();}
+if(t.dataset.intent){intent=t.dataset.intent;hist.confirmed=false;if(intent==='race'){config.goal='half';}if(intent==='improve'){config.goal='fitness';}if(intent==='start'){config.goal='fitness';config.level='base';config.runMode='beginner';config.dayCount=3;const prim=config.sports.includes('run')?'run':config.sports[0];config.counts=Object.fromEntries(S.SPORTS.map(sp=>[sp,!config.sports.includes(sp)?0:sp===prim?Math.max(1,config.dayCount-(config.sports.length-1)):1]));}}
+if(t.hasAttribute('data-entry-next')){if(!config.sports.length)throw Error('Scegli almeno uno sport.');if(!intent)throw Error('Scegli cosa vuoi ottenere: preparare una gara, migliorare o iniziare.');syncGoal();entryDone=true;render();return;}
+if(t.hasAttribute('data-entry-back')){entryDone=false;render();return;}
+if(t.dataset.sport){const s=t.dataset.sport;config.sports=config.sports.includes(s)?config.sports.filter(x=>x!==s):[...config.sports,s];if(!config.counts[s])config.counts[s]=1;coverDays();syncGoal();}
 if(t.hasAttribute('data-return'))hist.returnReady=!hist.returnReady;
 if(t.hasAttribute('data-moderate'))hist.alreadyToleratesModerate=!hist.alreadyToleratesModerate;
 if(t.hasAttribute('data-beginner'))hist.run.beginnerEntryConfirmed=!hist.run.beginnerEntryConfirmed;
@@ -122,7 +140,7 @@ if(a==='csv')download(X.csv(plan),'WOLFLAB-piano.csv','text/csv');
 if(a==='ics')download(X.ics(plan),'WOLFLAB-piano.ics','text/calendar');
 if(a==='intervals')download(JSON.stringify(X.events(plan),null,2),'WOLFLAB-intervals-payload.json','application/json');
 if(a==='ride'){const s=plan.weeks[wi].sessions.find(s=>s.sport==='ride');if(!s)throw Error('Questa settimana non ha RIDE. ZWO non applicato ad altri sport.');const z=X.zwoRide(s);download(z.contents,z.filename,'application/xml');}
-if(a==='reset'){if(plan){planBackup=plan;configBackup=JSON.parse(JSON.stringify(config));}plan=null;preview=null;changePreview=null;rebaseOriginal=null;editingFromPlan=!!planBackup;}
+if(a==='reset'){if(plan){planBackup=plan;configBackup=JSON.parse(JSON.stringify(config));}plan=null;preview=null;changePreview=null;rebaseOriginal=null;editingFromPlan=!!planBackup;entryDone=true;}
 render();
 }catch(e){msg=e.message;render();}
 if(t.hasAttribute('data-next')||msg)window.scrollTo(0,0);
@@ -136,6 +154,6 @@ if(ev.target.id==='week-nav'){wi=Number(ev.target.value);render();return;}
 if(ev.target.dataset.select){const[s,k]=ev.target.dataset.select.split('.');hist[s][k]=ev.target.value===''?null:Number(ev.target.value);hist.confirmed=false;const cb=document.querySelector('[data-confirm]');if(cb){cb.classList.remove('selected');cb.setAttribute('aria-pressed','false');cb.textContent='Confermo: e quello che faccio gia, non il mio obiettivo';}saveDraft();}
 });
 try{const d=JSON.parse(localStorage.getItem(KEY)||'null');if(d?.plan?.status==='provisional-whole-plan'){config=d.config;plan=d.plan;if(d.hist)hist=d.hist;start=d.start||nextMonday();eventDate=d.eventDate||'';dayCap=d.dayCap||120;dayBudgets=d.dayBudgets||null;}}catch(e){}
-try{const d=JSON.parse(sessionStorage.getItem(KEY+'.draft')||'null');if(d?.config&&d.hist){if(d.fromPlan&&plan){planBackup=plan;configBackup=JSON.parse(JSON.stringify(config));plan=null;editingFromPlan=true;}if(!plan){config=d.config;hist=d.hist;step=Math.max(0,Math.min(3,d.step||0));start=d.start||nextMonday();eventDate=d.eventDate||'';dayCap=d.dayCap||120;dayBudgets=d.dayBudgets||null;}}}catch(e){}
+try{const d=JSON.parse(sessionStorage.getItem(KEY+'.draft')||'null');if(d?.config&&d.hist){if(d.fromPlan&&plan){planBackup=plan;configBackup=JSON.parse(JSON.stringify(config));plan=null;editingFromPlan=true;}if(!plan){config=d.config;hist=d.hist;step=Math.max(0,Math.min(3,d.step||0));start=d.start||nextMonday();eventDate=d.eventDate||'';dayCap=d.dayCap||120;dayBudgets=d.dayBudgets||null;entryDone=d.entryDone!==false;intent=d.intent||null;}}}catch(e){}
 render();
 })();
