@@ -211,6 +211,30 @@
     items.forEach(function(li){li.dataset.fhide=li.hidden?'1':'';});box.appendChild(row);list.parentNode.insertBefore(box,list);box.addEventListener('change',apply);apply();
     var f=document.querySelector('.filter');if(f)f.addEventListener('click',function(){setTimeout(function(){items.forEach(function(li){li.dataset.fhide=li.hidden&&li.dataset.xhide!=='1'?'1':'';});sync();},0);});
   }).catch(function(){});}
+  // Box "in evidenza" + card ultime uscite in home: seguono sempre il feed (IT/EN), non restano fissi sul vecchio
+  var feat=document.querySelector('.m-feat'),cards=document.querySelector('.m-cards');
+  if(feat){fetch(en?'/en/feed.xml':'/feed.xml').then(function(r){return r.text();}).then(function(x){
+    var d=new DOMParser().parseFromString(x,'text/xml'),its=d.querySelectorAll('item');if(!its.length)return;
+    var t=function(it,sel){var e=it.querySelector(sel);return e?e.textContent:'';};
+    var MESI=en?['JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER']:['GENNAIO','FEBBRAIO','MARZO','APRILE','MAGGIO','GIUGNO','LUGLIO','AGOSTO','SETTEMBRE','OTTOBRE','NOVEMBRE','DICEMBRE'];
+    var mesi=en?['January','February','March','April','May','June','July','August','September','October','November','December']:['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+    var it0=its[0],link=t(it0,'link');
+    if(link){var path;try{path=new URL(link).pathname;}catch(e){path='';}
+      if(path&&feat.getAttribute('href')!==path){
+        feat.setAttribute('href',path);
+        var h=feat.querySelector('h2');if(h)h.textContent=t(it0,'title');
+        var p=feat.querySelector('.a p');if(p)p.textContent=t(it0,'description');
+        var k=feat.querySelector('.k');if(k){var dt=t(it0,'pubDate')?new Date(t(it0,'pubDate')):null;
+          k.textContent=(en?'FEATURED':'IN EVIDENZA')+(dt&&!isNaN(dt)?' \u00b7 '+dt.getDate()+' '+MESI[dt.getMonth()]+' '+dt.getFullYear():'');}
+        var b=feat.querySelector('.b');if(b)b.textContent='W-L';
+      }}
+    if(cards&&its.length>=4){var rows=[],ok=true;
+      for(var n=1;n<=3;n++){var dt2=t(its[n],'pubDate')?new Date(t(its[n],'pubDate')):null;if(!dt2||isNaN(dt2)){ok=false;break;}
+        var lp;try{lp=new URL(t(its[n],'link')).pathname;}catch(e){ok=false;break;}
+        rows.push('<a class="m-c" href="'+lp+'"><time>'+dt2.getDate()+' '+mesi[dt2.getMonth()]+' '+dt2.getFullYear()+'</time><b></b></a>');}
+      if(ok){cards.innerHTML=rows.join('');
+        for(var n2=1;n2<=3;n2++){cards.children[n2-1].querySelector('b').textContent=t(its[n2],'title');}}}
+  }).catch(function(){});}
   // Barra Wolf negli articoli: livello di prova, aggiornamento, lettura (dati già presenti nella pagina)
   var side=document.querySelector('.art-side'),badge=document.querySelector('.art-hero .evidence, .art-body .evidence, .evidence'),tm=document.querySelector('.art-hero time');
   if(side&&tm&&!side.querySelector('.wolf-side')){var lv=badge?badge.textContent.trim():null,mins=(document.querySelector('.art-hero .article-meta')||{textContent:''}).textContent.match(/(\d+)\s*(min)/);
