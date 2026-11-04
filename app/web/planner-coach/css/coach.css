@@ -185,3 +185,9 @@ button.wcard:hover{border:none}
 .recbox label{display:block;font-size:12px;color:#6B7280;margin:6px 0}
 .recbox input,.recbox select{width:100%;padding:8px 10px;margin-top:3px;font-size:14px}
 .prow .pload{width:118px;text-align:right;color:#0F4C9C;font-size:11px;font-weight:600}
+
+.timerbox{margin-top:10px;border-top:1px solid #EDEFF2;padding-top:8px}
+.timerbox h4{margin:0 0 4px;font-size:13px;color:#111418}
+.timer-display{font-size:28px;font-weight:700;font-variant-numeric:tabular-nums;margin:2px 0 6px;color:#111418}
+.timer-btns{display:flex;gap:6px;flex-wrap:wrap}
+.timer-btns button{padding:8px 12px;font-size:13px}

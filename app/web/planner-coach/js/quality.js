@@ -109,6 +109,7 @@ function apply(plan,config,hist,options){
     if(cd<5){notes.push('RIDE: seduta di '+s.minutes+'\u2032 troppo breve per la struttura qualita (wu 15\u2032 + centrale + cd): resta facile.');continue;}
     s.role='quality';s.intensity='Sostenuta (talk test "non comodo")';
     s.method='Riscaldamento 15\u2032 facile + '+central+'\u2032 sostenuta: talk test "non comodo" + '+cd+'\u2032 defaticamento facile. Convenzione di prodotto dichiarata (fonti in "Metodo, fonti e limiti").';
+    s.rideStructure={wuMin:15,centralMin:central,cdMin:cd,origin:'product-convention-talk-test'};
     hardDays.push(s.day);
    }
    if(deloadR&&picked.some(s=>s.role==='quality'))notes.push(lbl+': qualita RIDE ridotta con il volume '+redTxt+' o mantenuta facile se troppo breve; conteggi mantenuti.');
