@@ -61,6 +61,7 @@ function apply(plan,config,hist,options){
     const shape=split?('2 tratti da '+(central/2).toFixed(2).replace(/\.?0+$/,'')+' km sostenuti, recupero 90" di jog (~'+Math.round(recKmOne*1000)+' m) tra i tratti e 90" di jog prima del defaticamento'):('un tratto unico da '+central.toFixed(1)+' km sostenuto');
     if(easyP&&susP){
      s.minutesExact=wu*easyP+central*susP+recMin+cd*easyP;s.minutes=Math.round(s.minutesExact);
+     s.runSegments=split?[{kind:'wu',min:wu*easyP},{kind:'central',min:central*susP/2},{kind:'rec',min:1.5},{kind:'central',min:central*susP/2},{kind:'rec',min:1.5},{kind:'cd',min:cd*easyP}]:[{kind:'wu',min:wu*easyP},{kind:'central',min:central*susP},{kind:'cd',min:cd*easyP}];
      s.method='Riscaldamento '+wu.toFixed(1)+' km facile (~'+Math.round(wu*easyP)+'\u2032). Parte sostenuta: '+shape+', talk test "non comodo" (parli a frasi corte), ~'+Math.round(central*susP+recMin)+'\u2032 stimati al tuo passo sostenuto dichiarato '+fmtPace(susP)+'/km. Defaticamento '+cd.toFixed(1)+' km facile (~'+Math.round(cd*easyP)+'\u2032).\nDurate stimate dai passi che hai dichiarato: non garanzia dei tempi effettivi. Il passo sostenuto dichiarato e una tua stima, NON una soglia misurata. Convenzioni e fonti in "Metodo, fonti e limiti".';
      notes.push('Durate qualita RUN stimate dai tuoi passi dichiarati (facile + sostenuto): stime su dati tuoi, non garanzia dei tempi effettivi.');
     }else if(easyP){
