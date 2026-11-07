@@ -523,3 +523,4 @@ await import("./apply-brand.mjs");
 await import("./seo.mjs");
 await import("./finalize.mjs");
 await import("./apply-redesign.mjs");
+await import("./build-tools-pages.mjs");
