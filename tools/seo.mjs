@@ -28,6 +28,7 @@ for (const f of walk(root)) {
     add += j({ '@context': 'https://schema.org', '@type': 'Article', headline: hd || title, description: desc, datePublished: date, inLanguage: lang, mainEntityOfPage: canon, image: IMG, author: { '@type': 'Organization', name: 'Wolf Lab' }, publisher: { '@type': 'Organization', name: 'Wolf Lab', url: SITE + '/' } });
     h = h.replace(/<meta property="og:type" content="website"/, '<meta property="og:type" content="article"');
   }
+  if (isArticle) { const crumbs = lang === 'en' ? [['Home', SITE + '/en/'], ['Articles', SITE + '/en/articles/']] : [['Home', SITE + '/'], ['Articoli', SITE + '/articoli/']]; crumbs.push([(title || '').replace(/\s+[\u2014-]\s+Wolf Lab$/, ''), canon]); add += j({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs.map(([name, item], i) => ({ '@type': 'ListItem', position: i + 1, name, item })) }); }
   if (isHome) add += '<link rel="preload" as="image" href="/assets/hero-multisport-a-1200.jpg" media="(min-width:801px)" fetchpriority="high"><link rel="preload" as="image" href="/assets/hero-multisport-a-800.jpg" media="(max-width:800px)" fetchpriority="high">';
   if (isHome) add += j({ '@context': 'https://schema.org', '@graph': [{ '@type': 'Organization', name: 'Wolf Lab', url: SITE + '/', logo: SITE + '/assets/favicon.svg' }, { '@type': 'WebSite', name: 'Wolf Lab', url: canon, inLanguage: lang }] });
   h = h.replace('</head>', add + '</head>');
