@@ -50,6 +50,61 @@
       "unlistedOn": "2026-10-28"
     },
     {
+      "id": "milano-half",
+      "slug": {
+        "it": "milano-half-marathon",
+        "en": "milan-half-marathon"
+      },
+      "name": "Powerade Milano Half Marathon",
+      "sport": "run",
+      "distance": "21,097 km e 10 km",
+      "date": "2026-11-22",
+      "city": {
+        "it": "Milano, Italia",
+        "en": "Milan, Italy"
+      },
+      "fee": {
+        "it": "Mezza €75 e 10 km €40 fino alla chiusura del 19 novembre 2026, più commissioni (scaglioni da €45/€25)",
+        "en": "Half €75 and 10K €40 until entries close on 19 November 2026, plus service fees (tiers from €45/€25)"
+      },
+      "status": {
+        "it": "9ª edizione; iscrizioni online fino al 19 novembre 2026 ore 23:59",
+        "en": "9th edition; online entries until 19 November 2026, 11:59 pm"
+      },
+      "start": {
+        "it": "Partenza e arrivo in Viale Eginardo (zona Portello/CityLife), ore 8:45",
+        "en": "Start and finish on Viale Eginardo (Portello/CityLife area), 8:45 am"
+      },
+      "limit": {
+        "it": "2h45 per la mezza; 90 minuti per la 10 km",
+        "en": "2h45 for the half; 90 minutes for the 10K"
+      },
+      "course": {
+        "it": "Centro di Milano (CityLife, Parco Sempione, Duomo, Castello Sforzesco, Darsena); dislivello dichiarato circa 40 m per la mezza (sito dell'organizzazione).",
+        "en": "Central Milan (CityLife, Parco Sempione, Duomo, Castello Sforzesco, Darsena); stated elevation gain about 40 m for the half (organiser's site)."
+      },
+      "courseSource": "https://followyourpassion.it/powerademilanohalfmarathon/",
+      "travel": {
+        "it": "Metro M5 lilla, fermata Portello; dalle stazioni Centrale e Garibaldi si arriva con la M5.",
+        "en": "M5 lilac metro line, Portello stop; from Centrale and Garibaldi stations via the M5."
+      },
+      "tips": {
+        "it": "Il ritiro del pettorale è all'Expo Village (Allianz MiCo) venerdì 20 e sabato 21 novembre: la domenica non è prevista la consegna.",
+        "en": "Bib pickup is at the Expo Village (Allianz MiCo) on Friday 20 and Saturday 21 November: no race-day pickup."
+      },
+      "source": "https://followyourpassion.it/powerademilanohalfmarathon/",
+      "feeShort": {
+        "it": "€40–75",
+        "en": "€40–75"
+      },
+      "major": false,
+      "elevation": {
+        "it": "Circa 40 m (mezza), dato organizzazione",
+        "en": "About 40 m (half), organiser's figure"
+      },
+      "verifiedOn": "2026-11-07"
+    },
+    {
       "id": "valencia",
       "slug": {
         "it": "maratona-di-valencia",

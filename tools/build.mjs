@@ -452,7 +452,7 @@ ${side}
   <p>${esc(r.travel[lang])}</p>` : ""}
   ${r.tips ? `<h2>${it ? "Da sapere" : "Good to know"}</h2>
   <p>${esc(r.tips[lang])}</p>` : ""}
-  <p class="note">${verifiedNote(lang, RACES.verified)} ${it ? "Fonte" : "Source"}: <a href="${r.source}">${host(r.source)}</a></p>
+  <p class="note">${verifiedNote(lang, r.verifiedOn || RACES.verified)} ${it ? "Fonte" : "Source"}: <a href="${r.source}">${host(r.source)}</a></p>
 </div></article>`;
       write(pathname, layout({ lang, title: r.name, description: `${r.name}: ${raceDateLabel(r, lang)}, ${r.city[lang]}. ${r.fee[lang]}.`, current: "races", alt: racePath(other, r), pathname, body }));
       urls.push(pathname);
