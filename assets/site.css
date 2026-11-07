@@ -7,9 +7,9 @@
    Palette: asfalto di notte, superficie, testo, grigio, linea blu. */
 :root {
   color-scheme: light;
-  --bg: #F5F4EF;
+  --bg: #F3E9D3;
   --surface: #ECEAE3;
-  --surface-2: #F5F4EF;
+  --surface-2: #F3E9D3;
   --text: #0A0A0A;
   --muted: #555f59;
   --faint: #58635d;
@@ -46,7 +46,7 @@ a:hover { text-decoration-color: var(--line); }
 .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
 
 /* Testata */
-.site-head { position: sticky; top: 0; z-index: 20; background: #F5F4EF; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); }
+.site-head { position: sticky; top: 0; z-index: 20; background: var(--bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); }
 .site-head .wrap { display: flex; align-items: center; gap: 28px; min-height: 64px; flex-wrap: wrap; padding-block: 8px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1rem; letter-spacing: -0.01em; text-decoration: none; }
 .brand-mark { width: 24px; height: 28px; background: var(--text); -webkit-mask: url(/assets/logo.svg) center / contain no-repeat; mask: url(/assets/logo.svg) center / contain no-repeat; }
