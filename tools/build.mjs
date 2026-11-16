@@ -505,7 +505,7 @@ ${side}
 ${urls.map((u) => `<url><loc>${SITE}${u}</loc></url>`).join("\n")}
 </urlset>
 `);
-  write("/robots.txt", `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
+  write("/robots.txt", `User-agent: *\nAllow: /\nDisallow: /cdn-cgi/l/email-protection\nSitemap: ${SITE}/sitemap.xml\n`);
   console.log(`Generate ${urls.length} pagine.`);
 }
 
