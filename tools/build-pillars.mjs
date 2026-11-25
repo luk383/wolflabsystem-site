@@ -17,6 +17,7 @@ const link = (href) => { if (!exists(href)) bad.push(href); return href; };
 
 // ---- articoli: tag disciplina + tipo (da conferma editoriale dove marcato ?)
 const TAGS = {
+ "mondiali-vasca-corta-pechino-2026-italia-convocati": ["SWIM", "ANALISI"],
  "sonno-infortuni-corsa-studio-339-runner": ["RUN", "ANALISI"],
  "ironman-cozumel-2026-sarzilla-record-italiano": ["HYBRID", "ANALISI"],
  "maratona-san-sebastian-2026-fouad-saussez": ["RUN", "ANALISI"],
