@@ -17,6 +17,7 @@ const link = (href) => { if (!exists(href)) bad.push(href); return href; };
 
 // ---- articoli: tag disciplina + tipo (da conferma editoriale dove marcato ?)
 const TAGS = {
+ "valencia-2026-korir-forfait-bekele-start-list": ["RUN", "ANALISI"],
  "corsa-invernale-per-ciclisti-evidenze": ["RIDE", "ANALISI"],
  "mondiali-vasca-corta-pechino-2026-italia-convocati": ["SWIM", "ANALISI"],
  "sonno-infortuni-corsa-studio-339-runner": ["RUN", "ANALISI"],
