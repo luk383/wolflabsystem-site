@@ -18,6 +18,7 @@ const link = (href) => { if (!exists(href)) bad.push(href); return href; };
 // ---- articoli: tag disciplina + tipo (da conferma editoriale dove marcato ?)
 const TAGS = {
  "coros-vertix-4-prezzo-italia-caratteristiche": ["RUN", "ANALISI"],
+ "asics-gel-cumulus-29-ff-luxe-prezzo-150-euro": ["RUN", "ANALISI"],
  "piu-leggeri-piu-veloci-restrizione-calorica-atletica": ["RUN", "ANALISI"],
  "shimano-carenza-circuiti-stampati-di2-ebike-date-consegna": ["RIDE", "ANALISI"],
  "nike-gyakusou-2026-alphafly-4-vomero-plus": ["RUN", "ANALISI"],
