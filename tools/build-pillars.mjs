@@ -19,6 +19,7 @@ const link = (href) => { if (!exists(href)) bad.push(href); return href; };
 const TAGS = {
  "coros-vertix-4-prezzo-italia-caratteristiche": ["RUN", "ANALISI"],
  "piu-leggeri-piu-veloci-restrizione-calorica-atletica": ["RUN", "ANALISI"],
+ "shimano-carenza-circuiti-stampati-di2-ebike-date-consegna": ["RIDE", "ANALISI"],
  "nike-gyakusou-2026-alphafly-4-vomero-plus": ["RUN", "ANALISI"],
  "nike-visma-lease-a-bike-2027-logo-maglia": ["RIDE", "ANALISI"],
  "valencia-2026-korir-forfait-bekele-start-list": ["RUN", "ANALISI"],
