@@ -17,6 +17,7 @@ const link = (href) => { if (!exists(href)) bad.push(href); return href; };
 
 // ---- articoli: tag disciplina + tipo (da conferma editoriale dove marcato ?)
 const TAGS = {
+ "manchester-road-race-2026-risultati-atkin-van-es": ["RUN", "ANALISI"],
  "coros-vertix-4-prezzo-italia-caratteristiche": ["RUN", "ANALISI"],
  "asics-gel-cumulus-29-ff-luxe-prezzo-150-euro": ["RUN", "ANALISI"],
  "piu-leggeri-piu-veloci-restrizione-calorica-atletica": ["RUN", "ANALISI"],
